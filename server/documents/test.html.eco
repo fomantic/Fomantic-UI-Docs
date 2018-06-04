@@ -152,14 +152,14 @@ type       : 'Library'
 
               <div class="ui right floated main menu">
                 <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
-                <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/master/server/documents/<%= @document.elementType %>s/<%= @document.element %>.html.eco">
+                <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/hammy2899/Fomantic-UI-Docs/edit/master/server/documents/<%= @document.elementType %>s/<%= @document.element %>.html.eco">
                   <i class="edit icon"></i>
                 </a>
-                <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/Semantic-Org/Semantic-UI/issues/new?title=[<%= @document.title %>] - Bug Name">
+                <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/hammy2899/Fomantic-UI/issues/new?title=[<%= @document.title %>] - Bug Name">
                   <i class="bug icon"></i>
                 </a>
                 <% end %>
-                <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
+                <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/hammy2899/Fomantic-UI">
                   <i class="alternate github icon"></i>
                 </a>
               </div>
@@ -222,7 +222,7 @@ type       : 'Library'
                 <div class="ui divided equal height relaxed center aligned framework grid">
                   <div class="column">
                     <div class="ui header">Semantic UI</div>
-                    <a class="ui primary button" href="https://github.com/Semantic-Org/Semantic-UI/archive/master.zip">
+                    <a class="ui primary button" href="https://github.com/hammy2899/Fomantic-UI/archive/master.zip">
                       Download ZIP
                     </a>
                     <a class="ui button" href="http://learnsemantic.com/guide/expert.html">Getting Started</a>
@@ -237,7 +237,7 @@ type       : 'Library'
                       <div class="field">
                         <label>Git</label>
                         <div class="ui fluid input">
-                          <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/Semantic-UI.git">
+                          <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/hammy2899/Fomantic-UI.git">
                         </div>
                       </div>
                     </div>

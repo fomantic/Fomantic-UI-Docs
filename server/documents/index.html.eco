@@ -25,7 +25,7 @@ standalone : true
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"
             data-text="Semantic UI 2.0 is out!"
-            data-url="http://semantic-ui.com"
+            data-url="http://fomantic-ui.com"
             data-via="semanticui">
           </a>
           <script type="text/javascript">
@@ -53,15 +53,15 @@ standalone : true
 <div class="zoomed masthead segment">
   <div class="ui container">
     <div class="introduction">
-      <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
+      <a class="ui black version label" href="https://github.com/hammy2899/Fomantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
         <%= @getVersion() %>
       </a>
       <h1 class="ui inverted header">
         <span class="library">
-          Semantic UI
+          Fomantic UI
         </span>
         <span class="tagline">
-          User Interface is the language of the web
+          A community fork of Semantic-UI
         </span>
       </h1>
       <div class="ui hidden divider"></div>
@@ -182,27 +182,6 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="ui email alternate stripe vertical segment">
-  <div class="ui center aligned grid container">
-    <div class="column">
-      <h3 class="ui header">
-        Semantic is growing fast. Want to see just how much? Sign up and we'll let you know
-      </h3>
-      <form class="ui form" method="post" action="https://semantic-ui.clients.ubivox.com/handlers/post/">
-        <input type="hidden" name="action" value="subscribe" />
-        <input type="hidden" name="lists" value="29450" />
-        <div class="field">
-          <div class="ui huge input">
-            <input type="text" name="email_address" data-validate="email" placeholder="E-mail">
-          </div>
-          <button type="submit" value="Subscribe" class="ui huge secondary submit button">
-            Sign-up
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
 <div class="ui stripe theming vertical segment">
   <div class="ui stackable very relaxed two column grid container">
     <div class="center aligned column">
@@ -294,7 +273,7 @@ standalone : true
         <p>
           Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
         </p>
-        <a href="https://github.com/Semantic-Org/Semantic-UI/issues" class="ui large button">Visit GitHub</a>
+        <a href="https://github.com/hammy2899/Fomantic-UI/issues" class="ui large button">Visit GitHub</a>
       </div>
     </div>
   </div>

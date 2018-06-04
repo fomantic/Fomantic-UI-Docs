@@ -239,13 +239,13 @@ type        : 'Main'
     <h2 class="ui dividing header">By The Numbers</h2>
     <p><code>2.2</code> represents nearly a half year of updates, many new features, and bug patches.</p>
     <div class="ui large bulleted list">
-      <div class="item"><b>124</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
+      <div class="item"><b>124</b> <a href="https://github.com/hammy2899/Fomantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
       <div class="item"><b>40</b> new features</div>
       <div class="item"><b>70</b> bug fixes</div>
     </div>
 
     <p>For the complete list of bugs, their accompanying issue threads and the fixes please consult the release notes</p>
-    <a class="ui button" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md#version-220---june-26-2016" target="_blank">Release Notes</a>
+    <a class="ui button" href="https://github.com/hammy2899/Fomantic-UI/blob/master/RELEASE-NOTES.md#version-220---june-26-2016" target="_blank">Release Notes</a>
 
     <h2 class="ui dividing header">Project Changes</h2>
 
@@ -453,7 +453,7 @@ type        : 'Main'
     </div>
     <div class="memory example">
       <h4 class="ui header">Reduced Memory Leaks</h4>
-      <p><a href="/modules/sticky.html">Sticky</a>, <a href="/behaviors/visibility.html">visibility</a>, <a href="/modules/popup.html">popup</a>, and <a href="modules/dropdown.html">dropdown</a>, modules that can attach events on initialization to <code>window</code> and <code>body</code>, for example to detect changes in window scroll, will now use <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/dist/components/visibility.js#L143" target="_blank">additional mutation observers</a> to determine if they are removed from the DOM and automatically fire their <code>destroy</code> behaviors.</p>
+      <p><a href="/modules/sticky.html">Sticky</a>, <a href="/behaviors/visibility.html">visibility</a>, <a href="/modules/popup.html">popup</a>, and <a href="modules/dropdown.html">dropdown</a>, modules that can attach events on initialization to <code>window</code> and <code>body</code>, for example to detect changes in window scroll, will now use <a href="https://github.com/hammy2899/Fomantic-UI/blob/master/dist/components/visibility.js#L143" target="_blank">additional mutation observers</a> to determine if they are removed from the DOM and automatically fire their <code>destroy</code> behaviors.</p>
       <p>This can prevent memory leaks when the parent element of a component is removed without the element is propertly teared down by calling its <code>destroy</code> behavior.</p>
       <div class="ui primary button">Simulate Memory Leak</div>
       <div class="ui display segment">
@@ -759,13 +759,13 @@ type        : 'Main'
     <h2 class="ui dividing header">The Tally</h2>
     <p><code>2.1</code> sums up around two months of work, including many new features, and updates to help bulletproof existing UI.</p>
     <div class="ui large bulleted list">
-      <div class="item"><b>72</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
+      <div class="item"><b>72</b> <a href="https://github.com/hammy2899/Fomantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
       <div class="item"><b>70</b> bug fixes</div>
       <div class="item"><b>23</b> new UI updates</div>
       <div class="item"><b>14</b> feature enhancements</div>
     </div>
 
-    <p>To see the complete list of updates <a href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md#version-210---sep-01-2015">review our release notes</a></p>
+    <p>To see the complete list of updates <a href="https://github.com/hammy2899/Fomantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md#version-210---sep-01-2015">review our release notes</a></p>
 
     <div class="example" data-class="labeled, left labeled">
       <h4 class="ui header">Labeled Buttons</h4>
@@ -1424,7 +1424,7 @@ type        : 'Main'
 
       <p>To see the full list of what's changed check out the project's release notes.</p>
 
-      <a href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md#version-200---june-30-2015" target="_blank" class="ui button">View Release Notes</a>
+      <a href="https://github.com/hammy2899/Fomantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md#version-200---june-30-2015" target="_blank" class="ui button">View Release Notes</a>
     </div>
 
 

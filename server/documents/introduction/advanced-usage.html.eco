@@ -127,7 +127,7 @@ type        : 'Introduction'
 
   <div class="no example">
     <h4>Server-Side Rendering</h4>
-    <p>Individual components repos include an <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/tasks/admin/components/create.js" target="_blank">auto-generated</a> <code>index.js</code> file to simplify <a href="http://www.sitepoint.com/understanding-module-exports-exports-node-js/" target="_blank"><code>require</code></a> use with NodeJS, for server-side rendering or with <a href="http://browserify.org/" target="_blank">Browserify</a>.</p>
+    <p>Individual components repos include an <a href="https://github.com/hammy2899/Fomantic-UI/blob/master/tasks/admin/components/create.js" target="_blank">auto-generated</a> <code>index.js</code> file to simplify <a href="http://www.sitepoint.com/understanding-module-exports-exports-node-js/" target="_blank"><code>require</code></a> use with NodeJS, for server-side rendering or with <a href="http://browserify.org/" target="_blank">Browserify</a>.</p>
     <div class="ignored code">
      npm install semantic-ui-dropdown
     </div>
@@ -143,7 +143,7 @@ type        : 'Introduction'
 
   <div class="no example">
     <h4>LESS Only Distribution</h4>
-    <p>A special distribution <a href="https://github.com/Semantic-Org/Semantic-UI-LESS">Semantic-UI-LESS</a> is available for projects that use custom integrations and do not require our build tools.</p>
+    <p>A special distribution <a href="https://github.com/hammy2899/Fomantic-UI-LESS">Semantic-UI-LESS</a> is available for projects that use custom integrations and do not require our build tools.</p>
     <div class="ui ignored warning message">LESS source files are not prefixed, and will need to be run through <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> before being used</div>
   </div>
 
@@ -170,9 +170,9 @@ type        : 'Introduction'
 
   <div class="no example">
     <h4>Download Docs Server</h4>
-    <p>The easiest way to get <a href="https://github.com/Semantic-Org/Semantic-UI-Docs/">Semantic UI docs</a> is to clone the repo</p>
+    <p>The easiest way to get <a href="https://github.com/hammy2899/Fomantic-UI-Docs/">Semantic UI docs</a> is to clone the repo</p>
     <div class="code">
-      git clone https://github.com/Semantic-Org/Semantic-UI-Docs.git
+      git clone https://github.com/hammy2899/Fomantic-UI-Docs.git
     </div>
   </div>
   <div class="no example">
@@ -240,7 +240,7 @@ type        : 'Introduction'
   </div>
   <div class="no example">
     <h4>Custom Docs Paths</h4>
-    <p>Doc task paths are specified in a file <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/tasks/config/docs.js"><code>tasks/config/docs.js</code></a> and can be adjusted to use any folder set-up necessary for your project.</p>
+    <p>Doc task paths are specified in a file <a href="https://github.com/hammy2899/Fomantic-UI/blob/master/tasks/config/docs.js"><code>tasks/config/docs.js</code></a> and can be adjusted to use any folder set-up necessary for your project.</p>
   </div>
 
 </div>
