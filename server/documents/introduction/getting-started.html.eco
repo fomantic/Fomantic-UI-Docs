@@ -29,8 +29,8 @@ type        : 'Main'
   </div>
   <div class="ui large info message">
     <div class="ui header">Simpler Setup</div>
-    <p>If you are using Semantic UI as a dependency and just want to use our default theme, use our lighter <a href="https://github.com/Semantic-Org/Semantic-UI-CSS" target="_blank"><code>semantic-ui-css</code></a> or <a href="https://github.com/Semantic-Org/Semantic-UI-Less" target="_blank"><code>semantic-ui-less</code></a> repo. If you just need the files you can download them as a zip from GitHub.</p>
-    <a href="https://github.com/Semantic-Org/Semantic-UI-CSS/archive/master.zip" class="ui secondary button">Download Zip</a>
+    <p>If you are using Semantic UI as a dependency and just want to use our default theme, use our lighter <a href="https://github.com/hammy2899/Fomantic-UI-CSS" target="_blank"><code>semantic-ui-css</code></a> or <a href="https://github.com/hammy2899/Fomantic-UI-Less" target="_blank"><code>semantic-ui-less</code></a> repo. If you just need the files you can download them as a zip from GitHub.</p>
+    <a href="https://github.com/hammy2899/Fomantic-UI-CSS/archive/master.zip" class="ui secondary button">Download Zip</a>
     <a href="https://github.com/Semantic-Org/" class="ui button" target="_blank">View all Semantic-Org Repos </a>
   </div>
 

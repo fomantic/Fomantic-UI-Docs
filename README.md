@@ -1,6 +1,8 @@
-# Semantic Docs
+# Fomantic Docs
 
-This folder contains the templates used to generate the static website for [semantic-ui.com](http://www.semantic-ui.com). 
+NOTE: Fomantic was created to continue active development of Semantic-UI and has the intent to be merged back into the master repository once active development can restart. For more info please read the following issues https://github.com/Semantic-Org/Semantic-UI/issues/6109 https://github.com/Semantic-Org/Semantic-UI/issues/6413
+
+This folder contains the templates used to generate the static website for [fomantic-ui.com](http://fomantic-ui.com). 
 
 This repo can be used to create a fork of the UI documents to serve as styleguide for your project.
 
@@ -8,18 +10,30 @@ This repo can be used to create a fork of the UI documents to serve as styleguid
 
 
 You must install [DocPad](http://github.com/docpad/docpad), the static site generator used to create the HTML for the site, to render the contents of this repository.
-```
+```bash
 npm install -g docpad
-docpad install eco;
-docpad update; docpad upgrade;
+docpad install eco
+docpad update
+docpad upgrade
 ```
 
-### Generating Semantic UI for Docs
+### Generating Fomantic UI for Docs
 
 Assuming two sibling folders:
 
 1. UI folder ./ui
 2. Docs folder ./docs
+
+Directory structure should look like this:
+```
+fomantic/
+├── ui/
+│   ├── node_modules/
+|   ├── ...
+├── docs/
+│   ├── node_modules/
+|   ├── ...
+```
 
 * Clone both repos to respective folders
 * npm install in both directories
