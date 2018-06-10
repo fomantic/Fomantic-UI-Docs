@@ -2152,7 +2152,7 @@ themes      : ['Default', 'GitHub', 'Material']
             <td>Hides the dropdown menu and stores value, but does not change text</td>
           </tr>
           <tr>
-            <td>function(text, value){}</td>
+            <td>function(text, value, element){}</td>
             <td>Custom action</td>
           </tr>
           <tr>
