@@ -2400,8 +2400,8 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
-          <td>ignoreCase</td>
-          <td>false<div class="ui label">New in 2.2.13</div></td>
+          <td>ignoreCase <div class="ui label">New in 2.2.13</div></td>
+          <td>false</td>
           <td>Whether values with matching cases should be treated as identical when adding them to a dropdown.</td>
         </tr>
         <tr>
@@ -2413,6 +2413,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>allowAdditions</td>
           <td>false</td>
           <td>Whether search selection should allow users to add their own selections, works for single or multiselect.</td>
+        </tr>
+        <tr>
+          <td>sortSelect <div class="ui label">New in 2.4.0</div></td>
+          <td>false</td>
+          <td>Whether to sort the items normally, naturally or not at all.</td>
         </tr>
         <tr>
           <td>hideAdditions</td>
