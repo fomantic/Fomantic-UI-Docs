@@ -1940,6 +1940,11 @@ type        : 'UI Behavior'
             <td>Adds inline error on field validation error</td>
           </tr>
           <tr>
+            <td>shouldTrim <div class="ui label">New in 2.4.0</div></td>
+            <td>true</td>
+            <td>Whether or not the form should trim the value before validating</td>
+          </tr>
+          <tr>
             <td>transition</td>
             <td>
               scale
