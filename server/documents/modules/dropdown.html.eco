@@ -2656,7 +2656,22 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>sortSelect</td>
           <td>false</td>
-          <td>Whether to sort values when creating a dropdown automatically from a select element.</td>
+          <td>Whether to sort values when creating a dropdown automatically from a select element.
+            <div class="ui vertical divided list">
+              <div class="item">
+                <div class="header">true</div>
+                <div class="description">Sort by name [A, B, C, a, b, c]</div>
+              </div>
+              <div class="item">
+                <div class="header">natural</div>
+                <div class="description">Sort by lowercase name [A, a, B, b, C, c]</div>
+              </div>
+              <div class="item">
+                <div class="header">function(a, b){}</div>
+                <div class="description">custom sort function is executed</div>
+              </div>
+            </div>
+          </td>
         </tr>
         <tr>
           <td>showOnFocus</td>
