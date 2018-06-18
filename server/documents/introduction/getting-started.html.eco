@@ -93,9 +93,9 @@ type        : 'Main'
 
   <div class="no example">
     <h4>Install Semantic UI</h4>
-    <p>Semantic UI is available in an eponymous package on NPM</p>
+    <p>Fomantic UI is available in an eponymous package on NPM</p>
 	<div class="ignored code" data-type="bash">
-		npm install semantic-ui --save
+		npm install fomantic-ui --save
 		cd semantic/
 		gulp build
 	</div>

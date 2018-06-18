@@ -13,14 +13,14 @@
           <% else: %>
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"
-            data-text="Semantic UI is a next generation UI framework"
-            data-url="http://semantic-ui.com"
-            data-via="semanticui">
+            data-text="Fomantic UI is a next generation UI framework"
+            data-url="http://fomantic-ui.com"
+            data-via="fomanticui">
           </a>
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
-          <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          <iframe class="github" src="//ghbtns.com/github-btn.html?user=hammy2899&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           <% end %>
           <%=@document.description %>
         </div>
@@ -109,7 +109,7 @@
               <div class="field">
                 <label>NPM</label>
                 <div class="ui fluid input">
-                  <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install fomantic-ui">
                 </div>
               </div>
               <div class="field">
