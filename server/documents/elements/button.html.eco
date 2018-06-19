@@ -181,6 +181,31 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <button class="ui black basic button">Black</button>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Tertiary</h4>
+    <p>An none bordered less important button</p>
+    <button class="ui tertiary button">
+      Cancel Action
+    </button>
+  </div>
+  <div class="another spaced example">
+    <button class="ui primary tertiary button">Primary</button>
+    <button class="ui secondary tertiary button">Secondary</button>
+    <button class="ui red tertiary button">Red</button>
+    <button class="ui orange tertiary button">Orange</button>
+    <button class="ui yellow tertiary button">Yellow</button>
+    <button class="ui olive tertiary button">Olive</button>
+    <button class="ui green tertiary button">Green</button>
+    <button class="ui teal tertiary button">Teal</button>
+    <button class="ui blue tertiary button">Blue</button>
+    <button class="ui violet tertiary button">Violet</button>
+    <button class="ui purple tertiary button">Purple</button>
+    <button class="ui pink tertiary button">Pink</button>
+    <button class="ui brown tertiary button">Brown</button>
+    <button class="ui grey tertiary button">Grey</button>
+    <button class="ui black tertiary button">Black</button>
+  </div>
+
   <div class="spaced example">
     <h4 class="ui header">Inverted</h4>
     <p>A button can be formatted to appear on dark backgrounds</p>
