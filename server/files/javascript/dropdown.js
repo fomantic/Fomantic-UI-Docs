@@ -11,6 +11,7 @@ semantic.dropdown.ready = function() {
     $dropdown         = $examples.filter('.dropdown').find('.menu > .item > .ui.dropdown, .menu > .item.ui.dropdown, > .ui.dropdown:not(.simple), .inline.dropdown, .icon.buttons .button, .form .dropdown.selection'),
     $transition       = $examples.filter('.transition').find('.ui.dropdown'),
     $simpleDropdown   = $examples.filter('.simple').find('.ui.dropdown'),
+    $invertedDropdown = $examples.find('.ui.inverted.dropdown'),
     $transitionButton = $examples.filter('.transition').find('.ui.button').first(),
     $categoryDropdown = $examples.filter('.category').find('.ui.dropdown'),
     // alias
@@ -56,6 +57,9 @@ semantic.dropdown.ready = function() {
     .dropdown({
       action: 'hide'
     })
+  ;
+  $invertedDropdown
+    .dropdown()
   ;
   $buttonDropdown
     .dropdown({
