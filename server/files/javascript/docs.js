@@ -918,7 +918,7 @@ semantic.ready = function() {
       classes = classes.replace('evenly divided', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('size', "mini,tiny,small,medium,large,big,huge,massive");
       classes = classes.replace('emphasis', "primary,secondary,tertiary");
-      classes = classes.replace('colored', "red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
+      classes = classes.replace('colored', "primary,secondary,red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
       classes = (classes !== '')
         ? classes.split(',')
         : []

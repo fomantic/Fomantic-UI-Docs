@@ -675,6 +675,16 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     <h4 class="ui header">Colored</h4>
     <p>A card can specify a color</p>
     <div class="ui four cards">
+      <a class="primary card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="secondary card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
       <a class="red card">
         <div class="image">
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">
