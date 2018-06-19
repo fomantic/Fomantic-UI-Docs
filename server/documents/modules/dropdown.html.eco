@@ -2597,11 +2597,6 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Whether search selection should allow users to add their own selections, works for single or multiselect.</td>
         </tr>
         <tr>
-          <td>sortSelect <div class="ui label">New in 2.4.0</div></td>
-          <td>false</td>
-          <td>Whether to sort the items normally, naturally or not at all.</td>
-        </tr>
-        <tr>
           <td>hideAdditions</td>
           <td>true</td>
           <td>If disabled user additions will appear in the dropdown's menu using a specially formatted selection item formatted by <code>templates.addition</code>.</td>
