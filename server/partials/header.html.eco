@@ -14,7 +14,7 @@
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"
             data-text="Fomantic UI is a next generation UI framework"
-            data-url="http://fomantic-ui.com"
+            data-url="https://fomantic-ui.com"
             data-via="fomanticui">
           </a>
           <script type="text/javascript">
@@ -99,7 +99,7 @@
         </div>
         <div class="ui divided equal height relaxed center aligned framework grid">
           <div class="column">
-            <div class="ui header">Semantic UI</div>
+            <div class="ui header">Fomantic UI</div>
             <a class="ui primary button" href="https://github.com/hammy2899/Fomantic-UI/archive/master.zip">
               Download ZIP
             </a>

@@ -24,9 +24,9 @@ standalone : true
           <% else: %>
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"
-            data-text="Semantic UI 2.0 is out!"
-            data-url="http://fomantic-ui.com"
-            data-via="semanticui">
+            data-text="Fomantic UI 2.4 is out!"
+            data-url="https://fomantic-ui.com"
+            data-via="fomanticui">
           </a>
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
@@ -69,7 +69,7 @@ standalone : true
       <a href="/introduction/getting-started.html" class="ui huge inverted download button">
         Get Started
       </a>
-      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.3</a>
+      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.4</a>
     </div>
     <div class="inverted advertisement">
       <% unless 'development' in @getEnvironments(): %>

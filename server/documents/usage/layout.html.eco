@@ -5,7 +5,7 @@ standalone  : true
 order       : 3
 
 title       : 'Layouts'
-description : 'Examples of using Semantic UI'
+description : 'Examples of using Fomantic UI'
 type        : 'Usage'
 ---
 
