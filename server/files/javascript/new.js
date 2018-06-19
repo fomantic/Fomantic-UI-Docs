@@ -365,6 +365,18 @@ semantic.new.ready = function() {
     })
   ;
 
+  // 2.4
+  $('.ui.inverted.dropdown').dropdown();
+
+  $('.no.dropdown.search.example > div.ui.stackable.three.column.grid > div > div.ui.labeled.icon.pointing.dropdown.button').each(function(index, el) {
+    $(this).dropdown({
+      action: 'hide',
+      hideDividers: index === 2 ? 'empty' : index === 1
+    })
+    ;
+  })
+  ;
+
 };
 
 
