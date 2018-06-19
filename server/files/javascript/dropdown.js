@@ -13,6 +13,7 @@ semantic.dropdown.ready = function() {
     $simpleDropdown   = $examples.filter('.simple').find('.ui.dropdown'),
     $transitionButton = $examples.filter('.transition').find('.ui.button').first(),
     $categoryDropdown = $examples.filter('.category').find('.ui.dropdown'),
+    $dividerDropdown  = $examples.filter('.divider').find('.ui.dropdown'),
     // alias
     handler
   ;
@@ -62,6 +63,16 @@ semantic.dropdown.ready = function() {
       action: 'hide'
     })
   ;
+
+  $dividerDropdown.each(function(index) {
+    $(this).dropdown({
+        action: 'hide',
+        hideDividers: index === 2 ? 'empty' : index === 1
+      })
+    ;
+    })
+  ;
+
 
 };
 
