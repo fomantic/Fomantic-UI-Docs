@@ -1706,8 +1706,8 @@ themes      : ['Default', 'GitHub', 'Material']
 
 
       <div class="divider example">
-        <h4 class="ui header">Dividers / Headers</h4>
-        <p>A dropdown menu can contain dividers and/or headers to seperate related content. Using <code>hideDividers</code> lets you control how the elements are handled while filtering items.</p>
+        <h4 class="ui header">Dropdown Dividers / Headers</h4>
+        <p>A dropdown menu can contain dividers and/or headers to separate related content. Using <code>hideDividers</code> lets you control how the elements are handled while filtering items.</p>
         <div class="code" data-demo="false">
           $('.divider.example .dropdown')
             .dropdown({
