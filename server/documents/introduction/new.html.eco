@@ -4,17 +4,284 @@ css         : 'new'
 standalone  : true
 order       : 1
 
-title       : 'New in 2.3'
+title       : 'New in 2.4'
 description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { twothree: 'New in 2.3', twotwo: 'New in 2.2', twoone: 'New in 2.1', two: 'New in 2.0' } }) %>
+<%- @partial('header',  { tabs: { twofour: 'New in 2.4', twothree: 'New in 2.3', twotwo: 'New in 2.2', twoone: 'New in 2.1', two: 'New in 2.0' } }) %>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
 
-  <div class="ui active tab" data-tab="twothree">
+  <div class="ui active tab" data-tab="twofour">
+    <h2 class="ui dividing header">A new life</h2>
+
+    <p>With active development slowing down the community has stood up to start a new life for Semantic, welcome to Fomantic-UI.</p>
+    <p>You can read the release notes <a href="https://github.com/hammy2899/Fomantic-UI/blob/master/RELEASE-NOTES.md">here</a>.</p>
+
+    <h2 class="ui dividing header">New Features</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Inverted & basic Primary and Secondary buttons</h4>
+      <p>You can now use primary and secondary basic and inverted buttons.</p>
+      <div class="ui doubling four column vertically padded grid">
+        <div class="row">
+          <div class="column"><button class="ui basic primary button">Primary Basic</button></div>
+          <div class="column"><button class="ui basic secondary button">Secondary Basic</button></div>
+        </div>
+        <div class="row">
+          <div class="black column"><button class="ui inverted primary button">Primary Inverted</button></div>
+          <div class="black column"><button class="ui inverted secondary button">Secondary Inverted</button></div>
+          <div class="black column"><button class="ui basic inverted primary button">Primary Inverted</button></div>
+          <div class="black column"><button class="ui basic inverted secondary button">Secondary Inverted</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Tertiary buttons</h4>
+      <p>New tertiary buttons allow for less important buttons</p>
+      <div class="ui doubling eight column vertically padded grid">
+        <div class="column"><button class="ui primary tertiary button">Primary</button></div>
+        <div class="column"><button class="ui secondary tertiary button">Secondary</button></div>
+        <div class="column"><button class="ui red tertiary button">Red</button></div>
+        <div class="column"><button class="ui orange tertiary button">Orange</button></div>
+        <div class="column"><button class="ui yellow tertiary button">Yellow</button></div>
+        <div class="column"><button class="ui olive tertiary button">Olive</button></div>
+        <div class="column"><button class="ui green tertiary button">Green</button></div>
+        <div class="column"><button class="ui teal tertiary button">Teal</button></div>
+        <div class="column"><button class="ui blue tertiary button">Blue</button></div>
+        <div class="column"><button class="ui violet tertiary button">Violet</button></div>
+        <div class="column"><button class="ui purple tertiary button">Purple</button></div>
+        <div class="column"><button class="ui pink tertiary button">Pink</button></div>
+        <div class="column"><button class="ui brown tertiary button">Brown</button></div>
+        <div class="column"><button class="ui grey tertiary button">Grey</button></div>
+        <div class="column"><button class="ui black tertiary button">Black</button></div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Primary & Secondary colors</h4>
+      <p>Headers, Icons and Cards now all have primary and secondary colors</p>
+      <div class="ui doubling two column vertically padded grid">
+        <div class="column">
+          <div class="ui doubling two column vertically padded center aligned grid">
+            <div class="column"><div class="ui primary header">Primary Header</div></div>
+            <div class="column"><div class="ui secondary header">Secondary Header</div></div>
+            <div class="column"><i class="huge primary users icon"></i></div>
+            <div class="column"><i class="huge secondary users icon"></i></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui doubling two column vertically padded grid">
+            <div class="column">
+              <a class="ui primary card">
+                <div class="image">
+                  <img src="/images/wireframe/white-image.png">
+                </div>
+              </a>
+            </div>
+            <div class="column">
+              <a class="ui secondary card">
+                <div class="image">
+                  <img src="/images/wireframe/white-image.png">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Inverted dropdown variation</h4>
+      <p>Dropdowns can now be inverted, they look sweet in inverted segments.</p>
+      <div class="ui doubling two column vertically padded grid">
+        <div class="column">
+          <div class="ui inverted segment">
+            <div class="ui inverted selection dropdown">
+              <input type="hidden" name="choices">
+              <div class="default text">Select choice</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item">Choice 1</div>
+                <div class="item">Choice 2</div>
+                <div class="item">Choice 3</div>
+                <div class="item">Choice 4</div>
+                <div class="item">Choice 5</div>
+                <div class="item">Choice 6</div>
+                <div class="item">Choice 7</div>
+                <div class="item">Choice 8</div>
+                <div class="item">Choice 9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no dropdown search example">
+      <h4 class="ui header">Dropdown Search dividers/headers</h4>
+      <p>A searchable dropdown menu can contain dividers and/or headers to separate related content. Using <code>hideDividers</code> lets you control how the elements are handled while filtering items.</p>
+      <div class="code" data-demo="false">
+        $('.dropdown')
+          .dropdown({
+            hideDividers: option
+          })
+        ;
+      </div>
+
+      <div class="ui stackable three column grid">
+        <div class="column">
+          <div class="ui sub header">false</div>
+          <div class="ui labeled icon pointing dropdown button">
+            <i class="filter icon"></i>
+            <span class="text">Filter Posts</span>
+            <div class="menu">
+              <div class="ui search icon input">
+                <i class="search icon"></i>
+                <input name="search" placeholder="Search issues..." type="text">
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="tags icon"></i>
+                Filter by tag
+              </div>
+              <div class="item">
+                <div class="ui red empty circular label"></div>
+                Important
+              </div>
+              <div class="item">
+                <div class="ui blue empty circular label"></div>
+                Announcement
+              </div>
+              <div class="item">
+                <div class="ui black empty circular label"></div>
+                Discussion
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="calendar icon"></i>
+                Filter by date
+              </div>
+              <div class="item">
+                <i class="olive circle icon"></i>
+                This Week
+              </div>
+              <div class="item">
+                <i class="violet circle icon"></i>
+                This Month
+              </div>
+              <div class="item">
+                <i class="orange circle icon"></i>
+                This Year
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="ui sub header">true</div>
+          <div class="ui labeled icon pointing dropdown button">
+            <i class="filter icon"></i>
+            <span class="text">Filter Posts</span>
+            <div class="menu">
+              <div class="ui search icon input">
+                <i class="search icon"></i>
+                <input name="search" placeholder="Search issues..." type="text">
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="tags icon"></i>
+                Filter by tag
+              </div>
+              <div class="item">
+                <div class="ui red empty circular label"></div>
+                Important
+              </div>
+              <div class="item">
+                <div class="ui blue empty circular label"></div>
+                Announcement
+              </div>
+              <div class="item">
+                <div class="ui black empty circular label"></div>
+                Discussion
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="calendar icon"></i>
+                Filter by date
+              </div>
+              <div class="item">
+                <i class="olive circle icon"></i>
+                This Week
+              </div>
+              <div class="item">
+                <i class="violet circle icon"></i>
+                This Month
+              </div>
+              <div class="item">
+                <i class="orange circle icon"></i>
+                This Year
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="ui sub header">'empty'</div>
+          <div class="ui labeled icon pointing dropdown button">
+            <i class="filter icon"></i>
+            <span class="text">Filter Posts</span>
+            <div class="menu">
+              <div class="ui search icon input">
+                <i class="search icon"></i>
+                <input name="search" placeholder="Search issues..." type="text">
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="tags icon"></i>
+                Filter by tag
+              </div>
+              <div class="item">
+                <div class="ui red empty circular label"></div>
+                Important
+              </div>
+              <div class="item">
+                <div class="ui blue empty circular label"></div>
+                Announcement
+              </div>
+              <div class="item">
+                <div class="ui black empty circular label"></div>
+                Discussion
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="calendar icon"></i>
+                Filter by date
+              </div>
+              <div class="item">
+                <i class="olive circle icon"></i>
+                This Week
+              </div>
+              <div class="item">
+                <i class="violet circle icon"></i>
+                This Month
+              </div>
+              <div class="item">
+                <i class="orange circle icon"></i>
+                This Year
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="twothree">
     <h2 class="ui dividing header">A New Approach</h2>
 
     <p>After an extended period of patches, Semantic UI <code>2.3</code> marks the return to significant feature changes for the project.</p>

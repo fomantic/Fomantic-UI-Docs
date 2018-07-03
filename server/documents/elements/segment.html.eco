@@ -102,6 +102,25 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
   <div class="another example">
+    <div class="ui basic segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui segments">
       <div class="ui segment">
         <p>Top</p>
@@ -172,6 +191,19 @@ themes      : ['default', 'GitHub']
     <h4 class="ui header">Horizontal Segments</h4>
     <p>A segment group can appear horizontally</p>
     <div class="ui horizontal segments">
+      <div class="ui segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+      <div class="ui segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+      <div class="ui segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui horizontal basic segments">
       <div class="ui segment">
         <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
       </div>

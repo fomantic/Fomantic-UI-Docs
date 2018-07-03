@@ -24,12 +24,12 @@ docpadConfig = {
 		site:
 
 			# The production url of our website
-			url: "http://fomantic-ui.com"
+			url: "https://fomantic-ui.com"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [],
 
-			version: "2.3.1",
+			version: "2.4.0",
 
 			branch: "master",
 

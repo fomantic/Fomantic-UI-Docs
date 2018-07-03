@@ -30,8 +30,8 @@ type        : 'Usage'
       <p>...Starting with exemplars that themselves have consistency of style ensures that such consistency is the designer's to lose.</p>
       <span class="author">Frederick Brooks - <a href="http://www.amazon.com/gp/product/0201362988/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0201362988&linkCode=as2&tag=seui-20&linkId=IUAKN3YQ7NNJ6IQ2" target="_blank">The Design of Design</a><span>
     </blockquote>
-    <p>Components in Semantic UI are designed to help developers adhere to <a href="https://books.google.com/books?id=0qG4TQi-e-4C&pg=PT234&lpg=PT234&dq=%22progressive+truthfulness%22+frederick+brooks&source=bl&ots=yrjNc6wnz8&sig=PJoYODuRku2A1kBoFOPfn4iGYnc&hl=en&sa=X&ved=0CCIQ6AEwAGoVChMImdSMpIOVxgIVCx-sCh3EQgBu#v=onepage&q=%22progressive%20truthfulness%22%20frederick%20brooks&f=false" target="_blank">progressive truthfulness</a> in their development.</p>
-    <p>Instead of having to create components from a blank canvas, developers using Semantic UI only need to specify how their components should differ from the default theme using <a href="http://lesscss.org/features/#variables-feature" target="_blank">CSS variables</a>.</p>
+    <p>Components in Fomantic UI are designed to help developers adhere to <a href="https://books.google.com/books?id=0qG4TQi-e-4C&pg=PT234&lpg=PT234&dq=%22progressive+truthfulness%22+frederick+brooks&source=bl&ots=yrjNc6wnz8&sig=PJoYODuRku2A1kBoFOPfn4iGYnc&hl=en&sa=X&ved=0CCIQ6AEwAGoVChMImdSMpIOVxgIVCx-sCh3EQgBu#v=onepage&q=%22progressive%20truthfulness%22%20frederick%20brooks&f=false" target="_blank">progressive truthfulness</a> in their development.</p>
+    <p>Instead of having to create components from a blank canvas, developers using Fomantic UI only need to specify how their components should differ from the default theme using <a href="http://lesscss.org/features/#variables-feature" target="_blank">CSS variables</a>.</p>
     <p>For developers who don't have time to hone a specific look-and-feel the default theme is elegant and neutral with a legible, open source sans-serif font <a href="http://www.latofonts.com"><code>Lato</code></a>.</p>
 
   </div>
@@ -42,11 +42,11 @@ type        : 'Usage'
   </h2>
   <div class="no example">
     <h4>Recreating GitHub</h4>
-    <p>Semantic UI includes an <a target="_blank" href="http://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component CSS overrides, and managing your themes with <code>theme.config</code>.</p>
+    <p>Fomantic UI includes an <a target="_blank" href="http://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component CSS overrides, and managing your themes with <code>theme.config</code>.</p>
 
     <p>To get started click <b>the paint can</b> icon next to the notification button in the top right</p>
 
-    <p>The example project includes two HTML files, <code>index.html</code> is designed to swap themes using a sidebar, and uses precompiled CSS. <code>static.html</code> uses files outputted by Semantic UI and can be used alongside our <a href="/introduction/build-tools.html">gulp pipeline</a> to try modifying themes hands on.</p>
+    <p>The example project includes two HTML files, <code>index.html</code> is designed to swap themes using a sidebar, and uses precompiled CSS. <code>static.html</code> uses files outputted by Fomantic UI and can be used alongside our <a href="/introduction/build-tools.html">gulp pipeline</a> to try modifying themes hands on.</p>
 
     <p>Some special things to note:</p>
 
@@ -68,7 +68,7 @@ type        : 'Usage'
   <div class="no example">
     <h4>Sitewide Defaults</h4>
 
-    <p>Semantic UI includes twelve named colors. Components with color variations inherit these global variables when defining how colors should appear.</p>
+    <p>Fomantic UI includes twelve named colors. Components with color variations inherit these global variables when defining how colors should appear.</p>
 
     <p>Each <a href="#theme-inheritance">level of inheritance</a> includes a special file <code>site.variables</code> which defines theme-wide defaults that each component can extend.</p>
 
@@ -184,7 +184,7 @@ type        : 'Usage'
   </div>
   <div class="no example">
     <h4>Using Packaged Themes</h4>
-    <p>When you download Semantic UI all components will be set up to use the default theme. Semantic uses a special file <code>theme.config</code> for controlling your project's packaged theming configuration.</p>
+    <p>When you download Fomantic UI all components will be set up to use the default theme. Semantic uses a special file <code>theme.config</code> for controlling your project's packaged theming configuration.</p>
     <p>Packaged themes are applied per component, and not globally. This means you can specify individual themes for each component, mixing and matching from available themes.</p>
     <p>The default <code>theme.config</code> will have all component values set to default. To choose a theme, simply change a component to match the theme name.</p>
 
@@ -264,7 +264,7 @@ type        : 'Usage'
 
   <div class="no example">
     <h4 class="ui header">Definition File</h4>
-    <p>Each component includes a source CSS and Javascript file which declares how a components variables should affect its display on screen. Definition files are updated with each new release of Semantic UI, which may also include new variables.</p>
+    <p>Each component includes a source CSS and Javascript file which declares how a components variables should affect its display on screen. Definition files are updated with each new release of Fomantic UI, which may also include new variables.</p>
     <p>Navigating definition files are a great way for developers who are comfortable with CSS to get an idea of how themes affect a components display.</p>
 
     <p>Here's an abridged version of <a href="/elements/button.html">button</a> with an explanation of each section of the file.</p>

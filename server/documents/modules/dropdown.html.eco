@@ -1085,6 +1085,29 @@ themes      : ['Default', 'GitHub', 'Material']
     </div>
 
     <div class="dropdown example">
+      <h4 class="ui header">Inverted</h4>
+      <p>A dropdown can be inverted</p>
+      <div class="ui inverted segment">
+        <div class="ui inverted selection dropdown">
+          <input type="hidden" name="choices">
+          <div class="default text">Select choice</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item">Choice 1</div>
+            <div class="item">Choice 2</div>
+            <div class="item">Choice 3</div>
+            <div class="item">Choice 4</div>
+            <div class="item">Choice 5</div>
+            <div class="item">Choice 6</div>
+            <div class="item">Choice 7</div>
+            <div class="item">Choice 8</div>
+            <div class="item">Choice 9</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown example">
       <h4 class="ui header">Compact</h4>
       <p>A compact dropdown has no minimum width</p>
       <div class="ui compact selection dropdown">
@@ -1681,6 +1704,165 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
 
+
+      <div class="divider example">
+        <h4 class="ui header">Dropdown Dividers / Headers</h4>
+        <p>A dropdown menu can contain dividers and/or headers to separate related content. Using <code>hideDividers</code> lets you control how the elements are handled while filtering items.</p>
+        <div class="code" data-demo="false">
+          $('.divider.example .dropdown')
+            .dropdown({
+              hideDividers: option
+            })
+          ;
+        </div>
+
+        <div class="ui stackable three column grid">
+          <div class="column">
+            <div class="ui sub header">false</div>
+            <div class="ui labeled icon pointing dropdown button">
+              <i class="filter icon"></i>
+              <span class="text">Filter Posts</span>
+              <div class="menu">
+                <div class="ui search icon input">
+                  <i class="search icon"></i>
+                  <input name="search" placeholder="Search issues..." type="text">
+                </div>
+                <div class="divider"></div>
+                <div class="header">
+                  <i class="tags icon"></i>
+                  Filter by tag
+                </div>
+                <div class="item">
+                  <div class="ui red empty circular label"></div>
+                  Important
+                </div>
+                <div class="item">
+                  <div class="ui blue empty circular label"></div>
+                  Announcement
+                </div>
+                <div class="item">
+                  <div class="ui black empty circular label"></div>
+                  Discussion
+                </div>
+                <div class="divider"></div>
+                <div class="header">
+                  <i class="calendar icon"></i>
+                  Filter by date
+                </div>
+                <div class="item">
+                  <i class="olive circle icon"></i>
+                  This Week
+                </div>
+                <div class="item">
+                  <i class="violet circle icon"></i>
+                  This Month
+                </div>
+                <div class="item">
+                  <i class="orange circle icon"></i>
+                  This Year
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="ui sub header">true</div>
+            <div class="ui labeled icon pointing dropdown button">
+              <i class="filter icon"></i>
+              <span class="text">Filter Posts</span>
+              <div class="menu">
+                <div class="ui search icon input">
+                  <i class="search icon"></i>
+                  <input name="search" placeholder="Search issues..." type="text">
+                </div>
+                <div class="divider"></div>
+                <div class="header">
+                  <i class="tags icon"></i>
+                  Filter by tag
+                </div>
+                <div class="item">
+                  <div class="ui red empty circular label"></div>
+                  Important
+                </div>
+                <div class="item">
+                  <div class="ui blue empty circular label"></div>
+                  Announcement
+                </div>
+                <div class="item">
+                  <div class="ui black empty circular label"></div>
+                  Discussion
+                </div>
+                <div class="divider"></div>
+                <div class="header">
+                  <i class="calendar icon"></i>
+                  Filter by date
+                </div>
+                <div class="item">
+                  <i class="olive circle icon"></i>
+                  This Week
+                </div>
+                <div class="item">
+                  <i class="violet circle icon"></i>
+                  This Month
+                </div>
+                <div class="item">
+                  <i class="orange circle icon"></i>
+                  This Year
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="ui sub header">'empty'</div>
+            <div class="ui labeled icon pointing dropdown button">
+              <i class="filter icon"></i>
+              <span class="text">Filter Posts</span>
+              <div class="menu">
+                <div class="ui search icon input">
+                  <i class="search icon"></i>
+                  <input name="search" placeholder="Search issues..." type="text">
+                </div>
+                <div class="divider"></div>
+                <div class="header">
+                  <i class="tags icon"></i>
+                  Filter by tag
+                </div>
+                <div class="item">
+                  <div class="ui red empty circular label"></div>
+                  Important
+                </div>
+                <div class="item">
+                  <div class="ui blue empty circular label"></div>
+                  Announcement
+                </div>
+                <div class="item">
+                  <div class="ui black empty circular label"></div>
+                  Discussion
+                </div>
+                <div class="divider"></div>
+                <div class="header">
+                  <i class="calendar icon"></i>
+                  Filter by date
+                </div>
+                <div class="item">
+                  <i class="olive circle icon"></i>
+                  This Week
+                </div>
+                <div class="item">
+                  <i class="violet circle icon"></i>
+                  This Month
+                </div>
+                <div class="item">
+                  <i class="orange circle icon"></i>
+                  This Year
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
@@ -2152,7 +2334,7 @@ themes      : ['Default', 'GitHub', 'Material']
             <td>Hides the dropdown menu and stores value, but does not change text</td>
           </tr>
           <tr>
-            <td>function(text, value){}</td>
+            <td>function(text, value, element){}</td>
             <td>Custom action</td>
           </tr>
           <tr>
@@ -2400,8 +2582,8 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
-          <td>ignoreCase</td>
-          <td>false<div class="ui label">New in 2.2.13</div></td>
+          <td>ignoreCase <div class="ui label">New in 2.2.13</div></td>
+          <td>false</td>
           <td>Whether values with matching cases should be treated as identical when adding them to a dropdown.</td>
         </tr>
         <tr>
@@ -2649,6 +2831,26 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string, setting to "false" will only match start of string.</td>
         </tr>
         <tr>
+          <td>hideDividers <div class="ui label">New in 2.4.0</div></td>
+          <td>false</td>
+          <td>How to handle dividers in the dropdown while searching. Dividers are defined as all siblings of items that match the <a href="#dom-settings">divider selector</a>
+            <div class="ui vertical divided list">
+              <div class="item">
+                <div class="header">false</div>
+                <div class="description">Dividers are not hidden</div>
+              </div>
+              <div class="item">
+                <div class="header">true</div>
+                <div class="description">All dividers are automatically hidden</div>
+              </div>
+              <div class="item">
+                <div class="header">'empty'</div>
+                <div class="description">All dividers not followed by a visible item are hidden (divider siblings are treated as a group)</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td>preserveHTML</td>
           <td>true</td>
           <td>Whether HTML included in dropdown values should be preserved. (Allows icons to show up in selected value)</td>
@@ -2656,7 +2858,22 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>sortSelect</td>
           <td>false</td>
-          <td>Whether to sort values when creating a dropdown automatically from a select element.</td>
+          <td>Whether to sort values when creating a dropdown automatically from a select element.
+            <div class="ui vertical divided list">
+              <div class="item">
+                <div class="header">true</div>
+                <div class="description">Sort by name [A, B, C, a, b, c]</div>
+              </div>
+              <div class="item">
+                <div class="header">natural</div>
+                <div class="description">Sort by lowercase name [A, a, B, b, C, c]</div>
+              </div>
+              <div class="item">
+                <div class="header">function(a, b){}</div>
+                <div class="description">custom sort function is executed</div>
+              </div>
+            </div>
+          </td>
         </tr>
         <tr>
           <td>showOnFocus</td>
@@ -2830,6 +3047,7 @@ themes      : ['Default', 'GitHub', 'Material']
             <div class="code" data-type="html">
             selector : {
               addition     : '.addition',
+              divider      : '.divider, .header',
               dropdown     : '.ui.dropdown',
               icon         : '> .dropdown.icon',
               input        : '> input[type="hidden"], > select',
