@@ -144,6 +144,43 @@ themes      : ['Default', 'GitHub', 'Material']
         <%- @partial('examples/single/state-options') %>
       </select>
     </div>
+
+    <div class="dropdown example">
+      <h4 class="ui header">
+        Clearable Selection
+        <div class="ui teal label">New in 2.4.2</div>
+      </h4>
+      <p>A clearable selection dropdown can allow a user to cancel to cancel a previous selection</p>
+      <div class="ui clearable selection dropdown">
+        <input type="hidden" name="language" value="English">
+        <i class="dropdown icon"></i>
+        <div class="default text">Select Language</div>
+        <div class="menu">
+          <div class="item">Arabic</div>
+          <div class="item">Chinese</div>
+          <div class="item">Danish</div>
+          <div class="item">Dutch</div>
+          <div class="item">English</div>
+          <div class="item">French</div>
+          <div class="item">German</div>
+          <div class="item">Greek</div>
+          <div class="item">Hungarian</div>
+          <div class="item">Italian</div>
+          <div class="item">Japanese</div>
+          <div class="item">Korean</div>
+          <div class="item">Lithuanian</div>
+          <div class="item">Persian</div>
+          <div class="item">Polish</div>
+          <div class="item">Portuguese</div>
+          <div class="item">Russian</div>
+          <div class="item">Spanish</div>
+          <div class="item">Swedish</div>
+          <div class="item">Turkish</div>
+          <div class="item">Vietnamese</div>
+        </div>
+      </div>
+    </div>
+
     <div class="dropdown example">
       <h4 class="ui header">Multiple Selection</h4>
       <p>A selection dropdown can allow multiple selections</p>
