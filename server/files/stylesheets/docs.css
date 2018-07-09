@@ -8,7 +8,7 @@
   font-family: 'Lato';
   src:
     url(/fonts/lato/Lato-Regular.woff2) format('woff2')
-  ;
+;
   font-style: normal;
   font-weight: normal;
 }
@@ -16,7 +16,7 @@
   font-family: 'Lato';
   src:
     url(/fonts/lato/Lato-Italic.woff2) format('woff2')
-  ;
+;
   font-style: italic;
   font-weight: normal;
 }
@@ -26,7 +26,7 @@
   font-family: 'Lato';
   src:
     url(/fonts/lato/Lato-Bold.woff2) format('woff2')
-  ;
+;
   font-style: normal;
   font-weight: 700;
 }
@@ -34,7 +34,7 @@
   font-family: 'Lato';
   src:
     url(/fonts/lato/Lato-BoldItalic.woff2) format('woff2')
-  ;
+;
   font-style: italic;
   font-weight: 700;
 }
@@ -172,7 +172,7 @@ blockquote .author {
 }
 
 #example .sidebar.menu .logo.image,
-#example .sticky.menu .logo.image {
+#example .ui.menu .logo.image {
   width: 35px;
   margin-right: 1em;
 }
@@ -182,6 +182,13 @@ blockquote .author {
 }
 #example #toc > :last-child {
   padding-bottom: 2em;
+}
+
+
+#example #toc > .ui.menu {
+  max-height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Incomplete Label */
@@ -418,23 +425,23 @@ blockquote .author {
   -webkit-transition:
     0.3s width ease,
     0.5s transform ease
-  ;
+;
   -moz-transition:
     0.3s width ease,
     0.5s transform ease
-  ;
+;
   -o-transition:
     0.3s width ease,
     0.5s transform ease
-  ;
+;
   -ms-transition:
     0.3s width ease,
     0.5s transform ease
-  ;
+;
   transition:
     0.3s width ease,
     0.5s transform ease
-  ;
+;
 }
 #example .launch.button .icon {
   margin-left: 0px;
@@ -449,19 +456,19 @@ blockquote .author {
   opacity: 0;
   -webkit-transition:
     0.3s opacity 0.3s
-  ;
+;
   -moz-transition:
     0.3s opacity 0.3s
-  ;
+;
   -o-transition:
     0.3s opacity 0.3s
-  ;
+;
   -ms-transition:
     0.3s opacity 0.3s
-  ;
+;
   transition:
     0.3s opacity 0.3s
-  ;
+;
 }
 #example .fixed.launch.button:hover {
   width: 130px;
@@ -599,6 +606,9 @@ blockquote .author {
 }
 #example.minimal.basic .full.height > .toc {
   display: none;
+}
+#example.minimal.basic .full.height > .article {
+  margin-left: 0px;
 }
 #example.minimal.basic .fixed.menu > .container,
 #example.minimal.basic .main.container,
@@ -941,8 +951,8 @@ blockquote .author {
 }
 
 /*#example .example i.code:before {*/
-  /*font-family: 'Docs';*/
-  /*content: "\e600";*/
+/*font-family: 'Docs';*/
+/*content: "\e600";*/
 /*}*/
 #example .example:hover i.code {
   opacity: 0.85;
@@ -982,7 +992,7 @@ blockquote .author {
   transition:
     box-shadow 0.2s ease,
     padding 0.2s ease
-  ;
+;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 #example .example > .html > .top.attached.label {
@@ -1334,7 +1344,7 @@ blockquote .author {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   transition:
     padding 0.5s ease
-  ;
+;
   background: transparent;
 }
 .visibility.example .overlay.fixed + .placeholder {
@@ -1356,49 +1366,49 @@ blockquote .author {
 /* Flash Animation */
 .main.container .highlight {
   -moz-animation: highlight 2s ease-out;
-    -moz-animation-iteration-count: 1;
-    -webkit-animation: highlight 2s ease-out;
-    -webkit-animation-iteration-count: 1;
-    -ms-animation: highlight 2s ease-out;
-    -ms-animation-iteration-count: 1;
-    animation: highlight 2s ease-out;
-    animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation: highlight 2s ease-out;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation: highlight 2s ease-out;
+  -ms-animation-iteration-count: 1;
+  animation: highlight 2s ease-out;
+  animation-iteration-count: 1;
 }
 
 @-webkit-keyframes highlight {
-    0% {
-      background-color: none;
-    }
-    30% {
-      background-color: #ffff00;
-    }
-    100% {
-      background-color: none;
-    }
+  0% {
+    background-color: none;
+  }
+  30% {
+    background-color: #ffff00;
+  }
+  100% {
+    background-color: none;
+  }
 }
 
 @-moz-keyframes highlight {
-    0% {
-      background-color: none;
-    }
-    30% {
-      background-color: #ffff00;
-    }
-    100% {
-      background-color: none;
-    }
+  0% {
+    background-color: none;
+  }
+  30% {
+    background-color: #ffff00;
+  }
+  100% {
+    background-color: none;
+  }
 }
 
 @-ms-keyframes highlight {
-    0% {
-      background-color: none;
-    }
-    30% {
-      background-color: #ffff00;
-    }
-    100% {
-      background-color: none;
-    }
+  0% {
+    background-color: none;
+  }
+  30% {
+    background-color: #ffff00;
+  }
+  100% {
+    background-color: none;
+  }
 }
 
 
@@ -1534,23 +1544,23 @@ body.progress.animated .ui.progress .bar {
   -webkit-transition:
     color 0.3s ease,
     opacity 0.3s ease
-  ;
+;
   -moz-transition:
     color 0.3s ease,
     opacity 0.3s ease
-  ;
+;
   -o-transition:
     color 0.3s ease,
     opacity 0.3s ease
-  ;
+;
   -ms-transition:
     color 0.3s ease,
     opacity 0.3s ease
-  ;
+;
   transition:
     color 0.3s ease,
     opacity 0.3s ease
-  ;
+;
 }
 #example .icon.example .attached.segment .grid > .row > .column  {
   color: #555555;
@@ -1566,23 +1576,23 @@ body.progress.animated .ui.progress .bar {
   -webkit-transition:
     color 0.6s ease,
     transform 0.2s ease
-  ;
+;
   -moz-transition:
     color 0.6s ease,
     transform 0.2s ease
-  ;
+;
   -o-transition:
     color 0.6s ease,
     transform 0.2s ease
-  ;
+;
   -ms-transition:
     color 0.6s ease,
     transform 0.2s ease
-  ;
+;
   transition:
     color 0.6s ease,
     transform 0.2s ease
-  ;
+;
 }
 #example .icon.example .html.segment .grid .column,
 #example .icon.example .grid:hover .column {
@@ -1688,9 +1698,9 @@ body.progress.animated .ui.progress .bar {
 }
 
 #shortcuts.ui.modal .actions {
-    padding: 0;
-    border: none;
-    background: none;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 /*******************************
@@ -1977,8 +1987,8 @@ code .chunk {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 #example:not(.site) > .pusher > .full.height {
   background-color: #FFFFFF;
@@ -1986,14 +1996,14 @@ code .chunk {
 
 /* page layout */
 #example .full.height > .toc {
-  position: relative;
+  position: fixed;
   z-index: 1;
   background-color: #1b1c1d;
   width: 250px;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 #example .full.height > .toc .ui.menu {
   border-radius: 0;
@@ -2003,13 +2013,42 @@ code .chunk {
   width: inherit;
   overflow: hidden;
   will-change: transform;
+  max-height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 #example .article {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0px;
+  margin-left: 250px;
+}
+
+#example .full.height > .toc .ui.menu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+#example .full.height > .toc .ui.menu::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+#example .full.height > .toc .ui.menu::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#example .full.height > .toc .ui.menu:hover::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#example .full.height > .toc .ui.menu:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#example > .pusher > .footer,
+#example .article > .footer {
+  border-top: 1px solid #DDDDDD;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08) inset;
+  background-color: #FAFAFA;
+  padding-top: 2em;
 }
 
 /*******************************
@@ -2084,8 +2123,8 @@ code .chunk {
   margin-right: 0.75em;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 #example .advertisement .carbon-img img {
   display: block;
@@ -2179,7 +2218,7 @@ code .chunk {
 }
 
 #example .bsa-cpc .default-title:after {
-  content: " — ";
+  content: " — ";
 }
 
 #example .bsa-cpc .default-title,
@@ -2340,6 +2379,9 @@ code .chunk {
   #example .full.height > .toc {
     display: none;
   }
+  #example .full.height > .article {
+    margin-left: 0px;
+  }
 
   /* Hide Fixed Launch Button */
   #example .fixed.launch.button {
@@ -2473,15 +2515,15 @@ code .chunk {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   body.pushable > .pusher > .full.height {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
   }
 
   /* Ad Label */
@@ -2524,9 +2566,9 @@ code .chunk {
     max-width: none;
   }
   #example .advertisement .carbon-wrap {
-  -webkit-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
 
     text-align: center;
     align-items: center;
