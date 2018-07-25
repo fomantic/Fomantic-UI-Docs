@@ -2,6 +2,7 @@
 
 <script src="/dist/components/accordion.js"></script>
 <script src="/dist/components/api.js"></script>
+<script src="/dist/components/calendar.js"></script>
 <script src="/dist/components/checkbox.js"></script>
 <script src="/dist/components/dimmer.js"></script>
 <script src="/dist/components/dropdown.js"></script>
