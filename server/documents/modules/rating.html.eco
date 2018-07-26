@@ -46,6 +46,14 @@ themes      : ['Default']
       <div class="ui heart rating" data-rating="1" data-max-rating="3"></div>
     </div>
 
+    <h2 class="ui dividing header">States</h2>
+
+    <div class="example">
+      <h4 class="ui header">Disabled</h4>
+      <p>A rating can be started in non-interactive mode by adding a <code>disabled</code> class</p>
+      <div class="ui star disabled rating" data-rating="3" data-max-rating="5"></div>
+    </div>
+
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="example">
