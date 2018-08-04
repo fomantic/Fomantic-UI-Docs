@@ -435,7 +435,7 @@ themes      : ['Default']
 
     <div class="icon example">
       <h4 class="ui header">Automotive</h4>
-      <p>undefined</p>
+      <p>Icons can represent vehicles and automotive activities</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="air freshener icon"></i>air freshener</div>
         <div class="column"><i class="ambulance icon"></i>ambulance</div>
@@ -1436,7 +1436,7 @@ themes      : ['Default']
 
     <div class="icon example">
       <h4 class="ui header">Education</h4>
-      <p>undefined</p>
+      <p>Icons can represent education types and activities</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="atom icon"></i>atom</div>
         <div class="column"><i class="award icon"></i>award</div>
