@@ -155,7 +155,7 @@ blockquote .author {
   font-style: normal;
 }
 
-#example .example i.code.icon:before {
+#example .example i.fitted.code.icon:before {
   font-family: 'Docs Code';
   content: "\e600";
   vertical-align: top;
