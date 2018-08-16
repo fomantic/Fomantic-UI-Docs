@@ -65,7 +65,7 @@ docpadConfig = {
 
 		getZip: ->
 			if @site.version
-				"https://github.com/hammy2899/Fomatnic-UI/archive/" + @site.version + ".zip"
+				"https://github.com/fomantic/Fomatnic-UI/archive/" + @site.version + ".zip"
 			else
 				"https://github.com/fomantic/Fomantic-UI/archive/master.zip"
 
