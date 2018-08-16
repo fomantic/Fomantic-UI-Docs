@@ -19,7 +19,7 @@ type        : 'Introduction'
   <div class="example">
     <h4>Contribute to React Development</h4>
     <p>Semantic UI React bindings are still in development, but are available for most components.</p>
-    <a href="https://github.com/hammy2899/Fomantic-UI-React" target="_blank" class="ui button"><i class="github icon"></i>Visit React Repo</a>
+    <a href="https://github.com/fomantic/Fomantic-UI-React" target="_blank" class="ui button"><i class="github icon"></i>Visit React Repo</a>
   </div>
 
   <h2 class="ui dividing header">
@@ -114,7 +114,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Issues & Debugging</h4>
     <p>For help with Semantic UI Meteor, and for the latest updates, please visit the repository home on GitHub</p>
-    <a href="https://github.com/hammy2899/Fomantic-UI-Meteor" target="_blank" class="ui button"><i class="github icon"></i> Visit Meteor Repo</a>
+    <a href="https://github.com/fomantic/Fomantic-UI-Meteor" target="_blank" class="ui button"><i class="github icon"></i> Visit Meteor Repo</a>
   </div>
 
   <h2 class="ui header">
@@ -145,7 +145,7 @@ type        : 'Introduction'
   <div class="example">
     <h4 class="ui header">Get Coding</h4>
     <p>For example of individual components check out the GitHub repository</p>
-    <a href="https://github.com/hammy2899/Fomantic-UI-Ember" target="_blank" class="ui button"><i class="github icon"></i> Visit Ember Repo</a>
+    <a href="https://github.com/fomantic/Fomantic-UI-Ember" target="_blank" class="ui button"><i class="github icon"></i> Visit Ember Repo</a>
   </div>
 
   <h2 class="ui dividing header">
@@ -155,6 +155,6 @@ type        : 'Introduction'
   <div class="example">
     <h4>Contribute to Angular Development</h4>
     <p>Semantic UI angular bindings are still in development, but are available for some components</p>
-    <a href="https://github.com/hammy2899/Fomantic-UI-Angular" target="_blank" class="ui button"><i class="github icon"></i>Visit Angular Repo</a>
+    <a href="https://github.com/fomantic/Fomantic-UI-Angular" target="_blank" class="ui button"><i class="github icon"></i>Visit Angular Repo</a>
   </div>
 </div>

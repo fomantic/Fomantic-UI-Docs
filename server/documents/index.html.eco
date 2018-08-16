@@ -53,7 +53,7 @@ standalone : true
 <div class="zoomed masthead segment">
   <div class="ui container">
     <div class="introduction">
-      <a class="ui black version label" href="https://github.com/hammy2899/Fomantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
+      <a class="ui black version label" href="https://github.com/fomantic/Fomantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
         <%= @getVersion() %>
       </a>
       <h1 class="ui inverted header">
@@ -273,7 +273,7 @@ standalone : true
         <p>
           Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
         </p>
-        <a href="https://github.com/hammy2899/Fomantic-UI/issues" class="ui large button">Visit GitHub</a>
+        <a href="https://github.com/fomantic/Fomantic-UI/issues" class="ui large button">Visit GitHub</a>
       </div>
     </div>
   </div>

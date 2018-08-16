@@ -67,7 +67,7 @@ docpadConfig = {
 			if @site.version
 				"https://github.com/hammy2899/Fomatnic-UI/archive/" + @site.version + ".zip"
 			else
-				"https://github.com/hammy2899/Fomantic-UI/archive/master.zip"
+				"https://github.com/fomantic/Fomantic-UI/archive/master.zip"
 
 		getPreparedTitle: ->
 			# if we have a document title, then we should use that and suffix the site's title onto it
