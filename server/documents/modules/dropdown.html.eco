@@ -152,7 +152,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </h4>
       <p>A clearable selection dropdown can allow a user to cancel to cancel a previous selection</p>
       <div class="ui clearable selection dropdown">
-        <input type="hidden" name="language" value="English">
+        <input type="hidden" name="language" value="english">
         <i class="dropdown icon"></i>
         <div class="default text">Select Language</div>
         <div class="menu">
