@@ -229,6 +229,28 @@ themes      : ['Default', 'Colored']
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Inverted</h4>
+      <p>A inverted checkbox </p>
+      <div class="ui compact inverted segment">
+        <div class="ui inverted checkbox">
+          <input type="checkbox"/>
+          <label>Inverted</label>
+        </div>
+      </div>
+      <div class="ui compact inverted segment">
+        <div class="ui inverted slider checkbox">
+          <input type="checkbox"/>
+          <label>Inverted</label>
+        </div>
+      </div>
+      <div class="ui compact inverted segment">
+        <div class="ui inverted toggle checkbox">
+          <input type="checkbox"/>
+          <label>Inverted</label>
+        </div>
+      </div>
+    </div>
 
   </div>
 
