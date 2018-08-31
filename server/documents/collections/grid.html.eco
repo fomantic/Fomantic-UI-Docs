@@ -935,6 +935,54 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="example" data-class="very compact, compact">
+      <h4 class="ui header">Compact</h4>
+      <p>A grid can appear compact with no or very little padding</p>
+
+      <p>The following grid is compact.</p>
+      <div class="ui divider"></div>
+      <div class="ui two column compact internally celled grid">
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <p>The following grid is very compact.</p>
+      <div class="ui divider"></div>
+      <div class="ui two column very compact internally celled grid">
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="example">
       <h4 class="ui header">Relaxed</h4>
       <p>A grid can increase its gutters to allow for more negative space</p>
