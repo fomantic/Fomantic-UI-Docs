@@ -545,6 +545,59 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
       </div>
     </div>
   </div>
+
+  <div class="example" data-class="horizontal">
+    <h4 class="ui header">Horizontal Cards</h4>
+    <p>A card can display horizontally</p>
+
+    <div class="ui horizontal card">
+      <div class="image">
+        <img src="/images/avatar2/large/elyse.png">
+      </div>
+      <div class="content">
+        <div class="header">Cute Dog</div>
+        <div class="meta">
+          <span class="category">Animals</span>
+        </div>
+        <div class="description">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui horizontal cards">
+      <div class="card">
+        <div class="image">
+          <img src="/images/avatar2/large/matthew.png">
+        </div>
+        <div class="content">
+          <div class="header">Matt Giampietro</div>
+          <div class="meta">
+            <a>Friends</a>
+          </div>
+          <div class="description">
+            Matthew is an interior designer living in New York.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="/images/avatar2/large/molly.png">
+        </div>
+        <div class="content">
+          <div class="header">Molly</div>
+          <div class="meta">
+            <span class="date">Coworker</span>
+          </div>
+          <div class="description">
+            Molly is a personal assistant living in Paris.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example">
     <h4 class="ui header">Raised Card</h4>
     <p>A card may be formatted to raise above the page.</p>
