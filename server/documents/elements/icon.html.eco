@@ -5067,6 +5067,13 @@ themes      : ['Default']
       <i class="counterclockwise rotated cloud icon"></i>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Flipped & Rotated</h4>
+      <p>An icon can be flipped & rotated</p>
+      <i class="clockwise rotated horizontally flipped cloud icon"></i>
+      <i class="counterclockwise rotated vertically flipped cloud icon"></i>
+    </div>
+
 
     <div class="example">
       <h4 class="ui header">Circular</h4>
