@@ -2215,6 +2215,33 @@ themes      : ['Default', 'GitHub', 'Material']
           })
         ;
       </div>
+
+      <br/>
+      <p>You can also add headers by adding <code>type: 'header'</code> to <code>values</code>.</p>
+      <div class="code" data-label="Javascript" data-type="javascript">
+        $('.ui.dropdown')
+          .dropdown({
+            values: [
+              {
+                name     : 'Filter by tag',
+                type     : 'header'
+                // Will be displayed as header
+              },
+              {
+                name     : 'Important',
+                value    : 'important',
+                type     : 'item'
+                // Will be displayed as item
+              },
+              {
+                name     : 'Announcement',
+                value    : 'announcement'
+                // Will be displayed as item
+              }
+            ]
+          })
+        ;
+      </div>
     </div>
     <div class="no dropdown example">
       <h4 class="ui header">Specifying Different Text &amp; Hidden Input Values</h4>
