@@ -4,17 +4,339 @@ css         : 'new'
 standalone  : true
 order       : 1
 
-title       : 'New in 2.4'
+title       : 'New in 2.5'
 description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { twofour: 'New in 2.4', twothree: 'New in 2.3', twotwo: 'New in 2.2', twoone: 'New in 2.1', two: 'New in 2.0' } }) %>
+<%- @partial('header',  { tabs: { twofive: 'New in 2.5', twofour: 'New in 2.4', twothree: 'New in 2.3', twotwo: 'New in 2.2', twoone: 'New in 2.1', two: 'New in 2.0' } }) %>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
 
-  <div class="ui active tab" data-tab="twofour">
+  <div class="ui active tab" data-tab="twofive">
+    <h2 class="ui dividing header">The beginning of something new</h2>
+
+    <p>Fomantic-UI is starting to mature and we are starting to push bigger and better updates, we hope you like the new Calendar and Range slider modules!</p>
+
+    <h2 class="ui dividing header">New Components</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Calendar</h4>
+      <div class="ui calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Range Slider</h4>
+      <div class="ui range" id="range-25"></div>
+      <br/>
+      <div class="ui input">
+        <input type="text" id="range-input-25" disabled="">
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">FontAwesome 5.3.1</h4>
+      <p>We have updated the icons to the newest FontAwesome release</p>
+      <i class="calendar huge icon"></i>
+      <i class="city huge icon"></i>
+      <i class="envelope open text huge icon"></i>
+      <i class="hamsa huge icon"></i>
+      <i class="peace huge icon"></i>
+      <i class="socks huge icon"></i>
+      <i class="wifi huge icon"></i>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Colored Loaders</h4>
+      <div class="ui active red inline loader"></div>
+      <div class="ui active orange inline loader"></div>
+      <div class="ui active blue inline loader"></div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">More Inverted Components</h4>
+      <p>In 2.5 we made a big push to add more support for inverted components</p>
+
+      <h5 class="ui header">Comments</h5>
+      <div class="ui inverted segment">
+        <div class="ui inverted threaded comments">
+          <h3 class="ui inverted dividing header">Comments</h3>
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/matt.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Matt</a>
+              <div class="metadata">
+                <span class="date">Today at 5:42PM</span>
+              </div>
+              <div class="text">
+                How artistic!
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/elliot.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Elliot Fu</a>
+              <div class="metadata">
+                <span class="date">Yesterday at 12:30AM</span>
+              </div>
+              <div class="text">
+                <p>This has been very useful for my research. Thanks as well!</p>
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+            <div class="comments">
+              <div class="comment">
+                <a class="avatar">
+                  <img src="/images/avatar/small/jenny.jpg">
+                </a>
+                <div class="content">
+                  <a class="author">Jenny Hess</a>
+                  <div class="metadata">
+                    <span class="date">Just now</span>
+                  </div>
+                  <div class="text">
+                    Elliot you are always so right :)
+                  </div>
+                  <div class="actions">
+                    <a class="reply">Reply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/joe.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Joe Henderson</a>
+              <div class="metadata">
+                <span class="date">5 days ago</span>
+              </div>
+              <div class="text">
+                Dude, this is awesome. Thanks so much
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="ui header">Feed</h5>
+      <div class="ui inverted segment">
+        <div class="ui inverted feed">
+          <div class="event">
+            <div class="label">
+              <img src="/images/avatar/small/elliot.jpg">
+            </div>
+            <div class="content">
+              <div class="date">
+                Just now
+              </div>
+              <div class="summary">
+                <a class="user">
+                  Elliot Fu
+                </a> posted on his page
+              </div>
+              <div class="extra text">
+                Hey there !
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="label">
+              <img src="/images/avatar/small/elliot.jpg">
+            </div>
+            <div class="content">
+              <div class="summary">
+                <a class="user">
+                  Elliot Fu
+                </a> added you as a friend
+                <div class="date">
+                  1 Hour Ago
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="label">
+              <img src="/images/avatar/small/helen.jpg">
+            </div>
+            <div class="content">
+              <div class="summary">
+                <a>Helen Troy</a> added <a>2 new illustrations</a>
+                <div class="date">
+                  4 days ago
+                </div>
+              </div>
+              <div class="extra images">
+                <a><img src="/images/wireframe/image.png"></a>
+                <a><img src="/images/wireframe/image.png"></a>
+              </div>
+              <div class="meta">
+                <a class="like">
+                  <i class="like icon"></i> 1 Like
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="ui header">Step</h5>
+      <div class="ui inverted segment">
+        <div class="ui inverted ordered steps">
+          <div class="completed step">
+            <div class="content">
+              <div class="title">Shipping</div>
+              <div class="description">Choose your shipping options</div>
+            </div>
+          </div>
+          <div class="completed step">
+            <div class="content">
+              <div class="title">Billing</div>
+              <div class="description">Enter billing information</div>
+            </div>
+          </div>
+          <div class="active step">
+            <div class="content">
+              <div class="title">Confirm Order</div>
+              <div class="description">Verify order details</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="ui header">Cards</h5>
+      <div class="ui inverted segment">
+        <div class="ui inverted cards">
+          <div class="card">
+            <div class="image">
+              <img src="/images/avatar2/large/matthew.png">
+            </div>
+            <div class="content">
+              <a class="header">Matt Giampietro</a>
+              <div class="meta">
+                <a>Friends</a>
+              </div>
+              <div class="description">
+                Matthew is an interior designer living in New York.
+              </div>
+            </div>
+            <div class="extra content">
+        <span class="right floated">
+          Joined in 2013
+        </span>
+              <a>
+                <i class="user icon"></i>
+                75 Friends
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="/images/avatar2/large/molly.png">
+            </div>
+            <div class="content">
+              <a class="header">Molly</a>
+              <div class="meta">
+                <span class="date">Coworker</span>
+              </div>
+              <div class="description">
+                Molly is a personal assistant living in Paris.
+              </div>
+            </div>
+            <div class="extra content">
+        <span class="right floated">
+          Joined in 2011
+        </span>
+              <a>
+                <i class="user icon"></i>
+                35 Friends
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="/images/avatar2/large/elyse.png">
+            </div>
+            <div class="content">
+              <a class="header">Elyse</a>
+              <div class="meta">
+                <a>Coworker</a>
+              </div>
+              <div class="description">
+                Elyse is a copywriter working in New York.
+              </div>
+            </div>
+            <div class="extra content">
+        <span class="right floated">
+          Joined in 2014
+        </span>
+              <a>
+                <i class="user icon"></i>
+                151 Friends
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Horizontal Cards</h4>
+      <div class="ui horizontal cards">
+        <div class="card">
+          <div class="image">
+            <img src="/images/avatar2/large/matthew.png">
+          </div>
+          <div class="content">
+            <div class="header">Matt Giampietro</div>
+            <div class="meta">
+              <a>Friends</a>
+            </div>
+            <div class="description">
+              Matthew is an interior designer living in New York.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/avatar2/large/molly.png">
+          </div>
+          <div class="content">
+            <div class="header">Molly</div>
+            <div class="meta">
+              <span class="date">Coworker</span>
+            </div>
+            <div class="description">
+              Molly is a personal assistant living in Paris.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui tab" data-tab="twofour">
     <h2 class="ui dividing header">A new life</h2>
 
     <p>With active development slowing down the community has stood up to start a new life for Semantic, welcome to Fomantic-UI.</p>
