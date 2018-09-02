@@ -13,6 +13,7 @@
 <script src="/dist/components/popup.js"></script>
 <script src="/dist/components/progress.js"></script>
 <script src="/dist/components/rating.js"></script>
+<script src="/dist/components/range.js"></script>
 <script src="/dist/components/search.js"></script>
 <script src="/dist/components/shape.js"></script>
 <script src="/dist/components/sidebar.js"></script>
