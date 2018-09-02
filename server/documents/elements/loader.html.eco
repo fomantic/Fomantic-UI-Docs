@@ -109,6 +109,26 @@ themes      : ['Default', 'Duo', 'Pulsar']
     <div class="ui active inline fast loader"></div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Colors</h4>
+    <p>Loaders can be different colors</p>
+    <div class="ui active primary inline loader"></div>
+    <div class="ui active secondary inline loader"></div>
+    <div class="ui active red inline loader"></div>
+    <div class="ui active orange inline loader"></div>
+    <div class="ui active yellow inline loader"></div>
+    <div class="ui active olive inline loader"></div>
+    <div class="ui active green inline loader"></div>
+    <div class="ui active teal inline loader"></div>
+    <div class="ui active blue inline loader"></div>
+    <div class="ui active violet inline loader"></div>
+    <div class="ui active purple inline loader"></div>
+    <div class="ui active pink inline loader"></div>
+    <div class="ui active brown inline loader"></div>
+    <div class="ui active grey inline loader"></div>
+    <div class="ui active black inline loader"></div>
+  </div>
+
   <div class="example" data-class="size">
     <h4 class="ui header">Size</h4>
     <p>Loaders can have different sizes</p>
