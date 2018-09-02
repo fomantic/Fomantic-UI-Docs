@@ -18,6 +18,10 @@ semantic.dropdown.ready = function() {
       context: '.first.example'
     })
   ;
+  
+  $('.center.example .tabular.menu .item')
+    .tab()
+  ;
 
   $('.history.example .menu .item')
     .tab({
