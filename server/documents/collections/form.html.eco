@@ -1331,16 +1331,27 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     <h4 class="ui header">Required</h4>
     <p>A field can show that input is mandatory</p>
     <div class="ui form">
-        <div class="required field">
-          <label>Last name</label>
-          <input type="text" placeholder="Full Name">
+      <div class="required field">
+        <label>Last name</label>
+        <input type="text" placeholder="Full Name">
+      </div>
+      <div class="required inline field">
+        <div class="ui checkbox">
+          <input type="checkbox" />
+          <label>I agree to the terms and conditions</label>
         </div>
-        <div class="required inline field">
-          <div class="ui checkbox">
-            <input type="checkbox" />
-            <label>I agree to the terms and conditions</label>
-          </div>
-        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-use-content="true" class="example">
+    <h4 class="ui header">Transparent Textarea</h4>
+    <p>A textarea can appear transparent</p>
+    <div class="ui form">
+      <div class="field">
+        <label>Description</label>
+        <textarea class="transparent" placeholder="Transparent textarea" cols="30" rows="3"></textarea>
+      </div>
     </div>
   </div>
 
