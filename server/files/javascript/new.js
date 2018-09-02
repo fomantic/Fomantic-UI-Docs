@@ -376,7 +376,16 @@ semantic.new.ready = function() {
     ;
   })
   ;
-
+  
+  // 2.5
+  $('.ui.calendar').calendar();
+  $('.ui.range').range({
+    min: 0,
+    max: 10,
+    start: 5,
+    input: '#range-input-25'
+  });
+  
 };
 
 
