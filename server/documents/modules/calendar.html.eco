@@ -1,0 +1,709 @@
+---
+layout      : 'default'
+css         : 'calendar'
+element     : 'calendar'
+elementType : 'module'
+standalone  : true
+
+title       : 'Calendar'
+description : 'A calendar allows users to select any date ot time'
+type        : 'UI Module'
+
+themes      : ['Default']
+---
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/calendar.less" />
+<script src="/javascript/calendar.js"></script>
+
+<%- @partial('header', { tabs: 'module' }) %>
+
+<div class="main ui container">
+
+  <div class="ui active tab" data-tab="definition">
+
+    <h2 class="ui dividing header">Types</h2>
+    <div class="example">
+      <h4 class="ui header">Calendar</h4>
+      <p>A standard calendar</p>
+      <div class="ui calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('.ui .calendar')
+        .calendar()
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Range</h4>
+      <p>A range calendar allow you to select a start date and a stop date</p>
+      <div class="ui form">
+        <div class="two fields">
+          <div class="field">
+            <label>Start date</label>
+            <div class="ui calendar" id="rangestart">
+              <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="Start">
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label>End date</label>
+            <div class="ui calendar" id="rangeend">
+              <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="End">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="code" data-type="javascript">
+      $('#rangestart').calendar({
+        type: 'date',
+        endCalendar: $('#rangeend')
+      });
+      $('#rangeend').calendar({
+        type: 'date',
+        startCalendar: $('#rangestart')
+      });
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Inline calendar</h4>
+      <p>An inline calendar isn't shown in a popup</p>
+      <div class="ui calendar">
+      </div>
+      <div class="code" data-type="javascript">
+      $('.ui .calendar')
+        .calendar()
+      ;
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="example">
+      <h4 class="ui header">Date calendar</h4>
+      <p>A date calendar disable the time selection</p>
+      <div class="ui calendar" id="date_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#date_calendar')
+        .calendar({
+          type: 'date'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Time calendar</h4>
+      <p>A time calendar disable the date selection</p>
+      <div class="ui calendar" id="time_calendar">
+        <div class="ui input left icon">
+          <i class="time icon"></i>
+          <input type="text" placeholder="Time">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#time_calendar')
+        .calendar({
+          type: 'time'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Year first calendar</h4>
+      <p>A year first calendar allow you to select a date by starting to select a year</p>
+      <div class="ui calendar" id="year_first_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#year_first_calendar')
+        .calendar({
+          startMode: 'year'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">24 hour format</h4>
+      <p>You can get rid of the AM/PM stuff</p>
+      <div class="ui calendar" id="no_ampm">
+        <div class="ui input left icon">
+          <i class="time icon"></i>
+          <input type="text" placeholder="Time">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('.ui .calendar')
+        .calendar({
+          type: 'time',
+          ampm: false
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Month and year calendar</h4>
+      <p>A month and year calendar disable the date and time selection</p>
+      <div class="ui calendar" id="month_year_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#month_year_calendar')
+        .calendar({
+          type: 'month'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Year calendar</h4>
+      <p>A year calendar allow you to select a year only</p>
+      <div class="ui calendar" id="year_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#year_calendar')
+        .calendar({
+          type: 'year'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Min/max date</h4>
+      <p>You can set a minimum and a maximum selection date</p>
+      <div class="ui calendar" id="minmax_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      var today = new Date();
+      
+      $('#minmax_calendar')
+        .calendar({
+          minDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() - 5),
+          maxDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 5)
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Day first calendar</h4>
+      <p>You can chose to use a day first display calendar (parsing and conversion are impacted too)</p>
+      <div class="ui calendar" id="day_first_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#day_first_calendar')
+        .calendar({
+          type: 'date',
+          monthFirst: false
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Custom format</h4>
+      <p>You can entirely change the date format</p>
+      <div class="ui calendar" id="custom_format_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#custom_format_calendar')
+        .calendar({
+          monthFirst: false,
+          formatter: {
+            date: function (date, settings) {
+            if (!date) return '';
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+            return day + '/' + month + '/' + year;
+          }
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Language</h4>
+      <p>It's possible to change the calendar language to fit with your needs</p>
+      <div class="ui calendar" id="french_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#french_calendar')
+        .calendar({
+          text: {
+            days: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+            months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
+            monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
+            today: 'Aujourd\'hui',
+            now: 'Maintenant',
+            am: 'AM',
+            pm: 'PM'
+          }
+        })
+      ;
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Coupling</h2>
+    <div class="example">
+      <h4 class="ui header">Button</h4>
+      <p>A calendar can be coupled to a button</p>
+      <div class="ui calendar">
+        <div class="ui button">Select date</div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('.ui .calendar')
+        .calendar()
+      ;
+      </div>
+    </div>
+
+  </div>
+  <div class="ui tab" data-tab="usage">
+
+    <h2 class="ui dividing header">Initializing</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Initializing a calendar</h4>
+      <p>Calendar is initialized on pre-existing markup</p>
+      <div class="test code">
+      $('.ui.calendar')
+        .calendar()
+      ;
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Behaviors</h2>
+
+    <p>All the following behaviors can be called using the syntax:<p>
+    <div class="code">
+    $('.ui.calendar').calendar('behavior', argumentOne, argumentTwo...);
+    </div>
+
+    <table class="ui definition celled table">
+      <tr>
+        <td>refresh</td>
+        <td>Refresh the calendar</td>
+      </tr>
+      <tr>
+        <td>popup(arguments)</td>
+        <td>Call the popup module (e.g. passing <code>show</code> will show the calendar popup)</td>
+      </tr>
+      <tr>
+        <td>focus</td>
+        <td>Focus the calendar input</td>
+      </tr>
+      <tr>
+        <td>blur</td>
+        <td>Blur the calendar input</td>
+      </tr>
+      <tr>
+        <td>clear</td>
+        <td>Clear the selected date</td>
+      </tr>
+      <tr>
+        <td>get date</td>
+        <td>Get the selected date</td>
+      </tr>
+      <tr>
+        <td>set date(date, updateInput = true, fireChange = true)</td>
+        <td>Set the selected date. Pass <code>false</code> to <code>updateInput</code> to disable updating the input. Pass <code>false</code> to <code>fireChange</code> to disable the <code>onChange</code> callback for this change</td>
+      </tr>
+      <tr>
+        <td>get mode</td>
+        <td>Get the current selection mode (<code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>)</td>
+      </tr>
+      <tr>
+        <td>set mode(mode)</td>
+        <td>Set the current selection mode (<code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>)</td>
+      </tr>
+      <tr>
+        <td>get startDate</td>
+        <td>Get the start date for range selection</td>
+      </tr>
+      <tr>
+        <td>set startDate(date)</td>
+        <td>Set the start date for range selection</td>
+      </tr>
+      <tr>
+        <td>get endDate</td>
+        <td>Get the end date for range selection</td>
+      </tr>
+      <tr>
+        <td>set endDate(date)</td>
+        <td>Set the end date for range selection</td>
+      </tr>
+      <tr>
+        <td>get focusDate</td>
+        <td>Get the currently focused date</td>
+      </tr>
+      <tr>
+        <td>set focusDate(date)</td>
+        <td>Set the currently focused date</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <div class="ui tab" data-tab="settings">
+    <h2 class="ui dividing header">
+      Calendar
+    </h2>
+
+    <h4 class="ui header">
+      Behavior
+    </h4>
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>type</td>
+          <td>datetime</td>
+          <td>Picker type, can be <code>datetime</code>, <code>date</code>, <code>time</code>, <code>month</code>, or <code>year</code></td>
+        </tr>
+        <tr>
+          <td>firstDayOfWeek</td>
+          <td>0</td>
+          <td>Day for first day column (0 = Sunday)</td>
+        </tr>
+        <tr>
+          <td>constantHeight</td>
+          <td>true</td>
+          <td>Add row(s) to shorter months to keep day calendar height consistent (6 rows)</td>
+        </tr>
+        <tr>
+          <td>today</td>
+          <td>false</td>
+          <td>Show a 'today/now' button at the bottom of the calendar</td>
+        </tr>
+        <tr>
+          <td>closable</td>
+          <td>true</td>
+          <td>Close the popup after selecting a date/time</td>
+        </tr>
+        <tr>
+          <td>monthFirst</td>
+          <td>true</td>
+          <td>Month before day when parsing/converting date from/to text</td>
+        </tr>
+        <tr>
+          <td>touchReadonly</td>
+          <td>true</td>
+          <td>Set input to readonly on touch devices</td>
+        </tr>
+        <tr>
+          <td>inline</td>
+          <td>false</td>
+          <td>Create the calendar inline instead of inside a popup</td>
+        </tr>
+        <tr>
+          <td>on</td>
+          <td>null</td>
+          <td>Choose when to show the popup (defaults to <code>focus</code> for input, <code>click</code> for others)</td>
+        </tr>
+        <tr>
+          <td>initialDate</td>
+          <td>null</td>
+          <td>Date to display initially when no date is selected (null = now)</td>
+        </tr>
+        <tr>
+          <td>startMode</td>
+          <td>false</td>
+          <td>Display mode to start in, can be <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code> (false = 'day')</td>
+        </tr>
+        <tr>
+          <td>minDate</td>
+          <td>null</td>
+          <td>Minimum date/time that can be selected, dates/times before are disabled</td>
+        </tr>
+        <tr>
+          <td>maxDate</td>
+          <td>null</td>
+          <td>Maximum date/time that can be selected, dates/times after are disabled</td>
+        </tr>
+        <tr>
+          <td>ampm</td>
+          <td>true</td>
+          <td>Show am/pm in time mode</td>
+        </tr>
+        <tr>
+          <td>disableYear</td>
+          <td>false</td>
+          <td>Disable year selection mode</td>
+        </tr>
+        <tr>
+          <td>disableMonth</td>
+          <td>false</td>
+          <td>Disable month selection mode</td>
+        </tr>
+        <tr>
+          <td>disableMinute</td>
+          <td>false</td>
+          <td>Fisable minute selection mode</td>
+        </tr>
+        <tr>
+          <td>formatInput</td>
+          <td>true</td>
+          <td>Format the input text upon input blur and module creation</td>
+        </tr>
+        <tr>
+          <td>startCalendar</td>
+          <td>null</td>
+          <td>jQuery object or selector for another calendar that represents the start date of a date range</td>
+        </tr>
+        <tr>
+          <td>endCalendar</td>
+          <td>null</td>
+          <td>jQuery object or selector for another calendar that represents the end date of a date range</td>
+        </tr>
+        <tr>
+          <td>multiMonth</td>
+          <td>1</td>
+          <td>Show multiple months when in <code>day</code>' mode</td>
+        </tr>
+        <tr>
+          <td>popupOptions</td>
+          <td colspan="2">
+            <div class="code">
+            popupOptions: {
+              position: 'bottom left',
+              lastResort: 'bottom left',
+              prefer: 'opposite',
+              hideOnScroll: false
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td colspan="2">
+            <div class="code">
+            text: {
+              days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+              months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+              monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              today: 'Today',
+              now: 'Now',
+              am: 'AM',
+              pm: 'PM'
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">
+      Callbacks
+    </h4>
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th class="three wide">Callback</th>
+        <th class="three wide">Context</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+      <tr>
+          <td>onChange</td>
+          <td>active content</td>
+          <td>Is called after a calendar date changes. <code>return false;</code> will cancel the change</td>
+        </tr>
+        <tr>
+          <td>onShow</td>
+          <td>active content</td>
+          <td>Is called before a calendar is shown. <code>return false;</code> will prevent the calendar to be shown</td>
+        </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>active content</td>
+          <td>Is called when the calendar is shown</td>
+        </tr>
+        <tr>
+          <td>onHide</td>
+          <td>active content</td>
+          <td>Is called before a calendar is hidden. <code>return false;</code> will prevent the calendar to be hidden</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>active content</td>
+          <td>Is called when the calendar is hidden</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">
+      DOM Settings
+      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
+    </h4>
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th>Setting</th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Calendar</td>
+          <td>Name used in log statements</td>
+        </tr>
+        <tr>
+          <td>namespace</td>
+          <td>calendar</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td colspan="2">
+            <div class="code" data-type="css">
+            selector    : {
+              popup: '.ui.popup',
+              input: 'input',
+              activator: 'input'
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td colspan="2">
+            <div class="code">
+            className   : {
+              calendar: 'calendar',
+              active: 'active',
+              popup: 'ui popup',
+              grid: 'ui equal width grid',
+              column: 'column',
+              table: 'ui celled center aligned unstackable table',
+              prev: 'prev link',
+              next: 'next link',
+              prevIcon: 'chevron left icon',
+              nextIcon: 'chevron right icon',
+              link: 'link',
+              cell: 'link',
+              disabledCell: 'disabled',
+              adjacentCell: 'adjacent',
+              activeCell: 'active',
+              rangeCell: 'range',
+              focusCell: 'focus',
+              todayCell: 'today',
+              today: 'today link'
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>regExp</td>
+          <td colspan="2">
+            <div class="code">
+            regExp : {
+              dateWords: /[^A-Za-z\u00C0-\u024F]+/g,
+              dateNumbers: /[^\d:]+/g
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>metadata</td>
+          <td colspan="2">
+            <div class="code">
+            metadata : {
+              date: 'date',
+              focusDate: 'focusDate',
+              startDate: 'startDate',
+              endDate: 'endDate',
+              mode: 'mode',
+              monthOffset: 'monthOffset'
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>false</td>
+          <td>Debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>true</td>
+          <td>Show <code>console.table</code> output with performance metrics</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>false</td>
+          <td>Debug output includes all internal behaviors</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+            error   : {
+              popup: 'UI Popup, a required component is not included in this page',
+              method: 'The method you called is not defined.'
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

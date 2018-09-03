@@ -72,6 +72,34 @@ themes      : ['Default']
       </div>
     </div>
 
+    <h2 class="ui header">
+      Variations
+    </h2>
+
+    <div class="center example">
+      <h4 class="ui header">
+        Centered Item
+      </h4>
+      <p>A tab can have center aligned items</p>
+      <div class="ui top attached tabular menu">
+        <div class="active item" data-tab="one">One</div>
+        <div class="center item" data-tab="two">Two</div>
+        <div class="item" data-tab="three">Three</div>
+      </div>
+      <div class="ui bottom attached active tab segment" data-tab="one">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="two">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="three">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="examples">

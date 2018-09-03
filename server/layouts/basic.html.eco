@@ -65,6 +65,8 @@
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/dimmer.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/transition.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/video.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/calendar.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/range.css">
   <% else: %>
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
   <% end %>

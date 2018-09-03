@@ -708,7 +708,7 @@ type        : 'UI Module'
               title           : 'title',       // result title
               action          : 'action',      // "view more" object name
               actionText      : 'text',        // "view more" text
-              actionURL       : 'url'          // "view more" url
+              actionURL       : 'url'          // "view more" url (if set to false the text will appear as a div)
             }
             </div>
           </td>

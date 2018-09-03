@@ -37,6 +37,22 @@ semantic.icon.ready = function() {
         });
         return icons;
       }
+    },
+    categoryVisible = (category) => {
+      var rect = category.getBoundingClientRect();
+      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    },
+    checkVisibility = () => {
+      $('.icon.example').each(function() {
+        var element = $(this).get(0);
+    
+        if(categoryVisible(element)) {
+          $(this).css('visibility', 'visible');
+        } else {
+          $(this).css('visibility', 'hidden');
+        }
+      });
     }
   ;
 
@@ -86,6 +102,28 @@ semantic.icon.ready = function() {
     ;
 
   }
+
+  // only show icon category when visible on screen
+  $(document).scroll(checkVisibility);
+  $(window).resize(checkVisibility);
+  
+  checkVisibility();
+  
+  
+  // check if icon list tab is selected (if so run the check visibility function)
+  var tab = $('.ui.two.item.stackable.tabs > a').get(0);
+  console.log(tab);
+  
+  var observer = new MutationObserver(() => {
+    checkVisibility();
+  });
+  
+  observer.observe(tab, {
+    attributes: true,
+    attributeFilter: ['class'],
+    childList: false,
+    characterData: false
+  });
 
 };
 
