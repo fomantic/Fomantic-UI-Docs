@@ -1084,6 +1084,16 @@ blockquote .author {
 }
 
 /*--------------
+  Content Loader
+---------------*/
+#example .content.example .ignored.card {
+  display: none;
+}
+#example .content.example .card .image + .content {
+  min-height: 94px;
+}
+
+/*--------------
     Colored
 ---------------*/
 
@@ -2460,6 +2470,9 @@ code .chunk {
   #example.button-page .example > .button,
   #example.button-page .example .html > .button {
     margin-bottom: 8px;
+  }
+  #example .stackable.grid .ui.vertical.divider {
+    display: none;
   }
 
   /* Add Sticky Footers */
