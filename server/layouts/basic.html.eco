@@ -66,6 +66,7 @@
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/transition.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/video.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/calendar.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/toast.css">
   <% else: %>
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
   <% end %>
@@ -125,6 +126,7 @@
   <script src="/dist/components/sidebar.js"></script>
   <script src="/dist/components/sticky.js"></script>
   <script src="/dist/components/tab.js"></script>
+  <script src="/dist/components/toast.js"></script>
   <script src="/dist/components/transition.js"></script>
   <script src="/dist/components/video.js"></script>
   <% else: %>
