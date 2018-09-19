@@ -1,0 +1,41 @@
+---
+layout      : 'default'
+css         : 'toast'
+element     : 'toast'
+elementType : 'module'
+standalone  : true
+
+title       : 'Toast'
+description : 'A toast allows users to be notified of an event'
+type        : 'UI Module'
+
+themes      : ['Default']
+---
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/toast.less" />
+<script src="/javascript/toast.js"></script>
+
+<%- @partial('header', { tabs: 'module' }) %>
+
+<div class="main ui container">
+
+  <div class="ui active tab" data-tab="definition">
+
+    
+
+  </div>
+
+  <div class="ui tab" data-tab="examples">
+
+    
+
+  </div>
+
+  <div class="ui tab" data-tab="usage">
+
+
+  </div>
+
+  <div class="ui tab" data-tab="settings">
+    
+  </div>
+</div>
