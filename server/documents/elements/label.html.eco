@@ -425,6 +425,8 @@ themes      : ['Default', 'GitHub']
   <div class="example">
     <h4 class="ui header">Colored</h4>
     <p>A label can have different colors</p>
+    <a class="ui primary label">Primary</a>
+    <a class="ui secondary label">Secondary</a>
     <a class="ui red label">Red</a>
     <a class="ui orange label">Orange</a>
     <a class="ui yellow label">Yellow</a>

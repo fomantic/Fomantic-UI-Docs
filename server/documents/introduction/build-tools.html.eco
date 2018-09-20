@@ -33,7 +33,7 @@ type        : 'Introduction'
     <p>Semantic UI uses Gulp for several reasons:</p>
     <div class="ui large bulleted list">
       <div class="item">Process LESS files with <a href="/usage/theming.html">theming variables</a></div>
-      <div class="item">Add vendor prefixes for <a href="https://github.com/hammy2899/Fomantic-UI/blob/master/tasks/config/project/tasks.js#L96">supported browsers</a> with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
+      <div class="item">Add vendor prefixes for <a href="https://github.com/fomantic/Fomantic-UI/blob/master/tasks/config/project/tasks.js#L96">supported browsers</a> with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
       <div class="item">Watch file changes and rebuild the necessary files when adjusting themes</div>
       <div class="item">Automatically process asset paths, so that minified and concatenated releases can exist in different directories</div>
       <div class="item">Allow custom builds with only the required components for your site</div>

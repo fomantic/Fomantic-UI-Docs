@@ -20,6 +20,20 @@ semantic.new.ready = function() {
 
   };
 
+  //2.4
+  $('.clearable.example .ui.selection.dropdown')
+    .dropdown({
+      clearable: true,
+      placeholder: 'Select country...'
+    })
+  ;
+  $('.clearable.example .ui.inline.dropdown')
+    .dropdown({
+      clearable: true,
+      placeholder: 'any'
+    })
+  ;
+
   $('.bug.accordion')
     .accordion()
   ;
@@ -376,7 +390,16 @@ semantic.new.ready = function() {
     ;
   })
   ;
-
+  
+  // 2.5
+  $('.ui.calendar').calendar();
+  $('.ui.range').range({
+    min: 0,
+    max: 10,
+    start: 5,
+    input: '#range-input-25'
+  });
+  
 };
 
 

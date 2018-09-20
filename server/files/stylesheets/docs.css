@@ -155,7 +155,7 @@ blockquote .author {
   font-style: normal;
 }
 
-#example .example i.code.icon:before {
+#example .example i.fitted.code.icon:before {
   font-family: 'Docs Code';
   content: "\e600";
   vertical-align: top;
@@ -1084,6 +1084,16 @@ blockquote .author {
 }
 
 /*--------------
+  Content Loader
+---------------*/
+#example .content.example .ignored.card {
+  display: none;
+}
+#example .content.example .card .image + .content {
+  min-height: 94px;
+}
+
+/*--------------
     Colored
 ---------------*/
 
@@ -1525,6 +1535,9 @@ body.progress.animated .ui.progress .bar {
   color: #000000;
 }
 
+#example .icon.example {
+  visibility: hidden;
+}
 
 #example .icon.example .grid {
   text-align: left;
@@ -1540,27 +1553,6 @@ body.progress.animated .ui.progress .bar {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-
-  -webkit-transition:
-    color 0.3s ease,
-    opacity 0.3s ease
-;
-  -moz-transition:
-    color 0.3s ease,
-    opacity 0.3s ease
-;
-  -o-transition:
-    color 0.3s ease,
-    opacity 0.3s ease
-;
-  -ms-transition:
-    color 0.3s ease,
-    opacity 0.3s ease
-;
-  transition:
-    color 0.3s ease,
-    opacity 0.3s ease
-;
 }
 #example .icon.example .attached.segment .grid > .row > .column  {
   color: #555555;
@@ -1572,48 +1564,19 @@ body.progress.animated .ui.progress .bar {
   display: block;
   margin: 0em auto 0.25em;
   font-size: 2em;
-
-  -webkit-transition:
-    color 0.6s ease,
-    transform 0.2s ease
-;
-  -moz-transition:
-    color 0.6s ease,
-    transform 0.2s ease
-;
-  -o-transition:
-    color 0.6s ease,
-    transform 0.2s ease
-;
-  -ms-transition:
-    color 0.6s ease,
-    transform 0.2s ease
-;
-  transition:
-    color 0.6s ease,
-    transform 0.2s ease
-;
 }
 #example .icon.example .html.segment .grid .column,
-#example .icon.example .grid:hover .column {
+#example .icon.example .grid .column {
   color: #777777;
 }
-#example .icon.example .grid:hover .column .icon {
+#example .icon.example .grid .column .icon {
+color: #333333;
+}
+
+#example .icon.example .grid .column {
   color: #333333;
 }
 
-#example .icon.example .grid .column:hover .icon {
-  color: #000000;
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-}
-#example .icon.example .grid .column:hover {
-  opacity: 1;
-  color: #444444;
-}
 #example .another.icon.example {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -2507,6 +2470,9 @@ code .chunk {
   #example.button-page .example > .button,
   #example.button-page .example .html > .button {
     margin-bottom: 8px;
+  }
+  #example .stackable.grid .ui.vertical.divider {
+    display: none;
   }
 
   /* Add Sticky Footers */

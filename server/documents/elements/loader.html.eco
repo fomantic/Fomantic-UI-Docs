@@ -15,6 +15,7 @@ themes      : ['Default', 'Duo', 'Pulsar']
 
 <%- @partial('header') %>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/loader.less" />
+<script src="/javascript/loader.js"></script>
 
 <div class="main ui container">
 
@@ -99,6 +100,34 @@ themes      : ['Default', 'Duo', 'Pulsar']
     <h4 class="ui header">Inline Center</h4>
     <p>Loaders can appear inline centered with content </p>
     <div class="ui active centered inline loader"></div>
+  </div>
+
+  <div class="example" data-class="fast,slow">
+    <h4 class="ui header">Speed</h4>
+    <p>Loaders can appear slow, normal or fast</p>
+    <div class="ui active inline slow loader"></div>
+    <div class="ui active inline loader"></div>
+    <div class="ui active inline fast loader"></div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Colors</h4>
+    <p>Loaders can be different colors</p>
+    <div class="ui active primary inline loader"></div>
+    <div class="ui active secondary inline loader"></div>
+    <div class="ui active red inline loader"></div>
+    <div class="ui active orange inline loader"></div>
+    <div class="ui active yellow inline loader"></div>
+    <div class="ui active olive inline loader"></div>
+    <div class="ui active green inline loader"></div>
+    <div class="ui active teal inline loader"></div>
+    <div class="ui active blue inline loader"></div>
+    <div class="ui active violet inline loader"></div>
+    <div class="ui active purple inline loader"></div>
+    <div class="ui active pink inline loader"></div>
+    <div class="ui active brown inline loader"></div>
+    <div class="ui active grey inline loader"></div>
+    <div class="ui active black inline loader"></div>
   </div>
 
   <div class="example" data-class="size">

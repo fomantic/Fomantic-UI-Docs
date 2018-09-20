@@ -1,7 +1,7 @@
 ---
 layout     : 'homepage'
 css        : 'index'
-standalone : true
+standalone : false
 ---
 <div class="following bar">
   <div class="ui container">
@@ -31,7 +31,7 @@ standalone : true
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
-          <iframe class="github" src="//ghbtns.com/github-btn.html?user=hammy2899&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           <% end %>
         </div>
         <div class="ui language floating dropdown link item" id="languages">
@@ -53,7 +53,7 @@ standalone : true
 <div class="zoomed masthead segment">
   <div class="ui container">
     <div class="introduction">
-      <a class="ui black version label" href="https://github.com/hammy2899/Fomantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
+      <a class="ui black version label" href="https://github.com/fomantic/Fomantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
         <%= @getVersion() %>
       </a>
       <h1 class="ui inverted header">
@@ -69,7 +69,7 @@ standalone : true
       <a href="/introduction/getting-started.html" class="ui huge inverted download button">
         Get Started
       </a>
-      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.4</a>
+      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.6</a>
     </div>
     <div class="inverted advertisement">
       <% unless 'development' in @getEnvironments(): %>
@@ -273,7 +273,7 @@ standalone : true
         <p>
           Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
         </p>
-        <a href="https://github.com/hammy2899/Fomantic-UI/issues" class="ui large button">Visit GitHub</a>
+        <a href="https://github.com/fomantic/Fomantic-UI/issues" class="ui large button">Visit GitHub</a>
       </div>
     </div>
   </div>

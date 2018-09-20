@@ -566,6 +566,91 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Inverted</h4>
+    <p>A step's color can be inverted</p>
+
+    <div class="ui inverted segment">
+      <div class="ui inverted steps">
+        <div class="step">
+          <i class="truck icon"></i>
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="active step">
+          <i class="payment icon"></i>
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <i class="info icon"></i>
+          <div class="content">
+            <div class="title">Confirm Order</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted ordered steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm Order</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted vertical steps">
+        <div class="completed step">
+          <i class="truck icon"></i>
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <i class="credit card icon"></i>
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <i class="info icon"></i>
+          <div class="content">
+            <div class="title">Confirm Order</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 
 
 </div>

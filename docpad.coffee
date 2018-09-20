@@ -29,7 +29,7 @@ docpadConfig = {
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [],
 
-			version: "2.4.3",
+			version: "2.6.0",
 
 			branch: "master",
 
@@ -65,9 +65,9 @@ docpadConfig = {
 
 		getZip: ->
 			if @site.version
-				"https://github.com/hammy2899/Fomatnic-UI/archive/" + @site.version + ".zip"
+				"https://github.com/fomantic/Fomatnic-UI/archive/" + @site.version + ".zip"
 			else
-				"https://github.com/hammy2899/Fomantic-UI/archive/master.zip"
+				"https://github.com/fomantic/Fomantic-UI/archive/master.zip"
 
 		getPreparedTitle: ->
 			# if we have a document title, then we should use that and suffix the site's title onto it

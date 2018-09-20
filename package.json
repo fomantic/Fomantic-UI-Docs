@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hammy2899/Fomantic-UI-Docs.git"
+    "url": "git://github.com/fomantic/Fomantic-UI-Docs.git"
   },
   "dependencies": {
     "docpad": "~6.79.4",

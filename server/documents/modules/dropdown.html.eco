@@ -152,9 +152,40 @@ themes      : ['Default', 'GitHub', 'Material']
       </h4>
       <p>A clearable selection dropdown can allow a user to cancel to cancel a previous selection</p>
       <div class="ui clearable selection dropdown">
-        <input type="hidden" name="language" value="English">
+        <input type="hidden" name="language" value="english">
         <i class="dropdown icon"></i>
         <div class="default text">Select Language</div>
+        <div class="menu">
+          <div class="item">Arabic</div>
+          <div class="item">Chinese</div>
+          <div class="item">Danish</div>
+          <div class="item">Dutch</div>
+          <div class="item">English</div>
+          <div class="item">French</div>
+          <div class="item">German</div>
+          <div class="item">Greek</div>
+          <div class="item">Hungarian</div>
+          <div class="item">Italian</div>
+          <div class="item">Japanese</div>
+          <div class="item">Korean</div>
+          <div class="item">Lithuanian</div>
+          <div class="item">Persian</div>
+          <div class="item">Polish</div>
+          <div class="item">Portuguese</div>
+          <div class="item">Russian</div>
+          <div class="item">Spanish</div>
+          <div class="item">Swedish</div>
+          <div class="item">Turkish</div>
+          <div class="item">Vietnamese</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="another dropdown example">
+      <div class="ui clearable multiple selection dropdown">
+        <input type="hidden" name="language" value="dutch,english,french">
+        <i class="dropdown icon"></i>
+        <div class="default text">Select Languages</div>
         <div class="menu">
           <div class="item">Arabic</div>
           <div class="item">Chinese</div>
@@ -1035,6 +1066,86 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <h2 class="ui dividing header">Variations</h2>
 
+    <div class="dropdown example" data-class="size">
+      <h4 class="ui header">Size</h4>
+      <p>A dropdown can have different sizes</p>
+      <div class="ui mini selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Mini</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
+      <div class="ui tiny selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Tiny</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
+      <div class="ui small selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Small</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
+      <div class="ui medium selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Medium</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
+      <div class="ui large selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Large</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
+    </div>
+    <div class="another dropdown example" data-class="size">
+      <div class="ui big selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Big</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
+      <div class="ui huge selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Huge</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
+      <div class="ui massive selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Massive</div>
+        <div class="menu">
+          <div class="item" data-value="1">Male</div>
+          <div class="item" data-value="0">Female</div>
+        </div>
+      </div>
+      
+    </div>
+
     <div class="dropdown example">
       <h4 class="ui header">Scrolling</h4>
       <p>A dropdown can have its menu scroll</p>
@@ -1251,7 +1362,52 @@ themes      : ['Default', 'GitHub', 'Material']
 
   <div class="ui tab" data-tab="examples">
 
+
     <h2 class="ui header">Selection Dropdowns</h2>
+
+    <div class="clearable example">
+      <h4 class="ui header">
+        Clearable
+        <div class="ui teal label">
+          New in 2.4.0
+        </div>
+      </h4>
+      <p>Using the clearable setting will let users remove their selection from a dropdown.</p>
+
+      <div class="ui fluid search selection dropdown">
+        <input type="hidden" name="country">
+        <div class="default text">Select Country</div>
+        <i class="dropdown icon"></i>
+        <%- @partial('examples/single/flag-menu') %>
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui secondary segment">
+        Show me
+        <div class="ui inline scrolling dropdown">
+          <input type="hidden" name="skill" value="css">
+          <div class="text">css</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <%- @partial('examples/single/preset-menu') %>
+          </div>
+        </div>
+        classes currently available.
+      </div>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.clearable.example .ui.selection.dropdown')
+          .dropdown({
+            clearable: true
+          })
+        ;
+        $('.clearable.example .ui.inline.dropdown')
+          .dropdown({
+            clearable: true,
+            placeholder: 'any'
+          })
+        ;
+      </div>
+    </div>
 
     <div class="max example">
       <h4 class="ui header">Maximum Selections</h4>
@@ -2104,6 +2260,33 @@ themes      : ['Default', 'GitHub', 'Material']
           })
         ;
       </div>
+
+      <br/>
+      <p>You can also add headers by adding <code>type: 'header'</code> to <code>values</code>.</p>
+      <div class="code" data-label="Javascript" data-type="javascript">
+        $('.ui.dropdown')
+          .dropdown({
+            values: [
+              {
+                name     : 'Filter by tag',
+                type     : 'header'
+                // Will be displayed as header
+              },
+              {
+                name     : 'Important',
+                value    : 'important',
+                type     : 'item'
+                // Will be displayed as item
+              },
+              {
+                name     : 'Announcement',
+                value    : 'announcement'
+                // Will be displayed as item
+              }
+            ]
+          })
+        ;
+      </div>
     </div>
     <div class="no dropdown example">
       <h4 class="ui header">Specifying Different Text &amp; Hidden Input Values</h4>
@@ -2619,8 +2802,13 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
-          <td>ignoreCase <div class="ui label">New in 2.2.13</div></td>
+          <td>clearable</td>
           <td>false</td>
+          <td>Whether the dropdown value can be cleared by the user after being selected. </td>
+        </tr>
+        <tr>
+          <td>ignoreCase</td>
+          <td>false<div class="ui label">New in 2.2.13</div></td>
           <td>Whether values with matching cases should be treated as identical when adding them to a dropdown.</td>
         </tr>
         <tr>
