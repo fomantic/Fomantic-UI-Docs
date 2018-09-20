@@ -1,6 +1,6 @@
 ---
 layout      : 'default'
-css         : 'toast'
+css         : ''
 element     : 'toast'
 elementType : 'module'
 standalone  : true
@@ -14,28 +14,392 @@ themes      : ['Default']
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/toast.less" />
 <script src="/javascript/toast.js"></script>
 
-<%- @partial('header', { tabs: 'module' }) %>
+<%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples', settings: 'Settings'} }) %>
 
 <div class="main ui container">
 
   <div class="ui active tab" data-tab="definition">
 
+  <h2 class="ui dividing header">Types</h2>
+
+    <div class="no example">
+        <h4 class="ui header">Minimal</h4>
+        <p>A minimal toast will just display a message.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            message: 'I am a toast, nice to meet you !'
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Titled</h4>
+        <p>You can add a title to your toast.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'Better ?',
+            message: 'Hey look, I have a title !'
+          })
+        ;
+        </div>
+    </div>
+
+    <h2 class="ui dividing header">Variations</h2>
+
+    <div class="no example">
+        <h4 class="ui header">Toast Type</h4>
+        <p>A toast can be used to display different types of informations.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            class: 'success',
+            message: `You're using the good framework !`
+          })
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            class: 'error',
+            message: `An error occured !`
+          })
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            class: 'warning',
+            message: `Behind you !`
+          })
+        ;
+        </div>
+    </div>
+    
+    <div class="no example">
+        <h4 class="ui header">Position</h4>
+        <p>A toast can appear in different positions on the screen.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            position: 'bottom right',
+            message: `It's pretty cold down there...`
+          })
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            position: 'top left',
+            message: `Look, I'm here !`
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Duration</h4>
+        <p>You can chose how much time a toast slould be displayed.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            displayTime: 5000,
+            message: `You will see me for 5 seconds.`
+          })
+        ;
+        </div>
+        <p>You can even avoid a toast to disapear.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            displayTime: 0,
+            message: `I'll stay here until you click on me !`
+          })
+        ;
+        </div>
+    </div>
     
 
   </div>
 
   <div class="ui tab" data-tab="examples">
 
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Without icon</h4>
+      <p>You can choose to hide the status icon.</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'warning',
+          showIcon: false,
+          message: 'Hey, where is my icon ?'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Transitions</h4>
+      <p>You can set other transitions types and durations.</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'success',
+          message: 'Did you notice any difference ?',
+          transition: {
+            showMethod   : 'zoom',
+            showDuration : 1000,
+            hideMethod   : 'fade',
+            hideDuration : 1000
+          }
+        })
+      ;
+      </div>
+    </div>
     
-
-  </div>
-
-  <div class="ui tab" data-tab="usage">
-
 
   </div>
 
   <div class="ui tab" data-tab="settings">
+
+    <h2 class="ui dividing header">Settings</h2>
     
+    <h3 class="ui header">
+      Toast Settings
+      <div class="sub header">Settings to configure toast behavior</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>position</td>
+          <td>top right</td>
+          <td>Sets where the toast can be displayed. Can be <code>top right</code>, <code>top center</code>, <code>top left</code>, <code>bottom right</code>, <code>bottom center</code> and <code>bottom left</code></td>
+        </tr>
+        <tr>
+          <td>class</td>
+          <td>info</td>
+          <td>Define the class of notification. Can be <code>info</code>, <code>succeess</code>, <code>warning</code> and <code>error</code></td>
+        </tr>
+        <tr>
+          <td>displayTime</td>
+          <td>3000</td>
+          <td>Set the time (in ms) of the toast appearance. Set <code>0</code> to disable the automatic dismissal</td>
+        </tr>
+        <tr>
+          <td>showIcon</td>
+          <td>true</td>
+          <td>Define if the toast should display an icon</td>
+        </tr>
+        <tr>
+          <td>newestOnTop</td>
+          <td>false</td>
+          <td>Define if new toasts should be displayed above the others</td>
+        </tr>
+        <tr>
+          <td>transition</td>
+          <td>
+            <div class="code">
+      transition: {
+        showMethod   : 'scale',
+        showDuration : 500,
+        hideMethod   : 'scale',
+        hideDuration : 500
+      }
+            </div>
+          </td>
+          <td>Settings to set the transitions and durations during the show or the hide of a toast</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">Callbacks</h4>
+    <p>Callbacks specify a function to occur after a specific behavior.</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th class="four wide">Parameters</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onShow</td>
+          <td>$module</td>
+          <td>Callback before toast is shown. Returning <code>false</code> from this callback will cancel the toast from showing.</td>
+        </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>$module</td>
+          <td>Callback after toast is shown.</td>
+        </tr>
+        <tr>
+          <td>onClick</td>
+          <td>$module</td>
+          <td>Callback after popup is clicked in.</td>
+        </tr>
+        <tr>
+          <td>onHide</td>
+          <td>$module</td>
+          <td>Callback before toast is hidden. Returning <code>false</code> from this callback will cancel the toast from hiding.</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>$module</td>
+          <td>Callback after toast is hidden.</td>
+        </tr>
+        <tr>
+          <td>onRemove</td>
+          <td>$module</td>
+          <td>Callback before toast is destroyed.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      Content Settings
+      <div class="sub header">Settings to specify toast contents</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>title</td>
+          <td>A title for the toast. Leave empty to not display it</td>
+        </tr>
+        <tr>
+          <td>message</td>
+          <td>Message to display</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      DOM Settings
+      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>namespace</td>
+          <td>toast</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>
+            <div class="code">
+    selector    : {
+      container    : '.toast-container',
+      toast        : '.ui.toast'
+    }
+            </div>
+          </td>
+          <td>DOM Selectors used internally</td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code">
+    className   : {
+      container    : 'toast-container',
+      toast        : 'ui toast',
+      icon         : 'icon',
+      visible      : 'visible',
+      content      : 'content',
+      title        : 'title'
+    }
+            </div>
+          </td>
+          <td>Class names used to attach style to state</td>
+        </tr>
+        <tr>
+          <td>icons</td>
+          <td>
+            <div class="code">
+    icons   : {
+      info         : 'info',
+      success      : 'checkmark',
+      warning      : 'warning',
+      error        : 'times'
+    }
+            </div>
+          </td>
+          <td>Icon names used internally</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+
+    <h3 class="ui header">
+      Debug Settings
+      <div class="sub header">Debug settings controls debug output to the console</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Toast</td>
+          <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>false</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>false</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>true</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>true</td>
+          <td>Provides ancillary debug output to console</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+            error: {
+              method          : 'The method you called is not defined.',
+              noTransition    : 'This module requires ui transitions.'
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 </div>
