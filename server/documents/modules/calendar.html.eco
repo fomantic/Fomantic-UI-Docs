@@ -451,6 +451,11 @@ themes      : ['Default']
           <td>Create the calendar inline instead of inside a popup</td>
         </tr>
         <tr>
+          <td>showWeekNumbers</td>
+          <td>false</td>
+          <td>Display the week number on the left</td>
+        </tr>
+        <tr>
           <td>on</td>
           <td>null</td>
           <td>Choose when to show the popup (defaults to <code>focus</code> for input, <code>click</code> for others)</td>

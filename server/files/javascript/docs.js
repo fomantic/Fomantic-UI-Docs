@@ -30,7 +30,6 @@ semantic.ready = function() {
     $document            = $(document),
     $sortableTables      = $('.sortable.table'),
     $sticky              = $('.ui.sticky'),
-    $tocSticky           = $('.toc .ui.sticky'),
 
     $themeDropdown       = $('.theme.dropdown'),
 
@@ -72,7 +71,7 @@ semantic.ready = function() {
     $example             = $('.example'),
     $popupExample        = $example.not('.no'),
     $shownExample        = $example.filter('.shown'),
-    $prerenderedExample  = $example.has('.ui.checkbox, .ui.dropdown, .ui.search, .ui.progress, .ui.rating, .ui.dimmer, .ui.embed, .ui.calendar, .ui.range'),
+    $prerenderedExample  = $example.has('.ui.checkbox, .ui.dropdown, .ui.search, .ui.progress, .ui.rating, .ui.dimmer, .ui.embed, .ui.calendar, .ui.range, .ui.placeholder'),
 
     $visibilityExample   = $example.filter('.visiblity').find('.overlay, .demo.segment, .items img'),
 
@@ -494,6 +493,7 @@ semantic.ready = function() {
         .addClass('active')
       ;
       $('html, body')
+        .stop()
         .animate({
           scrollTop: position
         }, 500)
@@ -1255,17 +1255,6 @@ semantic.ready = function() {
   // register less files
   window.less.registerStylesheets();
 
-  // create sidebar sticky
-  requestAnimationFrame(function() {
-
-    $tocSticky
-      .sticky({
-        silent: true,
-        container: $('html'),
-        context: $fullHeightContainer
-      })
-    ;
-  });
 
   // load page tabs
   if( $pageTabs.length > 0 ) {
@@ -1299,9 +1288,6 @@ semantic.ready = function() {
           });
         },
         onLoad : function() {
-          $tocSticky
-            .sticky('refresh')
-          ;
           $(this).find('.ui.sticky')
             .sticky('refresh')
           ;
@@ -1464,6 +1450,22 @@ semantic.ready = function() {
   }
   else {
     detectAdBlock.onDetected(handler.showBeg);
+  }
+
+  if(window.location.hash) {
+    var
+      $element = $(window.location.hash),
+      position = $element.offset().top + 10
+    ;
+    $element
+      .addClass('active')
+    ;
+    $('html, body')
+      .stop()
+      .animate({
+        scrollTop: position
+      }, 500)
+    ;
   }
 
   handler.getMetadata();
