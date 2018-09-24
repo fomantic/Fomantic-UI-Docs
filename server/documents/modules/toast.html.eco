@@ -101,7 +101,7 @@ themes      : ['Default']
 
     <div class="no example">
         <h4 class="ui header">Duration</h4>
-        <p>You can chose how much time a toast slould be displayed.</p>
+        <p>You can choose how long a toast should be displayed.</p>
         <div class="code" data-demo="true">
         $('body')
           .toast({
@@ -187,7 +187,7 @@ themes      : ['Default']
         <tr>
           <td>class</td>
           <td>info</td>
-          <td>Define the class of notification. Can be <code>info</code>, <code>succeess</code>, <code>warning</code> and <code>error</code></td>
+          <td>Define the class of notification. Can be <code>info</code>, <code>success</code>, <code>warning</code> and <code>error</code></td>
         </tr>
         <tr>
           <td>displayTime</td>
