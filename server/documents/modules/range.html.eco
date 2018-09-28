@@ -8,6 +8,8 @@ standalone  : true
 title       : 'Range'
 description : 'A range slider allows users to select values within a range'
 type        : 'UI Module'
+status      : 'BETA'
+statusColor : 'orange'
 
 themes      : ['Default']
 ---
