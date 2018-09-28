@@ -7,7 +7,7 @@
 
       <h1 class="ui header">
         <%=@document.title %>
-        <% if @document.status?: %><span class="ui red label"><%= @document.status %></span><% end %>
+        <% if @document.status?: %><span class="ui <%= if @document.statusColor? then @document.statusColor else 'yellow' %> label"><%= @document.status %></span><% end %>
         <div class="sub header">
           <% if 'development' in @getEnvironments(): %>
           <% else: %>

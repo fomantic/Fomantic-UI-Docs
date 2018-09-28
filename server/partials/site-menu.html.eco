@@ -46,7 +46,7 @@
       <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
         <%= element.title %>
         <% if element.status?: %>
-        <span class="ui mini empty yellow circular ui label"></span>
+        <span class="ui mini empty <%= if element.statusColor? then element.statusColor else 'yellow' %> circular ui label"></span>
         <% end %>
       </a>
     <% end %>
@@ -59,7 +59,7 @@
       <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
         <%= element.title %>
         <% if element.status?: %>
-        <span class="ui mini empty yellow circular ui label"></span>
+        <span class="ui mini empty <%= if element.statusColor? then element.statusColor else 'yellow' %> circular ui label"></span>
         <% end %>
       </a>
     <% end %>
@@ -72,7 +72,7 @@
       <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
         <%= element.title %>
         <% if element.status?: %>
-        <span class="ui mini empty yellow circular ui label"></span>
+        <span class="ui mini empty <%= if element.statusColor? then element.statusColor else 'yellow' %> circular ui label"></span>
         <% end %>
       </a>
     <% end %>
@@ -85,7 +85,7 @@
       <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
         <%= element.title %>
         <% if element.status?: %>
-        <span class="ui mini empty yellow circular ui label"></span>
+        <span class="ui mini empty <%= if element.statusColor? then element.statusColor else 'yellow' %> circular ui label"></span>
         <% end %>
       </a>
     <% end %>
@@ -98,7 +98,7 @@
       <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
         <%= element.title %>
         <% if element.status?: %>
-        <span class="ui mini empty yellow circular ui label"></span>
+        <span class="ui mini empty <%= if element.statusColor? then element.statusColor else 'yellow' %> circular ui label"></span>
         <% end %>
       </a>
   <% end %>
@@ -111,7 +111,7 @@
       <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
         <%= element.title %>
         <% if element.status?: %>
-        <span class="ui mini empty yellow circular ui label"></span>
+        <span class="ui mini empty <%= if element.statusColor? then element.statusColor else 'yellow' %> circular ui label"></span>
         <% end %>
       </a>
     <% end %>
