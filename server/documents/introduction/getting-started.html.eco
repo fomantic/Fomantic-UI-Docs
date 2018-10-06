@@ -109,8 +109,8 @@ type        : 'Main'
 		&lt;script src="https://code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
 
 &lt;!-- Semantic --&gt;
-		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/path/to/semantic/dist/semantic.min.css&quot;&gt;
-		&lt;script src=&quot;/path/to/semantic/dist/semantic.min.js&quot;&gt;&lt;/script&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/path/to/fomantic/dist/fomantic.min.css&quot;&gt;
+		&lt;script src=&quot;/path/to/fomantic/dist/fomantic.min.js&quot;&gt;&lt;/script&gt;
     </div>
   </div>
   <h2 class="ui dividing header">Updating</h2>
