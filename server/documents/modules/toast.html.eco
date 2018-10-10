@@ -49,6 +49,20 @@ themes      : ['Default']
         </div>
     </div>
 
+    <div class="no example">
+        <h4 class="ui header">ProgressBar</h4>
+        <p>You can attach a progressbar to your toast.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'LOOK',
+            message: 'See, how long i will last',
+            showProgress: 'bottom'
+          })
+        ;
+        </div>
+    </div>
+
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="no example">
@@ -122,6 +136,39 @@ themes      : ['Default']
         ;
         </div>
     </div>
+
+    <div class="no example">
+        <h4 class="ui header">Use Message Style</h4>
+        <p>You can use all of the styles and colors from the message component</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'Awesome',
+            message: 'I got my style from the message class',
+            class : 'purple',
+            className: {
+                toast: 'ui message',
+                title: 'ui header'
+            }
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Decreasing ProgressBar</h4>
+        <p>The progressbar could be be lowered instead of raised</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'LOOK',
+            message: 'See, how long i will last',
+            showProgress: 'top',
+            progressUp: false
+          })
+        ;
+        </div>
+    </div>
     
 
   </div>
@@ -145,6 +192,35 @@ themes      : ['Default']
     </div>
 
     <div class="no example">
+      <h4 class="ui header">Individual icon</h4>
+      <p>Use whatever you like from the included FontAwesome gallery</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'info',
+          showIcon: 'microphone',
+          message: 'Listen to me'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Close Icon</h4>
+      <p>You can force the user to click a close Icon instead of clicking anywhere on the toast to close it</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'info',
+          displayTime: 0,
+          closeIcon: true,
+          message: 'Click on the X to close me'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
       <h4 class="ui header">Transitions</h4>
       <p>You can set other transitions types and durations.</p>
       <div class="code" data-demo="true">
@@ -162,7 +238,22 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    
+
+    <div class="no example">
+        <h4 class="ui header">Show Boxshadow on hover</h4>
+        <p>Change the components className to get additional styles</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            message: 'I got my style from the message class',
+            class : 'brown',
+            className: {
+                toast: 'ui hoverfloating message'
+            }
+          })
+        ;
+        </div>
+    </div>
 
   </div>
 
@@ -189,7 +280,7 @@ themes      : ['Default']
         <tr>
           <td>class</td>
           <td>info</td>
-          <td>Define the class of notification. Can be <code>info</code>, <code>success</code>, <code>warning</code> and <code>error</code></td>
+          <td>Define the class of notification. Can be <code>info</code>, <code>success</code>, <code>warning</code> and <code>error</code>. If <code>ui message</code> is used in className.toast option (see below), this option can hold any supported class of the message component</td>
         </tr>
         <tr>
           <td>displayTime</td>
@@ -199,7 +290,32 @@ themes      : ['Default']
         <tr>
           <td>showIcon</td>
           <td>true</td>
-          <td>Define if the toast should display an icon</td>
+          <td>Define if the toast should display an icon. If a string is given, this will be used as icon classname</td>
+        </tr>
+        <tr>
+          <td>closeIcon</td>
+          <td>false</td>
+          <td>This will make the toast closable by the top right corner icon instead of clicking anywhere on the toast</td>
+        </tr>
+        <tr>
+          <td>showProgress</td>
+          <td>false</td>
+          <td>Displays a progressbar on <code>top</code> or <code>bottom</code> increasing until displayTime is reached. . <code>false</code> won't display any progressbar. If displayTime option is 0, this option is ignored</td>
+        </tr>
+        <tr>
+          <td>progressUp</td>
+          <td>true</td>
+          <td><code>true</code>Increases the progressbar from 0% to 100%<br><code>false</code> Decreases the progressbar from 100% to 0%</td>
+        </tr>
+        <tr>
+          <td>compact</td>
+          <td>true</td>
+          <td><code>true</code> will display the toast in a fixed width, <code>false</code> displays the toast responsively with dynamic width</td>
+        </tr>
+        <tr>
+          <td>opacity</td>
+          <td>1</td>
+          <td>Opacity Value of the toast after the show-transition</td>
         </tr>
         <tr>
           <td>newestOnTop</td>
@@ -214,7 +330,8 @@ themes      : ['Default']
         showMethod   : 'scale',
         showDuration : 500,
         hideMethod   : 'scale',
-        hideDuration : 500
+        hideDuration : 500,
+        closeEasing  : 'easeOutBounce'
       }
             </div>
           </td>
@@ -323,6 +440,8 @@ themes      : ['Default']
             <div class="code">
     className   : {
       container    : 'toast-container',
+      box          : 'toast-box',
+      progress     : 'ui attached active progress',
       toast        : 'ui toast',
       icon         : 'icon',
       visible      : 'visible',
