@@ -87,6 +87,18 @@ themes      : ['Default']
       </div>
     </div>
 
+    <h2 class="ui dividing header">States</h2>
+    <div class="example">
+      <h4 class="ui header">Disabled</h4>
+      <p>A disabled calendar does not allow user interaction</p>
+      <div class="ui disabled calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="examples">
