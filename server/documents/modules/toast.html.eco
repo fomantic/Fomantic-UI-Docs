@@ -127,13 +127,15 @@ themes      : ['Default']
         <h4 class="ui header">Color Variants</h4>
         <p>You can use all of the usual color names</p>
         <div class="code" data-demo="true">
+        if(!document.suiToastColorIndex) {
+          document.suiToastColorIndex = -1;
+        }
         var suiColors = ['red','orange','yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black'],
-            suiIndex = -1,
             suiPlus = function(){
-                if (++suiIndex === suiColors.length) {
-                    suiIndex = 0;
+                if (++document.suiToastColorIndex === suiColors.length) {
+                    document.suiToastColorIndex = 0;
                 }
-                return suiIndex;
+                return document.suiToastColorIndex;
             }
         ;
         $('body')
@@ -151,13 +153,15 @@ themes      : ['Default']
         <h4 class="ui header">Inverted Colors</h4>
         <p>Same as above, just add <code>inverted</code> to the class definition</p>
         <div class="code" data-demo="true">
+        if(!document.suiToastColorIndex) {
+          document.suiToastColorIndex = -1;
+        }
         var suiColors = ['red','orange','yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black'],
-            suiIndex = -1,
             suiPlus = function(){
-                if (++suiIndex === suiColors.length) {
-                    suiIndex = 0;
+                if (++document.suiToastColorIndex === suiColors.length) {
+                    document.suiToastColorIndex = 0;
                 }
-                return suiIndex;
+                return document.suiToastColorIndex;
             }
         ;
         $('body')
