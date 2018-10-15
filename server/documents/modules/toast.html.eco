@@ -123,6 +123,57 @@ themes      : ['Default']
         </div>
     </div>
     
+    <div class="no example">
+        <h4 class="ui header">Color Variants</h4>
+        <p>You can use all of the usual color names</p>
+        <div class="code" data-demo="true">
+        if(typeof document.suiToastColorIndex === 'undefined') {
+          document.suiToastColorIndex = -1;
+        }
+        var suiColors = ['red','orange','yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black'],
+            suiPlus = function(){
+                if (++document.suiToastColorIndex === suiColors.length) {
+                    document.suiToastColorIndex = 0;
+                }
+                return document.suiToastColorIndex;
+            }
+        ;
+        $('body')
+          .toast({
+            message: 'I am a colorful toast',
+//            class: 'purple',
+            class : suiColors[suiPlus()],   //cycle through all colors
+            showProgress: 'bottom'
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Inverted Colors</h4>
+        <p>Same as above, just add <code>inverted</code> to the class definition</p>
+        <div class="code" data-demo="true">
+        if(typeof document.suiToastColorIndex === 'undefined') {
+          document.suiToastColorIndex = -1;
+        }
+        var suiColors = ['red','orange','yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black'],
+            suiPlus = function(){
+                if (++document.suiToastColorIndex === suiColors.length) {
+                    document.suiToastColorIndex = 0;
+                }
+                return document.suiToastColorIndex;
+            }
+        ;
+        $('body')
+          .toast({
+            message: 'I am an inverted colorful toast',
+//            class: 'inverted purple',
+            class : 'inverted ' + suiColors[suiPlus()],   //cycle through all colors
+            showProgress: 'bottom'
+          })
+        ;
+        </div>
+    </div>
 
   </div>
 
