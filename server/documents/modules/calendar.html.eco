@@ -234,6 +234,15 @@ themes      : ['Default']
       ;
       </div>
     </div>
+    <div class="another example">
+      <p>You can also set a minimum and a maximum selection date using HTML markup</p>
+      <div class="ui calendar" id="minmax_calendar_2" data-min-date="10/15/2018 08:00:00" data-max-date="10/19/2018 18:00:00">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+    </div>
 
     <div class="example">
       <h4 class="ui header">Day first calendar</h4>

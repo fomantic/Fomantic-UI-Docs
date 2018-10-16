@@ -5,13 +5,9 @@ semantic.calendar.ready = function() {
 
   // selector cache
   var
-    $calendar     = $('.ui.calendar'),
     today = new Date(),
     // alias
     handler
-  ;
-  $calendar
-    .calendar()
   ;
 
   // Range
@@ -60,6 +56,8 @@ semantic.calendar.ready = function() {
     minDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() - 5),
     maxDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 5)
   });
+
+  $('#minmax_calendar_2').calendar({ });
 
   // Custom format
   $('#custom_format_calendar').calendar({
