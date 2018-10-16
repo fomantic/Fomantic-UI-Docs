@@ -31,7 +31,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui .calendar')
+      $('.ui.calendar')
         .calendar()
       ;
       </div>
@@ -81,7 +81,7 @@ themes      : ['Default']
       <div class="ui calendar">
       </div>
       <div class="code" data-type="javascript">
-      $('.ui .calendar')
+      $('.ui.calendar')
         .calendar()
       ;
       </div>
@@ -169,7 +169,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui .calendar')
+      $('.ui.calendar')
         .calendar({
           type: 'time',
           ampm: false
@@ -314,7 +314,7 @@ themes      : ['Default']
         <div class="ui button">Select date</div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui .calendar')
+      $('.ui.calendar')
         .calendar()
       ;
       </div>
