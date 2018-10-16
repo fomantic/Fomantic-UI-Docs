@@ -527,7 +527,7 @@ themes      : ['Default', 'Material']
     </div>
 
     <div class="no example">
-      <h4 class="ui header">Inverted Variant</h4>
+      <h4 class="ui header">Inverted</h4>
       <p>A modal can be shown inverted on white dimmer...</p>
       <div class="code" data-demo="true" data-eval="$('.mini.test.inverted.modal').not('.basic').modal({inverted:true}).modal('show')">
       $('.mini.inverted.modal')
@@ -538,7 +538,7 @@ themes      : ['Default', 'Material']
       ;
       </div>
         <p>... or default black dimmer</p>
-      <div class="code" data-demo="true" data-eval="$('.mini.test.inverted.modal').not('.basic').modal('show')">
+      <div class="code" data-demo="true" data-eval="$('.mini.test.inverted.modal').not('.basic').modal({inverted: false}).modal('show')">
       $('.mini.inverted.modal')
         .modal('show')
       ;
