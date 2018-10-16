@@ -403,6 +403,14 @@ themes      : ['Default']
         <td>set focusDate(date)</td>
         <td>Set the currently focused date</td>
       </tr>
+      <tr>
+        <td>set minDate(date)</td>
+        <td>Set the minimal selectable date</td>
+      </tr>
+      <tr>
+        <td>set maxDate(date)</td>
+        <td>Set the maximal selectable date</td>
+      </tr>
     </table>
 
   </div>
