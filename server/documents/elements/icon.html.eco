@@ -35,7 +35,7 @@ themes      : ['Default']
       Icons serve a very similar function to text in a page. In Semantic icons receive a special tag <code>&lt;i&gt;</code> which allow for an abbreviated markup when sitting along-side text.
     </div>
 
-    <div class="ui ignored message">Semantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.3.1</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
+    <div class="ui ignored message">Semantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.4.1</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
 
     <div class="icon example">
       <h4 class="ui header">Accessibility</h4>
@@ -84,22 +84,38 @@ themes      : ['Default']
       <h4 class="ui header">Animals</h4>
       <p>Icons can represent animals</p>
       <div class="ui doubling five column grid">
+        <div class="column"><i class="cat icon"></i>cat</div>
         <div class="column"><i class="crow icon"></i>crow</div>
+        <div class="column"><i class="dog icon"></i>dog</div>
         <div class="column"><i class="dove icon"></i>dove</div>
+        <div class="column"><i class="dragon icon"></i>dragon</div>
         <div class="column"><i class="feather icon"></i>feather</div>
         <div class="column"><i class="feather alternate icon"></i>feather alternate</div>
         <div class="column"><i class="fish icon"></i>fish</div>
         <div class="column"><i class="frog icon"></i>frog</div>
+        <div class="column"><i class="hippo icon"></i>hippo</div>
+        <div class="column"><i class="horse icon"></i>horse</div>
         <div class="column"><i class="kiwi bird icon"></i>kiwi bird</div>
+        <div class="column"><i class="otter icon"></i>otter</div>
+        <div class="column"><i class="paw icon"></i>paw</div>
+        <div class="column"><i class="spider icon"></i>spider</div>
       </div>
       <div class="existing code">
+        <i class="cat icon"></i>
         <i class="crow icon"></i>
+        <i class="dog icon"></i>
         <i class="dove icon"></i>
+        <i class="dragon icon"></i>
         <i class="feather icon"></i>
         <i class="feather alternate icon"></i>
         <i class="fish icon"></i>
         <i class="frog icon"></i>
+        <i class="hippo icon"></i>
+        <i class="horse icon"></i>
         <i class="kiwi bird icon"></i>
+        <i class="otter icon"></i>
+        <i class="paw icon"></i>
+        <i class="spider icon"></i>
       </div>
     </div>
 
@@ -193,10 +209,8 @@ themes      : ['Default']
         <div class="column"><i class="share icon"></i>share</div>
         <div class="column"><i class="share square icon"></i>share square</div>
         <div class="column"><i class="share square outline icon"></i>share square outline</div>
-        <div class="column"><i class="sign-in icon"></i>sign-in</div>
-        <div class="column"><i class="sign-out icon"></i>sign-out</div>
-        <div class="column"><i class="sign-in alternate icon"></i>sign-in alternate</div>
-        <div class="column"><i class="sign-out alternate icon"></i>sign-out alternate</div>
+        <div class="column"><i class="sign in alternate icon"></i>sign in alternate</div>
+        <div class="column"><i class="sign out alternate icon"></i>sign out alternate</div>
         <div class="column"><i class="sort icon"></i>sort</div>
         <div class="column"><i class="sort alphabet down icon"></i>sort alphabet down</div>
         <div class="column"><i class="sort alphabet up icon"></i>sort alphabet up</div>
@@ -213,8 +227,6 @@ themes      : ['Default']
         <div class="column"><i class="undo icon"></i>undo</div>
         <div class="column"><i class="undo alternate icon"></i>undo alternate</div>
         <div class="column"><i class="upload icon"></i>upload</div>
-        <div class="column"><i class="zoom-in icon"></i>zoom-in</div>
-        <div class="column"><i class="zoom-out icon"></i>zoom-out</div>
       </div>
       <div class="existing code">
         <i class="angle double down icon"></i>
@@ -377,6 +389,7 @@ themes      : ['Default']
         <div class="column"><i class="undo alternate icon"></i>undo alternate</div>
         <div class="column"><i class="video icon"></i>video</div>
         <div class="column"><i class="volume down icon"></i>volume down</div>
+        <div class="column"><i class="volume mute icon"></i>volume mute</div>
         <div class="column"><i class="volume off icon"></i>volume off</div>
         <div class="column"><i class="volume up icon"></i>volume up</div>
         <div class="column"><i class="youtube icon"></i>youtube</div>
@@ -431,6 +444,7 @@ themes      : ['Default']
         <i class="undo alternate icon"></i>
         <i class="video icon"></i>
         <i class="volume down icon"></i>
+        <i class="volume mute icon"></i>
         <i class="volume off icon"></i>
         <i class="volume up icon"></i>
         <i class="youtube icon"></i>
@@ -485,6 +499,37 @@ themes      : ['Default']
     </div>
 
     <div class="icon example">
+      <h4 class="ui header">Autumn</h4>
+      <p>Icons which represent the Autumn season</p>
+      <div class="ui doubling five column grid">
+        <div class="column"><i class="campground icon"></i>campground</div>
+        <div class="column"><i class="cloud sun icon"></i>cloud sun</div>
+        <div class="column"><i class="drumstick bite icon"></i>drumstick bite</div>
+        <div class="column"><i class="football ball icon"></i>football ball</div>
+        <div class="column"><i class="fruit-apple icon"></i>fruit-apple</div>
+        <div class="column"><i class="hiking icon"></i>hiking</div>
+        <div class="column"><i class="mountain icon"></i>mountain</div>
+        <div class="column"><i class="tractor icon"></i>tractor</div>
+        <div class="column"><i class="tree icon"></i>tree</div>
+        <div class="column"><i class="wind icon"></i>wind</div>
+        <div class="column"><i class="wine bottle icon"></i>wine bottle</div>
+      </div>
+      <div class="existing code">
+        <i class="campground icon"></i>
+        <i class="cloud sun icon"></i>
+        <i class="drumstick bite icon"></i>
+        <i class="football ball icon"></i>
+        <i class="fruit-apple icon"></i>
+        <i class="hiking icon"></i>
+        <i class="mountain icon"></i>
+        <i class="tractor icon"></i>
+        <i class="tree icon"></i>
+        <i class="wind icon"></i>
+        <i class="wine bottle icon"></i>
+      </div>
+    </div>
+
+    <div class="icon example">
       <h4 class="ui header">Buildings</h4>
       <p>Icons can represent common building types</p>
       <div class="ui doubling five column grid">
@@ -496,6 +541,7 @@ themes      : ['Default']
         <div class="column"><i class="hospital icon"></i>hospital</div>
         <div class="column"><i class="hospital alternate icon"></i>hospital alternate</div>
         <div class="column"><i class="hospital outline icon"></i>hospital outline</div>
+        <div class="column"><i class="house damage icon"></i>house damage</div>
         <div class="column"><i class="industry icon"></i>industry</div>
         <div class="column"><i class="mosque icon"></i>mosque</div>
         <div class="column"><i class="place of worship icon"></i>place of worship</div>
@@ -514,6 +560,7 @@ themes      : ['Default']
         <i class="hospital icon"></i>
         <i class="hospital alternate icon"></i>
         <i class="hospital outline icon"></i>
+        <i class="house damage icon"></i>
         <i class="industry icon"></i>
         <i class="mosque icon"></i>
         <i class="place of worship icon"></i>
@@ -1095,6 +1142,7 @@ themes      : ['Default']
         <div class="column"><i class="euro sign icon"></i>euro sign</div>
         <div class="column"><i class="gg icon"></i>gg</div>
         <div class="column"><i class="gg circle icon"></i>gg circle</div>
+        <div class="column"><i class="hryvnia icon"></i>hryvnia</div>
         <div class="column"><i class="lira sign icon"></i>lira sign</div>
         <div class="column"><i class="money bill icon"></i>money bill</div>
         <div class="column"><i class="money bill alternate icon"></i>money bill alternate</div>
@@ -1118,6 +1166,7 @@ themes      : ['Default']
         <i class="euro sign icon"></i>
         <i class="gg icon"></i>
         <i class="gg circle icon"></i>
+        <i class="hryvnia icon"></i>
         <i class="lira sign icon"></i>
         <i class="money bill icon"></i>
         <i class="money bill alternate icon"></i>
@@ -1748,6 +1797,47 @@ themes      : ['Default']
     </div>
 
     <div class="icon example">
+      <h4 class="ui header">Gaming & Tabletop</h4>
+      <p>Icons which represent table-top games</p>
+      <div class="ui doubling five column grid">
+        <div class="column"><i class="acquisitions incorporated icon"></i>acquisitions incorporated</div>
+        <div class="column"><i class="book dead icon"></i>book dead</div>
+        <div class="column"><i class="critical role icon"></i>critical role</div>
+        <div class="column"><i class="d and d icon"></i>d and d</div>
+        <div class="column"><i class="dice d20 icon"></i>dice d20</div>
+        <div class="column"><i class="dice d6 icon"></i>dice d6</div>
+        <div class="column"><i class="dragon icon"></i>dragon</div>
+        <div class="column"><i class="dungeon icon"></i>dungeon</div>
+        <div class="column"><i class="fantasy flight games icon"></i>fantasy flight games</div>
+        <div class="column"><i class="fist raised icon"></i>fist raised</div>
+        <div class="column"><i class="hat wizard icon"></i>hat wizard</div>
+        <div class="column"><i class="penny arcade icon"></i>penny arcade</div>
+        <div class="column"><i class="ring icon"></i>ring</div>
+        <div class="column"><i class="scroll icon"></i>scroll</div>
+        <div class="column"><i class="skull crossbones icon"></i>skull crossbones</div>
+        <div class="column"><i class="wizards of the coast icon"></i>wizards of the coast</div>
+      </div>
+      <div class="existing code">
+        <i class="acquisitions incorporated icon"></i>
+        <i class="book dead icon"></i>
+        <i class="critical role icon"></i>
+        <i class="d and d icon"></i>
+        <i class="dice d20 icon"></i>
+        <i class="dice d6 icon"></i>
+        <i class="dragon icon"></i>
+        <i class="dungeon icon"></i>
+        <i class="fantasy flight games icon"></i>
+        <i class="fist raised icon"></i>
+        <i class="hat wizard icon"></i>
+        <i class="penny arcade icon"></i>
+        <i class="ring icon"></i>
+        <i class="scroll icon"></i>
+        <i class="skull crossbones icon"></i>
+        <i class="wizards of the coast icon"></i>
+      </div>
+    </div>
+
+    <div class="icon example">
       <h4 class="ui header">Gender</h4>
       <p>Icons can represent genders or types of sexuality</p>
       <div class="ui doubling five column grid">
@@ -1783,10 +1873,42 @@ themes      : ['Default']
     </div>
 
     <div class="icon example">
+      <h4 class="ui header">Halloween</h4>
+      <p>Icons which represent Halloween</p>
+      <div class="ui doubling five column grid">
+        <div class="column"><i class="book dead icon"></i>book dead</div>
+        <div class="column"><i class="broom icon"></i>broom</div>
+        <div class="column"><i class="cat icon"></i>cat</div>
+        <div class="column"><i class="cloud moon icon"></i>cloud moon</div>
+        <div class="column"><i class="crow icon"></i>crow</div>
+        <div class="column"><i class="ghost icon"></i>ghost</div>
+        <div class="column"><i class="hat wizard icon"></i>hat wizard</div>
+        <div class="column"><i class="mask icon"></i>mask</div>
+        <div class="column"><i class="skull crossbones icon"></i>skull crossbones</div>
+        <div class="column"><i class="spider icon"></i>spider</div>
+        <div class="column"><i class="toilet paper icon"></i>toilet paper</div>
+      </div>
+      <div class="existing code">
+        <i class="book dead icon"></i>
+        <i class="broom icon"></i>
+        <i class="cat icon"></i>
+        <i class="cloud moon icon"></i>
+        <i class="crow icon"></i>
+        <i class="ghost icon"></i>
+        <i class="hat wizard icon"></i>
+        <i class="mask icon"></i>
+        <i class="skull crossbones icon"></i>
+        <i class="spider icon"></i>
+        <i class="toilet paper icon"></i>
+      </div>
+    </div>
+
+    <div class="icon example">
       <h4 class="ui header">Hands</h4>
       <p>Icons can represent hand signals and gestures</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="allergies icon"></i>allergies</div>
+        <div class="column"><i class="fist raised icon"></i>fist raised</div>
         <div class="column"><i class="hand holding icon"></i>hand holding</div>
         <div class="column"><i class="hand lizard icon"></i>hand lizard</div>
         <div class="column"><i class="hand lizard outline icon"></i>hand lizard outline</div>
@@ -1820,6 +1942,7 @@ themes      : ['Default']
       </div>
       <div class="existing code">
         <i class="allergies icon"></i>
+        <i class="fist raised icon"></i>
         <i class="hand holding icon"></i>
         <i class="hand lizard icon"></i>
         <i class="hand lizard outline icon"></i>
@@ -2002,7 +2125,6 @@ themes      : ['Default']
         <div class="column"><i class="cloud icon"></i>cloud</div>
         <div class="column"><i class="cloud download alternate icon"></i>cloud download alternate</div>
         <div class="column"><i class="cloud upload alternate icon"></i>cloud upload alternate</div>
-        <div class="column"><i class="close icon"></i>close icon</div>
         <div class="column"><i class="coffee icon"></i>coffee</div>
         <div class="column"><i class="cog icon"></i>cog</div>
         <div class="column"><i class="cogs icon"></i>cogs</div>
@@ -2108,8 +2230,8 @@ themes      : ['Default']
         <div class="column"><i class="share square icon"></i>share square</div>
         <div class="column"><i class="share square outline icon"></i>share square outline</div>
         <div class="column"><i class="shield alternate icon"></i>shield alternate</div>
-        <div class="column"><i class="sign-in icon"></i>sign-in</div>
-        <div class="column"><i class="sign-out icon"></i>sign-out</div>
+        <div class="column"><i class="sign in alternate icon"></i>sign in alternate</div>
+        <div class="column"><i class="sign out alternate icon"></i>sign out alternate</div>
         <div class="column"><i class="signal icon"></i>signal</div>
         <div class="column"><i class="sitemap icon"></i>sitemap</div>
         <div class="column"><i class="sliders horizontal icon"></i>sliders horizontal</div>
@@ -2152,14 +2274,11 @@ themes      : ['Default']
         <div class="column"><i class="user circle outline icon"></i>user circle outline</div>
         <div class="column"><i class="user outline icon"></i>user outline</div>
         <div class="column"><i class="volume down icon"></i>volume down</div>
+        <div class="column"><i class="volume mute icon"></i>volume mute</div>
         <div class="column"><i class="volume off icon"></i>volume off</div>
         <div class="column"><i class="volume up icon"></i>volume up</div>
         <div class="column"><i class="wifi icon"></i>wifi</div>
-<<<<<<< HEAD
         <div class="column"><i class="wrench icon"></i>wrench</div>
-=======
-        <div class="column"><i class="x icon"></i>x icon</div>
->>>>>>> 108c5e8538c5c520f1e444b3ed79804e1356b116
       </div>
       <div class="existing code">
         <i class="award icon"></i>
@@ -2352,6 +2471,7 @@ themes      : ['Default']
         <i class="user circle outline icon"></i>
         <i class="user outline icon"></i>
         <i class="volume down icon"></i>
+        <i class="volume mute icon"></i>
         <i class="volume off icon"></i>
         <i class="volume up icon"></i>
         <i class="wifi icon"></i>
@@ -2905,6 +3025,7 @@ themes      : ['Default']
         <div class="column"><i class="blender icon"></i>blender</div>
         <div class="column"><i class="bomb icon"></i>bomb</div>
         <div class="column"><i class="book icon"></i>book</div>
+        <div class="column"><i class="book dead icon"></i>book dead</div>
         <div class="column"><i class="bookmark icon"></i>bookmark</div>
         <div class="column"><i class="bookmark outline icon"></i>bookmark outline</div>
         <div class="column"><i class="briefcase icon"></i>briefcase</div>
@@ -2940,6 +3061,8 @@ themes      : ['Default']
         <div class="column"><i class="cubes icon"></i>cubes</div>
         <div class="column"><i class="cut icon"></i>cut</div>
         <div class="column"><i class="dice icon"></i>dice</div>
+        <div class="column"><i class="dice d20 icon"></i>dice d20</div>
+        <div class="column"><i class="dice d6 icon"></i>dice d6</div>
         <div class="column"><i class="dice five icon"></i>dice five</div>
         <div class="column"><i class="dice four icon"></i>dice four</div>
         <div class="column"><i class="dice one icon"></i>dice one</div>
@@ -2986,6 +3109,7 @@ themes      : ['Default']
         <div class="column"><i class="glasses icon"></i>glasses</div>
         <div class="column"><i class="globe icon"></i>globe</div>
         <div class="column"><i class="graduation cap icon"></i>graduation cap</div>
+        <div class="column"><i class="hat wizard icon"></i>hat wizard</div>
         <div class="column"><i class="hdd icon"></i>hdd</div>
         <div class="column"><i class="hdd outline icon"></i>hdd outline</div>
         <div class="column"><i class="headphones icon"></i>headphones</div>
@@ -3061,6 +3185,7 @@ themes      : ['Default']
         <div class="column"><i class="plug icon"></i>plug</div>
         <div class="column"><i class="print icon"></i>print</div>
         <div class="column"><i class="puzzle piece icon"></i>puzzle piece</div>
+        <div class="column"><i class="ring icon"></i>ring</div>
         <div class="column"><i class="road icon"></i>road</div>
         <div class="column"><i class="rocket icon"></i>rocket</div>
         <div class="column"><i class="ruler combined icon"></i>ruler combined</div>
@@ -3070,12 +3195,14 @@ themes      : ['Default']
         <div class="column"><i class="save outline icon"></i>save outline</div>
         <div class="column"><i class="school icon"></i>school</div>
         <div class="column"><i class="screwdriver icon"></i>screwdriver</div>
+        <div class="column"><i class="scroll icon"></i>scroll</div>
         <div class="column"><i class="search icon"></i>search</div>
         <div class="column"><i class="shield alternate icon"></i>shield alternate</div>
         <div class="column"><i class="shopping bag icon"></i>shopping bag</div>
         <div class="column"><i class="shopping basket icon"></i>shopping basket</div>
         <div class="column"><i class="shopping cart icon"></i>shopping cart</div>
         <div class="column"><i class="shower icon"></i>shower</div>
+        <div class="column"><i class="skull crossbones icon"></i>skull crossbones</div>
         <div class="column"><i class="snowflake icon"></i>snowflake</div>
         <div class="column"><i class="snowflake outline icon"></i>snowflake outline</div>
         <div class="column"><i class="space shuttle icon"></i>space shuttle</div>
@@ -3135,6 +3262,7 @@ themes      : ['Default']
         <i class="blender icon"></i>
         <i class="bomb icon"></i>
         <i class="book icon"></i>
+        <i class="book dead icon"></i>
         <i class="bookmark icon"></i>
         <i class="bookmark outline icon"></i>
         <i class="briefcase icon"></i>
@@ -3170,6 +3298,8 @@ themes      : ['Default']
         <i class="cubes icon"></i>
         <i class="cut icon"></i>
         <i class="dice icon"></i>
+        <i class="dice d20 icon"></i>
+        <i class="dice d6 icon"></i>
         <i class="dice five icon"></i>
         <i class="dice four icon"></i>
         <i class="dice one icon"></i>
@@ -3216,6 +3346,7 @@ themes      : ['Default']
         <i class="glasses icon"></i>
         <i class="globe icon"></i>
         <i class="graduation cap icon"></i>
+        <i class="hat wizard icon"></i>
         <i class="hdd icon"></i>
         <i class="hdd outline icon"></i>
         <i class="headphones icon"></i>
@@ -3291,6 +3422,7 @@ themes      : ['Default']
         <i class="plug icon"></i>
         <i class="print icon"></i>
         <i class="puzzle piece icon"></i>
+        <i class="ring icon"></i>
         <i class="road icon"></i>
         <i class="rocket icon"></i>
         <i class="ruler combined icon"></i>
@@ -3300,12 +3432,14 @@ themes      : ['Default']
         <i class="save outline icon"></i>
         <i class="school icon"></i>
         <i class="screwdriver icon"></i>
+        <i class="scroll icon"></i>
         <i class="search icon"></i>
         <i class="shield alternate icon"></i>
         <i class="shopping bag icon"></i>
         <i class="shopping basket icon"></i>
         <i class="shopping cart icon"></i>
         <i class="shower icon"></i>
+        <i class="skull crossbones icon"></i>
         <i class="snowflake icon"></i>
         <i class="snowflake outline icon"></i>
         <i class="space shuttle icon"></i>
@@ -3480,6 +3614,7 @@ themes      : ['Default']
         <div class="column"><i class="dove icon"></i>dove</div>
         <div class="column"><i class="gopuram icon"></i>gopuram</div>
         <div class="column"><i class="hamsa icon"></i>hamsa</div>
+        <div class="column"><i class="hanukiah icon"></i>hanukiah</div>
         <div class="column"><i class="haykal icon"></i>haykal</div>
         <div class="column"><i class="jedi icon"></i>jedi</div>
         <div class="column"><i class="journal whills icon"></i>journal whills</div>
@@ -3512,6 +3647,7 @@ themes      : ['Default']
         <i class="dove icon"></i>
         <i class="gopuram icon"></i>
         <i class="hamsa icon"></i>
+        <i class="hanukiah icon"></i>
         <i class="haykal icon"></i>
         <i class="jedi icon"></i>
         <i class="journal whills icon"></i>
@@ -3778,6 +3914,7 @@ themes      : ['Default']
         <div class="column"><i class="video icon"></i>video</div>
         <div class="column"><i class="video slash icon"></i>video slash</div>
         <div class="column"><i class="volume down icon"></i>volume down</div>
+        <div class="column"><i class="volume mute icon"></i>volume mute</div>
         <div class="column"><i class="volume off icon"></i>volume off</div>
         <div class="column"><i class="volume up icon"></i>volume up</div>
         <div class="column"><i class="wifi icon"></i>wifi</div>
@@ -3894,6 +4031,7 @@ themes      : ['Default']
         <i class="video icon"></i>
         <i class="video slash icon"></i>
         <i class="volume down icon"></i>
+        <i class="volume mute icon"></i>
         <i class="volume off icon"></i>
         <i class="volume up icon"></i>
         <i class="wifi icon"></i>
@@ -4021,6 +4159,7 @@ themes      : ['Default']
         <div class="column"><i class="user edit icon"></i>user edit</div>
         <div class="column"><i class="user friends icon"></i>user friends</div>
         <div class="column"><i class="user graduate icon"></i>user graduate</div>
+        <div class="column"><i class="user injured icon"></i>user injured</div>
         <div class="column"><i class="user lock icon"></i>user lock</div>
         <div class="column"><i class="user md icon"></i>user md</div>
         <div class="column"><i class="user minus icon"></i>user minus</div>
@@ -4075,6 +4214,7 @@ themes      : ['Default']
         <i class="user edit icon"></i>
         <i class="user friends icon"></i>
         <i class="user graduate icon"></i>
+        <i class="user injured icon"></i>
         <i class="user lock icon"></i>
         <i class="user md icon"></i>
         <i class="user minus icon"></i>
@@ -4243,6 +4383,7 @@ themes      : ['Default']
         <div class="column"><i class="500px icon"></i>500px</div>
         <div class="column"><i class="accessible icon"></i>accessible</div>
         <div class="column"><i class="accusoft icon"></i>accusoft</div>
+        <div class="column"><i class="acquisitions incorporated icon"></i>acquisitions incorporated</div>
         <div class="column"><i class="adn icon"></i>adn</div>
         <div class="column"><i class="adversal icon"></i>adversal</div>
         <div class="column"><i class="affiliatetheme icon"></i>affiliatetheme</div>
@@ -4315,6 +4456,8 @@ themes      : ['Default']
         <div class="column"><i class="creative commons sampling icon"></i>creative commons sampling</div>
         <div class="column"><i class="creative commons sampling plus icon"></i>creative commons sampling plus</div>
         <div class="column"><i class="creative commons share icon"></i>creative commons share</div>
+        <div class="column"><i class="creative commons zero icon"></i>creative commons zero</div>
+        <div class="column"><i class="critical role icon"></i>critical role</div>
         <div class="column"><i class="css3 icon"></i>css3</div>
         <div class="column"><i class="css3 alternate icon"></i>css3 alternate</div>
         <div class="column"><i class="cuttlefish icon"></i>cuttlefish</div>
@@ -4323,6 +4466,7 @@ themes      : ['Default']
         <div class="column"><i class="delicious icon"></i>delicious</div>
         <div class="column"><i class="deploydog icon"></i>deploydog</div>
         <div class="column"><i class="deskpro icon"></i>deskpro</div>
+        <div class="column"><i class="dev icon"></i>dev</div>
         <div class="column"><i class="deviantart icon"></i>deviantart</div>
         <div class="column"><i class="digg icon"></i>digg</div>
         <div class="column"><i class="digital ocean icon"></i>digital ocean</div>
@@ -4352,6 +4496,7 @@ themes      : ['Default']
         <div class="column"><i class="facebook f icon"></i>facebook f</div>
         <div class="column"><i class="facebook messenger icon"></i>facebook messenger</div>
         <div class="column"><i class="facebook square icon"></i>facebook square</div>
+        <div class="column"><i class="fantasy flight games icon"></i>fantasy flight games</div>
         <div class="column"><i class="firefox icon"></i>firefox</div>
         <div class="column"><i class="first order icon"></i>first order</div>
         <div class="column"><i class="first order alternate icon"></i>first order alternate</div>
@@ -4362,7 +4507,6 @@ themes      : ['Default']
         <div class="column"><i class="font awesome icon"></i>font awesome</div>
         <div class="column"><i class="font awesome alternate icon"></i>font awesome alternate</div>
         <div class="column"><i class="font awesome flag icon"></i>font awesome flag</div>
-        <div class="column"><i class="font awesome logo full icon"></i>font awesome logo full</div>
         <div class="column"><i class="fonticons icon"></i>fonticons</div>
         <div class="column"><i class="fonticons fi icon"></i>fonticons fi</div>
         <div class="column"><i class="fort awesome icon"></i>fort awesome</div>
@@ -4440,7 +4584,7 @@ themes      : ['Default']
         <div class="column"><i class="lesscss icon"></i>lesscss</div>
         <div class="column"><i class="linechat icon"></i>linechat</div>
         <div class="column"><i class="linkedin icon"></i>linkedin</div>
-        <div class="column"><i class="linkedin alternate icon"></i>linkedin alternate</div>
+        <div class="column"><i class="linkedin in icon"></i>linkedin in</div>
         <div class="column"><i class="linode icon"></i>linode</div>
         <div class="column"><i class="linux icon"></i>linux</div>
         <div class="column"><i class="lyft icon"></i>lyft</div>
@@ -4484,6 +4628,7 @@ themes      : ['Default']
         <div class="column"><i class="palfed icon"></i>palfed</div>
         <div class="column"><i class="patreon icon"></i>patreon</div>
         <div class="column"><i class="paypal icon"></i>paypal</div>
+        <div class="column"><i class="penny arcade icon"></i>penny arcade</div>
         <div class="column"><i class="periscope icon"></i>periscope</div>
         <div class="column"><i class="phabricator icon"></i>phabricator</div>
         <div class="column"><i class="phoenix framework icon"></i>phoenix framework</div>
@@ -4512,6 +4657,7 @@ themes      : ['Default']
         <div class="column"><i class="reddit alien icon"></i>reddit alien</div>
         <div class="column"><i class="reddit square icon"></i>reddit square</div>
         <div class="column"><i class="redriver icon"></i>redriver</div>
+        <div class="column"><i class="redyeti icon"></i>redyeti</div>
         <div class="column"><i class="rendact icon"></i>rendact</div>
         <div class="column"><i class="renren icon"></i>renren</div>
         <div class="column"><i class="replyd icon"></i>replyd</div>
@@ -4564,7 +4710,6 @@ themes      : ['Default']
         <div class="column"><i class="telegram icon"></i>telegram</div>
         <div class="column"><i class="telegram plane icon"></i>telegram plane</div>
         <div class="column"><i class="tencent weibo icon"></i>tencent weibo</div>
-        <div class="column"><i class="the red yeti icon"></i>the red yeti</div>
         <div class="column"><i class="themeco icon"></i>themeco</div>
         <div class="column"><i class="themeisle icon"></i>themeisle</div>
         <div class="column"><i class="trade federation icon"></i>trade federation</div>
@@ -4594,11 +4739,7 @@ themes      : ['Default']
         <div class="column"><i class="vk icon"></i>vk</div>
         <div class="column"><i class="vnv icon"></i>vnv</div>
         <div class="column"><i class="vuejs icon"></i>vuejs</div>
-<<<<<<< HEAD
         <div class="column"><i class="weebly icon"></i>weebly</div>
-=======
-        <div class="column"><i class="wechat icon"></i>wechat</div>
->>>>>>> 108c5e8538c5c520f1e444b3ed79804e1356b116
         <div class="column"><i class="weibo icon"></i>weibo</div>
         <div class="column"><i class="weixin icon"></i>weixin</div>
         <div class="column"><i class="whatsapp icon"></i>whatsapp</div>
@@ -4607,6 +4748,7 @@ themes      : ['Default']
         <div class="column"><i class="wikipedia w icon"></i>wikipedia w</div>
         <div class="column"><i class="windows icon"></i>windows</div>
         <div class="column"><i class="wix icon"></i>wix</div>
+        <div class="column"><i class="wizards of the coast icon"></i>wizards of the coast</div>
         <div class="column"><i class="wolf pack battalion icon"></i>wolf pack battalion</div>
         <div class="column"><i class="wordpress icon"></i>wordpress</div>
         <div class="column"><i class="wordpress simple icon"></i>wordpress simple</div>
@@ -4630,6 +4772,7 @@ themes      : ['Default']
         <i class="500px icon"></i>
         <i class="accessible icon"></i>
         <i class="accusoft icon"></i>
+        <i class="acquisitions incorporated icon"></i>
         <i class="adn icon"></i>
         <i class="adversal icon"></i>
         <i class="affiliatetheme icon"></i>
@@ -4702,6 +4845,8 @@ themes      : ['Default']
         <i class="creative commons sampling icon"></i>
         <i class="creative commons sampling plus icon"></i>
         <i class="creative commons share icon"></i>
+        <i class="creative commons zero icon"></i>
+        <i class="critical role icon"></i>
         <i class="css3 icon"></i>
         <i class="css3 alternate icon"></i>
         <i class="cuttlefish icon"></i>
@@ -4710,6 +4855,7 @@ themes      : ['Default']
         <i class="delicious icon"></i>
         <i class="deploydog icon"></i>
         <i class="deskpro icon"></i>
+        <i class="dev icon"></i>
         <i class="deviantart icon"></i>
         <i class="digg icon"></i>
         <i class="digital ocean icon"></i>
@@ -4739,6 +4885,7 @@ themes      : ['Default']
         <i class="facebook f icon"></i>
         <i class="facebook messenger icon"></i>
         <i class="facebook square icon"></i>
+        <i class="fantasy flight games icon"></i>
         <i class="firefox icon"></i>
         <i class="first order icon"></i>
         <i class="first order alternate icon"></i>
@@ -4749,7 +4896,6 @@ themes      : ['Default']
         <i class="font awesome icon"></i>
         <i class="font awesome alternate icon"></i>
         <i class="font awesome flag icon"></i>
-        <i class="font awesome logo full icon"></i>
         <i class="fonticons icon"></i>
         <i class="fonticons fi icon"></i>
         <i class="fort awesome icon"></i>
@@ -4871,6 +5017,7 @@ themes      : ['Default']
         <i class="palfed icon"></i>
         <i class="patreon icon"></i>
         <i class="paypal icon"></i>
+        <i class="penny arcade icon"></i>
         <i class="periscope icon"></i>
         <i class="phabricator icon"></i>
         <i class="phoenix framework icon"></i>
@@ -4899,6 +5046,7 @@ themes      : ['Default']
         <i class="reddit alien icon"></i>
         <i class="reddit square icon"></i>
         <i class="redriver icon"></i>
+        <i class="redyeti icon"></i>
         <i class="rendact icon"></i>
         <i class="renren icon"></i>
         <i class="replyd icon"></i>
@@ -4951,7 +5099,6 @@ themes      : ['Default']
         <i class="telegram icon"></i>
         <i class="telegram plane icon"></i>
         <i class="tencent weibo icon"></i>
-        <i class="the red yeti icon"></i>
         <i class="themeco icon"></i>
         <i class="themeisle icon"></i>
         <i class="trade federation icon"></i>
@@ -4981,11 +5128,7 @@ themes      : ['Default']
         <i class="vk icon"></i>
         <i class="vnv icon"></i>
         <i class="vuejs icon"></i>
-<<<<<<< HEAD
         <i class="weebly icon"></i>
-=======
-        <i class="wechat icon"></i>
->>>>>>> 108c5e8538c5c520f1e444b3ed79804e1356b116
         <i class="weibo icon"></i>
         <i class="weixin icon"></i>
         <i class="whatsapp icon"></i>
@@ -4994,6 +5137,7 @@ themes      : ['Default']
         <i class="wikipedia w icon"></i>
         <i class="windows icon"></i>
         <i class="wix icon"></i>
+        <i class="wizards of the coast icon"></i>
         <i class="wolf pack battalion icon"></i>
         <i class="wordpress icon"></i>
         <i class="wordpress simple icon"></i>
@@ -5082,13 +5226,6 @@ themes      : ['Default']
       <p>An icon can be rotated</p>
       <i class="clockwise rotated cloud icon"></i>
       <i class="counterclockwise rotated cloud icon"></i>
-    </div>
-
-    <div class="example">
-      <h4 class="ui header">Flipped & Rotated</h4>
-      <p>An icon can be flipped & rotated</p>
-      <i class="clockwise rotated horizontally flipped cloud icon"></i>
-      <i class="counterclockwise rotated vertically flipped cloud icon"></i>
     </div>
 
 
