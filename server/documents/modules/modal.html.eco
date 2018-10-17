@@ -97,6 +97,23 @@ themes      : ['Default', 'Material']
       </div>
     </div>
   </div>
+  <div class="ui mini test inverted modal">
+    <div class="header">
+      Delete Your Account
+    </div>
+    <div class="content">
+      <p>Are you sure you want to delete your account</p>
+    </div>
+    <div class="actions">
+      <div class="ui inverted negative button">
+        No
+      </div>
+      <div class="ui inverted positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
 
   <div class="ui special modal">
     <div class="header">
@@ -504,6 +521,25 @@ themes      : ['Default', 'Material']
       </div>
       <div class="code" data-demo="true" data-eval="$('.large.test.modal').modal('show')">
       $('.large.modal')
+        .modal('show')
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Inverted</h4>
+      <p>A modal can be shown inverted on white dimmer...</p>
+      <div class="code" data-demo="true" data-eval="$('.mini.test.inverted.modal').not('.basic').modal({inverted:true}).modal('show')">
+      $('.mini.inverted.modal')
+        .modal({
+           inverted: true
+        })
+        .modal('show')
+      ;
+      </div>
+        <p>... or default black dimmer</p>
+      <div class="code" data-demo="true" data-eval="$('.mini.test.inverted.modal').not('.basic').modal({inverted: false}).modal('show')">
+      $('.mini.inverted.modal')
         .modal('show')
       ;
       </div>
