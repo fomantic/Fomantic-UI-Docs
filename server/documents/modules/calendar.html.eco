@@ -31,7 +31,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui .calendar')
+      $('.ui.calendar')
         .calendar()
       ;
       </div>
@@ -81,9 +81,21 @@ themes      : ['Default']
       <div class="ui calendar">
       </div>
       <div class="code" data-type="javascript">
-      $('.ui .calendar')
+      $('.ui.calendar')
         .calendar()
       ;
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">States</h2>
+    <div class="example">
+      <h4 class="ui header">Disabled</h4>
+      <p>A disabled calendar does not allow user interaction</p>
+      <div class="ui disabled calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
       </div>
     </div>
 
@@ -157,7 +169,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui .calendar')
+      $('.ui.calendar')
         .calendar({
           type: 'time',
           ampm: false
@@ -220,6 +232,15 @@ themes      : ['Default']
           maxDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 5)
         })
       ;
+      </div>
+    </div>
+    <div class="another example">
+      <p>You can also set a minimum and a maximum selection date using HTML markup</p>
+      <div class="ui calendar" id="minmax_calendar_2" data-min-date="10/15/2018 08:00:00" data-max-date="10/19/2018 18:00:00">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
       </div>
     </div>
 
@@ -302,7 +323,7 @@ themes      : ['Default']
         <div class="ui button">Select date</div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui .calendar')
+      $('.ui.calendar')
         .calendar()
       ;
       </div>
@@ -390,6 +411,14 @@ themes      : ['Default']
       <tr>
         <td>set focusDate(date)</td>
         <td>Set the currently focused date</td>
+      </tr>
+      <tr>
+        <td>set minDate(date)</td>
+        <td>Set the minimal selectable date</td>
+      </tr>
+      <tr>
+        <td>set maxDate(date)</td>
+        <td>Set the maximal selectable date</td>
       </tr>
     </table>
 

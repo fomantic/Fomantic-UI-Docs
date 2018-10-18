@@ -230,6 +230,29 @@ themes      : ['Default']
         <div class="ui hide button"><i class="minus icon"></i></div>
       </div>
     </div>
+
+    <div class="example">
+      <h4 class="ui header">Dimmer Shades</h4>
+      <p>A dimmer can be formatted to have a different depth of background shading using the additional classes <code>medium</code>, <code>light</code> or <code>very light</code></p>
+      <div class="ignored ui info message">Also works in combination with <code>inverted</code></div>
+      <div class="ui segment">
+        <div class="ui active medium dimmer"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui segment">
+        <div class="ui active light dimmer"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui segment">
+        <div class="ui active very light dimmer"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+
   </div>
   <div class="ui tab" data-tab="examples">
 
