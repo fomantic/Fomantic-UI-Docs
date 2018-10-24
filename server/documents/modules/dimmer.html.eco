@@ -253,6 +253,71 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Partially Dimmer</h4>
+      <p>A dimmer can be displayed only partially and limited to the overall height of its content instead of the whole to be covered area. This can be used for example as a caption on any element by using <code>top dimmer</code>, <code>center dimmer</code> or <code>bottom dimmer</code></p>
+      <div class="ui segment">
+        <div class="ui active top dimmer">
+            <div class="content">
+              <h3>Look!</h3>
+              ui top dimmer
+            </div>
+        </div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui segment">
+        <div class="ui active center dimmer">
+            <div class="content">
+              <h3>Look!</h3>
+              ui center dimmer
+            </div>
+        </div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui segment">
+        <div class="ui active bottom dimmer">
+            <div class="content">
+              <h3>Look!</h3>
+              ui bottom dimmer
+            </div>
+        </div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+    <div class="partially example">
+      <div class="ignored ui info message">Works also very well with transitions <code>fade up</code> or <code>fade down</code></div>
+      <div class="evaluated code">
+      $('.partially.example .dimmer')
+        .dimmer({
+            transition: 'fade up',
+            on: 'hover'
+        })
+      ;
+      </div>
+      <div class="ui medium image">
+        <div class="ui bottom dimmer">
+          <div class="content">
+            <h3>Look!</h3>
+                ui bottom dimmer
+          </div>
+        </div>
+        <img class="ui image" src="/images/wireframe/image.png">
+      </div>
+      <div class="ui medium image">
+        <div class="ui center dimmer">
+          <div class="content">
+            <h3>Look!</h3>
+                ui center dimmer
+          </div>
+        </div>
+        <img class="ui image" src="/images/wireframe/image.png">
+      </div>
+    </div>
+
   </div>
   <div class="ui tab" data-tab="examples">
 
