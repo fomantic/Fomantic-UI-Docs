@@ -5,7 +5,7 @@ standalone  : true
 order       : 3
 
 title       : 'Build Tools'
-description : 'Using Gulp with Semantic UI'
+description : 'Using Gulp with Fomantic UI'
 type        : 'Introduction'
 ---
 <%- @partial('header') %>
@@ -16,7 +16,7 @@ type        : 'Introduction'
 
   <div class="no example">
     <h4>30 Second Explanation</h4>
-    <p><a href="/introduction/getting-started.html">Download Semantic UI</a> navigate to the install folder then run a <a href="#gulp-commands">gulp command</a>.</p>
+    <p><a href="/introduction/getting-started.html">Download Fomantic UI</a> navigate to the install folder then run a <a href="#gulp-commands">gulp command</a>.</p>
 
     <p>To build all files:</p>
     <div class="code" data-type="bash">
@@ -30,7 +30,7 @@ type        : 'Introduction'
   </div>
   <div class="no example">
     <h4>Why Build Tools?</h4>
-    <p>Semantic UI uses Gulp for several reasons:</p>
+    <p>Fomantic UI uses Gulp for several reasons:</p>
     <div class="ui large bulleted list">
       <div class="item">Process LESS files with <a href="/usage/theming.html">theming variables</a></div>
       <div class="item">Add vendor prefixes for <a href="https://github.com/fomantic/Fomantic-UI/blob/master/tasks/config/project/tasks.js#L96">supported browsers</a> with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
@@ -42,7 +42,7 @@ type        : 'Introduction'
   </div>
   <div class="no example">
     <h3 class="ui header">Folder Structure</h3>
-    <p>A Semantic UI project includes the following folder structure.</p>
+    <p>A Fomantic UI project includes the following folder structure.</p>
     <div class="ui list">
       <div class="item">
         <i class="folder icon"></i>
@@ -185,14 +185,14 @@ type        : 'Introduction'
 
   <div class="no example">
     <h4>semantic.json</h4>
-    <p>Build tool settings are stored in a special file called <code>semantic.json</code> It can be included in any folder that is in a parent folder of the semantic install folder.</p>
+    <p>Build tool settings are stored in a special file called <code>semantic.json</code> It can be included in any folder that is in a parent folder of the fomantic install folder.</p>
     <p>If you used the npm or meteor, a <code>semantic.json</code> file is automatically generated for you in the root of your project. If you used a different package manager you can run <code>gulp install</code> to run the interactive installer.</p>
     <div class="ignored code">
     {
       // base path added to all other paths specified in "paths"
       "base": "",
 
-      // current version of Semantic UI
+      // current version of Fomantic UI
       "version": "<%= @getVersion() %>",
 
       "paths": {

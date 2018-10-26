@@ -601,7 +601,7 @@ themes      : ['Default']
       <h4 class="ui header">...with an API Behavior</h4>
       <p>Tabs provide an optional coupling with API which allow you to specify a templated API endpoint that a tab can query</p>
       <p>Tabs will automatically pass the url variable <code>{$tab}</code> which can be replaced for RESTful API links.</p>
-      <p>To learn more about API behaviors built into semantic check out the API docs</p>
+      <p>To learn more about API behaviors built into fomantic check out the API docs</p>
       <a class="ui button" href="/behaviors/api.html">View API Docs <i class="right chevron icon"></i></a>
     </div>
 

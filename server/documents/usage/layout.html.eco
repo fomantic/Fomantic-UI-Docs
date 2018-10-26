@@ -43,7 +43,7 @@ type        : 'Usage'
       <div class="content">
         <div class="header">Grid</div>
         <div class="description">
-          An introduction to using Semantic UI grids.
+          An introduction to using Fomantic UI grids.
         </div>
       </div>
     </a>

@@ -2,7 +2,7 @@
 layout      : 'default'
 css         : 'cla'
 title       : "Contributor License Agreement"
-description : 'Contribute to Semantic UI responsibly'
+description : 'Contribute to Fomantic UI responsibly'
 type        : 'Legal'
 ---
 
@@ -13,13 +13,13 @@ type        : 'Legal'
     <i class="help circle icon"></i>
     <div class="content">
       <div class="header">What's in a Contributor License Agreement (CLA)?</div>
-      This CLA makes sure that you are entitled to contribute to Semantic UI (you are not bound by a policy that prohibits you) and that you understand parts of your code may be used in derivative works. Additionally this agreement helps to legally protect Semantic UI should you later decide that you no longer want to contribute your code.
+      This CLA makes sure that you are entitled to contribute to Fomantic UI (you are not bound by a policy that prohibits you) and that you understand parts of your code may be used in derivative works. Additionally this agreement helps to legally protect Fomantic UI should you later decide that you no longer want to contribute your code.
     </div>
   </div>
   <div class="ui tab active" data-tab="individual">
-    <h1>Semantic UI Individual Contributor License Agreement</h1>
+    <h1>Fomantic UI Individual Contributor License Agreement</h1>
 
-    <p>Thank you for your interest in contributing to Semantic UI ("We" or "Us").</p>
+    <p>Thank you for your interest in contributing to Fomantic UI ("We" or "Us").</p>
 
     <p>This contributor agreement ("Agreement") documents the rights granted by contributors to Us. To make this document effective, please sign it and send it to Us by email or electronic submission, following the instructions at [URL]. This is a legally binding document, so please read it carefully before agreeing to it. The Agreement may cover more than one software project managed by Us.</p>
 
@@ -100,8 +100,8 @@ type        : 'Legal'
     <p>6.5 If any provision of this Agreement is found void and unenforceable, such provision will be replaced to the extent possible with a provision that comes closest to the meaning of the original provision and which is enforceable.  The terms and conditions set forth in this Agreement shall apply notwithstanding any failure of essential purpose of this Agreement or any limited remedy to the maximum extent possible under law.</p>
   </div>
   <div class="ui tab" data-tab="entity">
-    <h1>Semantic UI Entity Contributor License Agreement</h1>
-    <p>Thank you for your interest in contributing to Semantic UI ("We" or "Us").</p>
+    <h1>Fomantic UI Entity Contributor License Agreement</h1>
+    <p>Thank you for your interest in contributing to Fomantic UI ("We" or "Us").</p>
 
     <p>This contributor agreement ("Agreement") documents the rights granted by contributors to Us. To make this document effective, please sign it and send it to Us by email or electronic submission, following the instructions at . This is a legally binding document, so please read it carefully before agreeing to it. The Agreement may cover more than one software project managed by Us.</p>
 
