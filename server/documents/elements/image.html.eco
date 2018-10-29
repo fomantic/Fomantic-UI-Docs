@@ -158,7 +158,7 @@ themes      : ['Default']
     <h4 class="ui header">Size</h4>
     <p>An image may appear at different sizes</p>
     <div class="ui ignored info message">
-      Semantic uses arbitrary default values for image sizes from mini to massive. It is recommended to update these with values used in your project in <code>image.variables</code>.
+      Fomantic uses arbitrary default values for image sizes from mini to massive. It is recommended to update these with values used in your project in <code>image.variables</code>.
     </div>
     <table class="ui definition table">
       <thead>

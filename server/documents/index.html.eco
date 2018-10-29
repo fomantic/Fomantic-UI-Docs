@@ -89,7 +89,7 @@ standalone : false
       <div class="twelve wide column">
         <img class="ui fluid image" src="/images/devices.png">
         <h1 class="ui header">Design Beautiful Websites Quickly</h1>
-        <p>Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.</p>
+        <p>Fomantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.</p>
       </div>
     </div>
   </div>
@@ -97,7 +97,7 @@ standalone : false
     <div class="row">
       <div class="seven wide column">
         <h2 class="ui header">Concise HTML</h2>
-        <p>Semantic UI treats words and classes as exchangeable concepts.</p>
+        <p>Fomantic UI treats words and classes as exchangeable concepts.</p>
         <p>Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
         <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="https://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
         </p>
@@ -121,7 +121,7 @@ standalone : false
     <div class="row">
       <div class="seven wide column">
         <h2 class="ui header">Intuitive Javascript</h2>
-        <p>Semantic uses simple phrases called behaviors that trigger functionality.</p>
+        <p>Fomantic uses simple phrases called behaviors that trigger functionality.</p>
         <p>Any arbitrary decision in a component is included as a setting that developers can modify.</p>
       </div>
       <div class="nine wide column">
@@ -189,7 +189,7 @@ standalone : false
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.</p>
+      <p>Fomantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.</p>
       <p>Develop your UI once, then deploy with the same code everywhere.</p>
       <div class="ui large source button" style="display:none;">
         <i class="docs code icon"></i> View Source
@@ -200,7 +200,7 @@ standalone : false
         <span class="text">Select Theme</span>
         <i class="dropdown icon"></i>
         <div class="menu ui transition hidden" tabindex="-1">
-          <div data-value="Default" class="item">Semantic UI</div>
+          <div data-value="Default" class="item">Fomantic UI</div>
           <div data-value="Amazon" class="item">Amazon</div>
           <div data-value="Material" class="item">Google Material</div>
           <div data-value="GitHub" class="item">GitHub</div>
@@ -271,7 +271,7 @@ standalone : false
           5000+ Commits
         </h2>
         <p>
-          Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
+          Fomantic UI and Semantic UI are <b>free open source</b> projects already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
         </p>
         <a href="https://github.com/fomantic/Fomantic-UI/issues" class="ui large button">Visit GitHub</a>
       </div>
@@ -285,7 +285,7 @@ standalone : false
         <img src="/images/icons/toolbox.png" class="ui icon image">
         Unbelievable Breadth
       </h1>
-      <p>Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
+      <p>Definitions aren't limited to just buttons on a page. Fomantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
       <a class="ui large primary button" href="/usage/layout.html">
         See Layout Examples
         <i class="right chevron icon"></i>
@@ -952,7 +952,7 @@ standalone : false
           <img class="ui icon image" src="/images/icons/mobile.png">
           Responsively Designed
         </h2>
-        <p>Semantic is <b>designed completely with em</b> making responsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
+        <p>Fomantic is <b>designed completely with em</b> making responsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
         <a class="ui large button" href="/usage/layout.html">Responsive Examples</a>
       </div>
       <div class="column">
@@ -960,7 +960,7 @@ standalone : false
           <img class="ui icon image" src="/images/icons/heart.png">
           Partners with Libraries You Love
         </h2>
-        <p>Semantic has integrations with <b>React, Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
+        <p>Fomantic has integrations with <b>React, Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
         <a class="ui large button" href="/introduction/integrations.html">See Integrations</a>
       </div>
     </div>
