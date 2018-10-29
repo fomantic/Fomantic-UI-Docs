@@ -24,14 +24,14 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Calendar</h4>
       <p>A standard calendar</p>
-      <div class="ui calendar">
+      <div class="ui calendar" id="standard_calendar">
         <div class="ui input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date/Time">
         </div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui.calendar')
+      $('#standard_calendar')
         .calendar()
       ;
       </div>
@@ -78,10 +78,10 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Inline calendar</h4>
       <p>An inline calendar isn't shown in a popup</p>
-      <div class="ui calendar">
+      <div class="ui calendar" id="inline_calendar">
       </div>
       <div class="code" data-type="javascript">
-      $('.ui.calendar')
+      $('#inline_calendar')
         .calendar()
       ;
       </div>
@@ -169,7 +169,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui.calendar')
+      $('#no_ampm')
         .calendar({
           type: 'time',
           ampm: false
@@ -319,11 +319,11 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Button</h4>
       <p>A calendar can be coupled to a button</p>
-      <div class="ui calendar">
+      <div class="ui calendar" id="button_calendar">
         <div class="ui button">Select date</div>
       </div>
       <div class="code" data-type="javascript">
-      $('.ui.calendar')
+      $('#button_calendar')
         .calendar()
       ;
       </div>
