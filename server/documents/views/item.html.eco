@@ -652,4 +652,47 @@ themes      : ['Default']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Inverted</h4>
+    <p>An item can be inverted to appear on a dark background</p>
+    <div class="ui ignored info message">
+      <i class="info icon"></i>
+      You need to make sure to set a dark background on your own or wrap your items in an <code>inverted segment</code>
+    </div>
+    <div class="ui inverted segment">
+      <div class="ui inverted items">
+        <div class="item">
+          <div class="ui small image">
+            <img src="/images/wireframe/image.png">
+          </div>
+          <div class="content">
+            <div class="header">Arrowhead Valley Camp</div>
+            <div class="meta">
+              <span class="price">$1200</span>
+              <span class="stay">1 Month</span>
+            </div>
+            <div class="description">
+              <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="ui small image">
+            <img src="/images/wireframe/image.png">
+          </div>
+          <div class="content">
+            <div class="header">Buck's Homebrew Stayaway</div>
+            <div class="meta">
+              <span class="price">$1000</span>
+              <span class="stay">2 Weeks</span>
+            </div>
+            <div class="description">
+              <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
