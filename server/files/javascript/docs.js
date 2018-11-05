@@ -1444,14 +1444,14 @@ semantic.ready = function() {
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);
   }
-
+/*
   if(typeof detectAdBlock === 'undefined') {
     handler.showBeg();
   }
   else {
     detectAdBlock.onDetected(handler.showBeg);
   }
-
+*/
   if(window.location.hash) {
     var
       $element = $(window.location.hash),
