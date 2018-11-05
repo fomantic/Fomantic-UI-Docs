@@ -329,6 +329,25 @@ themes      : ['Default']
       </div>
     </div>
 
+    <h2 class="ui dividing header">Disabling specific Days</h2>
+    <div class="example">
+      <h4 class="ui header">Days of Week</h4>
+      <p>Disable each Monday, Wednesday and Friday from selection</p>
+      <div class="ui calendar" id="disableddaysofweek_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#disableddaysofweek_calendar')
+        .calendar({
+            disabledDaysOfWeek: [1,3,5]
+        })
+      ;
+      </div>
+    </div>
+
   </div>
   <div class="ui tab" data-tab="usage">
 
@@ -483,6 +502,11 @@ themes      : ['Default']
           <td>showWeekNumbers</td>
           <td>false</td>
           <td>Display the week number on the left</td>
+        </tr>
+        <tr>
+          <td>disabledDaysOfWeek</td>
+          <td>[]</td>
+          <td>Disable some days of the week from selection (0= Sunday, 1=Monday, ...)</td>
         </tr>
         <tr>
           <td>on</td>
