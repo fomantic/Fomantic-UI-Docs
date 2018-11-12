@@ -347,6 +347,33 @@ themes      : ['Default']
       ;
       </div>
     </div>
+    <div class="example">
+      <h4 class="ui header">Single Dates</h4>
+      <p>Disabling specific single dates which can optionally display a reason in popup on hover</p>
+      <div class="ui calendar" id="disableddates_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#disableddates_calendar')
+        .calendar({
+            initialDate: new Date(2018,11,1),
+            disabledDates: [{
+                    date: new Date(2018,11,22),
+                    message: 'xmas gift shopping'
+                },
+                {
+                    date: new Date(2018,11,25),
+                    message: 'Santa Clause is coming to town'
+                },
+                new Date(2018,11,31)  /* No Reason. Everybody knows why ;) */
+            ]
+        })
+      ;
+      </div>
+    </div>
 
   </div>
   <div class="ui tab" data-tab="usage">
@@ -507,6 +534,11 @@ themes      : ['Default']
           <td>disabledDaysOfWeek</td>
           <td>[]</td>
           <td>Disable some days of the week from selection (0= Sunday, 1=Monday, ...)</td>
+        </tr>
+        <tr>
+          <td>disabledDates</td>
+          <td>[]</td>
+          <td>An array of Date-Objects or Objects with given message to show in a popup when hovering over the appropriate date <code>{date: Date, message: string}</code></td>
         </tr>
         <tr>
           <td>on</td>
