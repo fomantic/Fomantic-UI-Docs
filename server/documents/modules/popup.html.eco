@@ -225,13 +225,13 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Basic</h4>
       <p>A tooltip can provide more basic formatting</p>
-      <div class="ui button" data-tooltip="The default theme's basic popup removes the pointing arrow." data-variation="basic">
+      <div class="ui button" data-tooltip="The default theme's basic tooltip removes the pointing arrow." data-variation="basic">
         Basic
       </div>
       <div class="ui button" data-tooltip="You can combine me" data-variation="tiny basic">
         Tiny Basic
       </div>
-      <div class="ui button" data-inverted data-tooltip="The default theme's basic popup removes the pointing arrow." data-variation="basic">
+      <div class="ui button" data-inverted data-tooltip="The default theme's basic tooltip removes the pointing arrow." data-variation="basic">
         Basic
       </div>
       <div class="ui button" data-inverted data-tooltip="You can combine me" data-variation="tiny basic">
