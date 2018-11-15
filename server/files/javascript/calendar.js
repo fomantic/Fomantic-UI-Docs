@@ -40,7 +40,7 @@ semantic.calendar.ready = function() {
     type: 'time',
     ampm: false
   });
-  
+
   // Month and year
   $('#month_year_calendar').calendar({
     type: 'month'
@@ -58,6 +58,13 @@ semantic.calendar.ready = function() {
   });
 
   $('#minmax_calendar_2').calendar({ });
+
+  $('#day_first_calendar')
+    .calendar({
+      type: 'date',
+      monthFirst: false
+    })
+  ;
 
   // Custom format
   $('#custom_format_calendar').calendar({
@@ -86,6 +93,32 @@ semantic.calendar.ready = function() {
       pm: 'PM'
     }
   });
+
+  $('#button_calendar')
+    .calendar()
+  ;
+
+  $('#disableddaysofweek_calendar')
+    .calendar({
+      disabledDaysOfWeek: [1,3,5]
+    })
+  ;
+
+  $('#disableddates_calendar')
+    .calendar({
+      initialDate: new Date(2018,11,1),
+      disabledDates: [{
+        date: new Date(2018,11,22),
+        message: 'xmas gift shopping'
+      },
+        {
+          date: new Date(2018,11,25),
+          message: 'Santa Clause is coming to town'
+        },
+        new Date(2018,11,31)  /* No Reason. Everybody knows why ;) */
+      ]
+    })
+  ;
 };
 
 

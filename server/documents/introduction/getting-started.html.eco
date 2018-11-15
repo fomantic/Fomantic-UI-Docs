@@ -5,7 +5,7 @@ standalone  : true
 order       : 1
 
 title       : 'Getting Started'
-description : 'Getting up and running with Semantic UI'
+description : 'Getting up and running with Fomantic UI'
 type        : 'Main'
 ---
 <script src="/javascript/started.js"></script>
@@ -20,11 +20,11 @@ type        : 'Main'
 
     <h4 class="ui header">Using Build Tools</h4>
 
-    <p>Semantic UI packaged Gulp build tools so your project can preserve its <a href="/usage/theming.html">own theme changes</a>.</p>
-    <p>The easiest way to install Semantic UI is our NPM package which contains special install scripts to make setup interactive and updates seamless.</p>
+    <p>Fomantic UI packaged Gulp build tools so your project can preserve its <a href="/usage/theming.html">own theme changes</a>.</p>
+    <p>The easiest way to install Fomantic UI is our NPM package which contains special install scripts to make setup interactive and updates seamless.</p>
 
     <p>For installing with specific integrations like Ember, React, or Meteor, see our <a href="/introduction/integrations.html">integration guide</a></p>
-    <p>For integrating Semantic UI tasks into your own build tools, or using a CDN see our <a href="/introduction/advanced-usage.html">recipes</a> section.</p>
+    <p>For integrating Fomantic UI tasks into your own build tools, or using a CDN see our <a href="/introduction/advanced-usage.html">recipes</a> section.</p>
 
   </div>
 
@@ -127,7 +127,7 @@ type        : 'Main'
 
   <div class="no example">
     <h4>All Set!</h4>
-    <p>Well done! Semantic UI is now ready to be used.</p>
+    <p>Well done! Fomantic UI is now ready to be used.</p>
 
     <div class="three column divided stackable center aligned ui grid">
       <div class="column">
@@ -145,7 +145,7 @@ type        : 'Main'
       <div class="column">
         <div class="ui icon header">
           <i class="food circular icon"></i>
-          See <a href="/introduction/advanced-usage.html">recipes</a> for using Semantic UI in your project
+          See <a href="/introduction/advanced-usage.html">recipes</a> for using Fomantic UI in your project
         </div>
       </div>
     </div>

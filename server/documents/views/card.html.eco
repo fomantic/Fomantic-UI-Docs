@@ -718,7 +718,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
       </div>
       <div class="extra content">
         <div class="center aligned author">
-          <img class="ui avatar image" src="http://semantic-ui.com/images/avatar/small/jenny.jpg"> Jenny
+          <img class="ui avatar image" src="/images/avatar/small/jenny.jpg"> Jenny
         </div>
       </div>
     </div>

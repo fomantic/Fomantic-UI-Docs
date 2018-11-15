@@ -332,7 +332,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="spaced example" data-class="facebook, twitter, google, vk, linkedin, instagram, youtube">
+  <div class="spaced example" data-class="facebook, twitter, google, vk, linkedin, instagram, youtube, whatsapp, telegram">
     <h4 class="ui header">Social</h4>
     <p>A button can be formatted to link to a social website</p>
     <button class="ui facebook button">
@@ -362,6 +362,14 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <button class="ui youtube button">
       <i class="youtube icon"></i>
       YouTube
+    </button>
+    <button class="ui whatsapp button">
+      <i class="whatsapp icon"></i>
+      WhatsApp
+    </button>
+    <button class="ui telegram button">
+      <i class="telegram icon"></i>
+      Telegram
     </button>
   </div>
 

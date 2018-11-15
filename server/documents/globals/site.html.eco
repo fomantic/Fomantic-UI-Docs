@@ -28,7 +28,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
   <h3 class="ui header">Theming</h3>
 
-  <p>Customizing site variables is an important part of using Semantic UI, to learn more about global site variables visit our <a href="/usage/theming.html">theming guide</a>.</p>
+  <p>Customizing site variables is an important part of using Fomantic UI, to learn more about global site variables visit our <a href="/usage/theming.html">theming guide</a>.</p>
 
   <h2 class="ui dividing header">Content</h2>
 

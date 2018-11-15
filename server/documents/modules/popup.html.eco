@@ -121,7 +121,9 @@ themes      : ['Default']
         <i class="add icon"></i>
       </div>
     </div>
-    <div class="another example">
+    <div class="example">
+      <h4 class="ui header">Position</h4>
+      <p></p>
       <div class="ui button" data-tooltip="Add users to your feed" data-position="top left">
         Top Left
       </div>
@@ -175,6 +177,65 @@ themes      : ['Default']
       </div>
       <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="left center">
         Left Center
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Size</h4>
+      <p>A tooltip can vary in size</p>
+      <div class="ui button" data-tooltip="Add users to your feed" data-variation="mini">
+        Mini
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-variation="tiny">
+        Tiny
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-variation="small">
+       Small
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-variation="medium">
+        Medium
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-variation="large">
+        Large
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-variation="huge">
+        Huge
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-variation="mini">
+        Mini
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-variation="tiny">
+        Tiny
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-variation="small">
+       Small
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-variation="medium">
+        Medium
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-variation="large">
+        Large
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-variation="huge">
+        Huge
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Basic</h4>
+      <p>A tooltip can provide more basic formatting</p>
+      <div class="ui button" data-tooltip="The default theme's basic tooltip removes the pointing arrow." data-variation="basic">
+        Basic
+      </div>
+      <div class="ui button" data-tooltip="You can combine me" data-variation="tiny basic">
+        Tiny Basic
+      </div>
+      <div class="ui button" data-inverted data-tooltip="The default theme's basic tooltip removes the pointing arrow." data-variation="basic">
+        Basic
+      </div>
+      <div class="ui button" data-inverted data-tooltip="You can combine me" data-variation="tiny basic">
+        Tiny Basic
       </div>
     </div>
 
@@ -439,7 +500,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Wide Popup Menu</h4>
       <p>An easier way to display complex content, like a wide popup menu is to have the popup content as a pre-  existing part of your page's HTML.</p>
-      <p>Using the setting <code>inline: true</code> will let Semantic know to display the next sibling <code>ui  popup</code> element after the activator.</p>
+      <p>Using the setting <code>inline: true</code> will let Fomantic know to display the next sibling <code>ui  popup</code> element after the activator.</p>
 
       <p>Tweaking settings like the delay for show, and hide, and making the menu hoverable will help it function   more like a dropdown menu</p>
 

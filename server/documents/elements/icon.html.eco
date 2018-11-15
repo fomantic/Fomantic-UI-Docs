@@ -32,10 +32,10 @@ themes      : ['Default']
     <h2 class="ui header">Icon Set</h2>
     <p>An icon set contains an arbitrary number of glyphs</p>
     <div class="ui ignored warning message">
-      Icons serve a very similar function to text in a page. In Semantic icons receive a special tag <code>&lt;i&gt;</code> which allow for an abbreviated markup when sitting along-side text.
+      Icons serve a very similar function to text in a page. In Fomantic icons receive a special tag <code>&lt;i&gt;</code> which allow for an abbreviated markup when sitting along-side text.
     </div>
 
-    <div class="ui ignored message">Semantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.4.1</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
+    <div class="ui ignored message">Fomantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.4.1</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
 
     <div class="icon example">
       <h4 class="ui header">Accessibility</h4>
