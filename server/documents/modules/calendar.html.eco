@@ -30,7 +30,7 @@ themes      : ['Default']
           <input type="text" placeholder="Date/Time">
         </div>
       </div>
-      <div class="code" data-type="javascript">
+      <div class="evaluated code" data-type="javascript">
       $('#standard_calendar')
         .calendar()
       ;
@@ -80,7 +80,7 @@ themes      : ['Default']
       <p>An inline calendar isn't shown in a popup</p>
       <div class="ui calendar" id="inline_calendar">
       </div>
-      <div class="code" data-type="javascript">
+      <div class="evaluated code" data-type="javascript">
       $('#inline_calendar')
         .calendar()
       ;
