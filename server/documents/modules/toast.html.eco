@@ -147,8 +147,7 @@ themes      : ['Default']
             message: 'I got my style from the message class',
             class : 'purple',
             className: {
-                toast: 'ui message',
-                title: 'ui header'
+                toast: 'ui message'
             }
           })
         ;
@@ -497,7 +496,7 @@ themes      : ['Default']
       icon         : 'icon',
       visible      : 'visible',
       content      : 'content',
-      title        : 'title'
+      title        : 'header'
     }
             </div>
           </td>
