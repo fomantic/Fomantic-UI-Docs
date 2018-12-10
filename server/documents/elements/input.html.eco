@@ -336,4 +336,48 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">
+        Textarea
+        <div class="ui black label">New in 2.7</div>
+    </h4>
+    <p>Using the input class you can also use some features on <code>textarea</code> aswell</p>
+    <div class="ui form">
+        <div class="ui left corner labeled input">
+            <div class="ui left corner label">
+                <i class="asterisk icon"></i>
+            </div>
+            <textarea> I have a left corner label</textarea>
+        </div>
+        <div class="ui corner labeled input">
+            <div class="ui corner label">
+                <i class="asterisk icon"></i>
+            </div>
+            <textarea> I have a right corner label</textarea>
+        </div>
+        <div class="ui left icon input">
+            <textarea> I have an left icon</textarea>
+            <i class="search icon"></i>
+        </div>
+        <div class="ui icon input">
+            <textarea> I have a right icon</textarea>
+            <i class="search icon"></i>
+        </div>
+        <div class="ui left corner labeled left icon input">
+            <div class="ui left corner label">
+                <i class="asterisk icon"></i>
+            </div>
+            <textarea> I have a left icon and left corner label</textarea>
+            <i class="search icon"></i>
+        </div>
+        <div class="ui corner labeled icon input">
+            <div class="ui  corner label">
+                <i class="asterisk icon"></i>
+            </div>
+            <textarea>I have a right icon and right corner label</textarea>
+            <i class="search icon"></i>
+        </div>
+    </div>
+  </div>
+
 </div>
