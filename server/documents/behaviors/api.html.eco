@@ -1111,6 +1111,12 @@ type        : 'UI Behavior'
           <td></td>
         </tr>
         <tr>
+          <td>rawResponse</td>
+          <td>false</td>
+          <td>If set, the onResponse event handler is able to handle an raw Array Object, which is probably returned by the requested source. Even if the datatype is json, it won't be force converted into an object anymore then.</code></td>
+          <td></td>
+        </tr>
+        <tr>
           <td>method</td>
           <td>get</td>
           <td>Method for transmitting request to server</td>
