@@ -3430,7 +3430,7 @@ themes      : ['Default', 'GitHub', 'Material']
 	<p>The following dropdown fields are bound to an evil API backend which tries to inject code</p>
 	<div class="ui message">
 		<ul class="ui list">
-			<li>Click into the dropdown field to trigger the api call</li>
+			<li>Click on the dropdown field to trigger the api call</li>
 			<li>The default (thus omitted) setting <code>preserveHTML:true</code> in the first example results in instantly getting an alert message</li>
 			<li>It also injects hidden code into an additional click event handler on a dropdown item (marked red). Try to click it as you would usually do when selecting the desired dropdown result</li>
 			<li>The evil example code removes itself from the DOM after being executed once</li>
