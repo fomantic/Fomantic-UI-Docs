@@ -36,41 +36,51 @@ themes      : ['Default']
       <h4 class="ui header">Icon <div class="ui black label">New in 2.7</div></h4>
       <p>You can use any available icon as rating indicator</p>
 
-      <div>
-        Rating
-        <div class="ui yellow rating" data-icon="star" data-rating="3"></div>
-      </div>
-      <div>
-          Love
-          <div class="ui red rating" data-icon="heart" data-rating="3"></div>
-      </div>
-      <div>
-          Women's rating
-          <div class="ui pink rating" data-icon="women" data-rating="3"></div>
-      </div>
-      <div>
-          Men's rating
-          <div class="ui blue rating" data-icon="men" data-rating="3"></div>
-      </div>
+      <div class="ui yellow rating" data-icon="star" data-rating="2"></div>
+      <br><br>
+      <div class="ui red rating" data-icon="heart" data-rating="2"></div>
+      <br><br>
+      <div class="ui purple rating" data-icon="female" data-rating="2"></div>
+      <br><br>
+      <div class="ui blue rating" data-icon="male" data-rating="2"></div>
+      <br><br>
+      <div class="ui grey rating" data-icon="cloud" data-rating="2"></div>
+      <br><br>
+      <div class="ui pink rating" data-icon="cat" data-rating="2"></div>
+      <br><br>
+      <div class="ui orange rating" data-icon="circle" data-rating="2"></div>
 
     </div>
 
     <div class="example">
       <h4 class="ui header">Color <div class="ui black label">New in 2.7</div></h4>
       <p>You can specify any color of the FUI color palette</p>
-      <div class="ui red rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui orange rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui yellow rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui olive rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui green rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui teal rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui blue rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui violet rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui purple rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui pink rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui brown rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui grey rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
-      <div class="ui black rating" data-icon="star" data-rating="1" data-max-rating="3"></div>
+      <div class="ui red rating" data-icon="star" data-rating="1" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui orange rating" data-icon="star" data-rating="2" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui yellow rating" data-icon="star" data-rating="3" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui olive rating" data-icon="star" data-rating="4" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui green rating" data-icon="star" data-rating="5" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui teal rating" data-icon="star" data-rating="6" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui blue rating" data-icon="star" data-rating="6" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui violet rating" data-icon="star" data-rating="5" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui purple rating" data-icon="star" data-rating="4" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui pink rating" data-icon="star" data-rating="3" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui brown rating" data-icon="star" data-rating="2" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui grey rating" data-icon="star" data-rating="1" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui black rating" data-icon="star" data-rating="1" data-max-rating="7"></div>
+      <br><br>
     </div>
 
     <h2 class="ui dividing header">States</h2>
@@ -78,7 +88,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Disabled</h4>
       <p>A rating can be started in non-interactive mode by adding a <code>disabled</code> class</p>
-      <div class="ui star disabled rating" data-rating="3" data-max-rating="5"></div>
+      <div class="ui yellow disabled rating" data-rating="3" data-max-rating="5"></div>
     </div>
 
     <h2 class="ui dividing header">Variations</h2>
@@ -156,7 +166,7 @@ themes      : ['Default']
         .rating('enable')
       ;
       </div>
-      <div class="ui red demo rating" data-rating="3">
+      <div class="ui red demo rating" data-icon="heart" data-rating="3">
         <i class="heart icon"></i>
         <i class="heart icon"></i>
         <i class="heart icon"></i>
@@ -173,7 +183,7 @@ themes      : ['Default']
         .rating('setting', 'clearable', true)
       ;
       </div>
-      <div class="ui red demo rating" data-rating="3">
+      <div class="ui red demo rating" data-icon="heart" data-rating="3">
         <i class="heart icon"></i>
         <i class="heart icon"></i>
         <i class="heart icon"></i>
