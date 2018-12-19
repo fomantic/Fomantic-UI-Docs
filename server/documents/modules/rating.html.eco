@@ -33,17 +33,54 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Star</h4>
-      <p>A rating can use a set of star icons</p>
+      <h4 class="ui header">Icon <div class="ui black label">New in 2.7</div></h4>
+      <p>You can use any available icon as rating indicator</p>
 
-      Rating
-      <div class="ui star rating" data-rating="3"></div>
+      <div class="ui yellow rating" data-icon="star" data-rating="2"></div>
+      <br><br>
+      <div class="ui red rating" data-icon="heart" data-rating="2"></div>
+      <br><br>
+      <div class="ui purple rating" data-icon="female" data-rating="2"></div>
+      <br><br>
+      <div class="ui blue rating" data-icon="male" data-rating="2"></div>
+      <br><br>
+      <div class="ui grey rating" data-icon="cloud" data-rating="2"></div>
+      <br><br>
+      <div class="ui pink rating" data-icon="cat" data-rating="2"></div>
+      <br><br>
+      <div class="ui orange rating" data-icon="circle" data-rating="2"></div>
+
     </div>
 
     <div class="example">
-      <h4 class="ui header">Heart</h4>
-      <p>A rating can use a set of heart icons</p>
-      <div class="ui heart rating" data-rating="1" data-max-rating="3"></div>
+      <h4 class="ui header">Color <div class="ui black label">New in 2.7</div></h4>
+      <p>You can specify any color of the FUI color palette</p>
+      <div class="ui red rating" data-icon="star" data-rating="1" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui orange rating" data-icon="star" data-rating="2" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui yellow rating" data-icon="star" data-rating="3" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui olive rating" data-icon="star" data-rating="4" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui green rating" data-icon="star" data-rating="5" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui teal rating" data-icon="star" data-rating="6" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui blue rating" data-icon="star" data-rating="6" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui violet rating" data-icon="star" data-rating="5" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui purple rating" data-icon="star" data-rating="4" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui pink rating" data-icon="star" data-rating="3" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui brown rating" data-icon="star" data-rating="2" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui grey rating" data-icon="star" data-rating="1" data-max-rating="7"></div>
+      <br><br>
+      <div class="ui black rating" data-icon="star" data-rating="1" data-max-rating="7"></div>
+      <br><br>
     </div>
 
     <h2 class="ui dividing header">States</h2>
@@ -51,7 +88,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Disabled</h4>
       <p>A rating can be started in non-interactive mode by adding a <code>disabled</code> class</p>
-      <div class="ui star disabled rating" data-rating="3" data-max-rating="5"></div>
+      <div class="ui yellow disabled rating" data-rating="3" data-max-rating="5"></div>
     </div>
 
     <h2 class="ui dividing header">Variations</h2>
@@ -59,19 +96,19 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Size</h4>
       <p>A rating can vary in size</p>
-      <div class="ui mini star rating"></div>
+      <div class="ui mini yellow rating"></div>
       <br><br>
-      <div class="ui tiny star rating"></div>
+      <div class="ui tiny yellow rating"></div>
       <br><br>
-      <div class="ui small star rating"></div>
+      <div class="ui small yellow rating"></div>
       <br><br>
-      <div class="ui star rating"></div>
+      <div class="ui yellow rating"></div>
       <br><br>
-      <div class="ui large star rating"></div>
+      <div class="ui large yellow rating"></div>
       <br><br>
-      <div class="ui huge star rating"></div>
+      <div class="ui huge yellow rating"></div>
       <br><br>
-      <div class="ui massive star rating"></div>
+      <div class="ui massive yellow rating"></div>
     </div>
   </div>
 
@@ -81,9 +118,10 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Setting existing values</h4>
-      <p>The starting rating can be set either using metadata value <code>data-rating</code> or the setting <code>initialRating</code>.
+      <p>The icon can be set either using metadata value <code>data-icon</code> or the setting <code>icon</code>.</p>
+      <p>The starting rating can be set either using metadata value <code>data-rating</code> or the setting <code>initialRating</code>.</p>
       <p>The maximum rating can be be set using the metadata value <code>data-max-rating</code> or the settings <code>maxRating</code>, or you can just include the icon HTML yourself on initialization to avoid the overhead of the <code>DOM template insertions</code>. </p>
-      <div class="ui ignored info message">If a metadata rating is specified it will automatically override the default value specified in Javascript.</div>
+      <div class="ui ignored info message">If a metadata icon or rating is specified it will automatically override the default value specified in Javascript.</div>
       <div class="code" data-type="javascript">
       $('.toggle.example .rating')
         .rating({
@@ -98,7 +136,7 @@ themes      : ['Default']
           <div class="content">
             <div class="header">
               New York Dog Fair
-              <div class="ui heart rating" data-rating="2"></div>
+              <div class="ui red rating" data-icon="heart" data-rating="2"></div>
             </div>
             A fun day at the fair
           </div>
@@ -108,7 +146,7 @@ themes      : ['Default']
           <div class="content">
             <div class="header">
               Dog Appreciation Day
-              <div class="ui heart rating" data-rating="2"></div>
+              <div class="ui red rating" data-icon="heart" data-rating="2"></div>
             </div>
             I'd like to tell your dog he's great
           </div>
@@ -129,12 +167,12 @@ themes      : ['Default']
         .rating('enable')
       ;
       </div>
-      <div class="ui heart demo rating" data-rating="3">
-        <i class="icon"></i>
-        <i class="icon"></i>
-        <i class="icon"></i>
-        <i class="icon"></i>
-        <i class="icon"></i>
+      <div class="ui red demo rating" data-icon="heart" data-rating="3">
+        <i class="heart icon"></i>
+        <i class="heart icon"></i>
+        <i class="heart icon"></i>
+        <i class="heart icon"></i>
+        <i class="heart icon"></i>
       </div>
     </div>
 
@@ -146,12 +184,12 @@ themes      : ['Default']
         .rating('setting', 'clearable', true)
       ;
       </div>
-      <div class="ui heart demo rating" data-rating="3">
-        <i class="icon"></i>
-        <i class="icon"></i>
-        <i class="icon"></i>
-        <i class="icon"></i>
-        <i class="icon"></i>
+      <div class="ui red demo rating" data-icon="heart" data-rating="3">
+        <i class="heart icon"></i>
+        <i class="heart icon"></i>
+        <i class="heart icon"></i>
+        <i class="heart icon"></i>
+        <i class="heart icon"></i>
       </div>
     </div>
   </div>
@@ -162,23 +200,24 @@ themes      : ['Default']
 
     <div class="ui example">
       <h4 class="ui header">Metadata</h4>
-      <p>You can specify the starting rating, and max rating in metadata.
+      <p>You can specify the icon, starting rating and max rating in metadata.
       <div class="code" data-type="javascript">
         $('.ui.rating')
           .rating()
         ;
       </div>
       <div class="code" data-type="html">
-        <div class="ui rating" data-rating="3" data-max-rating="5"></div>
+        <div class="ui rating" data-icon="circle" data-rating="3" data-max-rating="5"></div>
       </div>
     </div>
 
     <div class="example">
       <h4 class="ui header">Javascript</h4>
-      <p>You can specify the rating values in Javascript</p>
+      <p>You can specify the icon and rating values in Javascript</p>
       <div class="code" data-type="javascript">
         $('.ui.rating')
           .rating({
+            icon: 'circle',
             initialRating: 3,
             maxRating: 5
           })
@@ -241,9 +280,19 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
+          <td>icon</td>
+          <td>star</td>
+          <td>The icon classname</td>
+        </tr>
+        <tr>
           <td>initialRating</td>
           <td>0</td>
           <td>A number representing the default rating to apply</td>
+        </tr>
+        <tr>
+          <td>maxRating</td>
+          <td>4</td>
+          <td>The maximum rating value</td>
         </tr>
         <tr>
           <td>fireOnInit</td>
