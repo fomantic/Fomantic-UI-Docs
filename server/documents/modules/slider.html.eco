@@ -1,0 +1,313 @@
+---
+layout      : 'default'
+css         : 'slider'
+element     : 'slider'
+elementType : 'module'
+standalone  : true
+
+title       : 'Slider'
+description : 'A range slider allows users to select values within a range'
+type        : 'UI Module'
+status      : 'BETA'
+statusColor : 'orange'
+
+themes      : ['Default']
+---
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/slider.less" />
+<script src="/javascript/slider.js"></script>
+
+<%- @partial('header', { tabs: 'module' }) %>
+
+<div class="main ui container">
+
+  <div class="ui active tab" data-tab="definition">
+
+    <h2 class="ui dividing header">Types</h2>
+    <div class="example">
+      <h4 class="ui header">Slider</h4>
+      <p>A standard slider</p>
+      <div class="ui slider" id="slider-1"></div><br>
+      <div class="ui input">
+        <input type="text" id="slider-input-1" disabled>
+      </div>
+      <div class="code" data-type="javascript">
+      $('.ui.slider')
+        .slider()
+      ;
+      </div>
+    </div>
+    <div class="another example">
+      <h4 class="ui header">Labeled slider</h4>
+      <p>A slider that show its labels</p>
+      <div class="ui labeled slider"></div>
+    </div>
+    <div class="another example">
+      <h4 class="ui header">Labeled ticked slider</h4>
+      <p>A slider that show its labels and ticks</p>
+      <div class="ui labeled ticked slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Range slider</h4>
+      <p>A range slider which allow you to select a range between two values</p>
+      <div class="ui labeled ticked range slider" id="slider-range"></div><br>
+      <div class="ui input">
+        <input type="text" id="range-slider-input-1" disabled>
+      </div>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.range.slider')
+        .slider({
+          min: 5,
+          max: 100,
+          start: 10,
+          end: 90,
+          step: 5
+        })
+      ;
+      </div>
+
+    <h2 class="ui dividing header">Variations</h2>
+    <div class="example">
+      <h4 class="ui header">Disabled</h4>
+      <p>A slider can appear disabled</p>
+      <div class="ui disabled slider" id="slider-2"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Inverted</h4>
+      <p>A slider can be inverted</p>
+      <div class="ui inverted segment">
+        <div class="ui inverted slider"></div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Reversed</h4>
+      <p>A slider can be reversed</p>
+      <div class="ui reversed slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Vertical</h4>
+      <p>A slider can be vertical</p>
+      <div class="ui vertical slider" style="height: 200px;"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Colored</h4>
+      <p>A slider can be different colors</p>
+      <div class="ui red slider"></div>
+      <div class="ui orange slider"></div>
+      <div class="ui yellow slider"></div>
+      <div class="ui olive slider"></div>
+      <div class="ui green slider"></div>
+      <div class="ui teal slider"></div>
+      <div class="ui blue slider"></div>
+      <div class="ui violet slider"></div>
+      <div class="ui purple slider"></div>
+      <div class="ui pink slider"></div>
+      <div class="ui brown slider"></div>
+      <div class="ui grey rangslidere"></div>
+      <div class="ui black slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Inverted Colored</h4>
+      <p>A slider can be different colors while inverted</p>
+      <div class="ui inverted segment">
+        <div class="ui inverted red slider"></div>
+        <div class="ui inverted orange slider"></div>
+        <div class="ui inverted yellow slider"></div>
+        <div class="ui inverted olive slider"></div>
+        <div class="ui inverted green slider"></div>
+        <div class="ui inverted teal slider"></div>
+        <div class="ui inverted blue slider"></div>
+        <div class="ui inverted violet slider"></div>
+        <div class="ui inverted purple slider"></div>
+        <div class="ui inverted pink slider"></div>
+        <div class="ui inverted brown slider"></div>
+        <div class="ui inverted grey slider"></div>
+        <div class="ui inverted black slider"></div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Size</h4>
+      <p>A slider can have different sizes</p>
+      <div class="ui red small slider"></div>
+      <div class="ui orange slider"></div>
+      <div class="ui yellow large slider"></div>
+      <div class="ui olive big slider"></div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Step</h4>
+      <p>A slider can have a custom step...</p>
+      <div class="ui slider" id="slider-custom-step"></div>
+      <br>
+      <div class="ui input">
+        <input type="text" id="slider-input-3" disabled>
+      </div>
+      <div class="code" data-type="javascript">
+        $('.ui.slider')
+          .slider({
+            min: 0,
+            max: 10,
+            start: 4,
+            step: 2
+          })
+        ;
+      </div>
+    </div>
+    <div class="another no example">
+      <p>...or no step at all</p>
+      <div class="ui slider" id="slider-unstepped"></div>
+      <br>
+      <div class="ui input">
+        <input type="text" id="slider-input-unstepped" disabled>
+      </div>
+      <div class="code" data-type="javascript">
+        $('.ui.slider')
+          .slider({
+            min: 0,
+            max: 10,
+            start: 3.82,
+            step: 0
+          })
+        ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Smooth slide</h4>
+      <p>A slider can have a smooth slide</p>
+      <div class="ui labeled ticked slider" id="slider-smooth"></div>
+      <div class="code" data-type="javascript">
+        $('.ui.slider')
+          .slider({
+            min: 0,
+            max: 10,
+            start: 4,
+            step: 2
+            smooth: true
+          })
+        ;
+      </div>
+    </div>
+
+  </div>
+  <div class="ui tab" data-tab="usage">
+
+    <h2 class="ui dividing header">Initializing</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Initializing a slider</h4>
+      <p>Slider is initialized on pre-existing markup</p>
+      <div class="test code">
+      $('.ui.slider')
+        .slider()
+      ;
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="settings">
+    <h2 class="ui dividing header">
+      Calendar
+    </h2>
+
+    <h4 class="ui header">
+      Behavior
+    </h4>
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>min</td>
+          <td>0</td>
+          <td>The lowest value the slider can be</td>
+        </tr>
+        <tr>
+          <td>max</td>
+          <td>20</td>
+          <td>The max value the slider can be</td>
+        </tr>
+        <tr>
+          <td>step</td>
+          <td>1</td>
+          <td>The slider step. Set to <code>0</code> to disable step</td>
+        </tr>
+        <tr>
+          <td>start</td>
+          <td>0</td>
+          <td>The value the slider will start at</td>
+        </tr>
+        <tr>
+          <td>end</td>
+          <td>20</td>
+          <td>The second value to set in case of a range slider</td>
+        </tr>
+        <tr>
+          <td>labelType</td>
+          <td>number</td>
+          <td>The type of label to display for a labeled slider. Can be <code>number</code> or <code>letter</code></td>
+        </tr>
+        <tr>
+          <td>showLabelTicks</td>
+          <td>false</td>
+          <td>Show ticks on a labeled slider</td>
+        </tr>
+        <tr>
+          <td>smooth</td>
+          <td>false</td>
+          <td>Define smoothness when the slider is moving</td>
+        </tr>
+        <tr>
+          <td>decimalPlaces</td>
+          <td>2</td>
+          <td>Number of decimals to use with an unstepped slider</td>
+        </tr>
+        <tr>
+          <td>pageMultiplier</td>
+          <td>2</td>
+          <td>Page up/down multiplier. Define how many more times the steps to take on page up/down press</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">
+      Callbacks
+    </h4>
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th class="three wide">Callback</th>
+        <th class="three wide">Context</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onChange</td>
+          <td>active content</td>
+          <td>Is called when the slider value is changed</td>
+        </tr>
+        <tr>
+          <td>onMove</td>
+          <td>active content</td>
+          <td>Is called when the slider is moving</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

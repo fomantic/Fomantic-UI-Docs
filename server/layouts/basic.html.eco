@@ -66,7 +66,7 @@
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/transition.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/video.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/calendar.css">
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/range.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/slider.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/toast.css">
   <% else: %>
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
@@ -125,6 +125,7 @@
   <script src="/dist/components/search.js"></script>
   <script src="/dist/components/shape.js"></script>
   <script src="/dist/components/sidebar.js"></script>
+  <script src="/dist/components/slider.js"></script>
   <script src="/dist/components/sticky.js"></script>
   <script src="/dist/components/tab.js"></script>
   <script src="/dist/components/toast.js"></script>
