@@ -204,7 +204,7 @@ type        : 'Main'
       <div class="ui range" id="range-25"></div>
       <br/>
       <div class="ui input">
-        <input type="text" id="range-input-25" disabled="">
+        <input type="text" id="slider-input-25" disabled="">
       </div>
     </div>
 
