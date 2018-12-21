@@ -225,7 +225,7 @@ themes      : ['Default']
       </div>
       <div class="code" data-type="javascript">
       var today = new Date();
-      
+
       $('#minmax_calendar')
         .calendar({
           minDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() - 5),
@@ -604,6 +604,11 @@ themes      : ['Default']
           <td>multiMonth</td>
           <td>1</td>
           <td>Show multiple months when in <code>day</code>' mode</td>
+        </tr>
+        <tr>
+          <td>minTimeGap</td>
+          <td>5</td>
+          <td>Minimum time gap, can only be 5, 10, 15, 20, 30</td>
         </tr>
         <tr>
           <td>popupOptions</td>
