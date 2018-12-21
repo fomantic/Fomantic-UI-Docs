@@ -1,0 +1,40 @@
+---
+layout      : 'default'
+css         : 'text-page'
+element     : 'text'
+elementType : 'element'
+standalone  : true
+
+title       : 'Text'
+description : 'A text is used to style some inline text with a simple color'
+type        : 'UI Element'
+
+---
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/text.less" />
+
+<%- @partial('header') %>
+
+<div class="main ui container">
+
+  <div class="ui active tab" data-tab="text">
+
+    <h2 class="ui header">Definition</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Text</h4>
+      <p>A text is always used inline and uses one color from the FUI color palette</p>
+      <div class="ui info message">
+        To not interfere with all other colorable elements the <code>text</code> element is limited to be used in <code>span</code> tags only
+      </div>
+      <div class="code" data-type="html" data-preview="true">
+          <div class="ui segment">
+            This is <span class="ui red text"></span> inline text and this is <span class="ui blue text"></span> inline text and this is <span class=""></span> inline text
+          </div>
+          <div class="ui inverted segment">
+            This is <span class="ui inverted yellow text"></span> inline text and this is <span class="ui inverted teal text"></span> inline text and this is <span class="ui inverted black text"></span> inline text
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
