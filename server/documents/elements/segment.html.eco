@@ -345,7 +345,16 @@ themes      : ['default', 'GitHub']
     <p>A segment may show its content is being loaded</p>
     <div class="ui loading segment">
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+  </div>
+  <div class="another example">
+    <p>The loader inherits the color of the segment, if you want to prevent this, add the <code>usual</code> class, so the loader color stays default, while the segment still gets its color<div class="ui black label">New in 2.7.0</div></p>
+    <div class="ui ignored info message"><code>elastic</code> as loading style is currently not supported  because segment uses the <code>:before</code> pseudoclass to dimm the background.</div>
+    <div class="ui brown double loading segment">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+    <div class="ui brown usual double loading segment">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
   </div>
 

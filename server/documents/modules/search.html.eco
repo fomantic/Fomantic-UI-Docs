@@ -213,6 +213,22 @@ type        : 'UI Module'
         </div>
         <div class="results"></div>
       </div>
+      <br><br>
+      <div class="ui blue loading double search">
+        <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <br><br>
+      <div class="ui slow elastic pink loading search">
+        <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
     </div>
 
     <h2 class="ui dividing header">Variations</h2>
