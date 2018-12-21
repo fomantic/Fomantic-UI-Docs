@@ -4,18 +4,132 @@ css         : 'new'
 standalone  : true
 order       : 1
 
-title       : 'New in 2.6'
+title       : 'New in 2.7'
 description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { twosix: 'New in 2.6', twofive: 'New in 2.5', twofour: 'New in 2.4', twothree: 'New in 2.3', twotwo: 'New in 2.2', twoone: 'New in 2.1' } }) %>
+<%- @partial('header',  { tabs: { twoseven: 'New in 2.7', twosix: 'New in 2.6', twofive: 'New in 2.5', twofour: 'New in 2.4', twothree: 'New in 2.3', twotwo: 'New in 2.2' } }) %>
 <script src="/javascript/loader.js"></script>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
 
-  <div class="ui active tab" data-tab="twosix">
+  <div class="ui active tab" data-tab="twoseven">
+    <h2 class="ui dividing header">Merry Christmas 🎅</h2>
+    <p>Fomantic <code>2.7</code> brings lots of new goodies and fixes and just in time for christmas!</p>
+
+    <h4>Announcement</h4>
+    <p>
+      With 2019 around the corner and a lot of discussion we (core contributors) have agreed to move our core focus to FUI v3.0.
+      This doesn't mean we won't be working on 2.x but means releases may be slowed down a little due to more work being put into v3.0.
+      You can read more about the future of FUI and v3.0 <a href="https://github.com/fomantic/Fomantic-UI/issues/319">here</a>
+    </p>
+
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        With this release we removed the dependency of <code>prompt-sui</code> which removes the child dependency of <code>event-stream</code> this ensures
+        that the library won't be downloading any (now deprecated) malicious code. If you want to learn more about the recent security
+        issues with <code>event-stream</code> please read <a href="https://github.com/fomantic/Fomantic-UI/issues/268">this issue</a>.
+      </li>
+      <li>
+        In this release we had a big focus on removing a lot of the <code>!important</code> usage which in turn produced lots of issues.
+        Now with a big help from our core contributors we have removed ~85% of the usage and reduced the complexity of a lot of
+        the color code base which makes it easier to make changes and helps reduce the size of the general code base aswell as removing duplicate code.
+      </li>
+    </ul>
+
+    <h2 class="ui dividing header">
+      New features
+    </h2>
+    <div class="content example">
+      <h4 class="ui header">
+        Slider
+      </h4>
+      <p>In <code>2.7</code> we renamed the range component to slider and also add a lot of new features to play around with.</p>
+
+      <p>Labeled & Ticked Sliders</p>
+      <div class="ui labeled ticked slider" id="ticket-slider-27"></div>
+
+      <p>Range Slider (yes an actual range slider)</p>
+      <div class="ui labeled ticked range slider" id="slider-range-27"></div>
+      <div class="ui input">
+        <input type="text" id="range-slider-input-27" disabled="">
+      </div>
+
+      <p>Vertical Slider</p>
+      <div style="height: 200px;">
+        <div class="ui vertical slider" id="vertical-slider-27"></div>
+      </div>
+
+      <br />
+      <p>And a lot more, check the release notes to see all slider changes</p>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Loader
+      </h4>
+      <p>We have added some new loader styles in <code>2.7</code> so your not restricted to a boring spinner</p>
+
+      <p>Doubled</p>
+      <div class="ui segment">
+        <div class="ui active slow green double loader"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+      <p>Elastic</p>
+      <div class="ui segment">
+        <div class="ui active blue elastic loader"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+      <p>You can also apply all loader modifiers to these loaders</p>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Colors
+      </h4>
+      <p>
+        In <code>2.7</code> we went colors mad and changed a lot of the code base to make colors more consistent
+        across the framework and to make it so you can define your own colors 🎉
+      </p>
+
+      <p>
+        In <code>/globals/colors.less</code> you will find a list of colors which you can tweak to your liking.
+        You can change color values and even rename or add your own colors!
+
+        You will notice there is a lot of variables like <code>@primaryColor</code> which are located in <code>/globals/site.variables</code>
+        this allows this change to stay backwards compatible.
+      </p>
+
+      <p>
+        We also have added a new element called <code>text</code> which allows you to color text with the framework colors via wrapping
+        text in side of a <code>&lt;span&gt;</code>.
+      </p>
+      <div class="ui segment">
+        <p>As you can see I am <span class="ui red text">red</span> and I am <span class="ui blue text">blue</span>.</p>
+      </div>
+      <div class="ui inverted segment">
+        <p>Oh and you can use inverted colors like this inverted <span class="ui inverted purple text">purple</span> and <span class="ui inverted orange text">orange</span> text</p>
+      </div>
+    </div>
+
+    <br />
+
+    <p>We didn't just stop there we also added a lot of cool new features for other components and addressed lots of bugs. You can find a full list of changes
+      <a href="https://github.com/fomantic/Fomantic-UI/commit/cb3026ed46714ef19b87938ea7bd884d1ab2d92d">here</a></p>
+  </div>
+
+  <div class="ui tab" data-tab="twosix">
     <h2 class="ui dividing header">Toasty loaders</h2>
     <p>Fomantic <code>2.6</code> brings a new components for handling content loading <a href="/elements/placeholder.html"><code>ui placeholder</code></a>, as well as a new type of <code>segment</code> used to reserve space for content: <a href="/elements/segment.html#empty"><code>ui placeholder segment</code></a>.</p>
 
