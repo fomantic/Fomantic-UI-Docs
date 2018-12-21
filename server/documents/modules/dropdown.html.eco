@@ -17,7 +17,7 @@ themes      : ['Default', 'GitHub', 'Material']
 <script src="/javascript/dropdown.js"></script>
 
 
-<%- @partial('header', { tabs: 'module' }) %>
+<%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples', usage: 'Usage', settings: 'Settings', security: 'Security'} }) %>
 
 <div class="main ui container">
 
@@ -1634,6 +1634,16 @@ themes      : ['Default', 'GitHub', 'Material']
 
 
     <h2 class="ui dividing header">Remote Content</h2>
+
+    <div class="ui warning icon message">
+        <i class="warning icon"></i>
+        <div class="content">
+            <div class="header">
+             Be careful when working with foreign remote API services
+            </div>
+            <p>You might want to read the <a href="#/security">Security Section</a> about possible XSS vulnerabilities</p>
+        </div>
+    </div>
 
     <div class="remote filter no example">
       <h4 class="ui header">Match Search Query on Server</h4>
@@ -3383,6 +3393,85 @@ themes      : ['Default', 'GitHub', 'Material']
       </tbody>
     </table>
 
+  </div>
+
+  <div class="ui tab" data-tab="security">
+
+    <h2 class="ui dividing header">Taking care of untrusted remote data</h2>
+
+    <div class="ui warning message">
+		<div class="ui header">No responsibility</div>
+		<ul class="list">
+		  <li>Fomantic has some basic features included to prevent <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">XSS</a> when working with remoteData.</li>
+		  <li>There is no guarantee and fomantic does not promise, that your site will not be vulnerable against data of any unknown remote data source</li>
+		  <li>Fomantic-UI is not responsible for how you process and use data and by using fomantic you agree that you are reliable for any damage or charges placed against you (or your company) for any issues caused by data processing</li>
+	    </ul>
+    </div>
+	<div class="ui info message">
+		<div class="ui header">HINT</div>
+		<p>Look at <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet</a> to find out more and to learn what you should be aware of</p>
+	</div>
+
+    <h4 class="ui header">Untrusted Data</h4>
+    <p>You should never trust any data and should make sure all data is processed on the server to sanitize before passing it to the client.</p>
+    <p>However you might want to use existing foreign API services as data storage in your dropdown module. In this case it is recommended to set the <code>preserveHTML</code> option to <code>false</code>. Then all data provided by the frontend will be either encoded to use HTML-entities for the most evil characters like <code>&amp;, &lt;, &gt;, &quot;, &#x27;, &#x60;</code> or any html data will be completely removed on item selection</p>
+
+	<div class="ignored code" data-type="javascript">
+	$('.ui.dropdown')
+      .dropdown({
+        preserveHTML : false,
+        apiSettings: {
+          url: '//api.github.com/search/repositories?q={query}'
+        }
+      });
+    </div>
+
+	<h2 class="ui dividing header">Evil API Example</h2>
+	<p>The following dropdown fields are bound to an evil API backend which tries to inject code</p>
+	<div class="ui message">
+		<ul class="ui list">
+			<li>Click on the dropdown field to trigger the api call</li>
+			<li>The default (thus omitted) setting <code>preserveHTML:true</code> in the first example results in instantly getting an alert message</li>
+			<li>It also injects hidden code into an additional click event handler on a dropdown item (marked red). Try to click it as you would usually do when selecting the desired dropdown result</li>
+			<li>The evil example code removes itself from the DOM after being executed once</li>
+		</ul>
+	</div>
+	<div class="example">
+        <h4 class="ui header">Vulnerable Version</h4>
+        <div class="ui fluid multiple search selection dropdown evilexample">
+          <input type="hidden" name="animal1">
+          <i class="dropdown icon"></i>
+          <div class="default text">Select Animal</div>
+        </div>
+
+        <div class="evaluated code" data-type="javascript">
+        $('.ui.dropdown.evilexample')
+          .dropdown({
+            apiSettings: {
+              url: '/evilapi.json'
+            }
+          });
+        </div>
+    </div>
+
+    <div class="example">
+        <h4 class="ui header">Sanitized Version</h4>
+        <div class="ui fluid multiple search selection dropdown evilexample_sanitized">
+          <input type="hidden" name="animal2">
+          <i class="dropdown icon"></i>
+          <div class="default text">Select Animal</div>
+        </div>
+
+        <div class="evaluated code" data-type="javascript">
+        $('.ui.dropdown.evilexample_sanitized')
+          .dropdown({
+            preserveHTML : false,
+            apiSettings: {
+              url: '/evilapi.json'
+            }
+          });
+        </div>
+    </div>
   </div>
 
 </div>
