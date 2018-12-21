@@ -35,6 +35,7 @@
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/reveal.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/segment.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/step.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/text.css">
 
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/breadcrumb.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/form.css">
