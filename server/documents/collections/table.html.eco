@@ -567,6 +567,43 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
 
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Colored<div class="ui black label">New in 2.7</div></h4>
+    <p>A cell can be styled by the central color palette colors</p>
+    <table class="ui celled table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Notes</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="orange">No Name Specified</td>
+        <td>Unknown</td>
+        <td>None</td>
+      </tr>
+      <tr class="blue">
+        <td>Jimmy</td>
+        <td><i class="microphone icon"></i> Recording session</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>Jamie</td>
+        <td>Unknown</td>
+        <td class="pink"><i class="child icon"></i> Baby Party</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Unknown</td>
+        <td class="green">Vacation</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
   <h2 class="ui dividing header">Variations</h2>
 
 
