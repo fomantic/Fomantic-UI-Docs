@@ -390,7 +390,7 @@ semantic.new.ready = function() {
     ;
   })
   ;
-  
+
   // 2.5
   $('.ui.calendar').calendar();
   $('.ui.slider').slider({
@@ -399,7 +399,38 @@ semantic.new.ready = function() {
     start: 5,
     input: '#slider-input-25'
   });
-  
+
+  // 2.7
+  $('#ticket-slider-27')
+    .slider({
+      min: 0,
+      max: 10,
+      start: 5
+    });
+
+  $('#slider-range-27')
+    .slider({
+      min: 5,
+      max: 100,
+      start: 10,
+      end: 90,
+      step: 5,
+      onChange: function(range, firstVal, secondVal) {
+        if (firstVal > secondVal) {
+          $('#range-slider-input-27').val('|' + firstVal + " - " + secondVal + '| = ' + range);
+        } else {
+          $('#range-slider-input-27').val('|' + secondVal + " - " + firstVal + '| = ' + range);
+        }
+      }
+    })
+  ;
+
+  $('#vertical-slider-27')
+    .slider({
+      min: 0,
+      max: 10,
+      start: 5
+    });
 };
 
 
