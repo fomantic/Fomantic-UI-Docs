@@ -6,7 +6,7 @@ elementType : 'module'
 standalone  : true
 
 title       : 'Slider'
-description : 'A range slider allows users to select values within a range'
+description : 'A slider allows users to select values within a range'
 type        : 'UI Module'
 status      : 'BETA'
 statusColor : 'orange'
