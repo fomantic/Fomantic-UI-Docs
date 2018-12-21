@@ -28,10 +28,10 @@ type        : 'UI Element'
       </div>
       <div class="code" data-type="html" data-preview="true">
           <div class="ui segment">
-            This is <span class="ui red text"></span> inline text and this is <span class="ui blue text"></span> inline text and this is <span class=""></span> inline text
+            This is <span class="ui red text">red</span> inline text and this is <span class="ui blue text">blue</span> inline text and this is <span class="ui purple text">purple</span> inline text
           </div>
           <div class="ui inverted segment">
-            This is <span class="ui inverted yellow text"></span> inline text and this is <span class="ui inverted teal text"></span> inline text and this is <span class="ui inverted black text"></span> inline text
+            This is <span class="ui inverted red text">red</span> inline text and this is <span class="ui inverted blue text">blue</span> inline text and this is <span class="ui inverted purple text">purple</span> inline text
           </div>
       </div>
     </div>
