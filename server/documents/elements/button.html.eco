@@ -328,6 +328,19 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <button class="ui basic loading button">Loading</button>
     <button class="ui primary loading button">Loading</button>
     <button class="ui secondary loading button">Loading</button>
+    <br>
+    <br>
+    <button class="ui double loading button">Loading</button>
+    <button class="ui basic double loading button">Loading</button>
+    <button class="ui primary double loading button">Loading</button>
+    <button class="ui secondary double loading button">Loading</button>
+    <br>
+    <br>
+    <button class="ui elastic loading button">Loading</button>
+    <button class="ui basic elastic loading button">Loading</button>
+    <button class="ui primary elastic loading button">Loading</button>
+    <button class="ui secondary elastic loading button">Loading</button>
+
   </div>
 
   <h2 class="ui dividing header">Variations</h2>

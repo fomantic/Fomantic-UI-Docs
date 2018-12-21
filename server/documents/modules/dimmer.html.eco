@@ -370,6 +370,25 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="dimmerloader example">
+      <p>You can customize a loader in a dimmer via javascript <div class="ui black label">New in 2.7.0</div></p>
+      <div class="evaluated code">
+          $('.dimmerloader.example .image')
+          .dimmer({
+              displayLoader: true,
+              loaderVariation: 'slow orange medium elastic',
+              loaderText: 'Wait a second, please...'
+          })
+          .dimmer('show')
+          ;
+      </div>
+      <div class="ui medium image">
+          <img class="ui image" src="/images/wireframe/image.png">
+      </div>
+    </div>
+
+
+
   </div>
 
   <div class="ui tab" data-tab="usage">
@@ -588,6 +607,28 @@ themes      : ['Default']
           </td>
           <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
         </tr>
+        <tr>
+            <td>displayLoader</td>
+            <td>
+                false
+            </td>
+            <td>Whether a custom loader should be generated inside the dimmer</td>
+        </tr>
+        <tr>
+            <td>loaderVariation</td>
+            <td>
+                ''
+            </td>
+            <td>Additional css classes to style the loader. See <a href="/elements/loader.html">Loader</a></td>
+        </tr>
+        <tr>
+            <td>loaderText</td>
+            <td>
+                false
+            </td>
+            <td>If a string is given, it will be shown underneath the loader animation icon</td>
+        </tr>
+
       </tbody>
     </table>
 

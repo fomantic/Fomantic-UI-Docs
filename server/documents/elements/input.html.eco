@@ -56,6 +56,18 @@ themes      : ['Default', 'GitHub']
       <i class="search icon"></i>
     </div>
   </div>
+  <div class="another example">
+    <div class="ui icon input purple double loading">
+        <input type="text" placeholder="Search...">
+        <i class="search icon"></i>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui icon input red fast elastic loading">
+        <input type="text" placeholder="Search...">
+        <i class="search icon"></i>
+    </div>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Disabled</h4>
