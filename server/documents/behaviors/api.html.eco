@@ -1081,6 +1081,12 @@ type        : 'UI Behavior'
           <td>String or false</td>
         </tr>
         <tr>
+          <td>base</td>
+          <td>''</td>
+          <td>base URL to apply to all endpoints. Will be prepended to each given url</td>
+          <td>String</td>
+        </tr>
+        <tr>
           <td>urlData</td>
           <td>false</td>
           <td>Variables to use for replacement</td>
