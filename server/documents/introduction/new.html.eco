@@ -4,7 +4,7 @@ css         : 'new'
 standalone  : true
 order       : 1
 
-title       : 'New in 2.7'
+title       : "What's New"
 description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
