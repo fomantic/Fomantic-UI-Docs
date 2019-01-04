@@ -236,6 +236,22 @@ themes      : ['Default']
   </div>
 
   <div class="another example">
+    <div class="ui ignored info message">An ordered list has a suffixed variation in which a dot <code>.</code> follows number.</div>
+    <ol class="ui suffixed list">
+      <li>Signing Up</li>
+      <li>User Benefits</li>
+      <li>User Types
+        <ol>
+          <li>Admin</li>
+          <li>Power User</li>
+          <li>Regular User</li>
+        </ol>
+      </li>
+      <li>Deleting Your Account</li>
+    </ol>
+  </div>
+
+  <div class="another example">
     <div class="ui ignored info message">You can also manually specify a value for an ordered list using <code>data-value</code> on a <code>div</code>, or <code>value</code> on an <code>li</code>
     </div>
     <ol class="ui list">
@@ -251,7 +267,6 @@ themes      : ['Default']
       <li value="*">Deleting Your Account</li>
     </ol>
   </div>
-
 
   <div class="example" data-tag="a">
     <h4 class="ui header">Link</h4>
