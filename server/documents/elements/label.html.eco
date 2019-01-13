@@ -333,16 +333,89 @@ themes      : ['Default', 'GitHub']
   <div class="example" data-use-content="true" data-class="icon">
     <h4 class="ui header">Icon</h4>
     <p>A label can include an icon</p>
-    <a class="ui label">
+    <div class="ui label">
       <i class="mail icon"></i>
       Mail
-    </a>
-    <a class="ui label">
-      Tag
-      <i class="delete icon"></i>
-    </a>
+    </div>
+    <div class="ui label">
+      <i class="checkmark icon"></i>
+      Test
+    </div>
+    <div class="ui label">
+      <i class="dog icon"></i>
+      Dog
+    </div>
+    <div class="ui label">
+      <i class="cat icon"></i>
+      Cat
+    </div>
+  </div>
+  
+  <div class="another example" data-use-content="true">
+    <div class="ignored ui info message">Icons can be placed in the right side of label.</div>
+
+    <div class="ui right icon label">
+      Mail
+      <i class="mail icon"></i>
+    </div>
+    <div class="ui right icon label">
+      Test
+      <i class="checkmark icon"></i>
+    </div>
+    <div class="ui right icon label">
+      Dog
+      <i class="dog icon"></i>
+    </div>
+    <div class="ui right icon label">
+      Cat
+      <i class="cat icon"></i>
+    </div>
   </div>
 
+  <div class="another example" data-use-content="true">
+    <div class="ignored ui info message">Icons can be hoverable to indicate an action.</div>
+    <div class="ui label">
+      <i class="hoverable mail icon"></i>
+      Mail
+    </div>
+    <div class="ui label">
+      <i class="hoverable close icon"></i>
+      Close
+    </div>
+    <div class="ui label">
+      <i class="hoverable delete icon"></i>
+      Delete
+    </div>
+
+    <div class="ui right icon label">
+      Mail
+      <i class="hoverable mail icon"></i>
+    </div>
+    <div class="ui right icon label">
+      Close
+      <i class="hoverable close icon"></i>
+    </div>
+    <div class="ui right icon label">
+      Delete
+      <i class="hoverable delete icon"></i>
+    </div>
+  </div>
+
+  <div class="another example">
+    <div class="ignored ui info message">Label can contains icon without text.</div>
+
+    <div class="ui icon label">
+      <i class="mail icon"></i>
+    </div>
+    <div class="ui icon label">
+      <i class="dog icon"></i>
+    </div>
+    <div class="ui icon label">
+      <i class="cat icon"></i>
+    </div>
+  </div>
+  
+  
   <div class="example" data-use-content="true" data-class="image" data-tag="img">
     <h4 class="ui header">Image</h4>
     <p>A label can include an image</p>
