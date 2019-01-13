@@ -359,7 +359,7 @@ themes      : ['Default', 'GitHub']
     </div>
     <div class="ui label">
       <i class="checkmark icon"></i>
-      Test
+      Test Passed
     </div>
     <div class="ui label">
       <i class="dog icon"></i>
@@ -379,7 +379,7 @@ themes      : ['Default', 'GitHub']
       <i class="mail icon"></i>
     </div>
     <div class="ui right icon label">
-      Test
+      Test Passed
       <i class="checkmark icon"></i>
     </div>
     <div class="ui right icon label">
@@ -399,12 +399,8 @@ themes      : ['Default', 'GitHub']
       Mail
     </div>
     <div class="ui label">
-      <i class="hoverable close icon"></i>
-      Close
-    </div>
-    <div class="ui label">
-      <i class="hoverable delete icon"></i>
-      Delete
+      <i class="hoverable times icon"></i>
+      Test Failed
     </div>
 
     <div class="ui right icon label">
@@ -412,12 +408,8 @@ themes      : ['Default', 'GitHub']
       <i class="hoverable mail icon"></i>
     </div>
     <div class="ui right icon label">
-      Close
-      <i class="hoverable close icon"></i>
-    </div>
-    <div class="ui right icon label">
-      Delete
-      <i class="hoverable delete icon"></i>
+      Test Failed
+      <i class="hoverable times icon"></i>
     </div>
   </div>
 
@@ -434,8 +426,42 @@ themes      : ['Default', 'GitHub']
       <i class="cat icon"></i>
     </div>
   </div>
-  
-  
+
+  <div class="another example" data-use-content="true">
+    <div class="ignored ui icon warning message">
+      <i class="warning sign icon"></i>
+      <div class="content">
+        For backward-compatibility during v2.x, <code>close</code>/<code>delete</code> icon...
+      
+        <ul>
+          <li>requires <code>left icon</code> added to parent <code>label</code> when the icon is placed in the left of label.</li>
+          <li>do not require <code>right icon</code> added to parent <code>label</code> when the icon is placed in the right of label.</li>
+          <li>have special style as same as <code>hoverable</code> variation when the icon is inside <code>label</code> which do not have <code>icon</code> class.</li>
+        </ul>
+      
+        This complicated rule may be simplified in v3.x.
+      </div>
+    </div>
+
+    <div class="ui left icon label">
+      <i class="hoverable close icon"></i>
+      Close
+    </div>
+    <div class="ui left icon label">
+      <i class="hoverable delete icon"></i>
+      Delete
+    </div>
+
+    <div class="ui label">
+      Close
+      <i class="close icon"></i>
+    </div>
+    <div class="ui label">
+      Delete
+      <i class="delete icon"></i>
+    </div>
+  </div>
+    
   <div class="example" data-use-content="true" data-class="image" data-tag="img">
     <h4 class="ui header">Image</h4>
     <p>A label can include an image</p>
