@@ -211,8 +211,28 @@ themes      : ['Default', 'GitHub']
       </div>
       <div class="column">
         <div class="ui fluid image">
-          <div class="ui blue ribbon label">
+          <div class="ui blue right ribbon label">
             <i class="spoon icon"></i> Food
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui two column grid">
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui black ribbon right icon label">
+            Hotel <i class="hotel icon"></i> 
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui blue right ribbon right icon label">
+            Food <i class="spoon icon"></i>
           </div>
           <img src="/images/wireframe/image.png">
         </div>
