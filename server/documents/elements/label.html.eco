@@ -427,18 +427,15 @@ themes      : ['Default', 'GitHub']
   </div>
 
   <div class="another example" data-use-content="true">
-    <div class="ignored ui icon warning message">
-      <i class="warning sign icon"></i>
-      <div class="content">
-        For backward-compatibility during v2.x, <code>close</code>/<code>delete</code> icon...
+    <div class="ignored ui warning message">
+      For backward-compatibility during v2.x, <code>close</code>/<code>delete</code> icon...
       
-        <ul>
-          <li>requires <code>left icon</code> added to parent <code>label</code> when the icon is placed in the left of label.</li>
-          <li>do not require <code>right icon</code> added to parent <code>label</code> when the icon is placed in the right of label.</li>
-        </ul>
+      <ul>
+        <li>requires <code>left icon</code> added to parent <code>label</code> when the icon is placed in the left of label.</li>
+        <li>do not require <code>right icon</code> added to parent <code>label</code> when the icon is placed in the right of label.</li>
+      </ul>
       
-        This complicated rule may be simplified in v3.x.
-      </div>
+      This rule may be simplified in a later minor or major version".
     </div>
 
     <div class="ui left icon label">
