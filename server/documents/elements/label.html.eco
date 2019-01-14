@@ -239,6 +239,26 @@ themes      : ['Default', 'GitHub']
       </div>
     </div>
   </div>
+  <div class="another example">
+    <div class="ui two column grid">
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui black ribbon icon label">
+            <i class="hotel icon"></i> 
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui blue right ribbon icon label">
+            <i class="spoon icon"></i>
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="clearing example">
     <h4 class="ui header">Attached</h4>
