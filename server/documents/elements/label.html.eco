@@ -392,27 +392,6 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="another example" data-use-content="true">
-    <div class="ignored ui info message">Icons can be hoverable to indicate an action.</div>
-    <div class="ui label">
-      <i class="hoverable mail icon"></i>
-      Mail
-    </div>
-    <div class="ui label">
-      <i class="hoverable times icon"></i>
-      Test Failed
-    </div>
-
-    <div class="ui right icon label">
-      Mail
-      <i class="hoverable mail icon"></i>
-    </div>
-    <div class="ui right icon label">
-      Test Failed
-      <i class="hoverable times icon"></i>
-    </div>
-  </div>
-
   <div class="another example">
     <div class="ignored ui info message">Label can contains icon without text.</div>
 
@@ -436,7 +415,6 @@ themes      : ['Default', 'GitHub']
         <ul>
           <li>requires <code>left icon</code> added to parent <code>label</code> when the icon is placed in the left of label.</li>
           <li>do not require <code>right icon</code> added to parent <code>label</code> when the icon is placed in the right of label.</li>
-          <li>have special style as same as <code>hoverable</code> variation when the icon is inside <code>label</code> which do not have <code>icon</code> class.</li>
         </ul>
       
         This complicated rule may be simplified in v3.x.
@@ -444,11 +422,11 @@ themes      : ['Default', 'GitHub']
     </div>
 
     <div class="ui left icon label">
-      <i class="hoverable close icon"></i>
+      <i class="close icon"></i>
       Close
     </div>
     <div class="ui left icon label">
-      <i class="hoverable delete icon"></i>
+      <i class="delete icon"></i>
       Delete
     </div>
 
