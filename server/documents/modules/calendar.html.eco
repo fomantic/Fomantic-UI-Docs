@@ -6,7 +6,7 @@ elementType : 'module'
 standalone  : true
 
 title       : 'Calendar'
-description : 'A calendar allows users to select any date ot time'
+description : 'A calendar allows users to select any date or time'
 type        : 'UI Module'
 
 themes      : ['Default']
