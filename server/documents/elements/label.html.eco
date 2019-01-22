@@ -357,6 +357,54 @@ themes      : ['Default', 'GitHub']
         <div class="floating ui teal label">22</div>
       </a>
     </div>
+    <br><br>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="floating ui red label">22 Mails</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="floating ui teal label">22 Friends</div>
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <p>Floating Labels can be positioned to the left also</p>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="left floating ui red label">22</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="left floating ui teal label">22</div>
+      </a>
+    </div>
+    <br><br>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="left floating ui red label">22 Mails</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="left floating ui teal label">22 Friends</div>
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <p>Floating Labels containing large text can be aligned to the left or right</p>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages from Fomantic-UI-Users
+        <div class="left aligned floating ui red label">22 Mails unread</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends of the Fomantic-UI Community
+        <div class="right aligned floating ui teal label">22 Friends online</div>
+      </a>
+    </div>
   </div>
 
   <h2 class="ui dividing header">Content</h2>
