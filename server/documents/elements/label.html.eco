@@ -369,7 +369,10 @@ themes      : ['Default', 'GitHub']
       </a>
     </div>
   </div>
-  <div class="another example">
+  <div class="example">
+    <h4 class="ui header">Floating left
+        <div class="ui black label">New in 2.7.2</div>
+    </h4>
     <p>Floating Labels can be positioned to the left also</p>
     <div class="ui compact menu">
       <a class="item">
@@ -393,7 +396,10 @@ themes      : ['Default', 'GitHub']
       </a>
     </div>
   </div>
-  <div class="another example">
+  <div class="example">
+    <h4 class="ui header">Floating aligned
+      <div class="ui black label">New in 2.7.2</div>
+    </h4>
     <p>Floating Labels containing large text can be aligned to the left or right</p>
     <div class="ui compact menu">
       <a class="item">
