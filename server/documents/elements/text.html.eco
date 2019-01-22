@@ -36,5 +36,24 @@ type        : 'UI Element'
       </div>
     </div>
 
+    <h2 class="ui dividing header">Variations</h2>
+
+    <div class="example">
+      <h4 class="ui header">Size
+        <div class="ui black label">New in 2.7.2</div>
+      </h4>
+      <p>Text can vary in the same sizes as icons</p>
+        <div class="ui segment">
+          <p>Starting with <span class="ui mini red text">mini</span> text</p>
+          <p>which turns into <span class="ui tiny red text">tiny</span> text</p>
+          <p>changing to <span class="ui small red text">small</span> text until it is</p>
+          <p>the default <span class="ui medium red text">medium</span> text</p>
+          <p>and could be <span class="ui large red text">large</span> text</p>
+          <p>to turn into <span class="ui big red text">big</span> text</p>
+          <p>then growing to <span class="ui huge red text">huge</span> text</p>
+          <p>to finally become <span class="ui red massive text">massive</span> text</p>
+        </div>
+    </div>
+
   </div>
 </div>
