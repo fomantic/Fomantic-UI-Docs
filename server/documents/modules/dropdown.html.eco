@@ -145,6 +145,54 @@ themes      : ['Default', 'GitHub', 'Material']
       </select>
     </div>
 
+    <div class="diacritics example">
+      <h4 class="ui header">
+        Search ignoring Diacritics
+        <div class="ui black label">New in 2.7.2</div>
+      </h4>
+      <p>A selection dropdown can allow a user to ignore all Diacritics while searching.</p>
+      <div class="ui search selection dropdown" id="diacriticsexample">
+        <input type="hidden" name="diacritics">
+        <i class="dropdown icon"></i>
+        <div class="default text">Search diacritics by only typing usual vowels</div>
+        <div class="menu">
+            <div class="item">André</div>
+            <div class="item">Bokmål</div>
+            <div class="item">café</div>
+            <div class="item">cafetería</div>
+            <div class="item">château</div>
+            <div class="item">décolleté</div>
+            <div class="item">Élysée</div>
+            <div class="item">Fräulein</div>
+            <div class="item">garçon</div>
+            <div class="item">háček</div>
+            <div class="item">inrō</div>
+            <div class="item">jūjutsu</div>
+            <div class="item">kroužek</div>
+            <div class="item">La Niña</div>
+            <div class="item">Māori</div>
+            <div class="item">négligée</div>
+            <div class="item">pączki</div>
+            <div class="item">Québec</div>
+            <div class="item">ragoût</div>
+            <div class="item">Škoda</div>
+            <div class="item">takahē</div>
+            <div class="item">über</div>
+            <div class="item">voilà</div>
+            <div class="item">whekī</div>
+            <div class="item">c Zoë</div>
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+      $('#diacriticsexample')
+        .dropdown({
+          ignoreDiacritics: true,
+          sortSelect: true,
+          fullTextSearch:'exact'
+        });
+      </div>
+    </div>
+
     <div class="dropdown example">
       <h4 class="ui header">
         Clearable Selection
@@ -2926,6 +2974,12 @@ themes      : ['Default', 'GitHub', 'Material']
               </div>
             </div>
           </td>
+        </tr>
+        <tr>
+          <td>ignoreDiacritics</td>
+          <td>false</td>
+          <td>When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
+              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui black label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
         </tr>
       </tbody>
     </table>

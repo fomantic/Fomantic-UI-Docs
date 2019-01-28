@@ -152,6 +152,59 @@ type        : 'UI Module'
       </div>
     </div>
 
+    <div class="diacritics example">
+      <h4 class="ui header">
+        Search ignoring Diacritics
+        <div class="ui black label">New in 2.7.2</div>
+      </h4>
+      <p>A selection dropdown can allow a user to ignore all Diacritics while searching.</p>
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search Diacritics...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('#diacriticsexample')
+            .search({
+                ignoreDiacritics: true,
+                fullTextSearch:'exact',
+                source: diacriticsContent
+            })
+        ;
+      </div>
+      <div class="hidden code" data-type="javascript">
+      var diacriticsContent = [
+            { title: 'André'},
+            { title: 'Bokmål'},
+            { title: 'café'},
+            { title: 'cafetería'},
+            { title: 'château'},
+            { title: 'décolleté'},
+            { title: 'Élysée'},
+            { title: 'Fräulein'},
+            { title: 'garçon'},
+            { title: 'háček'},
+            { title: 'inrō'},
+            { title: 'jūjutsu'},
+            { title: 'kroužek'},
+            { title: 'La Niña'},
+            { title: 'Māori'},
+            { title: 'négligée'},
+            { title: 'pączki'},
+            { title: 'Québec'},
+            { title: 'ragoût'},
+            { title: 'Škoda'},
+            { title: 'takahē'},
+            { title: 'über'},
+            { title: 'voilà'},
+            { title: 'whekī'},
+            { title: 'c Zoë'}
+        ];
+      </div>
+    </div>
+
     <!-- Coming in 2.2
 
     <div class="local example">
@@ -767,6 +820,12 @@ type        : 'UI Module'
             easeOutExpo
           </td>
           <td>Easing equation when using fallback Javascript animation</td>
+        </tr>
+        <tr>
+          <td>ignoreDiacritics</td>
+          <td>false</td>
+          <td>When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
+              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui black label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
         </tr>
       </tbody>
     </table>
