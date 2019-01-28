@@ -345,7 +345,7 @@ themes      : ['Default', 'GitHub']
 
   <div class="example" data-class="floating">
     <h4 class="ui header">Floating</h4>
-    <p>A label can float above another element.</p>
+    <p>A label can float above or below another element.</p>
     <div class="ui ignored warning message">A floating label must be positioned inside a container with <b>position: relative</b> to display properly.</div>
     <div class="ui compact menu">
       <a class="item">
@@ -366,6 +366,30 @@ themes      : ['Default', 'GitHub']
       <a class="item">
         <i class="icon users"></i> Friends
         <div class="floating ui teal label">22 Friends</div>
+      </a>
+    </div>
+    <br><br>
+    <div class="ui black bottom pointing label">New in 2.7.2</div>
+    <br>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="bottom floating ui red label">22</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="bottom floating ui teal label">22</div>
+      </a>
+    </div>
+    <br><br>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="bottom floating ui red label">22 Mails</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="bottom floating ui teal label">22 Friends</div>
       </a>
     </div>
   </div>
