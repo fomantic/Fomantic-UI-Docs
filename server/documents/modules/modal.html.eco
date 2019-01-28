@@ -891,6 +891,11 @@ themes      : ['Default', 'Material']
           <td>When true, the first form input inside the modal will receive focus when shown.  Set this to false to prevent this behavior.</td>
         </tr>
         <tr>
+          <td>restoreFocus</td>
+          <td>true</td>
+          <td>When false, the last focused element, before the modal was shown, will not get refocused again when the modal hides. This could prevent unwanted scrolling behaviors after closing a modal.<div class="ui tiny black label">new in 2.7.2</div></td>
+        </tr>
+        <tr>
           <td>observeChanges</td>
           <td>false</td>
           <td>Whether any change in <code>modal</code> DOM should automatically refresh cached positions</td>
