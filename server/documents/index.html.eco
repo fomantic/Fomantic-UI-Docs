@@ -24,7 +24,7 @@ standalone : false
           <% else: %>
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"
-            data-text="Fomantic UI 2.4 is out!"
+            data-text="Fomantic UI <%= @getVersion() %> is out!"
             data-url="https://fomantic-ui.com"
             data-via="fomanticui">
           </a>
