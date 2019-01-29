@@ -158,6 +158,9 @@ type        : 'UI Module'
         <div class="ui black label">New in 2.7.2</div>
       </h4>
       <p>A selection dropdown can allow a user to ignore all Diacritics while searching.</p>
+      <div class="ui ignored info message">
+          If you want to support IE using the <code>ignoreDiacritics</code> option, you have to include a polyfill for the   <code>String().normalize()</code> method like <a href="https://cdn.jsdelivr.net/npm/unorm@1.4.1/lib/unorm.min.js">unorm</a>.
+      </div>
       <div class="ui search">
         <div class="ui icon input">
           <input class="prompt" type="text" placeholder="Search Diacritics...">
