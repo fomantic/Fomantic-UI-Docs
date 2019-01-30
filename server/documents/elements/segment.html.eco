@@ -282,6 +282,38 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Horizontal stackable Segments
+    <div class="ui black label">New in 2.7.2</div>
+    </h4>
+    <p>A horizontal segment group can automatically stack on smaller screens</p>
+    <div class="ui horizontal stackable segments">
+      <div class="ui segment">
+        Segment One
+      </div>
+      <div class="ui segment">
+        Segment Two
+      </div>
+      <div class="ui segment">
+       Segment Three
+      </div>
+      <div class="ui segment">
+       Segment Four
+      </div>
+      <div class="ui segment">
+        Segment Five
+      </div>
+      <div class="ui segment">
+        Segment Six
+      </div>
+      <div class="ui segment">
+        Segment Seven
+      </div>
+      <div class="ui segment">
+        Segment Eight
+      </div>
+    </div>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Raised Segments</h4>
