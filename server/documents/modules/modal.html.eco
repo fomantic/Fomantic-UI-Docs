@@ -957,6 +957,13 @@ themes      : ['Default', 'Material']
           </td>
           <td>Whether additional animations should queue</td>
         </tr>
+        <tr>
+          <td>scrollbarWidth</td>
+          <td>
+            10
+          </td>
+          <td>Used internally to determine if the webkit custom scrollbar was clicked to prevent hiding the dimmer. This should be set to the same (numeric) value as defined for <code>@customScrollbarWidth</code> in <code>site.less</code> in case you are using a different theme </td>
+        </tr>
       </tbody>
     </table>
 
