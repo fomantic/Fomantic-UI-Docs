@@ -893,7 +893,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
         <div class="extra">
           Rating:
-          <div class="ui star rating" data-rating="4"></div>
+          <div class="ui yellow rating" data-rating="4"></div>
         </div>
       </div>
       <div class="card">
@@ -902,7 +902,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
         <div class="extra">
           Rating:
-          <div class="ui star rating" data-rating="2"></div>
+          <div class="ui yellow rating" data-rating="2"></div>
         </div>
       </div>
       <div class="card">
@@ -911,7 +911,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
         <div class="extra">
           Rating:
-          <div class="ui star rating" data-rating="3"></div>
+          <div class="ui yellow rating" data-rating="3"></div>
         </div>
       </div>
       <div class="card">
@@ -920,7 +920,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
         <div class="extra">
           Rating:
-          <div class="ui star rating" data-rating="4"></div>
+          <div class="ui yellow rating" data-rating="4"></div>
         </div>
       </div>
       <div class="card">
@@ -929,7 +929,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
         <div class="extra">
           Rating:
-          <div class="ui star rating" data-rating="3"></div>
+          <div class="ui yellow rating" data-rating="3"></div>
         </div>
       </div>
       <div class="card">
@@ -938,7 +938,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
         <div class="extra">
           Rating:
-          <div class="ui star rating" data-rating="3"></div>
+          <div class="ui yellow rating" data-rating="3"></div>
         </div>
       </div>
       <div class="card">
@@ -947,7 +947,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
         <div class="extra">
           Rating:
-          <div class="ui star rating" data-rating="4"></div>
+          <div class="ui yellow rating" data-rating="4"></div>
         </div>
       </div>
       <div class="card">
@@ -956,7 +956,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
         <div class="extra">
           Rating:
-          <div class="ui star rating" data-rating="4"></div>
+          <div class="ui yellow rating" data-rating="4"></div>
         </div>
       </div>
     </div>
