@@ -41,22 +41,6 @@
           <i class="alternate github icon"></i>
         </a>
       </div>
-      <div class="ui right floated main menu">
-        <a class="music popup icon item" data-content="Play Music">
-          <i class="music icon"></i>
-        </a>
-        <div class="ui language dropdown right floating icon item" id="languages" data-content="Select Language">
-          <i class="world icon"></i>
-          <div class="menu">
-            <div class="header">Select Language</div>
-            <div class="ui icon search input">
-              <i class="search icon"></i>
-              <input type="text" placeholder="Search languages...">
-            </div>
-            <%- @partial('languages') %>
-          </div>
-        </div>
-      </div>
 
       <% if @document.type is 'UI Module': %>
 <!--       <a href="/module.html" class="ui right floated basic right labeled icon button">
