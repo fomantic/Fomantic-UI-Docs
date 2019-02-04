@@ -73,7 +73,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
             Power Output
           </td>
           <td>
-            <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+            <div class="ui yellow rating" data-rating="3" data-max-rating="3"></div>
           </td>
           <td class="right aligned">
             80% <br>
@@ -89,7 +89,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
             Weight
           </td>
           <td>
-            <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+            <div class="ui yellow rating" data-rating="3" data-max-rating="3"></div>
           </td>
           <td class="right aligned">
             100% <br>
