@@ -33,7 +33,7 @@
           <i class="edit icon"></i>
         </a>
         <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
-        <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/fomantic/Fomantic-UI/issues/new?title=[<%= @document.title %>] - Your Bug Name&body=**Steps to Reproduce**%0A1. Do something%0A2. Do something else.%0A3. Do one last thing.%0A%0A**Expected**%0AThe <%= @document.title %> should do this%0A%0A**Result**%0AThe <%= @document.title %> does not do this%0A%0A**Testcase**%0A(fork this to get started)%0Ahttp://jsfiddle.net/rduvhn8u/1/">
+        <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/fomantic/Fomantic-UI/issues/new?body=%23%20Bug%20Report%0A%0A%3C!--%0ATitle%20Format%0A%20%20%5BScope%5D%20Summary%20of%20what%20is%20broken%0A--%3E%0A%0A%23%23%20Steps%20to%20reproduce%0A1.%0A2.%0A3.%0A%0A%23%23%20Expected%20result%0A%0A%23%23%20Actual%20result%0A%0A%23%23%20Testcase%0A%3C!--%20Fork%20https%3A%2F%2Fjsfiddle.net%2F31d6y7mn%20--%3E%0A%0A%23%23%20Screenshot%20(when%20possible)%0A!%5B%5D()%0A%0A%23%23%20Version%0Ax.x.x">
           <i class="bug icon"></i>
         </a>
         <% end %>
