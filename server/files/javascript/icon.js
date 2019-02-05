@@ -11,7 +11,7 @@ semantic.icon.ready = function() {
     handler = {
       getIconList: function() {
         var
-          $examples   = $('.icon .example')
+          $examples   = $('.icon .example'),
           icons       = []
         ;
         $examples.each(function() {
@@ -23,14 +23,16 @@ semantic.icon.ready = function() {
           $icons.each(function() {
             var
               $icon = $(this).find('.icon'),
-              icon  = $icon.attr('class').replace(' icon', '')
+              icon  = $icon.attr('class').replace(' icon', ''),
+              terms = $icon.data('search-terms') || "",
               title = '<i class="' + icon +' icon"></i> ' + icon
             ;
             if(!_.findWhere(icons, { icon: icon})) {
               icons.push({
-                category : category,
-                title    : title,
-                icon     : icon
+                category    : category,
+                description : terms,
+                title       : title,
+                icon        : icon
               });
             }
           });

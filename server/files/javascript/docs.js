@@ -373,6 +373,9 @@ semantic.ready = function() {
     getSafeName: function(text) {
       return text.replace(/\s+/g, '-').replace(/[^-,'A-Za-z0-9]+/g, '').toLowerCase();
     },
+    getActiveTabTitle: function() {
+      return $(".masthead .tabs.menu .active.item").text();
+    },
 
     getText: function($element) {
       $element = ($element.find('a').not('.label, .anchor').length > 0)
@@ -396,6 +399,7 @@ semantic.ready = function() {
         html      = '',
         pageTitle = handler.getPageTitle(),
         title     = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1),
+        activeTab = handler.getActiveTabTitle(),  
         $sticky,
         $rail
       ;
@@ -455,8 +459,12 @@ semantic.ready = function() {
         .addClass('ui sticky')
         .html($followMenu)
         //.prepend($advertisement)
-        .prepend('<h4 class="ui header">' + title + '</h4>')
+        .prepend('<h3 class="ui header">' + title + '</h3>')
       ;
+      if (activeTab !== "") {
+        console.log("activeTab: ", activeTab);
+        $sticky.find('h3.ui.header').after('<h4 class="ui header">' + activeTab + '</h4>');
+      }
       $rail = $('<div />')
         .addClass('ui dividing right rail')
         .html($sticky)

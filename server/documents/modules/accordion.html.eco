@@ -150,6 +150,9 @@ themes      : ['Default', 'Chubby']
     <div class="example">
       <h4 class="ui header">Nested Accordions</h4>
       <p>An accordion can have multiple levels of nested content. This content can either be in a nested <code>accordion</code> or simply another level of <code>title</code> and <code>content</code></p>
+      <div class="ui info message">
+        For nested accordions you only need to initialize the parent accordion.
+      </div>
       <div class="ui styled accordion">
         <div class="active title">
           <i class="dropdown icon"></i>

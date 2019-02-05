@@ -211,8 +211,48 @@ themes      : ['Default', 'GitHub']
       </div>
       <div class="column">
         <div class="ui fluid image">
-          <div class="ui blue ribbon label">
+          <div class="ui blue right ribbon label">
             <i class="spoon icon"></i> Food
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui two column grid">
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui black ribbon right icon label">
+            Hotel <i class="hotel icon"></i> 
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui blue right ribbon right icon label">
+            Food <i class="spoon icon"></i>
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui two column grid">
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui black ribbon icon label">
+            <i class="hotel icon"></i> 
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui blue right ribbon icon label">
+            <i class="spoon icon"></i>
           </div>
           <img src="/images/wireframe/image.png">
         </div>
@@ -305,7 +345,7 @@ themes      : ['Default', 'GitHub']
 
   <div class="example" data-class="floating">
     <h4 class="ui header">Floating</h4>
-    <p>A label can float above another element.</p>
+    <p>A label can float above or below another element.</p>
     <div class="ui ignored warning message">A floating label must be positioned inside a container with <b>position: relative</b> to display properly.</div>
     <div class="ui compact menu">
       <a class="item">
@@ -315,6 +355,84 @@ themes      : ['Default', 'GitHub']
       <a class="item">
         <i class="icon users"></i> Friends
         <div class="floating ui teal label">22</div>
+      </a>
+    </div>
+    <br><br>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="floating ui red label">22 Mails</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="floating ui teal label">22 Friends</div>
+      </a>
+    </div>
+    <br><br>
+    <div class="ui black bottom pointing label">New in 2.7.2</div>
+    <br>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="bottom floating ui red label">22</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="bottom floating ui teal label">22</div>
+      </a>
+    </div>
+    <br><br>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="bottom floating ui red label">22 Mails</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="bottom floating ui teal label">22 Friends</div>
+      </a>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Floating left
+        <div class="ui black label">New in 2.7.2</div>
+    </h4>
+    <p>Floating Labels can be positioned to the left also</p>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="left floating ui red label">22</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="left floating ui teal label">22</div>
+      </a>
+    </div>
+    <br><br>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="left floating ui red label">22 Mails</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="left floating ui teal label">22 Friends</div>
+      </a>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Floating aligned
+      <div class="ui black label">New in 2.7.2</div>
+    </h4>
+    <p>Floating Labels containing large text can be aligned to the left or right</p>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages from Fomantic-UI-Users
+        <div class="left aligned floating ui red label">22 Mails unread</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends of the Fomantic-UI Community
+        <div class="right aligned floating ui teal label">22 Friends online</div>
       </a>
     </div>
   </div>
@@ -333,16 +451,90 @@ themes      : ['Default', 'GitHub']
   <div class="example" data-use-content="true" data-class="icon">
     <h4 class="ui header">Icon</h4>
     <p>A label can include an icon</p>
-    <a class="ui label">
+    <div class="ui label">
       <i class="mail icon"></i>
       Mail
-    </a>
-    <a class="ui label">
-      Tag
-      <i class="delete icon"></i>
-    </a>
+    </div>
+    <div class="ui label">
+      <i class="checkmark icon"></i>
+      Test Passed
+    </div>
+    <div class="ui label">
+      <i class="dog icon"></i>
+      Dog
+    </div>
+    <div class="ui label">
+      <i class="cat icon"></i>
+      Cat
+    </div>
+  </div>
+  
+  <div class="another example" data-use-content="true">
+    <div class="ignored ui info message">Icons can be placed to the right inside a label.</div>
+
+    <div class="ui right icon label">
+      Mail
+      <i class="mail icon"></i>
+    </div>
+    <div class="ui right icon label">
+      Test Passed
+      <i class="checkmark icon"></i>
+    </div>
+    <div class="ui right icon label">
+      Dog
+      <i class="dog icon"></i>
+    </div>
+    <div class="ui right icon label">
+      Cat
+      <i class="cat icon"></i>
+    </div>
   </div>
 
+  <div class="another example">
+    <div class="ignored ui info message">Labels can contain individual icons without text.</div>
+
+    <div class="ui icon label">
+      <i class="mail icon"></i>
+    </div>
+    <div class="ui icon label">
+      <i class="dog icon"></i>
+    </div>
+    <div class="ui icon label">
+      <i class="cat icon"></i>
+    </div>
+  </div>
+
+  <div class="another example" data-use-content="true">
+    <div class="ignored ui warning message">
+      For backward-compatibility during v2.x, <code>close</code>/<code>delete</code> icon.
+      
+      <ul>
+        <li>Requires <code>left icon</code> to be added to the parent <code>label</code> when the icon is placed on the left of a label.</li>
+        <li>Does not require <code>right icon</code> to be added to parent <code>label</code> when the icon is placed on the right of the label.</li>
+      </ul>
+      
+      This rule may be simplified in a later minor or major version.
+    </div>
+
+    <div class="ui left icon label">
+      <i class="close icon"></i>
+      Close
+    </div>
+    <div class="ui left icon label">
+      <i class="delete icon"></i>
+      Delete
+    </div>
+
+    <div class="ui label">
+      Close
+      <i class="close icon"></i>
+    </div>
+    <div class="ui label">
+      Delete
+      <i class="delete icon"></i>
+    </div>
+  </div>
+    
   <div class="example" data-use-content="true" data-class="image" data-tag="img">
     <h4 class="ui header">Image</h4>
     <p>A label can include an image</p>
