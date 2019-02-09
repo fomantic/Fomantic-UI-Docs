@@ -69,7 +69,11 @@ p:last-child {
 #example > .pusher > .footer {
   margin: 0em;
   border-radius: 0em;
-  padding: 4em 0em 4em 0em;
+  padding: 4em 0em 8em 0em;
+}
+
+footer.footer {
+  padding: 4em 1em !important;
 }
 
 /*--------------
