@@ -14,141 +14,265 @@ type        : 'Main'
 
 <div class="main ui intro container">
 
-  <h2 class="ui dividing header">Preface</h2>
+  <p>
+    This page contains detailed guides on how to get started using Fomantic-UI. If you have any
+    problems or questions please open a issue on the
+    <a href="https://github.com/fomantic/Fomantic-UI/issues/new/choose" target="_blank">
+      GitHub repository
+    </a>.
+  </p>
+
+  <h2 class="ui dividing header">Installation</h2>
+
+  <p>You can install Fomantic-UI via NPM or one of our CDN providers. You can also host the distribution files locally if you prefer to.</p>
+  <p>If you want to use theming you must install Fomantic-UI with NPM this ensures you get all the files needed to create and manage your theme.</p>
 
   <div class="no example">
+    <h4 class="ui header">Installing via NPM</h4>
 
-    <h4 class="ui header">Using Build Tools</h4>
+    <h5 class="ui header">Requirements</h5>
+    <ul class="ui list">
+      <li class="item">NodeJS >= v8</li>
+      <li class="item">NPM >= v5</li>
+    </ul>
+    <p>You can download NodeJS <a href="https://nodejs.org/en/download/" target="_blank">here</a>, NPM is installed with NodeJS.</p>
+    <br />
 
-    <p>Fomantic UI packaged Gulp build tools so your project can preserve its <a href="/usage/theming.html">own theme changes</a>.</p>
-    <p>The easiest way to install Fomantic UI is our NPM package which contains special install scripts to make setup interactive and updates seamless.</p>
+    <p>Once you have NodeJS and NPM installed you will need to install <a href="https://npmjs.com/package/fomantic-ui">Fomantic-UI</a> as a dependency of your project.</p>
 
-    <p>For installing with specific integrations like Ember, React, or Meteor, see our <a href="/introduction/integrations.html">integration guide</a></p>
-    <p>For integrating Fomantic UI tasks into your own build tools, or using a CDN see our <a href="/introduction/advanced-usage.html">recipes</a> section.</p>
+    <p>If you haven't already create a <code>package.json</code> file with the following command</p>
+    <div class="ignored code" data-type="bash">
+      $ npm init
+    </div>
+    <p>
+      The <code>package.json</code> file will keep track of your dependencies and their versions. If you want to learn more about the <code>package.json</code> file you can
+      <a href="https://docs.npmjs.com/files/package.json">here</a>.
+    </p>
 
+    <p>To install Fomantic-UI run the following command</p>
+    <div class="ignored code" data-type="bash">
+      $ npm install --save fomantic-ui
+    </div>
+    <p>
+      When NPM finishes installing it will start the Fomantic-UI interactive installation prompt.
+      The installation prompt is used to create your <code>semantic.json</code> file which stores
+      critical information for when you need to install Fomantic-UI and also about the build
+      process. It will also create a new directory containing all the files needed to create a
+      theme. The directory will be created where you specified in the installation prompt.
+    </p>
+
+    <p>Once complete it will also add the following to your <code>package.json</code> file</p>
+    <div class="code" data-type="json">
+      "dependencies": {
+        ...
+        "fomantic-ui": "^<%= @getVersion() %>"
+        ...
+      }
+    </div>
+
+    <p>
+      Now you will need to build your distribution of the CSS and JavaScript you use on your
+      website. To do this run the following command inside the directory created by the installer.
+      This is <code>semantic/</code> by default.
+    </p>
+    <div class="ignored code" data-type="bash">
+      $ npx gulp build
+    </div>
+    <p>
+      Once complete you should have a new directory <code>dist/</code> which contains all the CSS
+      and JavaScript files. You can now include these in your web page and start using Fomantic-UI.
+    </p>
+    <div class="code" data-type="html">
+      <!-- You MUST include jQuery before Fomantic -->
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+      <script src="/semantic/dist/semantic.min.js"></script>
+    </div>
   </div>
 
-  <h2 class="ui dividing header">Installing</h2>
-
-
   <div class="no example">
-    <h4 class="ui header">Install NodeJS</h4>
-    <p>If you are unfamiliar with setting up NodeJS you can follow the steps below, or check out the <a href="https://nodejs.org/download/" target="_blank">download page</a> on <a href="http://www.nodejs.org" target="_blank">nodejs.org</a></p>
+    <h4 class="ui header">Using a CDN provider</h4>
+
+    <p>Fomantic-UI is available on the top 3 popular CDN providers.</p>
+
+    <ul class="ui list">
+      <li class="item">
+        <a href="https://www.jsdelivr.com/package/npm/fomantic-ui" target="_blank">
+          jsDelivr
+        </a>
+        <span class="ui tiny grey label">
+          Recommended
+        </span>
+      </li>
+      <li class="item">
+        <a href="https://cdnjs.com/libraries/fomantic-ui" target="_blank">
+          cdnjs
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/" target="_blank">
+          unpkg
+        </a>
+      </li>
+    </ul>
 
     <div class="ui secondary menu">
-      <a data-tab="mac" class="active item">Mac</a>
-      <a data-tab="linux" class="item">Linux</a>
-      <a data-tab="win" class="item">Windows</a>
+      <a data-tab="jsdelivr" class="active item">jsDelivr</a>
+      <a data-tab="cdnjs" class="item">cdnjs</a>
+      <a data-tab="unpkg" class="item">unpkg</a>
     </div>
-    <div class="ui active basic tab vertical segment" data-tab="mac">
-      <h4>Option 1: Homebrew</h4>
-      <p>After installing <a href="http://brew.sh/" target="_blank">homebrew</a></p>
-      <div class="ignored code" data-type="bash">
-        brew install node
-      </div>
-      <h4>Option 2: Git</h4>
-      <div class="ignored code" data-type="bash">
-      git clone git://github.com/nodejs/node.git
-      cd node
-      ./configure
-      make
-      sudo make install
+    <div class="ui active basic tab vertical segment" data-tab="jsdelivr">
+      <div class="code" data-type="html">
+        <!-- You MUST include jQuery before Fomantic -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.js"></script>
       </div>
     </div>
-    <div class="ui basic tab vertical segment" data-tab="linux">
-      <h4>Install via PPA</h4>
-      <p>Although <a href="http://www.ubuntuupdates.org/ppa/chris_lea_nodejs" target="_blank">Chris Lea's PPA</a> was once the best way to install node, it is now somewhat out of date.</p>
-      <p>The recommended path to install Fomantic UI is using <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager" target="_blank">Joyent's package manager</a> guide.</p>
-      <h4>Ubuntu</h4>
-      <div class="ignored code" data-type="bash">
-        curl --silent --location https://deb.nodesource.com/setup_6.x | sudo bash -
-        sudo apt-get install --yes nodejs
-      </div>
-      <h4>Debian</h4>
-      <div class="ignored code" data-type="bash">
-        apt-get install curl
-        curl --silent --location https://deb.nodesource.com/setup_6.x | bash -
-        apt-get install --yes nodejs
-      </div>
-      <h4>Red Hat</h4>
-      <div class="ignored code" data-type="bash">
-      curl --silent --location https://rpm.nodesource.com/setup | bash -
-      yum -y install nodejs
+    <div class="ui basic tab vertical segment" data-tab="cdnjs">
+      <div class="code" data-type="html">
+        <!-- You MUST include jQuery before Fomantic -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/<%= @getVersion() %>/semantic.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/<%= @getVersion() %>/semantic.min.js"></script>
       </div>
     </div>
-    <div class="ui basic tab vertical segment" data-tab="win">
-      <h4>Install the exe</h4>
-      <p>Download the <a href="http://nodejs.org/download/">NodeJS executable</a>.</p>
+    <div class="ui basic tab vertical segment" data-tab="unpkg">
+      <div class="code" data-type="html">
+        <!-- You MUST include jQuery before Fomantic -->
+        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.css">
+        <script src="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.js"></script>
+      </div>
     </div>
   </div>
 
   <div class="no example">
-    <h4>Install Gulp</h4>
-    <p>Fomantic UI uses <a href="http://www.gulpjs.com" target="_blank">Gulp</a> to provide command line tools for building themed versions of the library with just the components you need.</p>
-    <p>Gulp is an NPM module and must be installed globally</p>
-    <div class="ignored code" data-type="bash">
-    npm install -g gulp
+    <h4 class="ui header">CSS, LESS & SASS distributions</h4>
+
+    <p>Fomantic-UI provides a separate repository for a CSS, LESS & SASS only distributions.</p>
+
+    <ul class="ui list">
+      <li class="item">
+        <a href="https://github.com/fomantic/Fomantic-UI-CSS" target="_blank">
+          CSS Repository
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://github.com/fomantic/Fomantic-UI-LESS" target="_blank">
+          LESS Repository
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://github.com/fomantic/Fomantic-UI-SASS" target="_blank">
+          SASS Repository
+        </a>
+      </li>
+    </ul>
+    <br />
+
+    <p>You can install both CSS and LESS via NPM or download any of them and use them in your project as local files.</p>
+
+    <div class="ui secondary menu">
+      <a data-tab="cssdistinstall" class="active item">CSS</a>
+      <a data-tab="lessdistinstall" class="item">LESS</a>
+    </div>
+    <div class="ui active basic tab vertical segment" data-tab="cssdistinstall">
+      <div class="ignored code" data-type="bash">
+        $ npm install --save fomantic-ui-css
+      </div>
+    </div>
+    <div class="ui basic tab vertical segment" data-tab="lessdistinstall">
+      <div class="ignored code" data-type="bash">
+        $ npm install --save fomantic-ui-less
+      </div>
     </div>
   </div>
 
-  <div class="no example">
-    <h4>Install Fomantic UI</h4>
-    <p>Fomantic UI is available in an eponymous package on NPM</p>
-	<div class="ignored code" data-type="bash">
-		npm install fomantic-ui --save
-		cd semantic/
-		gulp build
-	</div>
-  </div>
-
-  <div class="no example">
-    <h4>Include in Your HTML</h4>
-    <p>Running the gulp build tools will compile CSS and Javascript for use in your project. Just link to these files in your HTML along with the latest <a href="http://www.jquery.com" target="_blank">jQuery</a>.</p>
-    <div class="ignored code" data-type="html" data-escape="true">
-		&lt;!-- jQuery --&gt;
-		&lt;script src="https://code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
-
-&lt;!-- Fomantic --&gt;
-		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/path/to/fomantic/dist/semantic.min.css&quot;&gt;
-		&lt;script src=&quot;/path/to/fomantic/dist/semantic.min.js&quot;&gt;&lt;/script&gt;
-    </div>
-  </div>
   <h2 class="ui dividing header">Updating</h2>
 
   <div class="no example">
-    <h4>Updating via NPM</h4>
-    <p>Fomantic's NPM install script will automatically update Fomantic UI to the latest version while preserving your site and packaged themes.</p>
+    <h4 class="ui header">Updating NPM Installation</h4>
+
+    <p>If you are using Fomantic-UI via NPM you can simply run the following comand</p>
     <div class="ignored code" data-type="bash">
-      npm update
+      $ npm update fomantic-ui
+    </div>
+    <p>
+      This will install the latest version and will run the interactive installer to install any new
+      files which are required. You will need to rebuild Fomantic-UI after the installer has
+      finished.
+    </p>
+
+    <p>
+      To build the distribution files for the latest version run the following command in your
+      fomantic directory
+    </p>
+    <div class="ignored code" data-type="bash">
+      $ npx gulp build
     </div>
   </div>
 
-  <h2 class="ui dividing header">Next Steps</h2>
+  <div class="no example">
+    <h4 class="ui header">Updating CDN</h4>
+
+    <p>
+      If you are using a CDN provider updating is simple, just change the version number in your
+      CDN url.
+    </p>
+    <div class="ui segment">
+      <p>https://cdn.jsdelivr.net/npm/fomantic-ui@<span class="ui red text"><%= @getVersion() %></span>/dist/semantic.min.css</p>
+      <p>https://cdn.jsdelivr.net/npm/fomantic-ui@<span class="ui red text"><%= @getVersion() %></span>/dist/semantic.min.js</p>
+    </div>
+  </div>
 
   <div class="no example">
-    <h4>All Set!</h4>
-    <p>Well done! Fomantic UI is now ready to be used.</p>
+    <h4 class="ui header">Updating CSS, LESS & SASS Distributions</h4>
 
-    <div class="three column divided stackable center aligned ui grid">
-      <div class="column">
-        <div class="ui icon header">
-          <i class="rocket circular icon"></i>
-          See how to use <a href="/introduction/build-tools.html">gulp commands</a> and build tools
-        </div>
-      </div>
-      <div class="column">
-        <div class="ui icon header">
-          <i class="theme circular icon"></i>
-          Learn about <a href="/usage/theming.html">changing themes</a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="ui icon header">
-          <i class="food circular icon"></i>
-          See <a href="/introduction/advanced-usage.html">recipes</a> for using Fomantic UI in your project
-        </div>
+    <p>If you are using the CSS or LESS distributions via NPM you can run the following command</p>
+    <div class="ui secondary menu">
+      <a data-tab="cssdistupdate" class="active item">CSS</a>
+      <a data-tab="lessdistupdate" class="item">LESS</a>
+    </div>
+    <div class="ui active basic tab vertical segment" data-tab="cssdistupdate">
+      <div class="ignored code" data-type="bash">
+        $ npm update fomantic-ui-css
       </div>
     </div>
+    <div class="ui basic tab vertical segment" data-tab="lessdistupdate">
+      <div class="ignored code" data-type="bash">
+        $ npm update fomantic-ui-less
+      </div>
+    </div>
+    <br />
+
+    <p>
+      If you have the files downloaded locally you will have to download the latest version and
+      replace your local files with the latest ones.
+    </p>
+  </div>
+
+
+  <div class="no example">
+    <h2 class="ui dividing header">Resources</h2>
+
+    <p>
+      This is a list of some useful resources about Fomantic-UI. If you find any resources or want
+      to add something you created feel free to create a pull request <a href="https://github.com/fomantic/Fomantic-UI-Docs" target="_blank">here</a>!
+    </p>
+
+    <ul class="ui list">
+      <li class="item">
+        <a target="_blank" href="https://medium.com/@fomantic/setting-up-fomantic-ui-with-react-f701b68f736c">
+          Setting up Fomantic-UI with React
+        </a>
+      </li>
+      <li class="item">
+        <a target="_blank" href="https://medium.com/@marekurbanowicz/how-to-customize-fomantic-ui-with-less-and-webpack-applicable-to-semantic-ui-too-fbf98a74506c">
+          How to customize Fomantic UI with LESS and Webpack? (applicable to Semantic UI too)
+        </a>
+      </li>
+    </ul>
   </div>
 
 </div>
