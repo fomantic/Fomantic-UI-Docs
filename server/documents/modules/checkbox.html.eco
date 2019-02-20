@@ -184,6 +184,8 @@ themes      : ['Default', 'Colored']
         <input type="checkbox" />
         <label>Indeterminate</label>
       </div>
+      <br>
+      <br>
       <div class="ui toggle checkbox">
         <input type="checkbox" />
         <label>Indeterminate</label>
