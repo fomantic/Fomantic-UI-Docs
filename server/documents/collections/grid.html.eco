@@ -1445,7 +1445,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true" data-class="large screen only, computer only, tablet only, mobile only">
+    <div class="example" data-use-content="true" data-class="widescreen only, large screen only, computer only, tablet only, mobile only">
       <h4 class="ui header">Device Visibility</h4>
       <p>A columns or row can appear only for a specific device, or screen sizes</p>
       <div class="ui text message info ignore">
@@ -1464,7 +1464,7 @@ themes      : ['Default']
             </div>
           </div>
         </div>
-        <div class="two column large screen only row">
+        <div class="two column widescreen only row">
           <div class="column">
             <div class="ui segment">
               Widescreen
