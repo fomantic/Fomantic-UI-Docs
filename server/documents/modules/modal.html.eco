@@ -906,6 +906,21 @@ themes      : ['Default', 'Material']
           <td>If set to true will not close other visible modals when opening a new one</td>
         </tr>
         <tr>
+          <td>inverted</td>
+          <td>false</td>
+          <td>If inverted dimmer should be used</td>
+        </tr>
+        <tr>
+          <td>blurring</td>
+          <td>false</td>
+          <td>If dimmer should blur background</td>
+        </tr>
+        <tr>
+          <td>centered</td>
+          <td>true</td>
+          <td>If modal should be center aligned</td>
+        </tr>
+        <tr>
           <td>keyboardShortcuts</td>
           <td>true</td>
           <td>Whether to automatically bind keyboard shortcuts</td>
