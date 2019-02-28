@@ -513,7 +513,7 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Full Screen</h4>
       <p>A modal can use the entire size of the screen</p>
-      <div class="code" data-demo="true">
+      <div class="code" data-demo="true" data-eval="$('.fullscreen.modal').not('.overlay').modal('show')">
       $('.fullscreen.modal')
         .modal('show')
       ;
