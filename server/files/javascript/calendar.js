@@ -69,6 +69,7 @@ semantic.calendar.ready = function() {
   // Custom format
   $('#custom_format_calendar').calendar({
     monthFirst: false,
+    type: 'date',
     formatter: {
       date: function (date, settings) {
         if (!date) return '';
@@ -79,6 +80,32 @@ semantic.calendar.ready = function() {
       }
     }
   });
+
+  $('#shortyear_example1')
+      .calendar({
+        type: 'date',
+        centuryBreak: 100
+      })
+  ;
+  $('#shortyear_example2')
+      .calendar({
+        type: 'date',
+        centuryBreak: 0
+      })
+  ;
+  $('#shortyear_example3')
+      .calendar({
+        type: 'date',
+        currentCentury: 3000
+      })
+  ;
+  $('#shortyear_example4')
+      .calendar({
+        type: 'date',
+        currentCentury: 1800,
+        centuryBreak: 40
+      })
+  ;
 
   // French calendar
   $('#french_calendar').calendar({
@@ -118,6 +145,18 @@ semantic.calendar.ready = function() {
         new Date(2018,11,31)  /* No Reason. Everybody knows why ;) */
       ]
     })
+  ;
+
+  $('#enableddates_calendar')
+      .calendar({
+        type: 'date',
+        initialDate: new Date(2019,2,1),
+        enabledDates: [
+          new Date(2018,2,5),
+          new Date(2018,2,10),
+          new Date(2018,2,20)
+        ]
+      })
   ;
 };
 
