@@ -845,6 +845,7 @@ themes      : ['Default']
               link: 'link',
               cell: 'link',
               disabledCell: 'disabled',
+              weekCell: 'disabled',
               adjacentCell: 'adjacent',
               activeCell: 'active',
               rangeCell: 'range',
