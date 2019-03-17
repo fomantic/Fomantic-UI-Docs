@@ -365,6 +365,25 @@ themes      : ['Default']
     </div>
 
     <div class="example">
+      <h4 class="ui header">Select adjacent days</h4>
+      <p>It's possible to also select adjacent days of the previous and next month in the current month view instead of being disabled</p>
+      <div class="ui calendar" id="adjacentdays_calendar">
+          <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" placeholder="Date">
+          </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+      $('#adjacentdays_calendar')
+        .calendar({
+          selectAdjacentDays: true,
+          type: 'date'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
       <h4 class="ui header">Language</h4>
       <p>It's possible to change the calendar language to fit with your needs</p>
       <div class="ui calendar" id="french_calendar">
@@ -723,6 +742,11 @@ themes      : ['Default']
           <td>currentCentury</td>
           <td>2000</td>
           <td>century to be added to 2-digit years (00 to <code>centuryBreak</code>-1)</td>
+        </tr>
+        <tr>
+          <td>selectAdjacentDays</td>
+          <td>false</td>
+          <td>Make adjacent days from previous and next month also selectable</td>
         </tr>
         <tr>
           <td>popupOptions</td>
