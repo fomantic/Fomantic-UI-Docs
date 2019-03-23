@@ -85,6 +85,37 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Multiple Bars</h4>
+      <p>A progress element can have multiple bars.</p>
+      <div class="ui multiple progress" data-percent="50,0,10,20">
+        <div class="blue bar"></div>
+        <div class="yellow bar"></div>
+        <div class="purple bar"></div>
+        <div class="green bar"></div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Multiple Bars with Text (Proportion)</h4>
+      <p>A progress bar can contain text values indicating current proportion.</p>
+      <div class="ui multiple progress" data-total="200" data-value="60,30,20,30">
+        <div class="blue bar">
+          <div class="progress"></div>
+        </div>
+        <div class="yellow bar">
+          <div class="progress"></div>
+        </div>
+        <div class="purple bar">
+          <div class="progress"></div>
+        </div>
+        <div class="green bar">
+          <div class="progress"></div>
+        </div>
+        <div class="label">Tickets</div>
+      </div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
 
     <div class="example">
