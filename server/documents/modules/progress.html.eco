@@ -944,11 +944,18 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
               success : false,
               warning : false,
               percent : '{percent}%',
-              ratio   : '{value} of {total}'
+              ratio   : '{value} of {total}',
+              bars    : []
             }
             </div>
           </td>
-          <td>Text content for each state, uses simple templating with {percent}, {value}, {total}</td>
+          <td>
+            <p>Text content for each state, uses simple templating with <code>{percent}</code>, <code>{value}</code>, <code>{total}</code> and <code>{bar}</code></p>
+            <p>
+              <code>{bar}</code> is useful to show bar names on multiple bars.
+              Names of bars are provided by <code>text.bars</code> in the forms of array of string. E.g. <code>['bar1', 'bar2']</code>.
+            </p>
+          </td>
         </tr>
         <tr>
           <td>regExp</td>
