@@ -1351,7 +1351,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="another dropdown example">
       <p>Highest: 3x of default height.</p>
-      <select class="ui search highest column dropdown" multiple>
+      <select class="ui search highest dropdown" multiple>
         <%- @partial('examples/single/state-options') %>
       </select>
     </div>
