@@ -85,6 +85,37 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Multiple Bars</h4>
+      <p>A progress element can have multiple bars.</p>
+      <div class="ui multiple progress" data-percent="50,0,10,20">
+        <div class="blue bar"></div>
+        <div class="yellow bar"></div>
+        <div class="purple bar"></div>
+        <div class="green bar"></div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Multiple Bars with Text (Proportion)</h4>
+      <p>A progress bar can contain text values indicating current proportion.</p>
+      <div class="ui multiple progress" data-total="200" data-value="60,30,20,30">
+        <div class="blue bar">
+          <div class="progress"></div>
+        </div>
+        <div class="yellow bar">
+          <div class="progress"></div>
+        </div>
+        <div class="purple bar">
+          <div class="progress"></div>
+        </div>
+        <div class="green bar">
+          <div class="progress"></div>
+        </div>
+        <div class="label">Tickets</div>
+      </div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
 
     <div class="example">
@@ -562,11 +593,17 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <tbody>
         <tr>
           <td>set percent(percent)</td>
-          <td>Sets current percent of progress to value. If using a total will convert from percent to estimated value.</td>
+          <td>Sets current percent of progress to value. If using a total will convert from percent to estimated value.
+
+            <code>percent</code> can be array of percent like <code>[20,30,50]</code>, comma-separated string like <code>'20,30,50'</code> for `.ui.multiple.progress`.
+          </td>
         </tr>
         <tr>
           <td>set progress(value)</td>
-          <td>Sets progress to specified value. Will automatically calculate percent from total.</td>
+          <td>Sets progress to specified value. Will automatically calculate percent from total.
+
+            <code>value</code> can be array of values like <code>[5,3,10]</code>, comma-separated string like <code>'5,3,10'</code> for `.ui.multiple.progress`.
+          </td>
         </tr>
         <tr>
           <td>increment(incrementValue)</td>
@@ -578,7 +615,10 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </tr>
         <tr>
           <td>update progress(value)</td>
-          <td>Immediately updates progress to value, ignoring progress animation interval delays</td>
+          <td>Immediately updates progress to value, ignoring progress animation interval delays.
+
+            <code>value</code> can be array of values like <code>[5,3,10]</code>, comma-separated string like <code>'5,3,10'</code> for `.ui.multiple.progress`.
+          </td>
         </tr>
         <tr>
           <td>complete</td>
@@ -913,11 +953,18 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
               success : false,
               warning : false,
               percent : '{percent}%',
-              ratio   : '{value} of {total}'
+              ratio   : '{value} of {total}',
+              bars    : []
             }
             </div>
           </td>
-          <td>Text content for each state, uses simple templating with {percent}, {value}, {total}</td>
+          <td>
+            <p>Text content for each state, uses simple templating with <code>{percent}</code>, <code>{value}</code>, <code>{total}</code> and <code>{bar}</code></p>
+            <p>
+              <code>{bar}</code> is useful to show bar names on multiple bars.
+              Names of bars are provided by <code>text.bars</code> in the forms of array of string. E.g. <code>['bar1', 'bar2']</code>.
+            </p>
+          </td>
         </tr>
         <tr>
           <td>regExp</td>
