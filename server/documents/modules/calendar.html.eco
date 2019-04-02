@@ -269,13 +269,14 @@ themes      : ['Default']
       <div class="ui calendar" id="custom_format_calendar">
         <div class="ui input left icon">
           <i class="calendar icon"></i>
-          <input type="text" placeholder="Date/Time">
+          <input type="text" placeholder="Date">
         </div>
       </div>
       <div class="code" data-type="javascript">
       $('#custom_format_calendar')
         .calendar({
           monthFirst: false,
+          type: 'date',
           formatter: {
             date: function (date, settings) {
             if (!date) return '';
@@ -284,6 +285,99 @@ themes      : ['Default']
             var year = date.getFullYear();
             return day + '/' + month + '/' + year;
           }
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Century Calculation for shortyears</h4>
+      <p>When a 2-digit shortyear is entered, you can adjust how to calculate the belonging century</p>
+      <h5>Example 1:<br> Shortyears 00-99 -> 2000-2099</h5>
+        <div class="ui calendar" id="shortyear_example1">
+            <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input type="text" placeholder="Date">
+            </div>
+        </div>
+        <div class="code" data-type="javascript">
+        $('#shortyear_example1')
+            .calendar({
+                type: 'date',
+                centuryBreak: 100
+            })
+        ;
+      </div>
+    </div>
+    <div class="another example">
+      <h5>Example 2:<br> Shortyears 00-99 -> 1900-1999</h5>
+      <div class="ui calendar" id="shortyear_example2">
+          <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" placeholder="Date">
+          </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#shortyear_example2')
+          .calendar({
+              type: 'date',
+              centuryBreak: 0
+          })
+      ;
+      </div>
+    </div>
+    <div class="another example">
+      <h5>Example 3:<br> Shortyears 00-59 -> 3000-3059<br>
+          Shortyears 60-99 -> 2900-2959</h5>
+      <div class="ui calendar" id="shortyear_example3">
+          <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" placeholder="Date">
+          </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#shortyear_example3')
+          .calendar({
+              type: 'date',
+              currentCentury: 3000
+          })
+      ;
+      </div>
+    </div>
+    <div class="another example">
+      <h5>Example 4:<br>Shortyears 00-39 -> 1800-1839<br>
+          Shortyears 40-99 -> 1740-1799</h5>
+      <div class="ui calendar" id="shortyear_example4">
+          <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" placeholder="Date">
+          </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#shortyear_example4')
+          .calendar({
+              type: 'date',
+              currentCentury: 1800,
+              centuryBreak: 40
+          })
+      ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Select adjacent days</h4>
+      <p>It's possible to also select adjacent days of the previous and next month in the current month view instead of being disabled</p>
+      <div class="ui calendar" id="adjacentdays_calendar">
+          <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" placeholder="Date">
+          </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+      $('#adjacentdays_calendar')
+        .calendar({
+          selectAdjacentDays: true,
+          type: 'date'
         })
       ;
       </div>
@@ -372,6 +466,30 @@ themes      : ['Default']
             ]
         })
       ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Enable only specific Dates</h4>
+      <p>Disable all dates by default and only enable specific given dates.</p>
+      <div class="ui calendar" id="enableddates_calendar">
+          <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" placeholder="Date">
+          </div>
+      </div>
+      <div class="code" data-type="javascript">
+          $('#enableddates_calendar')
+          .calendar({
+            type: 'date',
+            initialDate: new Date(2019,2,1),
+            enabledDates: [
+                new Date(2018,2,5),
+                new Date(2018,2,10),
+                new Date(2018,2,20)
+            ]
+          })
+          ;
       </div>
     </div>
 
@@ -541,6 +659,11 @@ themes      : ['Default']
           <td>An array of Date-Objects or Objects with given message to show in a popup when hovering over the appropriate date <code>{date: Date, message: string}</code></td>
         </tr>
         <tr>
+          <td>enabledDates</td>
+          <td>[]</td>
+          <td>An array of Date-Objects to be enabled for selection. All other dates are disabled</td>
+        </tr>
+        <tr>
           <td>on</td>
           <td>null</td>
           <td>Choose when to show the popup (defaults to <code>focus</code> for input, <code>click</code> for others)</td>
@@ -609,6 +732,21 @@ themes      : ['Default']
           <td>minTimeGap</td>
           <td>5</td>
           <td>Minimum time gap, can only be 5, 10, 15, 20, 30</td>
+        </tr>
+        <tr>
+          <td>centuryBreak</td>
+          <td>60</td>
+          <td>Starting short year until 99 where it will be assumed to belong to the last century</td>
+        </tr>
+        <tr>
+          <td>currentCentury</td>
+          <td>2000</td>
+          <td>century to be added to 2-digit years (00 to <code>centuryBreak</code>-1)</td>
+        </tr>
+        <tr>
+          <td>selectAdjacentDays</td>
+          <td>false</td>
+          <td>Make adjacent days from previous and next month also selectable</td>
         </tr>
         <tr>
           <td>popupOptions</td>
@@ -731,6 +869,7 @@ themes      : ['Default']
               link: 'link',
               cell: 'link',
               disabledCell: 'disabled',
+              weekCell: 'disabled',
               adjacentCell: 'adjacent',
               activeCell: 'active',
               rangeCell: 'range',

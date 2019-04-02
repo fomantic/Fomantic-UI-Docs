@@ -134,6 +134,25 @@ themes      : ['Default', 'Material']
     </div>
   </div>
 
+  <div class="ui bottom aligned modal">
+    <div class="header">
+        Delete Your Account
+    </div>
+    <div class="content">
+        Are you sure ?
+        <div class="ui hidden divider"></div>
+    </div>
+    <div class="actions">
+        <div class="ui negative button">
+            No
+        </div>
+        <div class="ui positive right labeled icon button">
+            Yes
+            <i class="checkmark icon"></i>
+        </div>
+    </div>
+  </div>
+
   <div class="ui tiny test modal">
     <div class="header">
       Delete Your Account
@@ -193,6 +212,24 @@ themes      : ['Default', 'Material']
     <div class="actions">
       <div class="ui button">Cancel</div>
       <div class="ui green button">Send</div>
+    </div>
+  </div>
+
+  <div class="ui overlay fullscreen modal">
+    <div class="header">
+        Welcome to the <span class="ui teal text">overlay fullscreen modal</span>
+    </div>
+    <div class="content">
+        <div class="description">
+            <div class="ui header">Even if there is not much content here...</div>
+            ...the overlay fullscreen modal will occupy the entire screen
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui primary approve button">
+            Proceed
+            <i class="right chevron icon"></i>
+        </div>
     </div>
   </div>
 
@@ -495,12 +532,26 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Full Screen</h4>
       <p>A modal can use the entire size of the screen</p>
-      <div class="code" data-demo="true">
+      <div class="code" data-demo="true" data-eval="$('.fullscreen.modal').not('.overlay').modal('show')">
       $('.fullscreen.modal')
         .modal('show')
       ;
       </div>
     </div>
+    <div class="no example">
+      <h4 class="ui header">Overlay Full Screen</h4>
+      <p>A modal can overlay the entire screen</p>
+      <div class="ui ignored info message">
+          Overlay fullscreen modals cannot be closed by clicking into the dimmer, because the dimmer is completely overlayed and not visible anymore).
+          Make sure your modal is closable by either adding a close icon or an action button to close it.
+      </div>
+      <div class="code" data-demo="true">
+      $('.overlay.fullscreen.modal')
+      .modal('show')
+      ;
+      </div>
+    </div>
+
     <div class="no example">
       <h4 class="ui header">Size</h4>
       <p>A modal can vary in size</p>
@@ -594,6 +645,22 @@ themes      : ['Default', 'Material']
         })
         .modal('show')
       ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Top or Bottom aligned
+          <div class="ui horizontal teal label">New in 2.7.3</div>
+      </h4>
+      <p>If you leave the <code>centered</code> option to the default <code>true</code>, you can also force positioning of the modal by adding additional classes <code>top aligned</code> (which equals to the usage of <code>centered:false</code>) or <code>bottom aligned</code> to the modal itself</p>
+      <div class="ui ignored info message">
+          If <code>bottom aligned</code> is used, you have to make sure that the modal content fits to the screen or uses <code>scrolling content</code>, because scrolling of the whole screen will not be supported to keep the modal to the bottom
+      </div>
+      <div class="code" data-demo="true">
+          $('.bottom.aligned.modal')
+          .modal('show')
+          ;
       </div>
     </div>
 
@@ -904,6 +971,21 @@ themes      : ['Default', 'Material']
           <td>allowMultiple</td>
           <td>false</td>
           <td>If set to true will not close other visible modals when opening a new one</td>
+        </tr>
+        <tr>
+          <td>inverted</td>
+          <td>false</td>
+          <td>If inverted dimmer should be used</td>
+        </tr>
+        <tr>
+          <td>blurring</td>
+          <td>false</td>
+          <td>If dimmer should blur background</td>
+        </tr>
+        <tr>
+          <td>centered</td>
+          <td>true</td>
+          <td>If modal should be center aligned</td>
         </tr>
         <tr>
           <td>keyboardShortcuts</td>

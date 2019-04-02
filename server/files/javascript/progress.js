@@ -4,7 +4,8 @@ semantic.progress = {};
 semantic.progress.ready = function() {
 
   var
-    $progress         = $('.definition  .ui.progress').not('.success, .error, .warning, .indicating'),
+    $progress         = $('.definition  .ui.progress').not('.success, .error, .warning, .indicating, .multiple'),
+    $multiple         = $('.definition .ui.multiple.progress'),
     $indicating       = $('.definition .ui.indicating.progress'),
     $buttons          = $('.example .increment.button, .example .decrement.button'),
     $stateProgress    = $('.definition .ui.success.progress, .ui.warning.progress, .ui.error.progress')
@@ -48,6 +49,20 @@ semantic.progress.ready = function() {
               max : 15
             },
             percent      : Math.floor(Math.random() * 60) + 5
+          })
+        ;
+      })
+    ;
+
+    $multiple
+      .each(function() {
+        $(this)
+          .progress({
+            showActivity : false,
+            text: {
+              percent : '{bar} {percent}%',
+              bars: ['WIP', 'Review', 'Hold', 'Merged']
+            }
           })
         ;
       })

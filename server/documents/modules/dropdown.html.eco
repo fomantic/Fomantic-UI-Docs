@@ -1194,7 +1194,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="item" data-value="0">Female</div>
         </div>
       </div>
-      
+
     </div>
 
     <div class="dropdown example">
@@ -1342,6 +1342,21 @@ themes      : ['Default', 'GitHub', 'Material']
     </div>
 
     <div class="dropdown example">
+      <h4 class="ui header">Height</h4>
+      <p>A selection dropdown can be long (2x of default height) so that more items can be glanced.</p>
+      <select class="ui search long dropdown" multiple>
+        <%- @partial('examples/single/state-options') %>
+      </select>
+    </div>
+
+    <div class="another dropdown example">
+      <p>Very long: 3x of default height.</p>
+      <select class="ui search very long dropdown" multiple>
+        <%- @partial('examples/single/state-options') %>
+      </select>
+    </div>
+
+    <div class="dropdown example">
       <h4 class="ui header">Menu Direction</h4>
       <p>A dropdown menu or sub-menu can specify the direction it should open</p>
       <div class="ui ignored info message">
@@ -1408,6 +1423,44 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
+    <div class="dropdown example">
+      <h4 class="ui header">Columnar Menu</h4>
+      <p>A selection dropdown can allow menu to be equally divided so that more items can be glanced.</p>
+      <select class="ui two column dropdown" multiple>
+        <option value="1">one</option>
+        <option value="2">two</option>
+        <option value="3">three</option>
+        <option value="4">four</option>
+        <option value="5">five</option>
+        <option value="6">six</option>
+        <option value="7">seven</option>
+        <option value="8">eight</option>
+        <option value="9">nine</option>
+        <option value="10">ten</option>
+        <option value="0">zero</option>
+      </select>
+    </div>
+
+    <div class="another dropdown example">
+      <p>Three columns.</p>
+      <select class="ui fluid search three column dropdown" multiple>
+        <%- @partial('examples/single/state-options') %>
+      </select>
+    </div>
+
+    <div class="another dropdown example">
+      <p>Four columns.</p>
+      <select class="ui fluid search four column dropdown" multiple>
+        <%- @partial('examples/single/state-options') %>
+      </select>
+    </div>
+
+    <div class="another dropdown example">
+      <p>Five columns.</p>
+      <select class="ui fluid search five column dropdown" multiple>
+        <%- @partial('examples/single/state-options') %>
+      </select>
+    </div>
   </div>
 
 

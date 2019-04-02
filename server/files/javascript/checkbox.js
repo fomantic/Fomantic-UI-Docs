@@ -22,7 +22,7 @@ semantic.checkbox.ready = function() {
   ;
 
   $indeterminate
-    .checkbox('indeterminate')
+    .checkbox('set indeterminate')
   ;
 
 
