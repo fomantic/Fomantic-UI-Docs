@@ -161,7 +161,7 @@ type        : 'UI Module'
       <div class="ui ignored info message">
           If you want to support IE using the <code>ignoreDiacritics</code> option, you have to include a polyfill for the   <code>String().normalize()</code> method like <a href="https://cdn.jsdelivr.net/npm/unorm@1.4.1/lib/unorm.min.js">unorm</a>.
       </div>
-      <div class="ui search">
+      <div class="ui search" id="diacriticsexample">
         <div class="ui icon input">
           <input class="prompt" type="text" placeholder="Search Diacritics...">
           <i class="search icon"></i>
@@ -173,38 +173,35 @@ type        : 'UI Module'
             .search({
                 ignoreDiacritics: true,
                 fullTextSearch:'exact',
-                source: diacriticsContent
+                source: [
+                    { title: 'André'},
+                    { title: 'Bokmål'},
+                    { title: 'café'},
+                    { title: 'cafetería'},
+                    { title: 'château'},
+                    { title: 'décolleté'},
+                    { title: 'Élysée'},
+                    { title: 'Fräulein'},
+                    { title: 'garçon'},
+                    { title: 'háček'},
+                    { title: 'inrō'},
+                    { title: 'jūjutsu'},
+                    { title: 'kroužek'},
+                    { title: 'La Niña'},
+                    { title: 'Māori'},
+                    { title: 'négligée'},
+                    { title: 'pączki'},
+                    { title: 'Québec'},
+                    { title: 'ragoût'},
+                    { title: 'Škoda'},
+                    { title: 'takahē'},
+                    { title: 'über'},
+                    { title: 'voilà'},
+                    { title: 'whekī'},
+                    { title: 'c Zoë'}
+                ]
             })
         ;
-      </div>
-      <div class="hidden code" data-type="javascript">
-      var diacriticsContent = [
-            { title: 'André'},
-            { title: 'Bokmål'},
-            { title: 'café'},
-            { title: 'cafetería'},
-            { title: 'château'},
-            { title: 'décolleté'},
-            { title: 'Élysée'},
-            { title: 'Fräulein'},
-            { title: 'garçon'},
-            { title: 'háček'},
-            { title: 'inrō'},
-            { title: 'jūjutsu'},
-            { title: 'kroužek'},
-            { title: 'La Niña'},
-            { title: 'Māori'},
-            { title: 'négligée'},
-            { title: 'pączki'},
-            { title: 'Québec'},
-            { title: 'ragoût'},
-            { title: 'Škoda'},
-            { title: 'takahē'},
-            { title: 'über'},
-            { title: 'voilà'},
-            { title: 'whekī'},
-            { title: 'c Zoë'}
-        ];
       </div>
     </div>
 
