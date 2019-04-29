@@ -456,6 +456,20 @@ themes      : ['default', 'GitHub']
   </div>
 
   <div class="example">
+    <h4 class="ui header">Fitted</h4>
+    <p>A segment can remove its padding, vertically or horizontally</p>
+    <div class="ui fitted segment">
+        <p>Fitted Segment</p>
+    </div>
+    <div class="ui horizontally fitted segment">
+        <p>Horizontally fitted segment</p>
+    </div>
+    <div class="ui vertically fitted segment">
+        <p>Vertically fitted segment</p>
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Compact</h4>
     <p>A segment may take up only as much space as is necessary</p>
     <div class="ui compact segment">
