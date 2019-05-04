@@ -106,6 +106,28 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Variations</h2>
 
+  <div class="example" data-class="inverted">
+    <h4 class="ui header">Inverted</h4>
+    <p>A breadcrumb can be inverted</p>
+    <div class="ui inverted segment">
+        <div class="ui inverted breadcrumb">
+            <a class="section">Home</a>
+            <i class="right chevron icon divider"></i>
+            <a class="section">Registration</a>
+            <i class="right chevron icon divider"></i>
+            <div class="active section">Personal Information</div>
+        </div>
+        <p></p>
+        <div class="ui inverted breadcrumb">
+            <div class="section">Home</div>
+            <i class="right chevron icon divider"></i>
+            <div class="section">Registration</div>
+            <i class="right chevron icon divider"></i>
+            <div class="active section">Personal Information</div>
+        </div>
+    </div>
+  </div>
+
   <div class="example" data-class="size">
     <h4 class="ui header">Size</h4>
     <p>A breadcrumb can vary in size</p>
