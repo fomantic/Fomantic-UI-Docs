@@ -254,4 +254,24 @@ themes      : ['Default', 'Duo', 'Pulsar']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Dots</h4>
+    <p>Loaders can also appear in <code>dots</code> animation style. Can be combined with any color or speed.</p>
+    <p>Limitation: <code>dots</code> loaders can not contain text. (Cannot be <code>text</code>)</p>
+    <div class="ui segment">
+      <p>Inline &amp; slow <span class="ui active inline slow dots loader"></span></p>
+      <p>Inline &amp; green <span class="ui active inline dots green loader"></span></p>
+      <br>
+      <br>
+      <br>
+    </div>
+    <div class="ui segment">
+      <div class="ui active massive blue dots fast loader"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
 </div>
