@@ -2836,7 +2836,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Unbinds document intent click</td>
         </tr>
         <tr>
-        <td>determine intent</td>
+        <td>determine eventInModule</td>
           <td>Returns whether event occurred inside dropdown</td>
         </tr>
         <tr>
