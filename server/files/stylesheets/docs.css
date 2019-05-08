@@ -2018,6 +2018,39 @@ code .chunk {
   padding-top: 2em;
 }
 
+
+/*******************************
+          Search Box
+*******************************/
+
+#docs-searchbox input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+}
+
+#docs-searchbox input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#docs-searchbox {
+  position: relative;
+  padding: .74em;
+}
+
+#docs-searchbox:hover,
+#docs-searchbox:focus-within {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+.algolia-autocomplete .ds-dropdown-menu {
+  overflow: visible;
+  z-index: 6000 !important;
+}
+
 /*******************************
       Definition Container
 *******************************/
