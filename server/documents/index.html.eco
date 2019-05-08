@@ -18,6 +18,17 @@ standalone : false
       <a class="view-ui item">
         <i class="sidebar icon"></i> Menu
       </a>
+      <div id="docs-searchbox" class="item">
+        <input type="search" placeholder="Search...">
+      </div>
+      <script type="application/javascript">
+        docsearch({
+          apiKey: 'b97fcb6d1c62e4cdc4b4f3945c49d9d7',
+          indexName: 'fomantic-ui',
+          inputSelector: '#docs-searchbox > input',
+          debug: false,
+        });
+      </script>
       <div class="right menu">
         <div class="item">
           <a class="twitter-follow-button twitter" href="https://twitter.com/fomanticui" data-show-count="false">
