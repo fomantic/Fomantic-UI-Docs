@@ -177,7 +177,7 @@ themes      : ['Default']
         <div class="column"><i class="arrow up icon" data-search-terms="forward, upload"></i>arrow up</div>
         <div class="column"><i class="arrows alternate icon" data-search-terms="arrow, arrows, bigger, enlarge, expand, fullscreen, move, position, reorder, resize"></i>arrows alternate</div>
         <div class="column"><i class="arrows alternate horizontal icon" data-search-terms="arrows-h, expand, horizontal, landscape, resize, wide"></i>arrows alternate horizontal</div>
-        <div class="column"><i class="arrows alternate v icon" data-search-terms="arrows-v, expand, portrait, resize, tall, vertical"></i>arrows alternate v</div>
+        <div class="column"><i class="arrows alternate vertical icon" data-search-terms="arrows-v, expand, portrait, resize, tall, vertical"></i>arrows alternate vertical</div>
         <div class="column"><i class="caret down icon" data-search-terms="arrow, dropdown, expand, menu, more, triangle"></i>caret down</div>
         <div class="column"><i class="caret left icon" data-search-terms="arrow, back, previous, triangle"></i>caret left</div>
         <div class="column"><i class="caret right icon" data-search-terms="arrow, forward, next, triangle"></i>caret right</div>
@@ -284,7 +284,7 @@ themes      : ['Default']
         <i class="arrow up icon"></i>
         <i class="arrows alternate icon"></i>
         <i class="arrows alternate horizontal icon"></i>
-        <i class="arrows alternate v icon"></i>
+        <i class="arrows alternate vertical icon"></i>
         <i class="caret down icon"></i>
         <i class="caret left icon"></i>
         <i class="caret right icon"></i>
@@ -2348,7 +2348,7 @@ themes      : ['Default']
         <div class="column"><i class="mars double icon" data-search-terms=""></i>mars double</div>
         <div class="column"><i class="mars stroke icon" data-search-terms=""></i>mars stroke</div>
         <div class="column"><i class="mars stroke horizontal icon" data-search-terms=""></i>mars stroke horizontal</div>
-        <div class="column"><i class="mars stroke v icon" data-search-terms=""></i>mars stroke v</div>
+        <div class="column"><i class="mars stroke vertical icon" data-search-terms=""></i>mars stroke vertical</div>
         <div class="column"><i class="mercury icon" data-search-terms="transgender"></i>mercury</div>
         <div class="column"><i class="neuter icon" data-search-terms=""></i>neuter</div>
         <div class="column"><i class="transgender icon" data-search-terms="intersex"></i>transgender</div>
@@ -2363,7 +2363,7 @@ themes      : ['Default']
         <i class="mars double icon"></i>
         <i class="mars stroke icon"></i>
         <i class="mars stroke horizontal icon"></i>
-        <i class="mars stroke v icon"></i>
+        <i class="mars stroke vertical icon"></i>
         <i class="mercury icon"></i>
         <i class="neuter icon"></i>
         <i class="transgender icon"></i>
@@ -2786,7 +2786,7 @@ themes      : ['Default']
         <div class="column"><i class="edit icon" data-search-terms="edit, pen, pencil, update, write"></i>edit</div>
         <div class="column"><i class="edit outline icon" data-search-terms="edit, pen, pencil, update, write"></i>edit outline</div>
         <div class="column"><i class="ellipsis horizontal icon" data-search-terms="dots, drag, kebab, list, menu, nav, navigation, ol, reorder, settings, ul"></i>ellipsis horizontal</div>
-        <div class="column"><i class="ellipsis v icon" data-search-terms="dots, drag, kebab, list, menu, nav, navigation, ol, reorder, settings, ul"></i>ellipsis v</div>
+        <div class="column"><i class="ellipsis vertical icon" data-search-terms="dots, drag, kebab, list, menu, nav, navigation, ol, reorder, settings, ul"></i>ellipsis vertical</div>
         <div class="column"><i class="envelope icon" data-search-terms="e-mail, email, letter, mail, message, notification, support"></i>envelope</div>
         <div class="column"><i class="envelope open icon" data-search-terms="e-mail, email, letter, mail, message, notification, support"></i>envelope open</div>
         <div class="column"><i class="envelope open outline icon" data-search-terms="e-mail, email, letter, mail, message, notification, support"></i>envelope open outline</div>
@@ -2989,7 +2989,7 @@ themes      : ['Default']
         <i class="edit icon"></i>
         <i class="edit outline icon"></i>
         <i class="ellipsis horizontal icon"></i>
-        <i class="ellipsis v icon"></i>
+        <i class="ellipsis vertical icon"></i>
         <i class="envelope icon"></i>
         <i class="envelope open icon"></i>
         <i class="envelope open outline icon"></i>
