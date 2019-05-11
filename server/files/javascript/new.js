@@ -431,6 +431,21 @@ semantic.new.ready = function() {
       max: 10,
       start: 5
     });
+
+  $('#__twoseven .ui.dropdown').dropdown();
+
+  $('#__twoseven .ui.progress.no-label').progress({
+    showActivity: false,
+  });
+  $('#__twoseven .ui.progress.has-label').progress({
+    autoSuccess: false,
+    showActivity: false,
+    label: 'ratio',
+    text: {
+      ratio: '{bar} {value}',
+      bars: ['Red', 'Yellow', 'Blue']
+    }
+  });
 };
 
 

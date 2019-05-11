@@ -15,7 +15,7 @@ type        : 'Main'
 
 <div class="main ui intro container">
 
-  <div class="ui active tab" data-tab="twoseven">
+  <div class="ui active tab" data-tab="twoseven" id="__twoseven">
     <h2 class="ui dividing header">Merry Christmas 🎅</h2>
     <p>Fomantic <code>2.7</code> brings lots of new goodies and fixes and just in time for christmas!</p>
 
@@ -120,6 +120,129 @@ type        : 'Main'
       </div>
       <div class="ui inverted segment">
         <p>Oh and you can use inverted colors like this inverted <span class="ui inverted purple text">purple</span> and <span class="ui inverted orange text">orange</span> text</p>
+      </div>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Modal
+      </h4>
+
+      <p>In <code>2.7</code>, we can position modals. Default is middle aligned.</p>
+
+      <div class="code" data-demo="true" data-eval="$('.top.aligned.test.modal').modal('show');">
+        $('.ui.top.aligned.modal').modal('show') ;
+      </div>
+
+      <div class="code" data-demo="true" data-eval="$('.bottom.aligned.test.modal').modal('show');">
+        $('.ui.bottom.aligned.modal') .modal('show') ;
+      </div>
+
+      <p>We can open modals that completely overlay the entire screen.</p>
+
+      <div class="code" data-demo="true" data-eval="$('.overlay.fullscreen.modal').modal('show');">
+        $('.ui.overlay.fullscreen.modal') .modal('show') ;
+      </div>
+
+      <div class="ui top aligned test modal">
+        <div class="header">
+          Top Aligned
+        </div>
+        <div class="actions">
+          <div class="ui black deny button">
+            Close
+          </div>
+        </div>
+      </div>
+
+      <div class="ui bottom aligned test modal">
+        <div class="header">
+          Bottom Aligned
+        </div>
+        <div class="actions">
+          <div class="ui black deny button">
+            Close
+          </div>
+        </div>
+      </div>
+
+      <div class="ui overlay fullscreen modal">
+        <div class="header">
+          Overlay Full Screen
+        </div>
+        <div class="content">
+          <div class="description">
+            <div class="ui header">Even if there is not much content here...</div>
+            ...the overlay fullscreen modal will occupy the entire screen
+          </div>
+        </div>
+        <div class="actions">
+          <div class="ui black deny button">
+            Close
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Dropdown
+      </h4>
+
+      <p>In <code>2.7</code>, dropdown module has new variant to display more contents at glance.
+        These could be useful if you have tons of options in dropdown.</p>
+
+      <p>One is columnar. We can make dropdown columnar, from <code>three column</code> to <code>five column</code>.</p>
+      <select class="ui fluid search four column dropdown" multiple>
+        <%- @partial('examples/single/state-options') %>
+      </select>
+
+      <p>Another is height variation. We can make dropdown <code>long</code> or <code>very long</code>.</p>
+      <div class="ui secondary segment">
+        Show me
+        <div class="ui inline very long dropdown">
+          <input type="hidden" name="skill" value="css">
+          <div class="text">css</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <%- @partial('examples/single/preset-menu') %>
+          </div>
+        </div>
+        classes currently available.
+      </div>
+     </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Progress
+      </h4>
+      <p>In <code>2.7</code>, progress now can have multiple bars.</p>
+
+      <div class="ui multiple progress no-label" data-total="200" data-value="60,30,20,30">
+        <div class="blue bar">
+          <div class="progress"></div>
+        </div>
+        <div class="yellow bar">
+          <div class="progress"></div>
+        </div>
+        <div class="purple bar">
+          <div class="progress"></div>
+        </div>
+        <div class="green bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+
+      <div class="ui multiple progress has-label" data-total="100" data-value="50,30,20">
+        <div class="red bar">
+          <div class="progress"></div>
+        </div>
+        <div class="yellow bar">
+          <div class="progress"></div>
+        </div>
+        <div class="blue bar">
+          <div class="progress"></div>
+        </div>
       </div>
     </div>
 
