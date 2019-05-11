@@ -15,7 +15,7 @@ type        : 'Main'
 
 <div class="main ui intro container">
 
-  <div class="ui active tab" data-tab="twoseven" id="__twoseven">
+  <div class="ui active tab" data-tab="twoseven">
     <h2 class="ui dividing header">Merry Christmas 🎅</h2>
     <p>Fomantic <code>2.7</code> brings lots of new goodies and fixes and just in time for christmas!</p>
 

@@ -432,12 +432,12 @@ semantic.new.ready = function() {
       start: 5
     });
 
-  $('#__twoseven .ui.dropdown').dropdown();
+  $('div[data-tab="twoseven"] .ui.dropdown').dropdown();
 
-  $('#__twoseven .ui.progress.no-label').progress({
+  $('div[data-tab="twoseven"] .ui.progress.no-label').progress({
     showActivity: false,
   });
-  $('#__twoseven .ui.progress.has-label').progress({
+  $('div[data-tab="twoseven"] .ui.progress.has-label').progress({
     autoSuccess: false,
     showActivity: false,
     label: 'ratio',
