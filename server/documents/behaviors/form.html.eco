@@ -1809,6 +1809,60 @@ type        : 'UI Behavior'
       </form>
     </div>
 
+    <div class="calendar example">
+      <h4 class="ui header">Handling dates from calendars</h4>
+      <p>Calendar fields are automatically validated, but you might want to grab the value as a Date object, or as its input, or maybe format it to exactly fit your needs.</p>
+      <div class="ignore code">
+        $('.ui.form').form({
+          dateHandling: 'date'
+        });
+      </div>
+      <div class="ignore code">
+        $('.ui.form').form({
+          dateHandling: 'input'
+        });
+      </div>
+      <div class="ignore code">
+        $('.ui.form').form({
+          dateHandling: 'formatter'
+        });
+      </div>
+      <form class="ui form segment">
+        <div class="field">
+          <label>Date</label>
+          <div class="ui calendar">
+            <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" name="calendar" placeholder="Date">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Returned date value</label>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="prout" value="date">
+            <i class="dropdown icon"></i>
+            <div class="default text">Pick up a date</div>
+            <div class="menu">
+              <div class="item" data-value="date">Date</div>
+              <div class="item" data-value="input">Input</div>
+              <div class="item" data-value="formatter">Formatter</div>
+            </div>
+          </div>
+        </div>
+        <div class="ui primary submit button">
+          <i class="check icon"></i>
+          Done
+        </div>
+        <div class="ui console segment">
+            <div class="ui top right attached label">
+              Console
+            </div>
+          </div>
+        <div class="ui error message"></div>
+      </form>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="settings">
@@ -1945,6 +1999,11 @@ type        : 'UI Behavior'
             <td>Whether or not the form should trim the value before validating</td>
           </tr>
           <tr>
+            <td>dateHandling</td>
+            <td>date</td>
+            <td>Define how calendar values will be returned. Can be either <b>date</b>, <b>input</b> or <b>formatter</b>.</td>
+          </tr>
+          <tr>
             <td>transition</td>
             <td>
               scale
@@ -2014,6 +2073,62 @@ type        : 'UI Behavior'
                 minCount             : '{name} must have at least {ruleValue} choices',
                 exactCount           : '{name} must have exactly {ruleValue} choices',
                 maxCount             : '{name} must have {ruleValue} or less choices'
+              }
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+        Formatters
+      </h4>
+      <p>Settings to modify default returned values. Actually exclusively used with calendar fields (trough the <code>dateHandling: 'formatter'</code> setting).</p>
+
+      <table class="ui celled sortable definition table">
+        <thead>
+          <th class="collapsing">Setting</th>
+          <th>Default</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>formatter</td>
+            <td>
+              <div class="code">
+              formatter: {
+                date: function(date) {
+                  return Intl.DateTimeFormat('en-GB').format(date);
+                },
+                datetime: function(date) {
+                  return Intl.DateTimeFormat('en-GB', {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                  }).format(date);
+                },
+                time: function(date) {
+                  return Intl.DateTimeFormat('en-GB', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                  }).format(date);
+                },
+                month: function(date) {
+                  return Intl.DateTimeFormat('en-GB', {
+                    month: '2-digit',
+                    year: 'numeric'
+                  }).format(date);
+                },
+                year: function(date) {
+                  return Intl.DateTimeFormat('en-GB', {
+                    year: 'numeric'
+                  }).format(date);
+                }
               }
               </div>
             </td>
