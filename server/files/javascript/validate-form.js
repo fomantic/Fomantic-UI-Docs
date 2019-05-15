@@ -5,6 +5,7 @@ semantic.validateForm.ready = function() {
 
   // selector cache
   var
+    $calendarForm = $('.calendar.example .ui.form'),
     $dogForm      = $('.dog.example .ui.form'),
     $matchingForm = $('.matching.example .ui.form'),
     $autoForm     = $('.auto.example .ui.form'),
@@ -19,6 +20,7 @@ semantic.validateForm.ready = function() {
     $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm).not($promptForm),
     $checkbox     = $('.main.container .ui.checkbox'),
     $dropdown     = $('.main.container .ui.dropdown'),
+    $calendar     = $('.main.container .ui.calendar'),
     $dirtyForm   =  $('.dirty.example .ui.form'),
     // alias
     handler
@@ -33,6 +35,12 @@ semantic.validateForm.ready = function() {
   ;
   $dropdown
     .dropdown()
+  ;
+
+  $calendar
+    .calendar({
+      type: 'date'
+    })
   ;
 
   $.fn.form.settings.onSuccess = function() {
@@ -348,6 +356,43 @@ semantic.validateForm.ready = function() {
       }
     })
   ;
+
+  $calendarForm
+    .form({
+      fields: {
+        calendar: {
+          rules: [
+            {
+              type: 'empty',
+              prompt: 'You must select a date'
+            }
+          ]
+        }
+      },
+      onSuccess: function(_, values) {
+        $('.ui.console').text(values.calendar);
+        return false;
+      }
+    })
+  ;
+
+  $('.calendar.example .ui.dropdown').dropdown({
+    onChange: function(value, two, three) {
+      switch (value) {
+        case 'date':
+        $calendarForm.form('setting', { dateHandling: 'date' });
+        break;
+
+        case 'input':
+        $calendarForm.form('setting', { dateHandling: 'input' });
+        break;
+
+        case 'formatter':
+        $calendarForm.form('setting', { dateHandling: 'formatter' });
+        break;
+      }
+    }
+  });
 
   $addForm
     .form('remove fields', ['password', 'gender'])

@@ -7,6 +7,7 @@ semantic.validateForm.ready = function() {
   var
     $codeDropdown = $('.existing.code .dropdown'),
     $dropdown     = $('.main.container .ui.dropdown').not($codeDropdown),
+    $calendar     = $('.main.container .ui.calendar'),
     // alias
     handler
   ;
@@ -19,6 +20,10 @@ semantic.validateForm.ready = function() {
   $dropdown
     .dropdown()
   ;
+
+  $calendar.calendar({
+    type: 'date'
+  });
 
 };
 

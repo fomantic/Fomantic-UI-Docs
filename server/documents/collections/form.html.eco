@@ -947,7 +947,28 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div data-use-content="true" class="example" data-use-content="true">
+  <div class="form example" data-tag="calendar" data-use-content="true">
+    <h4 class="ui header">Calendar</h4>
+    <p>A form can contain a <a href="/modules/calendar.html">calendar</a></p>
+    <div class="code" data-type="javascript" data-label="true">
+      $('.ui.calendar').calendar({
+        type: 'date'
+      });
+    </div>
+    <div class="ui form">
+      <div class="field">
+        <label>Date</label>
+        <div class="ui calendar">
+          <div class="ui input left icon">
+            <i class="calendar icon"></i>
+            <input type="text" placeholder="Pick up a date" name="date">
+          </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Message</h4>
     <p>A form can contain a <a href="/collections/message.html">message</a></p>
     <div class="ui ignored info message">
