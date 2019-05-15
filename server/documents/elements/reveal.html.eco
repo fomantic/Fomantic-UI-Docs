@@ -51,7 +51,7 @@ themes      : ['Default']
     </div>
   </div>
   <div class="another example">
-    <div class="ui move right reveal">
+    <div class="ui move right reveal small image">
       <div class="visible content">
         <img src="/images/wireframe/square-image.png" class="ui small image">
       </div>

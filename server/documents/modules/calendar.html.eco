@@ -279,11 +279,12 @@ themes      : ['Default']
           type: 'date',
           formatter: {
             date: function (date, settings) {
-            if (!date) return '';
-            var day = date.getDate();
-            var month = date.getMonth() + 1;
-            var year = date.getFullYear();
-            return day + '/' + month + '/' + year;
+              if (!date) return '';
+              var day = date.getDate();
+              var month = date.getMonth() + 1;
+              var year = date.getFullYear();
+              return day + '/' + month + '/' + year;
+            }
           }
         })
       ;
@@ -493,6 +494,58 @@ themes      : ['Default']
       </div>
     </div>
 
+    <h2 class="ui dividing header">Highlighting specific Days</h2>
+    <div class="example">
+      <h4 class="ui header">Event Dates</h4>
+      <p>Mark specific days as events, giving them a different cell style and a tooltip message</p>
+      <div class="ui calendar" id="eventdates_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+      $('#eventdates_calendar').calendar({
+          initialDate: new Date(2019,3,1),
+          eventDates: [
+              {
+                date: new Date(2019,3,21),
+                message: 'Show me in light purple',
+                class: 'inverted purple'
+              },{
+                date: new Date(2019,3,22),
+                message: 'Show me in green',
+                class: 'green'
+              }
+          ]
+      });
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui calendar" id="eventdates2_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+      $('#eventdates2_calendar').calendar({
+          initialDate: new Date(2019,3,1),
+          eventClass: 'inverted red',
+          eventDates: [
+              new Date(2019,3,20), //no message tooltip
+              {
+                date: new Date(2019,3,21),
+                message: 'I got the default color (light red)'
+              },{
+                date: new Date(2019,3,22),
+                message: 'Me too'
+              }
+          ]
+      });
+      </div>
+    </div>
+
   </div>
   <div class="ui tab" data-tab="usage">
 
@@ -664,6 +717,16 @@ themes      : ['Default']
           <td>An array of Date-Objects to be enabled for selection. All other dates are disabled</td>
         </tr>
         <tr>
+          <td>eventDates</td>
+          <td>[]</td>
+          <td>An array of Date-Objects or Objects with given message to show in a popup when hovering over the appropriate date and an individual class for the cell <code>{date: Date, message: string, class: string}</code></td>
+        </tr>
+        <tr>
+          <td>eventClass</td>
+          <td>blue</td>
+          <td>Default class to be added to each cell of an eventDate date element when no specific class is given to the eventDate element</td>
+        </tr>
+        <tr>
           <td>on</td>
           <td>null</td>
           <td>Choose when to show the popup (defaults to <code>focus</code> for input, <code>click</code> for others)</td>
@@ -814,6 +877,11 @@ themes      : ['Default']
           <td>onHidden</td>
           <td>active content</td>
           <td>Is called when the calendar is hidden</td>
+        </tr>
+        <tr>
+          <td>onSelect(date,mode)</td>
+          <td>active content</td>
+          <td>Is called when a cell of the calendar is selected providing its value and current mode. <code>return false;</code> will prevent the selection</td>
         </tr>
       </tbody>
     </table>

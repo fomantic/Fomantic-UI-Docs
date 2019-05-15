@@ -21,7 +21,7 @@ semantic.validateForm.ready = function() {
     $checkbox     = $('.main.container .ui.checkbox'),
     $dropdown     = $('.main.container .ui.dropdown'),
     $calendar     = $('.main.container .ui.calendar'),
-
+    $dirtyForm   =  $('.dirty.example .ui.form'),
     // alias
     handler
   ;
@@ -397,6 +397,31 @@ semantic.validateForm.ready = function() {
   $addForm
     .form('remove fields', ['password', 'gender'])
   ;
+
+  /* Dirty form */
+  $dirtyForm
+    .form({
+      preventLeaving: true,
+      onClean: function() {
+        $('#dirty_form_console').append('form is clean<br>');
+      },
+      onDirty: function() {
+        $('#dirty_form_console').append('form is dirty<br>');
+      }
+    })
+  ;
+
+  $('#btn_set_clean').click(function() {
+    $dirtyForm.form('set as clean');
+  });
+
+  $('#btn_show_dirty').click(function() {
+    var dirty_fields = $dirtyForm.form('get dirty fields');
+
+    dirty_fields.each(function(_, element) {
+      $('#dirty_form_console').append('dirty element: ' + element.name + '<br>');
+    }); 
+  });
 };
 
 
