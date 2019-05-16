@@ -356,11 +356,14 @@ semantic.ready = function() {
             $title   = $(this).children('h4').eq(0),
             text     = handler.getText($title),
             safeName = handler.getSafeName(text),
-            id       = window.escape(safeName),
-            $anchor  = $('<a />').addClass('anchor').attr('id', id)
+            id       = window.escape(safeName)
           ;
-          if($title.length > 0) {
-            $title.after($anchor);
+          if ($title.length > 0 && id.length > 0) {
+            var $contentWrapped = $("<a/>").attr('href', '#' + id).html([
+              $('<i class="fitted small linkify icon"></i>'),
+              $title.html()
+            ]).on('click', handler.scrollTo);
+            $title.attr('id', id).html($contentWrapped);
           }
         })
       ;
@@ -399,7 +402,7 @@ semantic.ready = function() {
         html      = '',
         pageTitle = handler.getPageTitle(),
         title     = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1),
-        activeTab = handler.getActiveTabTitle(),  
+        activeTab = handler.getActiveTabTitle(),
         $sticky,
         $rail
       ;
@@ -495,7 +498,7 @@ semantic.ready = function() {
       var
         id       = $(this).attr('href').replace('#', ''),
         $element = $('#' + id),
-        position = $element.offset().top + 10
+        position = $element.offset().top - 10
       ;
       $element
         .addClass('active')

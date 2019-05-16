@@ -727,7 +727,25 @@ blockquote .author {
 #example .example > h4:first-child {
   font-size: 18px;
   margin: 0em 0em 0em;
+  position: relative;
 }
+
+#example .example > h4 > a {
+  color: rgba(0, 0, 0, 0.87);
+}
+#example .example > h4 > a:hover {
+  color: rgba(0, 0, 0, 0.95);
+}
+#example .example > h4 > a > i.linkify.icon {
+  color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  left: -1.2rem;
+  line-height: 1.5em;
+}
+#example .example > h4 > a:hover > i.linkify.icon {
+  color: rgba(0, 0, 0, 0.75);
+}
+
 
 /* Wireframe Image */
 #example .example .wireframe.image {
@@ -912,6 +930,7 @@ blockquote .author {
 #example .another.example i.code {
   top: -0.5em;
 }
+
 
 /* Spaced */
 #example .spaced.example .buttons,
@@ -2016,6 +2035,39 @@ code .chunk {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08) inset;
   background-color: #FAFAFA;
   padding-top: 2em;
+}
+
+
+/*******************************
+          Search Box
+*******************************/
+
+#docs-searchbox input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+}
+
+#docs-searchbox input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#docs-searchbox {
+  position: relative;
+  padding: .74em;
+}
+
+#docs-searchbox:hover,
+#docs-searchbox:focus-within {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+.algolia-autocomplete .ds-dropdown-menu {
+  overflow: visible;
+  z-index: 6000 !important;
 }
 
 /*******************************
