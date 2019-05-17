@@ -2070,6 +2070,16 @@ code .chunk {
   z-index: 6000 !important;
 }
 
+.fixed.following.bar #docs-searchbox input,
+.fixed.following.bar #docs-searchbox input::placeholder {
+  color: #000;
+}
+.fixed.following.bar #docs-searchbox:hover,
+.fixed.following.bar #docs-searchbox:focus-within {
+  color: #000;
+  background: rgba(0, 0, 0, 0.08);
+}
+
 /*******************************
       Definition Container
 *******************************/
