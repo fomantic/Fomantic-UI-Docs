@@ -52,12 +52,12 @@ standalone : false
 <div class="zoomed masthead segment">
   <div class="ui container">
     <div class="introduction">
-      <a class="ui black version label" href="https://github.com/fomantic/Fomantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
+      <a class="ui black version label" href="https://github.com/fomantic/Fomantic-UI/blob/<%= @getBranch() %>/CHANGELOG.md">
         <%= @getVersion() %>
       </a>
       <h1 class="ui inverted header">
         <span class="library">
-          Fomantic UI
+          Fomantic-UI
         </span>
         <span class="tagline">
           A community fork of Semantic-UI

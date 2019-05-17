@@ -622,7 +622,7 @@ type        : 'Main'
     <h2 class="ui dividing header">A new life</h2>
 
     <p>With active development slowing down the community has stood up to start a new life for Semantic, welcome to Fomantic-UI.</p>
-    <p>You can read the release notes <a href="https://github.com/fomantic/Fomantic-UI/blob/master/RELEASE-NOTES.md">here</a>.</p>
+    <p>You can read the release notes <a href="https://github.com/fomantic/Fomantic-UI/blob/master/CHANGELOG.md">here</a>.</p>
 
     <h2 class="ui dividing header">New Features</h2>
 
