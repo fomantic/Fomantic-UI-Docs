@@ -1067,8 +1067,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
             <div class="code">
             error    : {
               method     : 'The method you called is not defined.',
-              nonNumeric : 'Progress value is non numeric'
-              tooHigh    : 'Value specified is above 100%'
+              nonNumeric : 'Progress value is non numeric',
+              tooHigh    : 'Value specified is above 100%',
               tooLow     : 'Value specified is below 0%'
             }
             </div>
