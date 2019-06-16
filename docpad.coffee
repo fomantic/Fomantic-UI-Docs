@@ -29,12 +29,12 @@ docpadConfig = {
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [],
 
-			version: "2.7.5",
+			version: "2.7.6",
 
 			branch: "master",
 
 			# The default title of our website
-			title: "Fomantic UI"
+			title: "Fomantic-UI"
 
 			# The website description (for SEO)
 			description: """
