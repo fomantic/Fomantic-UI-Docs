@@ -184,7 +184,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">Indeterminate<span class="ui small black label">New in 2.7.6</span></h4>
       <p>A progress bar can be shown in different indeterminate states.</p>
-      div class="ui warning ignored message">
+      <div class="ui warning ignored message">
         The <code>indeterminate</code> progress state is not supposed to be used in combination with <code>multiple</code> progress bars
       </div>
       <div class="ui blue indeterminate progress">
