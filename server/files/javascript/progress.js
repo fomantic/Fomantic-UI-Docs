@@ -4,7 +4,7 @@ semantic.progress = {};
 semantic.progress.ready = function() {
 
   var
-    $progress         = $('.definition  .ui.progress').not('.success, .error, .warning, .indicating, .multiple'),
+    $progress         = $('.definition  .ui.progress').not('.success, .error, .warning, .indicating, .multiple, .indeterminate'),
     $multiple         = $('.definition .ui.multiple.progress'),
     $indicating       = $('.definition .ui.indicating.progress'),
     $buttons          = $('.example .increment.button, .example .decrement.button'),

@@ -75,6 +75,16 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     </div>
 
     <div class="example">
+      <h4 class="ui header">Centered Progress Text<span class="ui small black label">New in 2.7.6</span></h4>
+      <p>The text inside a progress can be centered</p>
+      <div class="ui progress">
+        <div class="bar">
+          <div class="centered progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
       <h4 class="ui header">Label</h4>
       <p>A progress element can contain a label</p>
       <div class="ui progress">
@@ -168,6 +178,47 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <p>A progress bar can be disabled</p>
       <div class="ui disabled progress">
         <div class="bar"></div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Indeterminate<span class="ui small black label">New in 2.7.6</span></h4>
+      <p>A progress bar can be shown in different indeterminate states.</p>
+      div class="ui warning ignored message">
+        The <code>indeterminate</code> progress state is not supposed to be used in combination with <code>multiple</code> progress bars
+      </div>
+      <div class="ui blue indeterminate progress">
+          <div class="bar">
+              <div class="progress">Pulsating (default)</div>
+          </div>
+      </div>
+      <div class="ui blue filling indeterminate progress">
+          <div class="bar">
+              <div class="progress">Filling</div>
+          </div>
+      </div>
+      <div class="ui blue sliding indeterminate progress">
+          <div class="bar">
+              <div class="progress">Sliding</div>
+          </div>
+      </div>
+      <div class="ui blue swinging indeterminate progress">
+          <div class="bar">
+              <div class="progress">Swinging</div>
+          </div>
+      </div>
+    </div>
+    <div class="another example">
+      <p>Indeterminate progress can also vary in speed</p>
+      <div class="ui blue slow indeterminate progress">
+          <div class="bar">
+              <div class="progress">Slow</div>
+          </div>
+      </div>
+      <div class="ui blue fast indeterminate progress">
+          <div class="bar">
+              <div class="progress">Fast</div>
+          </div>
       </div>
     </div>
 
