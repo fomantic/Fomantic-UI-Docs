@@ -860,7 +860,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </tr>
         <tr>
           <td>precision</td>
-          <td>1</td>
+          <td>0</td>
           <td>Decimal point precision for calculated progress</td>
         </tr>
         <tr>
@@ -1058,7 +1058,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>False</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>
@@ -1067,7 +1067,9 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
             <div class="code">
             error    : {
               method     : 'The method you called is not defined.',
-              nonNumeric : 'Progress value is non numeric'
+              nonNumeric : 'Progress value is non numeric',
+              tooHigh    : 'Value specified is above 100%',
+              tooLow     : 'Value specified is below 0%'
             }
             </div>
           </td>
