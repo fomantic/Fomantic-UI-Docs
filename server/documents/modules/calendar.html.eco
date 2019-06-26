@@ -769,7 +769,7 @@ themes      : ['Default']
         <tr>
           <td>disableMinute</td>
           <td>false</td>
-          <td>Fisable minute selection mode</td>
+          <td>Disable minute selection mode</td>
         </tr>
         <tr>
           <td>formatInput</td>
