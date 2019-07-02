@@ -197,6 +197,10 @@ type        : 'Usage'
     /* Global */
     @site       : 'material';  /* Loads material site defaults */
     @reset      : 'default';
+    
+    /* Text */
+    @placeholder: 'default';
+    @text       : 'default';
 
     /* Elements */
     @button     : 'github'; /* But uses them with GitHub Buttons */
@@ -225,6 +229,7 @@ type        : 'Usage'
 
     /* Modules */
     @accordion  : 'default';
+    @calendar   : 'default';
     @checkbox   : 'default';
     @dimmer     : 'default';
     @dropdown   : 'default';
@@ -237,8 +242,10 @@ type        : 'Usage'
     @search     : 'default';
     @shape      : 'default';
     @sidebar    : 'default';
+    @slider     : 'default';
     @sticky     : 'default';
     @tab        : 'default';
+    @toast      : 'default';
     @transition : 'default';
 
     /* Views */
