@@ -1565,7 +1565,7 @@ type        : 'UI Behavior'
         Dependent Fields
         <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
-      <p>You can specify validation fields to only be used when other fields are present. Simply add <code>depends: 'id'</code> with the ID of the field that must be non-blank for this rule to evaluate.</p>
+      <p>You can specify validation fields to only be used when other fields are present. Simply add <code>depends: 'identifier'</code> with the ID of the field that must be non-blank for this rule to evaluate.</p>
       <div class="ignored code">
       $('.ui.form')
         .form({
@@ -1976,24 +1976,24 @@ type        : 'UI Behavior'
         <td>Validates field, updates UI, and calls onSuccess or onFailure</td>
       </tr>
       <tr>
-        <td>get field(id)</td>
-        <td>Returns element with matching name, id, or data-validate metadata to ID</td>
+        <td>get field(identifier)</td>
+        <td>Returns element with matching name, id, or data-validate metadata to identifier</td>
       </tr>
       <tr>
-        <td>get value(id)</td>
+        <td>get value(identifier)</td>
         <td>Returns value of element with id</td>
       </tr>
       <tr>
-        <td>get values(ids)</td>
-        <td>Returns object of element values that match array of ids. If no IDS are passed will return all fields</td>
+        <td>get values(identifiers)</td>
+        <td>Returns object of element values that match array of identifiers. If no IDS are passed will return all fields</td>
       </tr>
       <tr>
-        <td>set value(id)</td>
+        <td>set value(identifier)</td>
         <td>Sets value of element with id</td>
       </tr>
       <tr>
         <td>set values(values)</td>
-        <td>Sets key/value pairs from passed values object to matching ids</td>
+        <td>Sets key/value pairs from passed values object to matching identifiers</td>
       </tr>
       <tr>
         <td>get validation(element)</td>
@@ -2008,8 +2008,8 @@ type        : 'UI Behavior'
         <td>Adds errors to form, given an array errors</td>
       </tr>
       <tr>
-        <td>add prompt(id, prompt)</td>
-        <td>Adds a custom user prompt for a given element with id</td>
+        <td>add prompt(identifier, prompt)</td>
+        <td>Adds a custom user prompt for a given element with identifier</td>
       </tr>
       <tr>
         <td>clear</td>
