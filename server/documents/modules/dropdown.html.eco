@@ -1807,7 +1807,20 @@ themes      : ['Default', 'GitHub', 'Material']
               "text"  : "Choice 1"
 
               // whether field should be displayed as disabled (optional)
-              "disabled"  : false
+              "disabled"  : false,
+
+              // path to image to be displayed to the left (optional)
+              "image"  : false,
+
+              // whether the image should be displayed in a different style (optional)
+              "imageClass"  : "ui avatar image",
+
+              // icon name to be displayed to the left (optional)
+              "icon"  : "pink female",
+
+              // whether the icon should be displayed in a different style
+              // (usually 'flag' if a given value for "icon" is a flag) (optional)
+              "iconClass"  : "flag"
 
             },
             {
@@ -2402,6 +2415,126 @@ themes      : ['Default', 'GitHub', 'Material']
         ;
       </div>
     </div>
+      <div class="no example">
+          <h4 class="ui header">Display images and/or icons by value setting<div class="ui black label">New in 2.7.7</div></h4>
+          <p>Images and/or icons in front of an item can be dynamically created by providing image paths, icon names or classnames for different styling</p>
+          <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
+          <div class="evaluated code" data-type="javascript">
+              $('#imagesandicons').dropdown({
+                placeholder: 'Show images and icons',
+                values:[{
+                  "name": "Avatar",
+                  "value": "jenny",
+                  "image": "https://fomantic-ui.com/images/avatar/small/jenny.jpg",
+                  "imageClass": "ui avatar image"
+                },
+                {
+                  "name": "Image",
+                  "value": "elliot",
+                  "image": "https://fomantic-ui.com/images/avatar/small/elliot.jpg"
+                },
+                {
+                  "name": "Flag",
+                  "value": "uk",
+                  "icon": "uk",
+                  "iconClass": "flag"
+                },
+                {
+                  "name": "Icon",
+                  "value": "female",
+                  "icon": "female"
+                },
+                {
+                  "name": "Colored Icon",
+                  "value": "coloredfemale",
+                  "icon": "pink female"
+                },
+                {
+                  "name": "Image and Icon",
+                  "value": "completefemale",
+                  "image": "https://fomantic-ui.com/images/avatar/small/jenny.jpg",
+                  "icon": "pink female"
+                }]
+              })
+              ;
+          </div>
+          <div class="ui fluid long selection dropdown" id="imagesandicons">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <div class="default text"></div>
+          </div>
+      </div>
+
+      <div class="no example">
+          <p>To avoid adding the classNames to every item entry (for example if you want to display a list of avatars or flags), you could override the default setting for <code>className.image</code> or <code>className.icon</code> when initializing the dropdown</p>
+          <div class="evaluated code" data-type="javascript">
+              $('#allavatars').dropdown({
+                className: {
+                  image: 'ui avatar image'
+                },
+                placeholder: 'Show users and their avatars',
+                values:[{
+                  "name": "Jenny",
+                  "value": "jenny",
+                  "image": "https://fomantic-ui.com/images/avatar/small/jenny.jpg",
+                },
+                {
+                  "name": "Elliot",
+                  "value": "elliot",
+                  "image": "https://fomantic-ui.com/images/avatar/small/elliot.jpg"
+                }]
+              })
+              ;
+          </div>
+          <div class="ui fluid selection dropdown" id="allavatars">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <div class="default text"></div>
+          </div>
+
+      </div>
+
+      <div class="no example">
+          <h4 class="ui header">Supporting image labels for multiselection<div class="ui black label">New in 2.7.7</div></h4>
+          <p>If needed, you can adjust the classname for multiselection labels to make use of <code><a href="/elements/label.html#image">image label</a></code></p>
+          <div class="evaluated code" data-type="javascript">
+              $('#imagelabels').dropdown({
+                className: {
+                  label: 'ui image label',
+                  icon: 'flag'
+                },
+                placeholder: 'Select some users',
+                values:[{
+                  "name": "Jenny",
+                  "value": "jenny",
+                  "selected" : true,
+                  "image": "https://fomantic-ui.com/images/avatar/small/jenny.jpg",
+                  "icon": "de"
+                },
+                {
+                  "name": "Elliot",
+                  "value": "elliot",
+                  "selected" : true,
+                  "image": "https://fomantic-ui.com/images/avatar/small/elliot.jpg",
+                  "icon" : "us"
+                },
+                {
+                  "name": "Stevie",
+                  "value": "stevie",
+                  "selected" : true,
+                  "image": "https://fomantic-ui.com/images/avatar/small/stevie.jpg",
+                  "icon" : "fr"
+                }]
+              })
+              ;
+          </div>
+          <div class="ui fluid multiple selection dropdown" id="imagelabels">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <div class="default text"></div>
+          </div>
+      </div>
+
     <div class="no dropdown example">
       <h4 class="ui header">Specifying Different Text &amp; Hidden Input Values</h4>
       <p>You can specify different values for selected text, and selected form values by adding <code>data-text</code> or <code>data-value</code> to any item. This is useful if you include additional data, like icons, that you want to appear only inside the dropdown menu.</p>
