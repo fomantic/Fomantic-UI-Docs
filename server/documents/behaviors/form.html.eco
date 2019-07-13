@@ -2307,7 +2307,7 @@ type        : 'UI Behavior'
       <table class="ui celled sortable definition table">
         <thead>
           <th>Setting</th>
-          <th class="six wide">Default</th>
+          <th class="ten wide">Default</th>
           <th>Description</th>
         </thead>
         <tbody>
