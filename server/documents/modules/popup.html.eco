@@ -776,6 +776,11 @@ themes      : ['Default']
           <td>Position that the popup should appear</td>
         </tr>
         <tr>
+          <td>forcePosition</td>
+          <td>false</td>
+          <td>If given <code>position</code> should be used, regardless if popup fits</td>
+        </tr>
+        <tr>
           <td>inline</td>
           <td>false</td>
           <td>If a popup is inline it will be created next to current element, allowing for local css rules to apply. It will not be removed from the DOM after being hidden. Otherwise popups will appended to body and removed after being hidden.</td>
