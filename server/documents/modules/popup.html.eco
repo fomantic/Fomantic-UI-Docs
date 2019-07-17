@@ -787,7 +787,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>prefer</td>
-          <td>adjacent</td>
+          <td>opposite</td>
           <td>Can be set to <code>adjacent</code> or <code>opposite</code> to prefer adjacent or opposite position if popup cannot fit on screen</td>
         </tr>
         <tr>
@@ -806,7 +806,7 @@ themes      : ['Default']
             <div class="code">
     delay: {
       show: 50,
-      hide: 0
+      hide: 70
     }
             </div>
           </td>
@@ -815,7 +815,7 @@ themes      : ['Default']
         <tr>
           <td>transition</td>
           <td>
-            slide down
+            scale
           </td>
           <td>Named transition to use when animating menu in and out.</td>
         </tr>
@@ -874,7 +874,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>maxSearchDepth</td>
-          <td>10</td>
+          <td>15</td>
           <td>Number of iterations before giving up search for popup position when a popup cannot fit on screen</td>
         </tr>
       </tbody>
@@ -999,6 +999,7 @@ themes      : ['Default']
           <td>
             <div class="code">
     metadata: {
+      activator : 'activator',
       content   : 'content',
       html      : 'html',
       offset    : 'offset',
@@ -1015,10 +1016,16 @@ themes      : ['Default']
           <td>
             <div class="code">
     className   : {
+      active      : 'active',
+      basic       : 'basic',
+      animating   : 'animating',
+      dropdown    : 'dropdown',
+      fluid       : 'fluid',
       loading     : 'loading',
       popup       : 'ui popup',
       position    : 'top left center bottom right',
-      visible     : 'visible'
+      visible     : 'visible',
+      popupVisible: 'visible'
     }
             </div>
           </td>
@@ -1074,7 +1081,7 @@ themes      : ['Default']
               invalidPosition : 'The position you specified is not a valid position',
               cannotPlace     : 'Popup does not fit within the boundaries of the viewport',
               method          : 'The method you called is not defined.',
-              noTransition    : 'This module requires ui transitions <https://github.com/Semantic-Org/UI-Transition>',
+              noTransition    : 'This module requires ui transitions https://github.com/Semantic-Org/UI-Transition',
               notFound        : 'The target or popup you specified does not exist on the page'
             }
             </div>
