@@ -2292,8 +2292,8 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>prompt</td>
-            <td>Errors (Array)</td>
-            <td>Constructs an element to prompt the user to an invalid field</td>
+            <td>Errors (Array, className)</td>
+            <td>Constructs an element to prompt the user to an invalid field using the given className for error label styling</td>
           </tr>
         </tbody>
       </table>
@@ -2307,7 +2307,7 @@ type        : 'UI Behavior'
       <table class="ui celled sortable definition table">
         <thead>
           <th>Setting</th>
-          <th class="six wide">Default</th>
+          <th class="ten wide">Default</th>
           <th>Description</th>
         </thead>
         <tbody>
@@ -2321,12 +2321,19 @@ type        : 'UI Behavior'
             <td>
               <div class="code">
         selector : {
-          message   : '.error.message',
+          checkbox  : 'input[type="checkbox"], input[type="radio"]',
+          clear     : '.clear',
           field     : 'input, textarea, select',
           group     : '.field',
           input     : 'input',
-          prompt    : '.prompt',
-          submit    : '.submit'
+          message   : '.error.message',
+          prompt    : '.prompt.label',
+          radio     : 'input[type="radio"]',
+          reset     : '.reset:not([type="reset"])',
+          submit    : '.submit:not([type="submit"])',
+          uiCheckbox: '.ui.checkbox',
+          uiDropdown: '.ui.dropdown',
+          uiCalendar: '.ui.calendar'
         }
               </div>
             </td>
@@ -2353,10 +2360,10 @@ type        : 'UI Behavior'
             <td>
               <div class="code">
         className : {
-          active      : 'active',
-          placeholder : 'default',
-          disabled    : 'disabled',
-          visible     : 'visible'
+          error   : 'error',
+          label   : 'ui basic red pointing prompt label',
+          pressed : 'down',
+          success : 'success'
         }
               </div>
             </td>
@@ -2403,7 +2410,10 @@ type        : 'UI Behavior'
             <td colspan="2">
               <div class="code">
         errors   : {
-          method   : 'The method you called is not defined.'
+          identifier : 'You must specify a string identifier for each field',
+          method     : 'The method you called is not defined.',
+          noRule     : 'There is no rule matching the one you specified',
+          oldSyntax  : 'Starting in 2.0 forms now only take a single settings object. Validation settings converted to new syntax automatically.'
         }
               </div>
             </td>
