@@ -2005,7 +2005,7 @@ type        : 'UI Behavior'
       </tr>
       <tr>
         <td>add errors(errors)</td>
-        <td>Adds errors to form, given an array errors</td>
+        <td>Manually add errors to form, given an array errors</td>
       </tr>
       <tr>
         <td>add prompt(identifier, prompt)</td>
