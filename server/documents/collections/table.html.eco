@@ -568,7 +568,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Colored<div class="ui black label">New in 2.7</div></h4>
+    <h4 class="ui header">Colored Cells<div class="ui black label">New in 2.7</div></h4>
     <p>A cell can be styled by the central color palette colors</p>
     <table class="ui celled table">
       <thead>
