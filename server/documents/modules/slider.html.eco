@@ -221,7 +221,7 @@ themes      : ['Default']
 
   <div class="ui tab" data-tab="settings">
     <h2 class="ui dividing header">
-      Calendar
+      Slider
     </h2>
 
     <h4 class="ui header">
