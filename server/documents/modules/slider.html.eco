@@ -217,6 +217,38 @@ themes      : ['Default']
       </div>
     </div>
 
+    <h2 class="ui dividing header">Behaviors</h2>
+
+    <p>Behaviors are short english phrases used for accessing specific functionality in
+
+    <p>Behaviors are accessible with Javascript using the syntax:<p>
+    <div class="code">
+    $('.ui.slider').slider('behavior', argumentOne, argumentTwo...);
+    </div>
+
+    <table class="ui definition celled table">
+      <tr>
+        <td>get value</td>
+        <td>Get the current selected value</td>
+      </tr>
+      <tr>
+        <td>get thumbValue(which)</td>
+        <td>Get the selected value of one of the range thumbs. Provide either <code>first</code> or <code>second</code> as a string parameter</td>
+      </tr>
+      <tr>
+        <td>get numLabels</td>
+        <td>Get the number of rendered label ticks</td>
+      </tr>
+      <tr>
+        <td>set value(value)</td>
+        <td>Set the current slider value</td>
+      </tr>
+      <tr>
+        <td>set rangeValue(fromValue, toValue)</td>
+        <td>Set the current range slider values</td>
+      </tr>
+    </table>
+
   </div>
 
   <div class="ui tab" data-tab="settings">
