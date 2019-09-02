@@ -29,7 +29,7 @@ docpadConfig = {
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [],
 
-			version: "2.7.7",
+			version: "2.7.8",
 
 			branch: "master",
 
