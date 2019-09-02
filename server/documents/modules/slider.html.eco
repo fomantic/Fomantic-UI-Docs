@@ -307,6 +307,16 @@ themes      : ['Default']
           <td>Define smoothness when the slider is moving</td>
         </tr>
         <tr>
+          <td>autoAdjustLabels</td>
+          <td>true</td>
+          <td>Whether labels should auto adjust on window resize</td>
+        </tr>
+        <tr>
+          <td>labelDistance</td>
+          <td>100</td>
+          <td>The distance between labels</td>
+        </tr>
+        <tr>
           <td>decimalPlaces</td>
           <td>2</td>
           <td>Number of decimals to use with an unstepped slider</td>
