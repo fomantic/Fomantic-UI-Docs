@@ -148,6 +148,26 @@ themes      : ['default']
     </table>
   </div>
 
+  <div class="example" data-class="left aligned,right aligned">
+    <h4 class="ui header">Horizontal Alignment</h4>
+    <p>A horizontal divider can be aligned</p>
+
+    <h4 class="ui horizontal left aligned divider header">
+      <i class="left align icon"></i>
+      Left Aligned
+    </h4>
+
+    <h4 class="ui horizontal divider header">
+      <i class="center align icon"></i>
+      Center Aligned
+    </h4>
+
+    <h4 class="ui horizontal right aligned divider header">
+      <i class="right align icon"></i>
+      Right Aligned
+    </h4>
+  </div>
+
   <h2 class="ui dividing header">Variations</h2>
 
   <div class="example">
