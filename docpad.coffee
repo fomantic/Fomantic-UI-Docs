@@ -38,12 +38,12 @@ docpadConfig = {
 
 			# The website description (for SEO)
 			description: """
-				Fomantic empowers designers and developers by creating a shared vocabulary for UI.
+				Fomantic the official community fork of Semantic-UI
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				html5, ui, library, framework, javascript
+				html5, ui, library, framework, javascript, fork, official
 				"""
 
 
