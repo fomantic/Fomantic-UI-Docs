@@ -3056,7 +3056,12 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>ignoreCase</td>
           <td>false<div class="ui label">New in 2.2.13</div></td>
-          <td>Whether values with matching cases should be treated as identical when adding them to a dropdown.</td>
+          <td>Whether values with non matching cases should be treated as identical when adding them to a dropdown.</td>
+        </tr>
+        <tr>
+          <td>ignoreSearchCase</td>
+          <td>true<div class="ui label">New in 2.8.0</div></td>
+          <td>Whether values with non matching cases should be treated as identical when filtering the items.</td>
         </tr>
         <tr>
           <td>allowReselection</td>
