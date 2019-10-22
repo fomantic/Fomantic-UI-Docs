@@ -326,6 +326,11 @@ themes      : ['Default']
           <td>2</td>
           <td>Page up/down multiplier. Define how many more times the steps to take on page up/down press</td>
         </tr>
+        <tr>
+          <td>preventCrossover</td>
+          <td>true</td>
+          <td>Prevents the lower thumb to crossover the thumb handle.</td>
+        </tr>
       </tbody>
     </table>
 
