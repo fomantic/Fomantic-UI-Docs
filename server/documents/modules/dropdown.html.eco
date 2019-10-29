@@ -2881,12 +2881,12 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Toggles current visibility of dropdown</td>
         </tr>
         <tr>
-          <td>show</td>
-          <td>Shows dropdown</td>
+          <td>show(callback,preventFocus)</td>
+          <td>Shows dropdown. If a function is provided to <code>callback</code>, it's called after the dropdown-menu is shown. Set <code>preventFocus</code> to <code>true</code> if you don't want the dropdown field to focus after the menu is shown  </td>
         </tr>
         <tr>
-          <td>hide</td>
-          <td>Hides dropdown</td>
+          <td>hide(callback,preventBlur)</td>
+          <td>Hides dropdown. If a function is provided to <code>callback</code>, it's called after the dropdown-menu is hidden. Set <code>preventBlur</code> to <code>true</code> if you don't want the dropdown field to blur after the menu is hidden  </td>
         </tr>
         <tr>
           <td>clear</td>
