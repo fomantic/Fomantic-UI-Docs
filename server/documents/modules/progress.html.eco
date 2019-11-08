@@ -672,8 +672,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           </td>
         </tr>
         <tr>
-          <td>complete</td>
-          <td>Finishes progress and sets loaded to 100%</td>
+          <td>complete(keepState)</td>
+          <td>Finishes progress and sets loaded to 100%. Set <code>keepState</code> to <code>true</code> (default <code>false</code>) to stop the active animation only without setting the progress to 100%.</td>
         </tr>
         <tr>
           <td>reset</td>
@@ -728,16 +728,16 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <td>Sets progress to active state</td>
         </tr>
         <tr>
-          <td>set warning</td>
-          <td>Sets progress to warning state</td>
+          <td>set warning(text, keepState)</td>
+          <td>Sets progress to warning state. Set <code>keepState</code> to <code>true</code> (default <code>false</code>) to keep the progressbar state and the current percentage without raising it up to 100%</td>
         </tr>
         <tr>
-          <td>set success</td>
-          <td>Sets progress to success state</td>
+          <td>set success(text, keepState)</td>
+          <td>Sets progress to success state. Set <code>keepState</code> to <code>true</code> (default <code>false</code>) to keep the progressbar state and the current percentage without raising it up to 100%</td>
         </tr>
         <tr>
-          <td>set error</td>
-          <td>Sets progress to error state</td>
+          <td>set error(text, keepState)</td>
+          <td>Sets progress to error state. Set <code>keepState</code> to <code>true</code> (default <code>false</code>) to keep the progressbar state and the current percentage without raising it up to 100%</td>
         </tr>
         <tr>
           <td>set duration(value)</td>
