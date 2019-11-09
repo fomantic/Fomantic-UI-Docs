@@ -788,7 +788,7 @@ themes      : ['Default']
             <td>Set to <code>false</code> to avoid closing the toast when it is clicked</td>
         </tr>
         <tr>
-            <td>closeModule</td>
+            <td>cloneModule</td>
             <td>true</td>
             <td>If a given DOM-Node should stay reusable by using a clone of it as toast. If set to <code>false</code> the original DOM-Node will be detached and removed from the DOM then the toast is closed</td>
         </tr>
