@@ -430,7 +430,7 @@ themes      : ['Default']
         <h4 class="ui header">Image<div class="ui black label">New in 2.8.0</div></h4>
         <p>Provide an image path to display it just like the icon does. <br> Adjust the image via the separate <code>classImage</code> setting</p>
         <div class="ui ignored message">
-            For image sizes, only <code>mini</code>, <code>tiny</code> and <code>avatar</code> are supported
+            For image sizes, only <code>mini</code>, <code>tiny</code>, <code>small</code> and <code>avatar</code> are supported
         </div>
         <div class="code" data-demo="true">
         $('body')
@@ -747,7 +747,7 @@ themes      : ['Default']
         <tr>
             <td>classImage</td>
             <td>mini</td>
-            <td>Can hold a string to be added to the image class. <code>mini</code>, <code>tiny</code> and <code>avatar</code> are supported out of the box</td>
+            <td>Can hold a string to be added to the image class. <code>mini</code>, <code>tiny</code>, <code>small</code> and <code>avatar</code> are supported out of the box</td>
         </tr>
 
         <tr>
