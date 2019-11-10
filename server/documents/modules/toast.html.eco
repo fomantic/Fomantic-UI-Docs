@@ -510,7 +510,7 @@ themes      : ['Default']
     </div>
     <div class="example">
         <h4 class="ui header">Approve / Deny Callbacks</h4>
-        <p>Just like <a href="/modules/modal.html#approve--deny-callbacks">Modal</a>, Toast will automatically tie approve deny callbacks to any positive/approve, negative/deny or ok/cancel buttons without the need to create actions via setting
+        <p>Just like <a href="/modules/modal.html#approve--deny-callbacks">Modal</a>, Toast will automatically tie approve/deny callbacks to any positive/approve, negative/deny or ok/cancel buttons without the need to create actions via setting
         <div class="ui ignored info message">
             If <code>onDeny</code>, <code>onApprove</code> or <code>onHide</code> returns false it will prevent the toast from closing
         </div>
@@ -620,7 +620,7 @@ themes      : ['Default']
 
     <div class="no example">
         <h4 class="ui header">Access created toast<div class="ui black label">New in 2.8.0</div></h4>
-        <p>As each call to <code>.toast()</code> returns the instance of the created toast you are able to interact with the displayed toast via javascript <a href="#behaviors">behaviors</a> </p>
+        <p>As each call to <code>.toast()</code> returns the instance of the created toast, you are able to interact with the displayed toast via javascript <a href="#behaviors">behaviors</a> </p>
         <button class="ui pink button" id="jsaccess_toast_init">
             Open pink toast first
         </button>
@@ -738,17 +738,17 @@ themes      : ['Default']
         <tr>
             <td>classProgress</td>
             <td>false</td>
-            <td>Can hold a string to be added to the progress bar, for example a separate color</td>
+            <td>Can hold a string to be added to the progress bar class, for example a separate color</td>
         </tr>
         <tr>
             <td>classActions</td>
             <td>false</td>
-            <td>Can hold a string to be added to the actions to control its appearance. Usually a combination of <code>basic</code>, <code>left</code>, <code>top</code>, <code>bottom</code>, <code>vertical</code> or <code>attached</code></td>
+            <td>Can hold a string to be added to the actions class to control its appearance. Usually a combination of <code>basic</code>, <code>left</code>, <code>top</code>, <code>bottom</code>, <code>vertical</code> and <code>attached</code></td>
         </tr>
         <tr>
             <td>classImage</td>
             <td>mini</td>
-            <td>Can hold a string to be added to the image. <code>mini</code>, <code>tiny</code> and <code>avatar</code> are supported out of the box</td>
+            <td>Can hold a string to be added to the image class. <code>mini</code>, <code>tiny</code> and <code>avatar</code> are supported out of the box</td>
         </tr>
 
         <tr>
