@@ -635,7 +635,6 @@ themes      : ['Default']
         <div class="code">
             var myToast = $('body').toast();
             var remainingTime = myToast.toast('get remainingTime');
-            ;
         </div>
     </div>
 
