@@ -560,7 +560,7 @@ themes      : ['Default']
       <div class="example">
           <h4 class="ui header">Card</h4>
           <div class="ui ignored warning message">
-              If you use want to use vertical actions together with a card layout, only <a href="#vertical-attached">vertical attached</a> actions are supported
+              If you want to use vertical actions together with a card layout, only <a href="#vertical-attached">vertical attached</a> actions are supported
           </div>
           <div class="ui horizontal card" id="domcard">
               <div class="image">
@@ -600,7 +600,7 @@ themes      : ['Default']
       <div class="no example">
           <h4 class="ui header">Prevent closing <div class="ui black label">New in 2.8.0</div></h4>
           <p>The default behavior when clicking on a toast is to close it.<br>
-              You can force the toast to not do this setting <code>closeOnClick</code> to <code>false</code></p>
+              You can force the toast to not do this by setting <code>closeOnClick</code> to <code>false</code></p>
           <div class="ui ignored info message">
               <code>closeOnClick</code> is automatically set to <code>false</code> if one of the following is set
               <ul class="ui list">
