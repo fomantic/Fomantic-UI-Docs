@@ -368,7 +368,7 @@ themes      : ['Default']
     <div class="no example">
         <h4 class="ui header">Vertical attached</h4>
 
-        <p>Vertical actions can also be displayed as buttons groups using <code>vertical attached</code><br>Vertical attached actions also support <code>left</code></p>
+        <p>Vertical actions can also be displayed as button groups using <code>vertical attached</code><br>Vertical attached actions also support <code>left</code></p>
         <div class="code" data-demo="true">
         $('body')
           .toast({
