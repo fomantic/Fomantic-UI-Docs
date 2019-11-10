@@ -689,11 +689,11 @@ themes      : ['Default']
         <table class="ui definition celled table">
             <tr>
                 <td>animate pause</td>
-                <td>Pauses the displayTime decrease (and possible progresssbar animation)</td>
+                <td>Pauses the displayTime decrease (and possible progressbar animation)</td>
             </tr>
             <tr>
                 <td>animate continue</td>
-                <td>Continues decreasing displayTime (and possible progresssbar animation)</td>
+                <td>Continues decreasing displayTime (and possible progressbar animation)</td>
             </tr>
             <tr>
                 <td>close</td>
@@ -738,7 +738,7 @@ themes      : ['Default']
         <tr>
             <td>classProgress</td>
             <td>false</td>
-            <td>Can hold a string to be added to the progress bar class, for example a separate color</td>
+            <td>Can hold a string to be added to the progressbar class, for example a separate color</td>
         </tr>
         <tr>
             <td>classActions</td>
