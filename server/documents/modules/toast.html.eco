@@ -650,7 +650,7 @@ themes      : ['Default']
             $.fn.toast.settings.class = 'info';
             $.fn.toast.settings.showIcon = true;
             $.fn.toast.settings.className.box = 'toast-box';  //removes shadow
-            $.fn.toast.settings.className.title = 'header';   // smaller front size
+            $.fn.toast.settings.className.title = 'header';   // smaller font size
             $.fn.toast.settings.className.icon = 'icon';   // top position again
             $.fn.toast.settings.transition.closeEasing = 'easeOutBounce';
             */
