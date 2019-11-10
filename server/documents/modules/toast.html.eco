@@ -649,11 +649,10 @@ themes      : ['Default']
             /* To change the defaults for all toast at once override the module as follows
             $.fn.toast.settings.progressUp = true;
             $.fn.toast.settings.class = 'info';
-            $.fn.toast.settings.class = 'info';
             $.fn.toast.settings.showIcon = true;
             $.fn.toast.settings.className.box = 'toast-box';  //removes shadow
             $.fn.toast.settings.className.title = 'header';   // smaller front size
-            $.fn.toast.settings.className.title = 'icon';   // top position again
+            $.fn.toast.settings.className.icon = 'icon';   // top position again
             $.fn.toast.settings.transition.closeEasing = 'easeOutBounce';
             */
             // Or apply the old defaults directly to the toast
