@@ -908,7 +908,7 @@ themes      : ['Default']
     <table class="ui sortable celled definition table">
       <thead>
         <th>Setting</th>
-        <th class="six wide">Default</th>
+        <th class="seven wide">Default</th>
         <th>Description</th>
       </thead>
       <tbody>
@@ -924,15 +924,17 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>selector</td>
-          <td colspan="2">
+          <td>
             <div class="code" data-type="css">
             selector    : {
               popup: '.ui.popup',
               input: 'input',
-              activator: 'input'
+              activator: 'input',
+              append: '.inline.field,.inline.fields'
             }
             </div>
           </td>
+          <td>If the calendars parent node matches the <code>append</code> selector, the calendar is appended to the input field instead of prepended.</td>
         </tr>
         <tr>
           <td>className</td>
