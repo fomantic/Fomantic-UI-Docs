@@ -17,7 +17,6 @@ semantic.emoji.ready = function() {
     }
   });
 
-
   var addEmojiChunk = function(){
     var $button = $(this),
         category = $button.attr('data-category'),
@@ -37,7 +36,8 @@ semantic.emoji.ready = function() {
     for(;chunkpos < nextChunkPos; chunkpos++){
       var obj = categories[category][chunkpos],
           $column = $('<div>', {class:'column', html: '<br>'+obj.shortname.replace(/:/g,'')}),
-          $emoji = $('<em>', {'data-emoji':obj.shortname});
+          $emoji = $('<em>', {'data-emoji':obj.shortname})
+      ;
       $code.append($emoji);
       $grid.append($column.prepend($emoji.addClass('medium').attr('data-tooltip',obj.name)));
     }
@@ -61,7 +61,6 @@ semantic.emoji.ready = function() {
     'modifier'
   ];
 
-
   categoryOrder.forEach(function(cat){
     var $example = $('<div>', {class:'emoji example'});
     $example.append($('<h4>', {class:'ui header', text: cat.charAt(0).toUpperCase() + cat.substring(1)}));
@@ -78,8 +77,6 @@ semantic.emoji.ready = function() {
     $moreButton.click();
   });
 
-
-
   $('emojiSearch.ui.search')
     .search({
       source: allEmojis,
@@ -93,10 +90,7 @@ semantic.emoji.ready = function() {
       }
     })
   ;
-
-
 };
-
 
 // attach ready event
 $(document)
