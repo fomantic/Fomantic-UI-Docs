@@ -1,7 +1,7 @@
-semantic.toast = {};
+semantic.emoji = {};
 
 // ready event
-semantic.toast.ready = function() {
+semantic.emoji.ready = function() {
 
   var allEmojis = [], orgKey, categories = {};
   emojiStrategy.forEach(function(el) {
@@ -100,5 +100,5 @@ semantic.toast.ready = function() {
 
 // attach ready event
 $(document)
-  .ready(semantic.toast.ready)
+  .ready(semantic.emoji.ready)
 ;
