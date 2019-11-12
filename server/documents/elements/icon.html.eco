@@ -35,7 +35,7 @@ themes      : ['Default']
       Icons serve a very similar function to text in a page. In Semantic icons receive a special tag <code>&lt;i&gt;</code> which allow for an abbreviated markup when sitting along-side text.
     </div>
 
-    <div class="ui ignored message">Semantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.9.0</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
+    <div class="ui ignored message">Fomantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.11.2</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
 
     <div class="icon example">
       <h4 class="ui header">Accessibility</h4>
@@ -428,6 +428,7 @@ themes      : ['Default']
         <div class="column"><i class="stop circle outline icon" data-search-terms="block, box, circle, square"></i>stop circle outline</div>
         <div class="column"><i class="sync icon" data-search-terms="exchange, refresh, reload, rotate, swap"></i>sync</div>
         <div class="column"><i class="sync alternate icon" data-search-terms="exchange, refresh, reload, rotate, swap"></i>sync alternate</div>
+        <div class="column"><i class="tv icon" data-search-terms="computer, display, monitor, television"></i>tv</div>
         <div class="column"><i class="undo icon" data-search-terms="back, control z, exchange, oops, return, rotate, swap"></i>undo</div>
         <div class="column"><i class="undo alternate icon" data-search-terms="back, control z, exchange, oops, return, swap"></i>undo alternate</div>
         <div class="column"><i class="video icon" data-search-terms="camera, film, movie, record, video-camera"></i>video</div>
@@ -485,6 +486,7 @@ themes      : ['Default']
         <i class="stop circle outline icon"></i>
         <i class="sync icon"></i>
         <i class="sync alternate icon"></i>
+        <i class="tv icon"></i>
         <i class="undo icon"></i>
         <i class="undo alternate icon"></i>
         <i class="video icon"></i>
@@ -1059,6 +1061,7 @@ themes      : ['Default']
         <div class="column"><i class="cookie icon" data-search-terms="baked good, chips, chocolate, eat, snack, sweet, treat"></i>cookie</div>
         <div class="column"><i class="cookie bite icon" data-search-terms="baked good, bitten, chips, chocolate, eat, snack, sweet, treat"></i>cookie bite</div>
         <div class="column"><i class="fruit-apple icon" data-search-terms="fall, fruit, fuji, macintosh, orchard, seasonal, vegan"></i>fruit-apple</div>
+        <div class="column"><i class="gamepad icon" data-search-terms="arcade, controller, d-pad, joystick, video, video game"></i>gamepad</div>
         <div class="column"><i class="ice cream icon" data-search-terms="chocolate, cone, dessert, frozen, scoop, sorbet, vanilla, yogurt"></i>ice cream</div>
         <div class="column"><i class="mitten icon" data-search-terms="clothing, cold, glove, hands, knitted, seasonal, warmth"></i>mitten</div>
         <div class="column"><i class="robot icon" data-search-terms="android, automate, computer, cyborg"></i>robot</div>
@@ -1075,6 +1078,7 @@ themes      : ['Default']
         <i class="cookie icon"></i>
         <i class="cookie bite icon"></i>
         <i class="fruit-apple icon"></i>
+        <i class="gamepad icon"></i>
         <i class="ice cream icon"></i>
         <i class="mitten icon"></i>
         <i class="robot icon"></i>
@@ -1088,6 +1092,8 @@ themes      : ['Default']
       <p>Icons which represent types of clothing</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="graduation cap icon" data-search-terms="ceremony, college, graduate, learning, school, student"></i>graduation cap</div>
+        <div class="column"><i class="hat cowboy icon" data-search-terms="buckaroo, horse, jackeroo, john b., old west, pardner, ranch, rancher, rodeo, western, wrangler"></i>hat cowboy</div>
+        <div class="column"><i class="hat cowboy side icon" data-search-terms="buckaroo, horse, jackeroo, john b., old west, pardner, ranch, rancher, rodeo, western, wrangler"></i>hat cowboy side</div>
         <div class="column"><i class="hat wizard icon" data-search-terms="Dungeons & Dragons, accessory, buckle, clothing, d&d, dnd, fantasy, halloween, head, holiday, mage, magic, pointy, witch"></i>hat wizard</div>
         <div class="column"><i class="mitten icon" data-search-terms="clothing, cold, glove, hands, knitted, seasonal, warmth"></i>mitten</div>
         <div class="column"><i class="shoe prints icon" data-search-terms="feet, footprints, steps, walk"></i>shoe prints</div>
@@ -1097,6 +1103,8 @@ themes      : ['Default']
       </div>
       <div class="existing code">
         <i class="graduation cap icon"></i>
+        <i class="hat cowboy icon"></i>
+        <i class="hat cowboy side icon"></i>
         <i class="hat wizard icon"></i>
         <i class="mitten icon"></i>
         <i class="shoe prints icon"></i>
@@ -1313,6 +1321,7 @@ themes      : ['Default']
         <div class="column"><i class="microchip icon" data-search-terms="cpu, hardware, processor, technology"></i>microchip</div>
         <div class="column"><i class="mobile icon" data-search-terms="apple, call, cell phone, cellphone, device, iphone, number, screen, telephone"></i>mobile</div>
         <div class="column"><i class="mobile alternate icon" data-search-terms="apple, call, cell phone, cellphone, device, iphone, number, screen, telephone"></i>mobile alternate</div>
+        <div class="column"><i class="mouse icon" data-search-terms="click, computer, cursor, input, peripheral"></i>mouse</div>
         <div class="column"><i class="plug icon" data-search-terms="connect, electric, online, power"></i>plug</div>
         <div class="column"><i class="power off icon" data-search-terms="cancel, computer, on, reboot, restart"></i>power off</div>
         <div class="column"><i class="print icon" data-search-terms="business, copy, document, office, paper"></i>print</div>
@@ -1344,6 +1353,7 @@ themes      : ['Default']
         <i class="microchip icon"></i>
         <i class="mobile icon"></i>
         <i class="mobile alternate icon"></i>
+        <i class="mouse icon"></i>
         <i class="plug icon"></i>
         <i class="power off icon"></i>
         <i class="print icon"></i>
@@ -2348,7 +2358,7 @@ themes      : ['Default']
         <div class="column"><i class="dice six icon" data-search-terms="chance, gambling, game, roll"></i>dice six</div>
         <div class="column"><i class="dice three icon" data-search-terms="chance, gambling, game, roll"></i>dice three</div>
         <div class="column"><i class="dice two icon" data-search-terms="chance, gambling, game, roll"></i>dice two</div>
-        <div class="column"><i class="gamepad icon" data-search-terms="controller, d-pad, joystick, video"></i>gamepad</div>
+        <div class="column"><i class="gamepad icon" data-search-terms="arcade, controller, d-pad, joystick, video, video game"></i>gamepad</div>
         <div class="column"><i class="ghost icon" data-search-terms="apparition, blinky, clyde, floating, halloween, holiday, inky, pinky, spirit"></i>ghost</div>
         <div class="column"><i class="headset icon" data-search-terms="audio, gamer, gaming, listen, live chat, microphone, shot caller, sound, support, telemarketer"></i>headset</div>
         <div class="column"><i class="heart icon" data-search-terms="favorite, like, love, relationship, valentine"></i>heart</div>
@@ -3282,7 +3292,7 @@ themes      : ['Default']
         <div class="column"><i class="flag checkered icon" data-search-terms="notice, notification, notify, pole, racing, report, symbol"></i>flag checkered</div>
         <div class="column"><i class="flag outline icon" data-search-terms="country, notice, notification, notify, pole, report, symbol"></i>flag outline</div>
         <div class="column"><i class="flask icon" data-search-terms="beaker, experimental, labs, science"></i>flask</div>
-        <div class="column"><i class="gamepad icon" data-search-terms="controller, d-pad, joystick, video"></i>gamepad</div>
+        <div class="column"><i class="gamepad icon" data-search-terms="arcade, controller, d-pad, joystick, video, video game"></i>gamepad</div>
         <div class="column"><i class="gavel icon" data-search-terms="hammer, judge, law, lawyer, opinion"></i>gavel</div>
         <div class="column"><i class="gift icon" data-search-terms="christmas, generosity, giving, holiday, party, present, wrapped, xmas"></i>gift</div>
         <div class="column"><i class="glass martini icon" data-search-terms="alcohol, bar, beverage, drink, liquor"></i>glass martini</div>
@@ -3808,9 +3818,14 @@ themes      : ['Default']
         <div class="column"><i class="guitar icon" data-search-terms="acoustic, instrument, music, rock, rock and roll, song, strings"></i>guitar</div>
         <div class="column"><i class="headphones icon" data-search-terms="audio, listen, music, sound, speaker"></i>headphones</div>
         <div class="column"><i class="headphones alternate icon" data-search-terms="audio, listen, music, sound, speaker"></i>headphones alternate</div>
+        <div class="column"><i class="microphone icon" data-search-terms="audio, podcast, record, sing, sound, voice"></i>microphone</div>
+        <div class="column"><i class="microphone alternate icon" data-search-terms="audio, podcast, record, sing, sound, voice"></i>microphone alternate</div>
+        <div class="column"><i class="microphone alternate slash icon" data-search-terms="audio, disable, mute, podcast, record, sing, sound, voice"></i>microphone alternate slash</div>
+        <div class="column"><i class="microphone slash icon" data-search-terms="audio, disable, mute, podcast, record, sing, sound, voice"></i>microphone slash</div>
         <div class="column"><i class="music icon" data-search-terms="lyrics, melody, note, sing, sound"></i>music</div>
         <div class="column"><i class="napster icon" data-search-terms=""></i>napster</div>
         <div class="column"><i class="play icon" data-search-terms="audio, music, playing, sound, start, video"></i>play</div>
+        <div class="column"><i class="record vinyl icon" data-search-terms="LP, album, analog, music, phonograph, sound"></i>record vinyl</div>
         <div class="column"><i class="sliders horizontal icon" data-search-terms="adjust, settings, sliders, toggle"></i>sliders horizontal</div>
         <div class="column"><i class="soundcloud icon" data-search-terms=""></i>soundcloud</div>
         <div class="column"><i class="spotify icon" data-search-terms=""></i>spotify</div>
@@ -3827,9 +3842,14 @@ themes      : ['Default']
         <i class="guitar icon"></i>
         <i class="headphones icon"></i>
         <i class="headphones alternate icon"></i>
+        <i class="microphone icon"></i>
+        <i class="microphone alternate icon"></i>
+        <i class="microphone alternate slash icon"></i>
+        <i class="microphone slash icon"></i>
         <i class="music icon"></i>
         <i class="napster icon"></i>
         <i class="play icon"></i>
+        <i class="record vinyl icon"></i>
         <i class="sliders horizontal icon"></i>
         <i class="soundcloud icon"></i>
         <i class="spotify icon"></i>
@@ -3940,7 +3960,7 @@ themes      : ['Default']
         <div class="column"><i class="flask icon" data-search-terms="beaker, experimental, labs, science"></i>flask</div>
         <div class="column"><i class="futbol icon" data-search-terms="ball, football, mls, soccer"></i>futbol</div>
         <div class="column"><i class="futbol outline icon" data-search-terms="ball, football, mls, soccer"></i>futbol outline</div>
-        <div class="column"><i class="gamepad icon" data-search-terms="controller, d-pad, joystick, video"></i>gamepad</div>
+        <div class="column"><i class="gamepad icon" data-search-terms="arcade, controller, d-pad, joystick, video, video game"></i>gamepad</div>
         <div class="column"><i class="gavel icon" data-search-terms="hammer, judge, law, lawyer, opinion"></i>gavel</div>
         <div class="column"><i class="gem icon" data-search-terms="diamond, jewelry, sapphire, stone, treasure"></i>gem</div>
         <div class="column"><i class="gem outline icon" data-search-terms="diamond, jewelry, sapphire, stone, treasure"></i>gem outline</div>
@@ -5095,6 +5115,7 @@ themes      : ['Default']
         <div class="column"><i class="skiing icon" data-search-terms="activity, downhill, fast, fitness, olympics, outdoors, person, seasonal, slalom"></i>skiing</div>
         <div class="column"><i class="skiing nordic icon" data-search-terms="activity, cross country, fitness, outdoors, person, seasonal"></i>skiing nordic</div>
         <div class="column"><i class="snowboarding icon" data-search-terms="activity, fitness, olympics, outdoors, person"></i>snowboarding</div>
+        <div class="column"><i class="swimmer icon" data-search-terms="athlete, head, man, olympics, person, pool, water"></i>swimmer</div>
         <div class="column"><i class="table tennis icon" data-search-terms="ball, paddle, ping pong"></i>table tennis</div>
         <div class="column"><i class="volleyball ball icon" data-search-terms="beach, olympics, sport"></i>volleyball ball</div>
       </div>
@@ -5115,6 +5136,7 @@ themes      : ['Default']
         <i class="skiing icon"></i>
         <i class="skiing nordic icon"></i>
         <i class="snowboarding icon"></i>
+        <i class="swimmer icon"></i>
         <i class="table tennis icon"></i>
         <i class="volleyball ball icon"></i>
       </div>
@@ -5476,6 +5498,8 @@ themes      : ['Default']
         <div class="column"><i class="circle outline icon" data-search-terms="circle-thin, diameter, dot, ellipse, notification, round"></i>circle outline</div>
         <div class="column"><i class="dot circle icon" data-search-terms="bullseye, notification, target"></i>dot circle</div>
         <div class="column"><i class="dot circle outline icon" data-search-terms="bullseye, notification, target"></i>dot circle outline</div>
+        <div class="column"><i class="microphone icon" data-search-terms="audio, podcast, record, sing, sound, voice"></i>microphone</div>
+        <div class="column"><i class="microphone slash icon" data-search-terms="audio, disable, mute, podcast, record, sing, sound, voice"></i>microphone slash</div>
         <div class="column"><i class="star icon" data-search-terms="achievement, award, favorite, important, night, rating, score"></i>star</div>
         <div class="column"><i class="star half icon" data-search-terms="achievement, award, rating, score, star-half-empty, star-half-full"></i>star half</div>
         <div class="column"><i class="star half alternate icon" data-search-terms="achievement, award, rating, score, star-half-empty, star-half-full"></i>star half alternate</div>
@@ -5483,6 +5507,7 @@ themes      : ['Default']
         <div class="column"><i class="star outline icon" data-search-terms="achievement, award, favorite, important, night, rating, score"></i>star outline</div>
         <div class="column"><i class="toggle off icon" data-search-terms="switch"></i>toggle off</div>
         <div class="column"><i class="toggle on icon" data-search-terms="switch"></i>toggle on</div>
+        <div class="column"><i class="wifi icon" data-search-terms="connection, hotspot, internet, network, wireless"></i>wifi</div>
       </div>
       <div class="existing code">
         <i class="bullseye icon"></i>
@@ -5492,6 +5517,8 @@ themes      : ['Default']
         <i class="circle outline icon"></i>
         <i class="dot circle icon"></i>
         <i class="dot circle outline icon"></i>
+        <i class="microphone icon"></i>
+        <i class="microphone slash icon"></i>
         <i class="star icon"></i>
         <i class="star half icon"></i>
         <i class="star half alternate icon"></i>
@@ -5499,6 +5526,7 @@ themes      : ['Default']
         <i class="star outline icon"></i>
         <i class="toggle off icon"></i>
         <i class="toggle on icon"></i>
+        <i class="wifi icon"></i>
       </div>
     </div>
     <div class="icon example">
@@ -5539,6 +5567,7 @@ themes      : ['Default']
         <div class="column"><i class="swimming pool icon" data-search-terms="ladder, recreation, swim, water"></i>swimming pool</div>
         <div class="column"><i class="taxi icon" data-search-terms="cab, cabbie, car, car service, lyft, machine, transportation, travel, uber, vehicle"></i>taxi</div>
         <div class="column"><i class="tram icon" data-search-terms="crossing, machine, mountains, seasonal, transportation"></i>tram</div>
+        <div class="column"><i class="tv icon" data-search-terms="computer, display, monitor, television"></i>tv</div>
         <div class="column"><i class="umbrella beach icon" data-search-terms="protection, recreation, sand, shade, summer, sun"></i>umbrella beach</div>
         <div class="column"><i class="wine glass icon" data-search-terms="alcohol, beverage, cabernet, drink, grapes, merlot, sauvignon"></i>wine glass</div>
         <div class="column"><i class="wine glass alternate icon" data-search-terms="alcohol, beverage, cabernet, drink, grapes, merlot, sauvignon"></i>wine glass alternate</div>
@@ -5578,6 +5607,7 @@ themes      : ['Default']
         <i class="swimming pool icon"></i>
         <i class="taxi icon"></i>
         <i class="tram icon"></i>
+        <i class="tv icon"></i>
         <i class="umbrella beach icon"></i>
         <i class="wine glass icon"></i>
         <i class="wine glass alternate icon"></i>
@@ -6022,6 +6052,7 @@ themes      : ['Default']
         <div class="column"><i class="btc icon" data-search-terms=""></i>btc</div>
         <div class="column"><i class="buffer icon" data-search-terms=""></i>buffer</div>
         <div class="column"><i class="buromobelexperte icon" data-search-terms=""></i>buromobelexperte</div>
+        <div class="column"><i class="buy n large icon" data-search-terms=""></i>buy n large</div>
         <div class="column"><i class="buysellads icon" data-search-terms=""></i>buysellads</div>
         <div class="column"><i class="canadian maple leaf icon" data-search-terms="canada, flag, flora, nature, plant"></i>canadian maple leaf</div>
         <div class="column"><i class="cc amazon pay icon" data-search-terms=""></i>cc amazon pay</div>
@@ -6046,6 +6077,7 @@ themes      : ['Default']
         <div class="column"><i class="confluence icon" data-search-terms="atlassian"></i>confluence</div>
         <div class="column"><i class="connectdevelop icon" data-search-terms=""></i>connectdevelop</div>
         <div class="column"><i class="contao icon" data-search-terms=""></i>contao</div>
+        <div class="column"><i class="cotton bureau icon" data-search-terms="clothing, t-shirts, tshirts"></i>cotton bureau</div>
         <div class="column"><i class="cpanel icon" data-search-terms=""></i>cpanel</div>
         <div class="column"><i class="creative commons icon" data-search-terms=""></i>creative commons</div>
         <div class="column"><i class="creative commons by icon" data-search-terms=""></i>creative commons by</div>
@@ -6210,6 +6242,7 @@ themes      : ['Default']
         <div class="column"><i class="markdown icon" data-search-terms=""></i>markdown</div>
         <div class="column"><i class="mastodon icon" data-search-terms=""></i>mastodon</div>
         <div class="column"><i class="maxcdn icon" data-search-terms=""></i>maxcdn</div>
+        <div class="column"><i class="mdb icon" data-search-terms=""></i>mdb</div>
         <div class="column"><i class="medapps icon" data-search-terms=""></i>medapps</div>
         <div class="column"><i class="medium icon" data-search-terms=""></i>medium</div>
         <div class="column"><i class="medium m icon" data-search-terms=""></i>medium m</div>
@@ -6238,6 +6271,7 @@ themes      : ['Default']
         <div class="column"><i class="openid icon" data-search-terms=""></i>openid</div>
         <div class="column"><i class="opera icon" data-search-terms=""></i>opera</div>
         <div class="column"><i class="optin monster icon" data-search-terms=""></i>optin monster</div>
+        <div class="column"><i class="orcid icon" data-search-terms=""></i>orcid</div>
         <div class="column"><i class="osi icon" data-search-terms=""></i>osi</div>
         <div class="column"><i class="page4 icon" data-search-terms=""></i>page4</div>
         <div class="column"><i class="pagelines icon" data-search-terms="eco, flora, leaf, leaves, nature, plant, tree"></i>pagelines</div>
@@ -6330,6 +6364,7 @@ themes      : ['Default']
         <div class="column"><i class="superpowers icon" data-search-terms=""></i>superpowers</div>
         <div class="column"><i class="supple icon" data-search-terms=""></i>supple</div>
         <div class="column"><i class="suse icon" data-search-terms="linux, operating system, os"></i>suse</div>
+        <div class="column"><i class="swift icon" data-search-terms=""></i>swift</div>
         <div class="column"><i class="symfony icon" data-search-terms=""></i>symfony</div>
         <div class="column"><i class="teamspeak icon" data-search-terms=""></i>teamspeak</div>
         <div class="column"><i class="telegram icon" data-search-terms=""></i>telegram</div>
@@ -6350,6 +6385,7 @@ themes      : ['Default']
         <div class="column"><i class="uber icon" data-search-terms=""></i>uber</div>
         <div class="column"><i class="ubuntu icon" data-search-terms="linux, operating system, os"></i>ubuntu</div>
         <div class="column"><i class="uikit icon" data-search-terms=""></i>uikit</div>
+        <div class="column"><i class="umbraco icon" data-search-terms=""></i>umbraco</div>
         <div class="column"><i class="uniregistry icon" data-search-terms=""></i>uniregistry</div>
         <div class="column"><i class="untappd icon" data-search-terms=""></i>untappd</div>
         <div class="column"><i class="ups icon" data-search-terms="United Parcel Service, package, shipping"></i>ups</div>
@@ -6451,6 +6487,7 @@ themes      : ['Default']
         <i class="btc icon"></i>
         <i class="buffer icon"></i>
         <i class="buromobelexperte icon"></i>
+        <i class="buy n large icon"></i>
         <i class="buysellads icon"></i>
         <i class="canadian maple leaf icon"></i>
         <i class="cc amazon pay icon"></i>
@@ -6475,6 +6512,7 @@ themes      : ['Default']
         <i class="confluence icon"></i>
         <i class="connectdevelop icon"></i>
         <i class="contao icon"></i>
+        <i class="cotton bureau icon"></i>
         <i class="cpanel icon"></i>
         <i class="creative commons icon"></i>
         <i class="creative commons by icon"></i>
@@ -6639,6 +6677,7 @@ themes      : ['Default']
         <i class="markdown icon"></i>
         <i class="mastodon icon"></i>
         <i class="maxcdn icon"></i>
+        <i class="mdb icon"></i>
         <i class="medapps icon"></i>
         <i class="medium icon"></i>
         <i class="medium m icon"></i>
@@ -6667,6 +6706,7 @@ themes      : ['Default']
         <i class="openid icon"></i>
         <i class="opera icon"></i>
         <i class="optin monster icon"></i>
+        <i class="orcid icon"></i>
         <i class="osi icon"></i>
         <i class="page4 icon"></i>
         <i class="pagelines icon"></i>
@@ -6759,6 +6799,7 @@ themes      : ['Default']
         <i class="superpowers icon"></i>
         <i class="supple icon"></i>
         <i class="suse icon"></i>
+        <i class="swift icon"></i>
         <i class="symfony icon"></i>
         <i class="teamspeak icon"></i>
         <i class="telegram icon"></i>
@@ -6779,6 +6820,7 @@ themes      : ['Default']
         <i class="uber icon"></i>
         <i class="ubuntu icon"></i>
         <i class="uikit icon"></i>
+        <i class="umbraco icon"></i>
         <i class="uniregistry icon"></i>
         <i class="untappd icon"></i>
         <i class="ups icon"></i>
