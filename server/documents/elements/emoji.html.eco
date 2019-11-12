@@ -48,7 +48,7 @@ themes      : ['Default']
       <div class="ui ignored warning icon message">
           <i class="exclamation icon"></i>
           <div class="content">
-          If you use Fomantic in a commercial or business project and want to use the alternative joypixels set, you have to get a <a href="https://www.joypixels.com/licenses">premium license</a> for your project
+          If you use Fomantic in a commercial or business project or want to host the emoji assets locally and <b>also want to use the alternative joypixels set</b>, you may require an additional license for your project depending of the usage.<br>You will find joypixels licenses at <a href="https://www.joypixels.com/licenses">https://www.joypixels.com/licenses</a>
           </div>
       </div>
       <div class="ui emoji container"></div>
