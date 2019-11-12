@@ -1557,9 +1557,6 @@ body.progress.animated .ui.progress .bar {
 #example .emoji.example .grid > .column {
   text-align: center;
 }
-#example .emoji.example .loading.segment {
-  height: 500px;
-}
 
 /*--------------
       Icon
