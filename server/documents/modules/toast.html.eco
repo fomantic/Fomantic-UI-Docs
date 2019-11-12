@@ -48,8 +48,8 @@ themes      : ['Default']
     </div>
 
     <div class="no example">
-        <h4 class="ui header">ProgressBar</h4>
-        <p>You can attach a progressbar to your toast.</p>
+        <h4 class="ui header">Progress Bar</h4>
+        <p>You can attach a progress bar to your toast.</p>
         <div class="code" data-demo="true">
         $('body')
           .toast({
@@ -59,7 +59,7 @@ themes      : ['Default']
           })
         ;
         </div>
-        <p>The progressbar can have its own individual color</p>
+        <p>The progress bar can have its own individual color</p>
         <div class="code" data-demo="true">
         $('body')
           .toast({
@@ -144,7 +144,7 @@ themes      : ['Default']
           })
         ;
         </div>
-        <p>Setting the value to <code>auto</code> calculates the displaytime by the amount of containing words</p>
+        <p>Setting the value to <code>auto</code> calculates the display time by the amount of containing words</p>
         <div class="ui ignored message">
             You can adjust the calculation by modifying the default values for <code>minDisplayTime</code> and <code>wordsPerMinute</code>
         </div>
@@ -178,8 +178,8 @@ themes      : ['Default']
     </div>
 
     <div class="no example">
-        <h4 class="ui header">Increasing ProgressBar</h4>
-        <p>The progressbar could be be raised instead of lowered</p>
+        <h4 class="ui header">Increasing Progress Bar</h4>
+        <p>The progress bar could be be raised instead of lowered</p>
         <div class="code" data-demo="true">
         $('body')
           .toast({
@@ -587,7 +587,7 @@ themes      : ['Default']
 
       <div class="no example">
           <h4 class="ui header">Prevent pausing <div class="ui black label">New in 2.8.0</div></h4>
-          <p>The default behavior when hovering over the toast is to pause decreasing of the displaytime.<br>
+          <p>The default behavior when hovering over the toast is to pause decreasing of the display time.<br>
               You can force the toast to not pause by setting <code>pauseOnHover</code> to <code>false</code></p>
           <div class="code" data-demo="true">
             $('body').toast({
@@ -688,11 +688,11 @@ themes      : ['Default']
         <table class="ui definition celled table">
             <tr>
                 <td>animate pause</td>
-                <td>Pauses the displayTime decrease (and possible progressbar animation)</td>
+                <td>Pauses the display time decrease (and possible progress bar animation)</td>
             </tr>
             <tr>
                 <td>animate continue</td>
-                <td>Continues decreasing displayTime (and possible progressbar animation)</td>
+                <td>Continues decreasing display time (and possible progress bar animation)</td>
             </tr>
             <tr>
                 <td>close</td>
@@ -737,7 +737,7 @@ themes      : ['Default']
         <tr>
             <td>classProgress</td>
             <td>false</td>
-            <td>Can hold a string to be added to the progressbar class, for example a separate color</td>
+            <td>Can hold a string to be added to the progress bar class, for example a separate color</td>
         </tr>
         <tr>
             <td>classActions</td>
@@ -758,12 +758,12 @@ themes      : ['Default']
         <tr>
             <td>minDisplayTime</td>
             <td>1000</td>
-            <td>Minimum displaytime in case <code>displayTime</code> is set to 'auto' </td>
+            <td>Minimum display time in case <code>displayTime</code> is set to 'auto' </td>
         </tr>
         <tr>
             <td>wordsPerMinute</td>
             <td>120</td>
-            <td>Base to calculate displaytime in case <code>displayTime</code> is set to 'auto' </td>
+            <td>Base to calculate display time in case <code>displayTime</code> is set to 'auto' </td>
         </tr>
         <tr>
             <td>showImage</td>
@@ -793,12 +793,12 @@ themes      : ['Default']
         <tr>
           <td>showProgress</td>
           <td>false</td>
-          <td>Displays a progressbar on <code>top</code> or <code>bottom</code> increasing until displayTime is reached. . <code>false</code> won't display any progressbar. If displayTime option is 0, this option is ignored</td>
+          <td>Displays a progress bar on <code>top</code> or <code>bottom</code> increasing until <code>displayTime</code> is reached. . <code>false</code> won't display any progress bar. If <code>displayTime</code> option is 0, this option is ignored</td>
         </tr>
         <tr>
           <td>progressUp</td>
           <td>false</td>
-          <td><code>true</code>Increases the progressbar from 0% to 100%<br><code>false</code> Decreases the progressbar from 100% to 0%</td>
+          <td><code>true</code>Increases the progress bar from 0% to 100%<br><code>false</code> Decreases the progress bar from 100% to 0%</td>
         </tr>
         <tr>
             <td>pauseOnHover</td>
