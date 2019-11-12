@@ -985,7 +985,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <h2 class="ui dividing header">States</h2>
+  <h2 class="ui dividing header">Form States</h2>
 
   <div data-use-content="true" class="example">
     <h4 class="ui header">Loading</h4>
@@ -1059,6 +1059,26 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
+  <div data-use-content="true" class="example">
+    <h4 class="ui header">Info</h4>
+    <p>If a form is in informational state, it will automatically show any info message block.</p>
+
+    <div class="ui form info">
+      <div class="field">
+        <label>New Password</label>
+        <input type="password" placeholder="joe@schmoe.com">
+      </div>
+      <div class="ui info message">
+        <div class="header">Requirements</div>
+        <ul class="list">
+          <li>Password must contain at least 8 characters</li>
+        </ul>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Field States</h2>
 
   <div data-use-content="true" class="example">
     <h4 class="ui header">Field Error</h4>
@@ -1088,6 +1108,114 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         </div>
       </div>
       <div class="inline field error">
+        <div class="ui checkbox">
+          <input type="checkbox" />
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-use-content="true" class="example">
+    <h4 class="ui header">Field Warning</h4>
+    <p>Individual fields may display a warning state</p>
+
+    <div class="ui form">
+      <div class="two fields">
+        <div class="field warning">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="field warning">
+        <label>Gender</label>
+        <div class="ui selection dropdown">
+          <div class="default text">Select</div>
+          <i class="dropdown icon"></i>
+          <input type="hidden" name="gender">
+          <div class="menu">
+            <div class="item" data-value="male">Male</div>
+            <div class="item" data-value="female">Female</div>
+          </div>
+        </div>
+      </div>
+      <div class="inline field warning">
+        <div class="ui checkbox">
+          <input type="checkbox" />
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-use-content="true" class="example">
+    <h4 class="ui header">Field Success</h4>
+    <p>Individual fields may display a Success state</p>
+
+    <div class="ui form">
+      <div class="two fields">
+        <div class="field success">
+          <label>Username</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="field success">
+        <label>Gender</label>
+        <div class="ui selection dropdown">
+          <div class="default text">Select</div>
+          <i class="dropdown icon"></i>
+          <input type="hidden" name="gender">
+          <div class="menu">
+            <div class="item" data-value="male">Male</div>
+            <div class="item" data-value="female">Female</div>
+          </div>
+        </div>
+      </div>
+      <div class="inline field success">
+        <div class="ui checkbox">
+          <input type="checkbox" />
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-use-content="true" class="example">
+    <h4 class="ui header">Field Info</h4>
+    <p>Individual fields may display an informational state</p>
+
+    <div class="ui form">
+      <div class="two fields">
+        <div class="field info">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="field info">
+        <label>Gender</label>
+        <div class="ui selection dropdown">
+          <div class="default text">Select</div>
+          <i class="dropdown icon"></i>
+          <input type="hidden" name="gender">
+          <div class="menu">
+            <div class="item" data-value="male">Male</div>
+            <div class="item" data-value="female">Female</div>
+          </div>
+        </div>
+      </div>
+      <div class="inline field info">
         <div class="ui checkbox">
           <input type="checkbox" />
           <label>I agree to the Terms and Conditions</label>
