@@ -1542,6 +1542,27 @@ body.progress.animated .ui.progress .bar {
 }
 
 /*--------------
+      Emoji
+---------------*/
+#example emojiSearch.ui.search {
+  float: right;
+  position: relative;
+  z-index: 1000;
+}
+#example emojiSearch .result em {
+  float: right;
+  margin-top: -5px;
+  margin-left: 11px;
+}
+#example .emoji.example .grid > .column {
+  text-align: center;
+}
+#example .emoji.example .loading.segment {
+  height: 500px;
+}
+
+
+/*--------------
       Icon
 ---------------*/
 

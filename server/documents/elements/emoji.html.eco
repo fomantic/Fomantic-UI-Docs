@@ -1,0 +1,118 @@
+---
+layout      : 'default'
+css         : 'emoji'
+standalone  : true
+
+element     : 'emoji'
+elementType : 'element'
+
+title       : 'Emoji'
+description : 'An icon is a glyph used to represent an emotinal state'
+type        : 'UI Element'
+
+themes      : ['Default']
+---
+
+<%- @partial('header', { tabs: { emoji: 'Emojis', definition: 'Definition' } }) %>
+
+<script src="/javascript/emoji_strategy.js"></script>
+<script src="/javascript/emoji.js"></script>
+
+<div class="main ui container">
+
+  <div class="ui active tab" data-tab="emoji">
+
+    <emojiSearch class="ui right aligned search">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search emojis...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </emojiSearch>
+
+    <h2 class="ui header">Emoji Set</h2>
+    <p>An emoji set contains all <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Unicode 12.1 Emoji Characters</a></p>
+    <div class="ui ignored warning message">
+      Emojis serve a very similar function to text in a page. In Fomantic emojis receive a special tag <code>&lt;em&gt;</code> which allow for an abbreviated markup when sitting along-side text.
+        <br>
+        Because of the complexity and possible interferance with existing fomantic classnames, emoji names have to be provided via the <code>data-emoji</code> attribute instead of usual classnaming.
+    </div>
+    <div class="ui ignored message">
+        By default all emoji images are linked to CDN and are <b>not part of FUI itself</b>.
+          <ul class="ui list">
+              <li>The default theme links to the set by <a href="https://twemoji.twitter.com/">Tweemoji v12</a> under CC-BY 4.0 license</li>
+              <li>As an alternative the available joypixels theme links to the Emoji set designed by <a href="https://www.joypixels.com/emoji/">Joypixels 5</a> under their <a href="https://www.joypixels.com/licenses/free">free license model</a></li>
+          </ul>
+          If needed, you might download your personal icon set from the respective websites respecting their individual licenses, host it locally and change the <code>@emojipath</code> in <code>emoji.variables</code> of the theme you are using.
+    </div>
+      <div class="ui ignored warning icon message">
+          <i class="exclamation icon"></i>
+          <div class="content">
+          If you use Fomantic in a commercial or business project and want to use the alternative joypixels set, you have to get a <a href="https://www.joypixels.com/licenses">premium license</a> for your project
+          </div>
+      </div>
+      <div class="ui emoji container"></div>
+
+  </div>
+
+  <div class="ui tab" data-tab="definition">
+
+    <div class="no example">
+      <h4 class="ui header">General</h4>
+      <p>You can provide the emoji shortname with or without colons</p>
+      <div class="code">
+          I <em data-emoji=":cupid:"></em> Fomantic-UI
+          I <em data-emoji="cupid"></em> Fomantic-UI
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">States</h2>
+
+    <div class="example">
+      <h4 class="ui header">Disabled</h4>
+      <p>An emoji can show that it is disabled</p>
+      <div class="ui basic segment">
+          <em data-emoji="anguished" class="disabled"></em>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Loading</h4>
+      <p>An emoji can be used as a simple loader</p>
+      <div class="ui basic segment">
+          <em data-emoji="angel" class="loading"></em>
+          <em data-emoji="blush" class="loading"></em>
+          <em data-emoji="grin" class="loading"></em>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Variations</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Size</h4>
+      <p>An emoji can vary in size. By default all emojis are <code>small</code> sized</p>
+      <div class="ui basic segment">
+          <em data-emoji="relaxed" class="small"></em> Small
+          <br>
+          <em data-emoji="relaxed" class="medium"></em> Medium
+          <br>
+          <em data-emoji="relaxed" class="large"></em> Large
+          <br>
+          <em data-emoji="relaxed" class="big"></em> Big
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Link</h4>
+      <p>An emoji can be formatted as a link</p>
+      <div class="ui basic segment">
+          <em data-emoji="slight_smile" class="link"></em>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</div>
