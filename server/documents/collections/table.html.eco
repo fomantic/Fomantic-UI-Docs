@@ -564,7 +564,6 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
         </tr>
       </tbody>
     </table>
-
   </div>
 
   <div class="example">
@@ -601,11 +600,45 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tr>
       </tbody>
     </table>
+  </div>
 
+  <div class="example">
+    <h4 class="ui header">Marked<div class="ui black label">New in 2.8</div></h4>
+    <p>A cell or row can be marked by a colored left or right border</p>
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="right marked blue">No Name Specified</td>
+          <td class="left marked red">Unknown</td>
+          <td>None</td>
+        </tr>
+        <tr class="left marked green">
+          <td>Jimmy</td>
+          <td><i class="microphone icon"></i> Recording session</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td class="right marked orange">Unknown</td>
+          <td><i class="child icon"></i> Baby Party</td>
+        </tr>
+        <tr class="right marked purple">
+          <td>Jill</td>
+          <td>Unknown</td>
+          <td>Vacation</td>
+        </tr>
+        </tbody>
+    </table>
   </div>
 
   <h2 class="ui dividing header">Variations</h2>
-
 
   <div class="example">
     <h4 class="ui header">Single Line</h4>
@@ -641,8 +674,6 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tbody>
     </table>
   </div>
-
-
 
   <div class="example">
     <h4 class="ui header">
@@ -761,9 +792,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
         </tr>
       </tbody>
     </table>
-
   </div>
-
 
   <div class="example">
     <h4 class="ui header">Selectable Row</h4>
