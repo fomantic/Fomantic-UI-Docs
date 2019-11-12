@@ -140,6 +140,16 @@ themes      : ['Default']
       ;
       </div>
     </div>
+    <div class="another example">
+      <p>You can also set the type or date using HTML markup <span class="ui black label">New in 2.8.0</span></p>
+      <div class="ui ignored info message">This could be useful when used with form validation without the need to instantiate the calendar via javascript before. Form validation recognizes a calendar component within the form and instantiates it automatically by using existing metadata values.</div>
+      <div class="ui calendar" id="type_calendar" data-type="date" data-date="2019-12-24">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+    </div>
 
     <div class="example">
       <h4 class="ui header">Year first calendar</h4>

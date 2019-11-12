@@ -10,6 +10,8 @@ semantic.calendar.ready = function() {
     handler
   ;
 
+  //Type by data attribute
+  $('#type_calendar').calendar({});
   // Range
   $('#rangestart').calendar({
     type: 'date',
