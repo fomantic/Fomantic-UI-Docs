@@ -1015,7 +1015,7 @@ type        : 'UI Module'
             <div class="code">
             error : {
               source          : 'Cannot search. No source used, and Semantic API module was not included',
-	      noResultsHeader : 'No Results',
+              noResultsHeader : 'No Results',
               noResults       : 'Your search returned no results',
               logging         : 'Error in debug logging, exiting.',
               noTemplate      : 'A valid template name was not specified.',
