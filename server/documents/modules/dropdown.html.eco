@@ -2889,16 +2889,16 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Hides dropdown</td>
         </tr>
         <tr>
-          <td>clear</td>
-          <td>Clears dropdown of selection</td>
+          <td>clear (preventChangeTrigger)</td>
+          <td>Clears dropdown of selection. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event (default: <code>false</code>).</td>
         </tr>
         <tr>
           <td>hide others</td>
           <td>Hides all other dropdowns that is not current dropdown</td>
         </tr>
         <tr>
-          <td>restore defaults</td>
-          <td>Restores dropdown text and value to its value on page load</td>
+          <td>restore defaults (preventChangeTrigger)</td>
+          <td>Restores dropdown text and value to its value on page load. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event (default: <code>false</code>).</td>
         </tr>
         <tr>
           <td>restore default text</td>
@@ -2937,8 +2937,8 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Sets dropdown text to a value</td>
         </tr>
         <tr>
-          <td>set value(value)</td>
-          <td>Sets dropdown input to value (does not update display state)</td>
+          <td>set value (value,text,$selected,preventChangeTrigger)</td>
+          <td>Sets dropdown input to value (does not update display state). <code>text</code> and <code>$selected</code> are used internally and can be ignored. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event</td>
         </tr>
         <tr>
           <td>get text</td>
