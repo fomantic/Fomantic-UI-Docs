@@ -595,7 +595,7 @@ themes      : ['Default']
       </tr>
       <tr>
         <td>set date(date, updateInput = true, fireChange = true)</td>
-        <td>Set the selected date. Pass <code>false</code> to <code>updateInput</code> to disable updating the input. Pass <code>false</code> to <code>fireChange</code> to disable the <code>onChange</code> callback for this change</td>
+        <td>Set the selected date. Pass <code>false</code> to <code>updateInput</code> to disable updating the input. Pass <code>false</code> to <code>fireChange</code> to disable the <code>onBeforeChange</code> and <code>onChange</code> callbacks for this change</td>
       </tr>
       <tr>
         <td>get mode</td>
@@ -853,10 +853,15 @@ themes      : ['Default']
         <th>Description</th>
       </thead>
       <tbody>
-      <tr>
+        <tr>
+          <td>onBeforeChange <span class="ui red label"><i class="exclamation icon"></i>New in 2.8.0</span></td>
+          <td>active content</td>
+          <td>Is called before a calendar date changes. <code>return false;</code> will cancel the change</td>
+        </tr>
+        <tr>
           <td>onChange</td>
           <td>active content</td>
-          <td>Is called after a calendar date changes. <code>return false;</code> will cancel the change</td>
+          <td>Is called after a calendar date has changed.</td>
         </tr>
         <tr>
           <td>onShow</td>
