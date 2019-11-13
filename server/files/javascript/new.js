@@ -446,6 +446,9 @@ semantic.new.ready = function() {
       bars: ['Red', 'Yellow', 'Blue']
     }
   });
+
+  $('#twoeight-breakingchanges')
+    .accordion();
 };
 
 
