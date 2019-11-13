@@ -20,6 +20,7 @@
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/reset.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/site.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/emoji.css">
 
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/button.css">
 
