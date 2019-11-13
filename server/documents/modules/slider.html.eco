@@ -48,6 +48,22 @@ themes      : ['Default']
     </div>
 
     <div class="example">
+        <h4 class="ui header">Custom interpreted labels</h4>
+        <p>You can provide a function which returns a custom label according to the label value</p>
+        <div class="ui labeled ticked slider" id="interpretedlabel"></div>
+    </div>
+    <div class="evaluated code" data-type="javascript">
+        var labels = ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ/ς", "τ", "υ", "φ", "χ", "ψ", "ω"];
+        $('#interpretedlabel')
+          .slider({
+            interpretLabel: function(value) {
+              return labels[value];
+            }
+          })
+        ;
+    </div>
+
+    <div class="example">
       <h4 class="ui header">Range slider</h4>
       <p>A range slider which allow you to select a range between two values</p>
       <div class="ui labeled ticked range slider" id="slider-range"></div><br>
@@ -295,6 +311,19 @@ themes      : ['Default']
           <td>labelType</td>
           <td>number</td>
           <td>The type of label to display for a labeled slider. Can be <code>number</code> or <code>letter</code></td>
+        </tr>
+        <tr>
+          <td>interpretLabel</td>
+          <td>false</td>
+          <td>
+            You can specify a function here which consumes the current label value as parameter and should return a custom label text according to the given value
+            <div class="code">
+            interpretLabel: function(value){
+            //do something with 'value' and return matching text
+              return myCustomText;
+            }
+            </div>
+          </td>
         </tr>
         <tr>
           <td>showLabelTicks</td>
