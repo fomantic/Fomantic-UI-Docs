@@ -7,8 +7,10 @@ element     : 'emoji'
 elementType : 'element'
 
 title       : 'Emoji'
-description : 'An icon is a glyph used to represent an emotinal state'
+description : 'An emoji is a glyph used to represent an emotinal state'
 type        : 'UI Element'
+status      : 'NEW'
+statusColor : 'teal'
 
 themes      : ['Default']
 ---
