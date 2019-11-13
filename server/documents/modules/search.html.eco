@@ -1010,17 +1010,18 @@ type        : 'UI Module'
           <td>Debug output includes all internal behaviors</td>
         </tr>
         <tr>
-          <td>errors</td>
+          <td>error</td>
           <td colspan="2">
             <div class="code">
             error : {
-              source      : 'Cannot search. No source used, and Semantic API module was not included',
-              noResults   : 'Your search returned no results',
-              logging     : 'Error in debug logging, exiting.',
-              noTemplate  : 'A valid template name was not specified.',
-              serverError : 'There was an issue with querying the server.',
-              maxResults  : 'Results must be an array to use maxResults setting',
-              method      : 'The method you called is not defined.'
+              source          : 'Cannot search. No source used, and Semantic API module was not included',
+              noResultsHeader : 'No Results',
+              noResults       : 'Your search returned no results',
+              logging         : 'Error in debug logging, exiting.',
+              noTemplate      : 'A valid template name was not specified.',
+              serverError     : 'There was an issue with querying the server.',
+              maxResults      : 'Results must be an array to use maxResults setting',
+              method          : 'The method you called is not defined.'
             },
             </div>
           </td>
