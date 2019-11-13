@@ -70,7 +70,9 @@ semantic.emoji.ready = function() {
     $example.append($('<div>',{class:'existing code'}));
     $emojiContainer.append($example);
 
-    var $moreButton = $('<button>',{class:'ui primary button',text:'Show more '+cat+' emojis', 'data-chunkpos':0,'data-category':cat, click:addEmojiChunk});
+    var $moreButton = $('<a>',{class:'emoji-category-button',text:'Show more '+cat+' emojis', 'data-chunkpos':0,'data-category':cat, click:addEmojiChunk});
+    $moreButton.append($('<i>', {class:'ui angle down icon'}));
+
     $emojiContainer.append($moreButton);
 
     categories[cat].sort(function(a,b){

@@ -2292,6 +2292,15 @@ code .chunk {
   font-family: Verdana, sans-serif;
 }
 
+.emoji-category-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(0,0,0,.6);
+  cursor: pointer;
+  padding: .5em;
+  font-size: 1.2em;
+}
 
 
 /*******************************
