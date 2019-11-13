@@ -83,6 +83,29 @@ themes      : ['Default']
       <br><br>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Partial Ratings <div class="ui black label">New in 2.8.0</div></h4>
+      <p>You can use decimal values for showing partially filled ratings</p>
+      <div class="ui ignored warning message">
+        <p>Partial ratings require jQuery version >3.2 and are only supported by browsers with support for <a href="https://caniuse.com/#feat=css-variables">CSS Variables</a> and <a href="https://caniuse.com/#feat=mdn-css_types_image_gradient_linear-gradient_interpolation_hints">Gradient Midpoints</a>. Unsupported browsers will use a rounded down value.</p>
+      </div>
+      <div class="ui black rating" data-rating="0.5" data-max-rating="5"></div>
+      <br><br>
+      <div class="ui pink rating" data-rating="1.25" data-max-rating="5"></div>
+      <br><br>
+      <div class="ui red rating" data-rating="1.775" data-max-rating="5"></div>
+      <br><br>
+      <div class="ui yellow rating" data-rating="2.5" data-max-rating="5"></div>
+      <br><br>
+      <div class="ui green rating" data-rating="3.225" data-max-rating="5"></div>
+      <br><br>
+      <div class="ui purple rating" data-rating="3.65" data-max-rating="5"></div>
+      <br><br>
+      <div class="ui blue rating" data-rating="4.375" data-max-rating="5"></div>
+      <br><br>
+      <div class="ui brown rating" data-rating="4.75" data-max-rating="5"></div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
 
     <div class="example">
