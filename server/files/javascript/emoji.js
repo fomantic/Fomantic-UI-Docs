@@ -20,7 +20,7 @@ semantic.emoji.ready = function() {
   var addEmojiChunk = function(){
     var $button = $(this),
         category = $button.attr('data-category'),
-        chunkpos = $button.attr('data-chunkpos'),
+        chunkpos = parseInt($button.attr('data-chunkpos'),10),
         $example = $button.prev(),
         $grid = $example.find('.grid'),
         $code = $example.find('.code'),
@@ -43,6 +43,8 @@ semantic.emoji.ready = function() {
     }
     if(chunkpos === maxChunk) {
       $button.remove();
+    } else {
+      $button.attr('data-chunkpos', chunkpos);
     }
   };
 
