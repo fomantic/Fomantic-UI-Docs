@@ -5,7 +5,7 @@ standalone  : true
 order       : 1
 
 title       : 'Getting Started'
-description : 'Getting up and running with Fomantic UI'
+description : 'Getting up and running with Fomantic-UI'
 type        : 'Main'
 ---
 <script src="/javascript/started.js"></script>
@@ -51,8 +51,14 @@ type        : 'Main'
 
     <p>To install Fomantic-UI run the following command</p>
     <div class="ignored code" data-type="bash">
-      $ npm install --save fomantic-ui
+      $ npm install fomantic-ui
     </div>
+
+    <p>Or try living on the edge and give our nightly build a test and try new features and bug fixes early!</p>
+    <div class="ignored code" data-type="bash">
+      $ npm install fomantic-ui@nightly
+    </div>
+
     <p>
       When NPM finishes installing it will start the Fomantic-UI interactive installation prompt.
       The installation prompt is used to create your <code>semantic.json</code> file which stores
@@ -179,12 +185,12 @@ type        : 'Main'
     </div>
     <div class="ui active basic tab vertical segment" data-tab="cssdistinstall">
       <div class="ignored code" data-type="bash">
-        $ npm install --save fomantic-ui-css
+        $ npm install fomantic-ui-css
       </div>
     </div>
     <div class="ui basic tab vertical segment" data-tab="lessdistinstall">
       <div class="ignored code" data-type="bash">
-        $ npm install --save fomantic-ui-less
+        $ npm install fomantic-ui-less
       </div>
     </div>
   </div>
