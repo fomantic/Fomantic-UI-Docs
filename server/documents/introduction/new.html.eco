@@ -17,63 +17,115 @@ type        : 'Main'
 
   <div class="ui active tab" data-tab="twoeight">
     <h2 class="ui dividing header">Toasty Emotion</h2>
-    <p>Fomantic <code>2.8</code> brings some of the best updates yet including variation feature customization for components, more toast changes and EMOTES <em data-emoji="tada"></em> <em data-emoji="smile"></em></p>
+    <p>Fomantic <code>2.8</code> brings some of the best updates yet including variation feature customization for components, more toast changes and EMOTES <em data-emoji="tada"></em> <em data-emoji="smile"></em> and of course A LOT of critical and much needed bug fixes.</p>
 
-    <div class="ui accordion" id="twoeight-breakingchanges">
-      <div class="title">
-        <i class="dropdown icon"></i>
-        List of breaking changes
-      </div>
-      <div class="content">
-        <div class="ui transition hidden bulleted list">
-          <div class="item">
-            <div>API</div>
-            <div class="list">
-              <div class="item">Context for the <code>beforeSend</code> function now is set to the initialized element instead of the content of <code>stateContext</code> (was already correct in the docs)</div>
-            </div>
-          </div>
-          <div class="item">
-            <div>Calendar</div>
-            <div class="list">
-              <div class="item">New callback <code>onBeforeChange</code> does, what <code>onChange</code> was doing before (being called before changing the date, given the chance to deny the change)</div>
-              <div class="item"><code>onChange</code> instead is now called after the date was changed</div>
-              <div class="item">When a month is parsed it is now mapped against the whole month name instead of only the first three characters</div>
-            </div>
-          </div>
-          <div class="item">
-            <div>Dropdown</div>
-            <div class="list">
-              <div class="item">A "required" attribute on a select-tag gets removed automatically</div>
-              <div class="item">When a search entry is not found in the dropdown list and no additions are allowed, the <code>searchterm</code> is now removed on blur</div>
-              <div class="item">When multiple items are selected <code>set.value()</code> internally provided a wrong additional parameter which probably isn't correctly fetched in an own <code>onChange</code> callback</div>
-            </div>
-          </div>
-          <div class="item">
-            <div>Emoji</div>
-            <div class="list">
-              <div class="item">An existing theme.config needs to have <code>@emoji: 'default';</code> added to the elements block</div>
-            </div>
-          </div>
-          <div class="item">
-            <div>Slider</div>
-            <div class="list">
-              <div class="item">New option <code>preventCrossover</code> is set to <code>true</code> by default to avoid range sliders to cross each other avoiding wrongly calculated values</div>
-            </div>
-          </div>
-          <div class="item">
-            <div>Toast</div>
-            <div class="list">
-              <div class="item">New defaults (<code>progressbar</code> decreases, title uses <code>ui header</code> having a slightly larger font size, shadow, white background, centered icon)</div>
-            </div>
-          </div>
-          <div class="item">
-            <div>Other</div>
-            <div class="list">
-              <div class="item">Possible heavy reduce of the created CSS file via dynamic LESS compilation: A new file variation.variables exists to control, which variants of the elements should be created in LESS. Setting some of them to <code>false</code> (in your own site.variables, you don't need to (but of course can) touch the variation.variables files!) By default everything is enabled and every component is rendered in any existing size (just as before)</div>
-            </div>
-          </div>
+    <p>Since this is a breaking changes update here is a list of breaking changes:</p>
+    <div class="ui bulleted list">
+      <div class="item">
+        <div>API</div>
+        <div class="list">
+          <div class="item">Context for the <code>beforeSend</code> function now is set to the initialized element instead of the content of <code>stateContext</code> (was already correct in the docs)</div>
         </div>
       </div>
+      <div class="item">
+        <div>Calendar</div>
+        <div class="list">
+          <div class="item">New callback <code>onBeforeChange</code> does, what <code>onChange</code> was doing before (being called before changing the date, given the chance to deny the change)</div>
+          <div class="item"><code>onChange</code> instead is now called after the date was changed</div>
+          <div class="item">When a month is parsed it is now mapped against the whole month name instead of only the first three characters</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Dropdown</div>
+        <div class="list">
+          <div class="item">A "required" attribute on a select-tag gets removed automatically</div>
+          <div class="item">When a search entry is not found in the dropdown list and no additions are allowed, the <code>searchterm</code> is now removed on blur</div>
+          <div class="item">When multiple items are selected <code>set.value()</code> internally provided a wrong additional parameter which probably isn't correctly fetched in an own <code>onChange</code> callback</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Emoji</div>
+        <div class="list">
+          <div class="item">An existing theme.config needs to have <code>@emoji: 'default';</code> added to the elements block</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Slider</div>
+        <div class="list">
+          <div class="item">New option <code>preventCrossover</code> is set to <code>true</code> by default to avoid range sliders to cross each other avoiding wrongly calculated values</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Toast</div>
+        <div class="list">
+          <div class="item">New defaults (<code>progressbar</code> decreases, title uses <code>ui header</code> having a slightly larger font size, shadow, white background, centered icon)</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Other</div>
+        <div class="list">
+          <div class="item">Possible heavy reduce of the created CSS file via dynamic LESS compilation: A new file variation.variables exists to control, which variants of the elements should be created in LESS. Setting some of them to <code>false</code> (in your own site.variables, you don't need to (but of course can) touch the variation.variables files!) By default everything is enabled and every component is rendered in any existing size (just as before)</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">
+      Sneak peak at some new features
+    </h2>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Toast
+      </h4>
+
+      <p>In <code>2.8</code> we added lots of new variations and features to the toast component, here is just a few of the amazing new changes.</p>
+
+      <div class="ui buttons" id="twoeight-toasts">
+        <button class="image-support ui button">Image Support</button>
+        <button class="pausing-on-hover ui button">Pause timer on hover</button>
+        <button class="action-buttons ui button">Action Buttons</button>
+        <button class="from-dom-elements ui button">Create from DOM elements</button>
+        <div class="ui blue toast" id="from-dom-elements-element">
+          <div class="content">
+            A Toast created from a DOM element
+          </div>
+        </div>
+        <button class="info-states ui button">Information states</button>
+      </div>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        EMOJIS
+      </h4>
+
+      <p><code>2.8</code> introduces the new emoji element with support for all <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Unicode 12.1 Emoji Characters</a>.</p>
+
+      <p><em data-emoji="tada" class="large"></em> <em data-emoji="partying_face" class="large"></em> <em data-emoji="champagne" class="large"></em></p>
+
+      <p>You can find a full list of all emojis <a href="/elements/emoji.html">here</a>.</p>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Dynamic LESS Compilation
+      </h4>
+
+      <p>In <code>2.8</code> we are introducing a new feature for building custom themes, Dynamic LESS Compilation. This new feature allows you to disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size speeding up your website <em data-emoji="clap"></em></p>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Icon Update
+      </h4>
+
+      <p>Once again we have updated the icons to FontAwesome 5.11.2</p>
+
+      <i class="ui huge cowboy hat icon"></i>
+      <i class="ui huge running icon"></i>
+      <i class="ui huge vinyl record icon"></i>
+
+      <p>You can see a list of all the available icons <a href="/elements/icon.html">here</a>.</p>
     </div>
   </div>
 

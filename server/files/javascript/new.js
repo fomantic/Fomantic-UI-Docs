@@ -447,8 +447,72 @@ semantic.new.ready = function() {
     }
   });
 
-  $('#twoeight-breakingchanges')
-    .accordion();
+  $('#twoeight-toasts > .image-support')
+    .on('click', function() {
+      $('body')
+        .toast({
+          showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
+          classImage: 'avatar',
+          message: 'Avatar image on left of toast'
+        });
+    });
+
+  $('#twoeight-toasts > .pausing-on-hover')
+    .on('click', function() {
+      $('body')
+        .toast({
+          message: 'Timer paused on hover',
+          showProgress: 'bottom'
+        });
+    });
+
+  $('#twoeight-toasts > .action-buttons')
+    .on('click', function() {
+      $('body')
+        .toast({
+          message: 'Choose wisely...',
+          actions:	[
+            {
+              text: 'Yes',
+              class: 'green'
+            },
+            {
+              text: 'No',
+              class: 'red'
+            }
+          ]
+        });
+    });
+
+  $('#twoeight-toasts > .from-dom-elements')
+    .on('click', function() {
+      $('#from-dom-elements-element')
+        .toast();
+    });
+
+  $('#twoeight-toasts > .info-states')
+    .on('click', function() {
+      $('body')
+        .toast({
+          class: 'success',
+          message: 'A toast using the success state'
+        });
+      $('body')
+        .toast({
+          class: 'error',
+          message: 'A toast using the error state'
+        });
+      $('body')
+        .toast({
+          class: 'warning',
+          message: 'A toast using the warning state'
+        });
+      $('body')
+        .toast({
+          class: 'info',
+          message: 'A toast using the info state'
+        });
+    });
 };
 
 
