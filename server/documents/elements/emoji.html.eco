@@ -112,7 +112,7 @@ themes      : ['Default']
           <br><br>
           <div class="ui massive label">Within a label <em data-emoji="relaxed"></em></div>
           <br><br>
-          <span class="ui small orange text">Within a text <em data-emoji="relaxed"></em></div>
+          <span class="ui small orange text">Within a text <em data-emoji="relaxed"></em></span>
       </div>
     </div>
 
