@@ -39,7 +39,7 @@ semantic.emoji.ready = function() {
           $emoji = $('<em>', {'data-emoji':obj.shortname})
       ;
       $code.append($emoji);
-      $grid.append($column.prepend($emoji.addClass('medium').attr('data-tooltip',obj.name)));
+      $grid.append($column.prepend($emoji.addClass('medium')).attr('data-tooltip',obj.name));
     }
     if(chunkpos === maxChunk) {
       $button.remove();
