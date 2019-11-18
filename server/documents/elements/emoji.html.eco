@@ -7,7 +7,7 @@ element     : 'emoji'
 elementType : 'element'
 
 title       : 'Emoji'
-description : 'An emoji is a glyph used to represent an emotinal state'
+description : 'An emoji is a glyph used to represent an emotional state'
 type        : 'UI Element'
 status      : 'NEW'
 statusColor : 'teal'
@@ -90,9 +90,9 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="no example">
+    <div class="example">
       <h4 class="ui header">Size</h4>
-      <p>An emoji can vary in size. By default all emojis are <code>small</code> sized</p>
+      <p>An emoji can vary in size</p>
       <div class="ui basic segment">
           <em data-emoji="relaxed" class="small"></em> Small
           <br>
@@ -101,6 +101,18 @@ themes      : ['Default']
           <em data-emoji="relaxed" class="large"></em> Large
           <br>
           <em data-emoji="relaxed" class="big"></em> Big
+      </div>
+    </div>
+    <div class="another example">
+      <h4 className="ui header">Autosizing</h4>
+      <p>If no specific size class is given, all emojis are automatically sized according to the current element font-size</p>
+      <div class="ui basic segment">
+          <div class="ui small header">Within a header <em data-emoji="relaxed"></em></div>
+          <div class="ui large button">Within a button <em data-emoji="relaxed"></em></div>
+          <br><br>
+          <div class="ui massive label">Within a label <em data-emoji="relaxed"></em></div>
+          <br><br>
+          <span class="ui small orange text">Within a text <em data-emoji="relaxed"></em></span>
       </div>
     </div>
 
