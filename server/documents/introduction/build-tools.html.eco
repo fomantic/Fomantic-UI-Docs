@@ -285,7 +285,12 @@ type        : 'Introduction'
         "transition",
         "api",        
         "state",
-        "visibility"
+        "visibility",
+        "text",
+        "calendar",
+        "slider",
+        "toast",
+        "emoji"
       ],
       // whether to include special project maintainer tasks
       "admin": false
