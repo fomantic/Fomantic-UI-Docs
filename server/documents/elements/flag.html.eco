@@ -14,6 +14,7 @@ type        : 'UI Element'
 
 <%- @partial('header') %>
 
+<script src="/javascript/flag.js"></script>
 <div class="main ui container">
 
   <div class="ui active tab" data-tab="flags">
