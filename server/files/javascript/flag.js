@@ -942,7 +942,7 @@ semantic.emoji.ready = function() {
   }, {
     countrycode: 'gb',
     name: 'United Kingdom',
-    alias: ''
+    alias: 'uk'
   }, {
     countrycode: 'gb_eng',
     name: 'England',
