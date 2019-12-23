@@ -35,7 +35,7 @@ themes      : ['Default']
       Icons serve a very similar function to text in a page. In Semantic icons receive a special tag <code>&lt;i&gt;</code> which allow for an abbreviated markup when sitting along-side text.
     </div>
 
-    <div class="ui ignored message">Fomantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.11.2</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
+    <div class="ui ignored message">Semantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.12.0</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
 
     <div class="icon example">
       <h4 class="ui header">Accessibility</h4>
@@ -202,9 +202,11 @@ themes      : ['Default']
         <div class="column"><i class="chevron up icon" data-search-terms="arrow, collapse, upload"></i>chevron up</div>
         <div class="column"><i class="cloud download alternate icon" data-search-terms="download, export, save"></i>cloud download alternate</div>
         <div class="column"><i class="cloud upload alternate icon" data-search-terms="cloud-upload, import, save, upload"></i>cloud upload alternate</div>
+        <div class="column"><i class="compress alternate icon" data-search-terms="collapse, fullscreen, minimize, move, resize, shrink, smaller"></i>compress alternate</div>
         <div class="column"><i class="compress arrows alternate icon" data-search-terms="collapse, fullscreen, minimize, move, resize, shrink, smaller"></i>compress arrows alternate</div>
         <div class="column"><i class="download icon" data-search-terms="export, hard drive, save, transfer"></i>download</div>
         <div class="column"><i class="exchange alternate icon" data-search-terms="arrow, arrows, exchange, reciprocate, return, swap, transfer"></i>exchange alternate</div>
+        <div class="column"><i class="expand alternate icon" data-search-terms="arrow, bigger, enlarge, resize"></i>expand alternate</div>
         <div class="column"><i class="expand arrows alternate icon" data-search-terms="arrows-alt, bigger, enlarge, move, resize"></i>expand arrows alternate</div>
         <div class="column"><i class="external alternate icon" data-search-terms="external-link, new, open, share"></i>external alternate</div>
         <div class="column"><i class="external link square alternate icon" data-search-terms="external-link-square, new, open, share"></i>external link square alternate</div>
@@ -315,9 +317,11 @@ themes      : ['Default']
         <i class="chevron up icon"></i>
         <i class="cloud download alternate icon"></i>
         <i class="cloud upload alternate icon"></i>
+        <i class="compress alternate icon"></i>
         <i class="compress arrows alternate icon"></i>
         <i class="download icon"></i>
         <i class="exchange alternate icon"></i>
+        <i class="expand alternate icon"></i>
         <i class="expand arrows alternate icon"></i>
         <i class="external alternate icon"></i>
         <i class="external link square alternate icon"></i>
@@ -389,9 +393,11 @@ themes      : ['Default']
         <div class="column"><i class="closed captioning icon" data-search-terms="cc, deaf, hearing, subtitle, subtitling, text, video"></i>closed captioning</div>
         <div class="column"><i class="closed captioning outline icon" data-search-terms="cc, deaf, hearing, subtitle, subtitling, text, video"></i>closed captioning outline</div>
         <div class="column"><i class="compress icon" data-search-terms="collapse, fullscreen, minimize, move, resize, shrink, smaller"></i>compress</div>
+        <div class="column"><i class="compress alternate icon" data-search-terms="collapse, fullscreen, minimize, move, resize, shrink, smaller"></i>compress alternate</div>
         <div class="column"><i class="compress arrows alternate icon" data-search-terms="collapse, fullscreen, minimize, move, resize, shrink, smaller"></i>compress arrows alternate</div>
         <div class="column"><i class="eject icon" data-search-terms="abort, cancel, cd, discharge"></i>eject</div>
         <div class="column"><i class="expand icon" data-search-terms="arrow, bigger, enlarge, resize"></i>expand</div>
+        <div class="column"><i class="expand alternate icon" data-search-terms="arrow, bigger, enlarge, resize"></i>expand alternate</div>
         <div class="column"><i class="expand arrows alternate icon" data-search-terms="arrows-alt, bigger, enlarge, move, resize"></i>expand arrows alternate</div>
         <div class="column"><i class="fast backward icon" data-search-terms="beginning, first, previous, rewind, start"></i>fast backward</div>
         <div class="column"><i class="fast forward icon" data-search-terms="end, last, next"></i>fast forward</div>
@@ -447,9 +453,11 @@ themes      : ['Default']
         <i class="closed captioning icon"></i>
         <i class="closed captioning outline icon"></i>
         <i class="compress icon"></i>
+        <i class="compress alternate icon"></i>
         <i class="compress arrows alternate icon"></i>
         <i class="eject icon"></i>
         <i class="expand icon"></i>
+        <i class="expand alternate icon"></i>
         <i class="expand arrows alternate icon"></i>
         <i class="fast backward icon"></i>
         <i class="fast forward icon"></i>
@@ -510,6 +518,7 @@ themes      : ['Default']
         <div class="column"><i class="car battery icon" data-search-terms="auto, electric, mechanic, power"></i>car battery</div>
         <div class="column"><i class="car crash icon" data-search-terms="accident, auto, automobile, insurance, sedan, transportation, vehicle, wreck"></i>car crash</div>
         <div class="column"><i class="car side icon" data-search-terms="auto, automobile, sedan, transportation, travel, vehicle"></i>car side</div>
+        <div class="column"><i class="caravan icon" data-search-terms="camper, motor home, rv, trailer, travel"></i>caravan</div>
         <div class="column"><i class="charging station icon" data-search-terms="electric, ev, tesla, vehicle"></i>charging station</div>
         <div class="column"><i class="gas pump icon" data-search-terms="car, fuel, gasoline, petrol"></i>gas pump</div>
         <div class="column"><i class="motorcycle icon" data-search-terms="bike, machine, transportation, vehicle"></i>motorcycle</div>
@@ -517,6 +526,7 @@ themes      : ['Default']
         <div class="column"><i class="shuttle van icon" data-search-terms="airport, machine, public-transportation, transportation, travel, vehicle"></i>shuttle van</div>
         <div class="column"><i class="tachometer alternate icon" data-search-terms="dashboard, fast, odometer, speed, speedometer"></i>tachometer alternate</div>
         <div class="column"><i class="taxi icon" data-search-terms="cab, cabbie, car, car service, lyft, machine, transportation, travel, uber, vehicle"></i>taxi</div>
+        <div class="column"><i class="trailer icon" data-search-terms="carry, haul, moving, travel"></i>trailer</div>
         <div class="column"><i class="truck icon" data-search-terms="cargo, delivery, shipping, vehicle"></i>truck</div>
         <div class="column"><i class="truck monster icon" data-search-terms="offroad, vehicle, wheel"></i>truck monster</div>
         <div class="column"><i class="truck pickup icon" data-search-terms="cargo, vehicle"></i>truck pickup</div>
@@ -531,6 +541,7 @@ themes      : ['Default']
         <i class="car battery icon"></i>
         <i class="car crash icon"></i>
         <i class="car side icon"></i>
+        <i class="caravan icon"></i>
         <i class="charging station icon"></i>
         <i class="gas pump icon"></i>
         <i class="motorcycle icon"></i>
@@ -538,6 +549,7 @@ themes      : ['Default']
         <i class="shuttle van icon"></i>
         <i class="tachometer alternate icon"></i>
         <i class="taxi icon"></i>
+        <i class="trailer icon"></i>
         <i class="truck icon"></i>
         <i class="truck monster icon"></i>
         <i class="truck pickup icon"></i>
@@ -883,6 +895,7 @@ themes      : ['Default']
       <div class="ui doubling five column grid">
         <div class="column"><i class="binoculars icon" data-search-terms="glasses, magnify, scenic, spyglass, view"></i>binoculars</div>
         <div class="column"><i class="campground icon" data-search-terms="camping, fall, outdoors, teepee, tent, tipi"></i>campground</div>
+        <div class="column"><i class="caravan icon" data-search-terms="camper, motor home, rv, trailer, travel"></i>caravan</div>
         <div class="column"><i class="compass icon" data-search-terms="directions, directory, location, menu, navigation, safari, travel"></i>compass</div>
         <div class="column"><i class="compass outline icon" data-search-terms="directions, directory, location, menu, navigation, safari, travel"></i>compass outline</div>
         <div class="column"><i class="fire icon" data-search-terms="burn, caliente, flame, heat, hot, popular"></i>fire</div>
@@ -898,11 +911,13 @@ themes      : ['Default']
         <div class="column"><i class="mountain icon" data-search-terms="glacier, hiking, hill, landscape, travel, view"></i>mountain</div>
         <div class="column"><i class="route icon" data-search-terms="directions, navigation, travel"></i>route</div>
         <div class="column"><i class="toilet paper icon" data-search-terms="bathroom, halloween, holiday, lavatory, prank, restroom, roll"></i>toilet paper</div>
+        <div class="column"><i class="trailer icon" data-search-terms="carry, haul, moving, travel"></i>trailer</div>
         <div class="column"><i class="tree icon" data-search-terms="bark, fall, flora, forest, nature, plant, seasonal"></i>tree</div>
       </div>
       <div class="existing code">
         <i class="binoculars icon"></i>
         <i class="campground icon"></i>
+        <i class="caravan icon"></i>
         <i class="compass icon"></i>
         <i class="compass outline icon"></i>
         <i class="fire icon"></i>
@@ -918,6 +933,7 @@ themes      : ['Default']
         <i class="mountain icon"></i>
         <i class="route icon"></i>
         <i class="toilet paper icon"></i>
+        <i class="trailer icon"></i>
         <i class="tree icon"></i>
       </div>
     </div>
@@ -1326,7 +1342,7 @@ themes      : ['Default']
         <div class="column"><i class="power off icon" data-search-terms="cancel, computer, on, reboot, restart"></i>power off</div>
         <div class="column"><i class="print icon" data-search-terms="business, copy, document, office, paper"></i>print</div>
         <div class="column"><i class="satellite icon" data-search-terms="communications, hardware, orbit, space"></i>satellite</div>
-        <div class="column"><i class="satellite dish icon" data-search-terms="SETI, communications, hardware, receiver, saucer, signal"></i>satellite dish</div>
+        <div class="column"><i class="satellite dish icon" data-search-terms="SETI, communications, hardware, receiver, saucer, signal, space"></i>satellite dish</div>
         <div class="column"><i class="save icon" data-search-terms="disk, download, floppy, floppy-o"></i>save</div>
         <div class="column"><i class="save outline icon" data-search-terms="disk, download, floppy, floppy-o"></i>save outline</div>
         <div class="column"><i class="sd card icon" data-search-terms="image, memory, photo, save"></i>sd card</div>
@@ -1817,7 +1833,7 @@ themes      : ['Default']
       <h4 class="ui header">Education</h4>
       <p>Icons can represent education types and activities</p>
       <div class="ui doubling five column grid">
-        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, ion, nuclear, science"></i>atom</div>
+        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, electron, ion, isotope, neutron, nuclear, proton, science"></i>atom</div>
         <div class="column"><i class="award icon" data-search-terms="honor, praise, prize, recognition, ribbon, trophy"></i>award</div>
         <div class="column"><i class="bell icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell</div>
         <div class="column"><i class="bell outline icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell outline</div>
@@ -2015,7 +2031,7 @@ themes      : ['Default']
       <h4 class="ui header">Energy</h4>
       <p>Icons which represent energy equipment, types and status</p>
       <div class="ui doubling five column grid">
-        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, ion, nuclear, science"></i>atom</div>
+        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, electron, ion, isotope, neutron, nuclear, proton, science"></i>atom</div>
         <div class="column"><i class="battery empty icon" data-search-terms="charge, dead, power, status"></i>battery empty</div>
         <div class="column"><i class="battery full icon" data-search-terms="charge, power, status"></i>battery full</div>
         <div class="column"><i class="battery half icon" data-search-terms="charge, power, status"></i>battery half</div>
@@ -2024,6 +2040,7 @@ themes      : ['Default']
         <div class="column"><i class="broadcast tower icon" data-search-terms="airwaves, antenna, radio, reception, waves"></i>broadcast tower</div>
         <div class="column"><i class="burn icon" data-search-terms="caliente, energy, fire, flame, gas, heat, hot"></i>burn</div>
         <div class="column"><i class="charging station icon" data-search-terms="electric, ev, tesla, vehicle"></i>charging station</div>
+        <div class="column"><i class="fan icon" data-search-terms="ac, air conditioning, blade, blower, cool, hot"></i>fan</div>
         <div class="column"><i class="fire icon" data-search-terms="burn, caliente, flame, heat, hot, popular"></i>fire</div>
         <div class="column"><i class="fire alternate icon" data-search-terms="burn, caliente, flame, heat, hot, popular"></i>fire alternate</div>
         <div class="column"><i class="gas pump icon" data-search-terms="car, fuel, gasoline, petrol"></i>gas pump</div>
@@ -2053,6 +2070,7 @@ themes      : ['Default']
         <i class="broadcast tower icon"></i>
         <i class="burn icon"></i>
         <i class="charging station icon"></i>
+        <i class="fan icon"></i>
         <i class="fire icon"></i>
         <i class="fire alternate icon"></i>
         <i class="gas pump icon"></i>
@@ -2621,7 +2639,7 @@ themes      : ['Default']
       <div class="ui doubling five column grid">
         <div class="column"><i class="baby carriage icon" data-search-terms="buggy, carrier, infant, push, stroller, transportation, walk, wheels"></i>baby carriage</div>
         <div class="column"><i class="bath icon" data-search-terms="clean, shower, tub, wash"></i>bath</div>
-        <div class="column"><i class="bed icon" data-search-terms="lodging, rest, sleep, travel"></i>bed</div>
+        <div class="column"><i class="bed icon" data-search-terms="lodging, mattress, rest, sleep, travel"></i>bed</div>
         <div class="column"><i class="briefcase icon" data-search-terms="bag, business, luggage, office, work"></i>briefcase</div>
         <div class="column"><i class="car icon" data-search-terms="auto, automobile, sedan, transportation, travel, vehicle"></i>car</div>
         <div class="column"><i class="cocktail icon" data-search-terms="alcohol, beverage, drink, gin, glass, margarita, martini, vodka"></i>cocktail</div>
@@ -2700,29 +2718,45 @@ themes      : ['Default']
       <p>Icons which represent household items and utilities</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="bath icon" data-search-terms="clean, shower, tub, wash"></i>bath</div>
-        <div class="column"><i class="bed icon" data-search-terms="lodging, rest, sleep, travel"></i>bed</div>
+        <div class="column"><i class="bed icon" data-search-terms="lodging, mattress, rest, sleep, travel"></i>bed</div>
+        <div class="column"><i class="bell icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell</div>
+        <div class="column"><i class="bell outline icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell outline</div>
         <div class="column"><i class="blender icon" data-search-terms="cocktail, milkshake, mixer, puree, smoothie"></i>blender</div>
         <div class="column"><i class="chair icon" data-search-terms="furniture, seat, sit"></i>chair</div>
+        <div class="column"><i class="coffee icon" data-search-terms="beverage, breakfast, cafe, drink, fall, morning, mug, seasonal, tea"></i>coffee</div>
         <div class="column"><i class="couch icon" data-search-terms="chair, cushion, furniture, relax, sofa"></i>couch</div>
         <div class="column"><i class="door closed icon" data-search-terms="enter, exit, locked"></i>door closed</div>
         <div class="column"><i class="door open icon" data-search-terms="enter, exit, welcome"></i>door open</div>
         <div class="column"><i class="dungeon icon" data-search-terms="Dungeons & Dragons, building, d&d, dnd, door, entrance, fantasy, gate"></i>dungeon</div>
         <div class="column"><i class="fan icon" data-search-terms="ac, air conditioning, blade, blower, cool, hot"></i>fan</div>
+        <div class="column"><i class="lightbulb icon" data-search-terms="energy, idea, inspiration, light"></i>lightbulb</div>
+        <div class="column"><i class="lightbulb outline icon" data-search-terms="energy, idea, inspiration, light"></i>lightbulb outline</div>
+        <div class="column"><i class="plug icon" data-search-terms="connect, electric, online, power"></i>plug</div>
         <div class="column"><i class="shower icon" data-search-terms="bath, clean, faucet, water"></i>shower</div>
+        <div class="column"><i class="snowflake icon" data-search-terms="precipitation, rain, winter"></i>snowflake</div>
+        <div class="column"><i class="snowflake outline icon" data-search-terms="precipitation, rain, winter"></i>snowflake outline</div>
         <div class="column"><i class="toilet paper icon" data-search-terms="bathroom, halloween, holiday, lavatory, prank, restroom, roll"></i>toilet paper</div>
         <div class="column"><i class="tv icon" data-search-terms="computer, display, monitor, television"></i>tv</div>
       </div>
       <div class="existing code">
         <i class="bath icon"></i>
         <i class="bed icon"></i>
+        <i class="bell icon"></i>
+        <i class="bell outline icon"></i>
         <i class="blender icon"></i>
         <i class="chair icon"></i>
+        <i class="coffee icon"></i>
         <i class="couch icon"></i>
         <i class="door closed icon"></i>
         <i class="door open icon"></i>
         <i class="dungeon icon"></i>
         <i class="fan icon"></i>
+        <i class="lightbulb icon"></i>
+        <i class="lightbulb outline icon"></i>
+        <i class="plug icon"></i>
         <i class="shower icon"></i>
+        <i class="snowflake icon"></i>
+        <i class="snowflake outline icon"></i>
         <i class="toilet paper icon"></i>
         <i class="tv icon"></i>
       </div>
@@ -3257,7 +3291,7 @@ themes      : ['Default']
         <div class="column"><i class="balance scale left icon" data-search-terms="justice, legal, measure, unbalanced, weight"></i>balance scale left</div>
         <div class="column"><i class="balance scale right icon" data-search-terms="justice, legal, measure, unbalanced, weight"></i>balance scale right</div>
         <div class="column"><i class="bath icon" data-search-terms="clean, shower, tub, wash"></i>bath</div>
-        <div class="column"><i class="bed icon" data-search-terms="lodging, rest, sleep, travel"></i>bed</div>
+        <div class="column"><i class="bed icon" data-search-terms="lodging, mattress, rest, sleep, travel"></i>bed</div>
         <div class="column"><i class="beer icon" data-search-terms="alcohol, ale, bar, beverage, brewery, drink, lager, liquor, mug, stein"></i>beer</div>
         <div class="column"><i class="bell icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell</div>
         <div class="column"><i class="bell outline icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell outline</div>
@@ -3781,6 +3815,7 @@ themes      : ['Default']
       <div class="ui doubling five column grid">
         <div class="column"><i class="archive icon" data-search-terms="box, package, save, storage"></i>archive</div>
         <div class="column"><i class="box open icon" data-search-terms="archive, container, package, storage, unpack"></i>box open</div>
+        <div class="column"><i class="caravan icon" data-search-terms="camper, motor home, rv, trailer, travel"></i>caravan</div>
         <div class="column"><i class="couch icon" data-search-terms="chair, cushion, furniture, relax, sofa"></i>couch</div>
         <div class="column"><i class="dolly icon" data-search-terms="carry, shipping, transport"></i>dolly</div>
         <div class="column"><i class="people carry icon" data-search-terms="box, carry, fragile, help, movers, package"></i>people carry</div>
@@ -3788,6 +3823,7 @@ themes      : ['Default']
         <div class="column"><i class="sign icon" data-search-terms="directions, real estate, signage, wayfinding"></i>sign</div>
         <div class="column"><i class="suitcase icon" data-search-terms="baggage, luggage, move, suitcase, travel, trip"></i>suitcase</div>
         <div class="column"><i class="tape icon" data-search-terms="design, package, sticky"></i>tape</div>
+        <div class="column"><i class="trailer icon" data-search-terms="carry, haul, moving, travel"></i>trailer</div>
         <div class="column"><i class="truck moving icon" data-search-terms="cargo, inventory, rental, vehicle"></i>truck moving</div>
         <div class="column"><i class="truck packing icon" data-search-terms="box, cargo, delivery, inventory, moving, rental, vehicle"></i>truck packing</div>
         <div class="column"><i class="wine glass icon" data-search-terms="alcohol, beverage, cabernet, drink, grapes, merlot, sauvignon"></i>wine glass</div>
@@ -3795,6 +3831,7 @@ themes      : ['Default']
       <div class="existing code">
         <i class="archive icon"></i>
         <i class="box open icon"></i>
+        <i class="caravan icon"></i>
         <i class="couch icon"></i>
         <i class="dolly icon"></i>
         <i class="people carry icon"></i>
@@ -3802,6 +3839,7 @@ themes      : ['Default']
         <i class="sign icon"></i>
         <i class="suitcase icon"></i>
         <i class="tape icon"></i>
+        <i class="trailer icon"></i>
         <i class="truck moving icon"></i>
         <i class="truck packing icon"></i>
         <i class="wine glass icon"></i>
@@ -3872,7 +3910,7 @@ themes      : ['Default']
         <div class="column"><i class="balance scale left icon" data-search-terms="justice, legal, measure, unbalanced, weight"></i>balance scale left</div>
         <div class="column"><i class="balance scale right icon" data-search-terms="justice, legal, measure, unbalanced, weight"></i>balance scale right</div>
         <div class="column"><i class="bath icon" data-search-terms="clean, shower, tub, wash"></i>bath</div>
-        <div class="column"><i class="bed icon" data-search-terms="lodging, rest, sleep, travel"></i>bed</div>
+        <div class="column"><i class="bed icon" data-search-terms="lodging, mattress, rest, sleep, travel"></i>bed</div>
         <div class="column"><i class="beer icon" data-search-terms="alcohol, ale, bar, beverage, brewery, drink, lager, liquor, mug, stein"></i>beer</div>
         <div class="column"><i class="bell icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell</div>
         <div class="column"><i class="bell outline icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell outline</div>
@@ -4062,7 +4100,7 @@ themes      : ['Default']
         <div class="column"><i class="ruler horizontal icon" data-search-terms="design, draft, length, measure, planning"></i>ruler horizontal</div>
         <div class="column"><i class="ruler vertical icon" data-search-terms="design, draft, length, measure, planning"></i>ruler vertical</div>
         <div class="column"><i class="satellite icon" data-search-terms="communications, hardware, orbit, space"></i>satellite</div>
-        <div class="column"><i class="satellite dish icon" data-search-terms="SETI, communications, hardware, receiver, saucer, signal"></i>satellite dish</div>
+        <div class="column"><i class="satellite dish icon" data-search-terms="SETI, communications, hardware, receiver, saucer, signal, space"></i>satellite dish</div>
         <div class="column"><i class="save icon" data-search-terms="disk, download, floppy, floppy-o"></i>save</div>
         <div class="column"><i class="save outline icon" data-search-terms="disk, download, floppy, floppy-o"></i>save outline</div>
         <div class="column"><i class="school icon" data-search-terms="building, education, learn, student, teacher"></i>school</div>
@@ -4081,7 +4119,7 @@ themes      : ['Default']
         <div class="column"><i class="snowflake icon" data-search-terms="precipitation, rain, winter"></i>snowflake</div>
         <div class="column"><i class="snowflake outline icon" data-search-terms="precipitation, rain, winter"></i>snowflake outline</div>
         <div class="column"><i class="snowplow icon" data-search-terms="clean up, cold, road, storm, winter"></i>snowplow</div>
-        <div class="column"><i class="space shuttle icon" data-search-terms="astronaut, machine, nasa, rocket, transportation"></i>space shuttle</div>
+        <div class="column"><i class="space shuttle icon" data-search-terms="astronaut, machine, nasa, rocket, space, transportation"></i>space shuttle</div>
         <div class="column"><i class="star icon" data-search-terms="achievement, award, favorite, important, night, rating, score"></i>star</div>
         <div class="column"><i class="star outline icon" data-search-terms="achievement, award, favorite, important, night, rating, score"></i>star outline</div>
         <div class="column"><i class="sticky note icon" data-search-terms="message, note, paper, reminder, sticker"></i>sticky note</div>
@@ -4612,7 +4650,8 @@ themes      : ['Default']
       <p>Icons which represent religious activities and symbols</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="ankh icon" data-search-terms="amulet, copper, coptic christianity, copts, crux ansata, egypt, venus"></i>ankh</div>
-        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, ion, nuclear, science"></i>atom</div>
+        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, electron, ion, isotope, neutron, nuclear, proton, science"></i>atom</div>
+        <div class="column"><i class="bahai icon" data-search-terms="bahai, bahá'í, star"></i>bahai</div>
         <div class="column"><i class="bible icon" data-search-terms="book, catholicism, christianity, god, holy"></i>bible</div>
         <div class="column"><i class="church icon" data-search-terms="building, cathedral, chapel, community, religion"></i>church</div>
         <div class="column"><i class="cross icon" data-search-terms="catholicism, christianity, church, jesus"></i>cross</div>
@@ -4621,7 +4660,6 @@ themes      : ['Default']
         <div class="column"><i class="gopuram icon" data-search-terms="building, entrance, hinduism, temple, tower"></i>gopuram</div>
         <div class="column"><i class="hamsa icon" data-search-terms="amulet, christianity, islam, jewish, judaism, muslim, protection"></i>hamsa</div>
         <div class="column"><i class="hanukiah icon" data-search-terms="candle, hanukkah, jewish, judaism, light"></i>hanukiah</div>
-        <div class="column"><i class="haykal icon" data-search-terms="bahai, bahá'í, star"></i>haykal</div>
         <div class="column"><i class="jedi icon" data-search-terms="crest, force, sith, skywalker, star wars, yoda"></i>jedi</div>
         <div class="column"><i class="journal whills icon" data-search-terms="book, force, jedi, sith, star wars, yoda"></i>journal whills</div>
         <div class="column"><i class="kaaba icon" data-search-terms="building, cube, islam, muslim"></i>kaaba</div>
@@ -4646,6 +4684,7 @@ themes      : ['Default']
       <div class="existing code">
         <i class="ankh icon"></i>
         <i class="atom icon"></i>
+        <i class="bahai icon"></i>
         <i class="bible icon"></i>
         <i class="church icon"></i>
         <i class="cross icon"></i>
@@ -4654,7 +4693,6 @@ themes      : ['Default']
         <i class="gopuram icon"></i>
         <i class="hamsa icon"></i>
         <i class="hanukiah icon"></i>
-        <i class="haykal icon"></i>
         <i class="jedi icon"></i>
         <i class="journal whills icon"></i>
         <i class="kaaba icon"></i>
@@ -4681,7 +4719,7 @@ themes      : ['Default']
       <h4 class="ui header">Science</h4>
       <p>Icons which represent science activities and items</p>
       <div class="ui doubling five column grid">
-        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, ion, nuclear, science"></i>atom</div>
+        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, electron, ion, isotope, neutron, nuclear, proton, science"></i>atom</div>
         <div class="column"><i class="biohazard icon" data-search-terms="danger, dangerous, hazmat, medical, radioactive, toxic, waste, zombie"></i>biohazard</div>
         <div class="column"><i class="brain icon" data-search-terms="cerebellum, gray matter, intellect, medulla oblongata, mind, noodle, wit"></i>brain</div>
         <div class="column"><i class="burn icon" data-search-terms="caliente, energy, fire, flame, gas, heat, hot"></i>burn</div>
@@ -4745,9 +4783,12 @@ themes      : ['Default']
       <h4 class="ui header">Science Fiction</h4>
       <p>Icons which represent science fiction story items</p>
       <div class="ui doubling five column grid">
+        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, electron, ion, isotope, neutron, nuclear, proton, science"></i>atom</div>
         <div class="column"><i class="galactic republic icon" data-search-terms="politics, star wars"></i>galactic republic</div>
         <div class="column"><i class="galactic senate icon" data-search-terms="star wars"></i>galactic senate</div>
         <div class="column"><i class="globe icon" data-search-terms="all, coordinates, country, earth, global, gps, language, localize, location, map, online, place, planet, translate, travel, world"></i>globe</div>
+        <div class="column"><i class="hand spock icon" data-search-terms="live long, prosper, salute, star trek, vulcan"></i>hand spock</div>
+        <div class="column"><i class="hand spock outline icon" data-search-terms="live long, prosper, salute, star trek, vulcan"></i>hand spock outline</div>
         <div class="column"><i class="jedi icon" data-search-terms="crest, force, sith, skywalker, star wars, yoda"></i>jedi</div>
         <div class="column"><i class="jedi order icon" data-search-terms="star wars"></i>jedi order</div>
         <div class="column"><i class="journal whills icon" data-search-terms="book, force, jedi, sith, star wars, yoda"></i>journal whills</div>
@@ -4758,14 +4799,17 @@ themes      : ['Default']
         <div class="column"><i class="robot icon" data-search-terms="android, automate, computer, cyborg"></i>robot</div>
         <div class="column"><i class="rocket icon" data-search-terms="aircraft, app, jet, launch, nasa, space"></i>rocket</div>
         <div class="column"><i class="satellite icon" data-search-terms="communications, hardware, orbit, space"></i>satellite</div>
-        <div class="column"><i class="satellite dish icon" data-search-terms="SETI, communications, hardware, receiver, saucer, signal"></i>satellite dish</div>
-        <div class="column"><i class="space shuttle icon" data-search-terms="astronaut, machine, nasa, rocket, transportation"></i>space shuttle</div>
+        <div class="column"><i class="satellite dish icon" data-search-terms="SETI, communications, hardware, receiver, saucer, signal, space"></i>satellite dish</div>
+        <div class="column"><i class="space shuttle icon" data-search-terms="astronaut, machine, nasa, rocket, space, transportation"></i>space shuttle</div>
         <div class="column"><i class="user astronaut icon" data-search-terms="avatar, clothing, cosmonaut, nasa, space, suit"></i>user astronaut</div>
       </div>
       <div class="existing code">
+        <i class="atom icon"></i>
         <i class="galactic republic icon"></i>
         <i class="galactic senate icon"></i>
         <i class="globe icon"></i>
+        <i class="hand spock icon"></i>
+        <i class="hand spock outline icon"></i>
         <i class="jedi icon"></i>
         <i class="jedi order icon"></i>
         <i class="journal whills icon"></i>
@@ -5040,7 +5084,8 @@ themes      : ['Default']
       <p>Icons can represent loading</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="asterisk icon" data-search-terms="annotation, details, reference, star"></i>asterisk</div>
-        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, ion, nuclear, science"></i>atom</div>
+        <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, electron, ion, isotope, neutron, nuclear, proton, science"></i>atom</div>
+        <div class="column"><i class="bahai icon" data-search-terms="bahai, bahá'í, star"></i>bahai</div>
         <div class="column"><i class="certificate icon" data-search-terms="badge, star, verified"></i>certificate</div>
         <div class="column"><i class="circle notch icon" data-search-terms="circle-o-notch, diameter, dot, ellipse, round, spinner"></i>circle notch</div>
         <div class="column"><i class="cog icon" data-search-terms="gear, mechanical, settings, sprocket, wheel"></i>cog</div>
@@ -5050,7 +5095,6 @@ themes      : ['Default']
         <div class="column"><i class="crosshairs icon" data-search-terms="aim, bullseye, gpd, picker, position"></i>crosshairs</div>
         <div class="column"><i class="dharmachakra icon" data-search-terms="buddhism, buddhist, wheel of dharma"></i>dharmachakra</div>
         <div class="column"><i class="fan icon" data-search-terms="ac, air conditioning, blade, blower, cool, hot"></i>fan</div>
-        <div class="column"><i class="haykal icon" data-search-terms="bahai, bahá'í, star"></i>haykal</div>
         <div class="column"><i class="life ring icon" data-search-terms="coast guard, help, overboard, save, support"></i>life ring</div>
         <div class="column"><i class="life ring outline icon" data-search-terms="coast guard, help, overboard, save, support"></i>life ring outline</div>
         <div class="column"><i class="palette icon" data-search-terms="acrylic, art, brush, color, fill, paint, pigment, watercolor"></i>palette</div>
@@ -5069,6 +5113,7 @@ themes      : ['Default']
       <div class="existing code">
         <i class="asterisk icon"></i>
         <i class="atom icon"></i>
+        <i class="bahai icon"></i>
         <i class="certificate icon"></i>
         <i class="circle notch icon"></i>
         <i class="cog icon"></i>
@@ -5078,7 +5123,6 @@ themes      : ['Default']
         <i class="crosshairs icon"></i>
         <i class="dharmachakra icon"></i>
         <i class="fan icon"></i>
-        <i class="haykal icon"></i>
         <i class="life ring icon"></i>
         <i class="life ring outline icon"></i>
         <i class="palette icon"></i>
@@ -5535,9 +5579,10 @@ themes      : ['Default']
       <div class="ui doubling five column grid">
         <div class="column"><i class="archway icon" data-search-terms="arc, monument, road, street, tunnel"></i>archway</div>
         <div class="column"><i class="atlas icon" data-search-terms="book, directions, geography, globe, map, travel, wayfinding"></i>atlas</div>
-        <div class="column"><i class="bed icon" data-search-terms="lodging, rest, sleep, travel"></i>bed</div>
+        <div class="column"><i class="bed icon" data-search-terms="lodging, mattress, rest, sleep, travel"></i>bed</div>
         <div class="column"><i class="bus icon" data-search-terms="public transportation, transportation, travel, vehicle"></i>bus</div>
         <div class="column"><i class="bus alternate icon" data-search-terms="mta, public transportation, transportation, travel, vehicle"></i>bus alternate</div>
+        <div class="column"><i class="caravan icon" data-search-terms="camper, motor home, rv, trailer, travel"></i>caravan</div>
         <div class="column"><i class="cocktail icon" data-search-terms="alcohol, beverage, drink, gin, glass, margarita, martini, vodka"></i>cocktail</div>
         <div class="column"><i class="concierge bell icon" data-search-terms="attention, hotel, receptionist, service, support"></i>concierge bell</div>
         <div class="column"><i class="dumbbell icon" data-search-terms="exercise, gym, strength, weight, weight-lifting"></i>dumbbell</div>
@@ -5578,6 +5623,7 @@ themes      : ['Default']
         <i class="bed icon"></i>
         <i class="bus icon"></i>
         <i class="bus alternate icon"></i>
+        <i class="caravan icon"></i>
         <i class="cocktail icon"></i>
         <i class="concierge bell icon"></i>
         <i class="dumbbell icon"></i>
@@ -5623,7 +5669,7 @@ themes      : ['Default']
         <div class="column"><i class="address card icon" data-search-terms="about, contact, id, identification, postcard, profile"></i>address card</div>
         <div class="column"><i class="address card outline icon" data-search-terms="about, contact, id, identification, postcard, profile"></i>address card outline</div>
         <div class="column"><i class="baby icon" data-search-terms="child, diaper, doll, human, infant, kid, offspring, person, sprout"></i>baby</div>
-        <div class="column"><i class="bed icon" data-search-terms="lodging, rest, sleep, travel"></i>bed</div>
+        <div class="column"><i class="bed icon" data-search-terms="lodging, mattress, rest, sleep, travel"></i>bed</div>
         <div class="column"><i class="biking icon" data-search-terms="bicycle, bike, cycle, cycling, ride, wheel"></i>biking</div>
         <div class="column"><i class="blind icon" data-search-terms="cane, disability, person, sight"></i>blind</div>
         <div class="column"><i class="chalkboard teacher icon" data-search-terms="blackboard, instructor, learning, professor, school, whiteboard, writing"></i>chalkboard teacher</div>
@@ -5786,7 +5832,7 @@ themes      : ['Default']
         <div class="column"><i class="shuttle van icon" data-search-terms="airport, machine, public-transportation, transportation, travel, vehicle"></i>shuttle van</div>
         <div class="column"><i class="sleigh icon" data-search-terms="christmas, claus, fly, holiday, santa, sled, snow, xmas"></i>sleigh</div>
         <div class="column"><i class="snowplow icon" data-search-terms="clean up, cold, road, storm, winter"></i>snowplow</div>
-        <div class="column"><i class="space shuttle icon" data-search-terms="astronaut, machine, nasa, rocket, transportation"></i>space shuttle</div>
+        <div class="column"><i class="space shuttle icon" data-search-terms="astronaut, machine, nasa, rocket, space, transportation"></i>space shuttle</div>
         <div class="column"><i class="subway icon" data-search-terms="machine, railway, train, transportation, vehicle"></i>subway</div>
         <div class="column"><i class="taxi icon" data-search-terms="cab, cabbie, car, car service, lyft, machine, transportation, travel, uber, vehicle"></i>taxi</div>
         <div class="column"><i class="tractor icon" data-search-terms="agriculture, farm, vehicle"></i>tractor</div>
@@ -6141,6 +6187,7 @@ themes      : ['Default']
         <div class="column"><i class="fedora icon" data-search-terms="linux, operating system, os"></i>fedora</div>
         <div class="column"><i class="figma icon" data-search-terms="app, design, interface"></i>figma</div>
         <div class="column"><i class="firefox icon" data-search-terms="browser"></i>firefox</div>
+        <div class="column"><i class="firefox browser icon" data-search-terms="browser"></i>firefox browser</div>
         <div class="column"><i class="first order icon" data-search-terms=""></i>first order</div>
         <div class="column"><i class="first order alternate icon" data-search-terms=""></i>first order alternate</div>
         <div class="column"><i class="firstdraft icon" data-search-terms=""></i>firstdraft</div>
@@ -6201,6 +6248,7 @@ themes      : ['Default']
         <div class="column"><i class="houzz icon" data-search-terms=""></i>houzz</div>
         <div class="column"><i class="html5 icon" data-search-terms=""></i>html5</div>
         <div class="column"><i class="hubspot icon" data-search-terms=""></i>hubspot</div>
+        <div class="column"><i class="ideal icon" data-search-terms=""></i>ideal</div>
         <div class="column"><i class="imdb icon" data-search-terms=""></i>imdb</div>
         <div class="column"><i class="instagram icon" data-search-terms=""></i>instagram</div>
         <div class="column"><i class="intercom icon" data-search-terms="app, customer, messenger"></i>intercom</div>
@@ -6250,6 +6298,7 @@ themes      : ['Default']
         <div class="column"><i class="meetup icon" data-search-terms=""></i>meetup</div>
         <div class="column"><i class="megaport icon" data-search-terms=""></i>megaport</div>
         <div class="column"><i class="mendeley icon" data-search-terms=""></i>mendeley</div>
+        <div class="column"><i class="microblog icon" data-search-terms=""></i>microblog</div>
         <div class="column"><i class="microsoft icon" data-search-terms=""></i>microsoft</div>
         <div class="column"><i class="mix icon" data-search-terms=""></i>mix</div>
         <div class="column"><i class="mixcloud icon" data-search-terms=""></i>mixcloud</div>
@@ -6288,6 +6337,7 @@ themes      : ['Default']
         <div class="column"><i class="pied piper alternate icon" data-search-terms=""></i>pied piper alternate</div>
         <div class="column"><i class="pied piper hat icon" data-search-terms="clothing"></i>pied piper hat</div>
         <div class="column"><i class="pied piper pp icon" data-search-terms=""></i>pied piper pp</div>
+        <div class="column"><i class="pied piper square icon" data-search-terms=""></i>pied piper square</div>
         <div class="column"><i class="pinterest icon" data-search-terms=""></i>pinterest</div>
         <div class="column"><i class="pinterest p icon" data-search-terms=""></i>pinterest p</div>
         <div class="column"><i class="pinterest square icon" data-search-terms=""></i>pinterest square</div>
@@ -6387,6 +6437,7 @@ themes      : ['Default']
         <div class="column"><i class="uikit icon" data-search-terms=""></i>uikit</div>
         <div class="column"><i class="umbraco icon" data-search-terms=""></i>umbraco</div>
         <div class="column"><i class="uniregistry icon" data-search-terms=""></i>uniregistry</div>
+        <div class="column"><i class="unity icon" data-search-terms=""></i>unity</div>
         <div class="column"><i class="untappd icon" data-search-terms=""></i>untappd</div>
         <div class="column"><i class="ups icon" data-search-terms="United Parcel Service, package, shipping"></i>ups</div>
         <div class="column"><i class="usb icon" data-search-terms=""></i>usb</div>
@@ -6576,6 +6627,7 @@ themes      : ['Default']
         <i class="fedora icon"></i>
         <i class="figma icon"></i>
         <i class="firefox icon"></i>
+        <i class="firefox browser icon"></i>
         <i class="first order icon"></i>
         <i class="first order alternate icon"></i>
         <i class="firstdraft icon"></i>
@@ -6636,6 +6688,7 @@ themes      : ['Default']
         <i class="houzz icon"></i>
         <i class="html5 icon"></i>
         <i class="hubspot icon"></i>
+        <i class="ideal icon"></i>
         <i class="imdb icon"></i>
         <i class="instagram icon"></i>
         <i class="intercom icon"></i>
@@ -6685,6 +6738,7 @@ themes      : ['Default']
         <i class="meetup icon"></i>
         <i class="megaport icon"></i>
         <i class="mendeley icon"></i>
+        <i class="microblog icon"></i>
         <i class="microsoft icon"></i>
         <i class="mix icon"></i>
         <i class="mixcloud icon"></i>
@@ -6723,6 +6777,7 @@ themes      : ['Default']
         <i class="pied piper alternate icon"></i>
         <i class="pied piper hat icon"></i>
         <i class="pied piper pp icon"></i>
+        <i class="pied piper square icon"></i>
         <i class="pinterest icon"></i>
         <i class="pinterest p icon"></i>
         <i class="pinterest square icon"></i>
@@ -6822,6 +6877,7 @@ themes      : ['Default']
         <i class="uikit icon"></i>
         <i class="umbraco icon"></i>
         <i class="uniregistry icon"></i>
+        <i class="unity icon"></i>
         <i class="untappd icon"></i>
         <i class="ups icon"></i>
         <i class="usb icon"></i>
