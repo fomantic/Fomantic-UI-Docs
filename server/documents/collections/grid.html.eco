@@ -371,7 +371,7 @@ themes      : ['Default']
             </div>
           </div>
         </div>
-        <div class="sixteen wide column">
+        <div class="right aligned sixteen wide column">
           <div class="ui segment">
             Right Aligned Grid
           </div>
