@@ -2107,7 +2107,7 @@ type        : 'UI Behavior'
           <tr>
             <td>autoCheckRequired</td>
             <td>false</td>
-            <td>Wether fields with classname or attribute <code>required</code> should automatically add the "empty" rule or automatically checks checkbox fields</td>
+            <td>Whether fields with classname or attribute <code>required</code> should automatically add the "empty" rule or automatically checks checkbox fields</td>
           </tr>
         </tbody>
       </table>
