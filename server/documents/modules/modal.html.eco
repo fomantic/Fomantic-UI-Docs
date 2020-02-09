@@ -856,6 +856,11 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
+    <div class="ui info message">
+        Usually a given close icon on smaller modals will be displayed outside of the modal.
+        You can force to display the close icon inside the modal, just like in fullscreen modals, by adding the <code>inside</code> class to the close icon.
+    </div>
+
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
