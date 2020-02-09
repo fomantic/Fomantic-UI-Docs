@@ -255,6 +255,9 @@ themes      : ['Default']
       <p>A popup can be extra wide to allow for longer content</p>
       <i class="circular heart icon link" data-content="Hello. This is a wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
       <i class="circular heart icon link" data-content="Hello. This is a very wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="very wide"></i>
+        <div class="ui info message">
+            Usually a popup inherits its default width by its parent container. This could lead into situations where popups appear too small, even when the <code>wide</code> or <code>very wide</code> class is given.<br>To overcome this, you can force a fixed width by also adding the <code>fixed</code> class to the popup.<br>You can also use this feature on css only tooltips by adding the <code>fixed</code> class to the <code>data-variation</code> property of your tooltip
+        </div>
     </div>
 
     <div class="fluid example">
