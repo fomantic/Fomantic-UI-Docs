@@ -2595,6 +2595,30 @@ themes      : ['Default', 'GitHub', 'Material']
       </select>
     </div>
     <div class="no example">
+      <p>When creating the dropdown from a select, an existing data-text attribute is preserved, so the displayed text can be different than the in-dropdown text.</p>
+      <div class="code" data-label="HTML" data-type="html">
+        <select class="ui multiple dropdown" id="data-text-select">
+            <option value="">Select an option</option>
+                <option value="1" data-text="I am Option 1">Opt. 1</option>
+                <option value="2" data-text="I am Option 2">Opt. 2</option>
+                <option value="a" data-text="I am Option A">Opt. A</option>
+                <option value="b" data-text="I am Option B">Opt. B</option>
+        </select>
+      </div>
+      <div class="code" data-type="javascript" data-demo="true">
+        $('#data-text-select')
+          .dropdown()
+        ;
+      </div>
+      <select class="ui multiple dropdown" id="data-text-select">
+          <option value="">Select an option</option>
+          <option value="1" data-text="I am Option 1">Opt. 1</option>
+          <option value="2" data-text="I am Option 2">Opt. 2</option>
+          <option value="a" data-text="I am Option A">Opt. A</option>
+          <option value="b" data-text="I am Option B">Opt. B</option>
+      </select>
+    </div>
+    <div class="no example">
       <h4 class="ui header">Hybrid Form Initialization</h4>
       <p>As a third option, you can include a wrapper around your <code>select</code> so that it will appear correctly on page load, but will then <b>populate the hidden menu</b> when Javascript fires. In this case, the <code>select</code> element does not receive the <code>ui dropdown</code> class.</p>
       <div class="code" data-label="HTML" data-type="html">
