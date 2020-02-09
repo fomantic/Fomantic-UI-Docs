@@ -2031,6 +2031,10 @@ type        : 'UI Behavior'
         <td>set as clean</td>
         <td>Set the state of the form to <code>clean</code> and set new values as default</td>
       </tr>
+      <tr>
+        <td>set auto check</td>
+        <td>Automatically adds the "empty" rule or automatically checks a checkbox for all fields with classname or attribute <code>required</code></td>
+      </tr>
     </table>
 
     <h2 class="ui dividing header">Settings</h2>
@@ -2099,6 +2103,11 @@ type        : 'UI Behavior'
             <td>preventLeaving</td>
             <td>false</td>
             <td>Prevent user from leaving the page if the form has a <code>dirty</code> state by displaying a prompt</td>
+          </tr>
+          <tr>
+            <td>autoCheckRequired</td>
+            <td>false</td>
+            <td>Whether fields with classname or attribute <code>required</code> should automatically add the "empty" rule or automatically checks checkbox fields</td>
           </tr>
         </tbody>
       </table>
