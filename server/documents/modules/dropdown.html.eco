@@ -145,6 +145,25 @@ themes      : ['Default', 'GitHub', 'Material']
       </select>
     </div>
 
+    <div class="dropdown example">
+      <h4 class="ui header">Unfilterable items in Search Selection</h4>
+      <p>You can define items to always be listed, even if the search filter would not match, by adding the <code>unfilterable</code> class to the desired items</p>
+        <div class="ui search selection dropdown">
+          <input name="states" type="hidden" />
+          <i class="dropdown icon"></i>
+          <div class="default text">States</div>
+          <div class="menu">
+            <div class="unfilterable item" data-value="AL">Alabama (unfilterable)</div>
+            <div class="item" data-value="AK">Alaska</div>
+            <div class="unfilterable item" data-value="AZ">Arizona (unfilterable)</div>
+            <div class="unfilterable item" data-value="AR">Arkansas (unfilterable)</div>
+            <div class="item" data-value="CA">California</div>
+            <div class="item" data-value="OH">Ohio</div>
+            <div class="item" data-value="OK">Oklahoma</div>
+          </div>
+        </div>
+    </div>
+
     <div class="diacritics example">
       <h4 class="ui header">
         Search ignoring Diacritics
