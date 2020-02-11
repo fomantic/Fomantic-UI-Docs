@@ -348,7 +348,7 @@ themes      : ['Default']
       <p>Grids include many variations for adjusting things like vertical or horizontal alignment, text alignment, or default gutter sizes.</p>
       <p>Some multi-word variations, like <a href="#floated"><code>left floated</code></a> or <a href="#text-alignment"><code>right aligned</code></a> are word-order dependent and require you to use adjacent class names.</p>
 
-      <div class="ui right aligned grid">
+      <div class="ui aligned grid">
         <div class="left floated right aligned six wide column">
           <div class="ui segment">
             Left floated right aligned column
@@ -371,9 +371,9 @@ themes      : ['Default']
             </div>
           </div>
         </div>
-        <div class="sixteen wide column">
+        <div class="right aligned sixteen wide column">
           <div class="ui segment">
-            Right Aligned Grid
+            Right Aligned Column
           </div>
         </div>
       </div>
