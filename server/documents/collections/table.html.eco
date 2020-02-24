@@ -317,6 +317,20 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
+  <div class="ui info message">If you work with the <code>rowspan</code> table technique, fomantic provides a helper class <code>rowspanned</code> to be used for an invisible <code>td</code> column to make sure the styling stays consistent</div>
+  <div class="another example">
+    <table class="ui definition table">
+        <tr>
+            <td rowspan="2">Category rowspanned</td>
+            <td>Row one</td>
+        </tr>
+        <tr>
+            <td class="rowspanned"></td>
+            <td>Row two</td>
+        </tr>
+    </table>
+  </div>
+
   <div class="example">
     <h4 class="ui header">Structured</h4>
     <p>A table can be formatted to display complex structured data</p>
