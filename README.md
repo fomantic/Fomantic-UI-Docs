@@ -36,7 +36,8 @@ fomantic/
 ```
 
 * Clone both repos to respective folders
-* npm install in both directories
+* `npm install` in `./ui`
+* `npm install` in `./docs`
 * Go through Fomantic UI installer steps (auto)
 * In `./ui` folder `gulp build-docs` (builds files to ./docs)
 * In `./docs` folder `docpad install` then `docpad run`
