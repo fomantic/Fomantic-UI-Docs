@@ -1988,7 +1988,7 @@ type        : 'UI Behavior'
         <td>Returns object of element values that match array of identifiers. If no IDS are passed will return all fields</td>
       </tr>
       <tr>
-        <td>set value(identifier)</td>
+        <td>set value(identifier, value)</td>
         <td>Sets value of element with id</td>
       </tr>
       <tr>
