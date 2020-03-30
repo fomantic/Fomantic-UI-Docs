@@ -292,6 +292,15 @@ type        : 'Introduction'
         "toast",
         "emoji"
       ],
+      
+      // generate .css/.js files for individual components (under /dist/components), but exclude them from semantic.css and semantic.js
+      "individuals": [
+        "form",
+        "modal",
+        "step",
+        "emoji
+      ],
+      
       // whether to include special project maintainer tasks
       "admin": false
     }
