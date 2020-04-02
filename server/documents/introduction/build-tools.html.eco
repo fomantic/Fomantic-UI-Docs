@@ -309,6 +309,14 @@ type        : 'Introduction'
   </div>
 
   <div class="no example">
+    <h4>theme.config</h4>
+    <p>LESS uses a special configuration file <code>theme.config</code> which lets you specify what theme each component should use. If you have not generated this file yet, you will receive an error message when running build tools</p>
+    <p>You can learn more about <code>theme.config</code> by checking out the <a href="/usage/theming.html#using-packaged-themes">theming guide</a>.</p>
+  </div>
+
+  <h2 class="ui dividing header">Customizations</h2>
+
+  <div class="no example">
     <h4>Excluding components from main css/js file</h4>
     <p>By default, all components listed in semantic.json are added to semantic.css and semantic.js on build, but sometimes you don't need a component to be included on every page. To keep the file size of your main assets down, it's better to separate these components and reference them individually in your HTML.</p>
     <p>To make this work, add these components to your semantic.json as "individuals" (see above example). Then the css/js files will still be generated/updated as usual under dist/components.</p>
@@ -316,15 +324,10 @@ type        : 'Introduction'
   </div>
 
   <div class="no example">
-    <h4>theme.config</h4>
-    <p>LESS uses a special configuration file <code>theme.config</code> which lets you specify what theme each component should use. If you have not generated this file yet, you will receive an error message when running build tools</p>
-    <p>You can learn more about <code>theme.config</code> by checking out the <a href="/usage/theming.html#using-packaged-themes">theming guide</a></p>
-  </div>
-
-  <div class="no example">
     <h4>Importing Gulp Tasks</h4>
     <p>See our <a href="/introduction/advanced-usage.html">recipes section</a> for examples on how to import individual gulp tasks into your custom Gulpfile.</p>
   </div>
+
   <div class="no example">
     <h4>
       Auto-Install & Continuous Integration
