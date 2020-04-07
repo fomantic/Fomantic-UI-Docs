@@ -292,11 +292,27 @@ type        : 'Introduction'
         "toast",
         "emoji"
       ],
+      
+      // generate .css/.js files for individual components (under /dist/components), but exclude them from semantic.css and semantic.js
+      "individuals": [
+        "form",
+        "modal",
+        "step",
+        "emoji
+      ],
+      
       // whether to include special project maintainer tasks
       "admin": false
     }
 
     </div>
+  </div>
+
+  <div class="no example">
+    <h4>Excluding components from main css/js file</h4>
+    <p>By default, all components listed in semantic.json are added to semantic.css and semantic.js on build, but sometimes you don't need a component to be included on every page. To keep the file size of your main assets down, it's better to separate these components and reference them individually in your HTML.</p>
+    <p>To make this work, add these components to your semantic.json as "individuals" (see above example). Then the css/js files will still be generated/updated as usual under dist/components.</p>
+    <p><strong>Note:</strong> After defining the individuals in semantic.json, you need to remove them from the main components list. This also means that you can't leave the components list empty anymore (which defaults to building all components).</p>
   </div>
 
   <div class="no example">
