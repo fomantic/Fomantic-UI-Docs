@@ -3155,7 +3155,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>minCharacters</td>
-          <td>1</td>
+          <td>0</td>
           <td>The minimum characters for a search to begin showing results</td>
         </tr>
         <tr>
@@ -3232,7 +3232,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <thead>
         <tr>
         <th>Setting</th>
-        <th class="four wide">Default</th>
+        <th class="eight wide">Default</th>
         <th>Description</th>
         </tr>
       </thead>
@@ -3247,10 +3247,19 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>
             <div class="code" data-type="css">
             fields: {
-              remoteValues : 'results', // grouping for api results
-              values       : 'values', // grouping for all dropdown values
-              name         : 'name',   // displayed dropdown text
-              value        : 'value'   // actual dropdown value
+              remoteValues : 'results',    // grouping for api results
+              values       : 'values',     // grouping for all dropdown values
+              disabled     : 'disabled',   // whether value should be disabled
+              name         : 'name',       // displayed dropdown text
+              value        : 'value',      // actual dropdown value
+              text         : 'text',       // displayed text when selected
+              type         : 'type',       // type of dropdown element
+              image        : 'image',      // optional image path
+              imageClass   : 'imageClass', // optional individual class for image
+              icon         : 'icon',       // optional icon name
+              iconClass    : 'iconClass',  // optional individual class for icon (for example to use flag instead)
+              class        : 'class',      // optional individual class for item/header
+              divider      : 'divider'     // optional divider append for group headers
             }
             </div>
           </td>
