@@ -132,14 +132,16 @@ themes      : ['default', 'GitHub']
   <div class="example">
     <h4 class="ui header">Vertical Segment</h4>
     <p>A vertical segment formats content to be aligned as part of a vertical group</p>
-    <div class="ui vertical segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    </div>
-    <div class="ui vertical segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    </div>
-    <div class="ui vertical segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    <div>
+      <div class="ui vertical segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+      <div class="ui vertical segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+      <div class="ui vertical segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
     </div>
   </div>
 
