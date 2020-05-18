@@ -301,6 +301,45 @@ type        : 'UI Module'
       </div>
     </div>
 
+    <div class="local example">
+      <h4 class="ui header">Scrolling</h4>
+      <p>A search can have its results scroll.</p>
+	  <div class="ui ignored info message">
+        <p>The search scroll height depends on viewport size. The search scroll height is calculated using <strong>search item height * number of items</strong> to be shown for applicable media query break point.</p>
+      </div>
+      <div class="ui scrolling local search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <div class="local example">
+      <h4 class="ui header">Height</h4>
+      <p>A search can be very short (0.75x of default height) so that more results can be glanced.</p>
+	  <div class="ui ignored info message">
+        <p>The default height is calculated using <strong>search item height * number of items</strong> to be shown for applicable media query break point.</p>
+      </div>
+      <div class="ui very short local search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+
+      <p>Long: 2x of default height</p>
+      <div class="ui long local search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
     <div class="category example">
       <h4 class="ui header">Fluid</h4>
       <p>A search can have its results take up the width of its container</p>
