@@ -2302,7 +2302,7 @@ code .chunk {
   font-size: 1.2em;
 }
 
-div.footer-sponsor {
+div.footer-sponsor:not(:first-child) {
   margin: 3em 0;
 }
 
