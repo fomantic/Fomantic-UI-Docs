@@ -2302,6 +2302,13 @@ code .chunk {
   font-size: 1.2em;
 }
 
+div.footer-sponsor:not(:first-child) {
+  margin: 3em 0;
+}
+
+div.footer-sponsor a {
+  color: #333;
+}
 
 /*******************************
           Responsive
