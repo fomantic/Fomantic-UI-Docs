@@ -689,7 +689,11 @@ themes      : ['Default']
         <tr>
           <td>autoTabActivation</td>
           <td>true</td>
-          <td>Whether a non existing active tab will auto activate the first available tab.</td>
+          <td>
+          When <code>true</code> and no active tab exists, the first available tab will be activated.<br>
+          When a <code>string</code> is given and no active tab exists, the tab those named path matches the string will be activated<br>
+          When <code>false</code> no active tab detection will happen
+          </td>
         </tr>
         <tr>
           <td>alwaysRefresh</td>
