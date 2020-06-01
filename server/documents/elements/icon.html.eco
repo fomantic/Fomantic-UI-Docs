@@ -35,7 +35,7 @@ themes      : ['Default']
       Icons serve a very similar function to text in a page. In Semantic icons receive a special tag <code>&lt;i&gt;</code> which allow for an abbreviated markup when sitting along-side text.
     </div>
 
-    <div class="ui ignored message">Semantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.12.0</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
+    <div class="ui ignored message">Semantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.13.0</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
 
     <div class="icon example">
       <h4 class="ui header">Accessibility</h4>
@@ -510,7 +510,7 @@ themes      : ['Default']
       <p>Icons can represent vehicles and automotive activities</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="air freshener icon" data-search-terms="car, deodorize, fresh, pine, scent"></i>air freshener</div>
-        <div class="column"><i class="ambulance icon" data-search-terms="emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
+        <div class="column"><i class="ambulance icon" data-search-terms="covid-19, emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
         <div class="column"><i class="bus icon" data-search-terms="public transportation, transportation, travel, vehicle"></i>bus</div>
         <div class="column"><i class="bus alternate icon" data-search-terms="mta, public transportation, transportation, travel, vehicle"></i>bus alternate</div>
         <div class="column"><i class="car icon" data-search-terms="auto, automobile, sedan, transportation, travel, vehicle"></i>car</div>
@@ -629,13 +629,14 @@ themes      : ['Default']
         <div class="column"><i class="campground icon" data-search-terms="camping, fall, outdoors, teepee, tent, tipi"></i>campground</div>
         <div class="column"><i class="church icon" data-search-terms="building, cathedral, chapel, community, religion"></i>church</div>
         <div class="column"><i class="city icon" data-search-terms="buildings, busy, skyscrapers, urban, windows"></i>city</div>
-        <div class="column"><i class="clinic medical icon" data-search-terms="doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>clinic medical</div>
+        <div class="column"><i class="clinic medical icon" data-search-terms="covid-19, doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>clinic medical</div>
         <div class="column"><i class="dungeon icon" data-search-terms="Dungeons & Dragons, building, d&d, dnd, door, entrance, fantasy, gate"></i>dungeon</div>
         <div class="column"><i class="gopuram icon" data-search-terms="building, entrance, hinduism, temple, tower"></i>gopuram</div>
         <div class="column"><i class="home icon" data-search-terms="abode, building, house, main"></i>home</div>
-        <div class="column"><i class="hospital icon" data-search-terms="building, emergency room, medical center"></i>hospital</div>
-        <div class="column"><i class="hospital alternate icon" data-search-terms="building, emergency room, medical center"></i>hospital alternate</div>
-        <div class="column"><i class="hospital outline icon" data-search-terms="building, emergency room, medical center"></i>hospital outline</div>
+        <div class="column"><i class="hospital icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital</div>
+        <div class="column"><i class="hospital alternate icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital alternate</div>
+        <div class="column"><i class="hospital outline icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital outline</div>
+        <div class="column"><i class="hospital user icon" data-search-terms="covid-19, doctor, network, patient, primary care"></i>hospital user</div>
         <div class="column"><i class="hotel icon" data-search-terms="building, inn, lodging, motel, resort, travel"></i>hotel</div>
         <div class="column"><i class="house damage icon" data-search-terms="building, devastation, disaster, home, insurance"></i>house damage</div>
         <div class="column"><i class="igloo icon" data-search-terms="dome, dwelling, eskimo, home, house, ice, snow"></i>igloo</div>
@@ -668,6 +669,7 @@ themes      : ['Default']
         <i class="hospital icon"></i>
         <i class="hospital alternate icon"></i>
         <i class="hospital outline icon"></i>
+        <i class="hospital user icon"></i>
         <i class="hotel icon"></i>
         <i class="house damage icon"></i>
         <i class="igloo icon"></i>
@@ -754,6 +756,7 @@ themes      : ['Default']
         <div class="column"><i class="highlighter icon" data-search-terms="edit, marker, sharpie, update, write"></i>highlighter</div>
         <div class="column"><i class="industry icon" data-search-terms="building, factory, industrial, manufacturing, mill, warehouse"></i>industry</div>
         <div class="column"><i class="landmark icon" data-search-terms="building, historic, memorable, monument, politics"></i>landmark</div>
+        <div class="column"><i class="laptop house icon" data-search-terms="computer, covid-19, device, office, remote, work from home"></i>laptop house</div>
         <div class="column"><i class="marker icon" data-search-terms="design, edit, sharpie, update, write"></i>marker</div>
         <div class="column"><i class="paperclip icon" data-search-terms="attach, attachment, connect, link"></i>paperclip</div>
         <div class="column"><i class="paste icon" data-search-terms="clipboard, copy, document, paper"></i>paste</div>
@@ -853,6 +856,7 @@ themes      : ['Default']
         <i class="highlighter icon"></i>
         <i class="industry icon"></i>
         <i class="landmark icon"></i>
+        <i class="laptop house icon"></i>
         <i class="marker icon"></i>
         <i class="paperclip icon"></i>
         <i class="paste icon"></i>
@@ -898,6 +902,7 @@ themes      : ['Default']
         <div class="column"><i class="caravan icon" data-search-terms="camper, motor home, rv, trailer, travel"></i>caravan</div>
         <div class="column"><i class="compass icon" data-search-terms="directions, directory, location, menu, navigation, safari, travel"></i>compass</div>
         <div class="column"><i class="compass outline icon" data-search-terms="directions, directory, location, menu, navigation, safari, travel"></i>compass outline</div>
+        <div class="column"><i class="faucet icon" data-search-terms="covid-19, drip, house, hygiene, kitchen, sink, water"></i>faucet</div>
         <div class="column"><i class="fire icon" data-search-terms="burn, caliente, flame, heat, hot, popular"></i>fire</div>
         <div class="column"><i class="fire alternate icon" data-search-terms="burn, caliente, flame, heat, hot, popular"></i>fire alternate</div>
         <div class="column"><i class="first aid icon" data-search-terms="emergency, emt, health, medical, rescue"></i>first aid</div>
@@ -910,7 +915,7 @@ themes      : ['Default']
         <div class="column"><i class="map signs icon" data-search-terms="directions, directory, map, signage, wayfinding"></i>map signs</div>
         <div class="column"><i class="mountain icon" data-search-terms="glacier, hiking, hill, landscape, travel, view"></i>mountain</div>
         <div class="column"><i class="route icon" data-search-terms="directions, navigation, travel"></i>route</div>
-        <div class="column"><i class="toilet paper icon" data-search-terms="bathroom, halloween, holiday, lavatory, prank, restroom, roll"></i>toilet paper</div>
+        <div class="column"><i class="toilet paper icon" data-search-terms="bathroom, covid-19, halloween, holiday, lavatory, prank, restroom, roll"></i>toilet paper</div>
         <div class="column"><i class="trailer icon" data-search-terms="carry, haul, moving, travel"></i>trailer</div>
         <div class="column"><i class="tree icon" data-search-terms="bark, fall, flora, forest, nature, plant, seasonal"></i>tree</div>
       </div>
@@ -920,6 +925,7 @@ themes      : ['Default']
         <i class="caravan icon"></i>
         <i class="compass icon"></i>
         <i class="compass outline icon"></i>
+        <i class="faucet icon"></i>
         <i class="fire icon"></i>
         <i class="fire alternate icon"></i>
         <i class="first aid icon"></i>
@@ -948,6 +954,7 @@ themes      : ['Default']
         <div class="column"><i class="globe icon" data-search-terms="all, coordinates, country, earth, global, gps, language, localize, location, map, online, place, planet, translate, travel, world"></i>globe</div>
         <div class="column"><i class="hand holding heart icon" data-search-terms="carry, charity, gift, lift, package"></i>hand holding heart</div>
         <div class="column"><i class="hand holding usd icon" data-search-terms="$, carry, dollar sign, donation, giving, lift, money, price"></i>hand holding usd</div>
+        <div class="column"><i class="hand holding water icon" data-search-terms="carry, covid-19, drought, grow, lift"></i>hand holding water</div>
         <div class="column"><i class="hands helping icon" data-search-terms="aid, assistance, handshake, partnership, volunteering"></i>hands helping</div>
         <div class="column"><i class="handshake icon" data-search-terms="agreement, greeting, meeting, partnership"></i>handshake</div>
         <div class="column"><i class="handshake outline icon" data-search-terms="agreement, greeting, meeting, partnership"></i>handshake outline</div>
@@ -967,6 +974,7 @@ themes      : ['Default']
         <i class="globe icon"></i>
         <i class="hand holding heart icon"></i>
         <i class="hand holding usd icon"></i>
+        <i class="hand holding water icon"></i>
         <i class="hands helping icon"></i>
         <i class="handshake icon"></i>
         <i class="handshake outline icon"></i>
@@ -1333,6 +1341,7 @@ themes      : ['Default']
         <div class="column"><i class="keyboard icon" data-search-terms="accessory, edit, input, text, type, write"></i>keyboard</div>
         <div class="column"><i class="keyboard outline icon" data-search-terms="accessory, edit, input, text, type, write"></i>keyboard outline</div>
         <div class="column"><i class="laptop icon" data-search-terms="computer, cpu, dell, demo, device, mac, macbook, machine, pc"></i>laptop</div>
+        <div class="column"><i class="laptop house icon" data-search-terms="computer, covid-19, device, office, remote, work from home"></i>laptop house</div>
         <div class="column"><i class="memory icon" data-search-terms="DIMM, RAM, hardware, storage, technology"></i>memory</div>
         <div class="column"><i class="microchip icon" data-search-terms="cpu, hardware, processor, technology"></i>microchip</div>
         <div class="column"><i class="mobile icon" data-search-terms="apple, call, cell phone, cellphone, device, iphone, number, screen, telephone"></i>mobile</div>
@@ -1365,6 +1374,7 @@ themes      : ['Default']
         <i class="keyboard icon"></i>
         <i class="keyboard outline icon"></i>
         <i class="laptop icon"></i>
+        <i class="laptop house icon"></i>
         <i class="memory icon"></i>
         <i class="microchip icon"></i>
         <i class="mobile icon"></i>
@@ -1846,7 +1856,7 @@ themes      : ['Default']
         <div class="column"><i class="fruit-apple icon" data-search-terms="fall, fruit, fuji, macintosh, orchard, seasonal, vegan"></i>fruit-apple</div>
         <div class="column"><i class="graduation cap icon" data-search-terms="ceremony, college, graduate, learning, school, student"></i>graduation cap</div>
         <div class="column"><i class="laptop code icon" data-search-terms="computer, cpu, dell, demo, develop, device, mac, macbook, machine, pc"></i>laptop code</div>
-        <div class="column"><i class="microscope icon" data-search-terms="electron, lens, optics, science, shrink"></i>microscope</div>
+        <div class="column"><i class="microscope icon" data-search-terms="covid-19, electron, lens, optics, science, shrink"></i>microscope</div>
         <div class="column"><i class="music icon" data-search-terms="lyrics, melody, note, sing, sound"></i>music</div>
         <div class="column"><i class="school icon" data-search-terms="building, education, learn, student, teacher"></i>school</div>
         <div class="column"><i class="shapes icon" data-search-terms="blocks, build, circle, square, triangle"></i>shapes</div>
@@ -2469,7 +2479,7 @@ themes      : ['Default']
         <div class="column"><i class="mask icon" data-search-terms="carnivale, costume, disguise, halloween, secret, super hero"></i>mask</div>
         <div class="column"><i class="skull crossbones icon" data-search-terms="Dungeons & Dragons, alert, bones, d&d, danger, dead, deadly, death, dnd, fantasy, halloween, holiday, jolly-roger, pirate, poison, skeleton, warning"></i>skull crossbones</div>
         <div class="column"><i class="spider icon" data-search-terms="arachnid, bug, charlotte, crawl, eight, halloween"></i>spider</div>
-        <div class="column"><i class="toilet paper icon" data-search-terms="bathroom, halloween, holiday, lavatory, prank, restroom, roll"></i>toilet paper</div>
+        <div class="column"><i class="toilet paper icon" data-search-terms="bathroom, covid-19, halloween, holiday, lavatory, prank, restroom, roll"></i>toilet paper</div>
       </div>
       <div class="existing code">
         <i class="book dead icon"></i>
@@ -2493,7 +2503,9 @@ themes      : ['Default']
         <div class="column"><i class="fist raised icon" data-search-terms="Dungeons & Dragons, d&d, dnd, fantasy, hand, ki, monk, resist, strength, unarmed combat"></i>fist raised</div>
         <div class="column"><i class="hand holding icon" data-search-terms="carry, lift"></i>hand holding</div>
         <div class="column"><i class="hand holding heart icon" data-search-terms="carry, charity, gift, lift, package"></i>hand holding heart</div>
+        <div class="column"><i class="hand holding medical icon" data-search-terms="care, covid-19, donate, help"></i>hand holding medical</div>
         <div class="column"><i class="hand holding usd icon" data-search-terms="$, carry, dollar sign, donation, giving, lift, money, price"></i>hand holding usd</div>
+        <div class="column"><i class="hand holding water icon" data-search-terms="carry, covid-19, drought, grow, lift"></i>hand holding water</div>
         <div class="column"><i class="hand lizard icon" data-search-terms="game, roshambo"></i>hand lizard</div>
         <div class="column"><i class="hand lizard outline icon" data-search-terms="game, roshambo"></i>hand lizard outline</div>
         <div class="column"><i class="hand middle finger icon" data-search-terms="flip the bird, gesture, hate, rude"></i>hand middle finger</div>
@@ -2515,12 +2527,16 @@ themes      : ['Default']
         <div class="column"><i class="hand rock outline icon" data-search-terms="fist, game, roshambo"></i>hand rock outline</div>
         <div class="column"><i class="hand scissors icon" data-search-terms="cut, game, roshambo"></i>hand scissors</div>
         <div class="column"><i class="hand scissors outline icon" data-search-terms="cut, game, roshambo"></i>hand scissors outline</div>
+        <div class="column"><i class="hand sparkles icon" data-search-terms="clean, covid-19, hygiene, magic, soap, wash"></i>hand sparkles</div>
         <div class="column"><i class="hand spock icon" data-search-terms="live long, prosper, salute, star trek, vulcan"></i>hand spock</div>
         <div class="column"><i class="hand spock outline icon" data-search-terms="live long, prosper, salute, star trek, vulcan"></i>hand spock outline</div>
         <div class="column"><i class="hands icon" data-search-terms="carry, hold, lift"></i>hands</div>
         <div class="column"><i class="hands helping icon" data-search-terms="aid, assistance, handshake, partnership, volunteering"></i>hands helping</div>
+        <div class="column"><i class="hands wash icon" data-search-terms="covid-19, hygiene, soap, wash"></i>hands wash</div>
         <div class="column"><i class="handshake icon" data-search-terms="agreement, greeting, meeting, partnership"></i>handshake</div>
+        <div class="column"><i class="handshake alternate slash icon" data-search-terms="broken, covid-19, social distance"></i>handshake alternate slash</div>
         <div class="column"><i class="handshake outline icon" data-search-terms="agreement, greeting, meeting, partnership"></i>handshake outline</div>
+        <div class="column"><i class="handshake slash icon" data-search-terms="broken, covid-19, social distance"></i>handshake slash</div>
         <div class="column"><i class="praying hands icon" data-search-terms="kneel, preach, religion, worship"></i>praying hands</div>
         <div class="column"><i class="thumbs down icon" data-search-terms="disagree, disapprove, dislike, hand, social, thumbs-o-down"></i>thumbs down</div>
         <div class="column"><i class="thumbs down outline icon" data-search-terms="disagree, disapprove, dislike, hand, social, thumbs-o-down"></i>thumbs down outline</div>
@@ -2532,7 +2548,9 @@ themes      : ['Default']
         <i class="fist raised icon"></i>
         <i class="hand holding icon"></i>
         <i class="hand holding heart icon"></i>
+        <i class="hand holding medical icon"></i>
         <i class="hand holding usd icon"></i>
+        <i class="hand holding water icon"></i>
         <i class="hand lizard icon"></i>
         <i class="hand lizard outline icon"></i>
         <i class="hand middle finger icon"></i>
@@ -2554,12 +2572,16 @@ themes      : ['Default']
         <i class="hand rock outline icon"></i>
         <i class="hand scissors icon"></i>
         <i class="hand scissors outline icon"></i>
+        <i class="hand sparkles icon"></i>
         <i class="hand spock icon"></i>
         <i class="hand spock outline icon"></i>
         <i class="hands icon"></i>
         <i class="hands helping icon"></i>
+        <i class="hands wash icon"></i>
         <i class="handshake icon"></i>
+        <i class="handshake alternate slash icon"></i>
         <i class="handshake outline icon"></i>
+        <i class="handshake slash icon"></i>
         <i class="praying hands icon"></i>
         <i class="thumbs down icon"></i>
         <i class="thumbs down outline icon"></i>
@@ -2572,19 +2594,19 @@ themes      : ['Default']
       <p>Icons which represent common health symbols</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="accessible icon" data-search-terms="accessibility, handicap, person, wheelchair, wheelchair-alt"></i>accessible</div>
-        <div class="column"><i class="ambulance icon" data-search-terms="emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
+        <div class="column"><i class="ambulance icon" data-search-terms="covid-19, emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
         <div class="column"><i class="h square icon" data-search-terms="directions, emergency, hospital, hotel, map"></i>h square</div>
         <div class="column"><i class="heart icon" data-search-terms="favorite, like, love, relationship, valentine"></i>heart</div>
         <div class="column"><i class="heart outline icon" data-search-terms="favorite, like, love, relationship, valentine"></i>heart outline</div>
         <div class="column"><i class="heartbeat icon" data-search-terms="ekg, electrocardiogram, health, lifeline, vital signs"></i>heartbeat</div>
-        <div class="column"><i class="hospital icon" data-search-terms="building, emergency room, medical center"></i>hospital</div>
-        <div class="column"><i class="hospital outline icon" data-search-terms="building, emergency room, medical center"></i>hospital outline</div>
+        <div class="column"><i class="hospital icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital</div>
+        <div class="column"><i class="hospital outline icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital outline</div>
         <div class="column"><i class="medkit icon" data-search-terms="first aid, firstaid, health, help, support"></i>medkit</div>
         <div class="column"><i class="plus square icon" data-search-terms="add, create, expand, new, positive, shape"></i>plus square</div>
         <div class="column"><i class="plus square outline icon" data-search-terms="add, create, expand, new, positive, shape"></i>plus square outline</div>
         <div class="column"><i class="prescription icon" data-search-terms="drugs, medical, medicine, pharmacy, rx"></i>prescription</div>
-        <div class="column"><i class="stethoscope icon" data-search-terms="diagnosis, doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>stethoscope</div>
-        <div class="column"><i class="user md icon" data-search-terms="job, medical, nurse, occupation, physician, profile, surgeon"></i>user md</div>
+        <div class="column"><i class="stethoscope icon" data-search-terms="covid-19, diagnosis, doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>stethoscope</div>
+        <div class="column"><i class="user md icon" data-search-terms="covid-19, job, medical, nurse, occupation, physician, profile, surgeon"></i>user md</div>
         <div class="column"><i class="wheelchair icon" data-search-terms="accessible, handicap, person"></i>wheelchair</div>
       </div>
       <div class="existing code">
@@ -2722,6 +2744,7 @@ themes      : ['Default']
         <div class="column"><i class="bell icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell</div>
         <div class="column"><i class="bell outline icon" data-search-terms="alarm, alert, chime, notification, reminder"></i>bell outline</div>
         <div class="column"><i class="blender icon" data-search-terms="cocktail, milkshake, mixer, puree, smoothie"></i>blender</div>
+        <div class="column"><i class="box tissue icon" data-search-terms="cough, covid-19, kleenex, mucus, nose, sneeze, snot"></i>box tissue</div>
         <div class="column"><i class="chair icon" data-search-terms="furniture, seat, sit"></i>chair</div>
         <div class="column"><i class="coffee icon" data-search-terms="beverage, breakfast, cafe, drink, fall, morning, mug, seasonal, tea"></i>coffee</div>
         <div class="column"><i class="couch icon" data-search-terms="chair, cushion, furniture, relax, sofa"></i>couch</div>
@@ -2729,13 +2752,19 @@ themes      : ['Default']
         <div class="column"><i class="door open icon" data-search-terms="enter, exit, welcome"></i>door open</div>
         <div class="column"><i class="dungeon icon" data-search-terms="Dungeons & Dragons, building, d&d, dnd, door, entrance, fantasy, gate"></i>dungeon</div>
         <div class="column"><i class="fan icon" data-search-terms="ac, air conditioning, blade, blower, cool, hot"></i>fan</div>
+        <div class="column"><i class="faucet icon" data-search-terms="covid-19, drip, house, hygiene, kitchen, sink, water"></i>faucet</div>
+        <div class="column"><i class="house user icon" data-search-terms="covid-19, home, isolation, quarantine"></i>house user</div>
+        <div class="column"><i class="laptop house icon" data-search-terms="computer, covid-19, device, office, remote, work from home"></i>laptop house</div>
         <div class="column"><i class="lightbulb icon" data-search-terms="energy, idea, inspiration, light"></i>lightbulb</div>
         <div class="column"><i class="lightbulb outline icon" data-search-terms="energy, idea, inspiration, light"></i>lightbulb outline</div>
         <div class="column"><i class="plug icon" data-search-terms="connect, electric, online, power"></i>plug</div>
+        <div class="column"><i class="pump soap icon" data-search-terms="anti-bacterial, clean, covid-19, disinfect, hygiene, sanitizer, soap"></i>pump soap</div>
         <div class="column"><i class="shower icon" data-search-terms="bath, clean, faucet, water"></i>shower</div>
         <div class="column"><i class="snowflake icon" data-search-terms="precipitation, rain, winter"></i>snowflake</div>
         <div class="column"><i class="snowflake outline icon" data-search-terms="precipitation, rain, winter"></i>snowflake outline</div>
-        <div class="column"><i class="toilet paper icon" data-search-terms="bathroom, halloween, holiday, lavatory, prank, restroom, roll"></i>toilet paper</div>
+        <div class="column"><i class="soap icon" data-search-terms="bubbles, clean, covid-19, hygiene, wash"></i>soap</div>
+        <div class="column"><i class="toilet paper icon" data-search-terms="bathroom, covid-19, halloween, holiday, lavatory, prank, restroom, roll"></i>toilet paper</div>
+        <div class="column"><i class="toilet paper slash icon" data-search-terms="bathroom, covid-19, halloween, holiday, lavatory, leaves, prank, restroom, roll, trouble, ut oh"></i>toilet paper slash</div>
         <div class="column"><i class="tv icon" data-search-terms="computer, display, monitor, television"></i>tv</div>
       </div>
       <div class="existing code">
@@ -2744,6 +2773,7 @@ themes      : ['Default']
         <i class="bell icon"></i>
         <i class="bell outline icon"></i>
         <i class="blender icon"></i>
+        <i class="box tissue icon"></i>
         <i class="chair icon"></i>
         <i class="coffee icon"></i>
         <i class="couch icon"></i>
@@ -2751,13 +2781,19 @@ themes      : ['Default']
         <i class="door open icon"></i>
         <i class="dungeon icon"></i>
         <i class="fan icon"></i>
+        <i class="faucet icon"></i>
+        <i class="house user icon"></i>
+        <i class="laptop house icon"></i>
         <i class="lightbulb icon"></i>
         <i class="lightbulb outline icon"></i>
         <i class="plug icon"></i>
+        <i class="pump soap icon"></i>
         <i class="shower icon"></i>
         <i class="snowflake icon"></i>
         <i class="snowflake outline icon"></i>
+        <i class="soap icon"></i>
         <i class="toilet paper icon"></i>
+        <i class="toilet paper slash icon"></i>
         <i class="tv icon"></i>
       </div>
     </div>
@@ -3285,7 +3321,7 @@ themes      : ['Default']
       <h4 class="ui header">Maps</h4>
       <p>Icons can be used to represent elements on a map</p>
       <div class="ui doubling five column grid">
-        <div class="column"><i class="ambulance icon" data-search-terms="emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
+        <div class="column"><i class="ambulance icon" data-search-terms="covid-19, emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
         <div class="column"><i class="anchor icon" data-search-terms="berth, boat, dock, embed, link, maritime, moor, secure"></i>anchor</div>
         <div class="column"><i class="balance scale icon" data-search-terms="balanced, justice, legal, measure, weight"></i>balance scale</div>
         <div class="column"><i class="balance scale left icon" data-search-terms="justice, legal, measure, unbalanced, weight"></i>balance scale left</div>
@@ -3338,8 +3374,8 @@ themes      : ['Default']
         <div class="column"><i class="heartbeat icon" data-search-terms="ekg, electrocardiogram, health, lifeline, vital signs"></i>heartbeat</div>
         <div class="column"><i class="helicopter icon" data-search-terms="airwolf, apache, chopper, flight, fly, travel"></i>helicopter</div>
         <div class="column"><i class="home icon" data-search-terms="abode, building, house, main"></i>home</div>
-        <div class="column"><i class="hospital icon" data-search-terms="building, emergency room, medical center"></i>hospital</div>
-        <div class="column"><i class="hospital outline icon" data-search-terms="building, emergency room, medical center"></i>hospital outline</div>
+        <div class="column"><i class="hospital icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital</div>
+        <div class="column"><i class="hospital outline icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital outline</div>
         <div class="column"><i class="image icon" data-search-terms="album, landscape, photo, picture"></i>image</div>
         <div class="column"><i class="image outline icon" data-search-terms="album, landscape, photo, picture"></i>image outline</div>
         <div class="column"><i class="images icon" data-search-terms="album, landscape, photo, picture"></i>images</div>
@@ -3686,9 +3722,9 @@ themes      : ['Default']
       <p>Icons can represent common medical actions</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="allergies icon" data-search-terms="allergy, freckles, hand, hives, pox, skin, spots"></i>allergies</div>
-        <div class="column"><i class="ambulance icon" data-search-terms="emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
+        <div class="column"><i class="ambulance icon" data-search-terms="covid-19, emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
         <div class="column"><i class="band aid icon" data-search-terms="bandage, boo boo, first aid, ouch"></i>band aid</div>
-        <div class="column"><i class="biohazard icon" data-search-terms="danger, dangerous, hazmat, medical, radioactive, toxic, waste, zombie"></i>biohazard</div>
+        <div class="column"><i class="biohazard icon" data-search-terms="covid-19, danger, dangerous, hazmat, medical, radioactive, toxic, waste, zombie"></i>biohazard</div>
         <div class="column"><i class="bone icon" data-search-terms="calcium, dog, skeletal, skeleton, tibia"></i>bone</div>
         <div class="column"><i class="bong icon" data-search-terms="aparatus, cannabis, marijuana, pipe, smoke, smoking"></i>bong</div>
         <div class="column"><i class="book medical icon" data-search-terms="diary, documentation, health, history, journal, library, read, record"></i>book medical</div>
@@ -3697,26 +3733,35 @@ themes      : ['Default']
         <div class="column"><i class="burn icon" data-search-terms="caliente, energy, fire, flame, gas, heat, hot"></i>burn</div>
         <div class="column"><i class="cannabis icon" data-search-terms="bud, chronic, drugs, endica, endo, ganja, marijuana, mary jane, pot, reefer, sativa, spliff, weed, whacky-tabacky"></i>cannabis</div>
         <div class="column"><i class="capsules icon" data-search-terms="drugs, medicine, pills, prescription"></i>capsules</div>
-        <div class="column"><i class="clinic medical icon" data-search-terms="doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>clinic medical</div>
+        <div class="column"><i class="clinic medical icon" data-search-terms="covid-19, doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>clinic medical</div>
         <div class="column"><i class="comment medical icon" data-search-terms="advice, bubble, chat, commenting, conversation, diagnose, feedback, message, note, notification, prescription, sms, speech, texting"></i>comment medical</div>
         <div class="column"><i class="crutch icon" data-search-terms="cane, injury, mobility, wheelchair"></i>crutch</div>
         <div class="column"><i class="diagnoses icon" data-search-terms="analyze, detect, diagnosis, examine, medicine"></i>diagnoses</div>
+        <div class="column"><i class="disease icon" data-search-terms="bacteria, cancer, covid-19, illness, infection, sickness, virus"></i>disease</div>
         <div class="column"><i class="dna icon" data-search-terms="double helix, genetic, helix, molecule, protein"></i>dna</div>
         <div class="column"><i class="file medical icon" data-search-terms="document, health, history, prescription, record"></i>file medical</div>
         <div class="column"><i class="file medical alternate icon" data-search-terms="document, health, history, prescription, record"></i>file medical alternate</div>
         <div class="column"><i class="file prescription icon" data-search-terms="document, drugs, medical, medicine, rx"></i>file prescription</div>
         <div class="column"><i class="first aid icon" data-search-terms="emergency, emt, health, medical, rescue"></i>first aid</div>
+        <div class="column"><i class="hand holding medical icon" data-search-terms="care, covid-19, donate, help"></i>hand holding medical</div>
+        <div class="column"><i class="head side cough icon" data-search-terms="cough, covid-19, germs, lungs, respiratory, sick"></i>head side cough</div>
+        <div class="column"><i class="head side cough slash icon" data-search-terms="cough, covid-19, germs, lungs, respiratory, sick"></i>head side cough slash</div>
+        <div class="column"><i class="head side mask icon" data-search-terms="breath, covid-19, filter, respirator, virus"></i>head side mask</div>
+        <div class="column"><i class="head side virus icon" data-search-terms="cold, covid-19, flu, sick"></i>head side virus</div>
         <div class="column"><i class="heart icon" data-search-terms="favorite, like, love, relationship, valentine"></i>heart</div>
         <div class="column"><i class="heart outline icon" data-search-terms="favorite, like, love, relationship, valentine"></i>heart outline</div>
         <div class="column"><i class="heartbeat icon" data-search-terms="ekg, electrocardiogram, health, lifeline, vital signs"></i>heartbeat</div>
-        <div class="column"><i class="hospital icon" data-search-terms="building, emergency room, medical center"></i>hospital</div>
-        <div class="column"><i class="hospital alternate icon" data-search-terms="building, emergency room, medical center"></i>hospital alternate</div>
-        <div class="column"><i class="hospital outline icon" data-search-terms="building, emergency room, medical center"></i>hospital outline</div>
-        <div class="column"><i class="hospital symbol icon" data-search-terms="clinic, emergency, map"></i>hospital symbol</div>
+        <div class="column"><i class="hospital icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital</div>
+        <div class="column"><i class="hospital alternate icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital alternate</div>
+        <div class="column"><i class="hospital outline icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital outline</div>
+        <div class="column"><i class="hospital symbol icon" data-search-terms="clinic, covid-19, emergency, map"></i>hospital symbol</div>
+        <div class="column"><i class="hospital user icon" data-search-terms="covid-19, doctor, network, patient, primary care"></i>hospital user</div>
         <div class="column"><i class="id card alternate icon" data-search-terms="contact, demographics, document, identification, issued, profile"></i>id card alternate</div>
         <div class="column"><i class="joint icon" data-search-terms="blunt, cannabis, doobie, drugs, marijuana, roach, smoke, smoking, spliff"></i>joint</div>
         <div class="column"><i class="laptop medical icon" data-search-terms="computer, device, ehr, electronic health records, history"></i>laptop medical</div>
-        <div class="column"><i class="microscope icon" data-search-terms="electron, lens, optics, science, shrink"></i>microscope</div>
+        <div class="column"><i class="lungs icon" data-search-terms="air, breath, covid-19, organ, respiratory"></i>lungs</div>
+        <div class="column"><i class="lungs virus icon" data-search-terms="breath, covid-19, respiratory, sick"></i>lungs virus</div>
+        <div class="column"><i class="microscope icon" data-search-terms="covid-19, electron, lens, optics, science, shrink"></i>microscope</div>
         <div class="column"><i class="mortar pestle icon" data-search-terms="crush, culinary, grind, medical, mix, pharmacy, prescription, spices"></i>mortar pestle</div>
         <div class="column"><i class="notes medical icon" data-search-terms="clipboard, doctor, ehr, health, history, records"></i>notes medical</div>
         <div class="column"><i class="pager icon" data-search-terms="beeper, cellphone, communication"></i>pager</div>
@@ -3727,22 +3772,27 @@ themes      : ['Default']
         <div class="column"><i class="prescription bottle icon" data-search-terms="drugs, medical, medicine, pharmacy, rx"></i>prescription bottle</div>
         <div class="column"><i class="prescription bottle alternate icon" data-search-terms="drugs, medical, medicine, pharmacy, rx"></i>prescription bottle alternate</div>
         <div class="column"><i class="procedures icon" data-search-terms="EKG, bed, electrocardiogram, health, hospital, life, patient, vital"></i>procedures</div>
+        <div class="column"><i class="pump medical icon" data-search-terms="anti-bacterial, clean, covid-19, disinfect, hygiene, medical grade, sanitizer, soap"></i>pump medical</div>
         <div class="column"><i class="radiation icon" data-search-terms="danger, dangerous, deadly, hazard, nuclear, radioactive, warning"></i>radiation</div>
         <div class="column"><i class="radiation alternate icon" data-search-terms="danger, dangerous, deadly, hazard, nuclear, radioactive, warning"></i>radiation alternate</div>
+        <div class="column"><i class="shield virus icon" data-search-terms="antibodies, barrier, covid-19, health, protect"></i>shield virus</div>
         <div class="column"><i class="smoking icon" data-search-terms="cancer, cigarette, nicotine, smoking status, tobacco"></i>smoking</div>
         <div class="column"><i class="smoking ban icon" data-search-terms="ban, cancel, no smoking, non-smoking"></i>smoking ban</div>
         <div class="column"><i class="star of life icon" data-search-terms="doctor, emt, first aid, health, medical"></i>star of life</div>
-        <div class="column"><i class="stethoscope icon" data-search-terms="diagnosis, doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>stethoscope</div>
-        <div class="column"><i class="syringe icon" data-search-terms="doctor, immunizations, medical, needle"></i>syringe</div>
+        <div class="column"><i class="stethoscope icon" data-search-terms="covid-19, diagnosis, doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>stethoscope</div>
+        <div class="column"><i class="syringe icon" data-search-terms="covid-19, doctor, immunizations, medical, needle"></i>syringe</div>
         <div class="column"><i class="tablets icon" data-search-terms="drugs, medicine, pills, prescription"></i>tablets</div>
         <div class="column"><i class="teeth icon" data-search-terms="bite, dental, dentist, gums, mouth, smile, tooth"></i>teeth</div>
         <div class="column"><i class="teeth open icon" data-search-terms="dental, dentist, gums bite, mouth, smile, tooth"></i>teeth open</div>
-        <div class="column"><i class="thermometer icon" data-search-terms="mercury, status, temperature"></i>thermometer</div>
+        <div class="column"><i class="thermometer icon" data-search-terms="covid-19, mercury, status, temperature"></i>thermometer</div>
         <div class="column"><i class="tooth icon" data-search-terms="bicuspid, dental, dentist, molar, mouth, teeth"></i>tooth</div>
-        <div class="column"><i class="user md icon" data-search-terms="job, medical, nurse, occupation, physician, profile, surgeon"></i>user md</div>
-        <div class="column"><i class="user nurse icon" data-search-terms="doctor, midwife, practitioner, surgeon"></i>user nurse</div>
+        <div class="column"><i class="user md icon" data-search-terms="covid-19, job, medical, nurse, occupation, physician, profile, surgeon"></i>user md</div>
+        <div class="column"><i class="user nurse icon" data-search-terms="covid-19, doctor, midwife, practitioner, surgeon"></i>user nurse</div>
         <div class="column"><i class="vial icon" data-search-terms="experiment, lab, sample, science, test, test tube"></i>vial</div>
         <div class="column"><i class="vials icon" data-search-terms="experiment, lab, sample, science, test, test tube"></i>vials</div>
+        <div class="column"><i class="virus icon" data-search-terms="bug, covid-19, flu, health, sick, viral"></i>virus</div>
+        <div class="column"><i class="virus slash icon" data-search-terms="bug, covid-19, cure, eliminate, flu, health, sick, viral"></i>virus slash</div>
+        <div class="column"><i class="viruses icon" data-search-terms="bugs, covid-19, flu, health, multiply, sick, spread, viral"></i>viruses</div>
         <div class="column"><i class="weight icon" data-search-terms="health, measurement, scale, weight"></i>weight</div>
         <div class="column"><i class="x ray icon" data-search-terms="health, medical, radiological images, radiology, skeleton"></i>x ray</div>
       </div>
@@ -3763,11 +3813,17 @@ themes      : ['Default']
         <i class="comment medical icon"></i>
         <i class="crutch icon"></i>
         <i class="diagnoses icon"></i>
+        <i class="disease icon"></i>
         <i class="dna icon"></i>
         <i class="file medical icon"></i>
         <i class="file medical alternate icon"></i>
         <i class="file prescription icon"></i>
         <i class="first aid icon"></i>
+        <i class="hand holding medical icon"></i>
+        <i class="head side cough icon"></i>
+        <i class="head side cough slash icon"></i>
+        <i class="head side mask icon"></i>
+        <i class="head side virus icon"></i>
         <i class="heart icon"></i>
         <i class="heart outline icon"></i>
         <i class="heartbeat icon"></i>
@@ -3775,9 +3831,12 @@ themes      : ['Default']
         <i class="hospital alternate icon"></i>
         <i class="hospital outline icon"></i>
         <i class="hospital symbol icon"></i>
+        <i class="hospital user icon"></i>
         <i class="id card alternate icon"></i>
         <i class="joint icon"></i>
         <i class="laptop medical icon"></i>
+        <i class="lungs icon"></i>
+        <i class="lungs virus icon"></i>
         <i class="microscope icon"></i>
         <i class="mortar pestle icon"></i>
         <i class="notes medical icon"></i>
@@ -3789,8 +3848,10 @@ themes      : ['Default']
         <i class="prescription bottle icon"></i>
         <i class="prescription bottle alternate icon"></i>
         <i class="procedures icon"></i>
+        <i class="pump medical icon"></i>
         <i class="radiation icon"></i>
         <i class="radiation alternate icon"></i>
+        <i class="shield virus icon"></i>
         <i class="smoking icon"></i>
         <i class="smoking ban icon"></i>
         <i class="star of life icon"></i>
@@ -3805,6 +3866,9 @@ themes      : ['Default']
         <i class="user nurse icon"></i>
         <i class="vial icon"></i>
         <i class="vials icon"></i>
+        <i class="virus icon"></i>
+        <i class="virus slash icon"></i>
+        <i class="viruses icon"></i>
         <i class="weight icon"></i>
         <i class="x ray icon"></i>
       </div>
@@ -3901,7 +3965,7 @@ themes      : ['Default']
       <h4 class="ui header">Objects</h4>
       <p>Icons can be used to represent common objects</p>
       <div class="ui doubling five column grid">
-        <div class="column"><i class="ambulance icon" data-search-terms="emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
+        <div class="column"><i class="ambulance icon" data-search-terms="covid-19, emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
         <div class="column"><i class="anchor icon" data-search-terms="berth, boat, dock, embed, link, maritime, moor, secure"></i>anchor</div>
         <div class="column"><i class="archive icon" data-search-terms="box, package, save, storage"></i>archive</div>
         <div class="column"><i class="award icon" data-search-terms="honor, praise, prize, recognition, ribbon, trophy"></i>award</div>
@@ -4024,8 +4088,8 @@ themes      : ['Default']
         <div class="column"><i class="highlighter icon" data-search-terms="edit, marker, sharpie, update, write"></i>highlighter</div>
         <div class="column"><i class="holly berry icon" data-search-terms="catwoman, christmas, decoration, flora, halle, holiday, ororo munroe, plant, storm, xmas"></i>holly berry</div>
         <div class="column"><i class="home icon" data-search-terms="abode, building, house, main"></i>home</div>
-        <div class="column"><i class="hospital icon" data-search-terms="building, emergency room, medical center"></i>hospital</div>
-        <div class="column"><i class="hospital outline icon" data-search-terms="building, emergency room, medical center"></i>hospital outline</div>
+        <div class="column"><i class="hospital icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital</div>
+        <div class="column"><i class="hospital outline icon" data-search-terms="building, covid-19, emergency room, medical center"></i>hospital outline</div>
         <div class="column"><i class="hourglass icon" data-search-terms="hour, minute, sand, stopwatch, time"></i>hourglass</div>
         <div class="column"><i class="hourglass outline icon" data-search-terms="hour, minute, sand, stopwatch, time"></i>hourglass outline</div>
         <div class="column"><i class="igloo icon" data-search-terms="dome, dwelling, eskimo, home, house, ice, snow"></i>igloo</div>
@@ -4551,7 +4615,8 @@ themes      : ['Default']
         <div class="column"><i class="book medical icon" data-search-terms="diary, documentation, health, history, journal, library, read, record"></i>book medical</div>
         <div class="column"><i class="cannabis icon" data-search-terms="bud, chronic, drugs, endica, endo, ganja, marijuana, mary jane, pot, reefer, sativa, spliff, weed, whacky-tabacky"></i>cannabis</div>
         <div class="column"><i class="capsules icon" data-search-terms="drugs, medicine, pills, prescription"></i>capsules</div>
-        <div class="column"><i class="clinic medical icon" data-search-terms="doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>clinic medical</div>
+        <div class="column"><i class="clinic medical icon" data-search-terms="covid-19, doctor, general practitioner, hospital, infirmary, medicine, office, outpatient"></i>clinic medical</div>
+        <div class="column"><i class="disease icon" data-search-terms="bacteria, cancer, covid-19, illness, infection, sickness, virus"></i>disease</div>
         <div class="column"><i class="eye dropper icon" data-search-terms="beaker, clone, color, copy, eyedropper, pipette"></i>eye dropper</div>
         <div class="column"><i class="file medical icon" data-search-terms="document, health, history, prescription, record"></i>file medical</div>
         <div class="column"><i class="file prescription icon" data-search-terms="document, drugs, medical, medicine, rx"></i>file prescription</div>
@@ -4568,9 +4633,9 @@ themes      : ['Default']
         <div class="column"><i class="prescription bottle alternate icon" data-search-terms="drugs, medical, medicine, pharmacy, rx"></i>prescription bottle alternate</div>
         <div class="column"><i class="receipt icon" data-search-terms="check, invoice, money, pay, table"></i>receipt</div>
         <div class="column"><i class="skull crossbones icon" data-search-terms="Dungeons & Dragons, alert, bones, d&d, danger, dead, deadly, death, dnd, fantasy, halloween, holiday, jolly-roger, pirate, poison, skeleton, warning"></i>skull crossbones</div>
-        <div class="column"><i class="syringe icon" data-search-terms="doctor, immunizations, medical, needle"></i>syringe</div>
+        <div class="column"><i class="syringe icon" data-search-terms="covid-19, doctor, immunizations, medical, needle"></i>syringe</div>
         <div class="column"><i class="tablets icon" data-search-terms="drugs, medicine, pills, prescription"></i>tablets</div>
-        <div class="column"><i class="thermometer icon" data-search-terms="mercury, status, temperature"></i>thermometer</div>
+        <div class="column"><i class="thermometer icon" data-search-terms="covid-19, mercury, status, temperature"></i>thermometer</div>
         <div class="column"><i class="vial icon" data-search-terms="experiment, lab, sample, science, test, test tube"></i>vial</div>
         <div class="column"><i class="vials icon" data-search-terms="experiment, lab, sample, science, test, test tube"></i>vials</div>
       </div>
@@ -4580,6 +4645,7 @@ themes      : ['Default']
         <i class="cannabis icon"></i>
         <i class="capsules icon"></i>
         <i class="clinic medical icon"></i>
+        <i class="disease icon"></i>
         <i class="eye dropper icon"></i>
         <i class="file medical icon"></i>
         <i class="file prescription icon"></i>
@@ -4720,11 +4786,12 @@ themes      : ['Default']
       <p>Icons which represent science activities and items</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="atom icon" data-search-terms="atheism, chemistry, electron, ion, isotope, neutron, nuclear, proton, science"></i>atom</div>
-        <div class="column"><i class="biohazard icon" data-search-terms="danger, dangerous, hazmat, medical, radioactive, toxic, waste, zombie"></i>biohazard</div>
+        <div class="column"><i class="biohazard icon" data-search-terms="covid-19, danger, dangerous, hazmat, medical, radioactive, toxic, waste, zombie"></i>biohazard</div>
         <div class="column"><i class="brain icon" data-search-terms="cerebellum, gray matter, intellect, medulla oblongata, mind, noodle, wit"></i>brain</div>
         <div class="column"><i class="burn icon" data-search-terms="caliente, energy, fire, flame, gas, heat, hot"></i>burn</div>
         <div class="column"><i class="capsules icon" data-search-terms="drugs, medicine, pills, prescription"></i>capsules</div>
         <div class="column"><i class="clipboard check icon" data-search-terms="accept, agree, confirm, done, ok, select, success, tick, todo, yes"></i>clipboard check</div>
+        <div class="column"><i class="disease icon" data-search-terms="bacteria, cancer, covid-19, illness, infection, sickness, virus"></i>disease</div>
         <div class="column"><i class="dna icon" data-search-terms="double helix, genetic, helix, molecule, protein"></i>dna</div>
         <div class="column"><i class="eye dropper icon" data-search-terms="beaker, clone, color, copy, eyedropper, pipette"></i>eye dropper</div>
         <div class="column"><i class="filter icon" data-search-terms="funnel, options, separate, sort"></i>filter</div>
@@ -4733,7 +4800,7 @@ themes      : ['Default']
         <div class="column"><i class="flask icon" data-search-terms="beaker, experimental, labs, science"></i>flask</div>
         <div class="column"><i class="frog icon" data-search-terms="amphibian, bullfrog, fauna, hop, kermit, kiss, prince, ribbit, toad, wart"></i>frog</div>
         <div class="column"><i class="magnet icon" data-search-terms="Attract, lodestone, tool"></i>magnet</div>
-        <div class="column"><i class="microscope icon" data-search-terms="electron, lens, optics, science, shrink"></i>microscope</div>
+        <div class="column"><i class="microscope icon" data-search-terms="covid-19, electron, lens, optics, science, shrink"></i>microscope</div>
         <div class="column"><i class="mortar pestle icon" data-search-terms="crush, culinary, grind, medical, mix, pharmacy, prescription, spices"></i>mortar pestle</div>
         <div class="column"><i class="pills icon" data-search-terms="drugs, medicine, prescription, tablets"></i>pills</div>
         <div class="column"><i class="prescription bottle icon" data-search-terms="drugs, medical, medicine, pharmacy, rx"></i>prescription bottle</div>
@@ -4741,10 +4808,10 @@ themes      : ['Default']
         <div class="column"><i class="radiation alternate icon" data-search-terms="danger, dangerous, deadly, hazard, nuclear, radioactive, warning"></i>radiation alternate</div>
         <div class="column"><i class="seedling icon" data-search-terms="flora, grow, plant, vegan"></i>seedling</div>
         <div class="column"><i class="skull crossbones icon" data-search-terms="Dungeons & Dragons, alert, bones, d&d, danger, dead, deadly, death, dnd, fantasy, halloween, holiday, jolly-roger, pirate, poison, skeleton, warning"></i>skull crossbones</div>
-        <div class="column"><i class="syringe icon" data-search-terms="doctor, immunizations, medical, needle"></i>syringe</div>
+        <div class="column"><i class="syringe icon" data-search-terms="covid-19, doctor, immunizations, medical, needle"></i>syringe</div>
         <div class="column"><i class="tablets icon" data-search-terms="drugs, medicine, pills, prescription"></i>tablets</div>
-        <div class="column"><i class="temperature high icon" data-search-terms="cook, mercury, summer, thermometer, warm"></i>temperature high</div>
-        <div class="column"><i class="temperature low icon" data-search-terms="cold, cool, mercury, thermometer, winter"></i>temperature low</div>
+        <div class="column"><i class="temperature high icon" data-search-terms="cook, covid-19, mercury, summer, thermometer, warm"></i>temperature high</div>
+        <div class="column"><i class="temperature low icon" data-search-terms="cold, cool, covid-19, mercury, thermometer, winter"></i>temperature low</div>
         <div class="column"><i class="vial icon" data-search-terms="experiment, lab, sample, science, test, test tube"></i>vial</div>
         <div class="column"><i class="vials icon" data-search-terms="experiment, lab, sample, science, test, test tube"></i>vials</div>
       </div>
@@ -4755,6 +4822,7 @@ themes      : ['Default']
         <i class="burn icon"></i>
         <i class="capsules icon"></i>
         <i class="clipboard check icon"></i>
+        <i class="disease icon"></i>
         <i class="dna icon"></i>
         <i class="eye dropper icon"></i>
         <i class="filter icon"></i>
@@ -4963,6 +5031,8 @@ themes      : ['Default']
         <div class="column"><i class="shopping cart icon" data-search-terms="buy, checkout, grocery, payment, purchase"></i>shopping cart</div>
         <div class="column"><i class="store icon" data-search-terms="building, buy, purchase, shopping"></i>store</div>
         <div class="column"><i class="store alternate icon" data-search-terms="building, buy, purchase, shopping"></i>store alternate</div>
+        <div class="column"><i class="store alternate slash icon" data-search-terms="building, buy, closed, covid-19, purchase, shopping"></i>store alternate slash</div>
+        <div class="column"><i class="store slash icon" data-search-terms="building, buy, closed, covid-19, purchase, shopping"></i>store slash</div>
         <div class="column"><i class="truck icon" data-search-terms="cargo, delivery, shipping, vehicle"></i>truck</div>
         <div class="column"><i class="tshirt icon" data-search-terms="clothing, fashion, garment, shirt"></i>tshirt</div>
       </div>
@@ -4981,6 +5051,8 @@ themes      : ['Default']
         <i class="shopping cart icon"></i>
         <i class="store icon"></i>
         <i class="store alternate icon"></i>
+        <i class="store alternate slash icon"></i>
+        <i class="store slash icon"></i>
         <i class="truck icon"></i>
         <i class="tshirt icon"></i>
       </div>
@@ -5686,6 +5758,7 @@ themes      : ['Default']
         <div class="column"><i class="male icon" data-search-terms="human, man, person, profile, user"></i>male</div>
         <div class="column"><i class="meh icon" data-search-terms="emoticon, face, neutral, rating"></i>meh</div>
         <div class="column"><i class="meh outline icon" data-search-terms="emoticon, face, neutral, rating"></i>meh outline</div>
+        <div class="column"><i class="people arrows icon" data-search-terms="covid-19, personal space, social distance, space, spread, users"></i>people arrows</div>
         <div class="column"><i class="people carry icon" data-search-terms="box, carry, fragile, help, movers, package"></i>people carry</div>
         <div class="column"><i class="person booth icon" data-search-terms="changing, changing room, election, human, person, vote, voting"></i>person booth</div>
         <div class="column"><i class="poo icon" data-search-terms="crap, poop, shit, smile, turd"></i>poo</div>
@@ -5716,10 +5789,10 @@ themes      : ['Default']
         <div class="column"><i class="user graduate icon" data-search-terms="cap, clothing, commencement, gown, graduation, person, student"></i>user graduate</div>
         <div class="column"><i class="user injured icon" data-search-terms="cast, injury, ouch, patient, person, sling"></i>user injured</div>
         <div class="column"><i class="user lock icon" data-search-terms="admin, lock, person, private, unlock"></i>user lock</div>
-        <div class="column"><i class="user md icon" data-search-terms="job, medical, nurse, occupation, physician, profile, surgeon"></i>user md</div>
+        <div class="column"><i class="user md icon" data-search-terms="covid-19, job, medical, nurse, occupation, physician, profile, surgeon"></i>user md</div>
         <div class="column"><i class="user minus icon" data-search-terms="delete, negative, remove"></i>user minus</div>
         <div class="column"><i class="user ninja icon" data-search-terms="assassin, avatar, dangerous, deadly, sneaky"></i>user ninja</div>
-        <div class="column"><i class="user nurse icon" data-search-terms="doctor, midwife, practitioner, surgeon"></i>user nurse</div>
+        <div class="column"><i class="user nurse icon" data-search-terms="covid-19, doctor, midwife, practitioner, surgeon"></i>user nurse</div>
         <div class="column"><i class="user outline icon" data-search-terms="account, avatar, head, human, man, person, profile"></i>user outline</div>
         <div class="column"><i class="user plus icon" data-search-terms="add, avatar, positive, sign up, signup, team"></i>user plus</div>
         <div class="column"><i class="user secret icon" data-search-terms="clothing, coat, hat, incognito, person, privacy, spy, whisper"></i>user secret</div>
@@ -5757,6 +5830,7 @@ themes      : ['Default']
         <i class="male icon"></i>
         <i class="meh icon"></i>
         <i class="meh outline icon"></i>
+        <i class="people arrows icon"></i>
         <i class="people carry icon"></i>
         <i class="person booth icon"></i>
         <i class="poo icon"></i>
@@ -5810,7 +5884,7 @@ themes      : ['Default']
       <p>Icons can represent vehicles or transport</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="accessible icon" data-search-terms="accessibility, handicap, person, wheelchair, wheelchair-alt"></i>accessible</div>
-        <div class="column"><i class="ambulance icon" data-search-terms="emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
+        <div class="column"><i class="ambulance icon" data-search-terms="covid-19, emergency, emt, er, help, hospital, support, vehicle"></i>ambulance</div>
         <div class="column"><i class="baby carriage icon" data-search-terms="buggy, carrier, infant, push, stroller, transportation, walk, wheels"></i>baby carriage</div>
         <div class="column"><i class="bicycle icon" data-search-terms="bike, gears, pedal, transportation, vehicle"></i>bicycle</div>
         <div class="column"><i class="bus icon" data-search-terms="public transportation, transportation, travel, vehicle"></i>bus</div>
@@ -5902,8 +5976,8 @@ themes      : ['Default']
         <div class="column"><i class="snowflake outline icon" data-search-terms="precipitation, rain, winter"></i>snowflake outline</div>
         <div class="column"><i class="sun icon" data-search-terms="brighten, contrast, day, lighter, sol, solar, star, weather"></i>sun</div>
         <div class="column"><i class="sun outline icon" data-search-terms="brighten, contrast, day, lighter, sol, solar, star, weather"></i>sun outline</div>
-        <div class="column"><i class="temperature high icon" data-search-terms="cook, mercury, summer, thermometer, warm"></i>temperature high</div>
-        <div class="column"><i class="temperature low icon" data-search-terms="cold, cool, mercury, thermometer, winter"></i>temperature low</div>
+        <div class="column"><i class="temperature high icon" data-search-terms="cook, covid-19, mercury, summer, thermometer, warm"></i>temperature high</div>
+        <div class="column"><i class="temperature low icon" data-search-terms="cold, cool, covid-19, mercury, thermometer, winter"></i>temperature low</div>
         <div class="column"><i class="umbrella icon" data-search-terms="protection, rain, storm, wet"></i>umbrella</div>
         <div class="column"><i class="water icon" data-search-terms="lake, liquid, ocean, sea, swim, wet"></i>water</div>
         <div class="column"><i class="wind icon" data-search-terms="air, blow, breeze, fall, seasonal, weather"></i>wind</div>
@@ -6145,6 +6219,7 @@ themes      : ['Default']
         <div class="column"><i class="cuttlefish icon" data-search-terms=""></i>cuttlefish</div>
         <div class="column"><i class="d and d icon" data-search-terms=""></i>d and d</div>
         <div class="column"><i class="d and d beyond icon" data-search-terms="Dungeons & Dragons, d&d, dnd, fantasy, gaming, tabletop"></i>d and d beyond</div>
+        <div class="column"><i class="dailymotion icon" data-search-terms=""></i>dailymotion</div>
         <div class="column"><i class="dashcube icon" data-search-terms=""></i>dashcube</div>
         <div class="column"><i class="delicious icon" data-search-terms=""></i>delicious</div>
         <div class="column"><i class="deploydog icon" data-search-terms=""></i>deploydog</div>
@@ -6251,6 +6326,7 @@ themes      : ['Default']
         <div class="column"><i class="ideal icon" data-search-terms=""></i>ideal</div>
         <div class="column"><i class="imdb icon" data-search-terms=""></i>imdb</div>
         <div class="column"><i class="instagram icon" data-search-terms=""></i>instagram</div>
+        <div class="column"><i class="instagram square icon" data-search-terms=""></i>instagram square</div>
         <div class="column"><i class="intercom icon" data-search-terms="app, customer, messenger"></i>intercom</div>
         <div class="column"><i class="internet explorer icon" data-search-terms="browser, ie"></i>internet explorer</div>
         <div class="column"><i class="invision icon" data-search-terms="app, design, interface"></i>invision</div>
@@ -6302,6 +6378,7 @@ themes      : ['Default']
         <div class="column"><i class="microsoft icon" data-search-terms=""></i>microsoft</div>
         <div class="column"><i class="mix icon" data-search-terms=""></i>mix</div>
         <div class="column"><i class="mixcloud icon" data-search-terms=""></i>mixcloud</div>
+        <div class="column"><i class="mixer icon" data-search-terms=""></i>mixer</div>
         <div class="column"><i class="mizuni icon" data-search-terms=""></i>mizuni</div>
         <div class="column"><i class="modx icon" data-search-terms=""></i>modx</div>
         <div class="column"><i class="monero icon" data-search-terms=""></i>monero</div>
@@ -6378,6 +6455,7 @@ themes      : ['Default']
         <div class="column"><i class="sellsy icon" data-search-terms=""></i>sellsy</div>
         <div class="column"><i class="servicestack icon" data-search-terms=""></i>servicestack</div>
         <div class="column"><i class="shirtsinbulk icon" data-search-terms=""></i>shirtsinbulk</div>
+        <div class="column"><i class="shopify icon" data-search-terms=""></i>shopify</div>
         <div class="column"><i class="shopware icon" data-search-terms=""></i>shopware</div>
         <div class="column"><i class="simplybuilt icon" data-search-terms=""></i>simplybuilt</div>
         <div class="column"><i class="sistrix icon" data-search-terms=""></i>sistrix</div>
@@ -6585,6 +6663,7 @@ themes      : ['Default']
         <i class="cuttlefish icon"></i>
         <i class="d and d icon"></i>
         <i class="d and d beyond icon"></i>
+        <i class="dailymotion icon"></i>
         <i class="dashcube icon"></i>
         <i class="delicious icon"></i>
         <i class="deploydog icon"></i>
@@ -6691,6 +6770,7 @@ themes      : ['Default']
         <i class="ideal icon"></i>
         <i class="imdb icon"></i>
         <i class="instagram icon"></i>
+        <i class="instagram square icon"></i>
         <i class="intercom icon"></i>
         <i class="internet explorer icon"></i>
         <i class="invision icon"></i>
@@ -6742,6 +6822,7 @@ themes      : ['Default']
         <i class="microsoft icon"></i>
         <i class="mix icon"></i>
         <i class="mixcloud icon"></i>
+        <i class="mixer icon"></i>
         <i class="mizuni icon"></i>
         <i class="modx icon"></i>
         <i class="monero icon"></i>
@@ -6818,6 +6899,7 @@ themes      : ['Default']
         <i class="sellsy icon"></i>
         <i class="servicestack icon"></i>
         <i class="shirtsinbulk icon"></i>
+        <i class="shopify icon"></i>
         <i class="shopware icon"></i>
         <i class="simplybuilt icon"></i>
         <i class="sistrix icon"></i>
