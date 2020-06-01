@@ -687,6 +687,15 @@ themes      : ['Default']
           <td>Whether inline scripts in tab HTML should be parsed on tab load. Defaults to <code>once</code>, parsing only on first load. Can also be set to <code>true</code> or <code>false</code> to always parse or never parse inline scripts.</td>
         </tr>
         <tr>
+          <td>autoTabActivation</td>
+          <td>true</td>
+          <td>
+          When <code>true</code> and no active tab exists, the first available tab will be activated.<br>
+          When a <code>string</code> is given and no active tab exists, the tab those named path matches the string will be activated<br>
+          When <code>false</code> no active tab detection will happen
+          </td>
+        </tr>
+        <tr>
           <td>alwaysRefresh</td>
           <td>false</td>
           <td>Tab should reload content every time it is opened</td>
