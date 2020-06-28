@@ -253,7 +253,7 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Without Javascript</h4>
-      <p>If you don't need user interaction, you can use the rating module as a pure readonly CSS element</p>
+      <p>If you don't need user interaction, you can use the rating module as a pure read-only CSS element</p>
       <div class="code" data-type="html">
         <div class="ui red rating disabled">
           <i class="heart icon active"></i>
