@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>jsfiddle fullscreen Tester | Fomantic-UI</title>
+    <link rel="stylesheet" type="text/css" href="/dist/semantic.min.css" >
+    <meta name="description" content="Testing jsfiddle fullscreen in Fomantic-UI. Especially for mobile" />
+    <meta name="keywords" content="jsfiddle, fullscreen, fomantic, semantic, mobile, html5, ui, library, framework, javascript, fork, official" />
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    iframe {
+        flex-grow:1;
+    }
+    @media only screen and (min-width: 767px) {
+        [class*="mobile only"] {
+            display: none !important;
+        }
+    }
+</style>
+<body>
+    <div class="ui top attached basic segment" >
+        <h3 class="ui header">
+            <a class="ui image" href="/"><img src="/images/logo.png"></a>
+            <div class="content">
+                jsfiddle tester <span class="mobile only">for mobile</span>
+            </div>
+        </h3>
+        <i class="small exclamation triangle icon"></i>
+        The Code below is located at <a id="orgfiddle" href="">https://jsfiddle.net</a> and embedded via an iframe
+    </div>
+    <iframe id="jsfiddle" src="http://" frameborder="0"></iframe>
+</body>
+<script>
+    var jsfiddleInfo = window.location.href.split("#!");
+    if(jsfiddleInfo.length > 1){
+        var orgFiddle = '//jsfiddle.net/'+jsfiddleInfo[1].replace(/[^a-zA-Z0-9\/]/g,'');
+        document.getElementById('jsfiddle').src = orgFiddle+'/embedded/result/';
+        document.getElementById('orgfiddle').href = orgFiddle;
+    }
+    else {
+        window.location.href = '/';
+    }
+</script>
+</html>
