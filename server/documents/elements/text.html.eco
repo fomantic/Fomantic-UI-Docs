@@ -33,6 +33,12 @@ type        : 'UI Element'
           <div class="ui inverted segment">
             This is <span class="ui inverted red text">red</span> inline text and this is <span class="ui inverted blue text">blue</span> inline text and this is <span class="ui inverted purple text">purple</span> inline text
           </div>
+          <div class="ui segment">
+            This is <span class="ui info text">info</span> inline text and this is <span class="ui success text">success</span> inline text and this is <span class="ui warning text">warning</span> inline text and this is <span class="ui error text">error</span> inline text
+          </div>
+          <div class="ui inverted segment">
+            This is <span class="ui info text">info</span> inline text and this is <span class="ui success text">success</span> inline text and this is <span class="ui warning text">warning</span> inline text and this is <span class="ui error text">error</span> inline text
+          </div>
       </div>
     </div>
 
