@@ -194,7 +194,7 @@ themes      : ['Default', 'Colored']
 
     <div class="example">
       <h4 class="ui header">Disabled</h4>
-      <p>A checkbox can be read-only and unable to change states</p>
+      <p>A checkbox can show it is currently unable to be interacted with</p>
       <div class="ui ignored info message">
         A checkbox can be disabled by either setting the disabled attribute on the hidden input, or class <code>disabled</code> on the <code>ui checkbox</code>
       </div>
