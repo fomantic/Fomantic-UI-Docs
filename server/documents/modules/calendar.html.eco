@@ -90,7 +90,7 @@ themes      : ['Default']
    <h2 class="ui dividing header">Variations</h2>
     <div class="example">
       <h4 class="ui header">Inverted</h4>
-      <p>A calendar can be shown inverted</p>
+      <p>A calendar can have its colors inverted</p>
       <div class="ui inverted calendar" id="inverted_calendar">
         <div class="ui input left icon">
           <i class="calendar icon"></i>
