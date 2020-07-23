@@ -142,7 +142,9 @@ semantic.calendar.ready = function() {
       },
         {
           date: new Date(2018,11,25),
-          message: 'Santa Clause is coming to town'
+          message: 'Santa Clause is coming to town',
+          inverted: true,
+          variation: 'basic'
         },
         new Date(2018,11,31)  /* No Reason. Everybody knows why ;) */
       ]
