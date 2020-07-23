@@ -160,6 +160,10 @@ semantic.calendar.ready = function() {
         ]
       })
   ;
+
+  $('#inverted_calendar')
+    .calendar()
+  ;
 };
 
 
