@@ -87,6 +87,18 @@ themes      : ['Default']
       </div>
     </div>
 
+   <h2 class="ui dividing header">Variations</h2>
+    <div class="example">
+      <h4 class="ui header">Inverted</h4>
+      <p>A calendar can have its colors inverted</p>
+      <div class="ui inverted calendar" id="inverted_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
     <div class="example">
       <h4 class="ui header">Disabled</h4>
@@ -471,7 +483,9 @@ themes      : ['Default']
                 },
                 {
                     date: new Date(2018,11,25),
-                    message: 'Santa Clause is coming to town'
+                    message: 'Santa Clause is coming to town',
+                    inverted: true,
+                    variation: 'basic'
                 },
                 new Date(2018,11,31)  /* No Reason. Everybody knows why ;) */
             ]
