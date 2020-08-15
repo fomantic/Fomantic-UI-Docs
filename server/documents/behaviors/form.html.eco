@@ -2009,7 +2009,7 @@ type        : 'UI Behavior'
       </tr>
       <tr>
         <td>add prompt(identifier, errors)</td>
-        <td>Adds error prompt(s) to the field with the given identifier (needs <code>inline: true</code>). Supply a string or an array of strings. For multiple errors to the same field you have to also use <code>inline: 'all'</code></td>
+        <td>Adds a custom user prompt for a given element with identifier</td>
       </tr>
       <tr>
         <td>clear</td>
