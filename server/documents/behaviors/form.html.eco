@@ -1936,7 +1936,7 @@ type        : 'UI Behavior'
 
     <table class="ui definition celled table">
       <tr>
-        <td>submit</td>
+        <td class="four wide">submit</td>
         <td>Submits selected form</td>
       </tr>
       <tr>
@@ -1960,12 +1960,8 @@ type        : 'UI Behavior'
         <td>Remove all validation for a field</td>
       </tr>
       <tr>
-        <td>add prompt(identifier, errors)</td>
-        <td>Adds error prompt to the field with the given identifier</td>
-      </tr>
-      <tr>
-        <td>is valid(fieldName)</td>
-        <td>Returns true/false whether a field passes its validation rules</td>
+        <td>is valid(fieldName, showErrors)</td>
+        <td>Returns true/false whether a field passes its validation rules. If you add <code>true</code> as the second parameter, any failed rule will update the UI</td>
       </tr>
       <tr>
         <td>validate form</td>
@@ -2008,16 +2004,20 @@ type        : 'UI Behavior'
         <td>Manually add errors to form, given an array errors</td>
       </tr>
       <tr>
-        <td>add prompt(identifier, prompt)</td>
+        <td>remove errors</td>
+        <td>Removes all current errors from the error message box</td>
+      </tr>
+      <tr>
+        <td>add prompt(identifier, errors)</td>
         <td>Adds a custom user prompt for a given element with identifier</td>
       </tr>
       <tr>
         <td>clear</td>
-        <td>Empty all fields</td>
+        <td>Empty all fields and remove possible errors</td>
       </tr>
       <tr>
         <td>reset</td>
-        <td>Set all fields to their initial value</td>
+        <td>Set all fields to their initial value and remove possible errors</td>
       </tr>
       <tr>
         <td>set defaults</td>
