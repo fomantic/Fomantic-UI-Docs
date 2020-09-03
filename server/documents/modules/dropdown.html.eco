@@ -104,7 +104,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
     <div class="another dropdown example">
-      <select class="ui dropdown">
+      <select class="ui selection dropdown">
         <option value="">Pet</option>
         <option value="0">Cat</option>
         <option value="1">Dog</option>
