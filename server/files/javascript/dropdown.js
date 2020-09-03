@@ -9,7 +9,8 @@ semantic.dropdown.ready = function() {
     $hoverDropdown    = $examples.filter('.hover').find('.ui.dropdown'),
     $clearingDropdown = $examples.filter('.clearing').find('.ui.dropdown'),
     $buttonDropdown   = $examples.filter('.button.example').find('.ui.dropdown'),
-    $dropdown         = $examples.filter('.dropdown').find('.menu > .item > .ui.dropdown, .menu > .item.ui.dropdown, > .ui.dropdown:not(.simple), .inline.dropdown, .icon.buttons .button, .form .dropdown.selection'),
+    $dropdown         = $examples.filter('.dropdown').find('.menu > .item > .ui.dropdown, .menu > .item.ui.dropdown, > .ui.dropdown:not(.simple):not(.selection), .inline.dropdown, .icon.buttons .button, .form .dropdown.selection'),
+    $selectionDropdown= $examples.filter('.dropdown').find(' > .ui.selection.dropdown'),
     $transition       = $examples.filter('.transition').find('.ui.dropdown'),
     $simpleDropdown   = $examples.filter('.simple').find('.ui.dropdown'),
     $invertedDropdown = $examples.find('.ui.inverted.dropdown'),
@@ -54,6 +55,13 @@ semantic.dropdown.ready = function() {
 
   $dropdown
     .dropdown()
+  ;
+  $selectionDropdown
+    .dropdown({
+        className: {
+            menu: 'scrollhint menu'
+        }
+    })
   ;
   $hoverDropdown
     .dropdown({

@@ -78,21 +78,42 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="ui ignored info message">
         Selection dropdowns can be initialized directly on a <code>select</code> or with the matching HTML and a hidden <code>input</code>.
       </div>
+      <div class="ui ignored warning message">
+      	<div class="header">
+      		<i class="mobile icon"></i><i class="apple icon"></i><i class="firefox icon"></i>
+      		iOS devices or firefox mobile do not show a scrollbar by default!
+      	</div>
+      	<p>
+      		To indicate more possible entries than shown, you may add the <code>scrollhint</code> class to the <code>menu</code> to show a short swipe animation on such devices.<br>When transforming <code>select</code> dropdowns this is done by using <code>className:{menu:'scrollhint menu'}</code> as a config setting <span class="ui black mini label">New in 2.8.7</span>
+      	</p>
+      </div>
       <div class="ui selection dropdown">
-        <input type="hidden" name="gender">
+        <input type="hidden" name="pet">
         <i class="dropdown icon"></i>
-        <div class="default text">Gender</div>
-        <div class="menu">
-          <div class="item" data-value="1">Male</div>
-          <div class="item" data-value="0">Female</div>
+        <div class="default text">Pet</div>
+        <div class="scrollhint menu">
+          <div class="item" data-value="0">Cat</div>
+          <div class="item" data-value="1">Dog</div>
+          <div class="item" data-value="2">Bird</div>
+          <div class="item" data-value="3">Rabbit</div>
+          <div class="item" data-value="4">Squirrel</div>
+          <div class="item" data-value="5">Horse</div>
+          <div class="item" data-value="6">Turtle</div>
+          <div class="item" data-value="7">Parrot</div>
         </div>
       </div>
     </div>
     <div class="another dropdown example">
       <select class="ui dropdown">
-        <option value="">Gender</option>
-        <option value="1">Male</option>
-        <option value="0">Female</option>
+        <option value="">Pet</option>
+        <option value="0">Cat</option>
+        <option value="1">Dog</option>
+        <option value="2">Bird</option>
+        <option value="3">Rabbit</option>
+        <option value="4">Squirrel</option>
+        <option value="5">Horse</option>
+        <option value="6">Turtle</option>
+        <option value="7">Parrot</option>
       </select>
     </div>
     <div class="another dropdown example">
