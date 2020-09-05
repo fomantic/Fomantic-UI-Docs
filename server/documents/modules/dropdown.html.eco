@@ -906,7 +906,31 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
     </div>
-
+    <div class="dropdown example">
+      <p>The description can be shown vertically underneath the entry using <code>vertical item</code>.</p>
+      <div class="ui floating labeled icon dropdown button">
+        <i class="filter icon"></i>
+        <span class="text">Filter Tags</span>
+        <div class="menu">
+          <div class="header">
+            Filter by tag
+          </div>
+          <div class="divider"></div>
+          <div class="vertical item">
+            <span class="description">2 new</span>
+            <span class="text">Important</span>
+          </div>
+          <div class="vertical item">
+            <span class="description">10 new</span>
+            <span class="text">Hopper</span>
+          </div>
+          <div class="vertical item">
+            <span class="description">5 new</span>
+            <span class="text">Discussion</span>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="dropdown example">
       <h4 class="ui header">Label</h4>
       <p>A dropdown menu can contain a <a href="/elements/label.html">label</a>.</p>
