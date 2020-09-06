@@ -91,8 +91,8 @@ type        : 'Main'
     <div class="code" data-type="html">
       <!-- You MUST include jQuery before Fomantic -->
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
-      <script src="/semantic/dist/semantic.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="/dist/semantic.min.css">
+      <script src="/dist/semantic.min.js"></script>
     </div>
   </div>
 
