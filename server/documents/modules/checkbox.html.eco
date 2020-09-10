@@ -258,6 +258,39 @@ themes      : ['Default', 'Colored']
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Right aligned</h4>
+      <p>A checkbox can be aligned to the right of the label</p>
+      <div class="ui form">
+        <div class="grouped fields">
+          <div class="field">
+            <div class="ui right aligned checkbox">
+              <input type="checkbox" checked="checked">
+              <label>Checkbox</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui right aligned radio checkbox">
+              <input type="radio" checked="checked">
+              <label>Radio</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui right aligned slider checkbox">
+              <input type="checkbox" checked="checked">
+              <label>Slider</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui right aligned toggle checkbox">
+              <input type="checkbox" checked="checked">
+              <label>Toggle</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="ui examples tab" data-tab="examples">
