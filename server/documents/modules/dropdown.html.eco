@@ -3473,6 +3473,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
         </tr>
         <tr>
+          <td>displayType</td>
+          <td>false</td>
+          <td>Specify the final transition display type (block, inline-block etc) so that it doesn't have to be calculated.</td>
+        </tr>
+        <tr>
           <td>duration</td>
           <td>
             200
