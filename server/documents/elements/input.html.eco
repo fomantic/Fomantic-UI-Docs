@@ -353,7 +353,7 @@ themes      : ['Default', 'GitHub']
         Textarea
         <div class="ui black label">New in 2.7</div>
     </h4>
-    <p>Using the input class you can also use some features on <code>textarea</code> aswell</p>
+    <p>Using the input class you can also use some features on <code>textarea</code> as well</p>
     <div class="ui form">
         <div class="ui left corner labeled input">
             <div class="ui left corner label">
