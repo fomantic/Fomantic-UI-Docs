@@ -3005,8 +3005,8 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Saves current text and value as new defaults (for use with restore)</td>
         </tr>
         <tr>
-          <td>set selected(value)</td>
-          <td>Sets value as selected</td>
+          <td>set selected(value,$selectedItem,preventChangeTrigger)</td>
+          <td>Sets value as selected. <code>$selectedItem</code> is used internally and can be ignored. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event</td>
         </tr>
         <tr>
           <td>remove selected(value)</td>
