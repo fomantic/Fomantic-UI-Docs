@@ -2036,7 +2036,7 @@ type        : 'UI Behavior'
         <td>Automatically adds the "empty" rule or automatically checks a checkbox for all fields with classname or attribute <code>required</code></td>
       </tr>
       <tr>
-        <td>set optional(identifier, bool = true)</td>
+        <td>set optional(identifier, bool = true)<div class="ui label">New in 2.8.8</div></td>
         <td>Set or unset matching fields as optional</td>
       </tr>
     </table>
