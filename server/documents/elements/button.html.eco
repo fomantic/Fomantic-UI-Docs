@@ -551,6 +551,17 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   </div>
 
   <div class="example">
+    <h4 class="ui header">Stackable Buttons</h4>
+    <p>Horizontal groups can automatically be stacked on mobile devices</p>
+    <div class="ui stackable buttons">
+      <button class="ui button">Feed</button>
+      <button class="ui button">Messages</button>
+      <button class="ui button">Events</button>
+      <button class="ui button">Photos</button>
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Icon Buttons</h4>
     <p>Groups can be formatted as icons</p>
     <div class="ui icon buttons">
