@@ -48,6 +48,12 @@ themes      : ['Default']
     </div>
 
     <div class="example">
+        <h4 class="ui header">Label at the bottom</h4>
+        <p>A slider can display the labels below the track</p>
+        <div class="ui bottom aligned labeled slider"></div>
+    </div>
+
+    <div class="example">
         <h4 class="ui header">Custom interpreted labels</h4>
         <p>You can provide a function which returns a custom label according to the label value</p>
         <div class="ui labeled ticked slider" id="interpretedlabel"></div>
