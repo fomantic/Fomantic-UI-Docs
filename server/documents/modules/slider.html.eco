@@ -262,12 +262,12 @@ themes      : ['Default']
         <td>Get the number of rendered label ticks</td>
       </tr>
       <tr>
-        <td>set value(value)</td>
-        <td>Set the current slider value</td>
+        <td>set value(value, fireChange = true)</td>
+        <td>Set the current slider value. Pass <code>false</code> to <code>fireChange</code> to skip the <code>onChange</code> and <code>onMove</code> callbacks</td>
       </tr>
       <tr>
-        <td>set rangeValue(fromValue, toValue)</td>
-        <td>Set the current range slider values</td>
+        <td>set rangeValue(fromValue, toValue, fireChange = true)</td>
+        <td>Set the current range slider values. Pass <code>false</code> to <code>fireChange</code> to skip the <code>onChange</code> and <code>onMove</code> callbacks</td>
       </tr>
     </table>
 
