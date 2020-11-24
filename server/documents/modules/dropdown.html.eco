@@ -3629,7 +3629,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code" data-type="html">
+            <div class="code" data-type="css">
             selector : {
               addition     : '.addition',
               divider      : '.divider, .header',
