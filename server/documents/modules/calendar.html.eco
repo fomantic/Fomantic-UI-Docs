@@ -476,18 +476,18 @@ themes      : ['Default']
       <div class="code" data-type="javascript">
       $('#disableddates_calendar')
         .calendar({
-            initialDate: new Date(2018,11,1),
+            initialDate: new Date('2018-12-1'),
             disabledDates: [{
-                    date: new Date(2018,11,22),
+                    date: new Date('2018-12-22'),
                     message: 'xmas gift shopping'
                 },
                 {
-                    date: new Date(2018,11,25),
+                    date: new Date('2018-12-25'),
                     message: 'Santa Clause is coming to town',
                     inverted: true,
                     variation: 'basic'
                 },
-                new Date(2018,11,31)  /* No Reason. Everybody knows why ;) */
+                new Date('2018-12-31')  /* No Reason. Everybody knows why ;) */
             ]
         })
       ;
@@ -507,11 +507,11 @@ themes      : ['Default']
           $('#enableddates_calendar')
           .calendar({
             type: 'date',
-            initialDate: new Date(2019,2,1),
+            initialDate: new Date('2019-3-1'),
             enabledDates: [
-                new Date(2018,2,5),
-                new Date(2018,2,10),
-                new Date(2018,2,20)
+                new Date('2018-3-5'),
+                new Date('2018-3-10'),
+                new Date('2018-3-20')
             ]
           })
           ;
@@ -530,14 +530,14 @@ themes      : ['Default']
       </div>
       <div class="evaluated code" data-type="javascript">
       $('#eventdates_calendar').calendar({
-          initialDate: new Date(2019,3,1),
+          initialDate: new Date('2019-4-1'),
           eventDates: [
               {
-                date: new Date(2019,3,21),
+                date: new Date('2019-4-21'),
                 message: 'Show me in light purple',
                 class: 'inverted purple'
               },{
-                date: new Date(2019,3,22),
+                date: new Date('2019-4-22'),
                 message: 'Show me in green',
                 class: 'green'
               }
@@ -554,15 +554,15 @@ themes      : ['Default']
       </div>
       <div class="evaluated code" data-type="javascript">
       $('#eventdates2_calendar').calendar({
-          initialDate: new Date(2019,3,1),
+          initialDate: new Date('2019-4-1'),
           eventClass: 'inverted red',
           eventDates: [
-              new Date(2019,3,20), //no message tooltip
+              new Date('2019-4-20'), //no message tooltip
               {
-                date: new Date(2019,3,21),
+                date: new Date('2019-4-21'),
                 message: 'I got the default color (light red)'
               },{
-                date: new Date(2019,3,22),
+                date: new Date('2019-4-22'),
                 message: 'Me too'
               }
           ]

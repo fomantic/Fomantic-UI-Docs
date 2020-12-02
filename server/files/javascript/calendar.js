@@ -135,18 +135,18 @@ semantic.calendar.ready = function() {
 
   $('#disableddates_calendar')
     .calendar({
-      initialDate: new Date(2018,11,1),
+      initialDate: new Date('2018-12-1'),
       disabledDates: [{
-        date: new Date(2018,11,22),
+        date: new Date('2018-12-22'),
         message: 'xmas gift shopping'
       },
         {
-          date: new Date(2018,11,25),
+          date: new Date('2018-12-25'),
           message: 'Santa Clause is coming to town',
           inverted: true,
           variation: 'basic'
         },
-        new Date(2018,11,31)  /* No Reason. Everybody knows why ;) */
+        new Date('2018-12-31')  /* No Reason. Everybody knows why ;) */
       ]
     })
   ;
@@ -154,11 +154,11 @@ semantic.calendar.ready = function() {
   $('#enableddates_calendar')
       .calendar({
         type: 'date',
-        initialDate: new Date(2019,2,1),
+        initialDate: new Date('2019-3-1'),
         enabledDates: [
-          new Date(2018,2,5),
-          new Date(2018,2,10),
-          new Date(2018,2,20)
+          new Date('2018-3-5'),
+          new Date('2018-3-10'),
+          new Date('2018-3-20')
         ]
       })
   ;
