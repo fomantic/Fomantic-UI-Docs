@@ -496,7 +496,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   <h2 class="ui dividing header">States</h2>
 
   <div class="example">
-    <h4 class="ui header">Disabled</h4>
+    <h4 class="ui header">Disabled <span class="ui black label">New in 2.8.8</span></h4>
     <p>A card may show its content is disabled</p>
     <div class="ui disabled card">
         <div class="content">
@@ -517,7 +517,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
   <div class="example">
-    <h4 class="ui header">Loading</h4>
+    <h4 class="ui header">Loading <span class="ui black label">New in 2.8.8</span></h4>
     <p>A card may show its content is being loaded</p>
     <div class="ui loading card">
         <div class="content">
