@@ -1179,7 +1179,7 @@ themes      : ['Default', 'GitHub', 'Material']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Read-Only</h4>
+      <h4 class="ui header">Read-Only <span class="ui black label">New in 2.8.8</span></h4>
       <p>A dropdown can be read-only and does not allow user interaction</p>
       <div class="ui read-only dropdown">
         Dropdown <i class="dropdown icon"></i>
