@@ -1370,6 +1370,26 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
+    <div class="another dropdown example">
+      <p>The menu of a non-inverted dropdown can be inverted <span class="ui black label">New in 2.8.8</span></p>
+        <div class="ui selection dropdown">
+            <input type="hidden" name="choices">
+            <div class="default text">Select choice</div>
+            <i class="dropdown icon"></i>
+            <div class="inverted menu">
+                <div class="item">Choice 1</div>
+                <div class="item">Choice 2</div>
+                <div class="item">Choice 3</div>
+                <div class="item">Choice 4</div>
+                <div class="item">Choice 5</div>
+                <div class="item">Choice 6</div>
+                <div class="item">Choice 7</div>
+                <div class="item">Choice 8</div>
+                <div class="item">Choice 9</div>
+            </div>
+        </div>
+    </div>
+
     <div class="dropdown example">
       <h4 class="ui header">Compact</h4>
       <p>A compact dropdown has no minimum width</p>
