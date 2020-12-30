@@ -495,6 +495,61 @@ themes      : ['Default']
     </div>
 
     <div class="example">
+      <h4 class="ui header">Whole Months <span class="ui black label">New in 2.8.4</span></h4>
+      <p>It's possible to disable all days of specific months</p>
+      <div class="ui calendar" id="disabledmonth_calendar">
+          <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" placeholder="Date">
+          </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+          $('#disabledmonth_calendar')
+          .calendar({
+            type: 'date',
+            initialDate: new Date('2020-12-1'),
+            disabledDates: [{
+                month: 11,     //Javascript months start from 0 (!)
+                message: 'All days in December are booked out'
+            },
+            {
+                month: [0,1],  //Javascript months start from 0 (!)
+                message: 'No booking in January or February'
+            }
+          ]
+          })
+          ;
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Whole Years <span class="ui black label">New in 2.8.4</span></h4>
+      <p>It's possible to disable all days of a whole year</p>
+      <div class="ui calendar" id="disabledyear_calendar">
+          <div class="ui input left icon">
+              <i class="calendar icon"></i>
+              <input type="text" placeholder="Date">
+          </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+          $('#disabledyear_calendar')
+          .calendar({
+            type: 'date',
+            initialDate: new Date('2020-12-1'),
+            disabledDates: [{
+                year: 2020,
+                message: '2020 is not available'
+            },
+            {
+                year: [2022,2023],
+                message: 'Years 2022 and 2023 are not available'
+            }
+            ]
+          })
+          ;
+      </div>
+    </div>
+
+    <div class="example">
       <h4 class="ui header">Enable only specific Dates</h4>
       <p>Disable all dates by default and only enable specific given dates.</p>
       <div class="ui calendar" id="enableddates_calendar">
