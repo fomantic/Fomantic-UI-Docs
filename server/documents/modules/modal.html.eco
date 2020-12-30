@@ -321,6 +321,17 @@ themes      : ['Default', 'Material']
     </div>
   </div>
 
+  <div class="ui modal" id="centerexample">
+    <div class="center aligned header">Header is centered</div>
+    <div class="center aligned content">
+        <p>Content is centered</p>
+    </div>
+    <div class="center aligned actions">
+        <button class="ui negative button">Cancel</button>
+        <button class="ui positive button">OK</button>
+    </div>
+  </div>
+
   <div class="ui inverted test modal">
     <div class="header">
       Select a Photo
@@ -614,6 +625,31 @@ themes      : ['Default', 'Material']
       $('.ui.longer.modal')
         .modal('show')
       ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Center Aligned
+          <div class="ui black label">New in 2.8.8</div>
+      </h4>
+      <p>You can center align the header, the content or even actions individually</p>
+      <div class="code" data-type="html">
+          <div class="ui modal">
+              <div class="center aligned header">Header is centered</div>
+              <div class="center aligned content">
+                  <p>Content is centered</p>
+              </div>
+              <div class="center aligned actions">
+                  <div class="ui negative button">Cancel</div>
+                  <div class="ui positive button">OK</div>
+              </div>
+          </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#centerexample')
+          .modal('show')
+          ;
       </div>
     </div>
 
