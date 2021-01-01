@@ -123,6 +123,32 @@ themes      : ['Default', 'GitHub', 'Gmail']
   <h2 class="ui dividing header">Variations</h2>
 
   <div class="example">
+    <h4 class="ui header">Center Aligned <span class="ui black label">New in 2.8.8</span></h4>
+    <p>A message can be displayed center aligned</p>
+    <div class="ui center aligned message">
+      <div class="content">
+        <div class="header">
+            New Version is available!
+        </div>
+        <p>When are you going to update?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Right Aligned <span class="ui black label">New in 2.8.8</span></h4>
+    <p>A message can be displayed right aligned</p>
+    <div class="ui right aligned message">
+      <div class="content">
+        <div class="header">
+            New Version is available!
+        </div>
+        <p>When are you going to update?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Floating</h4>
     <p>A message can float above content that it is related to</p>
     <div class="ui floating message">
