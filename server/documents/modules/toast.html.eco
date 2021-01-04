@@ -127,6 +127,20 @@ themes      : ['Default']
     </div>
 
     <div class="no example">
+      <h4 class="ui header">Direction <span class="ui black label">New in 2.8.8</span></h4>
+      <p>Toasts can stack horizontal</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          horizontal: true,
+          position: 'top left',
+          message: `Next one will open to the right`
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
         <h4 class="ui header">Duration</h4>
         <p>You can choose how long a toast should be displayed.</p>
         <div class="code" data-demo="true">
@@ -511,6 +525,27 @@ themes      : ['Default']
         </div>
     </div>
     <div class="example">
+      <h4 class="ui header">Template <span class="ui black label">New in 2.8.8</span></h4>
+      <p>You can reuse a dom template and provide its content via setting parameters</p>
+      <div class="ui pink toast" id="domtemplate" >
+          <img class="ui image avatar">
+          <div class="content">
+              <div class="ui header"></div>
+              <div class="message"></div>
+          </div>
+      </div>
+      <p></p>
+      <div class="code" data-demo="true">
+          $('#domtemplate')
+          .toast({
+            title: 'Hello visitor #' + Math.random().toString(36).substr(2),
+            message: 'Message ID: '+ Math.random().toString(36).substr(2),
+            showImage: '//fomantic-ui.com/images/avatar/small/zoe.jpg'
+          })
+          ;
+      </div>
+    </div>
+    <div class="example">
         <h4 class="ui header">Approve / Deny Callbacks</h4>
         <p>Just like <a href="/modules/modal.html#approve--deny-callbacks">Modal</a>, Toast will automatically tie approve/deny callbacks to any positive/approve, negative/deny or ok/cancel buttons without the need to create actions via setting
         <div class="ui ignored info message">
@@ -730,6 +765,11 @@ themes      : ['Default']
           <td>position</td>
           <td>top right</td>
           <td>Sets where the toast can be displayed. Can be <code>top right</code>, <code>top center</code>, <code>top left</code>, <code>bottom right</code>, <code>bottom center</code> and <code>bottom left</code></td>
+        </tr>
+        <tr>
+          <td>horizontal</td>
+          <td>false</td>
+          <td>If the toasts should stack horizontal instead of vertical</td>
         </tr>
         <tr>
           <td>class</td>
