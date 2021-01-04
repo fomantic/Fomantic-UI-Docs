@@ -2510,6 +2510,54 @@ themes      : ['Default', 'GitHub', 'Material']
           })
         ;
       </div>
+      <br/>
+      <p>You can also add submenus by adding <code>type: 'menu'</code> or <code>type: 'left menu'</code> and another <code>values</code> object to the item itself. <span class="ui black label">New in 2.8.8</span></p>
+      <div class="code" data-label="Javascript" data-type="javascript">
+          $('.ui.dropdown').dropdown({
+            values: [
+              {
+                name: 'Human',
+                value: 'human',
+                type: 'menu',
+                values: [
+                  {
+                    name: 'Baby',
+                    value: 'baby'
+                  },
+                  {
+                    name: 'Kid',
+                    value: 'kid'
+                  },
+                  {
+                    name: 'Teen',
+                    value: 'teen'
+                  },
+                  {
+                    name: 'Adult',
+                    value: 'adult',
+                    type: 'left menu',
+                    values: [
+                      {
+                        name: 'young',
+                        value: 'young'
+                      },
+                      {
+                        name: 'middle age',
+                        value: 'middle-age'
+                      },
+                      {
+                        name: 'Old',
+                        value: 'old'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          })
+          ;
+      </div>
+
     </div>
       <div class="no example">
           <h4 class="ui header">Display images and/or icons by value setting<div class="ui black label">New in 2.7.7</div></h4>
