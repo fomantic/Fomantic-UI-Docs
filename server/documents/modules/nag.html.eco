@@ -270,8 +270,8 @@ type        : 'UI Module'
     <h2 class="ui dividing header">Settings</h2>
 
     <h3 class="ui header">
-      Toast Settings
-      <div class="sub header">Settings to configure toast behavior</div>
+      Nag Settings
+      <div class="sub header">Settings to configure nag behavior</div>
     </h3>
     <table class="ui celled sortable definition table segment">
       <thead>
