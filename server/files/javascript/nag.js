@@ -3,13 +3,13 @@ semantic.nag = {};
 // ready event
 semantic.nag.ready = function() {
 
-  $('.clearable.example .ui.nag:not(.cookie)')
-    .nag()
+  $('*:not(.code) > .ui.nag:not(.cookie):not(.fixed):not(.overlay)')
+      .nag({persist:true})
   ;
 };
 
 
 // attach ready event
 $(document)
-  .ready(semantic.nag.ready)
+    .ready(semantic.nag.ready)
 ;
