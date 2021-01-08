@@ -217,7 +217,6 @@ type        : 'UI Module'
       <h2 class="ui dividing header">Usage</h2>
 
       <div class="no example">
-        <h4 class="ui header"></h4>
         <p>Nags are used to present a user with a one time message which will persist until a user acknowledges the message. This can be used for providing notices like the site's use of cookies, an important change to a site like a security breach.</p>
         <p>Fomantic's nag component provides built in options for ensuring a nag is only displayed once. You can trigger an API endpoint on dismissal, in order to store a value in your database, or you can use localstorage, sessionstorage or cookie value to make sure that a particular computer does not receive the nag again.</p>
       </div>
