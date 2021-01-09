@@ -326,7 +326,7 @@ type        : 'UI Module'
           <td>cookie option</td>
         </tr>
         <tr>
-          <td>storagemethod</td>
+          <td>storageMethod</td>
           <td>cookie</td>
           <td>Storage to store the expiration date when the nag is dismissed. Can be either <code>cookie</code>, <code>localstorage</code> or <code>sessionstorage</code></td>
         </tr>
