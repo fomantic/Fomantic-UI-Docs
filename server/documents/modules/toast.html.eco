@@ -107,7 +107,7 @@ themes      : ['Default']
 
     <div class="no example">
         <h4 class="ui header">Position</h4>
-        <p>A toast can appear in different positions on the screen.</p>
+        <p>A toast can appear at different positions on the screen.</p>
         <div class="code" data-demo="true">
         $('body')
           .toast({
@@ -125,7 +125,32 @@ themes      : ['Default']
         ;
         </div>
     </div>
-
+    <div class="no example">
+          <h4 class="ui header">Attached Position<span class="ui black label">New in 2.8.8</span></h4>
+          <p>A toast can have an attached position which will show the toast over the whole width of the screen. Just like notificatons on mobile devices.</p>
+          <div class="ui warning message">
+            Attached positions with centered content only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
+          </div>
+          <div class="code" data-demo="true">
+            $('body')
+              .toast({
+                position: 'top attached',
+                title: 'Watch out!',
+                message: `I am a top attached toast`
+              })
+            ;
+          </div>
+          <div class="code" data-demo="true">
+            $('body')
+              .toast({
+                position: 'bottom attached',
+                title: 'Watch out!',
+                message: 'I am a bottom attached toast',
+                newestOnTop: true
+              })
+            ;
+          </div>
+      </div>
     <div class="no example">
       <h4 class="ui header">Direction <span class="ui black label">New in 2.8.8</span></h4>
       <p>Toasts can stack horizontal</p>
@@ -139,7 +164,22 @@ themes      : ['Default']
       ;
       </div>
     </div>
-
+    <div class="no example">
+          <h4 class="ui header">Center Aligned<span class="ui black label">New in 2.8.8</span></h4>
+          <p>The toasts content can be shown center aligned.</p>
+          <div class="ui warning message">
+              Centered content in <a href="#attached-position">attached toasts</a> only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
+          </div>
+          <div class="code" data-demo="true">
+              $('body')
+                  .toast({
+                      title: 'Veronika has joined',
+                      message: 'Welcome to the Fomantic-UI community!',
+                      class: 'center aligned', // you can also use 'centered'
+                  })
+              ;
+          </div>
+      </div>
     <div class="no example">
         <h4 class="ui header">Duration</h4>
         <p>You can choose how long a toast should be displayed.</p>
@@ -252,7 +292,6 @@ themes      : ['Default']
         $('body')
           .toast({
             message: 'I am an inverted colorful toast',
-//            class: 'inverted purple',
             class : 'inverted ' + suiColors[suiPlus()],   //cycle through all colors
             showProgress: 'bottom'
           })
@@ -319,6 +358,27 @@ themes      : ['Default']
             }]
           })
         ;
+        </div>
+    </div>
+    <div class="no example">
+        <h4 class="ui header">Centered<div class="ui black label">New in 2.8.8</div></h4>
+        <p>The actions buttons can also be shown <code>centered</code></p>
+        <div class="code" data-demo="true">
+          $('body')
+              .toast({
+                  message: 'Do you really want to star Fomantic-UI?',
+                  displayTime: 0,
+                  class: 'black',
+                  classActions: 'centered', // you can also use 'center aligned'
+                  actions:	[{
+                      text: 'Yes, really',
+                      class: 'yellow',
+                      click: function() {
+                        $('body').toast({message:'You clicked "yes", toast closes by default'});
+                    }
+                 }]
+              })
+          ;
         </div>
     </div>
     <div class="no example">
@@ -503,7 +563,29 @@ themes      : ['Default']
       ;
       </div>
     </div>
-
+    <div class="no example">
+      <h4 class="ui header">Actions and centered and attached position</h4>
+      <p>Using actions in <a href="#attached-position">attached position</a> variants in combination with  <a href="#center-aligned">centered toast content</a>  does only support  <a href="#attached">attached actions</a>. This is because of the flexbox usage to align a possible icon/image next to the content.</p>
+      <div class="code" data-demo="true">
+          $('body')
+              .toast({
+                  title: 'Centered top attached',
+                  message: 'I only support attached actions',
+                  displayTime: 0,
+                  position: 'top attached',
+                  class: 'centered',
+                  classActions: 'attached',
+                  actions:	[{
+                      text: 'Mark as read',
+                      class: 'grey'
+                  },{
+                      text: 'Delete',
+                      class: 'red'
+                  }]
+              })
+          ;
+      </div>
+    </div>
     <h2 class="ui dividing header">Create from DOM</h2>
 
     <p>By creating your toasts out of existing DOM nodes you can make use of other existing FUI components <span class="ui black label">New in 2.8.0</span></p>
