@@ -629,7 +629,7 @@ themes      : ['Default']
     </div>
     <div class="example">
         <h4 class="ui header">Approve / Deny Callbacks</h4>
-        <p>Just like <a href="/modules/modal.html#approve--deny-callbacks">Modal</a>, Toast will automatically tie approve/deny callbacks to any positive/approve, negative/deny or ok/cancel buttons without the need to create actions via setting
+        <p>Just like <a href="/modules/modal.html#approve--deny-callbacks">Modal</a>, Toast will automatically tie approve/deny callbacks to any positive/approve, negative/deny or ok/cancel buttons without the need to create actions via setting</p>
         <div class="ui ignored info message">
             If <code>onDeny</code>, <code>onApprove</code> or <code>onHide</code> returns false it will prevent the toast from closing
         </div>
@@ -796,7 +796,49 @@ themes      : ['Default']
             ;
             </div>
         </div>
-
+        <div class="example">
+            <h4 class="ui header">General HTML Layout</h4>
+            <p>The general layout of a rendered toast might be useful for people who want to implement their own javascript display logic and just want to reuse Fomantics HTML CSS Layout.</p>
+            <p>The following structure is used to position the toasts. Each position container implements a <code>toast-box</code> per toast. The extra wrapper is needed to make dynamic elements like progressbar independent of the toast layout.</p>
+            <div class="code" data-type="html">
+                <div class="ui top right toast-container">
+                    <div class="toast-box">
+<!-- only when vertical attached buttons are used an extra wrapping node is needed -->
+                        <div class="vertical attached">
+                            <div class="vertical attached ui buttons actions">
+                                <button class="ui button">Action button</button>
+                            </div>
+<!--  An optional progressbar. If the toast has got the compact class, the progressbar should also have it -->
+                            <div class="ui attached compact progress">
+                                <div class="bar"></div>
+                            </div>
+<!-- Here comes the actual toast -->
+                            <div class="ui compact toast"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>A single toast layout inside the above mentioned <code>toast-box</code> has the following structure</p>
+            <div class="code" data-type="html">
+<!-- The 'neutral' class will show the toast with a white background if no color is given -->
+                <div class="ui neutral toast" style="display: block;">
+<!-- optional icon -->
+                    <i class="microphone icon "></i>
+<!-- optional image -->
+                    <img class="ui image avatar" src="https://fomantic-ui.com/images/avatar/small/veronika.jpg">
+                    <div class="content">
+                        <div class="ui header">Toast Header</div>
+                        Toast content
+                    </div>
+<!-- optional close icon -->
+                    <i class="close icon "></i>
+<!-- optional action buttons (vertical attached buttons are declared in the toast-box instead) -->
+                    <div class="ui buttons actions">
+                        <button class="ui button">Action button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h2 class="ui dividing header">Behaviors</h2>
 
         <p>All the following behaviors can be called using the syntax:<p>
@@ -805,6 +847,13 @@ themes      : ['Default']
         </div>
 
         <table class="ui definition celled table">
+          <thead>
+            <tr>
+                <th>Behavior</th>
+                <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
             <tr>
                 <td>animate pause</td>
                 <td>Pauses the display time decrease (and possible progress bar animation)</td>
@@ -825,6 +874,7 @@ themes      : ['Default']
                 <td>get remainingTime</td>
                 <td>Returns the remaining time in milliseconds</td>
             </tr>
+          </tbody>
         </table>
 
     </div>
@@ -873,7 +923,11 @@ themes      : ['Default']
             <td>mini</td>
             <td>Can hold a string to be added to the image class. <code>mini</code>, <code>tiny</code>, <code>small</code> and <code>avatar</code> are supported out of the box</td>
         </tr>
-
+        <tr>
+            <td>context</td>
+            <td>body</td>
+            <td>Selector or jquery object specifying the area to to attach the toast container to</td>
+        </tr>
         <tr>
           <td>displayTime</td>
           <td>3000</td>
