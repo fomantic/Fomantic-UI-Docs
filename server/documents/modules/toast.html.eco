@@ -926,7 +926,7 @@ themes      : ['Default']
         <tr>
             <td>context</td>
             <td>body</td>
-            <td>Selector or jquery object specifying the area to to attach the toast container to</td>
+            <td>Selector or jquery object specifying the area to attach the toast container to</td>
         </tr>
         <tr>
           <td>displayTime</td>
