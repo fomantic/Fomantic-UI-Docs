@@ -7,72 +7,501 @@ standalone  : true
 
 title       : 'Nag'
 description : 'A nag is an important message that persists until dismissed by a user'
-type        : 'Future Module'
+type        : 'UI Module'
 
 ---
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/nag.less" />
+<script src="/javascript/nag.js"></script>
 
-<%- @partial('header') %>
+<%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples', usage: 'Usage', settings: 'Settings'} }) %>
 
 <div class="main container">
 
-  <div class="ui active tab" data-tab="overview">
+  <div class="ui active tab" data-tab="definition">
 
-    <h2 class="ui dividing header">Current Progress</h2>
-    <div class="ui indicating progress">
-      <div class="bar" style="width: 60%;">
-        <div class="progress">60%</div>
-      </div>
-      <div class="label">Needs Documentation / Re-coding</div>
-    </div>
+    <h2 class="ui dividing header">Types</h2>
 
-    <h2 class="ui dividing header">Usage</h2>
-    <div class="no example">
-      <h4 class="ui header"></h4>
-      <p>Nags are used to present a user with a one time message which will persist until a user acknowledges the message. This can be used for providing notices like the site's use of cookies, an important change to a site like a security breach.</p>
-      <p>Semantic's nag component provides built in options for ensuring a nag is only displayed once. You can trigger an API endpoint on dismissal, in order to store a value in your database, or you can use localstorage or cookie value to make sure that a particular computer does not receive the nag again.</p>
-    </div>
-
-    <h2 class="ui dividing header">Example</h2>
-
-    <div class="code" data-type="javascript" data-demo="true">
-    // Wont re-appear unless cleared
-    $('.cookie.nag')
-      .nag('show')
-    ;
-    </div>
-    <div class="code" data-type="javascript" data-demo="true">
-    // Clears cookie so nag shows again
-    $('.cookie.nag')
-      .nag('clear')
-    ;
-    </div>
-    <div class="ui code" data-type="html" data-preview="true">
-      <div class="ui inline cookie nag">
-        <span class="title">
-          We use cookies to ensure you get the best experience on our website
-        </span>
+    <div class="ui info message">A nag is hidden by default, it needs to be initialized via javascript to be shown. See <a href="#/usage">usage</a> section for more details</div>
+    <div class="example">
+      <h4 class="ui header">Nag</h4>
+      <p>A simple nag appears where in the DOM where it is declared</p>
+      <div class="ui nag">
+        Look, i am a nag!
         <i class="close icon"></i>
       </div>
     </div>
-    <div class="evaluated code" data-type="javascript">
-    // Automatically shows on init if cookie isnt set
-    $('.cookie.nag')
-      .nag({
-        key      : 'accepts-cookies',
-        value    : true
-      })
-    ;
+
+    <div class="example">
+      <h4 class="ui header">Title</h4>
+      <p>A nag can have a title</p>
+      <div class="ui nag">
+        <div class="title">Welcome to the nag module</div>
+        <div>Look, i am a nag!</div>
+        <i class="close icon"></i>
+      </div>
     </div>
 
-    <h2 class="ui dividing header">Support Development</h2>
-    <div class="no example">
+    <div class="example">
+     <h4 class="ui header">Fixed Nag</h4>
+      <p>A fixed nag appears at the top of the screen</p>
+      <div class="ui fixed nag" id="fixednag">
+        Look, i am a fixed nag!
+        <i class="close icon"></i>
+      </div>
+      <div class="code" data-type="javascript" data-demo="true">
+          /*
+           persist:true is used to ignore dismiss storage when closing
+           for demo purposes here, not related to 'fixed' variant
+          */
+          $('#fixednag')
+          .nag({
+            persist:true
+          })
+          ;
+      </div>
+    </div>
+    <div class="example">
+      <p>A fixed nag can appear at the bottom of the screen</p>
+      <div class="ui bottom fixed nag" id="bottomfixednag">
+        Look, i am a bottom fixed nag!
+        <i class="close icon"></i>
+      </div>
+      <div class="code" data-type="javascript" data-demo="true">
+          $('#bottomfixednag')
+          .nag({
+            persist:true
+          })
+          ;
+      </div>
+    </div>
 
-      <p>You can help support the future development of the Fomantic UI project, and help boost the priority of this component by donating to Fomantic UI development.</p>
+    <div class="example">
+     <h4 class="ui header">Overlay Nag</h4>
+      <p>An overlay nag is absolute positioned and appears at the top of the parent DOM node</p>
+      <div class="ui segment">
+          <div class="ui overlay nag">
+            <div class="title">Welcome to the nag module</div>
+              <div>Look, i am a top overlay nag!</div>
+            <i class="close icon"></i>
+          </div>
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+    <div class="example">
+      <p>An overlay nag can appear at the bottom of the parent node</p>
+      <div class="ui segment">
+          <div class="ui bottom overlay nag">
+            <div class="title">Welcome to the nag module</div>
+              <div>Look, i am a bottom overlay nag!</div>
+            <i class="close icon"></i>
+          </div>
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
 
-      <p>Please be sure to leave a note in the comments to indicate that you are interested in the development of this particular component.</p>
+
+    <h2 class="ui dividing header">Groups</h2>
+
+    <div class="example" data-class="nags">
+        <h4 class="ui header">Nags</h4>
+        <p>A group of nags can be formatted to appear together</p>
+        <div class="ui nags">
+            <div class="ui nag"><div class="title">First nag</div><i class="close icon"></i></div>
+            <div class="ui nag"><div class="title">Second nag</div><i class="close icon"></i></div>
+            <div class="ui nag"><div class="title">Third nag</div><i class="close icon"></i></div>
+        </div>
+    </div>
+    <h2 class="ui dividing header">Variations</h2>
+    <div class="example">
+        <h4 class="ui header">Colored</h4>
+        <p>A nag can be formatted to be different colors</p>
+        <div class="ui red nag"><div class="title">Red</div><i class="close icon"></i></div> <p></p>
+        <div class="ui orange nag"><div class="title">Orange</div><i class="close icon"></i></div> <p></p>
+        <div class="ui yellow nag"><div class="title">Yellow</div><i class="close icon"></i></div> <p></p>
+        <div class="ui olive nag"><div class="title">Olive</div><i class="close icon"></i></div> <p></p>
+        <div class="ui green nag"><div class="title">Green</div><i class="close icon"></i></div> <p></p>
+        <div class="ui teal nag"><div class="title">Teal</div><i class="close icon"></i></div> <p></p>
+        <div class="ui blue nag"><div class="title">Blue</div><i class="close icon"></i></div> <p></p>
+        <div class="ui violet nag"><div class="title">Violet</div><i class="close icon"></i></div> <p></p>
+        <div class="ui purple nag"><div class="title">Purple</div><i class="close icon"></i></div> <p></p>
+        <div class="ui pink nag"><div class="title">Pink</div><i class="close icon"></i></div> <p></p>
+        <div class="ui brown nag"><div class="title">Brown</div><i class="close icon"></i></div> <p></p>
+        <div class="ui black nag"><div class="title">Black</div><i class="close icon"></i></div>
+    </div>
+    <div class="example">
+        <h4 class="ui header">Inverted</h4>
+        <p>A nag can be formatted to appear inverted</p>
+        <div class="ui inverted nag">
+            <div class="title">Inverted</div>
+            <div> This nag has inverted colors</div>
+            <i class="close icon"></i>
+        </div>
+    </div>
+    <div class="example">
+        <h4 class="ui header">Size</h4>
+        <p>A nag can have different sizes</p>
+        <div class="ui mini nag">
+          <div class="title">Mini nag</div>
+          <i class="close icon"></i>
+        </div>
+        <p></p>
+        <div class="ui tiny nag">
+          <div class="title">Tiny nag</div>
+          <i class="close icon"></i>
+        </div>
+        <p></p>
+        <div class="ui small nag">
+          <div class="title">Small nag</div>
+          <i class="close icon"></i>
+        </div>
+        <p></p>
+        <div class="ui large nag">
+          <div class="title">Large nag</div>
+          <i class="close icon"></i>
+        </div>
+        <p></p>
+        <div class="ui big nag">
+          <div class="title">Big nag</div>
+          <i class="close icon"></i>
+        </div>
+        <p></p>
+        <div class="ui huge nag">
+          <div class="title">Huge nag</div>
+          <i class="close icon"></i>
+        </div>
+        <p></p>
+        <div class="ui massive nag">
+          <div class="title">Masssive nag</div>
+          <i class="close icon"></i>
+        </div>
 
     </div>
+  </div>
+  <div class="ui tab" data-tab="examples">
+      <h2 class="ui dividing header">Examples</h2>
+
+      <div class="ui code" data-type="html" data-preview="true">
+        <div class="ui cookie nag">
+          <span class="title">
+            We use cookies to ensure you get the best experience on our website
+          </span>
+          <i class="close icon"></i>
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+      // Automatically shows on init if cookie isn't set
+      $('.cookie.nag')
+        .nag({
+          key      : 'accepts-cookies',
+          value    : true
+        })
+      ;
+      </div>
+      <div class="code" data-type="javascript" data-demo="true">
+      // Wont re-appear unless cleared
+      $('.cookie.nag')
+        .nag('show')
+      ;
+      </div>
+      <div class="code" data-type="javascript" data-demo="true">
+      // Clears cookie so nag shows again
+      $('.cookie.nag')
+        .nag('clear')
+      ;
+      </div>
+
 
   </div>
 
+  <div class="ui tab" data-tab="usage">
+      <h2 class="ui dividing header">Usage</h2>
+
+      <div class="no example">
+        <p>Nags are used to present a user with a one time message which will persist until a user acknowledges the message. This can be used for providing notices like the site's use of cookies, an important change to a site like a security breach.</p>
+        <p>Fomantic's nag component provides built in options for ensuring a nag is only displayed once. You can trigger an API endpoint on dismissal, in order to store a value in your database, or you can use localstorage, sessionstorage or cookie value to make sure that a particular computer does not receive the nag again.</p>
+      </div>
+
+      <h3 class="ui header">Initializing a Nag</h3>
+      <div class="code" data-label="Javascript" data-type="javascript">
+          $('.ui.nag')
+            .nag()
+          ;
+      </div>
+      <div class="code" data-label="HTML" data-type="html">
+          <div class="ui nag">
+            <div class="title">Welcome to the nag module</div>
+            <div>Some additional Info here</div>
+            <i class="close icon"></i>
+          </div>
+      </div>
+
+
+      <h2 class="ui dividing header">Behaviors</h2>
+
+        <p>All the following behaviors can be called using the syntax:<p>
+        <div class="code">
+            $('.ui.nag').nag('behavior', argumentOne, argumentTwo...);
+        </div>
+
+        <table class="ui definition celled table">
+            <tr>
+                <td>show</td>
+                <td>Shows the nag, if it isn't dismissed and no expiration date is set in storage</td>
+            </tr>
+            <tr>
+                <td>hide</td>
+                <td>Hides the nag</td>
+            </tr>
+            <tr>
+                <td>dismiss</td>
+                <td>Dismisses the nag and sets the expiration date into the given storage to prevent the nag being shown the next time</td>
+            </tr>
+            <tr>
+                <td>clear</td>
+                <td>Deletes an already set expiration date, so the nag gets shown the next time</td>
+            </tr>
+        </table>
+
+  </div>
+
+  <div class="ui tab" data-tab="settings">
+
+    <h2 class="ui dividing header">Settings</h2>
+
+    <h3 class="ui header">
+      Nag Settings
+      <div class="sub header">Settings to configure nag behavior</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>persist</td>
+          <td>false</td>
+          <td><code>true</code> will show the nag, even if it is already dismissed, but will keep a set expiration date intact</td>
+        </tr>
+        <tr>
+          <td>displayTime</td>
+          <td>0</td>
+          <td>Time in milliseconds until nag gets automatically hidden. Zero requires manually dismissal, otherwise hides on its own</td>
+        </tr>
+
+        <tr>
+          <td>context</td>
+          <td>body</td>
+          <td>Selector or jquery object specifying the area to to attach the nag to</td>
+        </tr>
+        <tr>
+          <td>detachable</td>
+          <td>false</td>
+          <td>If set to true will re-attach the nag to the given <code>context</code> node</td>
+        </tr>
+        <tr>
+            <td>expires</td>
+            <td>30</td>
+            <td>Amount of days or a Date Object until expiration of cookie/localstorage</td>
+        </tr>
+        <tr>
+            <td>domain</td>
+            <td>false</td>
+            <td>cookie option</td>
+        </tr>
+        <tr>
+            <td>path</td>
+            <td>/</td>
+            <td>cookie option</td>
+        </tr>
+        <tr>
+          <td>secure</td>
+          <td>false</td>
+          <td>cookie option</td>
+        </tr>
+        <tr>
+          <td>samesite</td>
+          <td>false</td>
+          <td>cookie option</td>
+        </tr>
+        <tr>
+          <td>storageMethod</td>
+          <td>cookie</td>
+          <td>Storage to store the expiration date when the nag is dismissed. Can be either <code>cookie</code>, <code>localstorage</code> or <code>sessionstorage</code></td>
+        </tr>
+        <tr>
+            <td>key</td>
+            <td>nag</td>
+            <td>Key to store in dismissed localstorage/cookie</td>
+        </tr>
+        <tr>
+          <td>value</td>
+          <td>dismiss</td>
+          <td>Value to store in dismissed localstorage/cookie</td>
+        </tr>
+        <tr>
+          <td>expirationKey</td>
+          <td>ExpirationDate</td>
+          <td>Key suffix to support expiration in localstorage</td>
+        </tr>
+        <tr>
+          <td>animation</td>
+          <td>
+            <div class="code">
+              animation   : {
+                show : 'slide',
+                hide : 'slide'
+              }
+            </div>
+          </td>
+          <td>Animation transition style for open/close animation. Can be either <code>slide</code> or <code>fade</code></td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td>500</td>
+          <td>Duration of open/close animation</td>
+        </tr>
+       <tr>
+         <td>easing</td>
+         <td>easeOutQuad</td>
+         <td>Easing of open/close animation. EaseOutQuad is included with nag, for additional options you must include <a href="http://gsgd.co.uk/sandbox/jquery/easing/">easing equations</a>.</td>
+       </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">Callbacks</h4>
+    <p>Callbacks specify a function to occur after a specific behavior.</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th class="four wide">Parameters</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onShow</td>
+          <td>$module</td>
+          <td>Callback before nag is shown. Returning <code>false</code> from this callback will cancel the nag from showing.</td>
+        </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>$module</td>
+          <td>Callback after nag is shown.</td>
+        </tr>
+        <tr>
+          <td>onHide</td>
+          <td>$module</td>
+          <td>Callback before nag is hidden. Returning <code>false</code> from this callback will cancel the nag from hiding.</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>$module</td>
+          <td>Callback after nag is hidden.</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      DOM Settings
+      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="eight wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>namespace</td>
+          <td>nag</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>
+            <div class="code" data-type="javascript">
+              selector      : {
+                close : '> .close.icon'
+              }
+            </div>
+          </td>
+          <td>DOM Selectors used internally</td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code">
+    className   : {
+      bottom    : 'bottom',
+      fixed     : 'fixed'
+    }
+            </div>
+          </td>
+          <td>Class names used to attach style to state</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+
+    <h3 class="ui header">
+      Debug Settings
+      <div class="sub header">Debug settings controls debug output to the console</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Nag</td>
+          <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>false</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>false</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>true</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>false</td>
+          <td>Provides ancillary debug output to console</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+              error: {
+                noStorage       : 'Unsupported storage method',
+                method          : 'The method you called is not defined.',
+                setItem         : 'Unexpected error while setting value',
+                expiresFormat   : '"expires" must be a number of days or a Date Object'
+              }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
 </div>
