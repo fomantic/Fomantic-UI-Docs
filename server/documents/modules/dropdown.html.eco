@@ -1900,7 +1900,7 @@ themes      : ['Default', 'GitHub', 'Material']
               "value" : "value1",
 
               // name displayed after selection (optional)
-              "text"  : "Choice 1"
+              "text"  : "Choice 1",
 
               // whether field should be displayed as disabled (optional)
               "disabled"  : false,
@@ -3119,6 +3119,10 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>get item(value)</td>
           <td>Returns DOM element that matches a given input value</td>
+        </tr>
+        <tr>
+          <td>get query</td>
+          <td>Returns current search term entered</td>
         </tr>
         <tr>
           <td>bind touch events</td>
