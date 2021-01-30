@@ -3664,6 +3664,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Dropdown</td>
           <td>Is called before a dropdown is hidden. If <code>false</code> is returned, dropdown will not be hidden.</td>
         </tr>
+        <tr>
+          <td>onSearch</td>
+          <td>Dropdown</td>
+          <td>Is called before a search takes place to filter the items list. If <code>false</code> is returned, the search and item filtering is cancelled.</td>
+        </tr>
       </tbody>
     </table>
 
