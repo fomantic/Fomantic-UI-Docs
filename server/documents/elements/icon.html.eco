@@ -7112,9 +7112,9 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Bordered Colored <span class="ui black label">New in 2.8.8</span></h4>
       <p>The bordered color can appear in the same color as the icon itself</p>
-      <i class="circular colored red users icon"></i>
-      <i class="circular colored green users icon"></i>
-      <i class="circular colored blue users icon"></i>
+      <i class="bordered colored red users icon"></i>
+      <i class="bordered colored green users icon"></i>
+      <i class="bordered colored blue users icon"></i>
     </div>
     <div class="example">
       <h4 class="ui header">Colored</h4>
