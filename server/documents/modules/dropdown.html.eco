@@ -1902,6 +1902,12 @@ themes      : ['Default', 'GitHub', 'Material']
               // name displayed after selection (optional)
               "text"  : "Choice 1",
 
+              // Details displayed to the right of the text (optional)
+              "description"  : "Details",
+
+              // whether the detail description should be displayed underneath the text instead (optional)
+              "descriptionVertical"  : true,
+
               // whether field should be displayed as disabled (optional)
               "disabled"  : false,
 
@@ -2636,6 +2642,34 @@ themes      : ['Default', 'GitHub', 'Material']
               <div class="default text"></div>
           </div>
 
+      </div>
+
+      <div class="no example">
+          <h4 class="ui header">Display a (vertical) description by value setting<div class="ui black label">New in 2.8.8</div></h4>
+          <p>An additional item description (optionally displayed vertically) can be dynamically created by providing two extra attributes</p>
+          <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
+          <div class="evaluated code" data-type="javascript">
+              $('#verticaldescription').dropdown({
+                  placeholder: 'Show (vertical) descriptions',
+                  values:[{
+                    "name": "Inline Baby",
+                    "value": "jenny",
+                    "description": "Born 2018"
+                  },
+                  {
+                    "name": "Vertical Baby",
+                    "value": "elliot",
+                    "description": "Born 2020",
+                    "descriptionVertical": true
+                  }]
+              })
+              ;
+          </div>
+          <div class="ui fluid long selection dropdown" id="verticaldescription">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <div class="default text"></div>
+          </div>
       </div>
 
       <div class="no example">
