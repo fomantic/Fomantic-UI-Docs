@@ -401,7 +401,7 @@ type        : 'UI Module'
     </div>
 
     <h4 class="ui header">Local Object</h4>
-    <p>Local search results allow you to search across specified properties of a javacript object literal looking for matching values</p>
+    <p>Local search results allow you to search across specified properties of a javascript object literal looking for matching values</p>
     <p>
       You can set which fields are searchable using the <code>searchFields</code> setting. Local object search can only display standard search results (not categories).
     </p>
@@ -432,7 +432,7 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Server Responses</h2>
 
-    <div class="ui info message">You may also consider adding a top level property like <code>success: true</code> and using API's <code>successTest</code> parameter to determine whether a server response is actually succesful, even if it returns the correct HTTP code</div>
+    <div class="ui info message">You may also consider adding a top level property like <code>success: true</code> and using API's <code>successTest</code> parameter to determine whether a server response is actually successful, even if it returns the correct HTTP code</div>
 
     <h4 class="ui header">Standard</h4>
     <div class="code" data-title="Server JSON Response">
@@ -504,7 +504,7 @@ type        : 'UI Module'
     </div>
 
 
-    <h2 class="ui dividing header">Retreiving Results</h2>
+    <h2 class="ui dividing header">Retrieving Results</h2>
 
     <h4 class="ui header">Unique IDs</h4>
     <p>If no <code>id</code> property is included on a result, a key will automatically be generated when your results are returned for each result.</p>
@@ -678,7 +678,7 @@ type        : 'UI Module'
       	</div>
       </div>
       <p><a href="/behaviors/api.html">API</a> provides a callback <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a> that can be used to restructure third party APIs to match the expected server response for search.</p>
-      <p>You can also use <a href="/behaviors/api.html#mocking-responses"><code>mockResponseAsync</code></a> to use a custom backend for fullfilling searches.</p>
+      <p>You can also use <a href="/behaviors/api.html#mocking-responses"><code>mockResponseAsync</code></a> to use a custom backend for fulfilling searches.</p>
       <div class="ui search">
         <div class="ui left icon input">
           <input class="prompt" type="text" placeholder="Search GitHub">
