@@ -990,7 +990,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   <div data-use-content="true" class="example">
     <h4 class="ui header">Loading</h4>
     <p>If a form is in loading state, it will automatically show a loading indicator.</p>
-    <div class="ui ignored info message"><code>elastic</code> as loading style is currently not supported  because form uses the <code>:before</code> pseudoclass to dimm the background.</div>
+    <div class="ui ignored info message"><code>elastic</code> as loading style is currently not supported because form uses the <code>:before</code> pseudoclass to dim the background.</div>
     <div class="ui loading form">
       <div class="field">
         <label>E-mail</label>
