@@ -150,7 +150,7 @@ type        : 'Main'
       <li>
         In this release we had a big focus on removing a lot of the <code>!important</code> usage which in turn produced lots of issues.
         Now with a big help from our core contributors we have removed ~85% of the usage and reduced the complexity of a lot of
-        the color code base which makes it easier to make changes and helps reduce the size of the general code base aswell as removing duplicate code.
+        the color code base which makes it easier to make changes and helps reduce the size of the general code base as well as removing duplicate code.
       </li>
     </ul>
 
@@ -526,7 +526,7 @@ type        : 'Main'
       <h4 class="ui header">
         Improved Flexbox Modals
       </h4>
-      <p>Although flex-box were introduced in <code>2.3.0</code> there were limitations which may have prevented some advanced use-cases. For example, flexbox modals did not support modals that used <code>detachable: false</code> and werent directly inside dimmer flex containers. Also some flex browsers (IE11) do not support absolutely positioned elements inside flex containers, so multiple overlapping modals could not be used in those cases.</p>
+      <p>Although flex-box were introduced in <code>2.3.0</code> there were limitations which may have prevented some advanced use-cases. For example, flexbox modals did not support modals that used <code>detachable: false</code> and weren't directly inside dimmer flex containers. Also some flex browsers (IE11) do not support absolutely positioned elements inside flex containers, so multiple overlapping modals could not be used in those cases.</p>
       <p>
         <code>2.4.0</code> solves this by introducing a hybrid flex system, that will fall back to javascript positioning for browsers or layouts that aren't compatible with flex.
       </p>
@@ -1183,7 +1183,7 @@ type        : 'Main'
 
       <p>Semantic UI <code>2.3</code> includes a rewrite of modal to include non-js flexbox positioning for vertical centering. No longer will you have to call <code>$('.ui.modal').modal('refresh')</code> if content height changes to recenter.</p>
 
-      <p>In addition there's a new setting <code>centered: false</code> which makes it easier to do top aligned modals when the internal may be dynamic and you dont want content to shift vertically.</p>
+      <p>In addition there's a new setting <code>centered: false</code> which makes it easier to do top aligned modals when the internal may be dynamic and you don't want content to shift vertically.</p>
 
 
       <div class="ui special modal">
@@ -1284,7 +1284,7 @@ type        : 'Main'
       </div>
     </div>
     <div class="no centering example">
-      <h4 class="ui header">Arrow Aligment on Small Popups</h4>
+      <h4 class="ui header">Arrow Alignment on Small Popups</h4>
       <p>Semantic <a href="/modules/popup.html">popups</a> now detects when horizontally aligning the popup on it's arrow is more reasonable than matching edges with a popup.</p>
       <div class="ui info message">
         To use this feature be sure to specify <code>movePopup: false</code> in your settings
