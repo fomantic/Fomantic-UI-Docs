@@ -318,7 +318,7 @@ themes      : ['Default']
 
 
     <div class="dynamic no example">
-      <h4 class="header">Retreiving Remote Content</h4>
+      <h4 class="header">Retrieving Remote Content</h4>
       <p>Using <code>auto: true</code> will load the tab's path from your server with additional headers to specify an in-page request. When <a href="#settings"><code>cache: true</code></a> is set, re-opening a tab will be loaded from cache without a server request.</p>
       <div class="ui ignored warning message">
         API requests for the following example have been faked using <a href="/behaviors/api.html#using-custom-backends">mockResponse</a> API setting to avoid network overhead.
