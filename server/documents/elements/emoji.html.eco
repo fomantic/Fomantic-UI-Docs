@@ -37,7 +37,7 @@ themes      : ['Default']
     <div class="ui ignored warning message">
       Emojis serve a very similar function to text in a page. In Fomantic emojis receive a special tag <code>&lt;em&gt;</code> which allow for an abbreviated markup when sitting along-side text.
         <br>
-        Because of the complexity and possible interferance with existing fomantic classnames, emoji names have to be provided via the <code>data-emoji</code> attribute instead of usual classnaming.
+        Because of the complexity and possible interference with existing fomantic classnames, emoji names have to be provided via the <code>data-emoji</code> attribute instead of usual classnaming.
     </div>
     <div class="ui ignored message">
         By default all emoji images are linked to a CDN and are <b>not part of Fomantic itself</b>.
