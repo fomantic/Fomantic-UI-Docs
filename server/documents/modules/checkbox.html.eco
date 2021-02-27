@@ -486,7 +486,7 @@ themes      : ['Default', 'Colored']
                   allChecked = false;
                 }
               });
-              // set parent checkbox state, but dont trigger its onChange callback
+              // set parent checkbox state, but don't trigger its onChange callback
               if(allChecked) {
                 $parentCheckbox.checkbox('set checked');
               }
@@ -505,7 +505,7 @@ themes      : ['Default', 'Colored']
 
     <div class="cancel example">
       <h4 class="ui header">Checking Conditions</h4>
-      <p><a href="/modules/checkbox.html">Checkboxes</a> include four new callbacks <code>beforeChecked</code>, <code>beforeUnchecked</code>, <code>beforeDeterminate</code>, and <code>beforeIndeterminate</code>, returning <code>false</code> from these callbacks will cancel the action from occuring before the input value is updated.</p>
+      <p><a href="/modules/checkbox.html">Checkboxes</a> include four new callbacks <code>beforeChecked</code>, <code>beforeUnchecked</code>, <code>beforeDeterminate</code>, and <code>beforeIndeterminate</code>, returning <code>false</code> from these callbacks will cancel the action from occurring before the input value is updated.</p>
       <div class="ui checkbox">
         <input type="checkbox" name="example" />
         <label>Maybe this will work</label>
@@ -810,7 +810,7 @@ themes      : ['Default', 'Colored']
         <tr>
           <td>onIndeterminate</td>
           <td>HTML input element</td>
-          <td>Callback after a checkbox is set to undeterminate.</td>
+          <td>Callback after a checkbox is set to indeterminate.</td>
         </tr>
         <tr>
           <td>onDeterminate</td>
@@ -830,7 +830,7 @@ themes      : ['Default', 'Colored']
         <tr>
           <td>beforeIndeterminate</td>
           <td>HTML input element</td>
-          <td>Callback before a checkbox is set to undeterminate. Can cancel change by returning <code>false</code></td>
+          <td>Callback before a checkbox is set to indeterminate. Can cancel change by returning <code>false</code></td>
         </tr>
         <tr>
           <td>beforeDeterminate</td>
