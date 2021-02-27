@@ -126,7 +126,7 @@ type        : 'Draft'
         </tr>
         <tr>
           <td>get url encoded value(value)</td>
-          <td>Returns <code>encodeURIComponent</code> value only if value passsed is not already encoded
+          <td>Returns <code>encodeURIComponent</code> value only if value passed is not already encoded
         </tr>
         <tr>
           <td>read cached response(url)</td>
