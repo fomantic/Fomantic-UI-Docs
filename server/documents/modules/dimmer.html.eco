@@ -603,9 +603,16 @@ themes      : ['Default']
         <tr>
           <td>transition</td>
           <td>
-            Fade
+            fade
           </td>
-          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
+          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a><br><br><div class="ui black tiny label">New in 2.8.8</div><br>Instead of a string, you can also provide an object to use individual transition methods for show and hide
+              <div class="code">
+                  {
+                    showMethod: 'fade',
+                    hideMethod: 'zoom'
+                  }
+            </div>
+          </td>
         </tr>
         <tr>
             <td>displayLoader</td>
