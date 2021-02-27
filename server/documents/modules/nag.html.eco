@@ -171,7 +171,7 @@ type        : 'UI Module'
         </div>
         <p></p>
         <div class="ui massive nag">
-          <div class="title">Masssive nag</div>
+          <div class="title">Massive nag</div>
           <i class="close icon"></i>
         </div>
 
