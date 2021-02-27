@@ -127,7 +127,7 @@ themes      : ['Default']
     <h4 class="ui header">Active</h4>
     <p>An active reveal displays its hidden content</p>
     <div class="ui ignored info message">
-      Adding the class <code>active</code> can allow you to show the hidden contents programatically
+      Adding the class <code>active</code> can allow you to show the hidden contents programmatically
     </div>
     <div class="ui active move left reveal">
       <div class="visible content">
@@ -141,7 +141,6 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Variations</h2>
 
-
   <div class="example">
     <h4 class="ui header">Instant</h4>
     <p>An element can show its content without delay</p>
@@ -154,7 +153,6 @@ themes      : ['Default']
       </div>
     </div>
   </div>
-
 
   <h2 class="ui dividing header">States</h2>
 
@@ -170,7 +168,5 @@ themes      : ['Default']
       </div>
     </div>
   </div>
-
-
 
 </div>

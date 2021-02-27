@@ -121,8 +121,8 @@ themes      : ['Default']
         <div class="column"><i class="fish icon" data-search-terms="fauna, gold, seafood, swimming"></i>fish</div>
         <div class="column"><i class="frog icon" data-search-terms="amphibian, bullfrog, fauna, hop, kermit, kiss, prince, ribbit, toad, wart"></i>frog</div>
         <div class="column"><i class="hippo icon" data-search-terms="animal, fauna, hippopotamus, hungry, mammal"></i>hippo</div>
-        <div class="column"><i class="horse icon" data-search-terms="equus, fauna, mammmal, mare, neigh, pony"></i>horse</div>
-        <div class="column"><i class="horse head icon" data-search-terms="equus, fauna, mammmal, mare, neigh, pony"></i>horse head</div>
+        <div class="column"><i class="horse icon" data-search-terms="equus, fauna, mammal, mare, neigh, pony"></i>horse</div>
+        <div class="column"><i class="horse head icon" data-search-terms="equus, fauna, mammal, mare, neigh, pony"></i>horse head</div>
         <div class="column"><i class="kiwi bird icon" data-search-terms="bird, fauna, new zealand"></i>kiwi bird</div>
         <div class="column"><i class="otter icon" data-search-terms="animal, badger, fauna, fur, mammal, marten"></i>otter</div>
         <div class="column"><i class="paw icon" data-search-terms="animal, cat, dog, pet, print"></i>paw</div>
@@ -1572,8 +1572,8 @@ themes      : ['Default']
         <div class="column"><i class="eye icon" data-search-terms="look, optic, see, seen, show, sight, views, visible"></i>eye</div>
         <div class="column"><i class="eye dropper icon" data-search-terms="beaker, clone, color, copy, eyedropper, pipette"></i>eye dropper</div>
         <div class="column"><i class="eye outline icon" data-search-terms="look, optic, see, seen, show, sight, views, visible"></i>eye outline</div>
-        <div class="column"><i class="eye slash icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visiblity"></i>eye slash</div>
-        <div class="column"><i class="eye slash outline icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visiblity"></i>eye slash outline</div>
+        <div class="column"><i class="eye slash icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visibility"></i>eye slash</div>
+        <div class="column"><i class="eye slash outline icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visibility"></i>eye slash outline</div>
         <div class="column"><i class="fill icon" data-search-terms="bucket, color, paint, paint bucket"></i>fill</div>
         <div class="column"><i class="fill drip icon" data-search-terms="bucket, color, drop, paint, paint bucket, spill"></i>fill drip</div>
         <div class="column"><i class="highlighter icon" data-search-terms="edit, marker, sharpie, update, write"></i>highlighter</div>
@@ -1906,8 +1906,8 @@ themes      : ['Default']
         <div class="column"><i class="grin alternate outline icon" data-search-terms="emoticon, face, laugh, smile"></i>grin alternate outline</div>
         <div class="column"><i class="grin beam icon" data-search-terms="emoticon, face, laugh, smile"></i>grin beam</div>
         <div class="column"><i class="grin beam outline icon" data-search-terms="emoticon, face, laugh, smile"></i>grin beam outline</div>
-        <div class="column"><i class="grin beam sweat icon" data-search-terms="embarass, emoticon, face, smile"></i>grin beam sweat</div>
-        <div class="column"><i class="grin beam sweat outline icon" data-search-terms="embarass, emoticon, face, smile"></i>grin beam sweat outline</div>
+        <div class="column"><i class="grin beam sweat icon" data-search-terms="embarrass, emoticon, face, smile"></i>grin beam sweat</div>
+        <div class="column"><i class="grin beam sweat outline icon" data-search-terms="embarrass, emoticon, face, smile"></i>grin beam sweat outline</div>
         <div class="column"><i class="grin hearts icon" data-search-terms="emoticon, face, love, smile"></i>grin hearts</div>
         <div class="column"><i class="grin hearts outline icon" data-search-terms="emoticon, face, love, smile"></i>grin hearts outline</div>
         <div class="column"><i class="grin outline icon" data-search-terms="emoticon, face, laugh, smile"></i>grin outline</div>
@@ -2193,7 +2193,7 @@ themes      : ['Default']
         <div class="column"><i class="balance scale left icon" data-search-terms="justice, legal, measure, unbalanced, weight"></i>balance scale left</div>
         <div class="column"><i class="balance scale right icon" data-search-terms="justice, legal, measure, unbalanced, weight"></i>balance scale right</div>
         <div class="column"><i class="book icon" data-search-terms="diary, documentation, journal, library, read"></i>book</div>
-        <div class="column"><i class="cash register icon" data-search-terms="buy, cha-ching, change, checkout, commerce, leaerboard, machine, pay, payment, purchase, store"></i>cash register</div>
+        <div class="column"><i class="cash register icon" data-search-terms="buy, cha-ching, change, checkout, commerce, leaderboard, machine, pay, payment, purchase, store"></i>cash register</div>
         <div class="column"><i class="chart line icon" data-search-terms="activity, analytics, chart, dashboard, gain, graph, increase, line"></i>chart line</div>
         <div class="column"><i class="chart pie icon" data-search-terms="analytics, chart, diagram, graph, pie"></i>chart pie</div>
         <div class="column"><i class="coins icon" data-search-terms="currency, dime, financial, gold, money, penny"></i>coins</div>
@@ -2814,8 +2814,8 @@ themes      : ['Default']
         <div class="column"><i class="eye icon" data-search-terms="look, optic, see, seen, show, sight, views, visible"></i>eye</div>
         <div class="column"><i class="eye dropper icon" data-search-terms="beaker, clone, color, copy, eyedropper, pipette"></i>eye dropper</div>
         <div class="column"><i class="eye outline icon" data-search-terms="look, optic, see, seen, show, sight, views, visible"></i>eye outline</div>
-        <div class="column"><i class="eye slash icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visiblity"></i>eye slash</div>
-        <div class="column"><i class="eye slash outline icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visiblity"></i>eye slash outline</div>
+        <div class="column"><i class="eye slash icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visibility"></i>eye slash</div>
+        <div class="column"><i class="eye slash outline icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visibility"></i>eye slash outline</div>
         <div class="column"><i class="file image icon" data-search-terms="document, image, jpg, photo, png"></i>file image</div>
         <div class="column"><i class="file image outline icon" data-search-terms="document, image, jpg, photo, png"></i>file image outline</div>
         <div class="column"><i class="film icon" data-search-terms="cinema, movie, strip, video"></i>film</div>
@@ -2937,8 +2937,8 @@ themes      : ['Default']
         <div class="column"><i class="external link square alternate icon" data-search-terms="external-link-square, new, open, share"></i>external link square alternate</div>
         <div class="column"><i class="eye icon" data-search-terms="look, optic, see, seen, show, sight, views, visible"></i>eye</div>
         <div class="column"><i class="eye outline icon" data-search-terms="look, optic, see, seen, show, sight, views, visible"></i>eye outline</div>
-        <div class="column"><i class="eye slash icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visiblity"></i>eye slash</div>
-        <div class="column"><i class="eye slash outline icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visiblity"></i>eye slash outline</div>
+        <div class="column"><i class="eye slash icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visibility"></i>eye slash</div>
+        <div class="column"><i class="eye slash outline icon" data-search-terms="blind, hide, show, toggle, unseen, views, visible, visibility"></i>eye slash outline</div>
         <div class="column"><i class="file icon" data-search-terms="document, new, page, pdf, resume"></i>file</div>
         <div class="column"><i class="file alternate icon" data-search-terms="document, file-text, invoice, new, page, pdf"></i>file alternate</div>
         <div class="column"><i class="file alternate outline icon" data-search-terms="document, file-text, invoice, new, page, pdf"></i>file alternate outline</div>
