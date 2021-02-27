@@ -283,7 +283,7 @@ type        : 'Introduction'
         "sticky",
         "tab",
         "transition",
-        "api",        
+        "api",
         "state",
         "visibility",
         "text",
@@ -292,7 +292,7 @@ type        : 'Introduction'
         "toast",
         "emoji"
       ],
-      
+
       // generate .css/.js files for individual components (under /dist/components), but exclude them from semantic.css and semantic.js
       "individuals": [
         "form",
@@ -300,7 +300,7 @@ type        : 'Introduction'
         "step",
         "emoji
       ],
-      
+
       // whether to include special project maintainer tasks
       "admin": false
     }
