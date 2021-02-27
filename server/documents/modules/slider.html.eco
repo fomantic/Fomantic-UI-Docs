@@ -130,7 +130,7 @@ themes      : ['Default']
       <div class="ui purple slider"></div>
       <div class="ui pink slider"></div>
       <div class="ui brown slider"></div>
-      <div class="ui grey rangslidere"></div>
+      <div class="ui grey slider"></div>
       <div class="ui black slider"></div>
     </div>
 
