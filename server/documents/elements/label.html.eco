@@ -507,12 +507,10 @@ themes      : ['Default', 'GitHub']
   <div class="another example" data-use-content="true">
     <div class="ignored ui warning message">
       For backward-compatibility during v2.x, <code>close</code>/<code>delete</code> icon.
-      
       <ul>
         <li>Requires <code>left icon</code> to be added to the parent <code>label</code> when the icon is placed on the left of a label.</li>
         <li>Does not require <code>right icon</code> to be added to parent <code>label</code> when the icon is placed on the right of the label.</li>
       </ul>
-      
       This rule may be simplified in a later minor or major version.
     </div>
 
@@ -534,7 +532,7 @@ themes      : ['Default', 'GitHub']
       <i class="delete icon"></i>
     </div>
   </div>
-    
+
   <div class="example" data-use-content="true" data-class="image" data-tag="img">
     <h4 class="ui header">Image</h4>
     <p>A label can include an image</p>
