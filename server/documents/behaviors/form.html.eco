@@ -1439,7 +1439,7 @@ type        : 'UI Behavior'
       <p>You can use the special behaviors <code>add field/rule</code>, <code>remove rule</code> and <code>remove field</code> to dynamically add or remove fields or rules. </p>
       <div class="ui ignored info message">
         <div class="ui header">Adding Multiple Rules and Complex Rules</div>
-        You can specify shorthand or full rule objects when adding rules. You can also specifiy fields as an array to modify multiple fields.</code>.
+        You can specify shorthand or full rule objects when adding rules. You can also specify fields as an array to modify multiple fields.</code>.
       </div>
       <div class="code">
       // lets only validate username to start
@@ -1877,7 +1877,7 @@ type        : 'UI Behavior'
     <div class="dirty example">
       <h4 class="ui header">Dirty / Clean state</h4>
       <p>
-        When initialized, form has a <em>clean</em> state that record all field values. Once at least one field is modified, form enter in <em>dirty</em> state, that can be catched trough the <code>onDirty</code> event.
+        When initialized, form has a <em>clean</em> state that record all field values. Once at least one field is modified, form enter in <em>dirty</em> state, that can be caught through the <code>onDirty</code> event.
       </p>
       <p>
         Dirty fields can be retrieved by calling the <code>$('form').form('get dirty fields')</code> method, and form can be set to a <em>clean</em> state even with new values by calling the <code>$('form').form('set as clean')</code> method. All new values will then be set as default.
@@ -2156,7 +2156,7 @@ type        : 'UI Behavior'
               }
               </div>
               <div class="ui warning message">
-                The <code>leavingMessage</code> text will only be displayed on Internet Explorer browsers. Other browsers will display a standard message, to prevent intruding popups (more informations <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event">here</a>).
+                The <code>leavingMessage</code> text will only be displayed on Internet Explorer browsers. Other browsers will display a standard message, to prevent intruding popups (more information <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event">here</a>).
               </div>
             </td>
           </tr>
@@ -2198,12 +2198,12 @@ type        : 'UI Behavior'
         </tbody>
       </table>
     </div>
-    
+
     <div class="no example">
       <h4 class="ui header">
         Formatters
       </h4>
-      <p>Settings to modify default returned values. Actually exclusively used with calendar fields (trough the <code>dateHandling: 'formatter'</code> setting).</p>
+      <p>Settings to modify default returned values. Actually exclusively used with calendar fields (through the <code>dateHandling: 'formatter'</code> setting).</p>
 
       <table class="ui celled sortable definition table">
         <thead>
@@ -2254,7 +2254,7 @@ type        : 'UI Behavior'
         </tbody>
       </table>
     </div>
-    
+
     <div class="no example">
       <h4 class="ui header">
         Callbacks
