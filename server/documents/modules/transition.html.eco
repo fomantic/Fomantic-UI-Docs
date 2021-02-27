@@ -691,7 +691,7 @@ type        : 'UI Module'
         <tr>
           <td>skipInlineHidden</td>
           <td>false</td>
-          <td>Whether initially inline hidden objects should be skipped for transition. Useful, if you do the transition for child objects also, but want to have inline hidden childs (defined by <code>style="display:none;"</code>) still kept hidden while the parent gets animated. <a href="/modules/accordion.html">Accordion</a> uses this.</td>
+          <td>Whether initially inline hidden objects should be skipped for transition. Useful, if you do the transition for child objects also, but want to have inline hidden children (defined by <code>style="display:none;"</code>) still kept hidden while the parent gets animated. <a href="/modules/accordion.html">Accordion</a> uses this.</td>
         </tr>
       </tbody>
     </table>

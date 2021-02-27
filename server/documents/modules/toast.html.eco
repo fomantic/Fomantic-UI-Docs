@@ -91,7 +91,7 @@ themes      : ['Default']
         $('body')
           .toast({
             class: 'error',
-            message: `An error occured !`
+            message: `An error occurred !`
           })
         ;
         </div>
@@ -127,7 +127,7 @@ themes      : ['Default']
     </div>
     <div class="no example">
           <h4 class="ui header">Attached Position<span class="ui black label">New in 2.8.8</span></h4>
-          <p>A toast can have an attached position which will show the toast over the whole width of the screen. Just like notificatons on mobile devices.</p>
+          <p>A toast can have an attached position which will show the toast over the whole width of the screen. Just like notifications on mobile devices.</p>
           <div class="ui warning message">
             Attached positions with centered content only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
           </div>
@@ -191,7 +191,7 @@ themes      : ['Default']
           })
         ;
         </div>
-        <p>You can even avoid a toast to disapear.</p>
+        <p>You can even avoid a toast to disappear.</p>
         <div class="code" data-demo="true">
         $('body')
           .toast({
