@@ -673,7 +673,7 @@ themes      : ['Default', 'Chubby']
 
   <div class="example">
     <h4 class="ui header">Inverted</h4>
-    <p>Comments's colors can be inverted</p>
+    <p>Comments' colors can be inverted</p>
     <div class="ui inverted segment">
       <div class="ui inverted threaded comments">
         <h3 class="ui inverted dividing header">Comments</h3>
