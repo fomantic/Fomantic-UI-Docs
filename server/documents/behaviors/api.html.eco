@@ -756,7 +756,7 @@ type        : 'UI Behavior'
             <tr>
               <td>active</td>
               <td>Selected state</td>
-              <td>Toggled on succesful API request</td>
+              <td>Toggled on successful API request</td>
             </tr>
             <tr>
               <td>activate</td>
@@ -776,22 +776,22 @@ type        : 'UI Behavior'
             <tr>
               <td>disabled</td>
               <td>Indicates element cannot be interacted</td>
-              <td>Triggered programatically. Blocks API requests.</td>
+              <td>Triggered programmatically. Blocks API requests.</td>
             </tr>
             <tr>
               <td>flash</td>
               <td>Text-only state used to display a temporary message</td>
-              <td>Triggered programatically</td>
+              <td>Triggered programmatically</td>
             </tr>
             <tr>
               <td>success</td>
               <td>Indicates user action was a success</td>
-              <td>Triggered programatically</td>
+              <td>Triggered programmatically</td>
             </tr>
             <tr>
               <td>warning</td>
               <td>Indicates there was an issue with a user action</td>
-              <td>Triggered programatically</td>
+              <td>Triggered programmatically</td>
             </tr>
           </tbody>
         </table>
@@ -941,7 +941,7 @@ type        : 'UI Behavior'
         </tr>
         <tr>
           <td>get url encoded value(value)</td>
-          <td>Returns <code>encodeURIComponent</code> value only if value passsed is not already encoded
+          <td>Returns <code>encodeURIComponent</code> value only if value passed is not already encoded
         </tr>
         <tr>
           <td>read cached response(url)</td>
