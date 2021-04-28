@@ -1289,7 +1289,7 @@ type        : 'Main'
       <div class="ui info message">
         To use this feature be sure to specify <code>movePopup: false</code> in your settings
       </div>
-      <img src="http://oi66.tinypic.com/2zr2ckk.jpg" class="ui image">
+      <img src="/images/new_popup_alignment.png" class="ui image">
 
       <div class="ui divider"></div>
       <img src="/images/avatar/small/elliot.jpg" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
