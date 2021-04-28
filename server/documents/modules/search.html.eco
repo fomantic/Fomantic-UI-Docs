@@ -571,10 +571,6 @@ type        : 'UI Module'
           <td>Search object for specified query and return results</td>
         </tr>
         <tr>
-          <td>cancel query</td>
-          <td>Cancels current remote search request</td>
-        </tr>
-        <tr>
           <td>is focused</td>
           <td>Whether search is currently focused</td>
         </tr>
