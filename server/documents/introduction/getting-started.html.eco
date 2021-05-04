@@ -51,12 +51,12 @@ type        : 'Main'
 
     <p>To install Fomantic-UI run the following command</p>
     <div class="ignored code" data-type="bash">
-      $ npm install fomantic-ui
+      $ npm install --ignore-scripts fomantic-ui
     </div>
 
     <p>Or try living on the edge and give our nightly build a test and try new features and bug fixes early!</p>
     <div class="ignored code" data-type="bash">
-      $ npm install fomantic-ui@nightly
+      $ npm install --ignore-scripts fomantic-ui@nightly
     </div>
 
     <p>
@@ -82,6 +82,8 @@ type        : 'Main'
       This is <code>semantic/</code> by default.
     </p>
     <div class="ignored code" data-type="bash">
+      $ cd node_modules/fomantic-ui
+      $ npx gulp install
       $ npx gulp build
     </div>
     <p>
