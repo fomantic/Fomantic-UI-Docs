@@ -275,7 +275,7 @@ themes      : ['Default', 'Basic', 'Resetcss']
         <h3 class="Test-it">should have <code>pointer</code> cursor style</h3>
         <div class="Test-run">
           <p><button>button</button></p>
-          <p><input type="image" src="http://lorempixel.com/90/24" alt="input (image)"></p>
+          <p><input type="image" src="/images/wireframe/image.png" width="54" height="45" alt="input (image)"></p>
           <p><input type="button" value="input (button)"></p>
           <p><input type="reset" value="input (reset)"></p>
           <p><input type="submit" value="input (submit)"></p>
@@ -292,7 +292,7 @@ themes      : ['Default', 'Basic', 'Resetcss']
             }
           </style>
           <p><button>button</button></p>
-          <p><input type="image" src="http://lorempixel.com/90/24" alt="input (image)"></p>
+          <p><input type="image" src="/images/wireframe/image.png" width="54" height="45" alt="input (image)"></p>
           <p><input type="button" value="input (button)"></p>
           <p><input type="reset" value="input (reset)"></p>
           <p><input type="submit" value="input (submit)"></p>
@@ -302,7 +302,7 @@ themes      : ['Default', 'Basic', 'Resetcss']
         <h3 class="Test-it">should have <code>default</code> cursor style</h3>
         <div class="Test-run">
           <p><button disabled>button</button></p>
-          <p><input disabled type="image" src="http://lorempixel.com/90/24" alt="input (image)"></p>
+          <p><input disabled type="image" src="/images/wireframe/image.png" width="54" height="45" alt="input (image)"></p>
           <p><input disabled type="button" value="input (button)"></p>
           <p><input disabled type="reset" value="input (reset)"></p>
           <p><input disabled type="submit" value="input (submit)"></p>
