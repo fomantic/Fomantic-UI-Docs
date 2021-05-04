@@ -727,6 +727,15 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Disabled</h4>
+    <p>A menu item can be disabled</p>
+    <div class="ui compact menu">
+      <div class="disabled item">
+        Link
+      </div>
+    </div>
+  </div>
 
   <h2 class="ui dividing header">Variations</h2>
 
