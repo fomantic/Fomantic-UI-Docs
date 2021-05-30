@@ -283,7 +283,23 @@ themes      : ['default', 'GitHub']
       </div>
     </div>
   </div>
-
+  <div class="example">
+    <h4 class="ui header">Horizontal equal width Segments
+        <div class="ui black label">New in 2.8.8</div>
+    </h4>
+    <p>A horizontal segment group can automatically divide segments to be equal width</p>
+    <div class="ui horizontal equal width segments">
+        <div class="ui segment">
+            Segment One
+        </div>
+        <div class="ui segment">
+            Segment Two with a lot of additional content
+        </div>
+        <div class="ui segment">
+            Segment Three
+        </div>
+      </div>
+  </div>
   <div class="example">
     <h4 class="ui header">Horizontal stackable Segments
     <div class="ui black label">New in 2.7.2</div>
