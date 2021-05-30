@@ -1069,14 +1069,25 @@ themes      : ['Default', 'Material']
           <td>
             scale
           </td>
-          <td>Named transition to use when animating menu in and out, full list can be found in <a href="/modules/transition.html">ui transitions</a> docs.</td>
+          <td>Named transition to use when animating menu in and out, full list can be found in <a href="/modules/transition.html">ui transitions</a> docs.<br>
+            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
+                <div class="code">
+                {
+                    showMethod   : 'fade',
+                    showDuration : 200,
+                    hideMethod   : 'zoom,
+                    hideDuration : 500,
+                }
+                </div>
+            </p>
+          </td>
         </tr>
         <tr>
           <td>duration</td>
           <td>
             400
           </td>
-          <td>Duration of animation</td>
+          <td>Duration of animation. The value will be ignored when individual hide/show duration values are provided via the <code>transition</code> setting</td>
         </tr>
         <tr>
           <td>queue</td>

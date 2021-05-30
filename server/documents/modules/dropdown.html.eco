@@ -3588,19 +3588,30 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>
             auto (slide down / slide up)
           </td>
-          <td>Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
-        </tr>
-        <tr>
-          <td>displayType</td>
-          <td>false</td>
-          <td>Specify the final transition display type (block, inline-block etc) so that it doesn't have to be calculated.</td>
+          <td>Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
+                <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
+                    <div class="code">
+                    {
+                        showMethod   : 'fade',
+                        showDuration : 200,
+                        hideMethod   : 'zoom',
+                        hideDuration : 500,
+                    }
+                    </div>
+              </p>
+          </td>
         </tr>
         <tr>
           <td>duration</td>
           <td>
             200
           </td>
-          <td>Duration of animation events</td>
+          <td>Duration of animation events. The value will be ignored when individual hide/show duration values are provided via the <code>transition</code> setting</td>
+        </tr>
+        <tr>
+          <td>displayType</td>
+          <td>false</td>
+          <td>Specify the final transition display type (block, inline-block etc) so that it doesn't have to be calculated.</td>
         </tr>
         <tr>
           <td>keys</td>
