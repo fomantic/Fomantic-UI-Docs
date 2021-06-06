@@ -589,6 +589,25 @@ themes      : ['Default']
           <td>Whether to dim dimmers using CSS transitions.</td>
         </tr>
         <tr>
+          <td>transition</td>
+          <td>
+            fade
+          </td>
+          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
+          <br>
+              <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
+                  <div class="code">
+                  {
+                      showMethod   : 'fade',
+                      showDuration : 200,
+                      hideMethod   : 'zoom',
+                      hideDuration : 500,
+                  }
+                  </div>
+              </p>
+          </td>
+        </tr>
+        <tr>
           <td>duration</td>
           <td>
             <div class="code">
@@ -598,21 +617,7 @@ themes      : ['Default']
             }
             </div>
           </td>
-          <td>Animation duration of dimming. If an integer is used, that value will apply to both show and hide animations.</td>
-        </tr>
-        <tr>
-          <td>transition</td>
-          <td>
-            fade
-          </td>
-          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a><br><br><div class="ui black tiny label">New in 2.8.8</div><br>Instead of a string, you can also provide an object to use individual transition methods for show and hide
-              <div class="code">
-                  {
-                    showMethod: 'fade',
-                    hideMethod: 'zoom'
-                  }
-            </div>
-          </td>
+          <td>Animation duration of dimming. If an integer is used, that value will apply to both show and hide animations. Will be ignored completely when individual hide/show duration values are provided via the <code>transition</code> setting</td>
         </tr>
         <tr>
             <td>displayLoader</td>
