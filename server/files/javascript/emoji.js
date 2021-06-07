@@ -86,6 +86,7 @@ semantic.emoji.ready = function() {
       source: allEmojis,
       type: 'category',
       maxResults: 10,
+      cache: false,
       searchFields:['name','keywordsString'],
       fields: {
         price   : 'emojiTag',
@@ -119,6 +120,8 @@ semantic.emoji.ready = function() {
         $search.blur();
         $('body').toast({
           class: 'inverted',
+          compact: false,
+          showIcon: 'copy',
           message: 'Copied to clipboard!',
           displayTime: 2000
         });

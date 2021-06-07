@@ -80,9 +80,6 @@ semantic.ready = function() {
     $code                = $('div.code').not('.existing'),
     $existingCode        = $('.existing.code'),
 
-    expertiseLevel       = ($.cookie !== undefined)
-      ? $.cookie('expertiseLevel') || 0
-      : 0,
     languageDropdownUsed = false,
 
     metadata,
@@ -761,6 +758,8 @@ semantic.ready = function() {
     copyCode: function() {
       $('body').toast({
         class: 'inverted',
+        compact: false,
+        showIcon: 'copy',
         message: 'Copied to clipboard!',
         displayTime: 2000
       });
@@ -1339,10 +1338,10 @@ semantic.ready = function() {
 
   handler.createIcon();
 
-  if(expertiseLevel < 2 && $(window).width() > 640) {
+  if($(window).width() > 640) {
     $popupExample
       .each(function() {
-        $(this)
+        $(this).find('i.code')
           .popup({
             preserve: false,
             on       : 'hover',
@@ -1352,15 +1351,8 @@ semantic.ready = function() {
               hide: 100
             },
             position : 'top left',
-            content  : 'View Source',
-            target   : $(this).find('i.code')
+            content  : 'View Source'
           })
-          .find('i.code')
-            .on('click', function() {
-              $.cookie('expertiseLevel', 2, {
-                expires: 365
-              });
-            })
         ;
       })
     ;

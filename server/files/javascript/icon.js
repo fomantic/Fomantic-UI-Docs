@@ -65,6 +65,7 @@ semantic.icon.ready = function() {
         type          : 'category',
         minCharacters : 1,
         maxResults    : 10,
+        cache         : false,
         source        : handler.getIconList(),
         onResults     : function(result) {
           setTimeout(function() {
@@ -93,6 +94,8 @@ semantic.icon.ready = function() {
           $search.blur();
           $('body').toast({
             class: 'inverted',
+            compact: false,
+            showIcon: 'copy',
             message: 'Copied to clipboard!',
             displayTime: 2000
           });
