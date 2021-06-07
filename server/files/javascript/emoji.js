@@ -91,6 +91,38 @@ semantic.emoji.ready = function() {
         price   : 'emojiTag',
         title   : 'name',
         description: 'keywordsString'
+      },
+      onResults     : function(result) {
+        setTimeout(function() {
+          var
+              $results = $('emojiSearch.ui.search .result')
+          ;
+          $results.each(function() {
+            var
+                $result = $(this)
+            ;
+            new ClipboardJS(this, {
+              text: function() {
+                var
+                    emojiHTML = $result.find('em').get(0).outerHTML
+                ;
+                return emojiHTML;
+              }
+            });
+          });
+        }, 0);
+      },
+      onSelect: function() {
+        var
+            $search = $('emojiSearch .input > input')
+        ;
+        $search.blur();
+        $('body').toast({
+          class: 'inverted',
+          message: 'Copied to clipboard!',
+          displayTime: 2000
+        });
+        return false;
       }
     })
   ;

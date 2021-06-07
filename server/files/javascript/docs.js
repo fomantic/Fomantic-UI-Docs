@@ -759,9 +759,11 @@ semantic.ready = function() {
     },
 
     copyCode: function() {
-      $(this)
-        .popup('change content', 'Copied to clipboard')
-      ;
+      $('body').toast({
+        class: 'inverted',
+        message: 'Copied to clipboard!',
+        displayTime: 2000
+      });
     },
 
     createCode: function() {
@@ -807,7 +809,7 @@ semantic.ready = function() {
         $label
           .prependTo($html)
         ;
-        new Clipboard($copyCode.get(0), {
+        new ClipboardJS($copyCode.get(0), {
           text: function() {
             var
               code = $copyCode.closest('.example').data('code') || ''
@@ -1455,14 +1457,7 @@ semantic.ready = function() {
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);
   }
-/*
-  if(typeof detectAdBlock === 'undefined') {
-    handler.showBeg();
-  }
-  else {
-    detectAdBlock.onDetected(handler.showBeg);
-  }
-*/
+
   if(window.location.hash) {
     var
       $element = $(window.location.hash),
