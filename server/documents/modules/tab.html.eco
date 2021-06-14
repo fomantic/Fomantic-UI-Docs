@@ -12,7 +12,6 @@ type        : 'UI Module'
 themes      : ['Default']
 ---
 
-<script src="/javascript/library/sinon.js"></script>
 <script src="/javascript/tab.js"></script>
 
 <%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples',  usage: 'Usage',  settings: 'Settings' } }) %>

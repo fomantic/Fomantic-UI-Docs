@@ -65,6 +65,7 @@ semantic.icon.ready = function() {
         type          : 'category',
         minCharacters : 1,
         maxResults    : 10,
+        cache         : false,
         source        : handler.getIconList(),
         onResults     : function(result) {
           setTimeout(function() {
@@ -75,7 +76,7 @@ semantic.icon.ready = function() {
               var
                 $result = $(this)
               ;
-              new Clipboard(this, {
+              new ClipboardJS(this, {
                 text: function() {
                   var
                     iconHTML = $result.find('i').get(0).outerHTML
@@ -91,13 +92,13 @@ semantic.icon.ready = function() {
             $search = $('iconSearch .input > input')
           ;
           $search.blur();
-          setTimeout(function() {
-            $('iconSearch input').transition('glow');
-            $search.val('Copied to clipboard!');
-          }, 50)
-          setTimeout(function() {
-            $search.val('');
-          }, 1500)
+          $('body').toast({
+            class: 'inverted',
+            compact: false,
+            showIcon: 'copy',
+            message: 'Copied to clipboard!',
+            displayTime: 2000
+          });
           return false;
         }
       })

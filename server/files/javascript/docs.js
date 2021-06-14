@@ -80,9 +80,6 @@ semantic.ready = function() {
     $code                = $('div.code').not('.existing'),
     $existingCode        = $('.existing.code'),
 
-    expertiseLevel       = ($.cookie !== undefined)
-      ? $.cookie('expertiseLevel') || 0
-      : 0,
     languageDropdownUsed = false,
 
     metadata,
@@ -759,9 +756,13 @@ semantic.ready = function() {
     },
 
     copyCode: function() {
-      $(this)
-        .popup('change content', 'Copied to clipboard')
-      ;
+      $('body').toast({
+        class: 'inverted',
+        compact: false,
+        showIcon: 'copy',
+        message: 'Copied to clipboard!',
+        displayTime: 2000
+      });
     },
 
     createCode: function() {
@@ -807,7 +808,7 @@ semantic.ready = function() {
         $label
           .prependTo($html)
         ;
-        new Clipboard($copyCode.get(0), {
+        new ClipboardJS($copyCode.get(0), {
           text: function() {
             var
               code = $copyCode.closest('.example').data('code') || ''
@@ -1337,10 +1338,10 @@ semantic.ready = function() {
 
   handler.createIcon();
 
-  if(expertiseLevel < 2 && $(window).width() > 640) {
+  if($(window).width() > 640) {
     $popupExample
       .each(function() {
-        $(this)
+        $(this).find('i.code')
           .popup({
             preserve: false,
             on       : 'hover',
@@ -1350,15 +1351,8 @@ semantic.ready = function() {
               hide: 100
             },
             position : 'top left',
-            content  : 'View Source',
-            target   : $(this).find('i.code')
+            content  : 'View Source'
           })
-          .find('i.code')
-            .on('click', function() {
-              $.cookie('expertiseLevel', 2, {
-                expires: 365
-              });
-            })
         ;
       })
     ;
@@ -1455,14 +1449,7 @@ semantic.ready = function() {
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);
   }
-/*
-  if(typeof detectAdBlock === 'undefined') {
-    handler.showBeg();
-  }
-  else {
-    detectAdBlock.onDetected(handler.showBeg);
-  }
-*/
+
   if(window.location.hash) {
     var
       $element = $(window.location.hash),
