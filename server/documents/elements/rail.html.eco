@@ -21,7 +21,7 @@ type        : 'UI Element'
 
     <h3 class="ui header">When to Use</h3>
     <p>Rails display optional accompanying content outside of the main viewport of your website. Sites often use rails with <a href="/modules/sticky.html">sticky</a> content to fix additional—often optional—content to your viewport as you scroll through the page.</p>
-    <p>Semantic's default rail is <code>300px</code> wide, just large enough to fit many <a href="/views/advertisement.html">common ad unit sizes</a>, and just wide enough for a sub-navigation menu or a prominent call-to-action.</p>
+    <p>Fomantic's default rail is <code>300px</code> wide, just large enough to fit many <a href="/views/advertisement.html">common ad unit sizes</a>, and just wide enough for a sub-navigation menu or a prominent call-to-action.</p>
     <h3 class="ui header">Adjusting Sizes</h3>
     <p>Railed content will most likely require arbitrary breakpoints that are specific to your site's content, to ensure they do not exceed the horizontal width of a user's browser.</p>
     <p>Rails are generally used beside long, single-column containers with long-form content like blog posts, articles, or user profiles. Generally your main text container width should be set between around <code>600-800px</code> depending on your font size to <a href="http://baymard.com/blog/line-length-readability" target="_blank">optimize line length for readability</a>.</p>

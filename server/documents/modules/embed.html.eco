@@ -27,7 +27,7 @@ type        : 'UI Module'
     <div class="no example">
       <h4 class="ui header">Only Load After Interaction</h4>
       <p>Including an <code>iframe</code> embed directly will automatically load all iframe contents on page load which can drastically reduce the responsiveness of a page.</p>
-      <p>Semantic's embed combats this by not loading iframe content until a user has interacted with your embed's placeholder content.</p>
+      <p>Fomantic's embed combats this by not loading iframe content until a user has interacted with your embed's placeholder content.</p>
       <p>To give you an idea of how much file size including an embed will add to your page load see the chart below</p>
       <div class="ui ignored info message">The following are download estimates taken from firebug and a single sample embed. Individual results may vary.</div>
       <table class="ui celled two column table">
