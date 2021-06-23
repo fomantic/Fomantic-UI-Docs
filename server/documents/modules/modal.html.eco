@@ -1018,7 +1018,7 @@ themes      : ['Default', 'Material']
     </table>
 
     <h2 class="ui dividing header">Config Templates</h2> <span class="ui black label">New in 2.8.8</span>
-    <p>A config template is a special behavior to immediatly show preconfigured temporary modals. Three basic templates are included: <code>alert</code>, <code>confirm</code>, <code>prompt</code> as equivalents to existing vanilla JS variants, but with more possibilities to customize the look & feel. </p>
+    <p>A config template is a special behavior to immediately show preconfigured temporary modals. Three basic templates are included: <code>alert</code>, <code>confirm</code>, <code>prompt</code> as equivalents to existing vanilla JS variants, but with more possibilities to customize the look & feel. </p>
     <div class="ui info message">
       Config template modals will be always autoshown, so no manual <code>show</code> is needed)
     </div>
