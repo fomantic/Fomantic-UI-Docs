@@ -1461,7 +1461,7 @@ themes      : ['Default', 'Material']
           <td>Can hold a string to be added to the actions class to control its appearance.</td>
         </tr>
         <tr>
-          <td>fields/td>
+          <td>fields</td>
           <td colspan="2">
             <div class="code">
         fields         : {
@@ -1525,7 +1525,9 @@ themes      : ['Default', 'Material']
           <td colspan="2">
             <div class="code">
       error   : {
-        method    : 'The method you called is not defined.'
+        dimmer    : 'UI Dimmer, a required component is not included in this page',
+        method    : 'The method you called is not defined.',
+        notFound  : 'The element you specified could not be found'
       }
             </div>
           </td>
