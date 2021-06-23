@@ -1359,7 +1359,7 @@ themes      : ['Default', 'Material']
         dimmer   : '> .ui.dimmer',
         bodyFixed: '> .ui.fixed.menu, > .ui.right.toast-container, > .ui.right.sidebar, > .ui.fixed.nag, > .ui.fixed.nag > .close',
         prompt   : '.ui.input > input'
-      },
+      }
             </div>
           </td>
         </tr>
@@ -1388,6 +1388,99 @@ themes      : ['Default', 'Material']
         cancel     : 'negative',
         prompt     : 'ui fluid input'
       }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">Config Template Settings
+      <div class="sub header">Config Template Settings define default content for dynamically created modals</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>title</td>
+          <td>''</td>
+          <td>Content of the modal header</td>
+        </tr>
+        <tr>
+          <td>content</td>
+          <td>''</td>
+          <td>Content of the modal content</td>
+        </tr>
+        <tr>
+          <td>closeIcon</td>
+          <td>false</td>
+          <td>Whether the modal should include a close icon</td>
+        </tr>
+        <tr>
+          <td>actions</td>
+          <td>false</td>
+          <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>
+            <div class="code">
+            actions: [{
+                text    : 'Wait',
+                class   : 'red',
+                icon    : 'exclamation',
+                click   : function(){}
+            }]
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>preserveHTML</td>
+          <td>true</td>
+          <td>Whether HTML included in given title, content or actions should be preserved. Set to <code>false</code> in case you work with untrusted 3rd party content</td>
+        </tr>
+        <tr>
+          <td>class</td>
+          <td>''</td>
+          <td>Can hold a string to be added to the modal class to control its appearance.</td>
+        </tr>
+        <tr>
+          <td>classTitle</td>
+          <td>''</td>
+          <td>Can hold a string to be added to the title class to control its appearance.</td>
+        </tr>
+        <tr>
+          <td>classContent</td>
+          <td>''</td>
+          <td>Can hold a string to be added to the content class to control its appearance.</td>
+        </tr>
+        <tr>
+          <td>classActions</td>
+          <td>''</td>
+          <td>Can hold a string to be added to the actions class to control its appearance.</td>
+        </tr>
+        <tr>
+          <td>fields/td>
+          <td colspan="2">
+            <div class="code">
+        fields         : {
+          class        : 'class',
+          text         : 'text',
+          icon         : 'icon',
+          click        : 'click'
+        }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td colspan="2">
+            <div class="code">
+  text: {
+    ok    : 'Ok',
+    cancel: 'Cancel'
+  }
             </div>
           </td>
         </tr>
