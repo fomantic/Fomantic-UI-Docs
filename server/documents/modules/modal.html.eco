@@ -380,6 +380,14 @@ themes      : ['Default', 'Material']
       </div>
     </div>
   </div>
+  <div class="ui reuse modal" id="reusemodal">
+    <div class="header"></div>
+    <div class="content"></div>
+    <div class="actions">
+      <button class="ui green approve button">Redeem now</button>
+      <button class="ui red deny button">Not now</button>
+    </div>
+  </div>
 
   <div class="ui active tab" data-tab="definition">
 
@@ -857,44 +865,88 @@ themes      : ['Default', 'Material']
 
   <div class="ui tab" data-tab="usage">
 
-    <h2 class="ui dividing header">Usage</h2>
+    <h2 class="ui dividing header">Initializing a modal</h2>
 
-    <h3 class="ui header">Initializing a modal</h3>
-    <p>A modal can be included anywhere on the page. On initialization a modal's current size will be cached, and the element will be detached from the DOM and moved inside a dimmer.</p>
-    <div class="ui info message">
-      <div class="header">Why move modal content?</div>
-      <p>Having a modal inside the page dimmer allows for 3D animations without having the 3D perspective settings alter the rest of the page content. Additionally, content outside the dimmer can be blurred or altered without affecting the modal's content.</p>
-      <p>If you need to have your modal stay in its current location you can preserve its position using the setting <code>detachable: false</code></p>
+    <div class="no example">
+      <h4 class="ui header">Via Javascript properties<span class="ui black label">New in 2.8.8</span></h4>
+      <p>You can create temporary modals without the need to create markup on your own. Temporary modals will be removed from the DOM once closed by default if there isn't a custom <code>onHidden</code> callback given.</p>
+      <div class="code" data-demo="true">
+      $('body').modal({
+          title: 'Important Notice',
+          class: 'mini',
+          closeIcon: true,
+          content: 'You will be logged out in 5 Minutes',
+          actions: [{
+            text: 'Alright, got it',
+            class: 'green'
+          }]
+      }).modal('show');
+      </div>
     </div>
-    <div class="code" data-type="javascript">
+    <div class="no example">
+      <h4 class="ui header">Via existing DOM node</h4>
+
+      <p>A modal can be included anywhere on the page. On initialization a modal's current size will be cached, and the element will be detached from the DOM and moved inside a dimmer.</p>
+      <div class="ui info message">
+        <div class="header">Why move modal content?</div>
+        <p>Having a modal inside the page dimmer allows for 3D animations without having the 3D perspective settings alter the rest of the page content. Additionally, content outside the dimmer can be blurred or altered without affecting the modal's content.</p>
+        <p>If you need to have your modal stay in its current location you can preserve its position using the setting <code>detachable: false</code></p>
+      </div>
+      <div class="code" data-type="javascript">
       $('.ui.modal')
         .modal()
       ;
-    </div>
-    <div class="code" data-type="html">
-      <div class="ui modal">
-        <i class="close icon"></i>
-        <div class="header">
-          Modal Title
-        </div>
-        <div class="image content">
-          <div class="image">
-            An image can appear on left or an icon
+      </div>
+      <div class="code" data-type="html">
+        <div class="ui modal">
+          <i class="close icon"></i>
+          <div class="header">
+            Modal Title
           </div>
-          <div class="description">
-            A description can appear on the right
+          <div class="image content">
+            <div class="image">
+              An image can appear on left or an icon
+            </div>
+            <div class="description">
+              A description can appear on the right
+            </div>
+          </div>
+          <div class="actions">
+            <div class="ui button">Cancel</div>
+            <div class="ui button">OK</div>
           </div>
         </div>
-        <div class="actions">
-          <div class="ui button">Cancel</div>
-          <div class="ui button">OK</div>
-        </div>
+      </div>
+
+      <div class="ui info message">
+        Usually a given close icon on smaller modals will be displayed outside of the modal.
+        You can force to display the close icon inside the modal, just like in fullscreen modals, by adding the <code>inside</code> class to the close icon.
       </div>
     </div>
 
-    <div class="ui info message">
-        Usually a given close icon on smaller modals will be displayed outside of the modal.
-        You can force to display the close icon inside the modal, just like in fullscreen modals, by adding the <code>inside</code> class to the close icon.
+    <div class="no example">
+      <h4 class="ui header">Reuse existing modal with new content <span class="ui black label">New in 2.8.8</span></h4>
+      <p>You can prepare a modal markup as a general template and reuse it's general style but provide actual content via js properties.</p>
+      <div class="code" data-demo="true">
+        var now = new Date();now.setDate(now.getDate()+Math.floor(Math.random() * 31 + 1));
+        $('#reusemodal').modal({
+          title: 'Free voucher until '+now.toDateString(),
+          content: 'Your voucher code is<br><span class="ui huge green text">'+Math.random().toString(16).substr(2).toUpperCase()+'</span>',
+          classContent: 'centered',
+          class: 'small'
+        }).modal('show');
+      </div>
+
+      <div class="code" data-type="html">
+        <div class="ui modal">
+            <div class="header"></div>
+            <div class="content"></div>
+            <div class="actions">
+                <button class="ui green approve button">Redeem now</button>
+                <button class="ui red deny button">Not now</button>
+            </div>
+        </div>
+      </div>
     </div>
 
     <h2 class="ui dividing header">Behavior</h2>
@@ -964,6 +1016,123 @@ themes      : ['Default', 'Material']
         </tr>
       </tbody>
     </table>
+
+    <h2 class="ui dividing header">Config Templates</h2> <span class="ui black label">New in 2.8.8</span>
+    <p>A config template is a special behavior to immediately show preconfigured temporary modals. Three basic templates are included: <code>alert</code>, <code>confirm</code>, <code>prompt</code> as equivalents to existing vanilla JS variants, but with more possibilities to customize the look & feel. </p>
+    <div class="ui info message">
+      Config template modals will be always autoshown, so no manual <code>show</code> is needed)
+    </div>
+    <div class="code">
+      $('body').modal('alert','hello')
+      $('body').modal('confirm','Are you sure?',function(value){})
+      $('body').modal('prompt','Enter Code', function(value){})
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Alert</h4>
+      <p>Possible parameters are: title, content, handler (in that order to stay nearly identical to vanilla js usage) or a given object <code>{title:'',content:'',handler:function(){}}</code> where as title and content can contain HTML.</p>
+      <div class="ui warning message">If you don't trust the content set the global modal setting for <code>preserveHTML</code> to <code>false</code>.</div>
+      <div class="code" data-demo="true">
+          $('body').modal('alert','<span class="ui big purple text">hello</span>');
+      </div>
+      <div class="code" data-demo="true">
+          $('body').modal('alert','Watch out','This is an important message!');
+      </div>
+      <div class="code" data-demo="true">
+         $('body').modal('alert',{
+            title: 'Listen to me',
+            content: 'I love Fomantic-UI',
+            handler: function() {
+              $('body').toast({message:'Great!'});
+            }
+          });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Confirm</h4>
+      <p>The parameter list and logic is the same as for alert. The selected boolean choice will be provided to a given callback handler.</p>
+      <div class="code" data-demo="true">
+      // title and content
+        $('body').modal('confirm','Attention!','Ready?');
+      </div>
+      <div class="code" data-demo="true">
+      // title, content and handler
+        $('body').modal('confirm','Attention!','Ready?', function(choice){
+          $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        });
+      </div>
+      <div class="code" data-demo="true">
+      // content and handler
+        $('body').modal('confirm','Ready?', function(choice){
+          $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        });
+      </div>
+      <div class="code" data-demo="true">
+      // title and handler
+        $('body').modal('confirm',{
+          title: 'Ready?',
+          handler: function(choice){
+            $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+          }
+        });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Prompt</h4>
+      <p>The call for prompt is basically identical to alert and confirm. There are 2 more options available when an object is given <code>placeholder</code> and <code>defaultValue</code>.
+        If you provide HTML Code for the content and this contains an input, this will be used as the inputfield. Otherwise it creates one dynamically for you.</p>
+      <div class="code" data-demo="true">
+  // provide a placeholder
+    $('body').modal('prompt',{
+      title: 'Enter your name',
+      placeholder: 'Do not enter your mothers name!',
+      handler: function(name){
+          $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+      }
+    });
+      </div>
+      <div class="code" data-demo="true">
+  // set a defaultValue
+    $('body').modal('prompt',{
+      title: 'Enter your name',
+      defaultValue: 'mommy',
+      handler: function(name){
+          $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+      }
+    });
+      </div>
+      <div class="code" data-demo="true">
+  // custom input
+    $('body').modal('prompt', 'Custom Input', '<div class="ui labeled input"><div class="ui blue label">Nickname</div><input type="text" placeholder="Do not use your email!"></div>', function(name) {
+      $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+    });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Create your own template</h4>
+      <p>By extending the modals templates object once, you can define your own custom config templates. It has to return an object which will be merged into the modals settings prior to creating/showing the modal.</p>
+      <div class="evaluated code">
+  $.fn.modal.settings.templates.greet = function(username) {
+  // do something according to modals settings and/or given parameters
+    var settings = this.get.settings(); // "this" is the modal instance
+    return {
+      title: 'Greetings to ' + username + '!',
+      content: '<span class="ui huge orange text">'+ username.toUpperCase() + '</span><br>is the best!',
+      class: 'inverted',
+      classContent: 'centered',
+      dimmerSettings: {
+        variation: 'inverted'
+      }
+    }
+  }
+      </div>
+      <p>Reuse this whenever you need</p>
+      <div class="code" data-demo="true">
+          $('body').modal('greet','mom')
+      </div>
+      <div class="code" data-demo="true">
+          $('body').modal('greet','dad')
+      </div>
+    </div>
   </div>
 
   <div class="ui tab" data-tab="settings">
@@ -1001,7 +1170,12 @@ themes      : ['Default', 'Material']
         <tr>
           <td>restoreFocus</td>
           <td>true</td>
-          <td>When false, the last focused element, before the modal was shown, will not get refocused again when the modal hides. This could prevent unwanted scrolling behaviors after closing a modal.<div class="ui tiny black label">new in 2.7.2</div></td>
+          <td>When false, the last focused element, before the modal was shown, will not get refocused again when the modal hides. This could prevent unwanted scrolling behaviors after closing a modal. <div class="ui tiny black label">new in 2.7.2</div></td>
+        </tr>
+        <tr>
+          <td>autoShow</td>
+          <td>false</td>
+          <td>When true, immediately shows the modal at instantiation time. <div class="ui tiny black label">new in 2.8.8</div></td>
         </tr>
         <tr>
           <td>observeChanges</td>
@@ -1070,7 +1244,7 @@ themes      : ['Default', 'Material']
             scale
           </td>
           <td>Named transition to use when animating menu in and out, full list can be found in <a href="/modules/transition.html">ui transitions</a> docs.<br>
-            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
+            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration. <span class="ui black tiny label">New in 2.8.8</span>
                 <div class="code">
                 {
                     showMethod   : 'fade',
@@ -1176,10 +1350,16 @@ themes      : ['Default', 'Material']
           <td colspan="2">
             <div class="code">
       selector    : {
-        close    : '.close, .actions .button',
+        title    : '> .header',
+        content  : '> .content',
+        actions  : '> .actions',
+        close    : '> .close',
         approve  : '.actions .positive, .actions .approve, .actions .ok',
-        deny     : '.actions .negative, .actions .deny, .actions .cancel'
-      },
+        deny     : '.actions .negative, .actions .deny, .actions .cancel',
+        dimmer   : '> .ui.dimmer',
+        bodyFixed: '> .ui.fixed.menu, > .ui.right.toast-container, > .ui.right.sidebar, > .ui.fixed.nag, > .ui.fixed.nag > .close',
+        prompt   : '.ui.input > input'
+      }
             </div>
           </td>
         </tr>
@@ -1189,8 +1369,118 @@ themes      : ['Default', 'Material']
             <div class="code">
       className : {
         active    : 'active',
-        scrolling : 'scrolling'
+        animating  : 'animating',
+        blurring   : 'blurring',
+        inverted   : 'inverted',
+        legacy     : 'legacy',
+        loading    : 'loading',
+        scrolling : 'scrolling',
+        undetached : 'undetached',
+        front      : 'front',
+        close      : 'close icon',
+        button     : 'ui button',
+        modal      : 'ui modal',
+        title      : 'header',
+        content    : 'content',
+        actions    : 'actions',
+        template   : 'ui tiny modal',
+        ok         : 'positive',
+        cancel     : 'negative',
+        prompt     : 'ui fluid input'
       }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">Config Template Settings
+      <div class="sub header">Config Template Settings define default content for dynamically created modals</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>title</td>
+          <td>''</td>
+          <td>Content of the modal header</td>
+        </tr>
+        <tr>
+          <td>content</td>
+          <td>''</td>
+          <td>Content of the modal content</td>
+        </tr>
+        <tr>
+          <td>closeIcon</td>
+          <td>false</td>
+          <td>Whether the modal should include a close icon</td>
+        </tr>
+        <tr>
+          <td>actions</td>
+          <td>false</td>
+          <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>
+            <div class="code">
+            actions: [{
+                text    : 'Wait',
+                class   : 'red',
+                icon    : 'exclamation',
+                click   : function(){}
+            }]
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>preserveHTML</td>
+          <td>true</td>
+          <td>Whether HTML included in given title, content or actions should be preserved. Set to <code>false</code> in case you work with untrusted 3rd party content</td>
+        </tr>
+        <tr>
+          <td>class</td>
+          <td>''</td>
+          <td>Can hold a string to be added to the modal class to control its appearance.</td>
+        </tr>
+        <tr>
+          <td>classTitle</td>
+          <td>''</td>
+          <td>Can hold a string to be added to the title class to control its appearance.</td>
+        </tr>
+        <tr>
+          <td>classContent</td>
+          <td>''</td>
+          <td>Can hold a string to be added to the content class to control its appearance.</td>
+        </tr>
+        <tr>
+          <td>classActions</td>
+          <td>''</td>
+          <td>Can hold a string to be added to the actions class to control its appearance.</td>
+        </tr>
+        <tr>
+          <td>fields</td>
+          <td colspan="2">
+            <div class="code">
+        fields         : {
+          class        : 'class',
+          text         : 'text',
+          icon         : 'icon',
+          click        : 'click'
+        }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td colspan="2">
+            <div class="code">
+  text: {
+    ok    : 'Ok',
+    cancel: 'Cancel'
+  }
             </div>
           </td>
         </tr>
@@ -1235,7 +1525,9 @@ themes      : ['Default', 'Material']
           <td colspan="2">
             <div class="code">
       error   : {
-        method    : 'The method you called is not defined.'
+        dimmer    : 'UI Dimmer, a required component is not included in this page',
+        method    : 'The method you called is not defined.',
+        notFound  : 'The element you specified could not be found'
       }
             </div>
           </td>
