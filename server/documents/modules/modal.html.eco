@@ -925,7 +925,7 @@ themes      : ['Default', 'Material']
     </div>
 
     <div class="no example">
-      <h4 class="ui header">Reuse existing modal with new content<span class="ui black label">New in 2.8.8</span></h4>
+      <h4 class="ui header">Reuse existing modal with new content <span class="ui black label">New in 2.8.8</span></h4>
       <p>You can prepare a modal markup as a general template and reuse it's general style but provide actual content via js properties.</p>
       <div class="code" data-demo="true">
         var now = new Date();now.setDate(now.getDate()+Math.floor(Math.random() * 31 + 1));
@@ -1170,12 +1170,12 @@ themes      : ['Default', 'Material']
         <tr>
           <td>restoreFocus</td>
           <td>true</td>
-          <td>When false, the last focused element, before the modal was shown, will not get refocused again when the modal hides. This could prevent unwanted scrolling behaviors after closing a modal.<div class="ui tiny black label">new in 2.7.2</div></td>
+          <td>When false, the last focused element, before the modal was shown, will not get refocused again when the modal hides. This could prevent unwanted scrolling behaviors after closing a modal. <div class="ui tiny black label">new in 2.7.2</div></td>
         </tr>
         <tr>
           <td>autoShow</td>
           <td>false</td>
-          <td>When true, immediately shows the modal at instantiation time<div class="ui tiny black label">new in 2.8.8</div></td>
+          <td>When true, immediately shows the modal at instantiation time. <div class="ui tiny black label">new in 2.8.8</div></td>
         </tr>
         <tr>
           <td>observeChanges</td>
@@ -1244,7 +1244,7 @@ themes      : ['Default', 'Material']
             scale
           </td>
           <td>Named transition to use when animating menu in and out, full list can be found in <a href="/modules/transition.html">ui transitions</a> docs.<br>
-            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
+            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration. <span class="ui black tiny label">New in 2.8.8</span>
                 <div class="code">
                 {
                     showMethod   : 'fade',
