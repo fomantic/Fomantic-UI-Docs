@@ -1450,7 +1450,7 @@ semantic.ready = function() {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);
   }
 
-  if(window.location.hash) {
+  if(window.location.hash && window.location.hash.indexOf('/')===-1) {
     var
       $element = $(window.location.hash),
       position = $element.offset().top + 10
