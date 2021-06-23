@@ -641,7 +641,7 @@ themes      : ['Default']
         Using inline will allow your popups to go places other popups can't go, like inside <code>fixed</code> or <code>absolutely</code> positioned elements
       </div>
       <div class="ui ignored info message">
-        If you want to style each popup individually it makes sense to keep popup <code>inline: true</code>. If you are worried that your pop up might mistakingly inherit styles that it shouldn't, you should set <code>inline: false</code>.
+        If you want to style each popup individually it makes sense to keep popup <code>inline: true</code>. If you are worried that your pop up might mistakenly inherit styles that it shouldn't, you should set <code>inline: false</code>.
       </div>
       <div class="code" data-type="css">
       /* this will only style the popup if inline is true */
