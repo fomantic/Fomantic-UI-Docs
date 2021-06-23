@@ -1453,7 +1453,7 @@ semantic.ready = function() {
   if(window.location.hash && window.location.hash.indexOf('/')===-1) {
     var
       $element = $(window.location.hash),
-      position = $element.offset().top + 10
+      position = $element.offset() ? $element.offset().top + 10 : 0
     ;
     $element
       .addClass('active')
