@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+
+<!-- Site Properities -->
+<meta name="generator" content="DocPad v6.79.4" />
+<title>Toast | Fomantic-UI</title>
+
+<meta name="description" content="A toast allows users to be notified of an event" />
+<meta name="keywords" content="html5, ui, library, framework, javascript, fork, official" />
+  
+
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/cookie.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/state.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
+
+
+
+<script src="/dist/semantic.min.js"></script>
+
+<script src="/javascript/docs.js"></script>
+
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+
+
+
+
+  
+
+  
+<script type="text/javascript">
+  window.liveSettings = {
+    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
+    parse_attr : [
+      'data-title',
+      'data-content'
+    ],
+    detectlang   : false,
+    autocollect  : true,
+    ignore_tags  : ['i', 'code', 'pre'],
+    parse_attr   : ['data-title', 'data-content', 'data-text'],
+    ignore_class : ['code', 'anchor']
+  };
+</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+
+</head>
+<body id="example" class="" ontouchstart="">
+  
+  <div class="ui vertical inverted sidebar menu" id="toc">
+  
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.8</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/emoji.html">
+        Emoji
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+      <a class="item" href="/elements/text.html">
+        Text
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/calendar.html">
+        Calendar
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/nag.html">
+        Nag
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/slider.html">
+        Slider
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="active item" href="/modules/toast.html">
+        Toast
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="ui black big launch right attached fixed button">
+  <i class="content icon"></i>
+  <span class="text">Menu</span>
+</div>
+  
+
+
+
+
+<div class="ui fixed inverted main menu">
+  <div class="ui container">
+    <a class="launch icon item">
+      <i class="content icon"></i>
+    </a>
+    
+      <div class="item">
+        Toast
+      </div>
+    
+    <div class="right menu">
+      
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+      
+      <!--
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+  <div class="pusher">
+    <div class="full height">
+      <div class="toc">
+        <div class="ui vertical inverted menu">
+          
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.8</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/emoji.html">
+        Emoji
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+      <a class="item" href="/elements/text.html">
+        Text
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/calendar.html">
+        Calendar
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/nag.html">
+        Nag
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/slider.html">
+        Slider
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="active item" href="/modules/toast.html">
+        Toast
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="article">
+        <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/toast.less" />
+<script src="/javascript/toast.js"></script>
+
+
+
+<div class="ui masthead vertical tab segment">
+  <div class="ui container">
+    <div class="introduction">
+
+      <h1 class="ui header">
+        Toast
+        <span class="ui teal label">NEW</span>
+        <div class="sub header">
+          A toast allows users to be notified of an event
+        </div>
+      </h1>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui right floated main menu">
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/fomantic/Fomantic-UI-Docs/edit/master/server/documents/modules\toast.html.eco">
+          <i class="edit icon"></i>
+        </a>
+        
+        <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/fomantic/Fomantic-UI/issues/new?body=%23%20Bug%20Report%0A%0A%3C!--%0ATitle%20Format%0A%20%20%5BScope%5D%20Summary%20of%20what%20is%20broken%0A--%3E%0A%0A%23%23%20Steps%20to%20reproduce%0A1.%0A2.%0A3.%0A%0A%23%23%20Expected%20result%0A%0A%23%23%20Actual%20result%0A%0A%23%23%20Testcase%0A%3C!--%20Fork%20https%3A%2F%2Fjsfiddle.net%2F31d6y7mn%20--%3E%0A%0A%23%23%20Screenshot%20(when%20possible)%0A!%5B%5D()%0A%0A%23%23%20Version%0Ax.x.x">
+          <i class="bug icon"></i>
+        </a>
+        
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/fomantic/Fomantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
+      </div>
+
+      
+<!--       <a href="/module.html" class="ui right floated basic right labeled icon button">
+        Learn about Modules
+        <i class="help icon" data-title="What are Modules?" data-content="Modules are UI elements that include behaviors as part of their definition. Modules require some knowledge of Javascript to use."></i>
+      </a> -->
+      
+      
+    </div>
+    
+    
+    
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      <div class="ui four item stackable tabs menu">
+        
+          <a class="active item" data-tab="definition">Definition</a>
+          
+        
+          <a class="item" data-tab="examples">Examples</a>
+          
+        
+          <a class="item" data-tab="usage">Usage</a>
+          
+        
+          <a class="item" data-tab="settings">Settings</a>
+          
+        
+      </div>
+    
+  </div>
+</div>
+
+
+<div class="main ui container">
+
+  <div class="ui active tab" data-tab="definition">
+
+  <h2 class="ui dividing header">Types</h2>
+
+    <div class="no example">
+        <h4 class="ui header">Minimal</h4>
+        <p>A minimal toast will just display a message.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            message: 'I am a toast, nice to meet you !'
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Titled</h4>
+        <p>You can add a title to your toast.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'Better ?',
+            message: 'Hey look, I have a title !'
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Progress Bar</h4>
+        <p>You can attach a progress bar to your toast.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'LOOK',
+            message: 'See, how long i will last',
+            showProgress: 'bottom'
+          })
+        ;
+        </div>
+        <p>The progress bar can have its own individual color</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'LOOK',
+            message: 'See, how long i will last',
+            showProgress: 'bottom',
+            classProgress: 'red'
+          })
+        ;
+        </div>
+    </div>
+
+    <h2 class="ui dividing header">Variations</h2>
+
+    <div class="no example">
+        <h4 class="ui header">Toast Type</h4>
+        <p>A toast can be used to display different types of informations.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            class: 'success',
+            message: `You're using the good framework !`
+          })
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            class: 'error',
+            message: `An error occurred !`
+          })
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            class: 'warning',
+            message: `Behind you !`
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Position</h4>
+        <p>A toast can appear at different positions on the screen.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            position: 'bottom right',
+            message: `It's pretty cold down there...`
+          })
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            position: 'top left',
+            message: `Look, I'm here !`
+          })
+        ;
+        </div>
+    </div>
+    <div class="no example">
+          <h4 class="ui header">Attached Position<span class="ui black label">New in 2.8.8</span></h4>
+          <p>A toast can have an attached position which will show the toast over the whole width of the screen. Just like notifications on mobile devices.</p>
+          <div class="ui warning message">
+            Attached positions with centered content only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
+          </div>
+          <div class="code" data-demo="true">
+            $('body')
+              .toast({
+                position: 'top attached',
+                title: 'Watch out!',
+                message: `I am a top attached toast`
+              })
+            ;
+          </div>
+          <div class="code" data-demo="true">
+            $('body')
+              .toast({
+                position: 'bottom attached',
+                title: 'Watch out!',
+                message: 'I am a bottom attached toast',
+                newestOnTop: true
+              })
+            ;
+          </div>
+      </div>
+    <div class="no example">
+      <h4 class="ui header">Direction <span class="ui black label">New in 2.8.8</span></h4>
+      <p>Toasts can stack horizontal</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          horizontal: true,
+          position: 'top left',
+          message: `Next one will open to the right`
+        })
+      ;
+      </div>
+    </div>
+    <div class="no example">
+          <h4 class="ui header">Center Aligned<span class="ui black label">New in 2.8.8</span></h4>
+          <p>The toasts content can be shown center aligned.</p>
+          <div class="ui warning message">
+              Centered content in <a href="#attached-position">attached toasts</a> only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
+          </div>
+          <div class="code" data-demo="true">
+              $('body')
+                  .toast({
+                      title: 'Veronika has joined',
+                      message: 'Welcome to the Fomantic-UI community!',
+                      class: 'center aligned', // you can also use 'centered'
+                  })
+              ;
+          </div>
+      </div>
+    <div class="no example">
+        <h4 class="ui header">Duration</h4>
+        <p>You can choose how long a toast should be displayed.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            displayTime: 5000,
+            message: `You will see me for 5 seconds.`
+          })
+        ;
+        </div>
+        <p>You can even avoid a toast to disappear.</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            displayTime: 0,
+            message: `I'll stay here until you click on me !`
+          })
+        ;
+        </div>
+        <p>Setting the value to <code>auto</code> calculates the display time by the amount of containing words</p>
+        <div class="ui ignored message">
+            You can adjust the calculation by modifying the default values for <code>minDisplayTime</code> and <code>wordsPerMinute</code>
+        </div>
+        <div class="code" data-demo="true">
+          $('body')
+            .toast({
+            displayTime: 'auto',
+            showProgress: 'top',
+            classProgress: 'blue',
+            message: 'The display time of this toast is calculated by its amount of containing words.<br>You can adjust the calculation by modifying the default values for <span class="ui label">minDisplayTime</span> and <span class="ui label">wordsPerMinute</span>'
+            })
+          ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Use Message Style</h4>
+        <p>You can use all of the styles and colors from the message component</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'Awesome',
+            message: 'I got my style from the message class',
+            class : 'purple',
+            className: {
+                toast: 'ui message'
+            }
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Increasing Progress Bar</h4>
+        <p>The progress bar could be be raised instead of lowered</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            title: 'LOOK',
+            message: 'See, how long i will last',
+            showProgress: 'top',
+            progressUp: true
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Color Variants</h4>
+        <p>You can use all of the usual color names</p>
+        <div class="code" data-demo="true">
+        if(typeof document.suiToastColorIndex === 'undefined') {
+          document.suiToastColorIndex = -1;
+        }
+        var suiColors = ['red','orange','yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black'],
+            suiPlus = function(){
+                if (++document.suiToastColorIndex === suiColors.length) {
+                    document.suiToastColorIndex = 0;
+                }
+                return document.suiToastColorIndex;
+            }
+        ;
+        $('body')
+          .toast({
+            message: 'I am a colorful toast',
+//            class: 'purple',
+            class : suiColors[suiPlus()],   //cycle through all colors
+            showProgress: 'bottom'
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+        <h4 class="ui header">Inverted Colors</h4>
+        <p>Same as above, just add <code>inverted</code> to the class definition</p>
+        <div class="code" data-demo="true">
+        if(typeof document.suiToastColorIndex === 'undefined') {
+          document.suiToastColorIndex = -1;
+        }
+        var suiColors = ['red','orange','yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black'],
+            suiPlus = function(){
+                if (++document.suiToastColorIndex === suiColors.length) {
+                    document.suiToastColorIndex = 0;
+                }
+                return document.suiToastColorIndex;
+            }
+        ;
+        $('body')
+          .toast({
+            message: 'I am an inverted colorful toast',
+            class : 'inverted ' + suiColors[suiPlus()],   //cycle through all colors
+            showProgress: 'bottom'
+          })
+        ;
+        </div>
+    </div>
+
+    <h2 class="ui dividing header">Actions</h2>
+    <div class="no example">
+        <h4 class="ui header">General<div class="ui black label">New in 2.8.0</div></h4>
+        <p>Define click actions to your toast by providing a text and/or icon, optional class and click handler.</p>
+        <div class="ui ignored message">
+            <ul class="ui list">
+                <li>The default click handler will close the toast, so if you only want to close it when an action button is clicked, you can omit the click handler.</li>
+                <li>If your action button should only consist of an icon, add <code>icon</code> to the class for <a href="/elements/button.html#icon">auto adjustment</a></li>
+                <li>Returning false within your click handler will prevent closing the toast</li>
+            </ul>
+        </div>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            message: 'Do you really want to star Fomantic-UI?',
+            displayTime: 0,
+            class: 'black',
+            actions:	[{
+              text: 'Yes',
+              icon: 'check',
+              class: 'green',
+              click: function() {
+                  $('body').toast({message:'You clicked "yes", toast closes by default'});
+              }
+            },{
+              icon: 'ban',
+              class: 'icon red'
+            },{
+              text: '?',
+              class: 'blue',
+              click: function() {
+                  $('body').toast({message:'Returning false from the click handler avoids closing the toast '});
+                  return false;
+              }
+            }]
+          })
+        ;
+        </div>
+    </div>
+    <div class="no example">
+        <h4 class="ui header">Basic</h4>
+
+        <p>The <code>classActions</code> setting provides you a way to adjust the overall appearance of the action buttons. Using <code>basic</code> class does not lighten the actions background. <code>left</code> aligns the buttons to the left</p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            message: 'Do you really want to star Fomantic-UI?',
+            displayTime: 0,
+            class: 'black',
+            classActions: 'basic left',
+            actions:	[{
+              text: 'Yes, really',
+              class: 'yellow',
+              click: function() {
+                $('body').toast({message:'You clicked "yes", toast closes by default'});
+              }
+            }]
+          })
+        ;
+        </div>
+    </div>
+    <div class="no example">
+        <h4 class="ui header">Centered<div class="ui black label">New in 2.8.8</div></h4>
+        <p>The actions buttons can also be shown <code>centered</code></p>
+        <div class="code" data-demo="true">
+          $('body')
+              .toast({
+                  message: 'Do you really want to star Fomantic-UI?',
+                  displayTime: 0,
+                  class: 'black',
+                  classActions: 'centered', // you can also use 'center aligned'
+                  actions:	[{
+                      text: 'Yes, really',
+                      class: 'yellow',
+                      click: function() {
+                        $('body').toast({message:'You clicked "yes", toast closes by default'});
+                    }
+                 }]
+              })
+          ;
+        </div>
+    </div>
+    <div class="no example">
+        <h4 class="ui header">Attached</h4>
+
+        <p>Using <code>attached</code> converts your actions into a <a href="/elements/button.html#buttons">Button group</a>. Also add <code>top</code> to display the actions attached to the top of the toast</p>
+        <div class="ui ignored info message">
+            You can also make use of the button group features like <a href="/elements/button.html#equal-width">equal width</a> for example by adding <code>three</code> if the amount of your actions is 3.
+        </div>
+
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            message: 'Do you really want to star Fomantic-UI?',
+            displayTime: 0,
+            class: 'black',
+            classActions: 'top attached',
+            actions:	[{
+              text: 'Yes, really',
+              class: 'green',
+              click: function() {
+                $('body').toast({message:'You clicked "yes", toast closes by default'});
+              }
+            },{
+              text: 'Maybe later',
+              class: 'red',
+              click: function() {
+                $('body').toast({message:'You clicked "maybe", toast closes by default'});
+              }
+            }]
+          })
+        ;
+        </div>
+    </div>
+    <div class="no example">
+        <h4 class="ui header">Vertical</h4>
+
+        <p>You can use <code>vertical</code> to display your actions to the right of the toast. </p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            message: 'Do you really want to star Fomantic-UI?',
+            displayTime: 0,
+            class: 'black',
+            classActions: 'vertical',
+            actions:	[{
+              text: 'Yes, really',
+              class: 'green',
+              click: function() {
+                $('body').toast({message:'You clicked "yes", toast closes by default'});
+              }
+            },{
+              text: 'Maybe later',
+              class: 'red',
+              click: function() {
+                $('body').toast({message:'You clicked "maybe", toast closes by default'});
+              }
+            }]
+          })
+        ;
+        </div>
+    </div>
+    <div class="no example">
+        <h4 class="ui header">Vertical attached</h4>
+
+        <p>Vertical actions can also be displayed as button groups using <code>vertical attached</code><br>Vertical attached actions also support <code>left</code></p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            message: 'Do you really want to star Fomantic-UI?',
+            displayTime: 0,
+            class: 'black',
+            classActions: 'left vertical attached',
+            actions:	[{
+              text: 'Yes, really',
+              class: 'green',
+              click: function() {
+                $('body').toast({message:'You clicked "yes", toast closes by default'});
+              }
+            },{
+              text: 'Maybe later',
+              class: 'red',
+              click: function() {
+                $('body').toast({message:'You clicked "maybe", toast closes by default'});
+              }
+            }]
+          })
+        ;
+        </div>
+    </div>
+  </div>
+
+  <div class="ui tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Without icon</h4>
+      <p>You can choose to hide the status icon.</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'warning',
+          showIcon: false,
+          message: 'Hey, where is my icon ?'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Individual icon</h4>
+      <p>Use whatever you like from the included FontAwesome gallery</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'info',
+          showIcon: 'microphone',
+          message: 'Listen to me'
+        })
+      ;
+      </div>
+    </div>
+    <div class="no example">
+        <h4 class="ui header">Image<div class="ui black label">New in 2.8.0</div></h4>
+        <p>Provide an image path to display it just like the icon does. <br> Adjust the image via the separate <code>classImage</code> setting</p>
+        <div class="ui ignored message">
+            For image sizes, only <code>mini</code>, <code>tiny</code>, <code>small</code> and <code>avatar</code> are supported
+        </div>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
+            classImage: 'avatar',
+            message: `Veronika has joined the Fomantic-UI community`
+          })
+        ;
+        </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Close Icon</h4>
+      <p>You can force the user to click a close Icon instead of clicking anywhere on the toast to close it</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'info',
+          displayTime: 0,
+          closeIcon: true,
+          message: 'Click on the X to close me'
+        })
+      ;
+      </div>
+      <p>The close icon can also be displayed to the left <span class="ui black label">New in 2.8.0</span></p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'info',
+          displayTime: 0,
+          closeIcon: 'left',
+          message: 'Click on the X to close me'
+        })
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Transitions</h4>
+      <p>You can set other transitions types and durations.</p>
+      <div class="code" data-demo="true">
+      $('body')
+        .toast({
+          class: 'success',
+          message: 'Did you notice any difference ?',
+          transition: {
+            showMethod   : 'zoom',
+            showDuration : 1000,
+            hideMethod   : 'fade',
+            hideDuration : 1000
+          }
+        })
+      ;
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Actions and centered and attached position</h4>
+      <p>Using actions in <a href="#attached-position">attached position</a> variants in combination with  <a href="#center-aligned">centered toast content</a>  does only support  <a href="#attached">attached actions</a>. This is because of the flexbox usage to align a possible icon/image next to the content.</p>
+      <div class="code" data-demo="true">
+          $('body')
+              .toast({
+                  title: 'Centered top attached',
+                  message: 'I only support attached actions',
+                  displayTime: 0,
+                  position: 'top attached',
+                  class: 'centered',
+                  classActions: 'attached',
+                  actions:	[{
+                      text: 'Mark as read',
+                      class: 'grey'
+                  },{
+                      text: 'Delete',
+                      class: 'red'
+                  }]
+              })
+          ;
+      </div>
+    </div>
+    <h2 class="ui dividing header">Create from DOM</h2>
+
+    <p>By creating your toasts out of existing DOM nodes you can make use of other existing FUI components <span class="ui black label">New in 2.8.0</span></p>
+
+    <div class="example">
+        <h4 class="ui header">Toast</h4>
+        <p></p>
+        <div class="ui blue toast" id="domtoast" style="display: block;">
+            <div class="content">
+                <div class="ui header">Notice</div>
+                A Toast can be generated out of existing DOM Nodes
+            </div>
+        </div>
+        <p></p>
+        <div class="code" data-demo="true">
+        $('#domtoast')
+          .toast()
+        ;
+        </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Template <span class="ui black label">New in 2.8.8</span></h4>
+      <p>You can reuse a dom template and provide its content via setting parameters</p>
+      <div class="ui pink toast" id="domtemplate" >
+          <img class="ui image avatar">
+          <div class="content">
+              <div class="ui header"></div>
+              <div class="message"></div>
+          </div>
+      </div>
+      <p></p>
+      <div class="code" data-demo="true">
+          $('#domtemplate')
+          .toast({
+            title: 'Hello visitor #' + Math.random().toString(36).substr(2),
+            message: 'Message ID: '+ Math.random().toString(36).substr(2),
+            showImage: '//fomantic-ui.com/images/avatar/small/zoe.jpg'
+          })
+          ;
+      </div>
+    </div>
+    <div class="example">
+        <h4 class="ui header">Approve / Deny Callbacks</h4>
+        <p>Just like <a href="/modules/modal.html#approve--deny-callbacks">Modal</a>, Toast will automatically tie approve/deny callbacks to any positive/approve, negative/deny or ok/cancel buttons without the need to create actions via setting</p>
+        <div class="ui ignored info message">
+            If <code>onDeny</code>, <code>onApprove</code> or <code>onHide</code> returns false it will prevent the toast from closing
+        </div>
+        <div class="ui blue toast" id="domtoastactions" style="display: block;">
+            <div class="content">
+                <div class="ui header">Notice</div>
+                Want to close this DOM toast?
+            </div>
+            <div class="left basic actions">
+                <button class="ui positive button">Yes</button>
+                <button class="ui negative button">No</button>
+            </div>
+        </div>
+        <p></p>
+        <div class="code" data-demo="true">
+        $('#domtoastactions')
+          .toast({
+              displayTime: 0,
+              onDeny    : function(){
+                $('body').toast({message:'Wait not yet!'});
+                return false;
+              },
+              onApprove : function() {
+                $('body').toast({message:'Approved'});
+              }
+          })
+          ;
+          </div>
+      </div>
+
+      <div class="example">
+          <h4 class="ui header">Message</h4>
+          <p></p>
+          <div class="ui blue icon message" id="dommessage">
+              <i class="github icon"></i>
+              <div class="content">
+                  Download the source code at <br><br><a href="https://github.com/fomantic/Fomantic-UI"><b><span class="ui teal text">github</span></b></a>
+              </div>
+          </div>
+          <div class="code" data-demo="true">
+              $('#dommessage')
+              .toast()
+              ;
+          </div>
+      </div>
+
+      <div class="example">
+          <h4 class="ui header">Card</h4>
+          <div class="ui ignored warning message">
+              If you want to use vertical actions together with a card layout, only <a href="#vertical-attached">vertical attached</a> actions are supported
+          </div>
+          <div class="ui horizontal card" id="domcard">
+              <div class="image">
+                  <img src="https://fomantic-ui.com/images/avatar2/large/elyse.png">
+              </div>
+              <div class="content">
+                  <div class="header">Fomantic-UI</div>
+                  <div class="meta">
+                      <span class="category">2.8.0 Card Toast</span>
+                  </div>
+                  <div class="description">
+                      <p></p>
+                  </div>
+              </div>
+          </div>
+          <div class="code" data-demo="true">
+              $('#domcard')
+              .toast()
+              ;
+          </div>
+      </div>
+
+      <h2 class="ui dividing header">Interaction</h2>
+
+      <div class="no example">
+          <h4 class="ui header">Prevent pausing <div class="ui black label">New in 2.8.0</div></h4>
+          <p>The default behavior when hovering over the toast is to pause decreasing of the display time.<br>
+              You can force the toast to not pause by setting <code>pauseOnHover</code> to <code>false</code></p>
+          <div class="code" data-demo="true">
+            $('body').toast({
+              message: 'This toast does not pause when you hover on it',
+              pauseOnHover: false,
+              showProgress: 'top'
+            });
+          </div>
+      </div>
+      <div class="no example">
+          <h4 class="ui header">Prevent closing <div class="ui black label">New in 2.8.0</div></h4>
+          <p>The default behavior when clicking on a toast is to close it.<br>
+              You can force the toast to not do this by setting <code>closeOnClick</code> to <code>false</code></p>
+          <div class="ui ignored info message">
+              <code>closeOnClick</code> is automatically set to <code>false</code> if one of the following is set
+              <ul class="ui list">
+                  <li>A closeIcon is defined</li>
+                  <li>The toast contains input fields or buttons</li>
+                  <li>Actions are defined</li>
+              </ul>
+          </div>
+          <div class="code" data-demo="true">
+            $('body').toast({
+              message: 'This toast does not close when you click on it',
+              closeOnClick: false,
+              showProgress: 'top'
+            });
+          </div>
+      </div>
+
+    <div class="no example">
+        <h4 class="ui header">Access created toast<div class="ui black label">New in 2.8.0</div></h4>
+        <p>As each call to <code>.toast()</code> returns the instance of the created toast, you are able to interact with the displayed toast via javascript <a href="#behaviors">behaviors</a> </p>
+        <button class="ui pink button" id="jsaccess_toast_init">
+            Open pink toast first
+        </button>
+        <button class="ui button" id="jsaccess_toast_remaining">
+            Remaining display time?
+        </button><button class="ui button" id="jsaccess_toast_howmany">
+            How many toasts displayed?
+        </button>
+        <button class="ui button" id="jsaccess_toast_close">
+            Close toast
+        </button>
+        <div class="code">
+            var myToast = $('body').toast();
+            var remainingTime = myToast.toast('get remainingTime');
+        </div>
+    </div>
+
+  </div>
+    <div class="ui tab" data-tab="usage">
+        <h2 class="ui dividing header">Appearance</h2>
+        <div class="no example">
+            <h4 class="ui header">Migration from 2.7.0</h4>
+            <p>The toast defaults changed in 2.8.0. In case you want to keep the old defaults for all of your toasts, override the defaults as follows </p>
+            <div class="code" data-demo="true">
+            /* To change the defaults for all toast at once override the module as follows
+            $.fn.toast.settings.progressUp = true;
+            $.fn.toast.settings.class = 'info';
+            $.fn.toast.settings.showIcon = true;
+            $.fn.toast.settings.className.box = 'toast-box';  //removes shadow
+            $.fn.toast.settings.className.title = 'header';   // smaller font size
+            $.fn.toast.settings.className.icon = 'icon';   // top position again
+            $.fn.toast.settings.transition.closeEasing = 'easeOutBounce';
+            */
+            // Or apply the old defaults directly to the toast
+            $('body')
+              .toast({
+                title: 'LOOK',
+                message: 'Turned back time to 2.7.0 defaults',
+                showProgress: 'bottom',
+
+                //make it look like 2.7.0
+                showIcon: true,
+                progressUp: true,
+                class: 'info',
+                className: {
+                    box:'toast-box',
+                    title:'header',
+                    icon: 'icon'
+                },
+                transition: {
+                    closeEasing: 'easeOutBounce'
+                }
+              })
+            ;
+            </div>
+        </div>
+        <div class="example">
+            <h4 class="ui header">General HTML Layout</h4>
+            <p>The general layout of a rendered toast might be useful for people who want to implement their own javascript display logic and just want to reuse Fomantics HTML CSS Layout.</p>
+            <p>The following structure is used to position the toasts. Each position container implements a <code>toast-box</code> per toast. The extra wrapper is needed to make dynamic elements like progressbar independent of the toast layout.</p>
+            <div class="code" data-type="html">
+                <div class="ui top right toast-container">
+                    <div class="toast-box">
+<!-- only when vertical attached buttons are used an extra wrapping node is needed -->
+                        <div class="vertical attached">
+                            <div class="vertical attached ui buttons actions">
+                                <button class="ui button">Action button</button>
+                            </div>
+<!--  An optional progressbar. If the toast has got the compact class, the progressbar should also have it -->
+                            <div class="ui attached compact progress">
+                                <div class="bar"></div>
+                            </div>
+<!-- Here comes the actual toast -->
+                            <div class="ui compact toast"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>A single toast layout inside the above mentioned <code>toast-box</code> has the following structure</p>
+            <div class="code" data-type="html">
+<!-- The 'neutral' class will show the toast with a white background if no color is given -->
+                <div class="ui neutral toast" style="display: block;">
+<!-- optional icon -->
+                    <i class="microphone icon "></i>
+<!-- optional image -->
+                    <img class="ui image avatar" src="https://fomantic-ui.com/images/avatar/small/veronika.jpg">
+                    <div class="content">
+                        <div class="ui header">Toast Header</div>
+                        Toast content
+                    </div>
+<!-- optional close icon -->
+                    <i class="close icon "></i>
+<!-- optional action buttons (vertical attached buttons are declared in the toast-box instead) -->
+                    <div class="ui buttons actions">
+                        <button class="ui button">Action button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="ui dividing header">Behaviors</h2>
+
+        <p>All the following behaviors can be called using the syntax:<p>
+        <div class="code">
+            $('.ui.toast').toast('behavior', argumentOne, argumentTwo...);
+        </div>
+
+        <table class="ui definition celled table">
+          <thead>
+            <tr>
+                <th>Behavior</th>
+                <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>animate pause</td>
+                <td>Pauses the display time decrease (and possible progress bar animation)</td>
+            </tr>
+            <tr>
+                <td>animate continue</td>
+                <td>Continues decreasing display time (and possible progress bar animation)</td>
+            </tr>
+            <tr>
+                <td>close</td>
+                <td>Closes the toast</td>
+            </tr>
+            <tr>
+                <td>get toasts</td>
+                <td>Returns all toasts as an array of objects which are visible within the current toast-container</td>
+            </tr>
+            <tr>
+                <td>get remainingTime</td>
+                <td>Returns the remaining time in milliseconds</td>
+            </tr>
+          </tbody>
+        </table>
+
+    </div>
+  <div class="ui tab" data-tab="settings">
+
+    <h2 class="ui dividing header">Settings</h2>
+
+    <h3 class="ui header">
+      Toast Settings
+      <div class="sub header">Settings to configure toast behavior</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>position</td>
+          <td>top right</td>
+          <td>Sets where the toast can be displayed. Can be <code>top right</code>, <code>top center</code>, <code>top left</code>, <code>bottom right</code>, <code>bottom center</code> and <code>bottom left</code></td>
+        </tr>
+        <tr>
+          <td>horizontal</td>
+          <td>false</td>
+          <td>If the toasts should stack horizontal instead of vertical</td>
+        </tr>
+        <tr>
+          <td>class</td>
+          <td>neutral</td>
+          <td>Define the class of notification. Can be any existing color definition or <code>info</code>, <code>success</code>, <code>warning</code> and <code>error</code>. If <code>ui message</code> is used in className.toast option (see below), this option can hold any supported class of the message component</td>
+        </tr>
+        <tr>
+            <td>classProgress</td>
+            <td>false</td>
+            <td>Can hold a string to be added to the progress bar class, for example a separate color</td>
+        </tr>
+        <tr>
+            <td>classActions</td>
+            <td>false</td>
+            <td>Can hold a string to be added to the actions class to control its appearance. Usually a combination of <code>basic</code>, <code>left</code>, <code>top</code>, <code>bottom</code>, <code>vertical</code> and <code>attached</code></td>
+        </tr>
+        <tr>
+            <td>classImage</td>
+            <td>mini</td>
+            <td>Can hold a string to be added to the image class. <code>mini</code>, <code>tiny</code>, <code>small</code> and <code>avatar</code> are supported out of the box</td>
+        </tr>
+        <tr>
+            <td>context</td>
+            <td>body</td>
+            <td>Selector or jquery object specifying the area to attach the toast container to</td>
+        </tr>
+        <tr>
+          <td>displayTime</td>
+          <td>3000</td>
+          <td>Set the time (in ms) of the toast appearance. Set <code>0</code> to disable the automatic dismissal. Set <code>auto</code> to calculate the time by the given amount of words within the toast</td>
+        </tr>
+        <tr>
+            <td>minDisplayTime</td>
+            <td>1000</td>
+            <td>Minimum display time in case <code>displayTime</code> is set to 'auto' </td>
+        </tr>
+        <tr>
+            <td>wordsPerMinute</td>
+            <td>120</td>
+            <td>Base to calculate display time in case <code>displayTime</code> is set to 'auto' </td>
+        </tr>
+        <tr>
+            <td>showImage</td>
+            <td>false</td>
+            <td>If an URL to an image is given, that image will be shown to the left of the toast</td>
+        </tr>
+        <tr>
+          <td>showIcon</td>
+          <td>true</td>
+          <td>Define if the toast should display an icon which matches to a given class. If a string is given, this will be used as icon classname</td>
+        </tr>
+        <tr>
+          <td>closeIcon</td>
+          <td>false</td>
+          <td>This will make the toast closable by the top right corner icon instead of clicking anywhere on the toast when set to <code>true</code>. When set to <code>left</code> the closeIcon is shown to the left instead of right</td>
+        </tr>
+        <tr>
+            <td>closeOnClick</td>
+            <td>true</td>
+            <td>Set to <code>false</code> to avoid closing the toast when it is clicked</td>
+        </tr>
+        <tr>
+            <td>cloneModule</td>
+            <td>true</td>
+            <td>If a given DOM-Node should stay reusable by using a clone of it as toast. If set to <code>false</code> the original DOM-Node will be detached and removed from the DOM then the toast is closed</td>
+        </tr>
+        <tr>
+          <td>showProgress</td>
+          <td>false</td>
+          <td>Displays a progress bar on <code>top</code> or <code>bottom</code> increasing until <code>displayTime</code> is reached. . <code>false</code> won't display any progress bar. If <code>displayTime</code> option is 0, this option is ignored</td>
+        </tr>
+        <tr>
+          <td>progressUp</td>
+          <td>false</td>
+          <td><code>true</code>Increases the progress bar from 0% to 100%<br><code>false</code> Decreases the progress bar from 100% to 0%</td>
+        </tr>
+        <tr>
+            <td>pauseOnHover</td>
+            <td>true</td>
+            <td>Set to <code>false</code> if the display timer should not pause when the toast is hovered</td>
+        </tr>
+        <tr>
+          <td>compact</td>
+          <td>true</td>
+          <td><code>true</code> will display the toast in a fixed width, <code>false</code> displays the toast responsively with dynamic width</td>
+        </tr>
+        <tr>
+          <td>opacity</td>
+          <td>1</td>
+          <td>Opacity Value of the toast after the show-transition</td>
+        </tr>
+        <tr>
+          <td>newestOnTop</td>
+          <td>false</td>
+          <td>Define if new toasts should be displayed above the others</td>
+        </tr>
+        <tr>
+            <td>preserveHTML</td>
+            <td>true</td>
+            <td>Whether HTML included in given title, message or actions should be preserved. Set to <code>false</code> in case you work with untrusted 3rd party content</td>
+        </tr>       <tr>
+          <td>transition</td>
+          <td>
+            <div class="code">
+      transition: {
+        showMethod   : 'scale',
+        showDuration : 500,
+        hideMethod   : 'scale',
+        hideDuration : 500,
+        closeEasing  : 'easeOutCubic'
+      }
+            </div>
+          </td>
+          <td>Settings to set the transitions and durations during the show or the hide of a toast</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">Callbacks</h4>
+    <p>Callbacks specify a function to occur after a specific behavior.</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th class="four wide">Parameters</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onShow</td>
+          <td>$module</td>
+          <td>Callback before toast is shown. Returning <code>false</code> from this callback will cancel the toast from showing.</td>
+        </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>$module</td>
+          <td>Callback after toast is shown.</td>
+        </tr>
+        <tr>
+          <td>onClick</td>
+          <td>$module</td>
+          <td>Callback after popup is clicked in.</td>
+        </tr>
+        <tr>
+          <td>onHide</td>
+          <td>$module</td>
+          <td>Callback before toast is hidden. Returning <code>false</code> from this callback will cancel the toast from hiding.</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>$module</td>
+          <td>Callback after toast is hidden.</td>
+        </tr>
+        <tr>
+          <td>onRemove</td>
+          <td>$module</td>
+          <td>Callback before toast is destroyed.</td>
+        </tr>
+        <tr>
+            <td>onApprove</td>
+            <td>$module</td>
+            <td>Callback when an existing button with class <code>positive</code> or <code>ok</code>  or <code>approve</code> is clicked. Return false to avoid closing the toast</td>
+        </tr>
+        <tr>
+            <td>onDeny</td>
+            <td>$module</td>
+            <td>Callback when an existing button with class <code>negative</code> or <code>cancel</code>  or <code>deny</code> is clicked. Return false to avoid closing the toast</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      Content Settings
+      <div class="sub header">Settings to specify toast contents</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>title</td>
+          <td>A title for the toast. Leave empty to not display it</td>
+        </tr>
+        <tr>
+          <td>message</td>
+          <td>Message to display</td>
+        </tr>
+        <tr>
+            <td>actions</td>
+            <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>
+                <div class="code">
+                actions: [{
+                    text    : 'Wait',
+                    class   : 'red',
+                    icon    : 'exclamation',
+                    click   : function(){}
+                }]
+                </div>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      DOM Settings
+      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="eight wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>namespace</td>
+          <td>toast</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>
+            <div class="code">
+    selector    : {
+      container    : '.ui.toast-container',
+      box          : '.toast-box',
+      toast        : '.ui.toast',
+      input        : 'input:not([type="hidden"]), textarea, select, button, .ui.button, ui.dropdown',
+      approve      : '.actions .positive, .actions .approve, .actions .ok',
+      deny         : '.actions .negative, .actions .deny, .actions .cancel'
+    }
+            </div>
+          </td>
+          <td>DOM Selectors used internally</td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code">
+    className   : {
+      container    : 'toast-container',
+      box          : 'toast-box',
+      progress     : 'ui attached active progress',
+      toast        : 'ui toast',
+      icon         : 'icon',
+      visible      : 'visible',
+      content      : 'content',
+      title        : 'header'
+    }
+            </div>
+          </td>
+          <td>Class names used to attach style to state</td>
+        </tr>
+        <tr>
+          <td>icons</td>
+          <td>
+            <div class="code">
+    icons   : {
+      info         : 'info',
+      success      : 'checkmark',
+      warning      : 'warning',
+      error        : 'times'
+    }
+            </div>
+          </td>
+          <td>Icon names used internally</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+
+    <h3 class="ui header">
+      Debug Settings
+      <div class="sub header">Debug settings controls debug output to the console</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Toast</td>
+          <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>false</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>false</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>true</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>false</td>
+          <td>Provides ancillary debug output to console</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+            error: {
+              method       : 'The method you called is not defined.',
+              noElement    : 'This module requires ui transitions.',
+              verticalCard : 'Vertical but not attached actions are not supported for card layout'
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+        <footer class="ui vertical footer segment">
+  <div class="ui container">
+    <div class="ui stackable grid">
+      <div class="three wide column">
+        <h4 class="ui header">Community</h4>
+        <div class="ui link list">
+          <a class="item" href="https://github.com/fomantic/Fomantic-UI/issues/new/choose" target="_blank">
+            <i class="edit icon"></i>
+            Submit an Issue
+          </a>
+          <a class="item" href="https://github.com/fomantic/Fomantic-UI" target="_blank">
+            <i class="github icon"></i>
+            GitHub Repository
+          </a>
+          <a class="item" href="https://discordapp.com/invite/UgzHNZF" target="_blank">
+            <i class="discord icon"></i>
+            Discord
+          </a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui header">Social</h4>
+        <div class="ui link list">
+          <a class="item" href="https://twitter.com/fomanticui" target="_blank">
+            <i class="twitter icon"></i>
+            Twitter
+          </a>
+          <a class="item" href="https://medium.com/@fomantic" target="_blank">
+            <i class="medium icon"></i>
+            Medium
+          </a>
+        </div>
+      </div>
+      <div class="eight wide middle aligned right floated column">
+        <div class="footer-sponsor">
+          <a href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=fomantic" target="_blank">
+            <p>Infrastructure hosted and powered by DigitalOcean</p>
+            <img class="ui small image" src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/PNG/DO_Logo_Horizontal_Blue.png" alt="DigitalOcean">
+          </a>
+        </div>
+        <div class="footer-sponsor">
+          <a href="https://www.browserstack.com" target="_blank">
+            <p>Cross-browser testing provided by</p>
+            <img class="ui image" src="/images/browserstack.svg" alt="BrowserStack">
+          </a>
+        </div>
+        <div class="footer-sponsor">
+          <a href="https://jetbrains.com?from=Fomantic-UI" target="_blank" style="display: inline-block;">
+            <img class="ui avatar image" style="height: 50px; width: auto;" src="/images/jetbrains.svg" alt="JetBrains">
+            <span>IDE's provided by JetBrains</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <img src="/images/logo.png" class="ui right floated mini image">
+    <div class="ui horizontal small divided link list">
+      <a class="item" href="https://github.com/fomantic/Fomantic-UI/blob/master/LICENSE.md" target="_blank">Free & Open Source (MIT)</a>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <div class="ui basic language modal">
+  <i class="close icon"></i>
+  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="world icon"></i>
+    </div>
+    <div class="description">
+      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
+      <div class="ui inverted indicating progress">
+        <div class="bar"></div>
+      </div>
+      <p>We need your help to make Semantic available to  people who speak your language.</p>
+      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted cancel button">No Thanks</div>
+    <a href="https://github.com/fomantic/Fomantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
+      <i class="mail icon"></i>
+      Help Translate
+    </a>
+  </div>
+</div>
+  <div class="ui demo page dimmer">
+  <div class="content">
+    <div class="center">
+      <h2 class="ui inverted icon header">
+        <i class="mail icon"></i>
+        Dimmer Message
+        <div class="sub header">Dimmer sub-header</div>
+      </h2>
+    </div>
+  </div>
+</div>
+  <script>
+window.less = {
+  async        : true,
+  environment  : 'production',
+  fileAsync    : false,
+  onReady      : false,
+  useFileCache : true
+};
+</script>
+
+<script src="/javascript/library/less.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,2785 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+
+<!-- Site Properities -->
+<meta name="generator" content="DocPad v6.79.4" />
+<title>What's New | Fomantic-UI</title>
+
+<meta name="description" content="An introduction to new features found in the latest release" />
+<meta name="keywords" content="html5, ui, library, framework, javascript, fork, official" />
+  
+
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/cookie.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/state.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
+
+
+
+<script src="/dist/semantic.min.js"></script>
+
+<script src="/javascript/docs.js"></script>
+
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+
+
+
+
+  
+
+  
+<script type="text/javascript">
+  window.liveSettings = {
+    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
+    parse_attr : [
+      'data-title',
+      'data-content'
+    ],
+    detectlang   : false,
+    autocollect  : true,
+    ignore_tags  : ['i', 'code', 'pre'],
+    parse_attr   : ['data-title', 'data-content', 'data-text'],
+    ignore_class : ['code', 'anchor']
+  };
+</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+
+</head>
+<body id="example" class="new" ontouchstart="">
+  
+  <div class="ui vertical inverted sidebar menu" id="toc">
+  
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.8</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/emoji.html">
+        Emoji
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+      <a class="item" href="/elements/text.html">
+        Text
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/calendar.html">
+        Calendar
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/nag.html">
+        Nag
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/slider.html">
+        Slider
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/toast.html">
+        Toast
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="ui black big launch right attached fixed button">
+  <i class="content icon"></i>
+  <span class="text">Menu</span>
+</div>
+  
+
+
+
+
+<div class="ui fixed inverted main menu">
+  <div class="ui container">
+    <a class="launch icon item">
+      <i class="content icon"></i>
+    </a>
+    
+      <div class="item">
+        What's New
+      </div>
+    
+    <div class="right menu">
+      
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+      
+      <!--
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+  <div class="pusher">
+    <div class="full height">
+      <div class="toc">
+        <div class="ui vertical inverted menu">
+          
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.8</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/emoji.html">
+        Emoji
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+      <a class="item" href="/elements/text.html">
+        Text
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/calendar.html">
+        Calendar
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/nag.html">
+        Nag
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/slider.html">
+        Slider
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/toast.html">
+        Toast
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="article">
+        
+
+<div class="ui masthead vertical tab segment">
+  <div class="ui container">
+    <div class="introduction">
+
+      <h1 class="ui header">
+        What's New
+        
+        <div class="sub header">
+          An introduction to new features found in the latest release
+        </div>
+      </h1>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui right floated main menu">
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/fomantic/Fomantic-UI-Docs/edit/master/server/documents/introduction\new.html.eco">
+          <i class="edit icon"></i>
+        </a>
+        
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/fomantic/Fomantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
+      </div>
+
+      
+      
+    </div>
+    
+    
+    
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      <div class="ui six item stackable tabs menu">
+        
+          <a class="active item" data-tab="twoeight">New in 2.8</a>
+          
+        
+          <a class="item" data-tab="twoseven">New in 2.7</a>
+          
+        
+          <a class="item" data-tab="twosix">New in 2.6</a>
+          
+        
+          <a class="item" data-tab="twofive">New in 2.5</a>
+          
+        
+          <a class="item" data-tab="twofour">New in 2.4</a>
+          
+        
+          <a class="item" data-tab="twothree">New in 2.3</a>
+          
+        
+      </div>
+    
+  </div>
+</div>
+
+<script src="/javascript/loader.js"></script>
+<script src="/javascript/new.js"></script>
+
+<div class="main ui intro container">
+
+  <div class="ui active tab" data-tab="twoeight">
+    <h2 class="ui dividing header">Toasty Emotion</h2>
+    <p>Fomantic <code>2.8</code> brings some of the best updates yet including variation feature customization for components, more toast changes and EMOTES <em data-emoji="tada"></em> <em data-emoji="smile"></em> and of course A LOT of critical and much needed bug fixes.</p>
+
+    <p>Since this is a breaking changes update here is a list of breaking changes:</p>
+    <div class="ui bulleted list">
+      <div class="item">
+        <div>API</div>
+        <div class="list">
+          <div class="item">Context for the <code>beforeSend</code> function now is set to the initialized element instead of the content of <code>stateContext</code> (was already correct in the docs)</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Calendar</div>
+        <div class="list">
+          <div class="item">New callback <code>onBeforeChange</code> does, what <code>onChange</code> was doing before (being called before changing the date, given the chance to deny the change)</div>
+          <div class="item"><code>onChange</code> instead is now called after the date was changed</div>
+          <div class="item">When a month is parsed it is now mapped against the whole month name instead of only the first three characters</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Dropdown</div>
+        <div class="list">
+          <div class="item">A "required" attribute on a select-tag gets removed automatically</div>
+          <div class="item">When a search entry is not found in the dropdown list and no additions are allowed, the <code>searchterm</code> is now removed on blur</div>
+          <div class="item">When multiple items are selected <code>set.value()</code> internally provided a wrong additional parameter which probably isn't correctly fetched in an own <code>onChange</code> callback</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Emoji</div>
+        <div class="list">
+          <div class="item">An existing theme.config needs to have <code>@emoji: 'default';</code> added to the elements block</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Slider</div>
+        <div class="list">
+          <div class="item">New option <code>preventCrossover</code> is set to <code>true</code> by default to avoid range sliders to cross each other avoiding wrongly calculated values</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Toast</div>
+        <div class="list">
+          <div class="item">New defaults (<code>progressbar</code> decreases, title uses <code>ui header</code> having a slightly larger font size, shadow, white background, centered icon)</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Other</div>
+        <div class="list">
+          <div class="item">Possible heavy reduce of the created CSS file via dynamic LESS compilation: A new file variation.variables exists to control, which variants of the elements should be created in LESS. Setting some of them to <code>false</code> (in your own site.variables, you don't need to (but of course can) touch the variation.variables files!) By default everything is enabled and every component is rendered in any existing size (just as before)</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">
+      Sneak peek at some new features
+    </h2>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Toast
+      </h4>
+
+      <p>In <code>2.8</code> we added lots of new variations and features to the toast component, here is just a few of the amazing new changes.</p>
+
+      <div class="ui buttons" id="twoeight-toasts">
+        <button class="image-support ui button">Image Support</button>
+        <button class="pausing-on-hover ui button">Pause timer on hover</button>
+        <button class="action-buttons ui button">Action Buttons</button>
+        <button class="from-dom-elements ui button">Create from DOM elements</button>
+        <div class="ui blue toast" id="from-dom-elements-element">
+          <div class="content">
+            A Toast created from a DOM element
+          </div>
+        </div>
+        <button class="info-states ui button">Information states</button>
+      </div>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        EMOJIS
+      </h4>
+
+      <p><code>2.8</code> introduces the new emoji element with support for all <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Unicode 12.1 Emoji Characters</a>.</p>
+
+      <p><em data-emoji="tada" class="large"></em> <em data-emoji="partying_face" class="large"></em> <em data-emoji="champagne" class="large"></em></p>
+
+      <p>You can find a full list of all emojis <a href="/elements/emoji.html">here</a>.</p>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Dynamic LESS Compilation
+      </h4>
+
+      <p>In <code>2.8</code> we are introducing a new feature for building custom themes, Dynamic LESS Compilation. This new feature allows you to disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size speeding up your website <em data-emoji="clap"></em></p>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Icon Update
+      </h4>
+
+      <p>Once again we have updated the icons to FontAwesome 5.11.2</p>
+
+      <i class="ui huge cowboy hat icon"></i>
+      <i class="ui huge running icon"></i>
+      <i class="ui huge vinyl record icon"></i>
+
+      <p>You can see a list of all the available icons <a href="/elements/icon.html">here</a>.</p>
+    </div>
+  </div>
+
+  <div class="ui tab" data-tab="twoseven">
+    <h2 class="ui dividing header">Merry Christmas 🎅</h2>
+    <p>Fomantic <code>2.7</code> brings lots of new goodies and fixes and just in time for christmas!</p>
+
+    <h4>Announcement</h4>
+    <p>
+      With 2019 around the corner and a lot of discussion we (core contributors) have agreed to move our core focus to FUI v3.0.
+      This doesn't mean we won't be working on 2.x but means releases may be slowed down a little due to more work being put into v3.0.
+      You can read more about the future of FUI and v3.0 <a href="https://github.com/fomantic/Fomantic-UI/issues/319">here</a>
+    </p>
+
+    <h4>Notes:</h4>
+    <ul>
+      <li>
+        With this release we removed the dependency of <code>prompt-sui</code> which removes the child dependency of <code>event-stream</code> this ensures
+        that the library won't be downloading any (now deprecated) malicious code. If you want to learn more about the recent security
+        issues with <code>event-stream</code> please read <a href="https://github.com/fomantic/Fomantic-UI/issues/268">this issue</a>.
+      </li>
+      <li>
+        In this release we had a big focus on removing a lot of the <code>!important</code> usage which in turn produced lots of issues.
+        Now with a big help from our core contributors we have removed ~85% of the usage and reduced the complexity of a lot of
+        the color code base which makes it easier to make changes and helps reduce the size of the general code base as well as removing duplicate code.
+      </li>
+    </ul>
+
+    <h2 class="ui dividing header">
+      New features
+    </h2>
+    <div class="content example">
+      <h4 class="ui header">
+        Slider
+      </h4>
+      <p>In <code>2.7</code> we renamed the range component to slider and also add a lot of new features to play around with.</p>
+
+      <p>Labeled & Ticked Sliders</p>
+      <div class="ui labeled ticked slider" id="ticket-slider-27"></div>
+
+      <p>Range Slider (yes an actual range slider)</p>
+      <div class="ui labeled ticked range slider" id="slider-range-27"></div>
+      <div class="ui input">
+        <input type="text" id="range-slider-input-27" disabled="">
+      </div>
+
+      <p>Vertical Slider</p>
+      <div style="height: 200px;">
+        <div class="ui vertical slider" id="vertical-slider-27"></div>
+      </div>
+
+      <br />
+      <p>And a lot more, check the release notes to see all slider changes</p>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Loader
+      </h4>
+      <p>We have added some new loader styles in <code>2.7</code> so your not restricted to a boring spinner</p>
+
+      <p>Doubled</p>
+      <div class="ui segment">
+        <div class="ui active slow green double loader"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+      <p>Elastic</p>
+      <div class="ui segment">
+        <div class="ui active blue elastic loader"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+      <p>You can also apply all loader modifiers to these loaders</p>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Colors
+      </h4>
+      <p>
+        In <code>2.7</code> we went colors mad and changed a lot of the code base to make colors more consistent
+        across the framework and to make it so you can define your own colors 🎉
+      </p>
+
+      <p>
+        In <code>/globals/colors.less</code> you will find a list of colors which you can tweak to your liking.
+        You can change color values and even rename or add your own colors!
+
+        You will notice there is a lot of variables like <code>@primaryColor</code> which are located in <code>/globals/site.variables</code>
+        this allows this change to stay backwards compatible.
+      </p>
+
+      <p>
+        We also have added a new element called <code>text</code> which allows you to color text with the framework colors via wrapping
+        text in side of a <code>&lt;span&gt;</code>.
+      </p>
+      <div class="ui segment">
+        <p>As you can see I am <span class="ui red text">red</span> and I am <span class="ui blue text">blue</span>.</p>
+      </div>
+      <div class="ui inverted segment">
+        <p>Oh and you can use inverted colors like this inverted <span class="ui inverted purple text">purple</span> and <span class="ui inverted orange text">orange</span> text</p>
+      </div>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Modal
+      </h4>
+
+      <p>In <code>2.7</code>, we can position modals. Default is middle aligned.</p>
+
+      <div class="code" data-demo="true" data-eval="$('.top.aligned.test.modal').modal('show');">
+        $('.ui.top.aligned.modal').modal('show') ;
+      </div>
+
+      <div class="code" data-demo="true" data-eval="$('.bottom.aligned.test.modal').modal('show');">
+        $('.ui.bottom.aligned.modal') .modal('show') ;
+      </div>
+
+      <p>We can open modals that completely overlay the entire screen.</p>
+
+      <div class="code" data-demo="true" data-eval="$('.overlay.fullscreen.modal').modal('show');">
+        $('.ui.overlay.fullscreen.modal') .modal('show') ;
+      </div>
+
+      <div class="ui top aligned test modal">
+        <div class="header">
+          Top Aligned
+        </div>
+        <div class="actions">
+          <div class="ui black deny button">
+            Close
+          </div>
+        </div>
+      </div>
+
+      <div class="ui bottom aligned test modal">
+        <div class="header">
+          Bottom Aligned
+        </div>
+        <div class="actions">
+          <div class="ui black deny button">
+            Close
+          </div>
+        </div>
+      </div>
+
+      <div class="ui overlay fullscreen modal">
+        <div class="header">
+          Overlay Full Screen
+        </div>
+        <div class="content">
+          <div class="description">
+            <div class="ui header">Even if there is not much content here...</div>
+            ...the overlay fullscreen modal will occupy the entire screen
+          </div>
+        </div>
+        <div class="actions">
+          <div class="ui black deny button">
+            Close
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Dropdown
+      </h4>
+
+      <p>In <code>2.7</code>, dropdown module has new variant to display more contents at glance.
+        These could be useful if you have tons of options in dropdown.</p>
+
+      <p>One is columnar. We can make dropdown columnar, from <code>three column</code> to <code>five column</code>.</p>
+      <select class="ui fluid search four column dropdown" multiple>
+        <option value="">State</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+      </select>
+
+      <p>Another is height variation. We can make dropdown <code>long</code> or <code>very long</code>.</p>
+      <div class="ui secondary segment">
+        Show me
+        <div class="ui inline very long dropdown">
+          <input type="hidden" name="skill" value="css">
+          <div class="text">css</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item" data-value="angular">Angular</div>
+<div class="item" data-value="css">CSS</div>
+<div class="item" data-value="design">Graphic Design</div>
+<div class="item" data-value="ember">Ember</div>
+<div class="item" data-value="html">HTML</div>
+<div class="item" data-value="ia">Information Architecture</div>
+<div class="item" data-value="javascript">Javascript</div>
+<div class="item" data-value="mech">Mechanical Engineering</div>
+<div class="item" data-value="meteor">Meteor</div>
+<div class="item" data-value="node">NodeJS</div>
+<div class="item" data-value="plumbing">Plumbing</div>
+<div class="item" data-value="python">Python</div>
+<div class="item" data-value="rails">Rails</div>
+<div class="item" data-value="react">React</div>
+<div class="item" data-value="repair">Kitchen Repair</div>
+<div class="item" data-value="ruby">Ruby</div>
+<div class="item" data-value="ui">UI Design</div>
+<div class="item" data-value="ux">User Experience</div>
+          </div>
+        </div>
+        classes currently available.
+      </div>
+     </div>
+
+    <div class="content example">
+      <h4 class="ui header">
+        Progress
+      </h4>
+      <p>In <code>2.7</code>, progress now can have multiple bars.</p>
+
+      <div class="ui multiple progress no-label" data-total="200" data-value="60,30,20,30">
+        <div class="blue bar">
+          <div class="progress"></div>
+        </div>
+        <div class="yellow bar">
+          <div class="progress"></div>
+        </div>
+        <div class="purple bar">
+          <div class="progress"></div>
+        </div>
+        <div class="green bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+
+      <div class="ui multiple progress has-label" data-total="100" data-value="50,30,20">
+        <div class="red bar">
+          <div class="progress"></div>
+        </div>
+        <div class="yellow bar">
+          <div class="progress"></div>
+        </div>
+        <div class="blue bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <p>We didn't just stop there we also added a lot of cool new features for other components and addressed lots of bugs. You can find a full list of changes
+      <a href="https://github.com/fomantic/Fomantic-UI/commit/cb3026ed46714ef19b87938ea7bd884d1ab2d92d">here</a></p>
+  </div>
+
+  <div class="ui tab" data-tab="twosix">
+    <h2 class="ui dividing header">Toasty loaders</h2>
+    <p>Fomantic <code>2.6</code> brings a new components for handling content loading <a href="/elements/placeholder.html"><code>ui placeholder</code></a>, as well as a new type of <code>segment</code> used to reserve space for content: <a href="/elements/segment.html#empty"><code>ui placeholder segment</code></a>.</p>
+
+    <p>Additionally several important component updates are included in this release.
+    <div class="ui large bulleted list">
+      <div class="item">Modals have been re-architected to use hybrid flex support, falling back to JS positioning for more complex use-cases (or older browsers). </div>
+      <div class="item">Dropdowns now include a <code>clearable</code> setting for letting users reset dropdowns to its empty state.</div>
+    </div>
+
+    <p>We are also introducing the new <code>Toast</code> component</p>
+
+    <div class="ui ignored warning message">If you are upgrading from a previous SUI version, be sure to add <code>@placeholder</code> & <code>@toast</code> to your <a href="/introduction/build-tools.html"><code>theme.config</code></a> to include the placeholder or toast components in your code.</div>
+
+    <h2 class="ui dividing header">
+      New UI Component
+    </h2>
+    <div class="content example">
+      <h4 class="ui header">
+        Placeholders
+      </h4>
+      <P><a href="/elements/placeholder.html">Placeholders</a> can be used to reduce the jarringness, and perceived load time when loading new content</p>
+          <div class="ui primary ignored button">Simulate Loading</div>
+    <div class="ui ignored divider"></div>
+    <div class="ui three doubling stackable cards">
+      <div class="ui card">
+        <div class="image">
+          <div class="ui placeholder">
+            <div class="square image"></div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="ui placeholder">
+            <div class="header">
+              <div class="very short line"></div>
+              <div class="medium line"></div>
+            </div>
+            <div class="paragraph">
+              <div class="short line"></div>
+            </div>
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="ui disabled primary button">Add</div>
+          <div class="ui disabled button">Delete</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui ignored card">
+      <div class="image">
+        <img src="/images/avatar2/large/lindsay.png">
+      </div>
+      <div class="content">
+        <a class="header">Lindsay</a>
+        <div class="meta">
+          <span class="date">Joined in 2013</span>
+        </div>
+        <div class="description">
+          Primary Contact
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="ui primary button">Add</div>
+        <div class="ui button">Delete</div>
+      </div>
+    </div>
+
+    </div>
+    <div class="another example">
+      <div class="ui relaxed divided list">
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <a class="header">Semantic-Org/Semantic-UI-Docs</a>
+            <div class="description">Updated 22 mins ago</div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <div class="ui placeholder">
+              <div class="paragraph">
+                <div class="medium line"></div>
+                <div class="short line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <div class="ui placeholder">
+              <div class="paragraph">
+                <div class="medium line"></div>
+                <div class="short line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <div class="ui placeholder">
+              <div class="paragraph">
+                <div class="medium line"></div>
+                <div class="short line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <div class="ui placeholder">
+              <div class="paragraph">
+                <div class="medium line"></div>
+                <div class="short line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">
+        Placeholder Segment
+      </h4>
+      <p><a href="/elements/segment.html#placeholder">Placeholder segments</a> allow you to reserve space in your design for where content is intended to appear. This is useful when a page should prompt a user about its intended functionality, even when no content is present.</p>
+      <div class="ui placeholder segment">
+        <div class="ui icon header">
+          <i class="dont icon"></i>
+          No users have been added yet
+        </div>
+        <div class="ui primary button">Add User</div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui placeholder segment">
+        <div class="ui two column center aligned grid">
+          <div class="ui vertical divider">Or</div>
+          <div class="middle aligned row">
+            <div class="column">
+              <div class="ui icon header">
+                <i class="search icon"></i>
+                Find Country
+              </div>
+              <div class="field">
+                <div class="ui search">
+                  <div class="ui icon input">
+                    <input class="prompt" type="text" placeholder="Search countries...">
+                    <i class="search icon"></i>
+                  </div>
+                  <div class="results"></div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui icon header">
+                <i class="world icon"></i>
+                Add New Country
+              </div>
+              <div class="ui primary button">
+                Create
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="ui dividing header">
+      New Features
+    </h2>
+    <div class="clearable no example">
+      <h4 class="ui header">
+        Clearable Dropdowns
+      </h4>
+      <p>Now dropdowns can specify that their content can be cleared with <code>clearable: true</code>.</p>
+
+      <div class="ui search selection dropdown">
+        <input type="hidden" name="country" value="kr">
+        <div class="text">
+          <i class="kr flag"></i>South Korea
+        </div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+        <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+        <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+        <div class="item" data-value="al"><i class="al flag"></i>Albania</div>
+        <div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
+        <div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
+        <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
+        <div class="item" data-value="ao"><i class="ao flag"></i>Angola</div>
+        <div class="item" data-value="ai"><i class="ai flag"></i>Anguilla</div>
+        <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
+        <div class="item" data-value="ar"><i class="ar flag"></i>Argentina</div>
+        <div class="item" data-value="am"><i class="am flag"></i>Armenia</div>
+        <div class="item" data-value="aw"><i class="aw flag"></i>Aruba</div>
+        <div class="item" data-value="au"><i class="au flag"></i>Australia</div>
+        <div class="item" data-value="at"><i class="at flag"></i>Austria</div>
+        <div class="item" data-value="az"><i class="az flag"></i>Azerbaijan</div>
+        <div class="item" data-value="bs"><i class="bs flag"></i>Bahamas</div>
+        <div class="item" data-value="bh"><i class="bh flag"></i>Bahrain</div>
+        <div class="item" data-value="bd"><i class="bd flag"></i>Bangladesh</div>
+        <div class="item" data-value="bb"><i class="bb flag"></i>Barbados</div>
+        <div class="item" data-value="by"><i class="by flag"></i>Belarus</div>
+        <div class="item" data-value="be"><i class="be flag"></i>Belgium</div>
+        <div class="item" data-value="bz"><i class="bz flag"></i>Belize</div>
+        <div class="item" data-value="bj"><i class="bj flag"></i>Benin</div>
+        <div class="item" data-value="bm"><i class="bm flag"></i>Bermuda</div>
+        <div class="item" data-value="bt"><i class="bt flag"></i>Bhutan</div>
+        <div class="item" data-value="bo"><i class="bo flag"></i>Bolivia</div>
+        <div class="item" data-value="ba"><i class="ba flag"></i>Bosnia</div>
+        <div class="item" data-value="bw"><i class="bw flag"></i>Botswana</div>
+        <div class="item" data-value="bv"><i class="bv flag"></i>Bouvet Island</div>
+        <div class="item" data-value="br"><i class="br flag"></i>Brazil</div>
+        <div class="item" data-value="vg"><i class="vg flag"></i>British Virgin Islands</div>
+        <div class="item" data-value="bn"><i class="bn flag"></i>Brunei</div>
+        <div class="item" data-value="bg"><i class="bg flag"></i>Bulgaria</div>
+        <div class="item" data-value="bf"><i class="bf flag"></i>Burkina Faso</div>
+        <div class="item" data-value="mm"><i class="mm flag"></i>Burma</div>
+        <div class="item" data-value="bi"><i class="bi flag"></i>Burundi</div>
+        <div class="item" data-value="tc"><i class="tc flag"></i>Caicos Islands</div>
+        <div class="item" data-value="kh"><i class="kh flag"></i>Cambodia</div>
+        <div class="item" data-value="cm"><i class="cm flag"></i>Cameroon</div>
+        <div class="item" data-value="ca"><i class="ca flag"></i>Canada</div>
+        <div class="item" data-value="cv"><i class="cv flag"></i>Cape Verde</div>
+        <div class="item" data-value="ky"><i class="ky flag"></i>Cayman Islands</div>
+        <div class="item" data-value="cf"><i class="cf flag"></i>Central African Republic</div>
+        <div class="item" data-value="td"><i class="td flag"></i>Chad</div>
+        <div class="item" data-value="cl"><i class="cl flag"></i>Chile</div>
+        <div class="item" data-value="cn"><i class="cn flag"></i>China</div>
+        <div class="item" data-value="cx"><i class="cx flag"></i>Christmas Island</div>
+        <div class="item" data-value="cc"><i class="cc flag"></i>Cocos Islands</div>
+        <div class="item" data-value="co"><i class="co flag"></i>Colombia</div>
+        <div class="item" data-value="km"><i class="km flag"></i>Comoros</div>
+        <div class="item" data-value="cg"><i class="cg flag"></i>Congo Brazzaville</div>
+        <div class="item" data-value="cd"><i class="cd flag"></i>Congo</div>
+        <div class="item" data-value="ck"><i class="ck flag"></i>Cook Islands</div>
+        <div class="item" data-value="cr"><i class="cr flag"></i>Costa Rica</div>
+        <div class="item" data-value="ci"><i class="ci flag"></i>Cote Divoire</div>
+        <div class="item" data-value="hr"><i class="hr flag"></i>Croatia</div>
+        <div class="item" data-value="cu"><i class="cu flag"></i>Cuba</div>
+        <div class="item" data-value="cy"><i class="cy flag"></i>Cyprus</div>
+        <div class="item" data-value="cz"><i class="cz flag"></i>Czech Republic</div>
+        <div class="item" data-value="dk"><i class="dk flag"></i>Denmark</div>
+        <div class="item" data-value="dj"><i class="dj flag"></i>Djibouti</div>
+        <div class="item" data-value="dm"><i class="dm flag"></i>Dominica</div>
+        <div class="item" data-value="do"><i class="do flag"></i>Dominican Republic</div>
+        <div class="item" data-value="ec"><i class="ec flag"></i>Ecuador</div>
+        <div class="item" data-value="eg"><i class="eg flag"></i>Egypt</div>
+        <div class="item" data-value="sv"><i class="sv flag"></i>El Salvador</div>
+        <div class="item" data-value="gb"><i class="gb flag"></i>England</div>
+        <div class="item" data-value="gq"><i class="gq flag"></i>Equatorial Guinea</div>
+        <div class="item" data-value="er"><i class="er flag"></i>Eritrea</div>
+        <div class="item" data-value="ee"><i class="ee flag"></i>Estonia</div>
+        <div class="item" data-value="et"><i class="et flag"></i>Ethiopia</div>
+        <div class="item" data-value="eu"><i class="eu flag"></i>European Union</div>
+        <div class="item" data-value="fk"><i class="fk flag"></i>Falkland Islands</div>
+        <div class="item" data-value="fo"><i class="fo flag"></i>Faroe Islands</div>
+        <div class="item" data-value="fj"><i class="fj flag"></i>Fiji</div>
+        <div class="item" data-value="fi"><i class="fi flag"></i>Finland</div>
+        <div class="item" data-value="fr"><i class="fr flag"></i>France</div>
+        <div class="item" data-value="gf"><i class="gf flag"></i>French Guiana</div>
+        <div class="item" data-value="pf"><i class="pf flag"></i>French Polynesia</div>
+        <div class="item" data-value="tf"><i class="tf flag"></i>French Territories</div>
+        <div class="item" data-value="ga"><i class="ga flag"></i>Gabon</div>
+        <div class="item" data-value="gm"><i class="gm flag"></i>Gambia</div>
+        <div class="item" data-value="ge"><i class="ge flag"></i>Georgia</div>
+        <div class="item" data-value="de"><i class="de flag"></i>Germany</div>
+        <div class="item" data-value="gh"><i class="gh flag"></i>Ghana</div>
+        <div class="item" data-value="gi"><i class="gi flag"></i>Gibraltar</div>
+        <div class="item" data-value="gr"><i class="gr flag"></i>Greece</div>
+        <div class="item" data-value="gl"><i class="gl flag"></i>Greenland</div>
+        <div class="item" data-value="gd"><i class="gd flag"></i>Grenada</div>
+        <div class="item" data-value="gp"><i class="gp flag"></i>Guadeloupe</div>
+        <div class="item" data-value="gu"><i class="gu flag"></i>Guam</div>
+        <div class="item" data-value="gt"><i class="gt flag"></i>Guatemala</div>
+        <div class="item" data-value="gw"><i class="gw flag"></i>Guinea-Bissau</div>
+        <div class="item" data-value="gn"><i class="gn flag"></i>Guinea</div>
+        <div class="item" data-value="gy"><i class="gy flag"></i>Guyana</div>
+        <div class="item" data-value="ht"><i class="ht flag"></i>Haiti</div>
+        <div class="item" data-value="hm"><i class="hm flag"></i>Heard Island</div>
+        <div class="item" data-value="hn"><i class="hn flag"></i>Honduras</div>
+        <div class="item" data-value="hk"><i class="hk flag"></i>Hong Kong</div>
+        <div class="item" data-value="hu"><i class="hu flag"></i>Hungary</div>
+        <div class="item" data-value="is"><i class="is flag"></i>Iceland</div>
+        <div class="item" data-value="in"><i class="in flag"></i>India</div>
+        <div class="item" data-value="io"><i class="io flag"></i>Indian Ocean Territory</div>
+        <div class="item" data-value="id"><i class="id flag"></i>Indonesia</div>
+        <div class="item" data-value="ir"><i class="ir flag"></i>Iran</div>
+        <div class="item" data-value="iq"><i class="iq flag"></i>Iraq</div>
+        <div class="item" data-value="ie"><i class="ie flag"></i>Ireland</div>
+        <div class="item" data-value="il"><i class="il flag"></i>Israel</div>
+        <div class="item" data-value="it"><i class="it flag"></i>Italy</div>
+        <div class="item" data-value="jm"><i class="jm flag"></i>Jamaica</div>
+        <div class="item" data-value="jp"><i class="jp flag"></i>Japan</div>
+        <div class="item" data-value="jo"><i class="jo flag"></i>Jordan</div>
+        <div class="item" data-value="kz"><i class="kz flag"></i>Kazakhstan</div>
+        <div class="item" data-value="ke"><i class="ke flag"></i>Kenya</div>
+        <div class="item" data-value="ki"><i class="ki flag"></i>Kiribati</div>
+        <div class="item" data-value="kw"><i class="kw flag"></i>Kuwait</div>
+        <div class="item" data-value="kg"><i class="kg flag"></i>Kyrgyzstan</div>
+        <div class="item" data-value="la"><i class="la flag"></i>Laos</div>
+        <div class="item" data-value="lv"><i class="lv flag"></i>Latvia</div>
+        <div class="item" data-value="lb"><i class="lb flag"></i>Lebanon</div>
+        <div class="item" data-value="ls"><i class="ls flag"></i>Lesotho</div>
+        <div class="item" data-value="lr"><i class="lr flag"></i>Liberia</div>
+        <div class="item" data-value="ly"><i class="ly flag"></i>Libya</div>
+        <div class="item" data-value="li"><i class="li flag"></i>Liechtenstein</div>
+        <div class="item" data-value="lt"><i class="lt flag"></i>Lithuania</div>
+        <div class="item" data-value="lu"><i class="lu flag"></i>Luxembourg</div>
+        <div class="item" data-value="mo"><i class="mo flag"></i>Macau</div>
+        <div class="item" data-value="mk"><i class="mk flag"></i>Macedonia</div>
+        <div class="item" data-value="mg"><i class="mg flag"></i>Madagascar</div>
+        <div class="item" data-value="mw"><i class="mw flag"></i>Malawi</div>
+        <div class="item" data-value="my"><i class="my flag"></i>Malaysia</div>
+        <div class="item" data-value="mv"><i class="mv flag"></i>Maldives</div>
+        <div class="item" data-value="ml"><i class="ml flag"></i>Mali</div>
+        <div class="item" data-value="mt"><i class="mt flag"></i>Malta</div>
+        <div class="item" data-value="mh"><i class="mh flag"></i>Marshall Islands</div>
+        <div class="item" data-value="mq"><i class="mq flag"></i>Martinique</div>
+        <div class="item" data-value="mr"><i class="mr flag"></i>Mauritania</div>
+        <div class="item" data-value="mu"><i class="mu flag"></i>Mauritius</div>
+        <div class="item" data-value="yt"><i class="yt flag"></i>Mayotte</div>
+        <div class="item" data-value="mx"><i class="mx flag"></i>Mexico</div>
+        <div class="item" data-value="fm"><i class="fm flag"></i>Micronesia</div>
+        <div class="item" data-value="md"><i class="md flag"></i>Moldova</div>
+        <div class="item" data-value="mc"><i class="mc flag"></i>Monaco</div>
+        <div class="item" data-value="mn"><i class="mn flag"></i>Mongolia</div>
+        <div class="item" data-value="me"><i class="me flag"></i>Montenegro</div>
+        <div class="item" data-value="ms"><i class="ms flag"></i>Montserrat</div>
+        <div class="item" data-value="ma"><i class="ma flag"></i>Morocco</div>
+        <div class="item" data-value="mz"><i class="mz flag"></i>Mozambique</div>
+        <div class="item" data-value="na"><i class="na flag"></i>Namibia</div>
+        <div class="item" data-value="nr"><i class="nr flag"></i>Nauru</div>
+        <div class="item" data-value="np"><i class="np flag"></i>Nepal</div>
+        <div class="item" data-value="an"><i class="an flag"></i>Netherlands Antilles</div>
+        <div class="item" data-value="nl"><i class="nl flag"></i>Netherlands</div>
+        <div class="item" data-value="nc"><i class="nc flag"></i>New Caledonia</div>
+        <div class="item" data-value="pg"><i class="pg flag"></i>New Guinea</div>
+        <div class="item" data-value="nz"><i class="nz flag"></i>New Zealand</div>
+        <div class="item" data-value="ni"><i class="ni flag"></i>Nicaragua</div>
+        <div class="item" data-value="ne"><i class="ne flag"></i>Niger</div>
+        <div class="item" data-value="ng"><i class="ng flag"></i>Nigeria</div>
+        <div class="item" data-value="nu"><i class="nu flag"></i>Niue</div>
+        <div class="item" data-value="nf"><i class="nf flag"></i>Norfolk Island</div>
+        <div class="item" data-value="kp"><i class="kp flag"></i>North Korea</div>
+        <div class="item" data-value="mp"><i class="mp flag"></i>Northern Mariana Islands</div>
+        <div class="item" data-value="no"><i class="no flag"></i>Norway</div>
+        <div class="item" data-value="om"><i class="om flag"></i>Oman</div>
+        <div class="item" data-value="pk"><i class="pk flag"></i>Pakistan</div>
+        <div class="item" data-value="pw"><i class="pw flag"></i>Palau</div>
+        <div class="item" data-value="ps"><i class="ps flag"></i>Palestine</div>
+        <div class="item" data-value="pa"><i class="pa flag"></i>Panama</div>
+        <div class="item" data-value="py"><i class="py flag"></i>Paraguay</div>
+        <div class="item" data-value="pe"><i class="pe flag"></i>Peru</div>
+        <div class="item" data-value="ph"><i class="ph flag"></i>Philippines</div>
+        <div class="item" data-value="pn"><i class="pn flag"></i>Pitcairn Islands</div>
+        <div class="item" data-value="pl"><i class="pl flag"></i>Poland</div>
+        <div class="item" data-value="pt"><i class="pt flag"></i>Portugal</div>
+        <div class="item" data-value="pr"><i class="pr flag"></i>Puerto Rico</div>
+        <div class="item" data-value="qa"><i class="qa flag"></i>Qatar</div>
+        <div class="item" data-value="re"><i class="re flag"></i>Reunion</div>
+        <div class="item" data-value="ro"><i class="ro flag"></i>Romania</div>
+        <div class="item" data-value="ru"><i class="ru flag"></i>Russia</div>
+        <div class="item" data-value="rw"><i class="rw flag"></i>Rwanda</div>
+        <div class="item" data-value="sh"><i class="sh flag"></i>Saint Helena</div>
+        <div class="item" data-value="kn"><i class="kn flag"></i>Saint Kitts and Nevis</div>
+        <div class="item" data-value="lc"><i class="lc flag"></i>Saint Lucia</div>
+        <div class="item" data-value="pm"><i class="pm flag"></i>Saint Pierre</div>
+        <div class="item" data-value="vc"><i class="vc flag"></i>Saint Vincent</div>
+        <div class="item" data-value="ws"><i class="ws flag"></i>Samoa</div>
+        <div class="item" data-value="sm"><i class="sm flag"></i>San Marino</div>
+        <div class="item" data-value="gs"><i class="gs flag"></i>Sandwich Islands</div>
+        <div class="item" data-value="st"><i class="st flag"></i>Sao Tome</div>
+        <div class="item" data-value="sa"><i class="sa flag"></i>Saudi Arabia</div>
+        <div class="item" data-value="sn"><i class="sn flag"></i>Senegal</div>
+        <div class="item" data-value="cs"><i class="cs flag"></i>Serbia</div>
+        <div class="item" data-value="rs"><i class="rs flag"></i>Serbia</div>
+        <div class="item" data-value="sc"><i class="sc flag"></i>Seychelles</div>
+        <div class="item" data-value="sl"><i class="sl flag"></i>Sierra Leone</div>
+        <div class="item" data-value="sg"><i class="sg flag"></i>Singapore</div>
+        <div class="item" data-value="sk"><i class="sk flag"></i>Slovakia</div>
+        <div class="item" data-value="si"><i class="si flag"></i>Slovenia</div>
+        <div class="item" data-value="sb"><i class="sb flag"></i>Solomon Islands</div>
+        <div class="item" data-value="so"><i class="so flag"></i>Somalia</div>
+        <div class="item" data-value="za"><i class="za flag"></i>South Africa</div>
+        <div class="item" data-value="kr"><i class="kr flag"></i>South Korea</div>
+        <div class="item" data-value="es"><i class="es flag"></i>Spain</div>
+        <div class="item" data-value="lk"><i class="lk flag"></i>Sri Lanka</div>
+        <div class="item" data-value="sd"><i class="sd flag"></i>Sudan</div>
+        <div class="item" data-value="sr"><i class="sr flag"></i>Suriname</div>
+        <div class="item" data-value="sj"><i class="sj flag"></i>Svalbard</div>
+        <div class="item" data-value="sz"><i class="sz flag"></i>Swaziland</div>
+        <div class="item" data-value="se"><i class="se flag"></i>Sweden</div>
+        <div class="item" data-value="ch"><i class="ch flag"></i>Switzerland</div>
+        <div class="item" data-value="sy"><i class="sy flag"></i>Syria</div>
+        <div class="item" data-value="tw"><i class="tw flag"></i>Taiwan</div>
+        <div class="item" data-value="tj"><i class="tj flag"></i>Tajikistan</div>
+        <div class="item" data-value="tz"><i class="tz flag"></i>Tanzania</div>
+        <div class="item" data-value="th"><i class="th flag"></i>Thailand</div>
+        <div class="item" data-value="tl"><i class="tl flag"></i>Timorleste</div>
+        <div class="item" data-value="tg"><i class="tg flag"></i>Togo</div>
+        <div class="item" data-value="tk"><i class="tk flag"></i>Tokelau</div>
+        <div class="item" data-value="to"><i class="to flag"></i>Tonga</div>
+        <div class="item" data-value="tt"><i class="tt flag"></i>Trinidad</div>
+        <div class="item" data-value="tn"><i class="tn flag"></i>Tunisia</div>
+        <div class="item" data-value="tr"><i class="tr flag"></i>Turkey</div>
+        <div class="item" data-value="tm"><i class="tm flag"></i>Turkmenistan</div>
+        <div class="item" data-value="tv"><i class="tv flag"></i>Tuvalu</div>
+        <div class="item" data-value="ug"><i class="ug flag"></i>Uganda</div>
+        <div class="item" data-value="ua"><i class="ua flag"></i>Ukraine</div>
+        <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
+        <div class="item" data-value="us"><i class="us flag"></i>United States</div>
+        <div class="item" data-value="uy"><i class="uy flag"></i>Uruguay</div>
+        <div class="item" data-value="um"><i class="um flag"></i>Us Minor Islands</div>
+        <div class="item" data-value="vi"><i class="vi flag"></i>Us Virgin Islands</div>
+        <div class="item" data-value="uz"><i class="uz flag"></i>Uzbekistan</div>
+        <div class="item" data-value="vu"><i class="vu flag"></i>Vanuatu</div>
+        <div class="item" data-value="va"><i class="va flag"></i>Vatican City</div>
+        <div class="item" data-value="ve"><i class="ve flag"></i>Venezuela</div>
+        <div class="item" data-value="vn"><i class="vn flag"></i>Vietnam</div>
+        <div class="item" data-value="wf"><i class="wf flag"></i>Wallis and Futuna</div>
+        <div class="item" data-value="eh"><i class="eh flag"></i>Western Sahara</div>
+        <div class="item" data-value="ye"><i class="ye flag"></i>Yemen</div>
+        <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+        <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+      </div>
+
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui secondary segment">
+        Show me
+        <div class="ui inline scrolling dropdown">
+          <input type="hidden" name="skill" value="css">
+          <div class="text">css</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item" data-value="angular">Angular</div>
+<div class="item" data-value="css">CSS</div>
+<div class="item" data-value="design">Graphic Design</div>
+<div class="item" data-value="ember">Ember</div>
+<div class="item" data-value="html">HTML</div>
+<div class="item" data-value="ia">Information Architecture</div>
+<div class="item" data-value="javascript">Javascript</div>
+<div class="item" data-value="mech">Mechanical Engineering</div>
+<div class="item" data-value="meteor">Meteor</div>
+<div class="item" data-value="node">NodeJS</div>
+<div class="item" data-value="plumbing">Plumbing</div>
+<div class="item" data-value="python">Python</div>
+<div class="item" data-value="rails">Rails</div>
+<div class="item" data-value="react">React</div>
+<div class="item" data-value="repair">Kitchen Repair</div>
+<div class="item" data-value="ruby">Ruby</div>
+<div class="item" data-value="ui">UI Design</div>
+<div class="item" data-value="ux">User Experience</div>
+          </div>
+        </div>
+        classes currently available.
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">
+        Improved Flexbox Modals
+      </h4>
+      <p>Although flex-box were introduced in <code>2.3.0</code> there were limitations which may have prevented some advanced use-cases. For example, flexbox modals did not support modals that used <code>detachable: false</code> and weren't directly inside dimmer flex containers. Also some flex browsers (IE11) do not support absolutely positioned elements inside flex containers, so multiple overlapping modals could not be used in those cases.</p>
+      <p>
+        <code>2.4.0</code> solves this by introducing a hybrid flex system, that will fall back to javascript positioning for browsers or layouts that aren't compatible with flex.
+      </p>
+    </div>
+  </div>
+
+  <div class="ui tab" data-tab="twofive">
+    <h2 class="ui dividing header">The beginning of something new</h2>
+
+    <p>Fomantic-UI is starting to mature and we are starting to push bigger and better updates, we hope you like the new Calendar and Range slider modules!</p>
+
+    <h2 class="ui dividing header">New Components</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Calendar</h4>
+      <div class="ui calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Range Slider</h4>
+      <div class="ui range" id="range-25"></div>
+      <br/>
+      <div class="ui input">
+        <input type="text" id="slider-input-25" disabled="">
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">FontAwesome 5.3.1</h4>
+      <p>We have updated the icons to the newest FontAwesome release</p>
+      <i class="calendar huge icon"></i>
+      <i class="city huge icon"></i>
+      <i class="envelope open text huge icon"></i>
+      <i class="hamsa huge icon"></i>
+      <i class="peace huge icon"></i>
+      <i class="socks huge icon"></i>
+      <i class="wifi huge icon"></i>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Colored Loaders</h4>
+      <div class="ui active red inline loader"></div>
+      <div class="ui active orange inline loader"></div>
+      <div class="ui active blue inline loader"></div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">More Inverted Components</h4>
+      <p>In 2.5 we made a big push to add more support for inverted components</p>
+
+      <h5 class="ui header">Comments</h5>
+      <div class="ui inverted segment">
+        <div class="ui inverted threaded comments">
+          <h3 class="ui inverted dividing header">Comments</h3>
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/matt.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Matt</a>
+              <div class="metadata">
+                <span class="date">Today at 5:42PM</span>
+              </div>
+              <div class="text">
+                How artistic!
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/elliot.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Elliot Fu</a>
+              <div class="metadata">
+                <span class="date">Yesterday at 12:30AM</span>
+              </div>
+              <div class="text">
+                <p>This has been very useful for my research. Thanks as well!</p>
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+            <div class="comments">
+              <div class="comment">
+                <a class="avatar">
+                  <img src="/images/avatar/small/jenny.jpg">
+                </a>
+                <div class="content">
+                  <a class="author">Jenny Hess</a>
+                  <div class="metadata">
+                    <span class="date">Just now</span>
+                  </div>
+                  <div class="text">
+                    Elliot you are always so right :)
+                  </div>
+                  <div class="actions">
+                    <a class="reply">Reply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <a class="avatar">
+              <img src="/images/avatar/small/joe.jpg">
+            </a>
+            <div class="content">
+              <a class="author">Joe Henderson</a>
+              <div class="metadata">
+                <span class="date">5 days ago</span>
+              </div>
+              <div class="text">
+                Dude, this is awesome. Thanks so much
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="ui header">Feed</h5>
+      <div class="ui inverted segment">
+        <div class="ui inverted feed">
+          <div class="event">
+            <div class="label">
+              <img src="/images/avatar/small/elliot.jpg">
+            </div>
+            <div class="content">
+              <div class="date">
+                Just now
+              </div>
+              <div class="summary">
+                <a class="user">
+                  Elliot Fu
+                </a> posted on his page
+              </div>
+              <div class="extra text">
+                Hey there !
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="label">
+              <img src="/images/avatar/small/elliot.jpg">
+            </div>
+            <div class="content">
+              <div class="summary">
+                <a class="user">
+                  Elliot Fu
+                </a> added you as a friend
+                <div class="date">
+                  1 Hour Ago
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="label">
+              <img src="/images/avatar/small/helen.jpg">
+            </div>
+            <div class="content">
+              <div class="summary">
+                <a>Helen Troy</a> added <a>2 new illustrations</a>
+                <div class="date">
+                  4 days ago
+                </div>
+              </div>
+              <div class="extra images">
+                <a><img src="/images/wireframe/image.png"></a>
+                <a><img src="/images/wireframe/image.png"></a>
+              </div>
+              <div class="meta">
+                <a class="like">
+                  <i class="like icon"></i> 1 Like
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="ui header">Step</h5>
+      <div class="ui inverted segment">
+        <div class="ui inverted ordered steps">
+          <div class="completed step">
+            <div class="content">
+              <div class="title">Shipping</div>
+              <div class="description">Choose your shipping options</div>
+            </div>
+          </div>
+          <div class="completed step">
+            <div class="content">
+              <div class="title">Billing</div>
+              <div class="description">Enter billing information</div>
+            </div>
+          </div>
+          <div class="active step">
+            <div class="content">
+              <div class="title">Confirm Order</div>
+              <div class="description">Verify order details</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="ui header">Cards</h5>
+      <div class="ui inverted segment">
+        <div class="ui inverted cards">
+          <div class="card">
+            <div class="image">
+              <img src="/images/avatar2/large/matthew.png">
+            </div>
+            <div class="content">
+              <a class="header">Matt Giampietro</a>
+              <div class="meta">
+                <a>Friends</a>
+              </div>
+              <div class="description">
+                Matthew is an interior designer living in New York.
+              </div>
+            </div>
+            <div class="extra content">
+        <span class="right floated">
+          Joined in 2013
+        </span>
+              <a>
+                <i class="user icon"></i>
+                75 Friends
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="/images/avatar2/large/molly.png">
+            </div>
+            <div class="content">
+              <a class="header">Molly</a>
+              <div class="meta">
+                <span class="date">Coworker</span>
+              </div>
+              <div class="description">
+                Molly is a personal assistant living in Paris.
+              </div>
+            </div>
+            <div class="extra content">
+        <span class="right floated">
+          Joined in 2011
+        </span>
+              <a>
+                <i class="user icon"></i>
+                35 Friends
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="/images/avatar2/large/elyse.png">
+            </div>
+            <div class="content">
+              <a class="header">Elyse</a>
+              <div class="meta">
+                <a>Coworker</a>
+              </div>
+              <div class="description">
+                Elyse is a copywriter working in New York.
+              </div>
+            </div>
+            <div class="extra content">
+        <span class="right floated">
+          Joined in 2014
+        </span>
+              <a>
+                <i class="user icon"></i>
+                151 Friends
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Horizontal Cards</h4>
+      <div class="ui horizontal cards">
+        <div class="card">
+          <div class="image">
+            <img src="/images/avatar2/large/matthew.png">
+          </div>
+          <div class="content">
+            <div class="header">Matt Giampietro</div>
+            <div class="meta">
+              <a>Friends</a>
+            </div>
+            <div class="description">
+              Matthew is an interior designer living in New York.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/avatar2/large/molly.png">
+          </div>
+          <div class="content">
+            <div class="header">Molly</div>
+            <div class="meta">
+              <span class="date">Coworker</span>
+            </div>
+            <div class="description">
+              Molly is a personal assistant living in Paris.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui tab" data-tab="twofour">
+    <h2 class="ui dividing header">A new life</h2>
+
+    <p>With active development slowing down the community has stood up to start a new life for Semantic, welcome to Fomantic-UI.</p>
+    <p>You can read the release notes <a href="https://github.com/fomantic/Fomantic-UI/blob/master/CHANGELOG.md">here</a>.</p>
+
+    <h2 class="ui dividing header">New Features</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Inverted & basic Primary and Secondary buttons</h4>
+      <p>You can now use primary and secondary basic and inverted buttons.</p>
+      <div class="ui doubling four column vertically padded grid">
+        <div class="row">
+          <div class="column"><button class="ui basic primary button">Primary Basic</button></div>
+          <div class="column"><button class="ui basic secondary button">Secondary Basic</button></div>
+        </div>
+        <div class="row">
+          <div class="black column"><button class="ui inverted primary button">Primary Inverted</button></div>
+          <div class="black column"><button class="ui inverted secondary button">Secondary Inverted</button></div>
+          <div class="black column"><button class="ui basic inverted primary button">Primary Inverted</button></div>
+          <div class="black column"><button class="ui basic inverted secondary button">Secondary Inverted</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Tertiary buttons</h4>
+      <p>New tertiary buttons allow for less important buttons</p>
+      <div class="ui doubling eight column vertically padded grid">
+        <div class="column"><button class="ui primary tertiary button">Primary</button></div>
+        <div class="column"><button class="ui secondary tertiary button">Secondary</button></div>
+        <div class="column"><button class="ui red tertiary button">Red</button></div>
+        <div class="column"><button class="ui orange tertiary button">Orange</button></div>
+        <div class="column"><button class="ui yellow tertiary button">Yellow</button></div>
+        <div class="column"><button class="ui olive tertiary button">Olive</button></div>
+        <div class="column"><button class="ui green tertiary button">Green</button></div>
+        <div class="column"><button class="ui teal tertiary button">Teal</button></div>
+        <div class="column"><button class="ui blue tertiary button">Blue</button></div>
+        <div class="column"><button class="ui violet tertiary button">Violet</button></div>
+        <div class="column"><button class="ui purple tertiary button">Purple</button></div>
+        <div class="column"><button class="ui pink tertiary button">Pink</button></div>
+        <div class="column"><button class="ui brown tertiary button">Brown</button></div>
+        <div class="column"><button class="ui grey tertiary button">Grey</button></div>
+        <div class="column"><button class="ui black tertiary button">Black</button></div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Primary & Secondary colors</h4>
+      <p>Headers, Icons and Cards now all have primary and secondary colors</p>
+      <div class="ui doubling two column vertically padded grid">
+        <div class="column">
+          <div class="ui doubling two column vertically padded center aligned grid">
+            <div class="column"><div class="ui primary header">Primary Header</div></div>
+            <div class="column"><div class="ui secondary header">Secondary Header</div></div>
+            <div class="column"><i class="huge primary users icon"></i></div>
+            <div class="column"><i class="huge secondary users icon"></i></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui doubling two column vertically padded grid">
+            <div class="column">
+              <a class="ui primary card">
+                <div class="image">
+                  <img src="/images/wireframe/white-image.png">
+                </div>
+              </a>
+            </div>
+            <div class="column">
+              <a class="ui secondary card">
+                <div class="image">
+                  <img src="/images/wireframe/white-image.png">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Inverted dropdown variation</h4>
+      <p>Dropdowns can now be inverted, they look sweet in inverted segments.</p>
+      <div class="ui doubling two column vertically padded grid">
+        <div class="column">
+          <div class="ui inverted segment">
+            <div class="ui inverted selection dropdown">
+              <input type="hidden" name="choices">
+              <div class="default text">Select choice</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item">Choice 1</div>
+                <div class="item">Choice 2</div>
+                <div class="item">Choice 3</div>
+                <div class="item">Choice 4</div>
+                <div class="item">Choice 5</div>
+                <div class="item">Choice 6</div>
+                <div class="item">Choice 7</div>
+                <div class="item">Choice 8</div>
+                <div class="item">Choice 9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no dropdown search example">
+      <h4 class="ui header">Dropdown Search dividers/headers</h4>
+      <p>A searchable dropdown menu can contain dividers and/or headers to separate related content. Using <code>hideDividers</code> lets you control how the elements are handled while filtering items.</p>
+      <div class="code" data-demo="false">
+        $('.dropdown')
+          .dropdown({
+            hideDividers: option
+          })
+        ;
+      </div>
+
+      <div class="ui stackable three column grid">
+        <div class="column">
+          <div class="ui sub header">false</div>
+          <div class="ui labeled icon pointing dropdown button">
+            <i class="filter icon"></i>
+            <span class="text">Filter Posts</span>
+            <div class="menu">
+              <div class="ui search icon input">
+                <i class="search icon"></i>
+                <input name="search" placeholder="Search issues..." type="text">
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="tags icon"></i>
+                Filter by tag
+              </div>
+              <div class="item">
+                <div class="ui red empty circular label"></div>
+                Important
+              </div>
+              <div class="item">
+                <div class="ui blue empty circular label"></div>
+                Announcement
+              </div>
+              <div class="item">
+                <div class="ui black empty circular label"></div>
+                Discussion
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="calendar icon"></i>
+                Filter by date
+              </div>
+              <div class="item">
+                <i class="olive circle icon"></i>
+                This Week
+              </div>
+              <div class="item">
+                <i class="violet circle icon"></i>
+                This Month
+              </div>
+              <div class="item">
+                <i class="orange circle icon"></i>
+                This Year
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="ui sub header">true</div>
+          <div class="ui labeled icon pointing dropdown button">
+            <i class="filter icon"></i>
+            <span class="text">Filter Posts</span>
+            <div class="menu">
+              <div class="ui search icon input">
+                <i class="search icon"></i>
+                <input name="search" placeholder="Search issues..." type="text">
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="tags icon"></i>
+                Filter by tag
+              </div>
+              <div class="item">
+                <div class="ui red empty circular label"></div>
+                Important
+              </div>
+              <div class="item">
+                <div class="ui blue empty circular label"></div>
+                Announcement
+              </div>
+              <div class="item">
+                <div class="ui black empty circular label"></div>
+                Discussion
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="calendar icon"></i>
+                Filter by date
+              </div>
+              <div class="item">
+                <i class="olive circle icon"></i>
+                This Week
+              </div>
+              <div class="item">
+                <i class="violet circle icon"></i>
+                This Month
+              </div>
+              <div class="item">
+                <i class="orange circle icon"></i>
+                This Year
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="ui sub header">'empty'</div>
+          <div class="ui labeled icon pointing dropdown button">
+            <i class="filter icon"></i>
+            <span class="text">Filter Posts</span>
+            <div class="menu">
+              <div class="ui search icon input">
+                <i class="search icon"></i>
+                <input name="search" placeholder="Search issues..." type="text">
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="tags icon"></i>
+                Filter by tag
+              </div>
+              <div class="item">
+                <div class="ui red empty circular label"></div>
+                Important
+              </div>
+              <div class="item">
+                <div class="ui blue empty circular label"></div>
+                Announcement
+              </div>
+              <div class="item">
+                <div class="ui black empty circular label"></div>
+                Discussion
+              </div>
+              <div class="divider"></div>
+              <div class="header">
+                <i class="calendar icon"></i>
+                Filter by date
+              </div>
+              <div class="item">
+                <i class="olive circle icon"></i>
+                This Week
+              </div>
+              <div class="item">
+                <i class="violet circle icon"></i>
+                This Month
+              </div>
+              <div class="item">
+                <i class="orange circle icon"></i>
+                This Year
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no dropdown search example">
+      <h4 class="ui header">Clearable selection Dropdown</h4>
+      <p>Adding the <code>clearable</code> class to a single selection dropdown now allow you to clear a previous selected value.</p>
+      <div class="ui clearable selection dropdown">
+        <input type="hidden" name="language" value="English">
+        <i class="dropdown icon"></i>
+        <div class="default text">Select Language</div>
+        <div class="menu">
+          <div class="item">Arabic</div>
+          <div class="item">Chinese</div>
+          <div class="item">Danish</div>
+          <div class="item">Dutch</div>
+          <div class="item">English</div>
+          <div class="item">French</div>
+          <div class="item">German</div>
+          <div class="item">Greek</div>
+          <div class="item">Hungarian</div>
+          <div class="item">Italian</div>
+          <div class="item">Japanese</div>
+          <div class="item">Korean</div>
+          <div class="item">Lithuanian</div>
+          <div class="item">Persian</div>
+          <div class="item">Polish</div>
+          <div class="item">Portuguese</div>
+          <div class="item">Russian</div>
+          <div class="item">Spanish</div>
+          <div class="item">Swedish</div>
+          <div class="item">Turkish</div>
+          <div class="item">Vietnamese</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="twothree">
+    <h2 class="ui dividing header">A New Approach</h2>
+
+    <p>After an extended period of patches, Semantic UI <code>2.3</code> marks the return to significant feature changes for the project.</p>
+    <p>In upcoming Semantic releases we will be releasing more frequently, but with smaller changesets, to make it easier for users to upgrade and adjust to global changes.</p>
+
+    <h2 class="ui dividing header">New Features</h2>
+    <div class="no icon example">
+
+      <h4 class="ui header">Font Awesome 5.0 &amp; Better Icon Searching</h4>
+      <p>In <code>2.3</code> <a href="/elements/icon.html">icons</a> now include a full port of <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> <code>5.0.6</code>, including 929 icons.</p>
+      <p>Icon categories now match icon categories in Font Awesome's documentation, making it easier to find icons between docs.</p>
+      <div class="ui doubling five column vertically padded grid">
+        <div class="column"><i class="smile icon"></i>Smile</div>
+        <div class="column"><i class="smile outline icon"></i>Smile Outline</div>
+        <div class="column"><i class="hand rock icon"></i>Hand Rock </div>
+        <div class="column"><i class="hand paper icon"></i>Hand Paper </div>
+        <div class="column"><i class="hand scissors icon"></i>Hand Scissors</div>
+      </div>
+      <p>Semantic UI <a href="/elements/icon.html">icon docs</a> now includes a global icon search with easy copy and paste access to html</p>
+    </div>
+
+
+    <div class="no modal example">
+      <h4 class="ui header">Flexbox Modals and Dimmers</h4>
+
+      <p>Semantic UI <code>2.3</code> includes a rewrite of modal to include non-js flexbox positioning for vertical centering. No longer will you have to call <code>$('.ui.modal').modal('refresh')</code> if content height changes to recenter.</p>
+
+      <p>In addition there's a new setting <code>centered: false</code> which makes it easier to do top aligned modals when the internal may be dynamic and you don't want content to shift vertically.</p>
+
+
+      <div class="ui special modal">
+        <div class="header">
+          Top Aligned Modal
+        </div>
+        <div class="content">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          <div class="ui hidden divider"></div>
+        </div>
+        <div class="actions">
+          <div class="ui button">
+            Cancel
+          </div>
+          <div class="ui primary right labeled icon button">
+            Submit
+            <i class="checkmark icon"></i>
+          </div>
+        </div>
+      </div>
+      <a class="ui button" data-url="/images/large-pdf.pdf">
+        Open Top Aligned Modal
+      </a>
+      <div class="evaluated code" data-type="javascript">
+        $('.ui.special.modal')
+          .modal({
+            centered: false
+          })
+          .modal('attach events', '.modal.example .button')
+        ;
+      </div>
+    </div>
+
+    <div class="no modal example">
+      <h4 class="ui header">New Transitions</h4>
+      <p>
+        <a href="/modules/transition.html">Transition</a> now includes <code>zoom</code> and <code>glow</code>. Glow is useful for highlighting elements on page,
+      </p>
+      <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('zoom')
+        ;
+      </div>
+      <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('glow')
+        ;
+      </div>
+      <img src="/images/leaves/7.png" class="ui autumn leaf medium image">
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Global Font Weight Variables</h4>
+      <p>Theming now uses two no global variables <code>@bold</code> and <code>@normal</code> making it easier to modify font weights in a more complex font stack</p>
+      <div class="code" data-type="less" data-title="site.variables">
+        /* Use some custom font weights */
+        @bold: 600;
+        @normal: 400;
+      </div>
+
+    </div>
+    <div class="local-category example">
+      <h4 class="ui header">Local Category Search</h4>
+      <p>You can now use category search with the <code>source</code> option without having to add API callbacks</p>
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        var categoryContent = [
+          { category: 'South America', title: 'Brazil' },
+          { category: 'South America', title: 'Peru' },
+          { category: 'North America', title: 'Canada' },
+          { category: 'Asia', title: 'South Korea' },
+          { category: 'Asia', title: 'Japan' },
+          { category: 'Asia', title: 'China' },
+          { category: 'Europe', title: 'Denmark' },
+          { category: 'Europe', title: 'England' },
+          { category: 'Europe', title: 'France' },
+          { category: 'Europe', title: 'Germany' },
+          { category: 'Africa', title: 'Ethiopia' },
+          { category: 'Africa', title: 'Nigeria' },
+          { category: 'Africa', title: 'Zimbabwe' },
+        ];
+        $('.local-category.example .ui.search')
+          .search({
+            type: 'category',
+            source: categoryContent,
+            searchFields: [
+              'title',
+              'category'
+            ]
+          })
+        ;
+      </div>
+    </div>
+    <div class="no centering example">
+      <h4 class="ui header">Arrow Alignment on Small Popups</h4>
+      <p>Semantic <a href="/modules/popup.html">popups</a> now detects when horizontally aligning the popup on it's arrow is more reasonable than matching edges with a popup.</p>
+      <div class="ui info message">
+        To use this feature be sure to specify <code>movePopup: false</code> in your settings
+      </div>
+      <img src="/images/new_popup_alignment.png" class="ui image">
+
+      <div class="ui divider"></div>
+      <img src="/images/avatar/small/elliot.jpg" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
+      <div class="evaluated code" data-type="javascript">
+        $('.centering.example .avatar.image').popup();
+      </div>
+    </div>
+    <div class="complex-popup no example">
+      <h4 class="ui header">Popups Support Multiple Coordinate Systems</h4>
+      <p>Popups now can correctly place elements with two different coordinate systems. These are typically caused by having a parent element with css properties <code>transform</code> or <code>position</code>.</p>
+      <div id="one">
+        <p>Button is in here</p>
+        <div class="ui button">Button</div>
+      </div>
+      <div id="two">
+        <p>Popup is in here</p>
+        <div class="ui popup">
+          <h4 class="ui header">
+            Test
+          </h4>
+          <p>This popup now appears correct without having to move the popup to the same coordinate system by moving the DOM element.</p>
+        </div>
+      </div>
+      <div class="code" data-type="html">
+        <div id="one">
+          <p>Button is in here</p>
+          <div class="ui button">Button</div>
+        </div>
+        <div id="two">
+          <p>Popup is in here</p>
+          <div class="ui popup">
+            <h4 class="ui header">
+              Test
+            </h4>
+            <p>This popup now appears correct without having to move the popup to the same coordinate system by moving the DOM element.</p>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-type="css">
+        /* Activating element is inside #one with different positioning context */
+        #one {
+          display: block;
+          position: relative;
+          padding: 50px 100px;
+          background-color: #F0F0F0;
+        }
+        /* Popup is inside two with position relative (creating another positioning context) */
+        #two {
+          display: block;
+          background-color: #E2EAE4;
+          position: relative;
+          top: 10px;
+          padding: 50px 8px;
+        }
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.complex-popup.example .ui.button')
+          .popup({
+            movePopup: false,
+            popup: $('.complex-popup.example .popup')
+          })
+        ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">New Matching Options</h4>
+      <p>In addition, search now includes three tiers of matched results, similar to the options available in dropdown. Fuzzy results now are turned off by the new default <code>fullTextSearch: 'exact'</code> </p>
+      <div class="ui bulleted list">
+        <div class="item">Query matches the start of field exactly</div>
+        <div class="item">
+          Query matches any part of field <div class="ui teal label">New</div>
+        </div>
+        <div class="item">Query "fuzzy" matches field</div>
+      </div>
+      <div class="ignored code" data-type="javascript">
+        $('.ui.search')
+          .search({
+            fullTextSearch: 'exact' // only matches exact matches (no fuzzy matching)
+          })
+        ;
+      </div>
+    </div>
+
+  </div>
+</div>
+        <footer class="ui vertical footer segment">
+  <div class="ui container">
+    <div class="ui stackable grid">
+      <div class="three wide column">
+        <h4 class="ui header">Community</h4>
+        <div class="ui link list">
+          <a class="item" href="https://github.com/fomantic/Fomantic-UI/issues/new/choose" target="_blank">
+            <i class="edit icon"></i>
+            Submit an Issue
+          </a>
+          <a class="item" href="https://github.com/fomantic/Fomantic-UI" target="_blank">
+            <i class="github icon"></i>
+            GitHub Repository
+          </a>
+          <a class="item" href="https://discordapp.com/invite/UgzHNZF" target="_blank">
+            <i class="discord icon"></i>
+            Discord
+          </a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui header">Social</h4>
+        <div class="ui link list">
+          <a class="item" href="https://twitter.com/fomanticui" target="_blank">
+            <i class="twitter icon"></i>
+            Twitter
+          </a>
+          <a class="item" href="https://medium.com/@fomantic" target="_blank">
+            <i class="medium icon"></i>
+            Medium
+          </a>
+        </div>
+      </div>
+      <div class="eight wide middle aligned right floated column">
+        <div class="footer-sponsor">
+          <a href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=fomantic" target="_blank">
+            <p>Infrastructure hosted and powered by DigitalOcean</p>
+            <img class="ui small image" src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/PNG/DO_Logo_Horizontal_Blue.png" alt="DigitalOcean">
+          </a>
+        </div>
+        <div class="footer-sponsor">
+          <a href="https://www.browserstack.com" target="_blank">
+            <p>Cross-browser testing provided by</p>
+            <img class="ui image" src="/images/browserstack.svg" alt="BrowserStack">
+          </a>
+        </div>
+        <div class="footer-sponsor">
+          <a href="https://jetbrains.com?from=Fomantic-UI" target="_blank" style="display: inline-block;">
+            <img class="ui avatar image" style="height: 50px; width: auto;" src="/images/jetbrains.svg" alt="JetBrains">
+            <span>IDE's provided by JetBrains</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <img src="/images/logo.png" class="ui right floated mini image">
+    <div class="ui horizontal small divided link list">
+      <a class="item" href="https://github.com/fomantic/Fomantic-UI/blob/master/LICENSE.md" target="_blank">Free & Open Source (MIT)</a>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <div class="ui basic language modal">
+  <i class="close icon"></i>
+  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="world icon"></i>
+    </div>
+    <div class="description">
+      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
+      <div class="ui inverted indicating progress">
+        <div class="bar"></div>
+      </div>
+      <p>We need your help to make Semantic available to  people who speak your language.</p>
+      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted cancel button">No Thanks</div>
+    <a href="https://github.com/fomantic/Fomantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
+      <i class="mail icon"></i>
+      Help Translate
+    </a>
+  </div>
+</div>
+  <div class="ui demo page dimmer">
+  <div class="content">
+    <div class="center">
+      <h2 class="ui inverted icon header">
+        <i class="mail icon"></i>
+        Dimmer Message
+        <div class="sub header">Dimmer sub-header</div>
+      </h2>
+    </div>
+  </div>
+</div>
+  <script>
+window.less = {
+  async        : true,
+  environment  : 'production',
+  fileAsync    : false,
+  onReady      : false,
+  useFileCache : true
+};
+</script>
+
+<script src="/javascript/library/less.min.js"></script>
+
+
+</body>
+</html>

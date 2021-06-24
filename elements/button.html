@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+
+<!-- Site Properities -->
+<meta name="generator" content="DocPad v6.79.4" />
+<title>Button | Fomantic-UI</title>
+
+<meta name="description" content="A button indicates a possible user action" />
+<meta name="keywords" content="html5, ui, library, framework, javascript, fork, official" />
+  
+
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/cookie.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/state.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
+
+
+
+<script src="/dist/semantic.min.js"></script>
+
+<script src="/javascript/docs.js"></script>
+
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+
+
+
+
+  
+
+  
+<script type="text/javascript">
+  window.liveSettings = {
+    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
+    parse_attr : [
+      'data-title',
+      'data-content'
+    ],
+    detectlang   : false,
+    autocollect  : true,
+    ignore_tags  : ['i', 'code', 'pre'],
+    parse_attr   : ['data-title', 'data-content', 'data-text'],
+    ignore_class : ['code', 'anchor']
+  };
+</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+
+</head>
+<body id="example" class="button-page" ontouchstart="">
+  
+  <div class="ui vertical inverted sidebar menu" id="toc">
+  
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.8</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Elements</div>
+  <div class="menu">
+    
+      <a class="active item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/emoji.html">
+        Emoji
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+      <a class="item" href="/elements/text.html">
+        Text
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/calendar.html">
+        Calendar
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/nag.html">
+        Nag
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/slider.html">
+        Slider
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/toast.html">
+        Toast
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="ui black big launch right attached fixed button">
+  <i class="content icon"></i>
+  <span class="text">Menu</span>
+</div>
+  
+
+
+
+
+<div class="ui fixed inverted main menu">
+  <div class="ui container">
+    <a class="launch icon item">
+      <i class="content icon"></i>
+    </a>
+    
+      <div class="item">
+        Button
+      </div>
+    
+    <div class="right menu">
+      
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+      
+      <!--
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+  <div class="pusher">
+    <div class="full height">
+      <div class="toc">
+        <div class="ui vertical inverted menu">
+          
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.8</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Elements</div>
+  <div class="menu">
+    
+      <a class="active item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/emoji.html">
+        Emoji
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+      <a class="item" href="/elements/text.html">
+        Text
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/calendar.html">
+        Calendar
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/nag.html">
+        Nag
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/slider.html">
+        Slider
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/toast.html">
+        Toast
+        
+        <span class="ui mini empty teal circular ui label"></span>
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="article">
+        <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
+<script src="/javascript/button.js"></script>
+<script src="/javascript/library/state.js"></script>
+
+
+
+<div class="ui masthead vertical segment">
+  <div class="ui container">
+    <div class="introduction">
+
+      <h1 class="ui header">
+        Button
+        
+        <div class="sub header">
+          A button indicates a possible user action
+        </div>
+      </h1>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui right floated main menu">
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/fomantic/Fomantic-UI-Docs/edit/master/server/documents/elements\button.html.eco">
+          <i class="edit icon"></i>
+        </a>
+        
+        <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/fomantic/Fomantic-UI/issues/new?body=%23%20Bug%20Report%0A%0A%3C!--%0ATitle%20Format%0A%20%20%5BScope%5D%20Summary%20of%20what%20is%20broken%0A--%3E%0A%0A%23%23%20Steps%20to%20reproduce%0A1.%0A2.%0A3.%0A%0A%23%23%20Expected%20result%0A%0A%23%23%20Actual%20result%0A%0A%23%23%20Testcase%0A%3C!--%20Fork%20https%3A%2F%2Fjsfiddle.net%2F31d6y7mn%20--%3E%0A%0A%23%23%20Screenshot%20(when%20possible)%0A!%5B%5D()%0A%0A%23%23%20Version%0Ax.x.x">
+          <i class="bug icon"></i>
+        </a>
+        
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/fomantic/Fomantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
+      </div>
+
+      
+      
+      <div class="ui floating scrolling dropdown theme basic button" data-element="button" data-type="element">
+        <span class="text">11 Themes</span>
+        <div class="menu transition hidden">
+          
+            <div class="item" data-value="Default" data-text="Default Theme">Default</div>
+          
+            <div class="item" data-value="Classic" data-text="Classic Theme">Classic</div>
+          
+            <div class="item" data-value="Basic" data-text="Basic Theme">Basic</div>
+          
+            <div class="item" data-value="Bootstrap3" data-text="Bootstrap3 Theme">Bootstrap3</div>
+          
+            <div class="item" data-value="Twitter" data-text="Twitter Theme">Twitter</div>
+          
+            <div class="item" data-value="Raised" data-text="Raised Theme">Raised</div>
+          
+            <div class="item" data-value="Chubby" data-text="Chubby Theme">Chubby</div>
+          
+            <div class="item" data-value="Round" data-text="Round Theme">Round</div>
+          
+            <div class="item" data-value="Amazon" data-text="Amazon Theme">Amazon</div>
+          
+            <div class="item" data-value="Material" data-text="Material Theme">Material</div>
+          
+            <div class="item" data-value="GitHub" data-text="GitHub Theme">GitHub</div>
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="main ui container">
+
+  <h2 class="ui dividing header">Types</h2>
+
+  <div class="follow example">
+    <h4 class="ui header">Button</h4>
+    <p>A standard button</p>
+    <button class="ui button">
+      Follow
+    </button>
+  </div>
+  <div class="another example">
+    <div class="ui ignored warning message">
+      Although any tag can be used for a button, it will only be <a href="http://webaim.org/techniques/keyboard/tabindex">keyboard focusable</a> if you use a <code>&#x3C;button&#x3E;</code> tag or you add the property <code>tabindex="0"</code>. Keyboard accessible buttons will preserve focus styles after click, which may be visually jarring.</p>
+    </div>
+    <button class="ui button">
+      Button
+    </button>
+    <div class="ui button" tabindex="0">
+      Focusable
+    </div>
+  </div>
+
+  <div class="example" data-class="primary, secondary">
+    <h4 class="ui header">Emphasis</h4>
+    <p>A button can be formatted to show different levels of emphasis</p>
+    <div class="ui ignored info message">Setting your brand colors to primary and secondary color variables in <a href="/usage/theming.html"><code>site.variables</code></a> will allow you to use your color theming for UI elements</div>
+    <button class="ui primary button">
+      Save
+    </button>
+    <button class="ui button">
+      Discard
+    </button>
+  </div>
+  <div class="another example">
+    <button class="ui secondary button">
+      Okay
+    </button>
+    <button class="ui button">
+      Cancel
+    </button>
+  </div>
+
+  <div class="example" data-class="animated fade, animated">
+    <h4 class="ui header">Animated</h4>
+    <p>A button can animate to show hidden content</p>
+    <div class="ui ignored message">The button will be automatically sized according to the visible content size. Make sure there is enough room for the hidden content to show</div>
+    <div class="ui animated button" tabindex="0">
+      <div class="visible content">Next</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
+    </div>
+    <div class="ui vertical animated button" tabindex="0">
+      <div class="hidden content">Shop</div>
+      <div class="visible content">
+        <i class="shop icon"></i>
+      </div>
+    </div>
+    <div class="ui animated fade button" tabindex="0">
+      <div class="visible content">Sign-up for a Pro account</div>
+      <div class="hidden content">
+        $12.99 a month
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-class="labeled, left labeled">
+    <h4 class="ui header">Labeled</h4>
+    <p>A button can appear alongside a <a href="/elements/label.html">label</a></p>
+    <div class="ui labeled button" tabindex="0">
+      <div class="ui button">
+        <i class="heart icon"></i> Like
+      </div>
+      <a class="ui basic label">
+        2,048
+      </a>
+    </div>
+    <div class="ui left labeled button" tabindex="0">
+      <a class="ui basic right pointing label">
+        2,048
+      </a>
+      <div class="ui button">
+        <i class="heart icon"></i> Like
+      </div>
+    </div>
+    <div class="ui left labeled button" tabindex="0">
+      <a class="ui basic label">
+        1,048
+      </a>
+      <div class="ui icon button">
+        <i class="fork icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui labeled button" tabindex="0">
+      <div class="ui red button">
+        <i class="heart icon"></i> Like
+      </div>
+      <a class="ui basic red left pointing label">
+        1,048
+      </a>
+    </div>
+    <div class="ui labeled button" tabindex="0">
+      <div class="ui basic blue button">
+        <i class="fork icon"></i> Forks
+      </div>
+      <a class="ui basic left pointing blue label">
+        1,048
+      </a>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Icon</h4>
+    <p>A button can have only an icon</p>
+    <button class="ui icon button">
+      <i class="cloud icon"></i>
+    </button>
+  </div>
+
+  <div class="example" data-class="labeled icon, right labeled icon">
+    <h4 class="ui header">Labeled Icon</h4>
+    <p>A button can use an icon as a label</p>
+    <button class="ui labeled icon button">
+      <i class="pause icon"></i>
+      Pause
+    </button>
+    <button class="ui right labeled icon button">
+      <i class="right arrow icon"></i>
+      Next
+    </button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Basic</h4>
+    <p>A basic button is less pronounced</p>
+    <button class="ui basic button">
+      <i class="icon user"></i>
+      Add Friend
+    </button>
+  </div>
+  <div class="another spaced example">
+    <button class="ui primary basic button">Primary</button>
+    <button class="ui secondary basic button">Secondary</button>
+    <button class="ui positive basic button">Positive</button>
+    <button class="ui negative basic button">Negative</button>
+  </div>
+  <div class="another spaced example">
+    <button class="ui red basic button">Red</button>
+    <button class="ui orange basic button">Orange</button>
+    <button class="ui yellow basic button">Yellow</button>
+    <button class="ui olive basic button">Olive</button>
+    <button class="ui green basic button">Green</button>
+    <button class="ui teal basic button">Teal</button>
+    <button class="ui blue basic button">Blue</button>
+    <button class="ui violet basic button">Violet</button>
+    <button class="ui purple basic button">Purple</button>
+    <button class="ui pink basic button">Pink</button>
+    <button class="ui brown basic button">Brown</button>
+    <button class="ui grey basic button">Grey</button>
+    <button class="ui black basic button">Black</button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Tertiary</h4>
+    <p>An none bordered less important button</p>
+    <button class="ui tertiary button">
+      Cancel Action
+    </button>
+  </div>
+  <div class="another spaced example">
+    <button class="ui primary tertiary button">Primary</button>
+    <button class="ui secondary tertiary button">Secondary</button>
+    <button class="ui red tertiary button">Red</button>
+    <button class="ui orange tertiary button">Orange</button>
+    <button class="ui yellow tertiary button">Yellow</button>
+    <button class="ui olive tertiary button">Olive</button>
+    <button class="ui green tertiary button">Green</button>
+    <button class="ui teal tertiary button">Teal</button>
+    <button class="ui blue tertiary button">Blue</button>
+    <button class="ui violet tertiary button">Violet</button>
+    <button class="ui purple tertiary button">Purple</button>
+    <button class="ui pink tertiary button">Pink</button>
+    <button class="ui brown tertiary button">Brown</button>
+    <button class="ui grey tertiary button">Grey</button>
+    <button class="ui black tertiary button">Black</button>
+  </div>
+
+  <div class="spaced example">
+    <h4 class="ui header">Inverted</h4>
+    <p>A button can be formatted to appear on dark backgrounds</p>
+    <div class="ui inverted segment">
+      <button class="ui inverted button">Standard</button>
+      <button class="ui inverted primary button">Primary</button>
+      <button class="ui inverted secondary button">Secondary</button>
+      <button class="ui inverted red button">Red</button>
+      <button class="ui inverted orange button">Orange</button>
+      <button class="ui inverted yellow button">Yellow</button>
+      <button class="ui inverted olive button">Olive</button>
+      <button class="ui inverted green button">Green</button>
+      <button class="ui inverted teal button">Teal</button>
+      <button class="ui inverted blue button">Blue</button>
+      <button class="ui inverted violet button">Violet</button>
+      <button class="ui inverted purple button">Purple</button>
+      <button class="ui inverted pink button">Pink</button>
+      <button class="ui inverted brown button">Brown</button>
+      <button class="ui inverted grey button">Grey</button>
+      <button class="ui inverted black button">Black</button>
+    </div>
+  </div>
+  <div class="another spaced example">
+    <div class="ui inverted segment">
+      <button class="ui inverted basic button">Basic</button>
+      <button class="ui inverted primary basic button">Primary</button>
+      <button class="ui inverted secondary basic button">Secondary</button>
+      <button class="ui inverted red basic button">Basic Red</button>
+      <button class="ui inverted orange basic button">Basic Orange</button>
+      <button class="ui inverted yellow basic button">Basic Yellow</button>
+      <button class="ui inverted olive basic button">Basic Olive</button>
+      <button class="ui inverted green basic button">Basic Green</button>
+      <button class="ui inverted teal basic button">Basic Teal</button>
+      <button class="ui inverted blue basic button">Basic Blue</button>
+      <button class="ui inverted violet basic button">Basic Violet</button>
+      <button class="ui inverted purple basic button">Basic Purple</button>
+      <button class="ui inverted pink basic button">Basic Pink</button>
+      <button class="ui inverted brown basic button">Basic Brown</button>
+      <button class="ui inverted grey basic button">Basic Grey</button>
+      <button class="ui inverted black basic button">Basic Black</button>
+    </div>
+  </div>
+
+
+  <h2 class="ui dividing header">Groups</h2>
+
+  <div class="example">
+    <h4 class="ui header">Buttons</h4>
+    <p>Buttons can exist together as a group</p>
+    <div class="ui buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Icon Buttons</h4>
+    <p>Button groups can show groups of icons</p>
+    <div class="ui icon buttons">
+      <button class="ui button"><i class="align left icon"></i></button>
+      <button class="ui button"><i class="align center icon"></i></button>
+      <button class="ui button"><i class="align right icon"></i></button>
+      <button class="ui button"><i class="align justify icon"></i></button>
+    </div>
+    <div class="ui icon buttons">
+      <button class="ui button"><i class="bold icon"></i></button>
+      <button class="ui button"><i class="underline icon"></i></button>
+      <button class="ui button"><i class="text width icon"></i></button>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Content</h2>
+
+  <div class="example" data-class="or">
+    <h4 class="ui header">Conditionals</h4>
+    <p>Button groups can contain conditionals</p>
+    <div class="ui buttons">
+      <button class="ui button">Cancel</button>
+      <div class="or"></div>
+      <button class="ui positive button">Save</button>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui ignored info message">
+      Or buttons can have their text localized, or adjusted by using the <code>data-text</code> attribute. If the size of the conditional changes you will need to adjust <code>@orCircleSize</code>
+    </div>
+    <div class="ui buttons">
+      <button class="ui button">un</button>
+      <div class="or" data-text="ou"></div>
+      <button class="ui positive button">deux</button>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">States</h2>
+
+  <div class="example">
+    <h4 class="ui header">Active</h4>
+    <p>A button can show it is currently the active user selection</p>
+    <button class="ui active button">
+      <i class="user icon"></i>
+      Follow
+    </button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Disabled</h4>
+    <p>A button can show it is currently unable to be interacted with</p>
+    <button class="ui disabled button">
+      <i class="user icon"></i>
+      Followed
+    </button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Loading</h4>
+    <p>A button can show a loading indicator</p>
+    <button class="ui loading button">Loading</button>
+    <button class="ui basic loading button">Loading</button>
+    <button class="ui primary loading button">Loading</button>
+    <button class="ui secondary loading button">Loading</button>
+    <br>
+    <br>
+    <button class="ui double loading button">Loading</button>
+    <button class="ui basic double loading button">Loading</button>
+    <button class="ui primary double loading button">Loading</button>
+    <button class="ui secondary double loading button">Loading</button>
+    <br>
+    <br>
+    <button class="ui elastic loading button">Loading</button>
+    <button class="ui basic elastic loading button">Loading</button>
+    <button class="ui primary elastic loading button">Loading</button>
+    <button class="ui secondary elastic loading button">Loading</button>
+
+  </div>
+
+  <h2 class="ui dividing header">Variations</h2>
+
+  <div class="spaced example" data-class="facebook, twitter, google, vk, linkedin, instagram, youtube, whatsapp, telegram">
+    <h4 class="ui header">Social</h4>
+    <p>A button can be formatted to link to a social website</p>
+    <button class="ui facebook button">
+      <i class="facebook icon"></i>
+      Facebook
+    </button>
+    <button class="ui twitter button">
+      <i class="twitter icon"></i>
+      Twitter
+    </button>
+    <button class="ui google plus button">
+      <i class="google plus icon"></i>
+      Google Plus
+    </button>
+    <button class="ui vk button">
+      <i class="vk icon"></i>
+      VK
+    </button>
+    <button class="ui linkedin button">
+      <i class="linkedin icon"></i>
+      LinkedIn
+    </button>
+    <button class="ui instagram button">
+      <i class="instagram icon"></i>
+      Instagram
+    </button>
+    <button class="ui youtube button">
+      <i class="youtube icon"></i>
+      YouTube
+    </button>
+    <button class="ui whatsapp button">
+      <i class="whatsapp icon"></i>
+      WhatsApp
+    </button>
+    <button class="ui telegram button">
+      <i class="telegram icon"></i>
+      Telegram
+    </button>
+  </div>
+
+
+  <div class="spaced example" data-class="size">
+    <h4 class="ui header">Size</h4>
+    <p>A button can have different sizes</p>
+    <button class="mini ui button">
+      Mini
+    </button>
+    <button class="tiny ui button">
+      Tiny
+    </button>
+    <button class="small ui button">
+      Small
+    </button>
+    <button class="medium ui button">
+      Medium
+    </button>
+    <button class="large ui button">
+      Large
+    </button>
+    <button class="big ui button">
+      Big
+    </button>
+    <button class="huge ui button">
+      Huge
+    </button>
+    <button class="massive ui button">
+      Massive
+    </button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Floated</h4>
+    <p>A button can be aligned to the left or right of its container</p>
+    <button class="ui right floated button">Right Floated</button>
+    <button class="ui left floated button">Left Floated</button>
+  </div>
+
+
+  <div class="spaced example">
+    <h4 class="ui header">Colored</h4>
+    <p>A button can have different colors</p>
+    <button class="ui red button">Red</button>
+    <button class="ui orange button">Orange</button>
+    <button class="ui yellow button">Yellow</button>
+    <button class="ui olive button">Olive</button>
+    <button class="ui green button">Green</button>
+    <button class="ui teal button">Teal</button>
+    <button class="ui blue button">Blue</button>
+    <button class="ui violet button">Violet</button>
+    <button class="ui purple button">Purple</button>
+    <button class="ui pink button">Pink</button>
+    <button class="ui brown button">Brown</button>
+    <button class="ui grey button">Grey</button>
+    <button class="ui black button">Black</button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Compact</h4>
+    <p>A button can reduce its padding to fit into tighter spaces</p>
+    <button class="compact ui button">
+      Hold
+    </button>
+    <button class="ui compact icon button">
+      <i class="pause icon"></i>
+    </button>
+    <button class="ui compact labeled icon button">
+      <i class="pause icon"></i>
+      Pause
+    </button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Toggle</h4>
+    <p>A button can be formatted to toggle on and off</p>
+    <button class="ui toggle button">
+      Vote
+    </button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Positive</h4>
+    <p>A button can hint towards a positive consequence</p>
+    <button class="positive ui button">Positive Button</button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Negative</h4>
+    <p>A button can hint towards a negative consequence</p>
+    <button class="negative ui button">Negative Button</button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Fluid</h4>
+    <p>A button can take the width of its container</p>
+    <button class="fluid ui button">Fits container</button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Circular</h4>
+    <p>A button can be circular</p>
+    <button class="circular ui icon button">
+      <i class="icon settings"></i>
+    </button>
+  </div>
+  <div class="another example">
+    <button class="ui circular facebook icon button">
+      <i class="facebook icon"></i>
+    </button>
+    <button class="ui circular twitter icon button">
+      <i class="twitter icon"></i>
+    </button>
+    <button class="ui circular linkedin icon button">
+      <i class="linkedin icon"></i>
+    </button>
+    <button class="ui circular google plus icon button">
+      <i class="google plus icon"></i>
+    </button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Vertically Attached</h4>
+    <p>A button can be attached to the top or bottom of other content</p>
+    <div class="ui top attached button" tabindex="0">Top</div>
+    <div class="ui attached segment">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+    <div class="ui bottom attached button" tabindex="0">Bottom</div>
+  </div>
+
+  <div class="another layered example">
+    <div class="ui two top attached buttons">
+        <div class="ui button">One</div>
+        <div class="ui button">Two</div>
+    </div>
+    <div class="ui attached segment">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+    <div class="ui two bottom attached buttons">
+        <div class="ui button">One</div>
+        <div class="ui button">Two</div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Horizontally Attached</h4>
+    <p>A button can be attached to the left or right of other content</p>
+    <button class="ui left attached button">Left</button>
+    <button class="right attached ui button">Right</button>
+  </div>
+
+
+  <h2 class="ui dividing header">Group Variations</h2>
+
+  <div class="example">
+    <h4 class="ui header">Vertical Buttons</h4>
+    <p>Groups can be formatted to appear vertically</p>
+    <div class="ui vertical buttons">
+      <button class="ui button">Feed</button>
+      <button class="ui button">Messages</button>
+      <button class="ui button">Events</button>
+      <button class="ui button">Photos</button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Stackable Buttons</h4>
+    <p>Horizontal groups can automatically be stacked on mobile devices</p>
+    <div class="ui stackable buttons">
+      <button class="ui button">Feed</button>
+      <button class="ui button">Messages</button>
+      <button class="ui button">Events</button>
+      <button class="ui button">Photos</button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Icon Buttons</h4>
+    <p>Groups can be formatted as icons</p>
+    <div class="ui icon buttons">
+      <button class="ui button">
+        <i class="play icon"></i>
+      </button>
+      <button class="ui button">
+        <i class="pause icon"></i>
+      </button>
+      <button class="ui button">
+        <i class="shuffle icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Labeled Icon Buttons</h4>
+    <p>Groups can be formatted as labeled icons</p>
+    <div class="ui vertical labeled icon buttons">
+      <button class="ui button">
+        <i class="pause icon"></i>
+        Pause
+      </button>
+      <button class="ui button">
+        <i class="play icon"></i>
+        Play
+      </button>
+      <button class="ui button">
+        <i class="shuffle icon"></i>
+        Shuffle
+      </button>
+    </div>
+  </div>
+  <div class="example" data-class="labeled icon, ui button, ui buttons, right labeled icon">
+    <h4 class="ui header">Mixed Group</h4>
+    <p>Groups can be formatted to use multiple button types together</p>
+    <div class="ui buttons">
+      <button class="ui labeled icon button">
+        <i class="left chevron icon"></i>
+        Back
+      </button>
+      <button class="ui button">
+        <i class="stop icon"></i>
+        Stop
+      </button>
+      <button class="ui right labeled icon button">
+        Forward
+        <i class="right chevron icon"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="example" data-class="one, two, three, four, five">
+    <h4 class="ui header">Equal Width</h4>
+    <p>Groups can have their widths divided evenly</p>
+    <div class="five ui buttons">
+      <button class="ui button">Overview</button>
+      <button class="ui button">Specs</button>
+      <button class="ui button">Warranty</button>
+      <button class="ui button">Reviews</button>
+      <button class="ui button">Support</button>
+    </div>
+    <div class="ui ignored divider"></div>
+    <div class="three ui buttons">
+      <button class="ui button">Overview</button>
+      <button class="ui button">Specs</button>
+      <button class="ui button">Support</button>
+    </div>
+  </div>
+
+
+  <div class="example">
+    <h4 class="ui header">Colored Buttons</h4>
+    <p>Groups can have a shared color</p>
+    <div class="blue ui buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Basic Buttons</h4>
+    <p>A button group can be less pronounced</p>
+    <div class="ui basic buttons">
+      <div class="ui button">One</div>
+      <div class="ui button">Two</div>
+      <div class="ui button">Three</div>
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui vertical basic buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui buttons">
+      <button class="ui red basic button">One</button>
+      <button class="ui blue basic button">Two</button>
+      <button class="ui green basic button">Three</button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Group Sizes</h4>
+    <p>Groups can have a shared size</p>
+    <div class="large ui buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui small basic icon buttons">
+      <button class="ui button"><i class="file icon"></i></button>
+      <button class="ui button"><i class="save icon"></i></button>
+      <button class="ui button"><i class="upload icon"></i></button>
+      <button class="ui button"><i class="download icon"></i></button>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui large buttons">
+      <button class="ui button">One</button>
+      <div class="or"></div>
+      <button class="ui button">Two</button>
+    </div>
+  </div>
+
+</div>
+        <footer class="ui vertical footer segment">
+  <div class="ui container">
+    <div class="ui stackable grid">
+      <div class="three wide column">
+        <h4 class="ui header">Community</h4>
+        <div class="ui link list">
+          <a class="item" href="https://github.com/fomantic/Fomantic-UI/issues/new/choose" target="_blank">
+            <i class="edit icon"></i>
+            Submit an Issue
+          </a>
+          <a class="item" href="https://github.com/fomantic/Fomantic-UI" target="_blank">
+            <i class="github icon"></i>
+            GitHub Repository
+          </a>
+          <a class="item" href="https://discordapp.com/invite/UgzHNZF" target="_blank">
+            <i class="discord icon"></i>
+            Discord
+          </a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui header">Social</h4>
+        <div class="ui link list">
+          <a class="item" href="https://twitter.com/fomanticui" target="_blank">
+            <i class="twitter icon"></i>
+            Twitter
+          </a>
+          <a class="item" href="https://medium.com/@fomantic" target="_blank">
+            <i class="medium icon"></i>
+            Medium
+          </a>
+        </div>
+      </div>
+      <div class="eight wide middle aligned right floated column">
+        <div class="footer-sponsor">
+          <a href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=fomantic" target="_blank">
+            <p>Infrastructure hosted and powered by DigitalOcean</p>
+            <img class="ui small image" src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/PNG/DO_Logo_Horizontal_Blue.png" alt="DigitalOcean">
+          </a>
+        </div>
+        <div class="footer-sponsor">
+          <a href="https://www.browserstack.com" target="_blank">
+            <p>Cross-browser testing provided by</p>
+            <img class="ui image" src="/images/browserstack.svg" alt="BrowserStack">
+          </a>
+        </div>
+        <div class="footer-sponsor">
+          <a href="https://jetbrains.com?from=Fomantic-UI" target="_blank" style="display: inline-block;">
+            <img class="ui avatar image" style="height: 50px; width: auto;" src="/images/jetbrains.svg" alt="JetBrains">
+            <span>IDE's provided by JetBrains</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <img src="/images/logo.png" class="ui right floated mini image">
+    <div class="ui horizontal small divided link list">
+      <a class="item" href="https://github.com/fomantic/Fomantic-UI/blob/master/LICENSE.md" target="_blank">Free & Open Source (MIT)</a>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <div class="ui basic language modal">
+  <i class="close icon"></i>
+  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="world icon"></i>
+    </div>
+    <div class="description">
+      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
+      <div class="ui inverted indicating progress">
+        <div class="bar"></div>
+      </div>
+      <p>We need your help to make Semantic available to  people who speak your language.</p>
+      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted cancel button">No Thanks</div>
+    <a href="https://github.com/fomantic/Fomantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
+      <i class="mail icon"></i>
+      Help Translate
+    </a>
+  </div>
+</div>
+  <div class="ui demo page dimmer">
+  <div class="content">
+    <div class="center">
+      <h2 class="ui inverted icon header">
+        <i class="mail icon"></i>
+        Dimmer Message
+        <div class="sub header">Dimmer sub-header</div>
+      </h2>
+    </div>
+  </div>
+</div>
+  <script>
+window.less = {
+  async        : true,
+  environment  : 'production',
+  fileAsync    : false,
+  onReady      : false,
+  useFileCache : true
+};
+</script>
+
+<script src="/javascript/library/less.min.js"></script>
+
+
+</body>
+</html>
