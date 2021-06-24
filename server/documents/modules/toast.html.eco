@@ -801,7 +801,7 @@ themes      : ['Default']
             <p>The general layout of a rendered toast might be useful for people who want to implement their own javascript display logic and just want to reuse Fomantics HTML CSS Layout.</p>
             <p>The following structure is used to position the toasts. Each position container implements a <code>toast-box</code> per toast. The extra wrapper is needed to make dynamic elements like progressbar independent of the toast layout.</p>
             <div class="code" data-type="html">
-                <div class="ui top right toast-container">
+                <div class="ui toast-container">
                     <div class="toast-box">
 <!-- only when vertical attached buttons are used an extra wrapping node is needed -->
                         <div class="vertical attached">
