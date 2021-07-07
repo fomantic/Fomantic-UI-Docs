@@ -24,9 +24,9 @@ type        : 'UI Module'
     <div class="ui info message">A nag is hidden by default, it needs to be initialized via javascript to be shown. See <a href="#/usage">usage</a> section for more details</div>
     <div class="example">
       <h4 class="ui header">Nag</h4>
-      <p>A simple nag appears where in the DOM where it is declared</p>
+      <p>A simple nag appears in the DOM where it is declared</p>
       <div class="ui nag">
-        Look, i am a nag!
+        Look, I am a nag!
         <i class="close icon"></i>
       </div>
     </div>
@@ -36,7 +36,7 @@ type        : 'UI Module'
       <p>A nag can have a title</p>
       <div class="ui nag">
         <div class="title">Welcome to the nag module</div>
-        <div>Look, i am a nag!</div>
+        <div>Look, I am a nag!</div>
         <i class="close icon"></i>
       </div>
     </div>
@@ -63,7 +63,7 @@ type        : 'UI Module'
     <div class="example">
       <p>A fixed nag can appear at the bottom of the screen</p>
       <div class="ui bottom fixed nag" id="bottomfixednag">
-        Look, i am a bottom fixed nag!
+        Look, I am a bottom fixed nag!
         <i class="close icon"></i>
       </div>
       <div class="code" data-type="javascript" data-demo="true">
@@ -81,7 +81,7 @@ type        : 'UI Module'
       <div class="ui segment">
           <div class="ui overlay nag">
             <div class="title">Welcome to the nag module</div>
-              <div>Look, i am a top overlay nag!</div>
+              <div>Look, I am a top overlay nag!</div>
             <i class="close icon"></i>
           </div>
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
@@ -92,7 +92,7 @@ type        : 'UI Module'
       <div class="ui segment">
           <div class="ui bottom overlay nag">
             <div class="title">Welcome to the nag module</div>
-              <div>Look, i am a bottom overlay nag!</div>
+              <div>Look, I am a bottom overlay nag!</div>
             <i class="close icon"></i>
           </div>
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
@@ -293,7 +293,7 @@ type        : 'UI Module'
         <tr>
           <td>context</td>
           <td>body</td>
-          <td>Selector or jquery object specifying the area to to attach the nag to</td>
+          <td>Selector or jquery object specifying the area to attach the nag to</td>
         </tr>
         <tr>
           <td>detachable</td>
