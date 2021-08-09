@@ -3348,7 +3348,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>forceSelection</td>
           <td>false</td>
-          <td>Whether search selection will force currently selected choice when element is blurred.</td>
+          <td>Whether search selection will force currently selected choice when element is blurred.<br>If a <code>select</code> tag with a <code>required</code> attribute was used, the forceSelection setting will be set to true automatically</td>
         </tr>
         <tr>
           <td>allowCategorySelection</td>
