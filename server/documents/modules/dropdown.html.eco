@@ -3347,7 +3347,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>forceSelection</td>
-          <td>true</td>
+          <td>false</td>
           <td>Whether search selection will force currently selected choice when element is blurred.</td>
         </tr>
         <tr>
