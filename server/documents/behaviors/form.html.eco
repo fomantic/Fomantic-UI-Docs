@@ -2126,8 +2126,8 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>errorFocus<div class="ui label">New in 2.8.8</div></td>
-            <td>false</td>
-            <td>Whether, on an invalid form validation, it should automatically focus either the first error field (Use <code>true</code>) or a specific dom node (Use a unique selector string such as <code>.ui.error.message</code> or <code>#myelement</code>)</td>
+            <td>true</td>
+            <td>Whether, on an invalid form validation, it should automatically focus either the first error field (<code>true</code>) or a specific dom node (Use a unique selector string such as <code>.ui.error.message</code> or <code>#myelement</code>) or nothing (<code>false</code>)</td>
           </tr>
         </tbody>
       </table>
