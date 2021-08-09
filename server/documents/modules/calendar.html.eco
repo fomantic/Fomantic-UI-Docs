@@ -747,7 +747,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>constantHeight</td>
-          <td>true</td>
+          <td>false</td>
           <td>Add row(s) to shorter months to keep day calendar height consistent (6 rows)</td>
         </tr>
         <tr>
