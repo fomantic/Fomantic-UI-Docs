@@ -808,7 +808,7 @@ themes      : ['Default']
         <tr>
           <td>on</td>
           <td>null</td>
-          <td>Choose when to show the popup (defaults to <code>focus</code> for input, <code>click</code> for others)</td>
+          <td>Choose when to show the popup (defaults to <code>click</code>)</td>
         </tr>
         <tr>
           <td>initialDate</td>
