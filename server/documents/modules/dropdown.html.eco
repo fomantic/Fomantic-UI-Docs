@@ -3575,7 +3575,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>showOnFocus</td>
-          <td>true</td>
+          <td>false</td>
           <td>Whether to show dropdown menu automatically on element focus.</td>
         </tr>
         <tr>
