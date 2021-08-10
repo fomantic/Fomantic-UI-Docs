@@ -40,12 +40,12 @@ semantic.icon.ready = function() {
         return icons;
       }
     },
-    categoryVisible = (category) => {
+    categoryVisible = function(category) {
       var rect = category.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
       return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
     },
-    checkVisibility = () => {
+    checkVisibility = function() {
       $('.icon.example').each(function() {
         var element = $(this).get(0);
     
@@ -117,7 +117,7 @@ semantic.icon.ready = function() {
   var tab = $('.ui.two.item.stackable.tabs > a').get(0);
   console.log(tab);
   
-  var observer = new MutationObserver(() => {
+  var observer = new MutationObserver(function() {
     checkVisibility();
   });
   
