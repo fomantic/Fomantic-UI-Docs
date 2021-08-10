@@ -896,7 +896,7 @@ themes      : ['Default']
         <tr>
           <td>position</td>
           <td>top right</td>
-          <td>Sets where the toast can be displayed. Can be <code>top right</code>, <code>top center</code>, <code>top left</code>, <code>bottom right</code>, <code>bottom center</code> and <code>bottom left</code></td>
+          <td>Sets where the toast can be displayed. Can be <code>top right</code>, <code>top center</code>, <code>top left</code>, <code>bottom right</code>, <code>bottom center</code>, <code>bottom left</code> and <code>centered</code></td>
         </tr>
         <tr>
           <td>horizontal</td>
