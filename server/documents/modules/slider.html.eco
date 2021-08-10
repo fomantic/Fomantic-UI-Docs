@@ -8,8 +8,6 @@ standalone  : true
 title       : 'Slider'
 description : 'A slider allows users to select values within a range'
 type        : 'UI Module'
-status      : 'NEW'
-statusColor : 'teal'
 
 themes      : ['Default']
 ---

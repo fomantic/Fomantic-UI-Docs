@@ -8,8 +8,6 @@ standalone  : true
 title       : 'Toast'
 description : 'A toast allows users to be notified of an event'
 type        : 'UI Module'
-status      : 'NEW'
-statusColor : 'teal'
 
 themes      : ['Default']
 ---

@@ -9,8 +9,6 @@ elementType : 'element'
 title       : 'Emoji'
 description : 'An emoji is a glyph used to represent an emotional state'
 type        : 'UI Element'
-status      : 'NEW'
-statusColor : 'teal'
 
 themes      : ['Default']
 ---
