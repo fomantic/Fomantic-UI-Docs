@@ -3525,7 +3525,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>fullTextSearch</td>
-          <td>false</td>
+          <td>'exact'</td>
           <td>Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string, setting to "false" will only match start of string.</td>
         </tr>
         <tr>
