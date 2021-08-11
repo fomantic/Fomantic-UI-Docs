@@ -1424,7 +1424,8 @@ themes      : ['Default', 'Material']
         <tr>
           <td>actions</td>
           <td>false</td>
-          <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>
+          <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>.
+            <div class="ui info message">Actions will close the modal by default. Return false from the click handler to prevent that.</div>
             <div class="code">
             actions: [{
                 text    : 'Wait',
