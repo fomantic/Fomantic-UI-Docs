@@ -972,7 +972,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     <h4 class="ui header">Message</h4>
     <p>A form can contain a <a href="/collections/message.html">message</a></p>
     <div class="ui ignored info message">
-      Any <code>info</code>, <code>error</code>, <code>success</code>, or <code>warning</code> message blocks found inside a form are hidden by default.
+      Any <code>info</code>, <code>error</code>, <code>success</code>, or <code>warning</code> message blocks found inside a form are hidden by default.<br>If you want to force a message inside a form being visible all the time, add the <code>visible</code> class to the message.
     </div>
     <div class="ui form">
       <div class="ui message">
