@@ -15,9 +15,6 @@ themes      : ['Default']
 
 <%- @partial('header', { tabs: { emoji: 'Emojis', definition: 'Definition' } }) %>
 
-<script src="/javascript/emoji_strategy.js"></script>
-<script src="/javascript/emoji.js"></script>
-
 <div class="main ui container">
 
   <div class="ui active tab" data-tab="emoji">
@@ -125,3 +122,6 @@ themes      : ['Default']
   </div>
 
 </div>
+
+<script src="/javascript/emoji_strategy.js"></script>
+<script src="/javascript/emoji.js"></script>

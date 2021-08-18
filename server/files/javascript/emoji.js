@@ -131,7 +131,4 @@ semantic.emoji.ready = function() {
   ;
 };
 
-// attach ready event
-$(document)
-  .ready(semantic.emoji.ready)
-;
+semantic.emoji.ready();
