@@ -118,7 +118,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Tagged Releases</h4>
     <p>Component repos are released on NPM and as tagged releases on GitHub.</p>
-    <p>Check the list of repos available under <a href="https://github.com/Semantic-Org?utf8=%E2%9C%93&query=ui-">Semantic Org</a> on GitHub</p>
+    <p>Check the list of repos available under <a href="https://github.com/fomantic?utf8=%E2%9C%93&query=ui-">fomantic</a> on GitHub</p>
     <p>Each component's release notes will automatically update with the relevant notes for that component from the main release.</p>
     <div class="ignored code">
      npm install semantic-ui-component
