@@ -433,13 +433,10 @@ type        : 'UI Behavior'
         <p>When you use the <code>serializeForm</code> setting or attach API events on a form, API will automatically include the closest form in data sent to the server.</p>
         <p>Structured form data is beneficial over <a href="https://api.jquery.com/serialize/">jQuery's serialize</a> for several reasons:</p>
         <ul class="ui large list">
-          <li><a href="https://github.com/macek/jquery-serialize-object" target="_blank">Serialize Object</a> correctly converts structured form names like <code>name="name[first]"</code> into nested object literals.</li>
+          <li><code>serializeForm: true</code> correctly converts structured form names like <code>name="name[first]"</code> into nested object literals.</li>
           <li>Structured form data can be modified in Javascript in <code>beforeSend</code>.</li>
           <li>Form data will automatically be converted to their Javascript equivalents, for instance, checkboxes will be converted to <code>boolean</code> values.</li>
         </ul>
-        <div class="ui ignored warning message">
-          Structured form data requires including <a href="https://github.com/macek/jquery-serialize-object" target="_blank">macek's serialize object.</a>
-        </div>
       </div>
       <div class="example">
         <h4 class="ui header">Structured Data Example</h4>
