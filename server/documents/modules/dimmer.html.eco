@@ -538,6 +538,10 @@ themes      : ['Default']
           <td>set disabled</td>
           <td>Sets a dimmer as disabled</td>
         </tr>
+        <tr>
+          <td>destroy</td>
+          <td>Destroys instance and removes all events</td>
+        </tr>
       </tbody>
     </table>
 
