@@ -40,21 +40,22 @@ semantic.icon.ready = function() {
         return icons;
       }
     },
-    categoryVisible = function(category) {
-      var rect = category.getBoundingClientRect();
+    iconVisible = function (icon) {
+      var rect = icon.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
       return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
     },
-    checkVisibility = function() {
-      $('.icon.example').each(function() {
-        var element = $(this).get(0);
-    
-        if(categoryVisible(element)) {
-          $(this).css('visibility', 'visible');
-        } else {
-          $(this).css('visibility', 'hidden');
-        }
-      });
+    checkIconVisibility = function () {
+      $('.icon.example')
+        .find('i.icon')
+        .each(function () {
+          var element = $(this).get(0);
+          if (iconVisible(element)) {
+            $(this).css('visibility', 'visible');
+          } else {
+            $(this).css('visibility', 'hidden');
+          }
+        });
     }
   ;
 
@@ -107,10 +108,10 @@ semantic.icon.ready = function() {
   }
 
   // only show icon category when visible on screen
-  $(document).scroll(checkVisibility);
-  $(window).resize(checkVisibility);
-  
-  checkVisibility();
+  $(document).scroll(checkIconVisibility);
+  $(window).resize(checkIconVisibility);
+
+  checkIconVisibility();
   
   
   // check if icon list tab is selected (if so run the check visibility function)
@@ -118,7 +119,7 @@ semantic.icon.ready = function() {
   console.log(tab);
   
   var observer = new MutationObserver(function() {
-    checkVisibility();
+    checkIconVisibility();
   });
   
   observer.observe(tab, {

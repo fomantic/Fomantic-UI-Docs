@@ -1575,7 +1575,7 @@ body.progress.animated .ui.progress .bar {
   color: #000000;
 }
 
-#example .icon.example {
+#example .icon.example i.icon {
   visibility: hidden;
 }
 
