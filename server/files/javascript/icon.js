@@ -40,11 +40,6 @@ semantic.icon.ready = function() {
         return icons;
       }
     },
-    categoryVisible = function(category) {
-      var rect = category.getBoundingClientRect();
-      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-    },
     iconVisible = function (icon) {
       var rect = icon.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
@@ -61,17 +56,6 @@ semantic.icon.ready = function() {
             $(this).css('visibility', 'hidden');
           }
         });
-    },
-    checkVisibility = function() {
-      $('.icon.example').each(function() {
-        var element = $(this).get(0);
-    
-        if(categoryVisible(element)) {
-          $(this).css('visibility', 'visible');
-        } else {
-          $(this).css('visibility', 'hidden');
-        }
-      });
     }
   ;
 
