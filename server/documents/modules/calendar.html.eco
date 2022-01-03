@@ -927,21 +927,21 @@ themes      : ['Default']
           <td>formatter</td>
           <td colspan="2">
             <div class="code">
-            // Different customizable methods to format a certain part of the date output
+            // Different customizable methods to format a certain part of the date or popup text output
             // Each method has to return a string
             formatter: {
-                header: function (date, mode, settings){},
-                yearHeader: function (date, settings) {},
-                monthHeader: function (date, settings) {},
+                cell: function (cell, date, cellOptions) {}
+                date: function (date, settings) {},
+                datetime: function (date, settings) {},
+                dayColumnHeader: function (day, settings) {},
                 dayHeader: function (date, settings) {},
+                header: function (date, mode, settings){},
                 hourHeader: function (date, settings) {},
                 minuteHeader: function (date, settings) {},
-                dayColumnHeader: function (day, settings) {},
-                datetime: function (date, settings) {},
-                date: function (date, settings) {},
+                monthHeader: function (date, settings) {},
                 time: function (date, settings, forCalendar) {},
                 today: function (settings) {},
-                cell: function (cell, date, cellOptions) {}
+                yearHeader: function (date, settings) {},
             }
             </div>
           </td>
@@ -972,7 +972,7 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td>onBeforeChange(date, text, mode) <span class="ui tiny black label">New in 2.8.0</span></td>
+          <td class="five wide">onBeforeChange(date, text, mode) <span class="ui tiny black label">New in 2.8.0</span></td>
           <td>active content</td>
           <td>Is called before a calendar date changes. <code>return false;</code> will cancel the change</td>
         </tr>
