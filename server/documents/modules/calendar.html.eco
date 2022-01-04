@@ -923,6 +923,41 @@ themes      : ['Default']
             </div>
           </td>
         </tr>
+        <tr>
+          <td>formatter</td>
+          <td colspan="2">
+            <div class="code">
+            // Different customizable methods to format a certain part of the date or popup text output
+            // Each method has to return a string
+            formatter: {
+                cell: function (cell, date, cellOptions) {}
+                date: function (date, settings) {},
+                datetime: function (date, settings) {},
+                dayColumnHeader: function (day, settings) {},
+                dayHeader: function (date, settings) {},
+                header: function (date, mode, settings){},
+                hourHeader: function (date, settings) {},
+                minuteHeader: function (date, settings) {},
+                monthHeader: function (date, settings) {},
+                time: function (date, settings, forCalendar) {},
+                today: function (settings) {},
+                yearHeader: function (date, settings) {},
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>parser</td>
+          <td colspan="2">
+            <div class="code">
+            // Customizable methods to parse a given date
+            // Has to return a date object
+            parser: {
+                date: function (text, settings) {}
+            }
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
 
@@ -937,12 +972,12 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td>onBeforeChange <span class="ui red label"><i class="exclamation icon"></i>New in 2.8.0</span></td>
+          <td class="five wide">onBeforeChange(date, text, mode) <span class="ui tiny black label">New in 2.8.0</span></td>
           <td>active content</td>
           <td>Is called before a calendar date changes. <code>return false;</code> will cancel the change</td>
         </tr>
         <tr>
-          <td>onChange</td>
+          <td>onChange(date, text, mode)</td>
           <td>active content</td>
           <td>Is called after a calendar date has changed.</td>
         </tr>
