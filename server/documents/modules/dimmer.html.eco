@@ -674,6 +674,16 @@ themes      : ['Default']
           <td>dimmable</td>
           <td>Callback on element show or hide</td>
         </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>dimmable</td>
+          <td>Callback on element when dimmer is fully shown</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>dimmable</td>
+          <td>Callback on element when dimmer is fully hidden</td>
+        </tr>
       </tbody>
     </table>
 
