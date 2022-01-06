@@ -789,6 +789,12 @@ themes      : ['Default']
           <td>Tab</td>
           <td>Called after a tab becomes visible</td>
         </tr>
+        <tr>
+          <td>onBeforeChange</td>
+          <td>tabPath</td>
+          <td>Tab</td>
+          <td>Called before a tab is about to be changed. Returning <code>false</code> will cancel the tab change</td>
+        </tr>
       </tbody>
     </table>
 
