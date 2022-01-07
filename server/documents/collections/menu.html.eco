@@ -1633,7 +1633,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="example">
     <h4 class="ui header">Centered</h4>
     <p>A menu can be shown centered.</p>
-    <div class="ui info message">You can also use the <code>center aligned</code> alias.</div>
+    <div class="ui ignored info message">You can also use the <code>center aligned</code> alias.</div>
     <div class="ui centered menu">
       <a class="bug popup icon item">
         <i class="edit icon"></i>
