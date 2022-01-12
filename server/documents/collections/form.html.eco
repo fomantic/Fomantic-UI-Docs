@@ -122,8 +122,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         </div>
         <div class="six wide field">
           <label>Expiration</label>
-          <div class="two fields">
-            <div class="field">
+          <div class="fields">
+            <div class="eight wide field">
               <select class="ui fluid search dropdown" name="card[expire-month]">
                 <option value="">Month</option>
                 <option value="1">January</option>
