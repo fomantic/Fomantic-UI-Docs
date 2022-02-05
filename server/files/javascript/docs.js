@@ -449,12 +449,6 @@ semantic.ready = function() {
         .addClass('ui vertical following fluid accordion text menu')
         .html(html)
       ;
-      /* Advert
-      var $advertisement = $('<div />')
-        .addClass('advertisement')
-        .html('<script type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>')
-      ;
-      */
       $sticky = $('<div />')
         .addClass('ui sticky')
         .html($followMenu)
