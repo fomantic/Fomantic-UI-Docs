@@ -60,7 +60,7 @@ standalone : false
           Fomantic-UI
         </span>
         <span class="tagline">
-          A community fork of Semantic-UI
+          The official community fork of Semantic-UI
         </span>
       </h1>
       <div class="ui hidden divider"></div>
@@ -69,15 +69,6 @@ standalone : false
         Get Started
       </a>
       <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.8</a>
-    </div>
-    <div class="inverted advertisement">
-      <% unless 'development' in @getEnvironments(): %>
-      <div id="carbonads-container">
-        <div class="carbonad">
-          <div id="azcarbon"></div>
-        </div>
-      </div>
-      <% end %>
     </div>
   </div>
 </div>
