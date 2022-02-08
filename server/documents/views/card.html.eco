@@ -264,7 +264,8 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   <div class="another example">
     <div class="evaluated code" data-type="javascript">
     $('.special.cards .image').dimmer({
-      on: 'hover'
+    // As hover is not working on mobile, you might use click on those devices as fallback
+      on: 'ontouchstart' in document.documentElement ? 'click' : 'hover'
     });
     </div>
     <div class="ui special cards">
