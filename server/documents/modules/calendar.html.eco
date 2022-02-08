@@ -928,9 +928,11 @@ themes      : ['Default']
           <td colspan="2">
             <div class="code">
             // Different customizable methods to format a certain part of the date or popup text output
-            // Each method has to return a string
             formatter: {
+                // do whatever you like to the given cell
+                // cellOptions is an object containing values for {mode,adjacent,disabled,active,today}
                 cell: function (cell, date, cellOptions) {}
+                // Every other method has to return a string
                 date: function (date, settings) {},
                 datetime: function (date, settings) {},
                 dayColumnHeader: function (day, settings) {},
