@@ -1052,6 +1052,10 @@ semantic.emoji.ready = function() {
     name: 'rainbow flag',
     alias: 'gay_pride_flag'
   }, {
+    countrycode: 'transgender',
+    name: 'transgender flag',
+    alias: ''
+  }, {
     countrycode: 'pirate',
     name: 'Pirate Flag',
     alias: ''
