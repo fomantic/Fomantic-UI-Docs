@@ -82,6 +82,7 @@ semantic.emoji.ready = function() {
     .search({
       source: allEmojis,
       type: 'category',
+      fullTextSearch: true,
       maxResults: 10,
       cache: false,
       searchFields:['name','keywordsString'],
