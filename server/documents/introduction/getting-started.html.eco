@@ -92,7 +92,7 @@ type        : 'Main'
     </p>
     <div class="code" data-type="html">
       <!-- You MUST include jQuery before Fomantic -->
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
       <link rel="stylesheet" type="text/css" href="/dist/semantic.min.css">
       <script src="/dist/semantic.min.js"></script>
     </div>
@@ -132,7 +132,7 @@ type        : 'Main'
     <div class="ui active basic tab vertical segment" data-tab="jsdelivr">
       <div class="code" data-type="html">
         <!-- You MUST include jQuery before Fomantic -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.css">
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.js"></script>
       </div>
@@ -140,7 +140,7 @@ type        : 'Main'
     <div class="ui basic tab vertical segment" data-tab="cdnjs">
       <div class="code" data-type="html">
         <!-- You MUST include jQuery before Fomantic -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/<%= @getVersion() %>/semantic.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/<%= @getVersion() %>/semantic.min.js"></script>
       </div>
@@ -148,7 +148,7 @@ type        : 'Main'
     <div class="ui basic tab vertical segment" data-tab="unpkg">
       <div class="code" data-type="html">
         <!-- You MUST include jQuery before Fomantic -->
-        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+        <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.js"></script>
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.css">
         <script src="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.js"></script>
       </div>
