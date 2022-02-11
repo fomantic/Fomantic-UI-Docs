@@ -11,7 +11,6 @@ description : 'API allows elements to trigger actions on a server'
 type        : 'UI Behavior'
 ---
 
-<script src="/javascript/library/serialize-object.js"></script>
 <script src="/javascript/api.js"></script>
 
 <%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
@@ -1308,7 +1307,6 @@ type        : 'UI Behavior'
               JSONParse         : 'JSON could not be parsed during error handling',
               legacyParameters  : 'You are using legacy API success callback names',
               missingAction     : 'API action used but no url was defined',
-              missingSerialize  : 'Required dependency jquery-serialize-object missing, using basic serialize',
               missingURL        : 'No URL specified for API event',
               noReturnedValue   : 'The beforeSend callback must return a settings object, beforeSend ignored.',
               parseError        : 'There was an error parsing your request',
