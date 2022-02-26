@@ -3456,7 +3456,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <thead>
         <tr>
         <th>Setting</th>
-        <th class="eight wide">Default</th>
+        <th class="seven wide">Default</th>
         <th>Description</th>
         </tr>
       </thead>
@@ -3467,6 +3467,13 @@ themes      : ['Default', 'GitHub', 'Material']
            true
           </td>
           <td>Whether multiselect should use labels. Must be set to true when <code>allowAdditions</code> is <code>true</code></td>
+        </tr>
+        <tr>
+          <td>delimiter</td>
+          <td>
+           <code>,</code>
+          </td>
+          <td>When multiselect uses normal input tag, the values will be delimited with this character. Also used as the keyboard shortcut while entering multiple values</td>
         </tr>
         <tr>
           <td>maxSelections</td>
@@ -3623,7 +3630,6 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="code">
           keys : {
             backspace  : 8,
-            delimiter  : 188, // comma
             deleteKey  : 46,
             enter      : 13,
             escape     : 27,
@@ -3637,7 +3643,7 @@ themes      : ['Default', 'GitHub', 'Material']
           </div>
           </td>
           <td>
-            The <code>keycode</code> used to represent keyboard shortcuts. To avoid issues with some foreign languages, you can pass <code>false</code> for comma delimiter's value
+            The <code>keycode</code> used to represent keyboard shortcuts.
           </td>
         </tr>
         <tr>
