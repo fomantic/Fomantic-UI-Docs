@@ -64,6 +64,7 @@ semantic.icon.ready = function() {
     $iconSearch
       .search({
         type          : 'category',
+        fullTextSearch: true,
         minCharacters : 1,
         maxResults    : 10,
         cache         : false,

@@ -1556,6 +1556,7 @@ body.progress.animated .ui.progress .bar {
 }
 #example .emoji.example .grid > .column {
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 /*--------------
