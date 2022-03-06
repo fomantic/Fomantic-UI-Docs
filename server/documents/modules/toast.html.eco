@@ -515,6 +515,18 @@ themes      : ['Default']
           })
         ;
         </div>
+
+        <p>The image can be shown without any padding by providing the <code>image</code> class <span class="ui black label">New in 2.9.0</span></p>
+        <div class="code" data-demo="true">
+        $('body')
+          .toast({
+            showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
+            class: 'image',
+            classImage: 'tiny',
+            message: `Veronika has joined the Fomantic-UI community`
+          })
+        ;
+        </div>
     </div>
 
     <div class="no example">
@@ -1138,6 +1150,7 @@ themes      : ['Default']
       box          : '.toast-box',
       toast        : '.ui.toast',
       input        : 'input:not([type="hidden"]), textarea, select, button, .ui.button, ui.dropdown',
+      clickable    : 'a, details, .ui.accordion',
       approve      : '.actions .positive, .actions .approve, .actions .ok',
       deny         : '.actions .negative, .actions .deny, .actions .cancel'
     }
