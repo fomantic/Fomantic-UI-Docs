@@ -151,6 +151,50 @@ semantic.calendar.ready = function() {
     })
   ;
 
+  $('#disabledhours_calendar')
+    .calendar({
+        initialDate: new Date('2021-07-01'),
+        ampm: false,
+        disabledHours: [
+            0, // Midnight will always be disabled
+            {
+                // Every Saturday and Sunday will be entirely disabled
+                days: [0, 6],
+                hours: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                message: 'We dont work on Saturday and Sunday',
+                inverted: true,
+                variation: 'basic'
+            },
+            {
+                // Friday afternoon will be disabled
+                date: new Date('2021-07-02'),
+                hours: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                message: 'Sorry this afternoon we are closed !',
+                inverted: true
+            },
+            {
+                // All hours between 1 and 7 will be disabled every day
+                hours: [1, 2, 3, 4, 5, 6, 7],
+                message: 'We are sleeping !'
+            },
+            {
+                // 12:00 and 13:00 will be disabled every day
+                hours: [12, 13],
+                message: 'Lunch time !'
+            }
+        ]
+    })
+  ;
+
+  $('#multimonth_calendar')
+    .calendar({
+        type: 'date',
+        multiMonth: 3,
+        monthOffset: -1 // current month will be shown in the middle of 3 months
+    })
+  ;
+
+
   $('#enableddates_calendar')
       .calendar({
         type: 'date',
