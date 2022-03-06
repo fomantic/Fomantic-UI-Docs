@@ -81,6 +81,8 @@ semantic.dropdown.ready = function() {
     })
   ;
 
+  $('.inverted.example .menu > .item').tab();
+
 };
 
 
