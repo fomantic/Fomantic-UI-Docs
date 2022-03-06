@@ -1302,7 +1302,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>onShow</td>
           <td>Modal</td>
-          <td>Is called when a modal starts to show.</td>
+          <td>Is called when a modal starts to show. If the function returns <code>false</code>, the modal will not be shown.</td>
         </tr>
         <tr>
           <td>onVisible</td>
