@@ -719,12 +719,32 @@ type        : 'UI Module'
         <tr>
           <td>onShow</td>
           <td>transitioned element</td>
-          <td>Callback on each transition that changes visibility to shown</td>
+          <td>Callback on each transition that changes visibility to shown. Returning <code>false</code> from this callback will cancel the transition from showing.</td>
+        </tr>
+        <tr>
+          <td>onBeforeShow(showFunction)</td>
+          <td>transitioned element</td>
+          <td>Callback right before the show transition should start. The showFunction parameter has to be called inside the callback to trigger the transition show</td>
+        </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>transitioned element</td>
+          <td>Callback once the show transition has finished.</td>
         </tr>
         <tr>
           <td>onHide</td>
           <td>transitioned element</td>
-          <td>Callback on each transition that changes visibility to hidden</td>
+          <td>Callback on each transition that changes visibility to hidden. Returning <code>false</code> from this callback will cancel the transition from hiding.</td>
+        </tr>
+        <tr>
+          <td>onBeforeHide(hideFunction)</td>
+          <td>transitioned element</td>
+          <td>Callback right before the hide transition should start. The hideFunction parameter has to be called inside the callback to trigger the transition hide</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>transitioned element</td>
+          <td>Callback once the transition hide has finished.</td>
         </tr>
         <tr>
           <td>onStart</td>

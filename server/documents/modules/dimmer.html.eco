@@ -662,12 +662,12 @@ themes      : ['Default']
         <tr>
           <td>onShow</td>
           <td>dimmable</td>
-          <td>Callback on element show</td>
+          <td>Callback before dimmer is shown. Returning <code>false</code> from this callback will cancel the dimmer from showing.</td>
         </tr>
         <tr>
           <td>onHide</td>
           <td>dimmable</td>
-          <td>Callback on element hide</td>
+          <td>Callback before dimmer is hidden. Returning <code>false</code> from this callback will cancel the dimmer from hiding.</td>
         </tr>
         <tr>
           <td>onChange</td>

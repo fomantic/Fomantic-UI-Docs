@@ -447,7 +447,7 @@ themes      : ['default']
       </thead>
       <tbody>
         <tr>
-          <td>beforeChange</td>
+          <td>onBeforeChange</td>
           <td>Next Side</td>
           <td>Is called before side change</td>
         </tr>

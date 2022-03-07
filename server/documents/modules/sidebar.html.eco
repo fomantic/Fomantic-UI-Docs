@@ -686,12 +686,12 @@ themes      : ['Default']
         <tr>
           <td>onVisible</td>
           <td>Sidebar</td>
-          <td>Is called when a sidebar begins animating in.</td>
+          <td>Is called when a sidebar has finished animating in.</td>
         </tr>
         <tr>
           <td>onShow</td>
           <td>Sidebar</td>
-          <td>Is called when a sidebar has finished animating in.</td>
+          <td>Is called when a sidebar begins animating in. Returning <code>false</code> from this callback will cancel the sidebar from showing.</td>
         </tr>
         <tr>
           <td>onChange</td>
@@ -701,7 +701,7 @@ themes      : ['Default']
         <tr>
           <td>onHide</td>
           <td>Sidebar</td>
-          <td>Is called before a sidebar begins to animate out.</td>
+          <td>Is called before a sidebar begins to animate out. Returning <code>false</code> from this callback will cancel the sidebar from hiding.</td>
         </tr>
         <tr>
           <td>onHidden</td>
