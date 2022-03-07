@@ -264,7 +264,7 @@ themes      : ['Default', 'Chubby']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Compact</h4>
+      <h4 class="ui header">Compact <span class="ui black label">New in 2.9.0</span></h4>
       <p>An accordion can reduce its padding to appear compact</p>
       <div class="ui segment">
         <div class="ui compact accordion">
@@ -579,7 +579,7 @@ themes      : ['Default', 'Chubby']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Right Icon</h4>
+      <h4 class="ui header">Right Icon <span class="ui black label">New in 2.9.0</span></h4>
       <p>The dropdown icon can be placed to the right.</p>
       <div class="ui blue compact message">
         <div class="ui basic styled accordion">
