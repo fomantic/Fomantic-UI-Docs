@@ -95,7 +95,21 @@ themes      : ['Default', 'GitHub']
       <input type="text" placeholder="Search...">
     </div>
   </div>
-
+  <div class="another example">
+    <p>Some input types like "week", "date", "email", "url", etc. have a browser inbuild validation and will automatically get the error styling when those get invalid.
+        In general all input field types, which have the required attribute set and are empty, are considered invalid.
+        <div class="ui ignored info message">
+        To prevent showing the error class on empty and required fields, use a placeholder. If you don't want a textual placeholder use a space character.
+        </div>
+    </p>
+    <div class="ui input">
+        <input type="date">
+    </div>
+    <br>
+    <div class="ui input">
+        <input type="email" placeholder="E-Mail Address" required>
+    </div>
+  </div>
   <h2 class="ui dividing header">Variations</h2>
 
   <div class="example">
