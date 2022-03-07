@@ -520,7 +520,7 @@ blockquote .author {
   display: none !important;
 }
 #example .main.container .introduction p,
-#example .main.container .tab > p,
+#example .main.container > .tab > p,
 #example .main.container .example > p,
 #example .main.container > p {
   font-size: 16px;
