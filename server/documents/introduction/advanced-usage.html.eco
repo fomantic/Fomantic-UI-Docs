@@ -34,7 +34,7 @@ type        : 'Introduction'
 
   <div class="no example">
     <h4>Auto-Install</h4>
-    <p>Running <code>npm install</code> normally will launch an interactive installer, to allow this installer to run without user interaction include a special flag <code>autoInstall: true</code>in your <code>semantic.json</code> file.</p>
+    <p>Running <code>npx gulp install</code> normally will launch an interactive installer, to allow this installer to run without user interaction and use all settings from your semantic.json instead, include a special flag <code>autoInstall: true</code>in your <code>semantic.json</code> file.</p>
     <div class="ignored code" data-type="JS" data-title="semantic.json">
      {
       // install will now automatically build your project files without user interaction
@@ -210,7 +210,7 @@ type        : 'Introduction'
     <p>The first time you run docs you will need to build the whole project once</p>
     <div class="code">
       cd ui/
-      gulp build-docs
+      npx gulp build-docs
     </div>
   </div>
   <div class="no example">
