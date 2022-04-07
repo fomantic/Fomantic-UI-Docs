@@ -402,7 +402,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
             Elliot Fu is a film-maker from New York.
           </div>
         </div>
-        <div class="ui bottom attached button">
+        <div class="ui button">
           <i class="add icon"></i>
           Add Friend
         </div>
@@ -414,7 +414,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
             Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
           </div>
         </div>
-        <div class="ui bottom attached button">
+        <div class="ui button">
           <i class="add icon"></i>
           Add Friend
         </div>
@@ -426,7 +426,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
             Jenny is a student studying Media Management at the New School
           </div>
         </div>
-        <div class="ui bottom attached button">
+        <div class="ui button">
           <i class="add icon"></i>
           Add Friend
         </div>
