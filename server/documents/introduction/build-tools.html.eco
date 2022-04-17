@@ -20,12 +20,12 @@ type        : 'Introduction'
 
     <p>To build all files:</p>
     <div class="code" data-type="bash">
-      gulp build
+      npx gulp build
     </div>
 
     <p>To watch for changes</p>
     <div class="code" data-type="bash">
-      gulp watch
+      npx gulp watch
     </div>
   </div>
   <div class="no example">
@@ -331,7 +331,7 @@ type        : 'Introduction'
       <div class="ui teal horizontal label">New in 2.2</div>
     </h4>
     <p>We've added a new setting to <code>semantic.json</code> in 2.2 to help make working with a CLI, or other automated deployments more streamlined.</p>
-    <p>Specifying <code>autoInstall: true</code> in an environments <code>semantic.json</code> configuration will prevent any user prompting when running <code>npm install</code> allowing for automated deployment.</p>
+    <p>Specifying <code>autoInstall: true</code> in an environments <code>semantic.json</code> configuration will prevent any user prompting when running <code>npx gulp install</code> allowing for automated deployment.</p>
   </div>
 
 </div>

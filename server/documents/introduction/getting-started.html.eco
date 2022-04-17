@@ -51,16 +51,23 @@ type        : 'Main'
 
     <p>To install Fomantic-UI run the following command</p>
     <div class="ignored code" data-type="bash">
-      $ npm install --ignore-scripts fomantic-ui
+      $ npm install fomantic-ui
     </div>
 
     <p>Or try living on the edge and give our nightly build a test and try new features and bug fixes early!</p>
     <div class="ignored code" data-type="bash">
-      $ npm install --ignore-scripts fomantic-ui@nightly
+      $ npm install fomantic-ui@nightly
     </div>
 
     <p>
-      When NPM finishes installing it will start the Fomantic-UI interactive installation prompt.
+      When NPM finishes installing, a precompiled version of Fomantic-UI is already available inside the <code>dist</code> folder.
+      Starting from 2.9.0, the interactive installation prompt will not start automatically after npm install anymore. If you need a custom installed version of Fomantic-UI, you have to manually run the following right after npm install
+    </p>
+    <div class="ignored code" data-type="bash">
+      $ cd node_modules/fomantic-ui
+      $ npx gulp install
+    </div>
+    <p>
       The installation prompt is used to create your <code>semantic.json</code> file which stores
       critical information for when you need to install Fomantic-UI and also about the build
       process. It will also create a new directory containing all the files needed to create a
@@ -83,7 +90,6 @@ type        : 'Main'
     </p>
     <div class="ignored code" data-type="bash">
       $ cd node_modules/fomantic-ui
-      $ npx gulp install
       $ npx gulp build
     </div>
     <p>
