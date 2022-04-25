@@ -32,15 +32,16 @@ type        : 'Main'
 
     <h5 class="ui header">Requirements</h5>
     <ul class="ui list">
-      <li class="item">NodeJS >= v8</li>
-      <li class="item">NPM >= v5</li>
+      <li class="item">NodeJS >= v12</li>
+      <li class="item">NPM >= v6</li>
     </ul>
     <p>You can download NodeJS <a href="https://nodejs.org/en/download/" target="_blank">here</a>, NPM is installed with NodeJS.</p>
+    <div class="ui ignored info message"><i class="circle info icon"></i>Fomantic-UI also supports <code><a href="https://www.npmjs.com/package/yarn" target="_blank">yarn</a></code> as alternative package manager. <div class="ui black small horizontal label">New in 2.9.0</div></div>
     <br />
 
-    <p>Once you have NodeJS and NPM installed you will need to install <a href="https://npmjs.com/package/fomantic-ui">Fomantic-UI</a> as a dependency of your project.</p>
+    <p>Once you have NodeJS and NPM installed, you will need to install <a href="https://npmjs.com/package/fomantic-ui">Fomantic-UI</a> as a dependency of your project.</p>
 
-    <p>If you haven't already create a <code>package.json</code> file with the following command</p>
+    <p>If you haven't already, create a <code>package.json</code> file with the following command</p>
     <div class="ignored code" data-type="bash">
       $ npm init
     </div>
