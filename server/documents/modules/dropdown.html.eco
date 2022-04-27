@@ -3057,12 +3057,21 @@ themes      : ['Default', 'GitHub', 'Material']
     $('.your.element')
       .dropdown('behavior name', argumentOne, argumentTwo)
     ;
+
+    // For example using the below mentioned 'clear(preventChangeTrigger)'
+    $('.ui.dropdown')
+      .dropdown('clear', true)
+    ;
+    // Using the same but omit the default value for the preventChangeTrigger argument (which is false)
+    $('.ui.dropdown')
+      .dropdown('clear')
+    ;
     </div>
 
     <table class="ui definition sortable celled table segment">
       <thead>
         <tr>
-          <th>Behavior</th>
+          <th>Behavior (arguments)</th>
           <th>Description</th>
         </tr>
       </thead>
@@ -3119,8 +3128,8 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Saves current text and value as new defaults (for use with restore)</td>
         </tr>
         <tr>
-          <td>set selected(value,$selectedItem,preventChangeTrigger)</td>
-          <td>Sets value as selected. <code>$selectedItem</code> is used internally and can be ignored. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event</td>
+          <td>set selected(value,preventChangeTrigger)</td>
+          <td>Sets value as selected. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event (default: <code>false</code>).</td>
         </tr>
         <tr>
           <td>remove selected(value)</td>
@@ -3139,8 +3148,8 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Sets dropdown text to a value</td>
         </tr>
         <tr>
-          <td>set value (value,text,$selected,preventChangeTrigger)</td>
-          <td>Sets dropdown input to value (does not update display state). <code>text</code> and <code>$selected</code> are used internally and can be ignored. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event</td>
+          <td>set value (value,preventChangeTrigger)</td>
+          <td>Sets dropdown input to value (does not update display state). Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event (default: <code>false</code>).</td>
         </tr>
         <tr>
           <td>get text</td>
@@ -3148,7 +3157,11 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>get value</td>
-          <td>Returns current dropdown input value</td>
+          <td>Returns current dropdown input value. When the dropdown was created out of a <code>select</code> tag, the value will always be an array, otherwise a string (delimited when multiple)</td>
+        </tr>
+        <tr>
+          <td>get values</td>
+          <td>Returns current dropdown input values as array. Useful for <a href="#multiple-selections">multiple selection</a> dropdowns regardless if made out of a div or select</td>
         </tr>
         <tr>
           <td>get item(value)</td>
