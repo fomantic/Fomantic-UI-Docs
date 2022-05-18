@@ -68,7 +68,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Disabled</h4>
       <p>An emoji can show that it is disabled</p>
-      <div class="ui basic segment">
+      <div class="ui basic massive segment">
           <em data-emoji="anguished" class="disabled"></em>
       </div>
     </div>
@@ -76,7 +76,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Loading</h4>
       <p>An emoji can be used as a simple loader</p>
-      <div class="ui basic segment">
+      <div class="ui basic massive segment">
           <em data-emoji="angel" class="loading"></em>
           <em data-emoji="blush" class="loading"></em>
           <em data-emoji="grin" class="loading"></em>
@@ -114,7 +114,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Link</h4>
       <p>An emoji can be formatted as a link</p>
-      <div class="ui basic segment">
+      <div class="ui basic massive segment">
           <em data-emoji="slight_smile" class="link"></em>
       </div>
     </div>
