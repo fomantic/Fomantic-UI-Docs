@@ -3072,7 +3072,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Recreates dropdown menu from passed values. <code>values</code> should be an object with the following structure: <code>{ values: [ {value, text, name} ] }</code>.</td>
         </tr>
           <td>change values (values)</td>
-          <td>Changes dropdown to use new values</td>
+          <td>Changes dropdown to use new values. <code>values</code> structure: <code>{ [ {value, text, name} ] }</code>.</td>
         </tr>
         <tr>
           <td>refresh</td>
