@@ -203,7 +203,8 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">24 hour format</h4>
-      <p>You can get rid of the AM/PM stuff</p>
+      <p>You can get rid of the AM/PM notation by adjusting the format-token</p>
+      <div class="ui ignored info message">For details about the token string format see <a href="#custom-format">Custom Format</a></div>
       <div class="ui calendar" id="no_ampm">
         <div class="ui input left icon">
           <i class="time icon"></i>
@@ -214,7 +215,10 @@ themes      : ['Default']
       $('#no_ampm')
         .calendar({
           type: 'time',
-          ampm: false
+          formatter: {
+            time: 'H:mm',
+            cellTime: 'H:mm'
+          }
         })
       ;
       </div>
@@ -306,26 +310,197 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Custom format</h4>
-      <p>You can entirely change the date format</p>
+      <h4 class="ui header">Custom format <div class="ui small black label">New in 2.9.0</div></h4>
+      <p>You can entirely change the date format by using a token string formatter.</p>
+      <p>
+        Tokens are placeholder characters for a specific output format. Fomantic-UI supports the following tokens:
+        <table class="ui celled table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Token</th>
+              <th>Resultset</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Day of Week</td>
+              <td>d</td>
+              <td>0-6</td>
+            </tr>
+            <tr>
+              <td>Day of Week (2 char text)</td>
+              <td>dd</td>
+              <td>Su - Sa</td>
+            </tr>
+            <tr>
+              <td>Day of Week (3 char text)</td>
+              <td>ddd</td>
+              <td>Sun - Sat</td>
+            </tr>
+            <tr>
+              <td>Day of Week (Full text)</td>
+              <td>dddd</td>
+              <td>Sunday - Saturday</td>
+            </tr>
+            <tr>
+              <td>Day of Month</td>
+              <td>D</td>
+              <td>1 to 31</td>
+            </tr>
+            <tr>
+              <td>Day of Month (Leading zero)</td>
+              <td>DD</td>
+              <td>01-31</td>
+            </tr>
+            <tr>
+              <td>Day suffix</td>
+              <td>S</td>
+              <td>st,nd,rd,th</td>
+            </tr>
+            <tr>
+              <td>Month</td>
+              <td>M</td>
+              <td>1 to 12</td>
+            </tr>
+            <tr>
+              <td>Month (Leading zero)</td>
+              <td>MM</td>
+              <td>01-12</td>
+            </tr>
+            <tr>
+              <td>Month (3 char text)</td>
+              <td>MMM</td>
+              <td>Jan-Dec</td>
+            </tr>
+            <tr>
+              <td>Month (Full text)</td>
+              <td>MMMM</td>
+              <td>January-December</td>
+            </tr>
+            <tr>
+              <td>Year</td>
+              <td>YYYY or Y</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Year (2 Digits)</td>
+              <td>YY</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>Week</td>
+              <td>w</td>
+              <td>1-53</td>
+            </tr>
+            <tr>
+              <td>Week (Leading zero)</td>
+              <td>ww</td>
+              <td>01-53</td>
+            </tr>
+            <tr>
+              <td>Hour (12h Format)</td>
+              <td>h</td>
+              <td>1-12</td>
+            </tr>
+            <tr>
+              <td>Hour (12h Format, Leading zero)</td>
+              <td>hh</td>
+              <td>01-12</td>
+            </tr>
+            <tr>
+              <td>Hour (24h Format)</td>
+              <td>H</td>
+              <td>0-23</td>
+            </tr>
+            <tr>
+              <td>Hour (24h Format, Leading zero)</td>
+              <td>HH</td>
+              <td>00-23</td>
+            </tr>
+            <tr>
+              <td>Minute</td>
+              <td>m</td>
+              <td>0-59</td>
+            </tr>
+            <tr>
+              <td>Minute (Leading zero)</td>
+              <td>mm</td>
+              <td>00-59</td>
+            </tr>
+            <tr>
+              <td>Second</td>
+              <td>s</td>
+              <td>0-59</td>
+            </tr>
+            <tr>
+              <td>Second (Leading zero)</td>
+              <td>ss</td>
+              <td>00-59</td>
+            </tr>
+            <tr>
+              <td>AM/PM</td>
+              <td>A</td>
+              <td>AM-PM</td>
+            </tr>
+            <tr>
+              <td>AM/PM (lowercase)</td>
+              <td>a</td>
+              <td>am-pm</td>
+            </tr>
+            <tr>
+              <td>Custom Text</td>
+              <td>Wrap in double or single quotes</td>
+              <td>Your text without quotes</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="ui ignored warning message">
+            <p>If you previously used the <code>ampm</code> setting in FUI < 2.9.0, you will need to update your code to (not) use the <code>A</code> or <code>a</code> token for date/datetime/time/cellTime formatter instead.</p>
+            <p>For quicker migration you could globally override the format settings like this:
+                <div class="code">
+                    $.fn.calendar.settings.formatter.datetime = 'MMMM D, YYYY H:mm';
+                    $.fn.calendar.settings.formatter.time = 'H:mm';
+                    $.fn.calendar.settings.formatter.cellTime = 'H:mm';
+                </div>
+            </p>
+        </div>
+      </p>
+
+      <div class="ui calendar" id="token_format_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date" readonly>
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#token_format_calendar')
+        .calendar({
+          type: 'date',
+          formatter: {
+            date: '"approx:"YYYY-MM-DD'
+          }
+        })
+      ;
+      </div>
+    </div>
+    <div class="another example">
+      <p>You can also provide a custom function to return anything you want</p>
       <div class="ui calendar" id="custom_format_calendar">
         <div class="ui input left icon">
           <i class="calendar icon"></i>
-          <input type="text" placeholder="Date">
+          <input type="text" placeholder="Date" readonly>
         </div>
       </div>
       <div class="code" data-type="javascript">
       $('#custom_format_calendar')
         .calendar({
-          monthFirst: false,
           type: 'date',
           formatter: {
             date: function (date, settings) {
               if (!date) return '';
-              var day = date.getDate();
-              var month = date.getMonth() + 1;
-              var year = date.getFullYear();
-              return day + '/' + month + '/' + year;
+              // Show the selected year 85 Years ahead
+              return 'Expires in ' + (date.getFullYear() + 85);
             }
           }
         })
@@ -440,12 +615,15 @@ themes      : ['Default']
         .calendar({
           text: {
             days: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+            dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+            dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
             months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
             monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
             today: 'Aujourd\'hui',
             now: 'Maintenant',
             am: 'AM',
-            pm: 'PM'
+            pm: 'PM',
+            weekNo: 'Semaine'
           }
         })
       ;
@@ -527,7 +705,11 @@ themes      : ['Default']
       $('#disabledhours_calendar')
         .calendar({
             initialDate: new Date('2021-07-01'),
-            ampm: false,
+            formatter: {
+                datetime: 'MMMM D, YYYY H:mm',
+                time: 'H:mm',
+                cellTime: 'H:mm'
+            },
             disabledHours: [
               0, // Midnight will always be disabled
               {
@@ -907,11 +1089,6 @@ themes      : ['Default']
           <td>Maximum date/time that can be selected, dates/times after are disabled</td>
         </tr>
         <tr>
-          <td>ampm</td>
-          <td>true</td>
-          <td>Show am/pm in time mode</td>
-        </tr>
-        <tr>
           <td>disableYear</td>
           <td>false</td>
           <td>Disable year selection mode</td>
@@ -990,6 +1167,8 @@ themes      : ['Default']
             <div class="code">
             text: {
               days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+              dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+              dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
               months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
               monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
               today: 'Today',
@@ -1003,23 +1182,28 @@ themes      : ['Default']
         <tr>
           <td>formatter</td>
           <td colspan="2">
+            <div class="ui ignored info message">For details about the below mentioned token string format see <a href="#custom-format">Custom Format</a></div>
             <div class="code">
             // Different customizable methods to format a certain part of the date or popup text output
             formatter: {
                 // do whatever you like to the given cell
                 // cellOptions is an object containing values for {mode,adjacent,disabled,active,today}
                 cell: function (cell, date, cellOptions) {}
-                // Every other method has to return a string
-                date: function (date, settings) {},
-                datetime: function (date, settings) {},
+
+                // Every other method can either be a token string
+                // or a function(date,settings) which has to return a string
+                cellTime: 'h:mm A',
+                date: 'MMMM D, YYYY',
+                datetime: 'MMMM D, YYYY h:mm A',
                 dayColumnHeader: function (day, settings) {},
-                dayHeader: function (date, settings) {},
-                header: function (date, mode, settings){},
-                hourHeader: function (date, settings) {},
-                minuteHeader: function (date, settings) {},
-                monthHeader: function (date, settings) {},
-                time: function (date, settings, forCalendar) {},
+                dayHeader: 'MMMM YYYY',
+                hourHeader: 'MMMM D, YYYY',
+                minuteHeader: 'MMMM D, YYYY',
+                month: 'MMMM YYYY',
+                monthHeader: 'YYYY',
+                time: 'h:mm A',
                 today: function (settings) {},
+                year: 'YYYY',
                 yearHeader: function (date, settings) {},
             }
             </div>
