@@ -435,6 +435,10 @@ themes      : ['Default', 'Chubby']
     <div class="trigger example">
       <h4 class="ui header">Changing Trigger</h4>
       <p>An accordion normally triggers when its title is clicked. However you can change the trigger selector to specify an element inside a title to use as an activator</p>
+      <div class="ui ignored message">
+        Starting from <span class="ui tiny horizontal black label">2.9.0</span> there also exists a <code>ignore</code> selector to be able to define elements which should <b>not</b> trigger the accordion toggle.
+        <br>For example when a dropdown is part of the accordion title, you may not want to toggle the accordion when you click on the dropdown.
+      </div>
       <div class="ui code" data-type="javascript" data-demo="true">
         $('.trigger.example .accordion')
           .accordion({
@@ -798,6 +802,7 @@ themes      : ['Default', 'Chubby']
               accordion : '.accordion',
               title     : '.title',
               trigger   : '.title',
+              ignore    : '.ui.dropdown',
               content   : '.content'
             }
             </div>
