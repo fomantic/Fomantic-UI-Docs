@@ -40,7 +40,10 @@ semantic.calendar.ready = function() {
   // 24 hour format
   $('#no_ampm').calendar({
     type: 'time',
-    ampm: false
+    formatter: {
+      time: 'H:mm',
+      cellTime: 'H:mm'
+    }
   });
 
   // Month and year
@@ -69,16 +72,21 @@ semantic.calendar.ready = function() {
   ;
 
   // Custom format
+  $('#token_format_calendar').calendar({
+    monthFirst: false,
+    type: 'date',
+    formatter: {
+        date: '"approx:" YYYY-MM-DD'
+    }
+  });
   $('#custom_format_calendar').calendar({
     monthFirst: false,
     type: 'date',
     formatter: {
       date: function (date, settings) {
-        if (!date) return '';
-        var day = date.getDate();
-        var month = date.getMonth() + 1;
-        var year = date.getFullYear();
-        return day + '/' + month + '/' + year;
+          if (!date) return '';
+          // Show the selected year 85 Years ahead
+          return 'Expires in ' + (date.getFullYear() + 85);
       }
     }
   });
@@ -114,12 +122,15 @@ semantic.calendar.ready = function() {
     monthFirst: false,
     text: {
       days: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+      dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+      dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
       months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
       monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
       today: 'Aujourd\'hui',
       now: 'Maintenant',
       am: 'AM',
-      pm: 'PM'
+      pm: 'PM',
+      weekNo: 'Semaine'
     }
   });
 
@@ -154,7 +165,11 @@ semantic.calendar.ready = function() {
   $('#disabledhours_calendar')
     .calendar({
         initialDate: new Date('2021-07-01'),
-        ampm: false,
+        formatter: {
+            datetime: 'MMMM D, YYYY H:mm',
+            time: 'H:mm',
+            cellTime: 'H:mm'
+        },
         disabledHours: [
             0, // Midnight will always be disabled
             {
