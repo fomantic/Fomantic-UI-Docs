@@ -11,6 +11,9 @@
   <% if @document.element is 'sidebar': %>
   <%- @partial('demo-sidebar') %>
   <% end %>
+  <% if @document.element is 'flyout': %>
+  <%- @partial('demo-flyout') %>
+  <% end %>
   <%- @partial('sidebar') %>
   <%- @partial('fixed-menu') %>
   <div class="pusher">
