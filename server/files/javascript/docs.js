@@ -918,11 +918,13 @@ semantic.ready = function() {
       classes = classes.replace('padded', "very padded, padded");
       classes = classes.replace('relaxed', "very relaxed, relaxed");
       classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
-      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide");
+      classes = classes.replace('thin', "very thin, thin");
+      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,very wide,wide");
       classes = classes.replace('count', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('column count', "one column,two column,three column,four column,five column,six column,seven column,eight column,nine column,ten column,eleven column,twelve column,thirteen column,fourteen column,fifteen column,sixteen column");
       classes = classes.replace('evenly divided', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('size', "mini,tiny,small,medium,large,big,huge,massive");
+      classes = classes.replace('position', "left,right,top,bottom");
       classes = classes.replace('emphasis', "primary,secondary,tertiary");
       classes = classes.replace('colored', "primary,secondary,red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
       classes = (classes !== '')
