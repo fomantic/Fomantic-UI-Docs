@@ -1012,7 +1012,7 @@ type        : 'UI Behavior'
         <tr>
           <td>serializeForm</td>
           <td>false</td>
-          <td>Whether to serialize closest form and include in request</td>
+          <td>Whether to serialize closest form and include in request.<br>If set to <code>'formdata'</code> instead of <code>true</code> the Formdata Web API is used (formdata however does not support nested named keys like <code>a[b][c][d]</code>)</td>
         </tr>
         <tr>
           <td>throttle</td>
