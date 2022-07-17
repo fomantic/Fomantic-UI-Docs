@@ -619,6 +619,9 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
   <div class="example">
     <h4 class="ui header">Marked<div class="ui black label">New in 2.8</div></h4>
     <p>A cell or row can be marked by a colored left or right border</p>
+    <div class="ui warning message">
+      <p>Since 2.9.0 you have to follow the class order: First color name, then <code>marked</code>. This is to support <a href="#colored-and-marked">colored and marked</a> cells</p>
+    </div>
     <table class="ui celled table">
       <thead>
         <tr>
@@ -629,26 +632,47 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </thead>
       <tbody>
         <tr>
-          <td class="right marked blue">No Name Specified</td>
-          <td class="left marked red">Unknown</td>
+          <td class="right blue marked blue">No Name Specified</td>
+          <td class="left red marked">Unknown</td>
           <td>None</td>
         </tr>
-        <tr class="left marked green">
+        <tr class="left green marked">
           <td>Jimmy</td>
           <td><i class="microphone icon"></i> Recording session</td>
           <td>None</td>
         </tr>
         <tr>
           <td>Jamie</td>
-          <td class="right marked orange">Unknown</td>
+          <td class="right orange marked">Unknown</td>
           <td><i class="child icon"></i> Baby Party</td>
         </tr>
-        <tr class="right marked purple">
+        <tr class="right purple marked">
           <td>Jill</td>
           <td>Unknown</td>
           <td>Vacation</td>
         </tr>
         </tbody>
+    </table>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Colored and Marked<div class="ui black label">New in 2.9</div></h4>
+    <p>If you need colored cells which are also marked at the same time in a different color, you have to follow a specific class order and add the <code>colored</code> class to the cell color.<br>For example <code>red colored right blue marked</code> .</p>
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="red colored right blue marked">No Name Specified</td>
+          <td class="green colored left red marked">Unknown</td>
+          <td class="yellow colored right purple marked">None</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
