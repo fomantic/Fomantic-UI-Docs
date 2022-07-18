@@ -329,7 +329,7 @@ themes      : ['Default', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">File Action<div class="ui black label">New in 2.9.0</div></h4>
-    <p>A File action input allow for custom content inside the file trigger button. File action input buttons have to be made out of a label element.</p>
+    <p>A File action input allows custom content inside the file trigger button. File action input buttons have to be made out of a label element.</p>
     <div class="ui ignored warning message">
         Although <code>left action</code> also works with file action inputs, in order to support button highlighting on key tabbing, the action button needs to be placed after the file input so it appears to the right.
     </div>
