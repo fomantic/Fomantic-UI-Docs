@@ -31,6 +31,44 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">
+      File Input <div class="ui black label">New in 2.9.0</div>
+    </h4>
+    <p>A file input</p>
+    <div class="ui file input">
+      <input type="file">
+    </div>
+    <div class="ui ignored message">
+    If you want the trigger button having a custom text or an icon, you should use a <a href="#file-action">File Action Input</a>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      Invisible File Input <div class="ui black label">New in 2.9.0</div>
+    </h4>
+    <p>A file input can be made invisible so you are able to design another element to trigger the file dialog.</p>
+    <p>To accomplish this, you have to use a corresponding <code>&lt;label&gt;</code> element. This can be styled as desired, most probably as a button element</p>
+    <div class="ui ignored info icon message">
+      <i class="outline lightbulb icon"></i>
+      <div class="content">
+        In order to support button highlighting on key tabbing, the label element has to be placed immediatly after the invisible input element.
+      </div>
+    </div>
+    <input type="file" id="invisibleupload1" class="ui invisible file input">
+    <label for="invisibleupload1" class="ui red icon button">
+      <i class="file icon"></i>
+      Open any file
+    </label>
+    <input type="file" id="invisibleupload2" class="ui invisible file input">
+    <label for="invisibleupload2" class="ui placeholder segment">
+      <div class="ui icon header">
+        <i class="upload icon"></i>
+        Click here to upload
+      </div>
+    </label>
+  </div>
+
   <h2 class="ui dividing header">States</h2>
 
   <div class="example">
@@ -286,6 +324,21 @@ themes      : ['Default', 'GitHub']
       <button class="ui icon button">
         <i class="search icon"></i>
       </button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">File Action<div class="ui black label">New in 2.9.0</div></h4>
+    <p>A File action input allow for custom content inside the file trigger button. File action input buttons have to be made out of a label element.</p>
+    <div class="ui ignored warning message">
+        Although <code>left action</code> also works with file action inputs, in order to support button highlighting on key tabbing, the action button needs to be placed after the file input so it appears to the right.
+    </div>
+    <div class="ui file action input">
+      <input id="actionfileinput" type="file">
+      <label for="actionfileinput" class="ui blue button">
+         <i class="wizard icon"></i>
+            Choose wisely
+      </label>
     </div>
   </div>
 
