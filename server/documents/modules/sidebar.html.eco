@@ -155,6 +155,12 @@ themes      : ['Default']
           &lt;/div&gt;
         &lt;/body&gt;
       </div>
+      <div class="ui message">
+        <ul class="ui list">
+          <li>The <code>pusher</code> is the element that will be pushed away by the sidebar and should contain your site content.</li>
+          <li>If your pusher contains overflowing content, you might use <code>overflowing pusher</code> to prevent possible undesired side effects (for example when using <code>native sticky</code> somewhere)</li>
+        </ul>
+      </div>
     </div>
     <div class="no example" data-class="vertical menu" data-use-content="true">
       <h4 class="ui header">Using with Menu</h4>
