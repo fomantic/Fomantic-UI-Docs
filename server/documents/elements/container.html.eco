@@ -82,6 +82,9 @@ themes      : ['Default']
           </tr>
         </tbody>
       </table>
+      <div class="ui message">
+      You can use a <code>wide container</code> to increase the calculated width by a customizable multiplier (default <code>1.2</code>).
+      </div>
       <h3 class="ui header">Responsive Visibility</h3>
       <p>Since variations in Fomantic UI are only assigned in the scope of components, there are no "free floating" responsive class names, however some components include responsive variations to help ease responsive design. <a href="/collections/grid.html#device-visibility">Grid</a> for example, includes responsive classes for hiding or showing <code>column</code>, <code>row</code> based on device type.</p>
 
@@ -101,9 +104,12 @@ themes      : ['Default']
       /* In container.variables */
       @tabletMinimumGutter : (@emSize  * 1); /* require 1em gutter */
       @tabletWidth : @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
+      /* When a 'wide' container is used */
+      @wideRatio: 1.2;
+      @tabletWideWidth: @tabletWidth * @wideRatio;
       </div>
 
-      <p>This is the same as <code>768px - (14px * 2) - 17px</code> or <code>723px</code></p>
+      <p>This is the same as <code>768px - (14px * 2) - 17px</code> or <code>723px</code> (<code>868px</code> for <code>wide</code> variant)</p>
 
       <p>Adjusting site breakpoints in <code>site.variables</code> to use custom values will automatically adjust container widths.</p>
 
