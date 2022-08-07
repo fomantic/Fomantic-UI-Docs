@@ -51,6 +51,7 @@ semantic.ready = function() {
     $exampleHeaders      = $sectionExample.children('h4'),
     $footer              = $('.page > .footer'),
 
+    $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
     $pageTabs            = $('.masthead.tab.segment .tabs.menu .item'),
 
@@ -1332,6 +1333,16 @@ semantic.ready = function() {
 
   $swap
     .on('click', handler.swapStyle)
+  ;
+
+  $menuPopup
+    .popup({
+      position  : 'bottom center',
+      delay: {
+        show: 100,
+        hide: 50
+      }
+    })
   ;
 
   $pageDropdown
