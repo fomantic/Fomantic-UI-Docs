@@ -3,43 +3,6 @@
              Global
 *******************************/
 
-/* Regular */
-@font-face {
-  font-family: 'Lato';
-  src:
-    url(/fonts/lato/Lato-Regular.woff2) format('woff2')
-;
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src:
-    url(/fonts/lato/Lato-Italic.woff2) format('woff2')
-;
-  font-style: italic;
-  font-weight: normal;
-}
-
-/* Bold */
-@font-face {
-  font-family: 'Lato';
-  src:
-    url(/fonts/lato/Lato-Bold.woff2) format('woff2')
-;
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'Lato';
-  src:
-    url(/fonts/lato/Lato-BoldItalic.woff2) format('woff2')
-;
-  font-style: italic;
-  font-weight: 700;
-}
-
-
 /*--------------
      Page
 ---------------*/
@@ -272,20 +235,6 @@ blockquote .author {
 #example .masthead .main.menu > .item {
   padding-top: 0.785714em;
   padding-bottom: 0.785714em;
-}
-
-/*--------------
-    Languages
----------------*/
-
-#example .language.dropdown.button {
-  margin-top: 0.3em;
-}
-#example .language.dropdown > .text .description {
-  color: rgba(255, 255, 255, 0.4);
-}
-#example .language.dropdown > .menu {
-  width: 280px;
 }
 
 /*--------------
@@ -2303,11 +2252,6 @@ div.footer-sponsor a {
 
   /* Remove Bug Reports */
   #example .main.menu .bug.item {
-    display: none;
-  }
-
-  /* Hide Music *]/
-  #example .main.menu .music.item {
     display: none;
   }
 
