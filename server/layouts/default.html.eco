@@ -5,7 +5,6 @@
   <%- @partial('javascript') %>
   <%- @partial('css') %>
   <%- @partial('tracking') %>
-  <%- @partial('transifex') %>
 </head>
 <body id="example" class="<%= @document.css %>" ontouchstart="">
   <% if @document.element is 'sidebar': %>
@@ -26,7 +25,6 @@
       </div>
     </div>
   </div>
-  <%- @partial('language-modal') %>
   <%- @partial('dimmer-demo') %>
   <%- @partial('less') %>
 </body>

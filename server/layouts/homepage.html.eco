@@ -24,8 +24,6 @@
     <%- @partial('footer') %>
   </div>
 
-  <%- @partial('language-modal') %>
-
   <% if 'development' in @getEnvironments(): %>
   <script>
   (function () {
@@ -54,7 +52,6 @@
   </script>
   <% end %>
 
-  <%- @partial('transifex') %>
   <script src="/javascript/library/highlight.min.js"></script>
   <script src="/javascript/library/easing.min.js"></script>
   <%- @partial('ui-javascript') %>

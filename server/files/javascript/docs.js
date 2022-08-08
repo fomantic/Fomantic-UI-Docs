@@ -51,14 +51,9 @@ semantic.ready = function() {
     $exampleHeaders      = $sectionExample.children('h4'),
     $footer              = $('.page > .footer'),
 
-    $menuMusic           = $('.ui.main.menu .music.item'),
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
     $pageTabs            = $('.masthead.tab.segment .tabs.menu .item'),
-
-    $languageDropdown    = $('.language.dropdown'),
-    $chineseModal        = $('.chinese.modal'),
-    $languageModal       = $('.language.modal'),
 
     $downloadPopup       = $('.download.button'),
     $downloads           = $('.download.popup'),
@@ -79,8 +74,6 @@ semantic.ready = function() {
     $sidebarButton       = $('.fixed.launch.button'),
     $code                = $('div.code').not('.existing'),
     $existingCode        = $('.existing.code'),
-
-    languageDropdownUsed = false,
 
     metadata,
 
@@ -274,49 +267,6 @@ semantic.ready = function() {
           ;
           $activeSection
             .addClass('active')
-          ;
-        }
-      }
-    },
-
-    translatePage: function(languageCode, text, $choice) {
-      languageDropdownUsed = true;
-      if(window.Transifex !== undefined) {
-        window.Transifex.live.translateTo(languageCode, true);
-      }
-    },
-
-    showLanguageModal: function(languageCode) {
-      var
-        $choice = $languageDropdown.find('[data-value="' + languageCode + '"]').eq(0),
-        percent = $choice.data('percent') || 0,
-        text    = $choice.text()
-      ;
-      // dont trigger on translate event every page load
-      if(languageDropdownUsed) {
-        if(languageCode == 'zh' && window.location.host.replace('www.','') !== 'semantic-ui.cn') {
-          $chineseModal
-            .modal({
-              closable: false
-            })
-            .modal('show')
-          ;
-        }
-        else if(percent < 100) {
-          languageDropdownUsed = false;
-          $languageModal
-            .modal()
-            .find('.header .name')
-              .html(text)
-              .end()
-            .find('.complete')
-              .html(percent)
-              .end()
-          ;
-          $languageModal
-            .modal('show', function() {
-              $('.language.modal .progress .bar').css('width', percent + '%');
-            })
           ;
         }
       }
@@ -650,16 +600,6 @@ semantic.ready = function() {
           $element.find(selector).text(text);
         });
         return $element;
-      }
-    },
-
-    openMusic: function() {
-      var
-        url       = 'http://stratus.soundcloud.com/player?links=https://soundcloud.com/into-the-light/sets/sui-2&popup=true',
-        newWindow = window.open(url,'name','height=196,width=733')
-      ;
-      if(window.focus) {
-        newWindow.focus();
       }
     },
 
@@ -1352,10 +1292,6 @@ semantic.ready = function() {
     ;
   }
 
-  $menuMusic
-    .on('click', handler.openMusic)
-  ;
-
   $downloadPopup
     .popup({
       transition : 'horizontal flip',
@@ -1399,9 +1335,7 @@ semantic.ready = function() {
     .on('click', handler.swapStyle)
   ;
 
-
   $menuPopup
-    .add($languageDropdown)
     .popup({
       position  : 'bottom center',
       delay: {
@@ -1419,19 +1353,6 @@ semantic.ready = function() {
     })
   ;
 
-  $languageDropdown
-    .dropdown({
-      allowTab       : false,
-      on             : 'click',
-      fullTextSearch : 'exact',
-      match          : 'text',
-      onShow         : function() {
-        $(this).popup('hide');
-      },
-      onChange        : handler.translatePage
-    })
-  ;
-
   //$.fn.api.settings.base = '//api.semantic-ui.com';
   $.extend($.fn.api.settings.api, {
     categorySearch     : '//api.semantic-ui.com/search/category/{query}',
@@ -1439,10 +1360,6 @@ semantic.ready = function() {
     getVariables       : '/src/themes/{$theme}/{$type}s/{$element}.variables',
     search             : '//api.semantic-ui.com/search/{query}'
   });
-
-  if(window.Transifex !== undefined) {
-    window.Transifex.live.onTranslatePage(handler.showLanguageModal);
-  }
 
   if(window.location.hash && window.location.hash.indexOf('/')===-1) {
     var

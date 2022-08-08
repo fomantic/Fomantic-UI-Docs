@@ -298,13 +298,6 @@ semantic.home.ready = function() {
     .dropdown()
   ;
 
-  if(window.Transifex !== undefined) {
-    window.Transifex.live.onTranslatePage(function(countryCode){
-      var fullName = $('.language.dropdown .item[data-value=' + countryCode + ']').eq(0).text();
-      $('.language.dropdown > .text').html(fullName);
-    });
-  }
-
   $('.ui.sidebar')
     .sidebar('setting', {
       transition: 'overlay'
