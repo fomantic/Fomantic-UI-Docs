@@ -1681,9 +1681,9 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="tag example">
       <h4 class="ui header">Stuck User Additions</h4>
       <p>While using <code>allowAdditions: true</code>, the first line indicating "add:" with the user addition may not be correctly displayed, depending on the container size and the distance between topmost visible item and menu's top item.
+    <div class="stuck example">
 
       <p>You can stick this addition line to the top of the menu by providing the additional <code>stuck</code> class.</p>
 
@@ -1707,7 +1707,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
 
       <div class="evaluated code" data-type="javascript">
-        $('.tag.example .ui.dropdown')
+        $('.stuck.example .ui.dropdown')
           .dropdown({
             allowAdditions: true,
             className: {
