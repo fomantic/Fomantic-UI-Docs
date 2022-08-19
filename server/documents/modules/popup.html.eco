@@ -1089,7 +1089,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>verbose</td>
-          <td>true</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>
