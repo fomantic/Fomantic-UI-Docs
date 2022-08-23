@@ -187,7 +187,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Via existing DOM node</h4>
 
-      <p>A modal can be included anywhere on the page. On initialization a modal's current size will be cached, and the element will be detached from the DOM and moved inside a dimmer.</p>
+      <p>A flyout can be included anywhere on the page. On initialization a flyout's current size will be cached, and the element will be detached from the DOM and moved inside a dimmer.</p>
       <div class="code" data-type="javascript">
       $('.ui.flyout')
         .flyout()
@@ -218,11 +218,12 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Via Javascript properties</h4>
-      <p>You can create temporary modals without the need to create markup on your own. Temporary modals will be removed from the DOM once closed by default if there isn't a custom <code>onHidden</code> callback given.</p>
+      <p>You can create temporary flyouts without the need to create markup on your own. Temporary flyouts will be removed from the DOM once closed by default if there isn't a custom <code>onHidden</code> callback given.</p>
       <div class="code" data-demo="true">
-        $('body').flyout({
+        $('body').removeClass('flyout').flyout({
           debug: true,
           verbose: true,
+          autoShow: true,
           title: 'Important Notice',
           class: 'wide',
           closeIcon: true,
@@ -232,7 +233,7 @@ themes      : ['Default']
             class: 'green',
             icon: 'save'
           }]
-        }).flyout('show');
+        });
       </div>
     </div>
 
@@ -328,7 +329,7 @@ themes      : ['Default']
           <tr>
             <td>closable</td>
             <td><code>true</code></td>
-            <td>Setting to <code>false</code> will not allow you to close the modal by clicking on the dimmer.</td>
+            <td>Setting to <code>false</code> will not allow you to close the flyout by clicking on the dimmer.</td>
           </tr>
           <tr>
             <td>dimPage</td>
@@ -552,7 +553,7 @@ themes      : ['Default']
           <tr>
             <td>closeIcon</td>
             <td><code>false</code></td>
-            <td>Whether the modal should include a close icon.</td>
+            <td>Whether the flyout should include a close icon.</td>
           </tr>
           <tr>
             <td>actions</td>
