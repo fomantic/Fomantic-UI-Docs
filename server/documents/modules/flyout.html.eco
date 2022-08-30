@@ -4,8 +4,8 @@ css         : 'flyout'
 element     : 'flyout'
 elementType : 'module'
 standalone  : true
-status      : 'NEW'
-statusColor : 'teal'
+status      : 'BETA'
+statusColor : 'orange'
 
 title       : 'Flyout'
 description : 'A flyout is an overlay container that display content from the edge of a viewport'
