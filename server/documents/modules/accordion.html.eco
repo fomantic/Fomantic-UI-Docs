@@ -721,8 +721,8 @@ themes      : ['Default', 'Chubby']
         </tr>
         <tr>
           <td>easing</td>
-          <td>easeInOutQuint</td>
-          <td>Easing of opening animation. EaseInOutQuint is included with accordion, for additional options you must include <a href="http://gsgd.co.uk/sandbox/jquery/easing/">easing equations</a>.</td>
+          <td>easeOutQuad</td>
+          <td>Easing of opening animation. EaseOutQuad is included with accordion, for additional options you must include <a href="http://gsgd.co.uk/sandbox/jquery/easing/">easing equations</a>.</td>
         </tr>
       </tbody>
     </table>
