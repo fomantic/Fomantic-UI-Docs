@@ -15,7 +15,7 @@ semantic.toast.ready = function() {
   /* Behaviors */
   $('#jsaccess_toast_init').click(function(){
     if(!globalToast) {
-      globalToast = $('body').toast({
+      globalToast = $.toast({
         message: 'This pink toast stays for a long time. It is returned as object when created, so you can interact with it via Javascript',
         displayTime: 120000,
         showProgress: 'top',
@@ -25,7 +25,7 @@ semantic.toast.ready = function() {
         }
       });
     } else {
-      $('body').toast({
+      $.toast({
         message: 'The pink toast is already shown',
         class:'error',
         showIcon: true
@@ -49,7 +49,7 @@ semantic.toast.ready = function() {
   $('#jsaccess_toast_howmany').click(function(){
     if (globalToast) {
       var howMany = $(globalToast).toast('get toasts');
-      $('body').toast({
+      $.toast({
         message: howMany.length +' toast are currently shown (without this one!)',
         class:'info',
         showIcon: true

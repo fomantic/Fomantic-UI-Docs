@@ -21,15 +21,19 @@ themes      : ['Default']
   <div class="ui active tab" data-tab="definition">
 
   <h2 class="ui dividing header">Types</h2>
-
+    <div class="ui ignored info message">jQuery short notation <code>$.toast()</code> support was added in 2.9.0. If you want this for older FUI versions add
+        <code>
+        $.toast = $.fn.toast;
+        </code><br>
+        The old selector notation <code>$('body').toast()</code> still works as before.
+    </div>
     <div class="no example">
         <h4 class="ui header">Minimal</h4>
         <p>A minimal toast will just display a message.</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            message: 'I am a toast, nice to meet you !'
-          })
+        $.toast({
+          message: 'I am a toast, nice to meet you !'
+        })
         ;
         </div>
     </div>
@@ -38,11 +42,10 @@ themes      : ['Default']
         <h4 class="ui header">Titled</h4>
         <p>You can add a title to your toast.</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            title: 'Better ?',
-            message: 'Hey look, I have a title !'
-          })
+        $.toast({
+          title: 'Better ?',
+          message: 'Hey look, I have a title !'
+        })
         ;
         </div>
     </div>
@@ -51,23 +54,21 @@ themes      : ['Default']
         <h4 class="ui header">Progress Bar</h4>
         <p>You can attach a progress bar to your toast.</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            title: 'LOOK',
-            message: 'See, how long i will last',
-            showProgress: 'bottom'
-          })
+        $.toast({
+          title: 'LOOK',
+          message: 'See, how long i will last',
+          showProgress: 'bottom'
+        })
         ;
         </div>
         <p>The progress bar can have its own individual color</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            title: 'LOOK',
-            message: 'See, how long i will last',
-            showProgress: 'bottom',
-            classProgress: 'red'
-          })
+        $.toast({
+          title: 'LOOK',
+          message: 'See, how long i will last',
+          showProgress: 'bottom',
+          classProgress: 'red'
+        })
         ;
         </div>
     </div>
@@ -78,27 +79,24 @@ themes      : ['Default']
         <h4 class="ui header">Toast Type</h4>
         <p>A toast can be used to display different types of informations.</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            class: 'success',
-            message: `You're using the good framework !`
-          })
+        $.toast({
+          class: 'success',
+          message: `You're using the good framework !`
+        })
         ;
         </div>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            class: 'error',
-            message: `An error occurred !`
-          })
+        $.toast({
+          class: 'error',
+          message: `An error occurred !`
+        })
         ;
         </div>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            class: 'warning',
-            message: `Behind you !`
-          })
+        $.toast({
+          class: 'warning',
+          message: `Behind you !`
+        })
         ;
         </div>
     </div>
@@ -107,19 +105,17 @@ themes      : ['Default']
         <h4 class="ui header">Position</h4>
         <p>A toast can appear at different positions on the screen.</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            position: 'bottom right',
-            message: `It's pretty cold down there...`
-          })
+        $.toast({
+          position: 'bottom right',
+          message: `It's pretty cold down there...`
+        })
         ;
         </div>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            position: 'top left',
-            message: `Look, I'm here !`
-          })
+        $.toast({
+          position: 'top left',
+          message: `Look, I'm here !`
+        })
         ;
         </div>
     </div>
@@ -130,22 +126,20 @@ themes      : ['Default']
             Attached positions with centered content only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
           </div>
           <div class="code" data-demo="true">
-            $('body')
-              .toast({
-                position: 'top attached',
-                title: 'Watch out!',
-                message: `I am a top attached toast`
-              })
+            $.toast({
+              position: 'top attached',
+              title: 'Watch out!',
+              message: `I am a top attached toast`
+            })
             ;
           </div>
           <div class="code" data-demo="true">
-            $('body')
-              .toast({
-                position: 'bottom attached',
-                title: 'Watch out!',
-                message: 'I am a bottom attached toast',
-                newestOnTop: true
-              })
+            $.toast({
+              position: 'bottom attached',
+              title: 'Watch out!',
+              message: 'I am a bottom attached toast',
+              newestOnTop: true
+            })
             ;
           </div>
       </div>
@@ -153,12 +147,11 @@ themes      : ['Default']
       <h4 class="ui header">Direction <span class="ui black label">New in 2.8.8</span></h4>
       <p>Toasts can stack horizontal</p>
       <div class="code" data-demo="true">
-      $('body')
-        .toast({
-          horizontal: true,
-          position: 'top left',
-          message: `Next one will open to the right`
-        })
+      $.toast({
+        horizontal: true,
+        position: 'top left',
+        message: `Next one will open to the right`
+      })
       ;
       </div>
     </div>
@@ -169,12 +162,11 @@ themes      : ['Default']
               Centered content in <a href="#attached-position">attached toasts</a> only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
           </div>
           <div class="code" data-demo="true">
-              $('body')
-                  .toast({
-                      title: 'Veronika has joined',
-                      message: 'Welcome to the Fomantic-UI community!',
-                      class: 'center aligned', // you can also use 'centered'
-                  })
+              $.toast({
+                  title: 'Veronika has joined',
+                  message: 'Welcome to the Fomantic-UI community!',
+                  class: 'center aligned', // you can also use 'centered'
+              })
               ;
           </div>
       </div>
@@ -182,20 +174,18 @@ themes      : ['Default']
         <h4 class="ui header">Duration</h4>
         <p>You can choose how long a toast should be displayed.</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            displayTime: 5000,
-            message: `You will see me for 5 seconds.`
-          })
+        $.toast({
+          displayTime: 5000,
+          message: `You will see me for 5 seconds.`
+        })
         ;
         </div>
         <p>You can even avoid a toast to disappear.</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            displayTime: 0,
-            message: `I'll stay here until you click on me !`
-          })
+        $.toast({
+          displayTime: 0,
+          message: `I'll stay here until you click on me !`
+        })
         ;
         </div>
         <p>Setting the value to <code>auto</code> calculates the display time by the amount of containing words</p>
@@ -203,8 +193,7 @@ themes      : ['Default']
             You can adjust the calculation by modifying the default values for <code>minDisplayTime</code> and <code>wordsPerMinute</code>
         </div>
         <div class="code" data-demo="true">
-          $('body')
-            .toast({
+          $.toast({
             displayTime: 'auto',
             showProgress: 'top',
             classProgress: 'blue',
@@ -218,15 +207,14 @@ themes      : ['Default']
         <h4 class="ui header">Use Message Style</h4>
         <p>You can use all of the styles and colors from the message component</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            title: 'Awesome',
-            message: 'I got my style from the message class',
-            class : 'purple',
-            className: {
-                toast: 'ui message'
-            }
-          })
+        $.toast({
+          title: 'Awesome',
+          message: 'I got my style from the message class',
+          class : 'purple',
+          className: {
+              toast: 'ui message'
+          }
+        })
         ;
         </div>
     </div>
@@ -235,13 +223,12 @@ themes      : ['Default']
         <h4 class="ui header">Increasing Progress Bar</h4>
         <p>The progress bar could be be raised instead of lowered</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            title: 'LOOK',
-            message: 'See, how long i will last',
-            showProgress: 'top',
-            progressUp: true
-          })
+        $.toast({
+          title: 'LOOK',
+          message: 'See, how long i will last',
+          showProgress: 'top',
+          progressUp: true
+        })
         ;
         </div>
     </div>
@@ -261,13 +248,11 @@ themes      : ['Default']
                 return document.suiToastColorIndex;
             }
         ;
-        $('body')
-          .toast({
-            message: 'I am a colorful toast',
-//            class: 'purple',
-            class : suiColors[suiPlus()],   //cycle through all colors
-            showProgress: 'bottom'
-          })
+        $.toast({
+          message: 'I am a colorful toast',
+          class : suiColors[suiPlus()],   //cycle through all colors
+          showProgress: 'bottom'
+        })
         ;
         </div>
     </div>
@@ -287,12 +272,11 @@ themes      : ['Default']
                 return document.suiToastColorIndex;
             }
         ;
-        $('body')
-          .toast({
-            message: 'I am an inverted colorful toast',
-            class : 'inverted ' + suiColors[suiPlus()],   //cycle through all colors
-            showProgress: 'bottom'
-          })
+        $.toast({
+          message: 'I am an inverted colorful toast',
+          class : 'inverted ' + suiColors[suiPlus()],   //cycle through all colors
+          showProgress: 'bottom'
+        })
         ;
         </div>
     </div>
@@ -309,30 +293,29 @@ themes      : ['Default']
             </ul>
         </div>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            message: 'Do you really want to star Fomantic-UI?',
-            displayTime: 0,
-            class: 'black',
-            actions:	[{
-              text: 'Yes',
-              icon: 'check',
-              class: 'green',
-              click: function() {
-                  $('body').toast({message:'You clicked "yes", toast closes by default'});
-              }
-            },{
-              icon: 'ban',
-              class: 'icon red'
-            },{
-              text: '?',
-              class: 'blue',
-              click: function() {
-                  $('body').toast({message:'Returning false from the click handler avoids closing the toast '});
-                  return false;
-              }
-            }]
-          })
+        $.toast({
+          message: 'Do you really want to star Fomantic-UI?',
+          displayTime: 0,
+          class: 'black',
+          actions:	[{
+            text: 'Yes',
+            icon: 'check',
+            class: 'green',
+            click: function() {
+                $.toast({message:'You clicked "yes", toast closes by default'});
+            }
+          },{
+            icon: 'ban',
+            class: 'icon red'
+          },{
+            text: '?',
+            class: 'blue',
+            click: function() {
+                $.toast({message:'Returning false from the click handler avoids closing the toast '});
+                return false;
+            }
+          }]
+        })
         ;
         </div>
     </div>
@@ -341,20 +324,19 @@ themes      : ['Default']
 
         <p>The <code>classActions</code> setting provides you a way to adjust the overall appearance of the action buttons. Using <code>basic</code> class does not lighten the actions background. <code>left</code> aligns the buttons to the left</p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            message: 'Do you really want to star Fomantic-UI?',
-            displayTime: 0,
-            class: 'black',
-            classActions: 'basic left',
-            actions:	[{
-              text: 'Yes, really',
-              class: 'yellow',
-              click: function() {
-                $('body').toast({message:'You clicked "yes", toast closes by default'});
-              }
-            }]
-          })
+        $.toast({
+          message: 'Do you really want to star Fomantic-UI?',
+          displayTime: 0,
+          class: 'black',
+          classActions: 'basic left',
+          actions:	[{
+            text: 'Yes, really',
+            class: 'yellow',
+            click: function() {
+              $.toast({message:'You clicked "yes", toast closes by default'});
+            }
+          }]
+        })
         ;
         </div>
     </div>
@@ -362,20 +344,19 @@ themes      : ['Default']
         <h4 class="ui header">Centered<div class="ui black label">New in 2.8.8</div></h4>
         <p>The actions buttons can also be shown <code>centered</code></p>
         <div class="code" data-demo="true">
-          $('body')
-              .toast({
-                  message: 'Do you really want to star Fomantic-UI?',
-                  displayTime: 0,
-                  class: 'black',
-                  classActions: 'centered', // you can also use 'center aligned'
-                  actions:	[{
-                      text: 'Yes, really',
-                      class: 'yellow',
-                      click: function() {
-                        $('body').toast({message:'You clicked "yes", toast closes by default'});
-                    }
-                 }]
-              })
+          $.toast({
+            message: 'Do you really want to star Fomantic-UI?',
+            displayTime: 0,
+            class: 'black',
+            classActions: 'centered', // you can also use 'center aligned'
+            actions:	[{
+                text: 'Yes, really',
+                class: 'yellow',
+                click: function() {
+                  $.toast({message:'You clicked "yes", toast closes by default'});
+                }
+            }]
+          })
           ;
         </div>
     </div>
@@ -388,26 +369,25 @@ themes      : ['Default']
         </div>
 
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            message: 'Do you really want to star Fomantic-UI?',
-            displayTime: 0,
-            class: 'black',
-            classActions: 'top attached',
-            actions:	[{
-              text: 'Yes, really',
-              class: 'green',
-              click: function() {
-                $('body').toast({message:'You clicked "yes", toast closes by default'});
-              }
-            },{
-              text: 'Maybe later',
-              class: 'red',
-              click: function() {
-                $('body').toast({message:'You clicked "maybe", toast closes by default'});
-              }
-            }]
-          })
+        $.toast({
+          message: 'Do you really want to star Fomantic-UI?',
+          displayTime: 0,
+          class: 'black',
+          classActions: 'top attached',
+          actions:	[{
+            text: 'Yes, really',
+            class: 'green',
+            click: function() {
+              $.toast({message:'You clicked "yes", toast closes by default'});
+            }
+          },{
+            text: 'Maybe later',
+            class: 'red',
+            click: function() {
+              $.toast({message:'You clicked "maybe", toast closes by default'});
+            }
+          }]
+        })
         ;
         </div>
     </div>
@@ -416,26 +396,25 @@ themes      : ['Default']
 
         <p>You can use <code>vertical</code> to display your actions to the right of the toast. </p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            message: 'Do you really want to star Fomantic-UI?',
-            displayTime: 0,
-            class: 'black',
-            classActions: 'vertical',
-            actions:	[{
-              text: 'Yes, really',
-              class: 'green',
-              click: function() {
-                $('body').toast({message:'You clicked "yes", toast closes by default'});
-              }
-            },{
-              text: 'Maybe later',
-              class: 'red',
-              click: function() {
-                $('body').toast({message:'You clicked "maybe", toast closes by default'});
-              }
-            }]
-          })
+        $.toast({
+          message: 'Do you really want to star Fomantic-UI?',
+          displayTime: 0,
+          class: 'black',
+          classActions: 'vertical',
+          actions:	[{
+            text: 'Yes, really',
+            class: 'green',
+            click: function() {
+              $.toast({message:'You clicked "yes", toast closes by default'});
+            }
+          },{
+            text: 'Maybe later',
+            class: 'red',
+            click: function() {
+              $.toast({message:'You clicked "maybe", toast closes by default'});
+            }
+          }]
+        })
         ;
         </div>
     </div>
@@ -444,26 +423,25 @@ themes      : ['Default']
 
         <p>Vertical actions can also be displayed as button groups using <code>vertical attached</code><br>Vertical attached actions also support <code>left</code></p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            message: 'Do you really want to star Fomantic-UI?',
-            displayTime: 0,
-            class: 'black',
-            classActions: 'left vertical attached',
-            actions:	[{
-              text: 'Yes, really',
-              class: 'green',
-              click: function() {
-                $('body').toast({message:'You clicked "yes", toast closes by default'});
-              }
-            },{
-              text: 'Maybe later',
-              class: 'red',
-              click: function() {
-                $('body').toast({message:'You clicked "maybe", toast closes by default'});
-              }
-            }]
-          })
+        $.toast({
+          message: 'Do you really want to star Fomantic-UI?',
+          displayTime: 0,
+          class: 'black',
+          classActions: 'left vertical attached',
+          actions:	[{
+            text: 'Yes, really',
+            class: 'green',
+            click: function() {
+              $.toast({message:'You clicked "yes", toast closes by default'});
+            }
+          },{
+            text: 'Maybe later',
+            class: 'red',
+            click: function() {
+              $.toast({message:'You clicked "maybe", toast closes by default'});
+            }
+          }]
+        })
         ;
         </div>
     </div>
@@ -477,12 +455,11 @@ themes      : ['Default']
       <h4 class="ui header">Without icon</h4>
       <p>You can choose to hide the status icon.</p>
       <div class="code" data-demo="true">
-      $('body')
-        .toast({
-          class: 'warning',
-          showIcon: false,
-          message: 'Hey, where is my icon ?'
-        })
+      $.toast({
+        class: 'warning',
+        showIcon: false,
+        message: 'Hey, where is my icon ?'
+      })
       ;
       </div>
     </div>
@@ -491,12 +468,11 @@ themes      : ['Default']
       <h4 class="ui header">Individual icon</h4>
       <p>Use whatever you like from the included FontAwesome gallery</p>
       <div class="code" data-demo="true">
-      $('body')
-        .toast({
-          class: 'info',
-          showIcon: 'microphone',
-          message: 'Listen to me'
-        })
+      $.toast({
+        class: 'info',
+        showIcon: 'microphone',
+        message: 'Listen to me'
+      })
       ;
       </div>
     </div>
@@ -507,24 +483,22 @@ themes      : ['Default']
             For image sizes, only <code>mini</code>, <code>tiny</code>, <code>small</code> and <code>avatar</code> are supported
         </div>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
-            classImage: 'avatar',
-            message: `Veronika has joined the Fomantic-UI community`
-          })
+        $.toast({
+          showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
+          classImage: 'avatar',
+          message: `Veronika has joined the Fomantic-UI community`
+        })
         ;
         </div>
 
         <p>The image can be shown without any padding by providing the <code>image</code> class <span class="ui black label">New in 2.9.0</span></p>
         <div class="code" data-demo="true">
-        $('body')
-          .toast({
-            showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
-            class: 'image',
-            classImage: 'tiny',
-            message: `Veronika has joined the Fomantic-UI community`
-          })
+        $.toast({
+          showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
+          class: 'image',
+          classImage: 'tiny',
+          message: `Veronika has joined the Fomantic-UI community`
+        })
         ;
         </div>
     </div>
@@ -533,24 +507,22 @@ themes      : ['Default']
       <h4 class="ui header">Close Icon</h4>
       <p>You can force the user to click a close Icon instead of clicking anywhere on the toast to close it</p>
       <div class="code" data-demo="true">
-      $('body')
-        .toast({
-          class: 'info',
-          displayTime: 0,
-          closeIcon: true,
-          message: 'Click on the X to close me'
-        })
+      $.toast({
+        class: 'info',
+        displayTime: 0,
+        closeIcon: true,
+        message: 'Click on the X to close me'
+      })
       ;
       </div>
       <p>The close icon can also be displayed to the left <span class="ui black label">New in 2.8.0</span></p>
       <div class="code" data-demo="true">
-      $('body')
-        .toast({
-          class: 'info',
-          displayTime: 0,
-          closeIcon: 'left',
-          message: 'Click on the X to close me'
-        })
+      $.toast({
+        class: 'info',
+        displayTime: 0,
+        closeIcon: 'left',
+        message: 'Click on the X to close me'
+      })
       ;
       </div>
     </div>
@@ -559,17 +531,16 @@ themes      : ['Default']
       <h4 class="ui header">Transitions</h4>
       <p>You can set other transitions types and durations.</p>
       <div class="code" data-demo="true">
-      $('body')
-        .toast({
-          class: 'success',
-          message: 'Did you notice any difference ?',
-          transition: {
-            showMethod   : 'zoom',
-            showDuration : 1000,
-            hideMethod   : 'fade',
-            hideDuration : 1000
-          }
-        })
+      $.toast({
+        class: 'success',
+        message: 'Did you notice any difference ?',
+        transition: {
+          showMethod   : 'zoom',
+          showDuration : 1000,
+          hideMethod   : 'fade',
+          hideDuration : 1000
+        }
+      })
       ;
       </div>
     </div>
@@ -577,22 +548,21 @@ themes      : ['Default']
       <h4 class="ui header">Actions and centered and attached position</h4>
       <p>Using actions in <a href="#attached-position">attached position</a> variants in combination with  <a href="#center-aligned">centered toast content</a>  does only support  <a href="#attached">attached actions</a>. This is because of the flexbox usage to align a possible icon/image next to the content.</p>
       <div class="code" data-demo="true">
-          $('body')
-              .toast({
-                  title: 'Centered top attached',
-                  message: 'I only support attached actions',
-                  displayTime: 0,
-                  position: 'top attached',
-                  class: 'centered',
-                  classActions: 'attached',
-                  actions:	[{
-                      text: 'Mark as read',
-                      class: 'grey'
-                  },{
-                      text: 'Delete',
-                      class: 'red'
-                  }]
-              })
+          $.toast({
+            title: 'Centered top attached',
+            message: 'I only support attached actions',
+            displayTime: 0,
+            position: 'top attached',
+            class: 'centered',
+            classActions: 'attached',
+            actions:	[{
+              text: 'Mark as read',
+              class: 'grey'
+            },{
+              text: 'Delete',
+              class: 'red'
+            }]
+          })
           ;
       </div>
     </div>
@@ -659,11 +629,11 @@ themes      : ['Default']
           .toast({
               displayTime: 0,
               onDeny    : function(){
-                $('body').toast({message:'Wait not yet!'});
+                $.toast({message:'Wait not yet!'});
                 return false;
               },
               onApprove : function() {
-                $('body').toast({message:'Approved'});
+                $.toast({message:'Approved'});
               }
           })
           ;
@@ -719,7 +689,7 @@ themes      : ['Default']
           <p>The default behavior when hovering over the toast is to pause decreasing of the display time.<br>
               You can force the toast to not pause by setting <code>pauseOnHover</code> to <code>false</code></p>
           <div class="code" data-demo="true">
-            $('body').toast({
+            $.toast({
               message: 'This toast does not pause when you hover on it',
               pauseOnHover: false,
               showProgress: 'top'
@@ -739,7 +709,7 @@ themes      : ['Default']
               </ul>
           </div>
           <div class="code" data-demo="true">
-            $('body').toast({
+            $.toast({
               message: 'This toast does not close when you click on it',
               closeOnClick: false,
               showProgress: 'top'
@@ -762,7 +732,7 @@ themes      : ['Default']
             Close toast
         </button>
         <div class="code">
-            var myToast = $('body').toast();
+            var myToast = $.toast();
             var remainingTime = myToast.toast('get remainingTime');
         </div>
     </div>
@@ -784,25 +754,24 @@ themes      : ['Default']
             $.fn.toast.settings.transition.closeEasing = 'easeOutBounce';
             */
             // Or apply the old defaults directly to the toast
-            $('body')
-              .toast({
-                title: 'LOOK',
-                message: 'Turned back time to 2.7.0 defaults',
-                showProgress: 'bottom',
+            $.toast({
+              title: 'LOOK',
+              message: 'Turned back time to 2.7.0 defaults',
+              showProgress: 'bottom',
 
-                //make it look like 2.7.0
-                showIcon: true,
-                progressUp: true,
-                class: 'info',
-                className: {
-                    box:'toast-box',
-                    title:'header',
-                    icon: 'icon'
-                },
-                transition: {
-                    closeEasing: 'easeOutBounce'
-                }
-              })
+              //make it look like 2.7.0
+              showIcon: true,
+              progressUp: true,
+              class: 'info',
+              className: {
+                box:'toast-box',
+                title:'header',
+                icon: 'icon'
+              },
+              transition: {
+                closeEasing: 'easeOutBounce'
+              }
+            })
             ;
             </div>
         </div>
