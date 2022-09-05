@@ -690,7 +690,7 @@ semantic.ready = function() {
     },
 
     copyCode: function() {
-      $('body').toast({
+      $.toast({
         class: 'inverted',
         compact: false,
         showIcon: 'copy',

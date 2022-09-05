@@ -2,12 +2,12 @@ semantic.toast = {};
 
 var globalToast;
 var noPinkFound = function() {
-  $('body').toast({
+  $.toast({
     message: 'Please open the pink toast first!',
     class:'warning',
     showIcon: true
   });
-}
+};
 
 // ready event
 semantic.toast.ready = function() {
@@ -37,7 +37,7 @@ semantic.toast.ready = function() {
   $('#jsaccess_toast_remaining').click(function(){
     if (globalToast) {
       var remainingTime = $(globalToast).toast('get remainingTime');
-      $('body').toast({
+      $.toast({
         message: (remainingTime/1000).toFixed(2) +' seconds left',
         class:'info',
         showIcon: true
