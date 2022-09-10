@@ -116,7 +116,7 @@ semantic.emoji.ready = function() {
             $search = $('emojiSearch .input > input')
         ;
         $search.blur();
-        $('body').toast({
+        $.toast({
           class: 'inverted',
           compact: false,
           showIcon: 'copy',

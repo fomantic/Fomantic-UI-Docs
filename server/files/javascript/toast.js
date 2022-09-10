@@ -2,12 +2,12 @@ semantic.toast = {};
 
 var globalToast;
 var noPinkFound = function() {
-  $('body').toast({
+  $.toast({
     message: 'Please open the pink toast first!',
     class:'warning',
     showIcon: true
   });
-}
+};
 
 // ready event
 semantic.toast.ready = function() {
@@ -15,7 +15,7 @@ semantic.toast.ready = function() {
   /* Behaviors */
   $('#jsaccess_toast_init').click(function(){
     if(!globalToast) {
-      globalToast = $('body').toast({
+      globalToast = $.toast({
         message: 'This pink toast stays for a long time. It is returned as object when created, so you can interact with it via Javascript',
         displayTime: 120000,
         showProgress: 'top',
@@ -25,7 +25,7 @@ semantic.toast.ready = function() {
         }
       });
     } else {
-      $('body').toast({
+      $.toast({
         message: 'The pink toast is already shown',
         class:'error',
         showIcon: true
@@ -37,7 +37,7 @@ semantic.toast.ready = function() {
   $('#jsaccess_toast_remaining').click(function(){
     if (globalToast) {
       var remainingTime = $(globalToast).toast('get remainingTime');
-      $('body').toast({
+      $.toast({
         message: (remainingTime/1000).toFixed(2) +' seconds left',
         class:'info',
         showIcon: true
@@ -49,7 +49,7 @@ semantic.toast.ready = function() {
   $('#jsaccess_toast_howmany').click(function(){
     if (globalToast) {
       var howMany = $(globalToast).toast('get toasts');
-      $('body').toast({
+      $.toast({
         message: howMany.length +' toast are currently shown (without this one!)',
         class:'info',
         showIcon: true

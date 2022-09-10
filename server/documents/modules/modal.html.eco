@@ -870,8 +870,14 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Via Javascript properties<span class="ui black label">New in 2.8.8</span></h4>
       <p>You can create temporary modals without the need to create markup on your own. Temporary modals will be removed from the DOM once closed by default if there isn't a custom <code>onHidden</code> callback given.</p>
+      <div class="ui ignored info message">jQuery short notation <code>$.modal()</code> support was added in 2.9.0. If you want this for older FUI versions add
+          <code>
+          $.modal = $.fn.modal;
+          </code><br>
+          The old selector notation <code>$('body').modal()</code> still works as before.
+      </div>
       <div class="code" data-demo="true">
-      $('body').modal({
+      $.modal({
           title: 'Important Notice',
           class: 'mini',
           closeIcon: true,
@@ -1027,26 +1033,26 @@ themes      : ['Default', 'Material']
       Config template modals will be always autoshown, so no manual <code>show</code> is needed)
     </div>
     <div class="code">
-      $('body').modal('alert','hello')
-      $('body').modal('confirm','Are you sure?',function(value){})
-      $('body').modal('prompt','Enter Code', function(value){})
+      $.modal('alert','hello')
+      $.modal('confirm','Are you sure?',function(value){})
+      $.modal('prompt','Enter Code', function(value){})
     </div>
     <div class="no example">
       <h4 class="ui header">Alert</h4>
       <p>Possible parameters are: title, content, handler (in that order to stay nearly identical to vanilla js usage) or a given object <code>{title:'',content:'',handler:function(){}}</code> where as title and content can contain HTML.</p>
       <div class="ui warning message">If you don't trust the content set the global modal setting for <code>preserveHTML</code> to <code>false</code>.</div>
       <div class="code" data-demo="true">
-          $('body').modal('alert','<span class="ui big purple text">hello</span>');
+          $.modal('alert','<span class="ui big purple text">hello</span>');
       </div>
       <div class="code" data-demo="true">
-          $('body').modal('alert','Watch out','This is an important message!');
+          $.modal('alert','Watch out','This is an important message!');
       </div>
       <div class="code" data-demo="true">
-         $('body').modal('alert',{
+         $.modal('alert',{
             title: 'Listen to me',
             content: 'I love Fomantic-UI',
             handler: function() {
-              $('body').toast({message:'Great!'});
+              $.toast({message:'Great!'});
             }
           });
       </div>
@@ -1056,26 +1062,26 @@ themes      : ['Default', 'Material']
       <p>The parameter list and logic is the same as for alert. The selected boolean choice will be provided to a given callback handler.</p>
       <div class="code" data-demo="true">
       // title and content
-        $('body').modal('confirm','Attention!','Ready?');
+        $.modal('confirm','Attention!','Ready?');
       </div>
       <div class="code" data-demo="true">
       // title, content and handler
-        $('body').modal('confirm','Attention!','Ready?', function(choice){
-          $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        $.modal('confirm','Attention!','Ready?', function(choice){
+          $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
         });
       </div>
       <div class="code" data-demo="true">
       // content and handler
-        $('body').modal('confirm','Ready?', function(choice){
-          $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        $.modal('confirm','Ready?', function(choice){
+          $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
         });
       </div>
       <div class="code" data-demo="true">
       // title and handler
-        $('body').modal('confirm',{
+        $.modal('confirm',{
           title: 'Ready?',
           handler: function(choice){
-            $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+            $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
           }
         });
       </div>
@@ -1086,28 +1092,28 @@ themes      : ['Default', 'Material']
         If you provide HTML Code for the content and this contains an input, this will be used as the inputfield. Otherwise it creates one dynamically for you.</p>
       <div class="code" data-demo="true">
   // provide a placeholder
-    $('body').modal('prompt',{
+    $.modal('prompt',{
       title: 'Enter your name',
       placeholder: 'Do not enter your mothers name!',
       handler: function(name){
-          $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+          $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
       }
     });
       </div>
       <div class="code" data-demo="true">
   // set a defaultValue
-    $('body').modal('prompt',{
+    $.modal('prompt',{
       title: 'Enter your name',
       defaultValue: 'mommy',
       handler: function(name){
-          $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+          $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
       }
     });
       </div>
       <div class="code" data-demo="true">
   // custom input
-    $('body').modal('prompt', 'Custom Input', '<div class="ui labeled input"><div class="ui blue label">Nickname</div><input type="text" placeholder="Do not use your email!"></div>', function(name) {
-      $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+    $.modal('prompt', 'Custom Input', '<div class="ui labeled input"><div class="ui blue label">Nickname</div><input type="text" placeholder="Do not use your email!"></div>', function(name) {
+      $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
     });
       </div>
     </div>
@@ -1131,10 +1137,10 @@ themes      : ['Default', 'Material']
       </div>
       <p>Reuse this whenever you need</p>
       <div class="code" data-demo="true">
-          $('body').modal('greet','mom')
+          $.modal('greet','mom')
       </div>
       <div class="code" data-demo="true">
-          $('body').modal('greet','dad')
+          $.modal('greet','dad')
       </div>
     </div>
   </div>

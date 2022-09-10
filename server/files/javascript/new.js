@@ -449,8 +449,7 @@ semantic.new.ready = function() {
 
   $('#twoeight-toasts > .image-support')
     .on('click', function() {
-      $('body')
-        .toast({
+      $.toast({
           showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
           classImage: 'avatar',
           message: 'Avatar image on left of toast'
@@ -459,8 +458,7 @@ semantic.new.ready = function() {
 
   $('#twoeight-toasts > .pausing-on-hover')
     .on('click', function() {
-      $('body')
-        .toast({
+      $.toast({
           message: 'Timer paused on hover',
           showProgress: 'bottom'
         });
@@ -468,8 +466,7 @@ semantic.new.ready = function() {
 
   $('#twoeight-toasts > .action-buttons')
     .on('click', function() {
-      $('body')
-        .toast({
+      $.toast({
           message: 'Choose wisely...',
           actions:	[
             {
@@ -492,23 +489,19 @@ semantic.new.ready = function() {
 
   $('#twoeight-toasts > .info-states')
     .on('click', function() {
-      $('body')
-        .toast({
+      $.toast({
           class: 'success',
           message: 'A toast using the success state'
         });
-      $('body')
-        .toast({
+      $.toast({
           class: 'error',
           message: 'A toast using the error state'
         });
-      $('body')
-        .toast({
+      $.toast({
           class: 'warning',
           message: 'A toast using the warning state'
         });
-      $('body')
-        .toast({
+      $.toast({
           class: 'info',
           message: 'A toast using the info state'
         });
