@@ -648,21 +648,6 @@ themes      : ['Default']
           </td>
           <td>Default transitions for each direction and screen size, used with <code>transition: auto</code></td>
         </tr>
-        <tr>
-          <td>useLegacy</td>
-          <td>false</td>
-          <td>Whether Javascript animations should be used. Defaults to <code>false</code>. Setting to <code>auto</code> will use legacy animations only for browsers that do not support CSS transforms</td>
-        </tr>
-        <tr>
-          <td>duration</td>
-          <td>500</td>
-          <td>Duration of sidebar animation when using legacy Javascript animation</td>
-        </tr>
-        <tr>
-          <td>easing</td>
-          <td>easeInOutQuint</td>
-          <td>Easing to use when using legacy Javascript animation</td>
-        </tr>
       </tbody>
     </table>
 
