@@ -374,7 +374,7 @@ semantic.new.ready = function() {
   $('.remote.example .ui.dropdown')
     .dropdown({
       apiSettings: {
-        url: '//api.semantic-ui.com/tags/{query}'
+        url: '//api.github.com/search/repositories?q={query}'
       }
     })
   ;

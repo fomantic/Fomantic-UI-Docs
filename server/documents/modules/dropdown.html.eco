@@ -1895,7 +1895,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="ui form">
         <div class="two fields">
           <div class="field">
-            <label>Favorite Animal</label>
+            <label>Github Repositories</label>
             <div class="ui search selection dropdown">
               <input type="hidden">
               <i class="dropdown icon"></i>
@@ -1904,7 +1904,7 @@ themes      : ['Default', 'GitHub', 'Material']
             </div>
           </div>
           <div class="field">
-            <label>Favorite Animals</label>
+            <label>Github Repositories</label>
             <div class="ui multiple search selection dropdown">
               <input type="hidden">
               <i class="dropdown icon"></i>
@@ -1920,7 +1920,11 @@ themes      : ['Default', 'GitHub', 'Material']
           .dropdown({
             apiSettings: {
               // this url parses query server side and returns filtered results
-              url: '//api.semantic-ui.com/tags/{query}'
+              url: '//api.github.com/search/repositories?q={query}'
+            },
+            fields: {
+            // the remote api has a different structure than expected, which we can adjust
+              remoteValues : 'items'
             },
           })
         ;
@@ -2027,7 +2031,7 @@ themes      : ['Default', 'GitHub', 'Material']
           .dropdown({
             apiSettings: {
               // this url just returns a list of tags (with API response expected above)
-              url: '//api.semantic-ui.com/tags/'
+              url: '/animals.json'
             },
             filterRemoteData: true
           })

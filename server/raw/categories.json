@@ -1,0 +1,29 @@
+{
+  "results": {
+    "category1": {
+      "name": "Category 1",
+      "results": [
+        {
+          "title": "Chris",
+          "image": "/images/avatar/small/chris.jpg",
+          "description": "24 years old Musician"
+        },
+        {
+          "title": "Helen",
+          "image": "/images/avatar/small/helen.jpg",
+          "description": "27 years old doctor"
+        }
+      ]
+    },
+    "category2": {
+      "name": "Category 2",
+      "results": [
+        {
+          "title": "Zoe",
+          "image": "/images/avatar/small/zoe.jpg",
+          "description": "32 years old lawyer"
+        }
+      ]
+    }
+  }
+}
