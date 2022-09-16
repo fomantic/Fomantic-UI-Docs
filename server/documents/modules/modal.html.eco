@@ -705,7 +705,7 @@ themes      : ['Default', 'Material']
           Basic Header and Actions
           <div class="ui black label">New in 2.9.0</div>
       </h4>
-      <p>Header and/or Actions can also appear in the same basic background as the content</p>
+      <p>Header and/or Actions can also appear on the same basic background as the content</p>
       <div class="code" data-type="html">
           <div class="ui modal">
               <div class="basic header">Basic Header</div>
