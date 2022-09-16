@@ -1355,12 +1355,11 @@ semantic.ready = function() {
     })
   ;
 
-  //$.fn.api.settings.base = '//api.semantic-ui.com';
   $.extend($.fn.api.settings.api, {
-    categorySearch     : '//api.semantic-ui.com/search/category/{query}',
+    categorySearch     : '/categories.json',
     getOverrides       : '/src/themes/{$theme}/{$type}s/{$element}.overrides',
     getVariables       : '/src/themes/{$theme}/{$type}s/{$element}.variables',
-    search             : '//api.semantic-ui.com/search/{query}'
+    search             : '//api.github.com/search/repositories?q={query}'
   });
 
   if(window.location.hash && window.location.hash.indexOf('/')===-1) {

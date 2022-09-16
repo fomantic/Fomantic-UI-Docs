@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "results": [
+    {
+      "name": "Bird",
+      "value": "bird"
+    },
+    {
+      "name": "Cat",
+      "value": "cat"
+    },
+    {
+      "name": "Dog",
+      "value": "dog"
+    },
+    {
+      "name": "Fish",
+      "value": "fish"
+    },
+    {
+      "name": "Hamster",
+      "value": "hamster"
+    },
+    {
+      "name": "Horse",
+      "value": "horse"
+    },
+    {
+      "name": "Mouse",
+      "value": "mouse"
+    },
+    {
+      "name": "Parrot",
+      "value": "parrot"
+    },
+    {
+      "name": "Rat",
+      "value": "rat"
+    },
+    {
+      "name": "Rabbit",
+      "value": "rabbit"
+    },    {
+      "name": "Tortoise",
+      "value": "tortoise"
+    }
+  ]
+}
