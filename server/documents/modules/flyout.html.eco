@@ -220,7 +220,7 @@ themes      : ['Default']
       <h4 class="ui header">Via Javascript properties</h4>
       <p>You can create temporary flyouts without the need to create markup on your own. Temporary flyouts will be removed from the DOM once closed by default if there isn't a custom <code>onHidden</code> callback given.</p>
       <div class="code" data-demo="true">
-        $('body').flyout({
+        $.flyout({
           debug: true,
           verbose: true,
           autoShow: true,
