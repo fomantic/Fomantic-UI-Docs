@@ -332,6 +332,24 @@ themes      : ['Default', 'Material']
     </div>
   </div>
 
+  <div class="ui modal" id="leftactionsexample">
+    <div class="left actions">
+        <button class="ui negative button">Cancel</button>
+        <button class="ui positive button">OK</button>
+    </div>
+  </div>
+
+   <div class="ui modal" id="basicheaderactionsexample">
+     <div class="basic header">Basic Header</div>
+     <div class="content">
+         <p>Basic actions below</p>
+     </div>
+     <div class="basic actions">
+         <button class="ui negative button">Cancel</button>
+         <button class="ui positive button">OK</button>
+     </div>
+   </div>
+
   <div class="ui inverted test modal">
     <div class="header">
       Select a Photo
@@ -656,6 +674,52 @@ themes      : ['Default', 'Material']
       </div>
       <div class="code" data-demo="true">
           $('#centerexample')
+          .modal('show')
+          ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Left Actions
+          <div class="ui black label">New in 2.9.0</div>
+      </h4>
+      <p>You can also place the action buttons to the left</p>
+      <div class="code" data-type="html">
+          <div class="ui modal">
+              <div class="left actions">
+                  <div class="ui negative button">Cancel</div>
+                  <div class="ui positive button">OK</div>
+              </div>
+          </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#leftactionsexample')
+          .modal('show')
+          ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Basic Header and Actions
+          <div class="ui black label">New in 2.9.0</div>
+      </h4>
+      <p>Header and/or Actions can also appear in the same basic background as the content</p>
+      <div class="code" data-type="html">
+          <div class="ui modal">
+              <div class="basic header">Basic Header</div>
+              <div class="content">
+                <p>Basic Actions below</p>
+              </div>
+              <div class="basic actions">
+                  <div class="ui negative button">Cancel</div>
+                  <div class="ui positive button">OK</div>
+              </div>
+          </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#basicheaderactionsexample')
           .modal('show')
           ;
       </div>
