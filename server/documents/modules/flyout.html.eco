@@ -336,7 +336,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Alert</h4>
       <p>Possible parameters are: title, content, handler (in that order to stay nearly identical to vanilla js usage) or a given object <code>{title:'',content:'',handler:function(){}}</code> where as title and content can contain HTML.</p>
-      <div class="ui warning message">If you don't trust the content set the global modal setting for <code>preserveHTML</code> to <code>false</code>.</div>
+      <div class="ui warning message">If you don't trust the content set the global flyout setting for <code>preserveHTML</code> to <code>false</code>.</div>
       <div class="code" data-demo="true">
           $.flyout('alert','<span class="ui big purple text">hello</span>');
       </div>
@@ -415,7 +415,7 @@ themes      : ['Default']
     </div>
     <div class="no example">
       <h4 class="ui header">Create your own template</h4>
-      <p>By extending the modals templates object once, you can define your own custom config templates. It has to return an object which will be merged into the flyouts settings prior to creating/showing the flyout.</p>
+      <p>By extending the flyouts templates object once, you can define your own custom config templates. It has to return an object which will be merged into the flyouts settings prior to creating/showing the flyout.</p>
       <div class="evaluated code">
   $.fn.flyout.settings.templates.greet = function(username) {
   // do something according to flyouts settings and/or given parameters
