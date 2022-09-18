@@ -8,7 +8,7 @@ status      : 'BETA'
 statusColor : 'orange'
 
 title       : 'Flyout'
-description : 'A flyout is an overlay container that display content from the edge of a viewport'
+description : 'A flyout is an overlay container that displays content from the edge of a viewport'
 type        : 'UI Module'
 
 themes      : ['Default']
@@ -182,6 +182,32 @@ themes      : ['Default']
 
   <div class="ui tab" data-tab="usage">
 
+    <h2 class="ui dividing header">Set-up</h2>
+
+    <div class="no example" data-class="flyout, pusher">
+      <h4 class="ui header">Page Structure</h4>
+      <p>Using a flyout requires a specific page structure. For optimal performance your page should be already set-up with this structure before initializing a flyout.</p>
+      <div class="ui info message">
+        Flyout will automatically add the correct layout on first load if it is not set-up, however fixing your page's layout on load <b>will reduce performance and is not recommended</b>.
+      </div>
+      <div class="code" data-type="html" data-escape="true">
+        &lt;body&gt;
+          &lt;div class=&quot;ui flyout&quot;&gt;
+            ...
+          &lt;/div&gt;
+          &lt;div class=&quot;pusher&quot;&gt;
+            Your site&#39;s actual content
+          &lt;/div&gt;
+        &lt;/body&gt;
+      </div>
+      <div class="ui message">
+        <ul class="ui list">
+          <li>The <code>pusher</code> is the element that will be pushed away by the flyout and should contain your site content.</li>
+          <li>If your pusher contains overflowing content, you might use <code>overflowing pusher</code> to prevent possible undesired side effects (for example when using <code>native sticky</code> somewhere)</li>
+        </ul>
+      </div>
+     </div>
+
     <h2 class="ui dividing header">Initializing a flyout</h2>
 
     <div class="no example">
@@ -296,6 +322,121 @@ themes      : ['Default']
         </tr>
       </tbody>
     </table>
+
+    <h2 class="ui dividing header">Config Templates</h2>
+    <p>A config template is a special behavior to immediately show preconfigured temporary flyouts. Three basic templates are included: <code>alert</code>, <code>confirm</code>, <code>prompt</code> as equivalents to existing vanilla JS variants, but with more possibilities to customize the look & feel. </p>
+    <div class="ui info message">
+      Config template flyouts will be always autoshown, so no manual <code>show</code> is needed)
+    </div>
+    <div class="code">
+      $.flyout('alert','hello')
+      $.flyout('confirm','Are you sure?',function(value){})
+      $.flyout('prompt','Enter Code', function(value){})
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Alert</h4>
+      <p>Possible parameters are: title, content, handler (in that order to stay nearly identical to vanilla js usage) or a given object <code>{title:'',content:'',handler:function(){}}</code> where as title and content can contain HTML.</p>
+      <div class="ui warning message">If you don't trust the content set the global flyout setting for <code>preserveHTML</code> to <code>false</code>.</div>
+      <div class="code" data-demo="true">
+          $.flyout('alert','<span class="ui big purple text">hello</span>');
+      </div>
+      <div class="code" data-demo="true">
+          $.flyout('alert','Watch out','This is an important message!');
+      </div>
+      <div class="code" data-demo="true">
+         $.flyout('alert',{
+            title: 'Listen to me',
+            content: 'I love Fomantic-UI',
+            handler: function() {
+              $.toast({message:'Great!'});
+            }
+          });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Confirm</h4>
+      <p>The parameter list and logic is the same as for alert. The selected boolean choice will be provided to a given callback handler.</p>
+      <div class="code" data-demo="true">
+      // title and content
+        $.flyout('confirm','Attention!','Ready?');
+      </div>
+      <div class="code" data-demo="true">
+      // title, content and handler
+        $.flyout('confirm','Attention!','Ready?', function(choice){
+          $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        });
+      </div>
+      <div class="code" data-demo="true">
+      // content and handler
+        $.flyout('confirm','Ready?', function(choice){
+          $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        });
+      </div>
+      <div class="code" data-demo="true">
+      // title and handler
+        $.flyout('confirm',{
+          title: 'Ready?',
+          handler: function(choice){
+            $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+          }
+        });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Prompt</h4>
+      <p>The call for prompt is basically identical to alert and confirm. There are 2 more options available when an object is given <code>placeholder</code> and <code>defaultValue</code>.
+        If you provide HTML Code for the content and this contains an input, this will be used as the inputfield. Otherwise it creates one dynamically for you.</p>
+      <div class="code" data-demo="true">
+  // provide a placeholder
+    $.flyout('prompt',{
+      title: 'Enter your name',
+      placeholder: 'Do not enter your mothers name!',
+      handler: function(name){
+          $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
+      }
+    });
+      </div>
+      <div class="code" data-demo="true">
+  // set a defaultValue
+    $.flyout('prompt',{
+      title: 'Enter your name',
+      defaultValue: 'mommy',
+      handler: function(name){
+          $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
+      }
+    });
+      </div>
+      <div class="code" data-demo="true">
+  // custom input
+    $.flyout('prompt', 'Custom Input', '<div class="ui labeled input"><div class="ui blue label">Nickname</div><input type="text" placeholder="Do not use your email!"></div>', function(name) {
+      $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
+    });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Create your own template</h4>
+      <p>By extending the flyouts templates object once, you can define your own custom config templates. It has to return an object which will be merged into the flyouts settings prior to creating/showing the flyout.</p>
+      <div class="evaluated code">
+  $.fn.flyout.settings.templates.greet = function(username) {
+  // do something according to flyouts settings and/or given parameters
+    var settings = this.get.settings(); // "this" is the flyout instance
+    return {
+      title: 'Greetings to ' + username + '!',
+      content: '<span class="ui huge orange text">'+ username.toUpperCase() + '</span><br>is the best!',
+      class: 'inverted',
+      classContent: 'centered'
+    }
+  }
+      </div>
+      <p>Reuse this whenever you need</p>
+      <div class="code" data-demo="true">
+          $.flyout('greet','mom')
+      </div>
+      <div class="code" data-demo="true">
+          $.flyout('greet','dad')
+      </div>
+    </div>
+
 
   </div>
 
