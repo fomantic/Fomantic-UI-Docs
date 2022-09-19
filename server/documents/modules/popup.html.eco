@@ -863,7 +863,7 @@ themes      : ['Default']
         <tr>
           <td>closable</td>
           <td>true</td>
-          <td>When using <code>on: 'click'</code> specifies whether clicking the page should close the popup</td>
+          <td>Whether popup should hide when clicking on the page, <code>auto</code> only hides for popups without <code>on: 'hover'</code></td>
         </tr>
         <tr>
           <td>addTouchEvents</td>
