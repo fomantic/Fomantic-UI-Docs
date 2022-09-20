@@ -562,7 +562,7 @@ themes      : ['Default']
           <tr>
             <td>restoreFocus</td>
             <td><code>true</code></td>
-            <td>When false, the last focused element, before the modal was shown, will not get refocused again when the flyout hides. This could prevent unwanted scrolling behaviors after closing a flyout.</td>
+            <td>When false, the last focused element, before the flyout was shown, will not get refocused again when the flyout hides. This could prevent unwanted scrolling behaviors after closing a flyout.</td>
           </tr>
           <tr>
             <td>keyboardShortcuts</td>
