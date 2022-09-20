@@ -333,6 +333,10 @@ themes      : ['Default', 'Material']
   </div>
 
   <div class="ui modal" id="leftactionsexample">
+    <div class="header">Look at the Actions</div>
+    <div class="content">
+      <p>They are aligned to the left</p>
+    </div>
     <div class="left actions">
         <button class="ui negative button">Cancel</button>
         <button class="ui positive button">OK</button>
@@ -687,6 +691,10 @@ themes      : ['Default', 'Material']
       <p>You can also place the action buttons to the left</p>
       <div class="code" data-type="html">
           <div class="ui modal">
+            <div class="header">Look at the Actions</div>
+            <div class="content">
+              <p>They are aligned to the left</p>
+            </div>
               <div class="left actions">
                   <div class="ui negative button">Cancel</div>
                   <div class="ui positive button">OK</div>
@@ -1279,7 +1287,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>keyboardShortcuts</td>
           <td>true</td>
-          <td>Whether to automatically bind keyboard shortcuts</td>
+          <td>Whether to automatically bind keyboard shortcuts. This will close the modal when the ESC-Key is pressed.</td>
         </tr>
         <tr>
           <td>offset</td>
