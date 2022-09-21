@@ -595,6 +595,11 @@ themes      : ['Default']
           <td>Whether to dim page contents when sidebar is visible</td>
         </tr>
         <tr>
+          <td>blurring</td>
+          <td>false</td>
+          <td>If dimmer should blur background</td>
+        </tr>
+        <tr>
           <td>scrollLock</td>
           <td>false</td>
           <td>Whether to lock page scroll when sidebar is visible</td>

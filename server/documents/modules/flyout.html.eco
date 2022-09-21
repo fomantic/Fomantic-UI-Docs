@@ -117,6 +117,78 @@ themes      : ['Default']
 
     </div>
 
+    <div class="no example">
+      <h4 class="ui header">
+          Center Aligned
+      </h4>
+      <p>You can center align the header, the content or even actions individually</p>
+      <div class="code" data-type="html">
+        <div class="ui flyout">
+          <div class="ui center aligned header">Header is centered</div>
+          <div class="center aligned content">
+            <p>Content is centered</p>
+          </div>
+          <div class="center aligned actions">
+            <div class="ui negative button">Cancel</div>
+            <div class="ui positive button">OK</div>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#centerexample')
+          .flyout('show')
+          ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Left Actions
+      </h4>
+      <p>You can also place the action buttons to the left</p>
+      <div class="code" data-type="html">
+        <div class="ui flyout">
+          <div class="ui header">Look at the Actions</div>
+          <div class="content">
+            <p>They are aligned to the left</p>
+          </div>
+          <div class="left actions">
+            <div class="ui negative button">Cancel</div>
+            <div class="ui positive button">OK</div>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#leftactionsexample')
+          .flyout('show')
+          ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Basic Header and Actions
+      </h4>
+      <p>Header and/or Actions can also appear on the same basic background as the content</p>
+      <div class="code" data-type="html">
+          <div class="ui flyout">
+              <div class="ui basic header">Basic Header</div>
+              <div class="content">
+                <p>Basic Actions below</p>
+              </div>
+              <div class="basic actions">
+                  <div class="ui negative button">Cancel</div>
+                  <div class="ui positive button">OK</div>
+              </div>
+          </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#basicheaderactionsexample')
+          .flyout('show')
+          ;
+      </div>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="examples">
@@ -476,6 +548,26 @@ themes      : ['Default']
             <td>dimPage</td>
             <td><code>true</code></td>
             <td>Whether to dim <code>context</code> contents when flyout is visible.</td>
+          </tr>
+          <tr>
+            <td>blurring</td>
+            <td><code>false</code></td>
+            <td>If dimmer should blur background</td>
+          </tr>
+          <tr>
+            <td>autofocus</td>
+            <td><code>true</code></td>
+            <td>When true, the first form input inside the flyout will receive focus when shown.  Set this to false to prevent this behavior.</td>
+          </tr>
+          <tr>
+            <td>restoreFocus</td>
+            <td><code>true</code></td>
+            <td>When false, the last focused element, before the flyout was shown, will not get refocused again when the flyout hides. This could prevent unwanted scrolling behaviors after closing a flyout.</td>
+          </tr>
+          <tr>
+            <td>keyboardShortcuts</td>
+            <td><code>true</code></td>
+            <td>Whether to automatically bind keyboard shortcuts. This will close the flyout when the ESC-key is pressed.</td>
           </tr>
           <tr>
             <td>scrollLock</td>
