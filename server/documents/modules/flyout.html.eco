@@ -172,7 +172,7 @@ themes      : ['Default']
       <p>Header and/or Actions can also appear on the same basic background as the content</p>
       <div class="code" data-type="html">
           <div class="ui flyout">
-              <div class="basic header">Basic Header</div>
+              <div class="ui basic header">Basic Header</div>
               <div class="content">
                 <p>Basic Actions below</p>
               </div>
