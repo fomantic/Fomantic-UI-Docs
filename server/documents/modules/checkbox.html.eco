@@ -721,6 +721,22 @@ themes      : ['Default', 'Colored']
         <td>Attach checkbox events to another element</td>
       </tr>
       <tr>
+        <td>is disabled</td>
+        <td>Returns whether element is disabled for interaction</td>
+      </tr>
+      <tr>
+        <td>is enabled</td>
+        <td>Returns whether element is enabled for interaction</td>
+      </tr>
+      <tr>
+        <td>is determinate</td>
+        <td>Returns whether element is a determinate selection</td>
+      </tr>
+      <tr>
+        <td>is indeterminate</td>
+        <td>Returns whether element is an indeterminate selection</td>
+      </tr>
+      <tr>
         <td>is radio</td>
         <td>Returns whether element is radio selection</td>
       </tr>
