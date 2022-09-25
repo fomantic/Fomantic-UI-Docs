@@ -25674,7 +25674,7 @@ var emojiStrategy = [
     "shortname": ":eye_in_speech_bubble:",
     "shortname_alternates": [],
     "keywords": ["eye", "speech bubble", "witness", "uc7"],
-    "unicode_output": "1f441-fe0f-200d-1f5e8-fe0f"
+    "unicode_output": "1f441-200d-1f5e8"
   },
   "1f4ac": {
     "name": "speech balloon",
@@ -25947,102 +25947,6 @@ var emojiStrategy = [
     "shortname_alternates": [],
     "keywords": ["12", "12:30", "30", "clock", "thirty", "twelve", "uc6"],
     "unicode_output": "1f567"
-  },
-  "0030": {
-    "name": "digit zero",
-    "category": "symbols",
-    "shortname": ":digit_zero:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0030-fe0f"
-  },
-  "0031": {
-    "name": "digit one",
-    "category": "symbols",
-    "shortname": ":digit_one:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0031-fe0f"
-  },
-  "0032": {
-    "name": "digit two",
-    "category": "symbols",
-    "shortname": ":digit_two:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0032-fe0f"
-  },
-  "0033": {
-    "name": "digit three",
-    "category": "symbols",
-    "shortname": ":digit_three:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0033-fe0f"
-  },
-  "0034": {
-    "name": "digit four",
-    "category": "symbols",
-    "shortname": ":digit_four:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0034-fe0f"
-  },
-  "0035": {
-    "name": "digit five",
-    "category": "symbols",
-    "shortname": ":digit_five:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0035-fe0f"
-  },
-  "0036": {
-    "name": "digit six",
-    "category": "symbols",
-    "shortname": ":digit_six:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0036-fe0f"
-  },
-  "0037": {
-    "name": "digit seven",
-    "category": "symbols",
-    "shortname": ":digit_seven:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0037-fe0f"
-  },
-  "0038": {
-    "name": "digit eight",
-    "category": "symbols",
-    "shortname": ":digit_eight:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0038-fe0f"
-  },
-  "0039": {
-    "name": "digit nine",
-    "category": "symbols",
-    "shortname": ":digit_nine:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0039-fe0f"
-  },
-  "0023": {
-    "name": "pound symbol",
-    "category": "symbols",
-    "shortname": ":pound_symbol:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "0023-fe0f"
-  },
-  "002a": {
-    "name": "asterisk",
-    "category": "symbols",
-    "shortname": ":asterisk_symbol:",
-    "shortname_alternates": [],
-    "keywords": ["uc1"],
-    "unicode_output": "002a-fe0f"
   },
   "2640": {
     "name": "female sign",
