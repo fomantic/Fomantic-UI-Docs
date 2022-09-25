@@ -1082,6 +1082,35 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
+    <div class="actionable example">
+      <h4 class="ui header">Actionable <div class="ui black label">New in 2.9.0</div></h4>
+      <p>A dropdown menu can contain an actionable item which performs a custom callback once clicked instead of being selected itself</p>
+      <div class="ui selection dropdown">
+        <input type="hidden" name="">
+        <i class="dropdown icon"></i>
+        <div class="default text">Open me and select actionable items</div>
+        <div class="menu">
+          <div class="actionable item" data-value="abcdef">SECRET: Select me</div>
+          <div class="actionable item" data-value="21">TRUTH: Select me</div>
+          <div class="actionable item" data-value="0==1">LIE: Select me</div>
+          <div class="item">I am a selectable entry only</div>
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.actionable.example .ui.dropdown')
+          .dropdown({
+            collapseOnActionable: false,
+            onActionable: function(value, text, $selected) {
+              var type=text.split(":")[0];
+              $.toast({
+                title: type + ' Reveal',
+                message:'You need to know: '+ value
+              });
+            }
+          });
+      </div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
 
     <div class="dropdown example">
@@ -3415,6 +3444,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Whether menu items with sub-menus (categories) should be selectable</td>
         </tr>
         <tr>
+          <td>fireOnInit</td>
+          <td>false</td>
+          <td>Whether callbacks should fire when initializing dropdown values</td>
+        </tr>
+        <tr>
           <td>placeholder</td>
           <td>auto</td>
           <td>
@@ -3454,7 +3488,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <thead>
         <tr>
         <th>Setting</th>
-        <th class="eight wide">Default</th>
+        <th class="ten wide">Default</th>
         <th>Description</th>
         </tr>
       </thead>
@@ -3469,19 +3503,22 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>
             <div class="code" data-type="css">
             fields: {
-              remoteValues : 'results',    // grouping for api results
-              values       : 'values',     // grouping for all dropdown values
-              disabled     : 'disabled',   // whether value should be disabled
-              name         : 'name',       // displayed dropdown text
-              value        : 'value',      // actual dropdown value
-              text         : 'text',       // displayed text when selected
-              type         : 'type',       // type of dropdown element
-              image        : 'image',      // optional image path
-              imageClass   : 'imageClass', // optional individual class for image
-              icon         : 'icon',       // optional icon name
-              iconClass    : 'iconClass',  // optional individual class for icon (for example to use flag instead)
-              class        : 'class',      // optional individual class for item/header
-              divider      : 'divider'     // optional divider append for group headers
+              remoteValues         : 'results',    // grouping for api results
+              values               : 'values',     // grouping for all dropdown values
+              disabled             : 'disabled',   // whether value should be disabled
+              name                 : 'name',       // displayed dropdown text
+              description          : 'description', // displayed dropdown description
+              descriptionVertical  : 'descriptionVertical', // whether description should be vertical
+              value                : 'value',      // actual dropdown value
+              text                 : 'text',       // displayed text when selected
+              type                 : 'type',       // type of dropdown element
+              image                : 'image',      // optional image path
+              imageClass           : 'imageClass', // optional individual class for image
+              icon                 : 'icon',       // optional icon name
+              iconClass            : 'iconClass',  // optional individual class for icon (for example to use flag instead)
+              class                : 'class',      // optional individual class for item/header
+              divider              : 'divider'     // optional divider append for group headers
+              actionable           : 'actionable'  // optional actionable item
             }
             </div>
           </td>
@@ -3496,6 +3533,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>saveRemoteData</td>
           <td>true</td>
           <td>When enabled, will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>
+        </tr>
+        <tr>
+          <td>throttle</td>
+          <td>200</td>
+          <td>How long to wait after last user input to search remotely</td>
         </tr>
       </tbody>
     </table>
@@ -3540,9 +3582,23 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>glyphWidth</td>
           <td>
-           1.0714
+           1.037
           </td>
           <td>Maximum glyph width, used to calculate search size. This is usually size of a "W" in your font in <code>em</code></td>
+        </tr>
+        <tr>
+          <td>headerDivider</td>
+          <td>
+           true
+          </td>
+          <td>whether option headers should have an additional divider line underneath when converted from <code>&lt;select&gt;&lt;optgroup&gt;</code></td>
+        </tr>
+        <tr>
+          <td>collapseOnActionable</td>
+          <td>
+           true
+          </td>
+          <td>whether the dropdown should collapse upon selection of an actionable item</td>
         </tr>
         <tr>
           <td>label</td>
@@ -3749,6 +3805,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Is called after a dropdown selection is removed using a multiple select dropdown, only receives the removed value</td>
         </tr>
         <tr>
+          <td>onActionable(value, text, $choice)</td>
+          <td>Dropdown</td>
+          <td>Is called after an actionable item has been selected</td>
+        </tr>
+        <tr>
           <td>onLabelCreate(value, text)</td>
           <td>$label (jQDOM)</td>
           <td>Allows you to modify a label before it is added. Expects the jQ DOM element for a label to be returned.</td>
@@ -3843,7 +3904,10 @@ themes      : ['Default', 'GitHub', 'Material']
               message      : '.message',
               menuIcon     : '.dropdown.icon',
               search       : 'input.search, .menu > .search > input',
-              text         : '> .text:not(.icon)'
+              sizer        : '> span.sizer',
+              text         : '> .text:not(.icon)',
+              unselectable : '.disabled, .filtered',
+              clearIcon    : '> .remove.icon'
             }
             </div>
           </td>
@@ -3877,25 +3941,41 @@ themes      : ['Default', 'GitHub', 'Material']
           <td colspan="2">
             <div class="code">
             className : {
-              active      : 'active',
-              addition    : 'addition',
-              animating   : 'animating',
-              disabled    : 'disabled',
-              dropdown    : 'ui dropdown',
-              filtered    : 'filtered',
-              hidden      : 'hidden transition',
-              item        : 'item',
-              label       : 'ui label',
-              loading     : 'loading',
-              menu        : 'menu',
-              message     : 'message',
-              multiple    : 'multiple',
-              placeholder : 'default',
-              search      : 'search',
-              selected    : 'selected',
-              selection   : 'selection',
-              upward      : 'upward',
-              visible     : 'visible'
+              active              : 'active',
+              addition            : 'addition',
+              animating           : 'animating',
+              description         : 'description',
+              descriptionVertical : 'vertical',
+              disabled            : 'disabled',
+              empty               : 'empty',
+              dropdown            : 'ui dropdown',
+              filtered            : 'filtered',
+              hidden              : 'hidden transition',
+              icon                : 'icon',
+              image               : 'image',
+              item                : 'item',
+              label               : 'ui label',
+              loading             : 'loading',
+              menu                : 'menu',
+              message             : 'message',
+              multiple            : 'multiple',
+              placeholder         : 'default',
+              sizer               : 'sizer',
+              search              : 'search',
+              selected            : 'selected',
+              selection           : 'selection',
+              text                : 'text',
+              upward              : 'upward',
+              leftward            : 'left',
+              visible             : 'visible',
+              clearable           : 'clearable',
+              noselection         : 'noselection',
+              delete              : 'delete',
+              header              : 'header',
+              divider             : 'divider',
+              groupIcon           : '',
+              unfilterable        : 'unfilterable',
+              actionable          : 'actionable'
             }
             </div>
           </td>
@@ -3930,11 +4010,15 @@ themes      : ['Default', 'GitHub', 'Material']
           <td colspan="2">
             <div class="code">
             error   : {
-              action       : 'You called a dropdown action that was not defined',
-              alreadySetup : 'Once a select has been initialized behaviors must be called on the created ui dropdown',
-              labels       : 'Allowing user additions currently requires the use of labels.',
-              method       : 'The method you called is not defined.',
-              noTransition : 'This module requires ui transitions <https://github.com/Semantic-Org/UI-Transition>'
+              action          : 'You called a dropdown action that was not defined',
+              alreadySetup    : 'Once a select has been initialized behaviors must be called on the created ui dropdown',
+              labels          : 'Allowing user additions currently requires the use of labels.',
+              missingMultiple : '<select> requires multiple property to be set to correctly preserve multiple values',
+              method          : 'The method you called is not defined.',
+              noAPI           : 'The API module is required to load resources remotely',
+              noStorage       : 'Saving remote data requires session storage',
+              noTransition    : 'This module requires ui transitions <https://github.com/Semantic-Org/UI-Transition>',
+              noNormalize     : '"ignoreDiacritics" setting will be ignored. Browser does not support String().normalize(). You may consider including <https://cdn.jsdelivr.net/npm/unorm@1.4.1/lib/unorm.min.js> as a polyfill.'
             }
             </div>
           </td>
