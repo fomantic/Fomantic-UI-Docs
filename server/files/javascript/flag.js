@@ -1050,7 +1050,7 @@ semantic.emoji.ready = function() {
   },{
     countrycode: 'rainbow',
     name: 'rainbow flag',
-    alias: 'gay_pride_flag'
+    alias: 'pride_flag'
   }, {
     countrycode: 'transgender',
     name: 'transgender flag',
