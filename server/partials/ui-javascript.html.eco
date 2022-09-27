@@ -1,1 +1,1 @@
-<script src="/dist/semantic.min.js"></script>
+<script src="/dist/semantic.min.js?v=<%= @getVersion() %>"></script>
