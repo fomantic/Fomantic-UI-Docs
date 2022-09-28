@@ -985,10 +985,10 @@ semantic.ready = function() {
     },
 
     initializeCode: function(codeSample) {
+      codeSample    = codeSample || false;
       var
         $code         = $(this).show(),
         $codeTag      = $('<code />'),
-        codeSample    = codeSample || false,
         code          = $code.html(),
         existingCode  = $code.hasClass('existing'),
         evaluatedCode = $code.hasClass('evaluated'),
