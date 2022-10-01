@@ -36,7 +36,9 @@ themes      : ['Default']
     </div>
 
     <div class="ui ignored message">Fomantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.15.4</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
-
+    <div class="ui ignored info message">
+        You can reduce your custom generated CSS by adjusting the <code>@icons-map</code>,<code>@icons-outline-map</code>, <code>@icons-brand-map</code>, ... variables in your themes <code>icon.variables</code> file to only the icons you need.
+    </div>
     <div class="icon example">
       <h4 class="ui header">Accessibility</h4>
       <p>Icons can represent accessibility standards</p>

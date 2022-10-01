@@ -48,6 +48,9 @@ themes      : ['Default']
           If you use Fomantic in a commercial or business project or want to host the emoji assets locally and <b>also want to use the alternative joypixels set</b>, you may require an additional license for your project depending of the usage.<br>You will find joypixels licenses at <a href="https://www.joypixels.com/licenses">https://www.joypixels.com/licenses</a>
           </div>
       </div>
+      <div class="ui ignored info message">
+          You can reduce your custom generated CSS by adjusting the <code>@emoji-map</code> variable in your themes <code>emoji.variables</code> file to only the emojis you need.
+      </div>
       <div class="ui emoji container"></div>
 
   </div>
