@@ -311,7 +311,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>colors.less <div class="ui black label">New in 2.7.0</div></h4>
     <p>You can modify/define the global color palette entirely by adjusting a single LESS Map <code>@colors</code> in a custom <code>colors.less</code> file.</p>
-    <p>Each color consists of a predefined set of used properties used in all components. You can defined whatever color name you want.</p>
+    <p>Each color consists of a predefined set of properties used in all components. You can define whatever color name you want.</p>
     <div class="code" data-type="less" data-title="src/themes/default/globals/colors.less">
 // This example would only provide two custom colors "batman", "spiderman"
 // Your custom compiled build will contain all colorable components
