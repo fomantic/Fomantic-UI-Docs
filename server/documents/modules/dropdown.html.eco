@@ -941,7 +941,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="header">
             Search Issues
           </div>
-          <div class="ui left icon input">
+          <div class="ui left search icon input">
             <i class="search icon"></i>
             <input type="text" name="search" placeholder="Search...">
           </div>
@@ -1016,7 +1016,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="header">
             Search Issues
           </div>
-          <div class="ui left icon input">
+          <div class="ui left search icon input">
             <i class="search icon"></i>
             <input type="text" name="search" placeholder="Search...">
           </div>
