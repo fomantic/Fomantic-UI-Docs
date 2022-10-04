@@ -20,7 +20,7 @@ semantic.slider.ready = function() {
       max: 10,
       start: 5,
       onChange: function(value) {
-        $('#slider-input-1').val(value)
+        $('#slider-input-1').val(value);
       }
     })
   ;
@@ -32,7 +32,6 @@ semantic.slider.ready = function() {
       start: 10,
       end: 90,
       step: 5,
-      debug: true,
       verbose: true,
       onChange: function(range, firstVal, secondVal) {
         if (firstVal > secondVal) {
@@ -51,7 +50,7 @@ semantic.slider.ready = function() {
       start: 4,
       step: 2,
       onChange: function(value) {
-        $('#slider-input-3').val(value)
+        $('#slider-input-3').val(value);
       }
     })
   ;
@@ -63,7 +62,7 @@ semantic.slider.ready = function() {
       start: 3.82,
       step: 0,
       onChange: function(value) {
-        $('#slider-input-unstepped').val(value)
+        $('#slider-input-unstepped').val(value);
       }
     })
   ;

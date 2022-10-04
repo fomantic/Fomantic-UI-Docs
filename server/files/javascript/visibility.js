@@ -62,6 +62,7 @@ semantic.visiblity.ready = function() {
 
   $firstSticky
     .sticky({
+      silent         : true,
       observeChanges : false,
       pushing        : true,
       context        : $firstColumn,
@@ -75,6 +76,7 @@ semantic.visiblity.ready = function() {
 
   $firstSegment
     .visibility({
+      silent         : true,
       once           : false,
       continuous     : true,
       observeChanges : false,
@@ -84,6 +86,7 @@ semantic.visiblity.ready = function() {
 
   $secondSegment
     .visibility({
+      silent: true,
       onOnScreen: function() {
         $log.append('<div class="highlight">onOnScreen fired</div>');
         $log.scrollTop(999999);
@@ -150,6 +153,7 @@ semantic.visiblity.ready = function() {
 
   $secondSticky
     .sticky({
+      silent         : true,
       observeChanges : false,
       pushing        : true,
       context        : $secondColumn,
@@ -183,7 +187,7 @@ window.loadFakeContent = function() {
     }, 1000);
   }
   count++;
-}
+};
 
 // attach ready event
 $(document)

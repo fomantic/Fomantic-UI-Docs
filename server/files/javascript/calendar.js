@@ -84,7 +84,7 @@ semantic.calendar.ready = function() {
     type: 'date',
     formatter: {
       date: function (date, settings) {
-          if (!date) return '';
+          if (!date) {return '';}
           // Show the selected year 85 Years ahead
           return 'Expires in ' + (date.getFullYear() + 85);
       }
