@@ -406,7 +406,6 @@ semantic.ready = function() {
         .prepend('<h3 class="ui header">' + title + '</h3>')
       ;
       if (activeTab !== "") {
-        console.log("activeTab: ", activeTab);
         $sticky.find('h3.ui.header').after('<h4 class="ui header">' + activeTab + '</h4>');
       }
       $rail = $('<div />')

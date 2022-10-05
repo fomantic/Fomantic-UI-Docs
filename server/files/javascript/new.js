@@ -52,8 +52,6 @@ semantic.new.ready = function() {
   // 2.2
   $('.faster.example .ui.multiple.dropdown')
     .dropdown({
-      debug: true,
-      verbose: true,
       allowAdditions: true,
       onChange: function() {
         console.log('onChange');

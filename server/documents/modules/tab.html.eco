@@ -185,19 +185,19 @@ themes      : ['Default']
         If you are using tab contexts inside of tabs, you can also specify <code>childrenOnly: true</code> which will only look for tabs as the immediate children of the given context, or <code>context: 'parent'</code> a special keyword which avoids having to create unique selectors for each group.
       </div>
       <div class="code" data-type="javascript">
-        $('#context1 .menu .item')
+        $('.context1 .menu .item')
           .tab({
-            context: $('#context1')
+            context: '.context1'
           })
         ;
-        $('#context2 .menu .item')
+        $('.context2 .menu .item')
           .tab({
             // special keyword works same as above
             context: 'parent'
           })
         ;
       </div>
-      <div id="context1">
+      <div class="context1">
         <div class="ui secondary menu">
           <a class="item" data-tab="first">First</a>
           <a class="item active" data-tab="second">Second</a>
@@ -235,7 +235,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="ui divider"></div>
-      <div id="context2">
+      <div class="context2">
         <div class="ui secondary menu">
           <a class="item" data-tab="fourth">Fourth</a>
           <a class="item active" data-tab="fifth">Fifth</a>
@@ -252,7 +252,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="existing code" data-type="html">
-        <div id="context1">
+        <div class="context1">
           <div class="ui secondary menu">
             <a class="item" data-tab="first">First</a>
             <a class="item active" data-tab="second">Second</a>
@@ -290,7 +290,7 @@ themes      : ['Default']
           </div>
         </div>
         <div class="ui divider"></div>
-        <div id="context2">
+        <div class="context2">
           <div class="ui secondary menu">
             <a class="item" data-tab="fourth">Fourth</a>
             <a class="item active" data-tab="fifth">Fifth</a>

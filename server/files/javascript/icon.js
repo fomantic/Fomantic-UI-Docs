@@ -117,8 +117,7 @@ semantic.icon.ready = function() {
   
   // check if icon list tab is selected (if so run the check visibility function)
   var tab = $('.ui.two.item.stackable.tabs > a').get(0);
-  console.log(tab);
-  
+
   var observer = new MutationObserver(function() {
     checkIconVisibility();
   });
