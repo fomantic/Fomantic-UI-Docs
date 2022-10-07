@@ -27,12 +27,10 @@ semantic.visiblity.ready = function() {
     },
     updateTable: function(calculations) {
       $.each(calculations, function(name, value) {
-        var
-          value = (typeof value == 'integer')
-            ? parseInt(value, 10)
-            : value.toString(),
-          $td
-        ;
+        value = (typeof value == 'number' || typeof value == 'boolean')
+          ? value.toString()
+          : false;
+        var $td;
         if(name == 'pixelsPassed' || name == 'width' || name == 'height') {
           value = parseInt(value, 10) + 'px';
         }
@@ -40,7 +38,7 @@ semantic.visiblity.ready = function() {
           value = parseInt(value * 100, 10) + '%';
         }
         $td = $('.first.example .grid .sticky tr.'+ name +' td:last-child');
-        if($td.html() !== value) {
+        if($td && $td.html() !== value) {
           if(value == 'true' || value == 'false') {
             $td.removeClass('highlight').addClass('highlight');
             setTimeout(function(){ $td.removeClass('highlight'); }, 2000);
