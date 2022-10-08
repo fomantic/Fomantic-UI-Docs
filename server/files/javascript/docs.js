@@ -103,22 +103,24 @@ semantic.ready = function() {
       });
     },
 
-    showBeg: function() {
-      if(window.localStorage !== undefined) {
-        $begSegment
-          .find('.delete.icon')
-            .on('click', handler.hideBeg)
-        ;
-        if(!window.localStorage.getItem('begDismissed')) {
-          $begSegment.transition('slide down');
+    scrollToHash: function() {
+      if(handler.scrollToSelector) {
+        var $element = $(handler.scrollToSelector);
+        if($element.length) {
+          var
+            position = $element.offset() ? $element.offset().top + 10 : 0
+          ;
+          $element
+            .addClass('active')
+          ;
+          $('html, body')
+            .stop()
+            .animate({
+              scrollTop: position
+            }, 500)
+          ;
+          delete handler.scrollToSelector;
         }
-      }
-    },
-
-    hideBeg: function() {
-      $begSegment.transition('slide down');
-      if(window.localStorage !== undefined) {
-        window.localStorage.setItem('begDismissed', true);
       }
     },
 
@@ -138,35 +140,6 @@ semantic.ready = function() {
         .find('i.code')
           .on('click', handler.createCode)
       ;
-    },
-
-    shortcut: {
-      modal: function() {
-        var
-          $modal = $('#shortcuts'),
-          shortcutModalExists,
-          shortcut,
-          index
-        ;
-        if(!shortcutModalExists) {
-          var
-            html = '<div class="ui small modal" id="shortcuts">'
-          ;
-          html += '<div class="header">Keyboard Shortcuts</div>';
-          html += '<div class="content">';
-          html += '<table class="ui striped basic table">';
-          for (index = 0; index < shortcuts.length; index++) {
-            shortcut = shortcuts[index];
-            html     += '<tr><td><b>' + shortcut.aka + '</b></td><td>' + shortcut.description + '</td></tr>';
-          }
-          html += '</table>';
-          html += '<div class="actions"><div class="ui small teal button">OK</div></div>';
-          html += '</div></div>';
-          $('body').append(html);
-          $modal = $('#shortcuts');
-        }
-        $('#shortcuts').modal('show');
-      }
     },
 
     createWaypoints: function() {
@@ -222,14 +195,6 @@ semantic.ready = function() {
             .accordion('open', index - 1)
           ;
         }
-      },
-      accordion: function() {
-        var
-          $section       = $(this),
-          index          = $sectionHeaders.index($section),
-          $followSection = $followMenu.children('.item'),
-          $activeSection = $followSection.eq(index)
-        ;
       },
       section: function() {
         var
@@ -437,21 +402,23 @@ semantic.ready = function() {
     scrollTo: function(event) {
       var
         id       = $(this).attr('href').replace('#', ''),
-        $element = $('#' + id),
-        position = $element.offset().top - 10
+        $element = $('#' + id)
       ;
-      $element
-        .addClass('active')
-      ;
-      $('html, body')
-        .stop()
-        .animate({
-          scrollTop: position
-        }, 500)
-      ;
-      location.hash = '#' + id;
-      event.stopImmediatePropagation();
-      event.preventDefault();
+      if($element.length) {
+        var position = $element.offset() ? $element.offset().top - 10 : 0;
+        $element
+            .addClass('active')
+        ;
+        $('html, body')
+            .stop()
+            .animate({
+              scrollTop: position
+            }, 500)
+        ;
+        location.hash = '#' + id;
+        event.stopImmediatePropagation();
+        event.preventDefault();
+      }
       return false;
     },
 
@@ -564,30 +531,6 @@ semantic.ready = function() {
             html += handler.create.variations($element, variations);
           }
         });
-        // Each TYPE
-        //   show type name
-        //   html = koan (html)
-        //   each text
-        //     find label
-        //     if(obj)
-        //       replace random text
-        //     else
-        //       replace text
-        //   end
-        //   Each variation
-        //     (if obj)
-        //       each
-        //         add class
-        //     (else)
-        //       add class
-        //     label = property
-        //     class = class
-        //     show html
-        //   end
-        // end
-      },
-      element: function(koan, type, text, variation) {
-
       },
       variations: function($element, variations) {
         $.each(variations, function(name, variation){
@@ -1205,6 +1148,20 @@ semantic.ready = function() {
 
   // load page tabs
   if( $pageTabs.length > 0 ) {
+    var
+        selector = (window.location.hash || '').replace(/^#\//, '#')
+    ;
+    handler.scrollToSelector = selector;
+    if(selector) {
+    // check if anchor is inside an invisible tab
+      var $insideTab = $(selector).closest('.tab:not(.active)');
+      if($insideTab.length) {
+        $pageTabs.removeClass('active');
+        $('.main.ui.container > .ui.tab').removeClass('active');
+        $pageTabs.filter('[data-tab="'+$insideTab.attr('data-tab')+'"]').addClass('active');
+        $insideTab.addClass('active');
+      }
+    }
     $pageTabs
       .tab({
         context      : '.main.container',
@@ -1233,6 +1190,7 @@ semantic.ready = function() {
           $(window).on('resize.menu', function() {
             handler.tryCreateMenu();
           });
+          handler.scrollToHash();
         },
         onLoad : function() {
           $(this).find('.ui.sticky')
@@ -1361,21 +1319,6 @@ semantic.ready = function() {
     search             : '//api.github.com/search/repositories?q={query}'
   });
 
-  if(window.location.hash && window.location.hash.indexOf('/')===-1) {
-    var
-      $element = $(window.location.hash),
-      position = $element.offset() ? $element.offset().top + 10 : 0
-    ;
-    $element
-      .addClass('active')
-    ;
-    $('html, body')
-      .stop()
-      .animate({
-        scrollTop: position
-      }, 500)
-    ;
-  }
 
   handler.getMetadata();
 
