@@ -9,13 +9,36 @@ description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { twoeight: 'New in 2.8', twoseven: 'New in 2.7', twosix: 'New in 2.6', twofive: 'New in 2.5', twofour: 'New in 2.4', twothree: 'New in 2.3' } }) %>
+<%- @partial('header',  { tabs: { twonine: 'New in 2.9', twoeight: 'New in 2.8', twoseven: 'New in 2.7', twosix: 'New in 2.6', twofive: 'New in 2.5', twofour: 'New in 2.4', twothree: 'New in 2.3' } }) %>
 <script src="/javascript/loader.js"></script>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
+  <div class="ui active tab" data-tab="twonine">
+    <h2 class="ui dividing header">The Big update</h2>
+    <p>Fomantic <code>2.9</code> brings a ton of new features, improvements and bugfixes.</p>
+    <div class="ui ignored warning message">If you are upgrading from a previous SUI version, be sure to add <code>@flyout</code> to your <a href="/introduction/build-tools.html#themeconfig"><code>theme.config</code></a> to include the flyout component in your code.</div>
+    <h2 class="ui dividing header">
+      New UI Component
+    </h2>
+    <div class="content example">
+      <h4 class="ui header">
+        Flyouts
+      </h4>
+      <p><a href="/modules/flyout.html">Flyouts</a> are the result of a marriage between <a href="/modules/modal.html">Modal</a> and <a href="/modules/sidebar.html">Sidebar</a>.</p>
+    </div>
+    <h2 class="ui dividing header">
+      New features
+    </h2>
+    <div class="content example">
+    <h4 class="ui header">
+       SVG Flags
+    </h4>
+    <p>Flags now use the the same SVG icons as Emoji, so they are now resizable and lots of missing countrycodes or global identifications is available now.</p>
+    </div>
+  </div>
 
-  <div class="ui active tab" data-tab="twoeight">
+  <div class="ui tab" data-tab="twoeight">
     <h2 class="ui dividing header">Toasty Emotion</h2>
     <p>Fomantic <code>2.8</code> brings some of the best updates yet including variation feature customization for components, more toast changes and EMOTES <em data-emoji="tada"></em> <em data-emoji="smile"></em> and of course A LOT of critical and much needed bug fixes.</p>
 

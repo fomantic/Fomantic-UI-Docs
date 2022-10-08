@@ -29,7 +29,7 @@ docpadConfig = {
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [],
 
-			version: "2.8.8",
+			version: "2.9.0",
 
 			branch: "master",
 
@@ -38,7 +38,7 @@ docpadConfig = {
 
 			# The website description (for SEO)
 			description: """
-				Fomantic the official community fork of Semantic-UI
+				Fomantic-UI - The official community fork of Semantic-UI
 				"""
 
 			# The website keywords (for SEO) separated by commas
@@ -65,7 +65,7 @@ docpadConfig = {
 
 		getZip: ->
 			if @site.version
-				"https://github.com/fomantic/Fomatnic-UI/archive/" + @site.version + ".zip"
+				"https://github.com/fomantic/Fomantic-UI/archive/" + @site.version + ".zip"
 			else
 				"https://github.com/fomantic/Fomantic-UI/archive/master.zip"
 

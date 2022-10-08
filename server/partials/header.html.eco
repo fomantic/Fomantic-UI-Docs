@@ -59,7 +59,7 @@
     <% if @tabs?: %>
     <% index = 0 %>
     <% tabCount = 0 %>
-    <% numbers = ['', '', 'two item', 'three item', 'four item', 'five item', 'six item'] %>
+    <% numbers = ['', '', 'two item', 'three item', 'four item', 'five item', 'six item', 'seven item', 'eight item', 'nine item'] %>
     <% colors = ['red', 'teal', 'blue', 'purple', 'black', 'orange'] %>
       <% for id, name of @tabs: %>
         <% tabCount++ %>
