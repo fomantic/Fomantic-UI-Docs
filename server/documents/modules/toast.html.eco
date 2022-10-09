@@ -602,7 +602,7 @@ themes      : ['Default']
           .toast({
             title: 'Hello visitor #' + Math.random().toString(36).substr(2),
             message: 'Message ID: '+ Math.random().toString(36).substr(2),
-            showImage: '//fomantic-ui.com/images/avatar/small/zoe.jpg'
+            showImage: 'https://fomantic-ui.com/images/avatar/small/zoe.jpg'
           })
           ;
       </div>

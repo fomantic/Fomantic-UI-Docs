@@ -28,11 +28,11 @@ type        : 'Usage'
     <blockquote>
       <p>[Progressive truthfulness] is perhaps a better way to build models of physical objects...Start with a model that is fully detailed but only resembles what is wanted. Then, one adjusts one attribute after another, bringing the result ever closer to the mental vision of the new creation, or to the real properties of a real-world object</p>
       <p>...Starting with exemplars that themselves have consistency of style ensures that such consistency is the designer's to lose.</p>
-      <span class="author">Frederick Brooks - <a href="http://www.amazon.com/gp/product/0201362988/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0201362988&linkCode=as2&tag=seui-20&linkId=IUAKN3YQ7NNJ6IQ2" target="_blank">The Design of Design</a><span>
+      <span class="author">Frederick Brooks - <a href="https://www.amazon.com/gp/product/0201362988" target="_blank">The Design of Design</a><span>
     </blockquote>
     <p>Components in Fomantic UI are designed to help developers adhere to <a href="https://books.google.com/books?id=0qG4TQi-e-4C&pg=PT234&lpg=PT234&dq=%22progressive+truthfulness%22+frederick+brooks&source=bl&ots=yrjNc6wnz8&sig=PJoYODuRku2A1kBoFOPfn4iGYnc&hl=en&sa=X&ved=0CCIQ6AEwAGoVChMImdSMpIOVxgIVCx-sCh3EQgBu#v=onepage&q=%22progressive%20truthfulness%22%20frederick%20brooks&f=false" target="_blank">progressive truthfulness</a> in their development.</p>
-    <p>Instead of having to create components from a blank canvas, developers using Fomantic UI only need to specify how their components should differ from the default theme using <a href="http://lesscss.org/features/#variables-feature" target="_blank">CSS variables</a>.</p>
-    <p>For developers who don't have time to hone a specific look-and-feel the default theme is elegant and neutral with a legible, open source sans-serif font <a href="http://www.latofonts.com"><code>Lato</code></a>.</p>
+    <p>Instead of having to create components from a blank canvas, developers using Fomantic UI only need to specify how their components should differ from the default theme using <a href="https://lesscss.org/features/#variables-feature" target="_blank">CSS variables</a>.</p>
+    <p>For developers who don't have time to hone a specific look-and-feel the default theme is elegant and neutral with a legible, open source sans-serif font <a href="https://www.latofonts.com"><code>Lato</code></a>.</p>
 
   </div>
 
@@ -42,7 +42,7 @@ type        : 'Usage'
   </h2>
   <div class="no example">
     <h4>Recreating GitHub</h4>
-    <p>Fomantic UI includes an <a target="_blank" href="http://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component CSS overrides, and managing your themes with <code>theme.config</code>.</p>
+    <p>Fomantic UI includes an <a target="_blank" href="https://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component CSS overrides, and managing your themes with <code>theme.config</code>.</p>
 
     <p>To get started click <b>the paint can</b> icon next to the notification button in the top right</p>
 
@@ -56,7 +56,7 @@ type        : 'Usage'
       <div class="item">Combining multiple individual component themes together in one <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/theme.config">theme.config</a></div>
       <div class="item">Using a <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/elements/icon.overrides">custom icon font</a>, and <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/elements/icon.variables">modifying paths</a> to assets.</div>
     </div>
-    <a target="_blank" href="http://semantic-org.github.io/example-github/" class="ui primary right labeled icon button">
+    <a target="_blank" href="https://semantic-org.github.io/example-github/" class="ui primary right labeled icon button">
       <i class="external link icon"></i>
       View Theming Demo
     </a>

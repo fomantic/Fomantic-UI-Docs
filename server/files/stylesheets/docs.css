@@ -1301,6 +1301,10 @@ blockquote .author {
   padding: 50px 8px;
 }
 
+.file-input .ui.file.input {
+  padding-bottom: 1em;
+}
+
 
 /*--------------
    Visibility

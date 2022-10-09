@@ -854,7 +854,7 @@ type        : 'UI Module'
           <td>
             easeOutExpo
           </td>
-          <td>Easing equation when using fallback Javascript animation. EaseOutExpo is included with search, for additional options you must include <a href="http://gsgd.co.uk/sandbox/jquery/easing/">easing equations</td>
+          <td>Easing equation when using fallback Javascript animation. EaseOutExpo is included with search, for additional options you must include <a href="https://gsgd.co.uk/sandbox/jquery/easing/">easing equations</td>
         </tr>
         <tr>
           <td>ignoreDiacritics</td>

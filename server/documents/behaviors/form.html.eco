@@ -903,7 +903,7 @@ type        : 'UI Behavior'
 
     <div class="type example">
       <h4 class="ui header">Content Type</h4>
-      <p>Inputs can match against common content types, or your own custom <a href="http://www.regular-expressions.info/" target="_blank">regular expressions</a>.</p>
+      <p>Inputs can match against common content types, or your own custom <a href="https://www.regular-expressions.info/" target="_blank">regular expressions</a>.</p>
       <form class="ui form">
         <div class="two fields">
           <div class="field">

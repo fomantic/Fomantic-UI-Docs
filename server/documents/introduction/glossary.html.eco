@@ -135,7 +135,7 @@ type        : 'Introduction'
       <tr>
         <td>States</td>
         <td>
-          <p>States are modifications to an element that help indicate a change in <a href="http://www.usabilityfirst.com/glossary/affordance/" target="_blank">affordances</a>. Common states include <code>loading</code>, <code>disabled</code>, and <code>active</code>.</p>
+          <p>States are modifications to an element that help indicate a change in <a href="https://www.usabilityfirst.com/glossary/affordance/" target="_blank">affordances</a>. Common states include <code>loading</code>, <code>disabled</code>, and <code>active</code>.</p>
         </td>
       </tr>
       <tr>
@@ -161,7 +161,7 @@ type        : 'Introduction'
     </tr>
     <tr>
       <td>Gulp</td>
-      <td>Gulp is a tool for automating command line tasks <a href="http://www.gulpjs.com" target="_blank">Gulpjs.com</a></td>
+      <td>Gulp is a tool for automating command line tasks <a href="https://www.gulpjs.com" target="_blank">Gulpjs.com</a></td>
     </tr>
     <tr>
       <td>NPM</td>
@@ -169,7 +169,7 @@ type        : 'Introduction'
     </tr>
     <tr>
       <td>Node JS</td>
-      <td>Node is a event driven programming language frequently used to run command line tools for front end development. <a href="http://www.nodejs.org" target="_blank">nodejs.org</a></td>
+      <td>Node is a event driven programming language frequently used to run command line tools for front end development. <a href="https://www.nodejs.org" target="_blank">nodejs.org</a></td>
     </tr>
   </table>
 

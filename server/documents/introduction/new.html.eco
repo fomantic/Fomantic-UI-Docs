@@ -80,19 +80,19 @@ type        : 'Main'
           All elements can now have their individual color variants
         </div>
         <div class="item">
-          Accordion now has an inverted and tree variant and icon can be displayed to the right
+          Accordion now has an <a href="/modules/accordion.html#inverted">inverted</a>, <a href="/modules/accordion.html#basic-styled">basic styled</a> and <a href="/modules/accordion.html#tree">tree</a> variant and icon can be displayed <a href="/modules/accordion.html#right-icon">to the right</a>
         </div>
         <div class="item">
-          Button Groups now supports wrapping and spacing
+          Button Groups now supports <a href="/elements/button.html#wrapping-buttons">wrapping</a> and can be <a href="/elements/button.html#spaced-buttons">spaced</a>
         </div>
         <div class="item">
-          Calendar now supports <code>disabledHours</code>
+          <a href="/modules/calendar.html">Calendar</a> now supports <code>disabledHours</code>
         </div>
         <div class="item">
-          Table now supports inverted colors
+          <a href="/collections/table.html">Table</a> now supports inverted colors
         </div>
         <div class="item">
-          Toast now allows clickable items as content without closing the toast
+          <a href="/modules/toast.html">Toast</a> now allows clickable items as content without closing the toast
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@ type        : 'Main'
       </h4>
       <p>The Lato font of the default theme is now bundled and upgraded to 2.0 to also support cyrillic and greek characters. Loading via googleFonts is now disabled by default.</p>
     </div>
-    <div class="content example">
+    <div class="file-input content example">
       <h4 class="ui header">
          File Inputs
       </h4>
@@ -110,12 +110,19 @@ type        : 'Main'
       <div class="ui file input">
         <input type="file">
       </div>
+      <div class="ui file action input">
+        <input id="actionfileinput" type="file">
+        <label for="actionfileinput" class="ui blue button">
+           <i class="wizard icon"></i>
+              Choose wisely
+        </label>
+      </div>
     </div>
     <div class="content example">
       <h4 class="ui header">
          SVG Flags
       </h4>
-      <p>Flags now use the same SVG icons as Emoji, making them now resizable and added lots of missing countrycodes and other global identifications.</p>
+      <p><a href="/elements/flag.html">Flags</a> now use the same SVG icons as Emoji, making them now resizable and added lots of missing countrycodes and other global identifications.</p>
       <i class="small de flag"></i>
       <i class="medium fr flag"></i>
       <i class="large li flag"></i>
@@ -142,10 +149,10 @@ type        : 'Main'
         Icon Update
       </h4>
       <p>We have updated the icons to FontAwesome 5.15.4</p>
-        <i class="big head side mask icon"></i>
-        <i class="big hands wash icon"></i>
-        <i class="big toilet paper icon"></i>
-        <i class="big hand holding water icon"></i>
+        <i class="huge head side mask icon"></i>
+        <i class="huge hands wash icon"></i>
+        <i class="huge toilet paper icon"></i>
+        <i class="huge hand holding water icon"></i>
         <p>You can see a list of all the available icons <a href="/elements/icon.html">here</a>.</p>
         <div class="ui ignored info message">
             As we optimized the way to reduce the icon list to only those you need in your custom theme via LESS maps, we also released a new version of <a target="_blank" href="https://github.com/fomantic/create-fomantic-icons">Create-Fomantic-Icons</a> which supports FUI 2.9.0.
@@ -169,7 +176,7 @@ type        : 'Main'
         Accordion CSS Only
       </h4>
       <p>Accordion can now be used without Javascript using the details/summary tag</p>
-      <details class="ui accordion">
+      <details class="ui basic styled accordion">
         <summary class="title">
           <i class="dropdown icon"></i> How many people are working on Fomantic-UI
         </summary>
@@ -203,7 +210,7 @@ type        : 'Main'
       <div class="item">
         <div>Calendar</div>
         <div class="list">
-          <div class="item">ampm setting removed. Use the new <a href="/modules/calendar.html#custom-format">token string</a> formatters instead</div>
+          <div class="item"><code>ampm</code> setting is removed. Use the new <a href="/modules/calendar.html#custom-format">token string</a> formatters instead</div>
         </div>
       </div>
       <div class="item">
@@ -215,9 +222,9 @@ type        : 'Main'
       <div class="item">
         <div>Dropdown</div>
         <div class="list">
-          <div class="item">New default value for showOnFocus is <code>false</code></div>
-          <div class="item">New default value for fullTextSearch is <code>'exact'</code></div>
-          <div class="item">New default value for forceSelection is <code>false</code></div>
+          <div class="item">New default value for <code>showOnFocus</code> is <code>false</code></div>
+          <div class="item">New default value for <code>fullTextSearch</code> is <code>'exact'</code></div>
+          <div class="item">New default value for <code>forceSelection</code> is <code>false</code></div>
           <div class="item"><code>@upwardMenuBorderRadius</code> was renamed into <code>@upwardSelectionMenuBorderRadius</code></div>
         </div>
       </div>
@@ -230,14 +237,14 @@ type        : 'Main'
       <div class="item">
         <div>Form</div>
         <div class="list">
-          <div class="item">New default value for errorFocus is <code>true</code></div>
+          <div class="item">New default value for <code>errorFocus</code> is <code>true</code></div>
           <div class="item">"length" rule was removed, use <code>minlength</code> instead</div>
         </div>
       </div>
       <div class="item">
         <div>Label</div>
         <div class="list">
-          <div class="item">"left icon" and "right icon" have to be declared in exact that class order</div>
+          <div class="item"><code>left icon</code> and <code>right icon</code> have to be declared in exact that class order</div>
         </div>
       </div>
       <div class="item">
@@ -261,7 +268,7 @@ type        : 'Main'
       <div class="item">
         <div>Table</div>
         <div class="list">
-          <div class="item">When marked cells should also be colored you have to use a an additional "colored" class and follow a fixed class order like "red colored right orange marked"</div>
+          <div class="item">When marked cells should also be colored you have to use an additional <code>colored</code> class and follow a fixed class order like <code>red colored right orange marked</code></div>
         </div>
       </div>
     </div>
@@ -274,13 +281,13 @@ type        : 'Main'
          Step had double semicolon in font face breaking webpack 5
       </div>
       <div class="item">
-        Dropdown addition were encoded in some cases and broke on mobile
+        Dropdown additions were encoded in some cases and broke on mobile
       </div>
       <div class="item">
-        npm 15+, yarn, pnpm broke on install
+        node 15+ / npm 7, yarn, pnpm broke on install
       </div>
       <div class="item">
-        Firefox font gap warning and Firefox 103+ Accordion
+        Firefox font gap warning and Firefox 103+ broke Accordion
       </div>
       <div class="item">
          ScrollLock in sidebar was not working

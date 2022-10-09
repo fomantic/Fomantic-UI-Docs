@@ -33,7 +33,7 @@ type        : 'UI Behavior'
 
     <div class="no example">
       <h4 class="ui header">Preserve Templated URLs</h4>
-      <p>API helps you decouple URLs from your code. Use named API actions like <code>get followers</code> instead of URLs like <code>http://foo.com/get/1.0/followers.json</code> in your code.</p>
+      <p>API helps you decouple URLs from your code. Use named API actions like <code>get followers</code> instead of URLs like <code>https://foo.com/get/1.0/followers.json</code> in your code.</p>
       <div class="ignored code" data-type="javascript">
       $('.button')
         .api({
@@ -154,7 +154,7 @@ type        : 'UI Behavior'
         <div class="code">
         $('.search.button')
           .api({
-            url: 'http://www.google.com?q={value}'
+            url: '//www.google.com?q={value}'
           })
         ;
         </div>
@@ -971,7 +971,7 @@ type        : 'UI Behavior'
       AJAX
     </h4>
     <div class="ui info message">
-      You can pass in any standard <a href="http://api.jquery.com/jquery.ajax/">jQuery AJAX setting</a> like <code>timeout</code> or <code>contentType</code> to API's settings and it will be automatically passed to the request's AJAX call.
+      You can pass in any standard <a href="https://api.jquery.com/jquery.ajax/">jQuery AJAX setting</a> like <code>timeout</code> or <code>contentType</code> to API's settings and it will be automatically passed to the request's AJAX call.
     </div>
 
     <h4 class="ui header">

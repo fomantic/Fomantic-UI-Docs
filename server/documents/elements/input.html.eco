@@ -185,7 +185,7 @@ themes      : ['Default', 'GitHub']
     <p>An input can be formatted with a label</p>
     <div class="ui labeled input">
       <div class="ui label">
-        http://
+        https://
       </div>
       <input type="text" placeholder="mysite.com">
     </div>
@@ -311,7 +311,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui action input">
-      <input type="text" value="http://ww.short.url/c0opq">
+      <input type="text" value="https://ww.short.url/c0opq">
       <button class="ui teal right labeled icon button">
         <i class="copy icon"></i>
         Copy
