@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
     <title>jsfiddle fullscreen Tester | Fomantic-UI</title>
     <link rel="stylesheet" type="text/css" href="/dist/semantic.min.css" >
     <meta name="description" content="Testing jsfiddle fullscreen in Fomantic-UI. Especially for mobile" />
@@ -33,12 +33,12 @@
         <i class="small exclamation triangle icon"></i>
         The Code below is located at <a id="orgfiddle" href="">https://jsfiddle.net</a> and embedded via an iframe
     </div>
-    <iframe id="jsfiddle" src="http://" frameborder="0"></iframe>
+    <iframe id="jsfiddle" src="https://" frameborder="0"></iframe>
 </body>
 <script>
     var jsfiddleInfo = window.location.href.split("#!");
     if(jsfiddleInfo.length > 1){
-        var orgFiddle = '//jsfiddle.net/'+jsfiddleInfo[1].replace(/[^a-zA-Z0-9\/\-_]/g,'');
+        var orgFiddle = 'https://jsfiddle.net/'+jsfiddleInfo[1].replace(/[^a-zA-Z0-9\/\-_]/g,'');
         document.getElementById('jsfiddle').src = orgFiddle+'/embedded/result/';
         document.getElementById('orgfiddle').href = orgFiddle;
     }

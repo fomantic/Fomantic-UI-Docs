@@ -18,9 +18,11 @@ semantic.dropdown.ready = function() {
       context: '.first.example'
     })
   ;
-  
+
   $('.center.example .tabular.menu .item')
-    .tab()
+    .tab({
+      context: '.center.example'
+    })
   ;
 
   $('.history.example .menu .item')
@@ -37,12 +39,12 @@ semantic.dropdown.ready = function() {
     })
   ;
 
-  $('.context.example #context1 .menu .item')
+  $('.context.example > .context1 .menu .item')
     .tab({
-      context: $('.context.example #context1')
+      context: '.context.example > .context1'
     })
   ;
-  $('.context.example #context2 .menu .item')
+  $('.context.example > .context2 .menu .item')
     .tab({
       // special keyword works same as above
       context: 'parent'
@@ -80,6 +82,10 @@ semantic.dropdown.ready = function() {
       path    : '/'
     })
   ;
+
+  $('.inverted.example .menu > .item').tab({
+      context: '.inverted.example'
+  });
 
 };
 

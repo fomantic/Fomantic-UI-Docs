@@ -4,35 +4,33 @@
   <!-- Standard Meta -->
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
 
 <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
 
 <!-- Site Properities -->
 <meta name="generator" content="DocPad v6.79.4" />
-<title>Input | Fomantic-UI</title>
+<title>Input | Fomantic-UI Docs</title>
 
 <meta name="description" content="An input is a field used to elicit a response from a user" />
-<meta name="keywords" content="html5, ui, library, framework, javascript, fork, official" />
+<meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
   
+  <script src="/javascript/library/jquery.js"></script>
 
-  <script src="/javascript/library/jquery.min.js"></script>
-  <script src="/javascript/library/clipboard.min.js"></script>
-  <script src="/javascript/library/cookie.min.js"></script>
-  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/clipboard.js"></script>
+  <script src="/javascript/library/easing.js"></script>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/history.min.js"></script>
-  <script src="/javascript/library/state.js"></script>
-  <script src="/javascript/library/tablesort.min.js"></script>
-  <script src="/javascript/library/underscore.min.js"></script>
+  <script src="/javascript/library/history.js"></script>
+  <script src="/javascript/library/tablesort.js"></script>
+  <script src="/javascript/library/underscore.js"></script>
 
 
 
-<script src="/dist/semantic.min.js"></script>
+<script src="/dist/semantic.min.js?v=2.9.0"></script>
 
 <script src="/javascript/docs.js"></script>
 
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=2.9.0">
 
 
 
@@ -45,26 +43,9 @@
 
   
 
-  
-<script type="text/javascript">
-  window.liveSettings = {
-    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
-    parse_attr : [
-      'data-title',
-      'data-content'
-    ],
-    detectlang   : false,
-    autocollect  : true,
-    ignore_tags  : ['i', 'code', 'pre'],
-    parse_attr   : ['data-title', 'data-content', 'data-text'],
-    ignore_class : ['code', 'anchor']
-  };
-</script>
-<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
-
-
 </head>
 <body id="example" class="input" ontouchstart="">
+  
   
   <div class="ui vertical inverted sidebar menu" id="toc">
   
@@ -86,7 +67,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -161,8 +142,6 @@
     
       <a class="item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -344,6 +323,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -387,8 +373,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -403,8 +387,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -460,9 +442,6 @@
     
     <div class="right menu">
       
-      <div class="vertically fitted borderless item">
-        <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-      </div>
       
       <!--
       <div class="item">
@@ -502,7 +481,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -577,8 +556,6 @@
     
       <a class="item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -760,6 +737,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -803,8 +787,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -819,8 +801,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -866,6 +846,16 @@
         Input
         
         <div class="sub header">
+          <a class="twitter-share-button twitter"
+            href="https://twitter.com/share"
+            data-text="Fomantic-UI 2.9.0 is the official community fork of Semantic-UI&#010;Find the input element here"
+            data-url="https://fomantic-ui.com/elements/input.html"
+            data-via="fomanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           An input is a field used to elicit a response from a user
         </div>
       </h1>
@@ -919,6 +909,44 @@
     <div class="ui input">
       <input type="text" placeholder="Search...">
     </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">
+      File Input <div class="ui black label">New in 2.9.0</div>
+    </h4>
+    <p>A file input</p>
+    <div class="ui file input">
+      <input type="file">
+    </div>
+    <div class="ui ignored message">
+    If you want the trigger button having a custom text or an icon, you should use a <a href="#file-action">File Action Input</a>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      Invisible File Input <div class="ui black label">New in 2.9.0</div>
+    </h4>
+    <p>A file input can be made invisible so you are able to design another element to trigger the file dialog.</p>
+    <p>To accomplish this, you have to use a corresponding <code>&lt;label&gt;</code> element. This can be styled as desired, most probably as a button element</p>
+    <div class="ui ignored info icon message">
+      <i class="outline lightbulb icon"></i>
+      <div class="content">
+        In order to support button highlighting on key tabbing, the label element has to be placed immediatly after the invisible input element.
+      </div>
+    </div>
+    <input type="file" id="invisibleupload1" class="ui invisible file input">
+    <label for="invisibleupload1" class="ui red icon button">
+      <i class="file icon"></i>
+      Open any file
+    </label>
+    <input type="file" id="invisibleupload2" class="ui invisible file input">
+    <label for="invisibleupload2" class="ui placeholder segment">
+      <div class="ui icon header">
+        <i class="upload icon"></i>
+        Click here to upload
+      </div>
+    </label>
   </div>
 
   <h2 class="ui dividing header">States</h2>
@@ -985,7 +1013,21 @@
       <input type="text" placeholder="Search...">
     </div>
   </div>
-
+  <div class="another example">
+    <p>Some input types like "week", "date", "email", "url", etc. have a browser inbuild validation and will automatically get the error styling when those get invalid.
+        In general all input field types, which have the required attribute set and are empty, are considered invalid.
+        <div class="ui ignored info message">
+        To prevent showing the error class on empty and required fields, use a placeholder. If you don't want a textual placeholder use a space character.
+        </div>
+    </p>
+    <div class="ui input">
+        <input type="date">
+    </div>
+    <br>
+    <div class="ui input">
+        <input type="email" placeholder="E-Mail Address" required>
+    </div>
+  </div>
   <h2 class="ui dividing header">Variations</h2>
 
   <div class="example">
@@ -1023,7 +1065,7 @@
     <p>An input can be formatted with a label</p>
     <div class="ui labeled input">
       <div class="ui label">
-        http://
+        https://
       </div>
       <input type="text" placeholder="mysite.com">
     </div>
@@ -1149,7 +1191,7 @@
   </div>
   <div class="another example">
     <div class="ui action input">
-      <input type="text" value="http://ww.short.url/c0opq">
+      <input type="text" value="https://ww.short.url/c0opq">
       <button class="ui teal right labeled icon button">
         <i class="copy icon"></i>
         Copy
@@ -1162,6 +1204,21 @@
       <button class="ui icon button">
         <i class="search icon"></i>
       </button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">File Action<div class="ui black label">New in 2.9.0</div></h4>
+    <p>A File action input allows custom content inside the file trigger button. File action input buttons have to be made out of a label element.</p>
+    <div class="ui ignored warning message">
+        Although <code>left action</code> also works with file action inputs, in order to support button highlighting on key tabbing, the action button needs to be placed after the file input so it appears to the right.
+    </div>
+    <div class="ui file action input">
+      <input id="actionfileinput" type="file">
+      <label for="actionfileinput" class="ui blue button">
+         <i class="wizard icon"></i>
+            Choose wisely
+      </label>
     </div>
   </div>
 
@@ -1370,31 +1427,6 @@
       </div>
     </div>
   </div>
-  <div class="ui basic language modal">
-  <i class="close icon"></i>
-  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
-  <div class="image content">
-    <div class="middle aligned image">
-      <i class="world icon"></i>
-    </div>
-    <div class="description">
-      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
-      <div class="ui inverted indicating progress">
-        <div class="bar"></div>
-      </div>
-      <p>We need your help to make Semantic available to  people who speak your language.</p>
-      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
-      </p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui inverted cancel button">No Thanks</div>
-    <a href="https://github.com/fomantic/Fomantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
-      <i class="mail icon"></i>
-      Help Translate
-    </a>
-  </div>
-</div>
   <div class="ui demo page dimmer">
   <div class="content">
     <div class="center">
@@ -1406,7 +1438,8 @@
     </div>
   </div>
 </div>
-  <script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es5%2Ces2015"></script>
+<script>
 window.less = {
   async        : true,
   environment  : 'production',
@@ -1416,7 +1449,7 @@ window.less = {
 };
 </script>
 
-<script src="/javascript/library/less.min.js"></script>
+<script src="/javascript/library/less.js"></script>
 
 
 </body>

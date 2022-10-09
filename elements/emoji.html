@@ -4,35 +4,33 @@
   <!-- Standard Meta -->
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
 
 <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
 
 <!-- Site Properities -->
 <meta name="generator" content="DocPad v6.79.4" />
-<title>Emoji | Fomantic-UI</title>
+<title>Emoji | Fomantic-UI Docs</title>
 
 <meta name="description" content="An emoji is a glyph used to represent an emotional state" />
-<meta name="keywords" content="html5, ui, library, framework, javascript, fork, official" />
+<meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
   
+  <script src="/javascript/library/jquery.js"></script>
 
-  <script src="/javascript/library/jquery.min.js"></script>
-  <script src="/javascript/library/clipboard.min.js"></script>
-  <script src="/javascript/library/cookie.min.js"></script>
-  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/clipboard.js"></script>
+  <script src="/javascript/library/easing.js"></script>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/history.min.js"></script>
-  <script src="/javascript/library/state.js"></script>
-  <script src="/javascript/library/tablesort.min.js"></script>
-  <script src="/javascript/library/underscore.min.js"></script>
+  <script src="/javascript/library/history.js"></script>
+  <script src="/javascript/library/tablesort.js"></script>
+  <script src="/javascript/library/underscore.js"></script>
 
 
 
-<script src="/dist/semantic.min.js"></script>
+<script src="/dist/semantic.min.js?v=2.9.0"></script>
 
 <script src="/javascript/docs.js"></script>
 
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=2.9.0">
 
 
 
@@ -45,26 +43,9 @@
 
   
 
-  
-<script type="text/javascript">
-  window.liveSettings = {
-    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
-    parse_attr : [
-      'data-title',
-      'data-content'
-    ],
-    detectlang   : false,
-    autocollect  : true,
-    ignore_tags  : ['i', 'code', 'pre'],
-    parse_attr   : ['data-title', 'data-content', 'data-text'],
-    ignore_class : ['code', 'anchor']
-  };
-</script>
-<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
-
-
 </head>
 <body id="example" class="emoji" ontouchstart="">
+  
   
   <div class="ui vertical inverted sidebar menu" id="toc">
   
@@ -86,7 +67,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -161,8 +142,6 @@
     
       <a class="active item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -344,6 +323,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -387,8 +373,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -403,8 +387,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -460,9 +442,6 @@
     
     <div class="right menu">
       
-      <div class="vertically fitted borderless item">
-        <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-      </div>
       
       <!--
       <div class="item">
@@ -502,7 +481,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -577,8 +556,6 @@
     
       <a class="active item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -760,6 +737,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -803,8 +787,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -819,8 +801,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -864,8 +844,18 @@
 
       <h1 class="ui header">
         Emoji
-        <span class="ui teal label">NEW</span>
+        
         <div class="sub header">
+          <a class="twitter-share-button twitter"
+            href="https://twitter.com/share"
+            data-text="Fomantic-UI 2.9.0 is the official community fork of Semantic-UI&#010;Find the emoji element here"
+            data-url="https://fomantic-ui.com/elements/emoji.html"
+            data-via="fomanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           An emoji is a glyph used to represent an emotional state
         </div>
       </h1>
@@ -913,9 +903,6 @@
 </div>
 
 
-<script src="/javascript/emoji_strategy.js"></script>
-<script src="/javascript/emoji.js"></script>
-
 <div class="main ui container">
 
   <div class="ui active tab" data-tab="emoji">
@@ -929,7 +916,7 @@
     </emojiSearch>
 
     <h2 class="ui header">Emoji Set</h2>
-    <p>An emoji set contains all <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Unicode 12.1 Emoji Characters</a></p>
+    <p>An emoji set contains all <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Unicode 13.1 Emoji Characters</a></p>
     <div class="ui ignored warning message">
       Emojis serve a very similar function to text in a page. In Fomantic emojis receive a special tag <code>&lt;em&gt;</code> which allow for an abbreviated markup when sitting along-side text.
         <br>
@@ -938,8 +925,8 @@
     <div class="ui ignored message">
         By default all emoji images are linked to a CDN and are <b>not part of Fomantic itself</b>.
           <ul class="ui list">
-              <li>The default theme links to the set by <a href="https://twemoji.twitter.com/">Twemoji v12</a> under CC-BY 4.0 license</li>
-              <li>As an alternative the available joypixels theme links to the Emoji set designed by <a href="https://www.joypixels.com/emoji/">Joypixels 5</a> under their <a href="https://www.joypixels.com/licenses/free">free license model</a></li>
+              <li>The default theme links to the set by <a href="https://twemoji.twitter.com/">Twemoji v13.1</a> under CC-BY 4.0 license</li>
+              <li>As an alternative the available joypixels theme links to the Emoji set designed by <a href="https://www.joypixels.com/emoji/">Joypixels 6</a> under their <a href="https://www.joypixels.com/licenses/free">free license model</a></li>
           </ul>
           If needed, you might download your personal icon set from the respective websites respecting their individual licenses, host it locally and change the <code>@emojiPath</code> in <code>emoji.variables</code> of the theme you are using.
     </div>
@@ -948,6 +935,9 @@
           <div class="content">
           If you use Fomantic in a commercial or business project or want to host the emoji assets locally and <b>also want to use the alternative joypixels set</b>, you may require an additional license for your project depending of the usage.<br>You will find joypixels licenses at <a href="https://www.joypixels.com/licenses">https://www.joypixels.com/licenses</a>
           </div>
+      </div>
+      <div class="ui ignored info message">
+          You can reduce your custom generated CSS by adjusting the <code>@emoji-map</code> variable in your themes <code>emoji.variables</code> file to only the emojis you need.
       </div>
       <div class="ui emoji container"></div>
 
@@ -969,7 +959,7 @@
     <div class="example">
       <h4 class="ui header">Disabled</h4>
       <p>An emoji can show that it is disabled</p>
-      <div class="ui basic segment">
+      <div class="ui basic massive segment">
           <em data-emoji="anguished" class="disabled"></em>
       </div>
     </div>
@@ -977,7 +967,7 @@
     <div class="example">
       <h4 class="ui header">Loading</h4>
       <p>An emoji can be used as a simple loader</p>
-      <div class="ui basic segment">
+      <div class="ui basic massive segment">
           <em data-emoji="angel" class="loading"></em>
           <em data-emoji="blush" class="loading"></em>
           <em data-emoji="grin" class="loading"></em>
@@ -1015,7 +1005,7 @@
     <div class="example">
       <h4 class="ui header">Link</h4>
       <p>An emoji can be formatted as a link</p>
-      <div class="ui basic segment">
+      <div class="ui basic massive segment">
           <em data-emoji="slight_smile" class="link"></em>
       </div>
     </div>
@@ -1023,6 +1013,9 @@
   </div>
 
 </div>
+
+<script src="/javascript/emoji_strategy.js"></script>
+<script src="/javascript/emoji.js"></script>
         <footer class="ui vertical footer segment">
   <div class="ui container">
     <div class="ui stackable grid">
@@ -1088,31 +1081,6 @@
       </div>
     </div>
   </div>
-  <div class="ui basic language modal">
-  <i class="close icon"></i>
-  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
-  <div class="image content">
-    <div class="middle aligned image">
-      <i class="world icon"></i>
-    </div>
-    <div class="description">
-      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
-      <div class="ui inverted indicating progress">
-        <div class="bar"></div>
-      </div>
-      <p>We need your help to make Semantic available to  people who speak your language.</p>
-      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
-      </p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui inverted cancel button">No Thanks</div>
-    <a href="https://github.com/fomantic/Fomantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
-      <i class="mail icon"></i>
-      Help Translate
-    </a>
-  </div>
-</div>
   <div class="ui demo page dimmer">
   <div class="content">
     <div class="center">
@@ -1124,7 +1092,8 @@
     </div>
   </div>
 </div>
-  <script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es5%2Ces2015"></script>
+<script>
 window.less = {
   async        : true,
   environment  : 'production',
@@ -1134,7 +1103,7 @@ window.less = {
 };
 </script>
 
-<script src="/javascript/library/less.min.js"></script>
+<script src="/javascript/library/less.js"></script>
 
 
 </body>

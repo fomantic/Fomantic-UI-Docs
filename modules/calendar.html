@@ -4,35 +4,33 @@
   <!-- Standard Meta -->
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
 
 <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
 
 <!-- Site Properities -->
 <meta name="generator" content="DocPad v6.79.4" />
-<title>Calendar | Fomantic-UI</title>
+<title>Calendar | Fomantic-UI Docs</title>
 
 <meta name="description" content="A calendar allows users to select any date or time" />
-<meta name="keywords" content="html5, ui, library, framework, javascript, fork, official" />
+<meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
   
+  <script src="/javascript/library/jquery.js"></script>
 
-  <script src="/javascript/library/jquery.min.js"></script>
-  <script src="/javascript/library/clipboard.min.js"></script>
-  <script src="/javascript/library/cookie.min.js"></script>
-  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/clipboard.js"></script>
+  <script src="/javascript/library/easing.js"></script>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/history.min.js"></script>
-  <script src="/javascript/library/state.js"></script>
-  <script src="/javascript/library/tablesort.min.js"></script>
-  <script src="/javascript/library/underscore.min.js"></script>
+  <script src="/javascript/library/history.js"></script>
+  <script src="/javascript/library/tablesort.js"></script>
+  <script src="/javascript/library/underscore.js"></script>
 
 
 
-<script src="/dist/semantic.min.js"></script>
+<script src="/dist/semantic.min.js?v=2.9.0"></script>
 
 <script src="/javascript/docs.js"></script>
 
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=2.9.0">
 
 
 
@@ -45,26 +43,9 @@
 
   
 
-  
-<script type="text/javascript">
-  window.liveSettings = {
-    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
-    parse_attr : [
-      'data-title',
-      'data-content'
-    ],
-    detectlang   : false,
-    autocollect  : true,
-    ignore_tags  : ['i', 'code', 'pre'],
-    parse_attr   : ['data-title', 'data-content', 'data-text'],
-    ignore_class : ['code', 'anchor']
-  };
-</script>
-<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
-
-
 </head>
 <body id="example" class="calendar" ontouchstart="">
+  
   
   <div class="ui vertical inverted sidebar menu" id="toc">
   
@@ -86,7 +67,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -161,8 +142,6 @@
     
       <a class="item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -344,6 +323,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -387,8 +373,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -403,8 +387,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -460,9 +442,6 @@
     
     <div class="right menu">
       
-      <div class="vertically fitted borderless item">
-        <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-      </div>
       
       <!--
       <div class="item">
@@ -502,7 +481,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -577,8 +556,6 @@
     
       <a class="item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -760,6 +737,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -803,8 +787,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -819,8 +801,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -869,6 +849,16 @@
         Calendar
         
         <div class="sub header">
+          <a class="twitter-share-button twitter"
+            href="https://twitter.com/share"
+            data-text="Fomantic-UI 2.9.0 is the official community fork of Semantic-UI&#010;Find the calendar module here"
+            data-url="https://fomantic-ui.com/modules/calendar.html"
+            data-via="fomanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           A calendar allows users to select any date or time
         </div>
       </h1>
@@ -1014,6 +1004,26 @@
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Multimonth</h4>
+      <p>You can display multiple months. Use <code>monthOffset</code>, to adjust the the startmonth relative to the selected date</p>
+      <div class="ui calendar" id="multimonth_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+        $('#multimonth_calendar')
+          .calendar({
+              type: 'date',
+              multiMonth: 3,
+              monthOffset: -1 // current month will be shown in the middle of 3 months
+          })
+        ;
+      </div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
     <div class="example">
       <h4 class="ui header">Disabled</h4>
@@ -1098,7 +1108,8 @@
 
     <div class="example">
       <h4 class="ui header">24 hour format</h4>
-      <p>You can get rid of the AM/PM stuff</p>
+      <p>You can get rid of the AM/PM notation by adjusting the format-token</p>
+      <div class="ui ignored info message">For details about the token string format see <a href="#custom-format">Custom Format</a></div>
       <div class="ui calendar" id="no_ampm">
         <div class="ui input left icon">
           <i class="time icon"></i>
@@ -1109,7 +1120,10 @@
       $('#no_ampm')
         .calendar({
           type: 'time',
-          ampm: false
+          formatter: {
+            time: 'H:mm',
+            cellTime: 'H:mm'
+          }
         })
       ;
       </div>
@@ -1173,7 +1187,7 @@
     </div>
     <div class="another example">
       <p>You can also set a minimum and a maximum selection date using HTML markup</p>
-      <div class="ui calendar" id="minmax_calendar_2" data-min-date="10/15/2018 08:00:00" data-max-date="10/19/2018 18:00:00">
+      <div class="ui calendar" id="minmax_calendar_2" data-min-date="2018/10/05 08:00:00" data-max-date="2018/10/19 18:00:00">
         <div class="ui input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
@@ -1201,26 +1215,197 @@
     </div>
 
     <div class="example">
-      <h4 class="ui header">Custom format</h4>
-      <p>You can entirely change the date format</p>
+      <h4 class="ui header">Custom format <div class="ui small black label">New in 2.9.0</div></h4>
+      <p>You can entirely change the date format by using a token string formatter.</p>
+      <p>
+        Tokens are placeholder characters for a specific output format. Fomantic-UI supports the following tokens:
+        <table class="ui celled table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Token</th>
+              <th>Resultset</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Day of Week</td>
+              <td>d</td>
+              <td>0-6</td>
+            </tr>
+            <tr>
+              <td>Day of Week (2 char text)</td>
+              <td>dd</td>
+              <td>Su - Sa</td>
+            </tr>
+            <tr>
+              <td>Day of Week (3 char text)</td>
+              <td>ddd</td>
+              <td>Sun - Sat</td>
+            </tr>
+            <tr>
+              <td>Day of Week (Full text)</td>
+              <td>dddd</td>
+              <td>Sunday - Saturday</td>
+            </tr>
+            <tr>
+              <td>Day of Month</td>
+              <td>D</td>
+              <td>1 to 31</td>
+            </tr>
+            <tr>
+              <td>Day of Month (Leading zero)</td>
+              <td>DD</td>
+              <td>01-31</td>
+            </tr>
+            <tr>
+              <td>Day suffix</td>
+              <td>S</td>
+              <td>st,nd,rd,th</td>
+            </tr>
+            <tr>
+              <td>Month</td>
+              <td>M</td>
+              <td>1 to 12</td>
+            </tr>
+            <tr>
+              <td>Month (Leading zero)</td>
+              <td>MM</td>
+              <td>01-12</td>
+            </tr>
+            <tr>
+              <td>Month (3 char text)</td>
+              <td>MMM</td>
+              <td>Jan-Dec</td>
+            </tr>
+            <tr>
+              <td>Month (Full text)</td>
+              <td>MMMM</td>
+              <td>January-December</td>
+            </tr>
+            <tr>
+              <td>Year</td>
+              <td>YYYY or Y</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Year (2 Digits)</td>
+              <td>YY</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>Week</td>
+              <td>w</td>
+              <td>1-53</td>
+            </tr>
+            <tr>
+              <td>Week (Leading zero)</td>
+              <td>ww</td>
+              <td>01-53</td>
+            </tr>
+            <tr>
+              <td>Hour (12h Format)</td>
+              <td>h</td>
+              <td>1-12</td>
+            </tr>
+            <tr>
+              <td>Hour (12h Format, Leading zero)</td>
+              <td>hh</td>
+              <td>01-12</td>
+            </tr>
+            <tr>
+              <td>Hour (24h Format)</td>
+              <td>H</td>
+              <td>0-23</td>
+            </tr>
+            <tr>
+              <td>Hour (24h Format, Leading zero)</td>
+              <td>HH</td>
+              <td>00-23</td>
+            </tr>
+            <tr>
+              <td>Minute</td>
+              <td>m</td>
+              <td>0-59</td>
+            </tr>
+            <tr>
+              <td>Minute (Leading zero)</td>
+              <td>mm</td>
+              <td>00-59</td>
+            </tr>
+            <tr>
+              <td>Second</td>
+              <td>s</td>
+              <td>0-59</td>
+            </tr>
+            <tr>
+              <td>Second (Leading zero)</td>
+              <td>ss</td>
+              <td>00-59</td>
+            </tr>
+            <tr>
+              <td>AM/PM</td>
+              <td>A</td>
+              <td>AM-PM</td>
+            </tr>
+            <tr>
+              <td>AM/PM (lowercase)</td>
+              <td>a</td>
+              <td>am-pm</td>
+            </tr>
+            <tr>
+              <td>Custom Text</td>
+              <td>Wrap in double or single quotes</td>
+              <td>Your text without quotes</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="ui ignored warning message">
+            <p>If you previously used the <code>ampm</code> setting in FUI < 2.9.0, you will need to update your code to (not) use the <code>A</code> or <code>a</code> token for date/datetime/time/cellTime formatter instead.</p>
+            <p>For quicker migration you could globally override the format settings like this:
+                <div class="code">
+                    $.fn.calendar.settings.formatter.datetime = 'MMMM D, YYYY H:mm';
+                    $.fn.calendar.settings.formatter.time = 'H:mm';
+                    $.fn.calendar.settings.formatter.cellTime = 'H:mm';
+                </div>
+            </p>
+        </div>
+      </p>
+
+      <div class="ui calendar" id="token_format_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date" readonly>
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#token_format_calendar')
+        .calendar({
+          type: 'date',
+          formatter: {
+            date: '"approx:"YYYY-MM-DD'
+          }
+        })
+      ;
+      </div>
+    </div>
+    <div class="another example">
+      <p>You can also provide a custom function to return anything you want</p>
       <div class="ui calendar" id="custom_format_calendar">
         <div class="ui input left icon">
           <i class="calendar icon"></i>
-          <input type="text" placeholder="Date">
+          <input type="text" placeholder="Date" readonly>
         </div>
       </div>
       <div class="code" data-type="javascript">
       $('#custom_format_calendar')
         .calendar({
-          monthFirst: false,
           type: 'date',
           formatter: {
             date: function (date, settings) {
               if (!date) return '';
-              var day = date.getDate();
-              var month = date.getMonth() + 1;
-              var year = date.getFullYear();
-              return day + '/' + month + '/' + year;
+              // Show the selected year 85 Years ahead
+              return 'Expires in ' + (date.getFullYear() + 85);
             }
           }
         })
@@ -1335,12 +1520,15 @@
         .calendar({
           text: {
             days: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+            dayNamesShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+            dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
             months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
             monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
             today: 'Aujourd\'hui',
             now: 'Maintenant',
             am: 'AM',
-            pm: 'PM'
+            pm: 'PM',
+            weekNo: 'Semaine'
           }
         })
       ;
@@ -1391,7 +1579,7 @@
       <div class="code" data-type="javascript">
       $('#disableddates_calendar')
         .calendar({
-            initialDate: new Date('2018-12-1'),
+            initialDate: new Date('2018-12-01'),
             disabledDates: [{
                     date: new Date('2018-12-22'),
                     message: 'xmas gift shopping'
@@ -1403,6 +1591,57 @@
                     variation: 'basic'
                 },
                 new Date('2018-12-31')  /* No Reason. Everybody knows why ;) */
+            ]
+        })
+      ;
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Hours <span class="ui black label">New in 2.9.0</span></h4>
+      <p>Disabling specific hours of specific days which can optionally display a reason in popup on hover</p>
+      <div class="ui calendar" id="disabledhours_calendar">
+        <div class="ui input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date">
+        </div>
+      </div>
+
+      <div class="code" data-type="javascript">
+      $('#disabledhours_calendar')
+        .calendar({
+            initialDate: new Date('2021-07-01'),
+            formatter: {
+                datetime: 'MMMM D, YYYY H:mm',
+                time: 'H:mm',
+                cellTime: 'H:mm'
+            },
+            disabledHours: [
+              0, // Midnight will always be disabled
+              {
+              // Every Saturday and Sunday will be entirely disabled
+                days: [0, 6],
+                hours: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                message: 'We dont work on Saturday and Sunday',
+                inverted: true,
+                variation: 'basic'
+              },
+              {
+               // Friday afternoon will be disabled
+                date: new Date('2021-07-02'),
+                hours: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                message: 'Sorry this afternoon we are closed !',
+                inverted: true
+              },
+              {
+               // All hours between 1 and 7 will be disabled every day
+                hours: [1, 2, 3, 4, 5, 6, 7],
+                message: 'We are sleeping !'
+              },
+              {
+              // 12:00 and 13:00 will be disabled every day
+                hours: [12, 13],
+                message: 'Lunch time !'
+              }
             ]
         })
       ;
@@ -1422,7 +1661,7 @@
           $('#disabledmonth_calendar')
           .calendar({
             type: 'date',
-            initialDate: new Date('2020-12-1'),
+            initialDate: new Date('2020-12-01'),
             disabledDates: [{
                 month: 11,     //Javascript months start from 0 (!)
                 message: 'All days in December are booked out'
@@ -1449,7 +1688,7 @@
           $('#disabledyear_calendar')
           .calendar({
             type: 'date',
-            initialDate: new Date('2020-12-1'),
+            initialDate: new Date('2020-12-01'),
             disabledDates: [{
                 year: 2020,
                 message: '2020 is not available'
@@ -1477,11 +1716,11 @@
           $('#enableddates_calendar')
           .calendar({
             type: 'date',
-            initialDate: new Date('2019-3-1'),
+            initialDate: new Date('2019-03-01'),
             enabledDates: [
-                new Date('2018-3-5'),
-                new Date('2018-3-10'),
-                new Date('2018-3-20')
+                new Date('2018-03-05'),
+                new Date('2018-03-10'),
+                new Date('2018-03-20')
             ]
           })
           ;
@@ -1500,14 +1739,14 @@
       </div>
       <div class="evaluated code" data-type="javascript">
       $('#eventdates_calendar').calendar({
-          initialDate: new Date('2019-4-1'),
+          initialDate: new Date('2019-04-01'),
           eventDates: [
               {
-                date: new Date('2019-4-21'),
+                date: new Date('2019-04-21'),
                 message: 'Show me in light purple',
                 class: 'inverted purple'
               },{
-                date: new Date('2019-4-22'),
+                date: new Date('2019-04-22'),
                 message: 'Show me in green',
                 class: 'green'
               }
@@ -1524,15 +1763,15 @@
       </div>
       <div class="evaluated code" data-type="javascript">
       $('#eventdates2_calendar').calendar({
-          initialDate: new Date('2019-4-1'),
+          initialDate: new Date('2019-04-01'),
           eventClass: 'inverted red',
           eventDates: [
-              new Date('2019-4-20'), //no message tooltip
+              new Date('2019-04-20'), //no message tooltip
               {
-                date: new Date('2019-4-21'),
+                date: new Date('2019-04-21'),
                 message: 'I got the default color (light red)'
               },{
-                date: new Date('2019-4-22'),
+                date: new Date('2019-04-22'),
                 message: 'Me too'
               }
           ]
@@ -1631,6 +1870,10 @@
         <td>set maxDate(date)</td>
         <td>Set the maximal selectable date</td>
       </tr>
+      <tr>
+        <td>destroy</td>
+        <td>Destroys instance and removes all events</td>
+      </tr>
     </table>
 
   </div>
@@ -1706,6 +1949,11 @@
           <td>An array of Date-Objects or Objects with given message to show in a popup when hovering over the appropriate date <code>{date: Date, message: string}</code></td>
         </tr>
         <tr>
+          <td>disabledHours</td>
+          <td>[]</td>
+          <td>An array of integer values from 0-23 or Objects with given message to show in a popup when hovering over the appropriate date <code>{days: intArray, hours: intArray, message: string}</code></td>
+        </tr>
+        <tr>
           <td>enabledDates</td>
           <td>[]</td>
           <td>An array of Date-Objects to be enabled for selection. All other dates are disabled</td>
@@ -1723,7 +1971,7 @@
         <tr>
           <td>on</td>
           <td>null</td>
-          <td>Choose when to show the popup (defaults to <code>focus</code> for input, <code>click</code> for others)</td>
+          <td>Choose when to show the popup (defaults to <code>click</code>)</td>
         </tr>
         <tr>
           <td>initialDate</td>
@@ -1744,11 +1992,6 @@
           <td>maxDate</td>
           <td>null</td>
           <td>Maximum date/time that can be selected, dates/times after are disabled</td>
-        </tr>
-        <tr>
-          <td>ampm</td>
-          <td>true</td>
-          <td>Show am/pm in time mode</td>
         </tr>
         <tr>
           <td>disableYear</td>
@@ -1783,7 +2026,12 @@
         <tr>
           <td>multiMonth</td>
           <td>1</td>
-          <td>Show multiple months when in <code>day</code>' mode</td>
+          <td>Show multiple months when in <code>day</code> mode</td>
+        </tr>
+        <tr>
+          <td>monthOffset</td>
+          <td>0</td>
+          <td>Position current month by offset when multimonth > 1</td>
         </tr>
         <tr>
           <td>minTimeGap</td>
@@ -1824,12 +2072,56 @@
             <div class="code">
             text: {
               days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+              dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+              dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
               months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
               monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
               today: 'Today',
               now: 'Now',
               am: 'AM',
               pm: 'PM'
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>formatter</td>
+          <td colspan="2">
+            <div class="ui ignored info message">For details about the below mentioned token string format see <a href="#custom-format">Custom Format</a></div>
+            <div class="code">
+            // Different customizable methods to format a certain part of the date or popup text output
+            formatter: {
+                // do whatever you like to the given cell
+                // cellOptions is an object containing values for {mode,adjacent,disabled,active,today}
+                cell: function (cell, date, cellOptions) {}
+
+                // Every other method can either be a token string
+                // or a function(date,settings) which has to return a string
+                cellTime: 'h:mm A',
+                date: 'MMMM D, YYYY',
+                datetime: 'MMMM D, YYYY h:mm A',
+                dayColumnHeader: function (day, settings) {},
+                dayHeader: 'MMMM YYYY',
+                hourHeader: 'MMMM D, YYYY',
+                minuteHeader: 'MMMM D, YYYY',
+                month: 'MMMM YYYY',
+                monthHeader: 'YYYY',
+                time: 'h:mm A',
+                today: function (settings) {},
+                year: 'YYYY',
+                yearHeader: function (date, settings) {},
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>parser</td>
+          <td colspan="2">
+            <div class="code">
+            // Customizable methods to parse a given date
+            // Has to return a date object
+            parser: {
+                date: function (text, settings) {}
             }
             </div>
           </td>
@@ -1848,12 +2140,12 @@
       </thead>
       <tbody>
         <tr>
-          <td>onBeforeChange <span class="ui red label"><i class="exclamation icon"></i>New in 2.8.0</span></td>
+          <td class="five wide">onBeforeChange(date, text, mode) <span class="ui tiny black label">New in 2.8.0</span></td>
           <td>active content</td>
           <td>Is called before a calendar date changes. <code>return false;</code> will cancel the change</td>
         </tr>
         <tr>
-          <td>onChange</td>
+          <td>onChange(date, text, mode)</td>
           <td>active content</td>
           <td>Is called after a calendar date has changed.</td>
         </tr>
@@ -1977,7 +2269,7 @@
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
@@ -2075,31 +2367,6 @@
       </div>
     </div>
   </div>
-  <div class="ui basic language modal">
-  <i class="close icon"></i>
-  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
-  <div class="image content">
-    <div class="middle aligned image">
-      <i class="world icon"></i>
-    </div>
-    <div class="description">
-      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
-      <div class="ui inverted indicating progress">
-        <div class="bar"></div>
-      </div>
-      <p>We need your help to make Semantic available to  people who speak your language.</p>
-      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
-      </p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui inverted cancel button">No Thanks</div>
-    <a href="https://github.com/fomantic/Fomantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
-      <i class="mail icon"></i>
-      Help Translate
-    </a>
-  </div>
-</div>
   <div class="ui demo page dimmer">
   <div class="content">
     <div class="center">
@@ -2111,7 +2378,8 @@
     </div>
   </div>
 </div>
-  <script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es5%2Ces2015"></script>
+<script>
 window.less = {
   async        : true,
   environment  : 'production',
@@ -2121,7 +2389,7 @@ window.less = {
 };
 </script>
 
-<script src="/javascript/library/less.min.js"></script>
+<script src="/javascript/library/less.js"></script>
 
 
 </body>

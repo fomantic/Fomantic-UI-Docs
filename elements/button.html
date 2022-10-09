@@ -4,35 +4,33 @@
   <!-- Standard Meta -->
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
 
 <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
 
 <!-- Site Properities -->
 <meta name="generator" content="DocPad v6.79.4" />
-<title>Button | Fomantic-UI</title>
+<title>Button | Fomantic-UI Docs</title>
 
 <meta name="description" content="A button indicates a possible user action" />
-<meta name="keywords" content="html5, ui, library, framework, javascript, fork, official" />
+<meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
   
+  <script src="/javascript/library/jquery.js"></script>
 
-  <script src="/javascript/library/jquery.min.js"></script>
-  <script src="/javascript/library/clipboard.min.js"></script>
-  <script src="/javascript/library/cookie.min.js"></script>
-  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/clipboard.js"></script>
+  <script src="/javascript/library/easing.js"></script>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/history.min.js"></script>
-  <script src="/javascript/library/state.js"></script>
-  <script src="/javascript/library/tablesort.min.js"></script>
-  <script src="/javascript/library/underscore.min.js"></script>
+  <script src="/javascript/library/history.js"></script>
+  <script src="/javascript/library/tablesort.js"></script>
+  <script src="/javascript/library/underscore.js"></script>
 
 
 
-<script src="/dist/semantic.min.js"></script>
+<script src="/dist/semantic.min.js?v=2.9.0"></script>
 
 <script src="/javascript/docs.js"></script>
 
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=2.9.0">
 
 
 
@@ -45,26 +43,9 @@
 
   
 
-  
-<script type="text/javascript">
-  window.liveSettings = {
-    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
-    parse_attr : [
-      'data-title',
-      'data-content'
-    ],
-    detectlang   : false,
-    autocollect  : true,
-    ignore_tags  : ['i', 'code', 'pre'],
-    parse_attr   : ['data-title', 'data-content', 'data-text'],
-    ignore_class : ['code', 'anchor']
-  };
-</script>
-<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
-
-
 </head>
 <body id="example" class="button-page" ontouchstart="">
+  
   
   <div class="ui vertical inverted sidebar menu" id="toc">
   
@@ -86,7 +67,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -161,8 +142,6 @@
     
       <a class="item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -344,6 +323,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -387,8 +373,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -403,8 +387,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -460,9 +442,6 @@
     
     <div class="right menu">
       
-      <div class="vertically fitted borderless item">
-        <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-      </div>
       
       <!--
       <div class="item">
@@ -502,7 +481,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -577,8 +556,6 @@
     
       <a class="item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -760,6 +737,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -803,8 +787,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -819,8 +801,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -858,7 +838,6 @@
       <div class="article">
         <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
 <script src="/javascript/button.js"></script>
-<script src="/javascript/library/state.js"></script>
 
 
 
@@ -870,6 +849,16 @@
         Button
         
         <div class="sub header">
+          <a class="twitter-share-button twitter"
+            href="https://twitter.com/share"
+            data-text="Fomantic-UI 2.9.0 is the official community fork of Semantic-UI&#010;Find the button element here"
+            data-url="https://fomantic-ui.com/elements/button.html"
+            data-via="fomanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           A button indicates a possible user action
         </div>
       </h1>
@@ -940,7 +929,7 @@
   </div>
   <div class="another example">
     <div class="ui ignored warning message">
-      Although any tag can be used for a button, it will only be <a href="http://webaim.org/techniques/keyboard/tabindex">keyboard focusable</a> if you use a <code>&#x3C;button&#x3E;</code> tag or you add the property <code>tabindex="0"</code>. Keyboard accessible buttons will preserve focus styles after click, which may be visually jarring.</p>
+      Although any tag can be used for a button, it will only be <a href="https://webaim.org/techniques/keyboard/tabindex">keyboard focusable</a> if you use a <code>&#x3C;button&#x3E;</code> tag or you add the property <code>tabindex="0"</code>. Keyboard accessible buttons will preserve focus styles after click, which may be visually jarring.</p>
     </div>
     <button class="ui button">
       Button
@@ -1059,6 +1048,10 @@
     <button class="ui right labeled icon button">
       <i class="right arrow icon"></i>
       Next
+    </button>
+    <button class="ui labeled icon button">
+      <i class="loading spinner icon"></i>
+      Loading
     </button>
   </div>
 
@@ -1602,6 +1595,66 @@
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Wrapping Buttons <span class="ui black label">New in 2.9.0</span></h4>
+    <p>Groups buttons can automatically wrap sharing the overall available width</p>
+    <div class="ui wrapped wrapping buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+      <button class="ui button">Four</button>
+      <button class="ui button">Five</button>
+      <button class="ui button">Six</button>
+      <button class="ui button">Seven</button>
+      <button class="ui button">Eight</button>
+      <button class="ui button">Nine</button>
+      <button class="ui button">Ten</button>
+      <button class="ui button">Eleven</button>
+      <button class="ui button">Twelve</button>
+      <button class="ui button">Thirteen</button>
+      <button class="ui button">Fourteen</button>
+      <button class="ui button">Fifteen</button>
+      <button class="ui button">Sixteen</button>
+      <button class="ui button">Seventeen</button>
+      <button class="ui button">Eighteen</button>
+      <button class="ui button">Nineteen</button>
+      <button class="ui button">Twenty</button>
+    </div>
+    <div class="ui ignored info message">
+        There exists an optional <code>wrapped</code> helper class which should be set to the button group when it's known if a button group is actually wrapped, which will adjust some border-radius. As it is not possible to detect a wrapping child automatically via pure CSS, you should use that helper class whenever appropriate.
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Spaced Buttons <span class="ui black label">New in 2.9.0</span></h4>
+    <p>Buttons inside groups can automatically get a margin so they dont appear attached together, especially when used together with <a href="#wrapping-buttons">wrapping</a> on responsive layouts</p>
+    <div class="ui wrapping spaced buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+      <button class="ui button">Four</button>
+      <button class="ui button">Five</button>
+      <button class="ui button">Six</button>
+      <button class="ui button">Seven</button>
+      <button class="ui button">Eight</button>
+      <button class="ui button">Nine</button>
+      <button class="ui button">Ten</button>
+      <button class="ui button">Eleven</button>
+      <button class="ui button">Twelve</button>
+      <button class="ui button">Thirteen</button>
+      <button class="ui button">Fourteen</button>
+      <button class="ui button">Fifteen</button>
+      <button class="ui button">Sixteen</button>
+      <button class="ui button">Seventeen</button>
+      <button class="ui button">Eighteen</button>
+      <button class="ui button">Nineteen</button>
+      <button class="ui button">Twenty</button>
+    </div>
+    <div class="ui ignored info message">
+        You can use <code>compact wrapping</code> if you need wrapping buttons which should not share the same width on each wrapped row. Especially for spaced buttons.
+    </div>
+  </div>
+
 </div>
         <footer class="ui vertical footer segment">
   <div class="ui container">
@@ -1668,31 +1721,6 @@
       </div>
     </div>
   </div>
-  <div class="ui basic language modal">
-  <i class="close icon"></i>
-  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
-  <div class="image content">
-    <div class="middle aligned image">
-      <i class="world icon"></i>
-    </div>
-    <div class="description">
-      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
-      <div class="ui inverted indicating progress">
-        <div class="bar"></div>
-      </div>
-      <p>We need your help to make Semantic available to  people who speak your language.</p>
-      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
-      </p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui inverted cancel button">No Thanks</div>
-    <a href="https://github.com/fomantic/Fomantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
-      <i class="mail icon"></i>
-      Help Translate
-    </a>
-  </div>
-</div>
   <div class="ui demo page dimmer">
   <div class="content">
     <div class="center">
@@ -1704,7 +1732,8 @@
     </div>
   </div>
 </div>
-  <script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es5%2Ces2015"></script>
+<script>
 window.less = {
   async        : true,
   environment  : 'production',
@@ -1714,7 +1743,7 @@ window.less = {
 };
 </script>
 
-<script src="/javascript/library/less.min.js"></script>
+<script src="/javascript/library/less.js"></script>
 
 
 </body>

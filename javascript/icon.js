@@ -40,21 +40,22 @@ semantic.icon.ready = function() {
         return icons;
       }
     },
-    categoryVisible = (category) => {
-      var rect = category.getBoundingClientRect();
+    iconVisible = function (icon) {
+      var rect = icon.getBoundingClientRect();
       var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
       return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
     },
-    checkVisibility = () => {
-      $('.icon.example').each(function() {
-        var element = $(this).get(0);
-    
-        if(categoryVisible(element)) {
-          $(this).css('visibility', 'visible');
-        } else {
-          $(this).css('visibility', 'hidden');
-        }
-      });
+    checkIconVisibility = function () {
+      $('.icon.example')
+        .find('i.icon')
+        .each(function () {
+          var element = $(this).get(0);
+          if (iconVisible(element)) {
+            $(this).css('visibility', 'visible');
+          } else {
+            $(this).css('visibility', 'hidden');
+          }
+        });
     }
   ;
 
@@ -63,6 +64,7 @@ semantic.icon.ready = function() {
     $iconSearch
       .search({
         type          : 'category',
+        fullTextSearch: true,
         minCharacters : 1,
         maxResults    : 10,
         cache         : false,
@@ -92,7 +94,7 @@ semantic.icon.ready = function() {
             $search = $('iconSearch .input > input')
           ;
           $search.blur();
-          $('body').toast({
+          $.toast({
             class: 'inverted',
             compact: false,
             showIcon: 'copy',
@@ -107,18 +109,17 @@ semantic.icon.ready = function() {
   }
 
   // only show icon category when visible on screen
-  $(document).scroll(checkVisibility);
-  $(window).resize(checkVisibility);
-  
-  checkVisibility();
+  $(document).scroll(checkIconVisibility);
+  $(window).resize(checkIconVisibility);
+
+  checkIconVisibility();
   
   
   // check if icon list tab is selected (if so run the check visibility function)
   var tab = $('.ui.two.item.stackable.tabs > a').get(0);
-  console.log(tab);
-  
-  var observer = new MutationObserver(() => {
-    checkVisibility();
+
+  var observer = new MutationObserver(function() {
+    checkIconVisibility();
   });
   
   observer.observe(tab, {

@@ -23,7 +23,6 @@ semantic.emoji.ready = function() {
         chunkpos = parseInt($button.attr('data-chunkpos'),10),
         $example = $button.prev(),
         $grid = $example.find('.grid'),
-        $code = $example.find('.code'),
         chunkSize = 25
     ;
 
@@ -38,7 +37,6 @@ semantic.emoji.ready = function() {
           $column = $('<div>', {class:'column', html: '<br>'+obj.shortname.replace(/:/g,'')}),
           $emoji = $('<em>', {'data-emoji':obj.shortname})
       ;
-      $code.append($emoji);
       $grid.append($column.prepend($emoji.addClass('medium')).attr('data-tooltip',obj.name));
     }
     if(chunkpos === maxChunk) {
@@ -67,7 +65,6 @@ semantic.emoji.ready = function() {
     var $example = $('<div>', {class:'emoji example'});
     $example.append($('<h4>', {class:'ui header', text: cat.charAt(0).toUpperCase() + cat.substring(1)}));
     $example.append($('<div>',{class:'ui doubling five column grid'}));
-    $example.append($('<div>',{class:'existing code'}));
     $emojiContainer.append($example);
 
     var $moreButton = $('<a>',{class:'emoji-category-button',text:'Show more '+cat+' emojis', 'data-chunkpos':0,'data-category':cat, click:addEmojiChunk});
@@ -85,6 +82,7 @@ semantic.emoji.ready = function() {
     .search({
       source: allEmojis,
       type: 'category',
+      fullTextSearch: true,
       maxResults: 10,
       cache: false,
       searchFields:['name','keywordsString'],
@@ -118,7 +116,7 @@ semantic.emoji.ready = function() {
             $search = $('emojiSearch .input > input')
         ;
         $search.blur();
-        $('body').toast({
+        $.toast({
           class: 'inverted',
           compact: false,
           showIcon: 'copy',
@@ -131,7 +129,4 @@ semantic.emoji.ready = function() {
   ;
 };
 
-// attach ready event
-$(document)
-  .ready(semantic.emoji.ready)
-;
+semantic.emoji.ready();

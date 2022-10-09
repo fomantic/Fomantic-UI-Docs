@@ -4,35 +4,33 @@
   <!-- Standard Meta -->
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
 
 <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
 
 <!-- Site Properities -->
 <meta name="generator" content="DocPad v6.79.4" />
-<title>API | Fomantic-UI</title>
+<title>API | Fomantic-UI Docs</title>
 
 <meta name="description" content="API allows elements to trigger actions on a server" />
-<meta name="keywords" content="html5, ui, library, framework, javascript, fork, official" />
+<meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
   
+  <script src="/javascript/library/jquery.js"></script>
 
-  <script src="/javascript/library/jquery.min.js"></script>
-  <script src="/javascript/library/clipboard.min.js"></script>
-  <script src="/javascript/library/cookie.min.js"></script>
-  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/clipboard.js"></script>
+  <script src="/javascript/library/easing.js"></script>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/history.min.js"></script>
-  <script src="/javascript/library/state.js"></script>
-  <script src="/javascript/library/tablesort.min.js"></script>
-  <script src="/javascript/library/underscore.min.js"></script>
+  <script src="/javascript/library/history.js"></script>
+  <script src="/javascript/library/tablesort.js"></script>
+  <script src="/javascript/library/underscore.js"></script>
 
 
 
-<script src="/dist/semantic.min.js"></script>
+<script src="/dist/semantic.min.js?v=2.9.0"></script>
 
 <script src="/javascript/docs.js"></script>
 
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=2.9.0">
 
 
 
@@ -45,26 +43,9 @@
 
   
 
-  
-<script type="text/javascript">
-  window.liveSettings = {
-    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
-    parse_attr : [
-      'data-title',
-      'data-content'
-    ],
-    detectlang   : false,
-    autocollect  : true,
-    ignore_tags  : ['i', 'code', 'pre'],
-    parse_attr   : ['data-title', 'data-content', 'data-text'],
-    ignore_class : ['code', 'anchor']
-  };
-</script>
-<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
-
-
 </head>
 <body id="example" class="api" ontouchstart="">
+  
   
   <div class="ui vertical inverted sidebar menu" id="toc">
   
@@ -86,7 +67,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -161,8 +142,6 @@
     
       <a class="item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -344,6 +323,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -387,8 +373,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -403,8 +387,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -460,9 +442,6 @@
     
     <div class="right menu">
       
-      <div class="vertically fitted borderless item">
-        <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-      </div>
       
       <!--
       <div class="item">
@@ -502,7 +481,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.8</b>
+  <b>New in 2.9</b>
 </a>
 <div class="item">
   <div class="header">Introduction</div>
@@ -577,8 +556,6 @@
     
       <a class="item" href="/elements/emoji.html">
         Emoji
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
     
@@ -760,6 +737,13 @@
         
       </a>
   
+      <a class="item" href="/modules/flyout.html">
+        Flyout
+        
+        <span class="ui mini empty orange circular ui label"></span>
+        
+      </a>
+  
       <a class="item" href="/modules/modal.html">
         Modal
         
@@ -803,8 +787,6 @@
       <a class="item" href="/modules/slider.html">
         Slider
         
-        <span class="ui mini empty teal circular ui label"></span>
-        
       </a>
   
       <a class="item" href="/modules/sticky.html">
@@ -819,8 +801,6 @@
   
       <a class="item" href="/modules/toast.html">
         Toast
-        
-        <span class="ui mini empty teal circular ui label"></span>
         
       </a>
   
@@ -856,8 +836,7 @@
         </div>
       </div>
       <div class="article">
-        <script src="/javascript/library/serialize-object.js"></script>
-<script src="/javascript/api.js"></script>
+        <script src="/javascript/api.js"></script>
 
 
 
@@ -869,6 +848,16 @@
         API
         
         <div class="sub header">
+          <a class="twitter-share-button twitter"
+            href="https://twitter.com/share"
+            data-text="Fomantic-UI 2.9.0 is the official community fork of Semantic-UI&#010;Find the API behavior here"
+            data-url="https://fomantic-ui.com/behaviors/API.html"
+            data-via="fomanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           API allows elements to trigger actions on a server
         </div>
       </h1>
@@ -940,7 +929,7 @@
 
     <div class="no example">
       <h4 class="ui header">Preserve Templated URLs</h4>
-      <p>API helps you decouple URLs from your code. Use named API actions like <code>get followers</code> instead of URLs like <code>http://foo.com/get/1.0/followers.json</code> in your code.</p>
+      <p>API helps you decouple URLs from your code. Use named API actions like <code>get followers</code> instead of URLs like <code>https://foo.com/get/1.0/followers.json</code> in your code.</p>
       <div class="ignored code" data-type="javascript">
       $('.button')
         .api({
@@ -1061,7 +1050,7 @@
         <div class="code">
         $('.search.button')
           .api({
-            url: 'http://www.google.com?q={value}'
+            url: '//www.google.com?q={value}'
           })
         ;
         </div>
@@ -1339,13 +1328,10 @@
         <p>When you use the <code>serializeForm</code> setting or attach API events on a form, API will automatically include the closest form in data sent to the server.</p>
         <p>Structured form data is beneficial over <a href="https://api.jquery.com/serialize/">jQuery's serialize</a> for several reasons:</p>
         <ul class="ui large list">
-          <li><a href="https://github.com/macek/jquery-serialize-object" target="_blank">Serialize Object</a> correctly converts structured form names like <code>name="name[first]"</code> into nested object literals.</li>
+          <li><code>serializeForm: true</code> correctly converts structured form names like <code>name="name[first]"</code> into nested object literals.</li>
           <li>Structured form data can be modified in Javascript in <code>beforeSend</code>.</li>
           <li>Form data will automatically be converted to their Javascript equivalents, for instance, checkboxes will be converted to <code>boolean</code> values.</li>
         </ul>
-        <div class="ui ignored warning message">
-          Structured form data requires including <a href="https://github.com/macek/jquery-serialize-object" target="_blank">macek's serialize object.</a>
-        </div>
       </div>
       <div class="example">
         <h4 class="ui header">Structured Data Example</h4>
@@ -1881,7 +1867,7 @@
       AJAX
     </h4>
     <div class="ui info message">
-      You can pass in any standard <a href="http://api.jquery.com/jquery.ajax/">jQuery AJAX setting</a> like <code>timeout</code> or <code>contentType</code> to API's settings and it will be automatically passed to the request's AJAX call.
+      You can pass in any standard <a href="https://api.jquery.com/jquery.ajax/">jQuery AJAX setting</a> like <code>timeout</code> or <code>contentType</code> to API's settings and it will be automatically passed to the request's AJAX call.
     </div>
 
     <h4 class="ui header">
@@ -1922,7 +1908,7 @@
         <tr>
           <td>serializeForm</td>
           <td>false</td>
-          <td>Whether to serialize closest form and include in request</td>
+          <td>Whether to serialize closest form and include in request.<br>If set to <code>'formdata'</code> instead of <code>true</code> the Formdata Web API is used (formdata however does not support nested named keys like <code>a[b][c][d]</code>)</td>
         </tr>
         <tr>
           <td>throttle</td>
@@ -2024,8 +2010,8 @@
         </tr>
         <tr>
           <td>rawResponse</td>
-          <td>false</td>
-          <td>If set, the onResponse event handler is able to handle an raw Array Object, which is probably returned by the requested source. Even if the datatype is json, it won't be force converted into an object anymore then.</td>
+          <td>true</td>
+          <td>If set to false, a possible given JSON Array response will be force converted into a JSON Object before being provided to the onResponse event handler, even if the datatype is json.</td>
           <td></td>
         </tr>
         <tr>
@@ -2217,7 +2203,6 @@
               JSONParse         : 'JSON could not be parsed during error handling',
               legacyParameters  : 'You are using legacy API success callback names',
               missingAction     : 'API action used but no url was defined',
-              missingSerialize  : 'Required dependency jquery-serialize-object missing, using basic serialize',
               missingURL        : 'No URL specified for API event',
               noReturnedValue   : 'The beforeSend callback must return a settings object, beforeSend ignored.',
               parseError        : 'There was an error parsing your request',
@@ -2298,31 +2283,6 @@
       </div>
     </div>
   </div>
-  <div class="ui basic language modal">
-  <i class="close icon"></i>
-  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
-  <div class="image content">
-    <div class="middle aligned image">
-      <i class="world icon"></i>
-    </div>
-    <div class="description">
-      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
-      <div class="ui inverted indicating progress">
-        <div class="bar"></div>
-      </div>
-      <p>We need your help to make Semantic available to  people who speak your language.</p>
-      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
-      </p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui inverted cancel button">No Thanks</div>
-    <a href="https://github.com/fomantic/Fomantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
-      <i class="mail icon"></i>
-      Help Translate
-    </a>
-  </div>
-</div>
   <div class="ui demo page dimmer">
   <div class="content">
     <div class="center">
@@ -2334,7 +2294,8 @@
     </div>
   </div>
 </div>
-  <script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es5%2Ces2015"></script>
+<script>
 window.less = {
   async        : true,
   environment  : 'production',
@@ -2344,7 +2305,7 @@ window.less = {
 };
 </script>
 
-<script src="/javascript/library/less.min.js"></script>
+<script src="/javascript/library/less.js"></script>
 
 
 </body>
