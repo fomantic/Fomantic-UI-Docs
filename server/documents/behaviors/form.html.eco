@@ -2442,6 +2442,8 @@ type        : 'UI Behavior'
           method     : 'The method you called is not defined.',
           noRule     : 'There is no rule matching the one you specified',
           oldSyntax  : 'Starting in 2.0 forms now only take a single settings object. Validation settings converted to new syntax automatically.'
+          noField    : 'Field identifier {identifier} not found',
+          noElement  : 'This module requires ui {element}'
         }
               </div>
             </td>
