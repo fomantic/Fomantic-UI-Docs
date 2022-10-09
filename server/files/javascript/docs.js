@@ -1145,13 +1145,14 @@ semantic.ready = function() {
   // register less files
   window.less.registerStylesheets();
 
+  var
+      selector = (window.location.hash || '').replace(/^#\//, '#')
+  ;
+  handler.scrollToSelector = selector;
 
   // load page tabs
   if( $pageTabs.length > 0 ) {
-    var
-        selector = (window.location.hash || '').replace(/^#\//, '#')
-    ;
-    handler.scrollToSelector = selector;
+
     if(selector) {
     // check if anchor is inside an invisible tab
       var $insideTab = $(selector).closest('.tab:not(.active)');
@@ -1206,6 +1207,7 @@ semantic.ready = function() {
     $(window).on('resize.menu', function() {
       handler.tryCreateMenu();
     });
+    handler.scrollToHash();
   }
 
   $shownExample
