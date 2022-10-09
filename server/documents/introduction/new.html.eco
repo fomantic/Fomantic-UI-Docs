@@ -15,8 +15,8 @@ type        : 'Main'
 
 <div class="main ui intro container">
   <div class="ui active tab" data-tab="twonine">
-    <h2 class="ui dividing header">The Big update</h2>
-    <p>Fomantic <code>2.9</code> includes more than <a href="https://github.com/fomantic/Fomantic-UI/pulls?q=is%3Apr+milestone%3A2.9.0+">200</a> new features, improvements and bugfixes.</p>
+    <h2 class="ui dividing header">One big step ahead</h2>
+    <p>Fomantic <code>2.9</code> once again includes more than <a href="https://github.com/fomantic/Fomantic-UI/pulls?q=is%3Apr+milestone%3A2.9.0+">200</a> new features, improvements and bugfixes.</p>
     <div class="ui small info message">
      The few SUI 2.5.0 fixes, which were not already been fixed within the past 4 years in previous Fomantic UI Versions <em class="ui emoji" data-emoji=":wink:"></em>, are included as well
     </div>
