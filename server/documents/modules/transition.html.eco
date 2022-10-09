@@ -413,7 +413,7 @@ type        : 'UI Module'
       </div>
 
       <h3 class="ui header">Passing in settings</h3>
-      <p>Transitions use similar argument shorthand as <a href="http://api.jquery.com/animate/">animate</a>. You can specify callback functions, animation duration, and other settings using the same arguments. Durations can be specified as strings with CSS shorthand, or with numbers.</p>
+      <p>Transitions use similar argument shorthand as <a href="https://api.jquery.com/animate/">animate</a>. You can specify callback functions, animation duration, and other settings using the same arguments. Durations can be specified as strings with CSS shorthand, or with numbers.</p>
       <div class="code" data-demo="true" data-title="Settings objects">
       $('.green.leaf')
         .transition({

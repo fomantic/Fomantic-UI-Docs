@@ -11,8 +11,6 @@ description : 'State allows elements to trigger actions on a server'
 type        : 'Draft'
 ---
 
-<script src="/javascript/library/serialize-object.js"></script>
-<script src="/javascript/state.js"></script>
 
 <%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
 
@@ -356,8 +354,7 @@ type        : 'Draft'
           <td>
             <div class="code" data-type="css">
             selector: {
-              disabled : '.disabled',
-              form     : 'form'
+              text : false
             }
             </div>
           </td>
@@ -368,8 +365,12 @@ type        : 'Draft'
           <td>
             <div class="code">
             className: {
-              loading : 'loading',
-              error   : 'error'
+              active   : 'active',
+              disabled : 'disabled',
+              error    : 'error',
+              loading  : 'loading',
+              success  : 'success',
+              warning  : 'warning'
             }
             </div>
           </td>
@@ -380,8 +381,8 @@ type        : 'Draft'
           <td>
             <div class="code">
             metadata: {
-              action  : 'action',
-              url     : 'url'
+              promise    : 'promise',
+              storedText : 'stored-text'
             }
             </div>
           </td>
@@ -389,7 +390,7 @@ type        : 'Draft'
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
@@ -413,19 +414,8 @@ type        : 'Draft'
             <div class="code">
             // errors
             error : {
-              beforeSend        : 'The before send function has aborted the request',
-              error             : 'There was an error with your request',
-              exitConditions    : 'State Request Aborted. Exit conditions met',
-              JSONParse         : 'JSON could not be parsed during error handling',
-              legacyParameters  : 'You are using legacy State success callback names',
-              missingAction     : 'State action used but no url was defined',
-              missingSerialize  : 'Required dependency jquery-serialize-object missing, using basic serialize',
-              missingURL        : 'No URL specified for state event',
-              noReturnedValue   : 'The beforeSend callback must return a settings object, beforeSend ignored.',
-              parseError        : 'There was an error parsing your request',
-              requiredParameter : 'Missing a required URL parameter: ',
-              statusMessage     : 'Server gave an error: ',
-              timeout           : 'Your request timed out'
+              beforeSend : 'The before send function has cancelled state change',
+              method     : 'The method you called is not defined.'
             }
             </div>
           </td>

@@ -724,7 +724,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   <div class="example">
     <h4 class="ui header">Link Card</h4>
     <p>A card can be formatted so that the entire contents link to another page</p>
-    <a class="ui card" href="http://www.dog.com">
+    <a class="ui card" href="https://www.dog.com">
       <div class="content">
         <div class="header">Cute Dog</div>
         <div class="meta">

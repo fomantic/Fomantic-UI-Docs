@@ -97,7 +97,7 @@ type        : 'Introduction'
   <h2 class="ui dividing header">Prototyping with Fomantic UI</h2>
   <div class="no example">
     <h4>Sketch Files</h4>
-    <p>If you are looking to prototype layouts using <a href="http://bohemiancoding.com/sketch/" target="_blank">Sketch</a> with Fomantic UI check out <a href="https://github.com/guacamoly/semantic-ui-kit-for-sketch" target="_blank">Semantic UI Sketch Files</a></p>
+    <p>If you are looking to prototype layouts using <a href="https://bohemiancoding.com/sketch/" target="_blank">Sketch</a> with Fomantic UI check out <a href="https://github.com/guacamoly/semantic-ui-kit-for-sketch" target="_blank">Semantic UI Sketch Files</a></p>
     <img class="ui bordered rounded fluid image" src="https://github.com/guacamoly/semantic-ui-kit-for-sketch/raw/master/snapshot.jpg?raw=true">
   </div>
 
@@ -127,7 +127,7 @@ type        : 'Introduction'
 
   <div class="no example">
     <h4>Server-Side Rendering</h4>
-    <p>Individual components repos include an <a href="https://github.com/fomantic/Fomantic-UI/blob/master/tasks/admin/components/create.js" target="_blank">auto-generated</a> <code>index.js</code> file to simplify <a href="http://www.sitepoint.com/understanding-module-exports-exports-node-js/" target="_blank"><code>require</code></a> use with NodeJS, for server-side rendering or with <a href="http://browserify.org/" target="_blank">Browserify</a>.</p>
+    <p>Individual components repos include an <a href="https://github.com/fomantic/Fomantic-UI/blob/master/tasks/admin/components/create.js" target="_blank">auto-generated</a> <code>index.js</code> file to simplify <a href="https://www.sitepoint.com/understanding-module-exports-exports-node-js/" target="_blank"><code>require</code></a> use with NodeJS, for server-side rendering or with <a href="https://browserify.org/" target="_blank">Browserify</a>.</p>
     <div class="ignored code">
      npm install semantic-ui-dropdown
     </div>
@@ -177,7 +177,7 @@ type        : 'Introduction'
   </div>
   <div class="no example">
     <h4>Install Dependencies</h4>
-    <p>Fomantic UI's documentation is written in <a href="http://www.docpad.org" target="_blank">Docpad</a> an amazing static site generator built in NodeJS</p>
+    <p>Fomantic UI's documentation is written in <a href="https://docpad.bevry.me/" target="_blank">Docpad</a> an amazing static site generator built in NodeJS</p>
     <div class="code">
       cd docs/
       npm install
