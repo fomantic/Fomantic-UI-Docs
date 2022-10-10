@@ -19,14 +19,14 @@ standalone : false
         <i class="sidebar icon"></i> Menu
       </a>
       <div id="docs-searchbox" class="item">
-        <input type="search" placeholder="Search...">
       </div>
       <script type="application/javascript">
         docsearch({
-          apiKey: 'b97fcb6d1c62e4cdc4b4f3945c49d9d7',
+          apiKey: 'efc868086a87ef030d61863d7137b4c7',
+          appId: '5SPMZGGGZB',
           indexName: 'fomantic-ui',
-          inputSelector: '#docs-searchbox > input',
-          debug: false,
+          container: '#docs-searchbox',
+          debug: false
         });
       </script>
       <div class="right menu">
