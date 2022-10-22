@@ -370,7 +370,7 @@ type        : 'UI Behavior'
         </tbody>
       </table>
 
-      <h3 class="ui header"><a href="#content-type">Content Type</h3>
+      <h3 class="ui header"><a href="#content-type">Content Type</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
