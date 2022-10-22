@@ -124,6 +124,14 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </div>
         <div class="label">Tickets</div>
       </div>
+      <div class="code" data-type="javascript">
+        $('.ui.multiple.progress').progress({
+          text: {
+            percent : '{bar} {percent}%',
+            bars: ['WIP', 'Review', 'Hold', 'Merged']
+          }
+        });
+      </div>
     </div>
 
     <h2 class="ui dividing header">States</h2>
