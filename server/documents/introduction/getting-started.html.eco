@@ -90,7 +90,7 @@ type        : 'Main'
       This is <code>semantic/</code> by default.
     </p>
     <div class="ignored code" data-type="bash">
-      $ cd node_modules/fomantic-ui
+      $ cd semantic/
       $ npx gulp build
     </div>
     <p>
