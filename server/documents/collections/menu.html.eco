@@ -744,7 +744,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <p>A menu can be fixed to a side of its context</p>
     <div class="ui ignored info message">These examples use a an <code>iframe</code>, to prevent content from sticking to the browser viewport.</div>
     <div class="ui ignored positive message">For more advanced behaviors consider using a <a href="/modules/sticky.html">sticky menu</a> or <a href="/behaviors/visibility.html#fixing-content-to-viewport">visibility APIs</a>.</div>
-    <iframe src="/iframe/fixed-menu.html"></iframe>
+    <iframe title="fixed menu" src="/iframe/fixed-menu.html"></iframe>
     <div class="existing code">
       <div class="ui top fixed menu">
         <div class="item">
@@ -767,7 +767,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another fixed example">
-    <iframe src="/iframe/fixed-vertical-menu.html"></iframe>
+    <iframe title="fixed vertical menu" src="/iframe/fixed-vertical-menu.html"></iframe>
     <div class="existing code">
       <div class="ui left fixed vertical menu">
         <div class="item">

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
   <!-- Standard Meta -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Site Properties -->
   <%- @getBlock('meta').toHTML() %>
@@ -68,7 +68,7 @@
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/slider.css">
   <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/toast.css">
   <% else: %>
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" class="ui" media="screen" href="/dist/semantic.min.css">
   <% end %>
 
   <% if 'development' in @getEnvironments(): %>
@@ -111,7 +111,7 @@
 </head>
 <body id="example" class="pushable <%= @document.css %>" ontouchstart="">
   <%- @content %>
-  <script src="/javascript/library/less.js"></script>
+  <script src="/javascript/library/less.min.js"></script>
 </body>
 
 </html>
