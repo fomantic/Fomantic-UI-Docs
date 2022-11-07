@@ -242,6 +242,13 @@ type        : 'Main'
         </div>
       </div>
       <div class="item">
+        <div>Icon</div>
+        <div class="list">
+          <div class="item"><code>chart line</code> was renamed to <code>chartline</code></div>
+          <div class="item"><code>line graph</code> was renamed to <code>linegraph</code></div>
+        </div>
+      </div>
+      <div class="item">
         <div>Label</div>
         <div class="list">
           <div class="item"><code>left icon</code> and <code>right icon</code> have to be declared in exact that class order</div>
