@@ -88,7 +88,7 @@ standalone : false
         <h2 class="ui header">Concise HTML</h2>
         <p>Fomantic UI treats words and classes as exchangeable concepts.</p>
         <p>Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
-        <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="https://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
+        <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="http://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
         </p>
       </div>
       <div class="nine wide column">
