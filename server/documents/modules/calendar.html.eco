@@ -25,7 +25,7 @@ themes      : ['Default']
       <h4 class="ui header">Calendar</h4>
       <p>A standard calendar</p>
       <div class="ui calendar" id="standard_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date/Time">
         </div>
@@ -92,7 +92,7 @@ themes      : ['Default']
       <h4 class="ui header">Inverted</h4>
       <p>A calendar can have its colors inverted</p>
       <div class="ui inverted calendar" id="inverted_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date/Time">
         </div>
@@ -264,7 +264,7 @@ themes      : ['Default']
       <h4 class="ui header">Min/max date</h4>
       <p>You can set a minimum and a maximum selection date</p>
       <div class="ui calendar" id="minmax_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -283,7 +283,7 @@ themes      : ['Default']
     <div class="another example">
       <p>You can also set a minimum and a maximum selection date using HTML markup</p>
       <div class="ui calendar" id="minmax_calendar_2" data-min-date="2018/10/05 08:00:00" data-max-date="2018/10/19 18:00:00">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -605,7 +605,7 @@ themes      : ['Default']
       <h4 class="ui header">Language</h4>
       <p>It's possible to change the calendar language to fit with your needs</p>
       <div class="ui calendar" id="french_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date/Time">
         </div>
@@ -649,7 +649,7 @@ themes      : ['Default']
       <h4 class="ui header">Days of Week</h4>
       <p>Disable each Monday, Wednesday and Friday from selection</p>
       <div class="ui calendar" id="disableddaysofweek_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -666,7 +666,7 @@ themes      : ['Default']
       <h4 class="ui header">Single Dates</h4>
       <p>Disabling specific single dates which can optionally display a reason in popup on hover</p>
       <div class="ui calendar" id="disableddates_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -695,7 +695,7 @@ themes      : ['Default']
       <h4 class="ui header">Hours <span class="ui black label">New in 2.9.0</span></h4>
       <p>Disabling specific hours of specific days which can optionally display a reason in popup on hover</p>
       <div class="ui calendar" id="disabledhours_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -813,9 +813,9 @@ themes      : ['Default']
             type: 'date',
             initialDate: new Date('2019-03-01'),
             enabledDates: [
-                new Date('2018-03-05'),
-                new Date('2018-03-10'),
-                new Date('2018-03-20')
+                new Date('2019-03-05'),
+                new Date('2019-03-10'),
+                new Date('2019-03-20')
             ]
           })
           ;
@@ -827,7 +827,7 @@ themes      : ['Default']
       <h4 class="ui header">Event Dates</h4>
       <p>Mark specific days as events, giving them a different cell style and a tooltip message</p>
       <div class="ui calendar" id="eventdates_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -851,7 +851,7 @@ themes      : ['Default']
     </div>
     <div class="another example">
       <div class="ui calendar" id="eventdates2_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
