@@ -3,7 +3,7 @@ semantic.nag = {};
 // ready event
 semantic.nag.ready = function() {
 
-  $('*:not(.code) > .ui.nag:not(.cookie):not(.fixed):not(.overlay)')
+  $('*:not(.code) > .ui.nag:not(.cookie):not(.fixed)')
       .nag({persist:true})
   ;
 };
