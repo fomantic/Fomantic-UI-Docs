@@ -631,9 +631,13 @@ themes      : ['Default', 'GitHub']
   <div class="example">
     <h4 class="ui header">Fluid</h4>
     <p>A label can take the width of its container</p>
-    <div class="fluid ui label">Fits container</div>
+    <div class="ui fluid label">Fits container</div>
   </div>
-
+  <div class="example">
+    <h4 class="ui header">Centered <span class="ui black label">New in 2.9.1</span></h4>
+    <p>Text can be shown centered</p>
+    <div class="ui fluid centered label">Fits container</div>
+  </div>
   <div class="example" data-class="empty circular, circular">
     <h4 class="ui header">Circular</h4>
     <p>A label can be circular</p>
