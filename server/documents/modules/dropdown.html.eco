@@ -1949,7 +1949,7 @@ themes      : ['Default', 'GitHub', 'Material']
           .dropdown({
             apiSettings: {
               // this url parses query server side and returns filtered results
-              url: '//api.github.com/search/repositories?q={query}'
+              url: 'https://api.github.com/search/repositories?q={query}'
             },
             fields: {
             // the remote api has a different structure than expected, which we can adjust
@@ -4054,7 +4054,7 @@ themes      : ['Default', 'GitHub', 'Material']
       .dropdown({
         preserveHTML : false,
         apiSettings: {
-          url: '//api.github.com/search/repositories?q={query}'
+          url: 'https://api.github.com/search/repositories?q={query}'
         }
       });
     </div>

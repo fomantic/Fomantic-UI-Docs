@@ -70,7 +70,7 @@ semantic.new.ready = function() {
   $('.mapping.example .ui.search')
     .search({
       apiSettings: {
-        url: '//api.github.com/search/repositories?q={query}',
+        url: 'https://api.github.com/search/repositories?q={query}',
         cache: true
       },
       fields: {
@@ -323,7 +323,7 @@ semantic.new.ready = function() {
           });
           return response;
         },
-        url: '//api.github.com/search/repositories?q={query}'
+        url: 'https://api.github.com/search/repositories?q={query}'
       }
     })
   ;
@@ -372,7 +372,7 @@ semantic.new.ready = function() {
   $('.remote.example .ui.dropdown')
     .dropdown({
       apiSettings: {
-        url: '//api.github.com/search/repositories?q={query}'
+        url: 'https://api.github.com/search/repositories?q={query}'
       }
     })
   ;

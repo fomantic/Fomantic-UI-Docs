@@ -1318,7 +1318,7 @@ semantic.ready = function() {
     categorySearch     : '/categories.json',
     getOverrides       : '/src/themes/{$theme}/{$type}s/{$element}.overrides',
     getVariables       : '/src/themes/{$theme}/{$type}s/{$element}.variables',
-    search             : '//api.github.com/search/repositories?q={query}'
+    search             : 'https://api.github.com/search/repositories?q={query}'
   });
 
 

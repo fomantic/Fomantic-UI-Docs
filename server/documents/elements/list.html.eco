@@ -32,13 +32,13 @@ themes      : ['Default']
       <div class="item">
         <i class="users icon"></i>
         <div class="content">
-          Semantic UI
+          Fomantic UI
         </div>
       </div>
       <div class="item">
         <i class="marker icon"></i>
         <div class="content">
-          New York, NY
+          Worldwide
         </div>
       </div>
       <div class="item">

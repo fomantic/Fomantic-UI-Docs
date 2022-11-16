@@ -43,7 +43,7 @@ standalone : false
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
-          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          <iframe title="github star button" class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@ standalone : false
         <h2 class="ui header">Concise HTML</h2>
         <p>Fomantic UI treats words and classes as exchangeable concepts.</p>
         <p>Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
-        <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="https://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
+        <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="http://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
         </p>
       </div>
       <div class="nine wide column">
@@ -257,7 +257,7 @@ standalone : false
       <div class="column">
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/lab.png">
-          5000+ Commits
+          8000+ Commits
         </h2>
         <p>
           Fomantic UI and Semantic UI are <b>free open source</b> projects already used in multiple <a href="https://www.quirky.com" target="_blank">large</a> scale <a href="https://www.newrepublic.com" target="_blank">production</a> environments.

@@ -94,7 +94,7 @@ type        : 'Introduction'
 
 <div class="no example">
   <h4>Definition Terminology</h4>
-  <p>When browsing Semantic UI definitions, you will see content grouped into different sections. These parts of a definition are consistent across definitions, and are common patterns for describing components.<p>
+  <p>When browsing Fomantic UI definitions, you will see content grouped into different sections. These parts of a definition are consistent across definitions, and are common patterns for describing components.<p>
 
   <table class="ui large very padded definition table">
     <tbody>

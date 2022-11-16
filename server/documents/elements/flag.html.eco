@@ -33,7 +33,7 @@ type        : 'UI Element'
 
     <h2 class="ui header">Types</h2>
     <div class="ui info message">
-      <p>Since Fomantic 2.9.0, flags are based on SVG emojis in the default theme. If you want to return to the sprite approach using the <a target="_blank" href="//www.famfamfam.com/lab/icons/flags/">famfamfam icon set</a> (as used in Fomantic up to 2.8.8), you only have to change the <code>@flag</code> variable in your <code>theme.config</code> to <code>'famfamfam'</code>. However, the famfamfam theme does not support sizing and lots of flags are missing.</p>
+      <p>Since Fomantic 2.9.0, flags are based on SVG emojis in the default theme. If you want to return to the sprite approach using the <a target="_blank" href="http://www.famfamfam.com/lab/icons/flags/">famfamfam icon set</a> (as used in Fomantic up to 2.8.8), you only have to change the <code>@flag</code> variable in your <code>theme.config</code> to <code>'famfamfam'</code>. However, the famfamfam theme does not support sizing and lots of flags are missing.</p>
     </div>
     <div class="ui ignored info message">
       You can reduce your custom generated CSS by adjusting the <code>@flags</code> variable in your themes <code>flag.variables</code> file to only the flags you need.

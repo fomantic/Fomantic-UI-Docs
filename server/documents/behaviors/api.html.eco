@@ -154,7 +154,7 @@ type        : 'UI Behavior'
         <div class="code">
         $('.search.button')
           .api({
-            url: '//www.google.com?q={value}'
+            url: 'https://www.google.com?q={value}'
           })
         ;
         </div>
@@ -628,7 +628,7 @@ type        : 'UI Behavior'
             type          : 'category',
             minCharacters : 3,
             apiSettings   : {
-              url        : '//api.github.com/search/repositories?q={query}',
+              url        : 'https://api.github.com/search/repositories?q={query}',
               onResponse : function(githubResponse) {
                 var
                   response = {
