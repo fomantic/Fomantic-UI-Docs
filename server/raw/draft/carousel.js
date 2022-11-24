@@ -10,6 +10,10 @@
 
 ;(function ( $, window, document, undefined ) {
 
+function isFunction(obj) {
+  return typeof obj === "function" && typeof obj.nodeType !== "number";
+}
+
 $.fn.carousel = function(parameters) {
   var
     $allModules     = $(this),
@@ -77,7 +81,7 @@ $.fn.carousel = function(parameters) {
           var
             $activeContent = $content.filter('.' + className.active),
             currentIndex   = $content.index($activeContent),
-            imageCount     = $content.size(),
+            imageCount     = $content.length,
             newIndex       = (currentIndex - 1 != -1)
               ? (currentIndex - 1)
               : (imageCount - 1)
@@ -92,7 +96,7 @@ $.fn.carousel = function(parameters) {
           var
             $activeContent = $content.filter('.' + className.active),
             currentIndex   = $content.index($activeContent),
-            imageCount     = $content.size(),
+            imageCount     = $content.length,
             newIndex       = (currentIndex + 1 != imageCount)
               ? (currentIndex + 1)
               : 0
@@ -216,7 +220,7 @@ $.fn.carousel = function(parameters) {
           display: function() {
             var
               title              = settings.moduleName,
-              caption            = settings.moduleName + ': ' + moduleSelector + '(' + $allModules.size() + ' elements)',
+              caption            = settings.moduleName + ': ' + moduleSelector + '(' + $allModules.length + ' elements)',
               totalExecutionTime = 0
             ;
             if(moduleSelector) {
@@ -266,7 +270,7 @@ $.fn.carousel = function(parameters) {
               return false;
             });
           }
-          if ( $.isFunction( found ) ) {
+          if ( isFunction( found ) ) {
             return found.apply(context, passedArguments);
           }
           return found || false;
