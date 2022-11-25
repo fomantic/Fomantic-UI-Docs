@@ -544,8 +544,9 @@ themes      : ['Default', 'Material']
       </h4>
       <p>A modal can contain a row of actions</p>
       <div class="ui ignored info message">
-        <p>Close actions are applied by default to all button actions, in addition an <code>onApprove</code> or <code>onDeny</code> callback will fire if the elements match either selector.</p>
+        <p>Close actions are applied by default to all button actions matching the <code>approve</code>, <code>deny</code> or <code>close</code> selector. In addition an <code>onApprove</code> or <code>onDeny</code> callback will only fire if the elements match the <code>approve</code> or <code>deny</code> selector.</p>
         <div class="code" data-type="css">
+          close    : '> .close',
           approve  : '.positive, .approve, .ok',
           deny     : '.negative, .deny, .cancel'
         </div>
@@ -1430,7 +1431,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       selector    : {
         title    : '> .header',
         content  : '> .content',
@@ -1456,7 +1457,7 @@ themes      : ['Default', 'Material']
         inverted   : 'inverted',
         legacy     : 'legacy',
         loading    : 'loading',
-        scrolling : 'scrolling',
+        scrolling  : 'scrolling',
         undetached : 'undetached',
         front      : 'front',
         close      : 'close icon',
