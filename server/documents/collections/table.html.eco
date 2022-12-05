@@ -2152,6 +2152,10 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
   <div class="example">
     <h4 class="ui header">Scrolling<div class="ui black label">New in 2.9</div></h4>
     <p>A table body can scroll vertically.</p>
+    <div class="ui ignored warning message">
+        Some table variants like <a href="#column-width">column width</a> or <a href="#single-line">single line</a> do not work with a scrolling table.
+        If you need such combinations use a <a href="#stuck">stuck table</a> instead.
+    </div>
     <table class="ui unstackable celled scrolling table">
     <thead>
       <tr>
