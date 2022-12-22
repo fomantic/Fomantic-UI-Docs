@@ -4017,7 +4017,7 @@ themes      : ['Default', 'GitHub', 'Material']
               method          : 'The method you called is not defined.',
               noAPI           : 'The API module is required to load resources remotely',
               noStorage       : 'Saving remote data requires session storage',
-              noTransition    : 'This module requires ui transitions <https://github.com/Semantic-Org/UI-Transition>',
+              noElement       : 'This module requires ui {element}',
               noNormalize     : '"ignoreDiacritics" setting will be ignored. Browser does not support String().normalize(). You may consider including <https://cdn.jsdelivr.net/npm/unorm@1.4.1/lib/unorm.min.js> as a polyfill.'
             }
             </div>
