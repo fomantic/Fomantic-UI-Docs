@@ -14,9 +14,10 @@
     "docpad-plugin-babel": "^2.5.0",
     "docpad-plugin-eco": "^2.8.0",
     "docpad-plugin-partials": "^2.14.0",
-    "docpad-plugin-raw": "^2.9.0"
+    "docpad-plugin-raw": "^2.9.0",
+    "docpad-plugin-serve": "^2.4.0"
   },
   "devDependencies": {
-    "docpad-plugin-ghpages": "^2.8.0"
+    "docpad-plugin-ghpages": "github:docpad/docpad-plugin-ghpages#2.11.0"
   }
 }

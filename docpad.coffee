@@ -2,16 +2,20 @@
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
 
-	srcPath : './server'
+	sourcePaths : ['./server']
 	outPath: './out'
 
 	# test production env
 	# env: 'production'
 
 	plugins:
-    ghpages:
-      deployRemote: 'origin'
-      deployBranch: 'gh-pages'
+        ghpages:
+            deployRemote: 'origin'
+            deployBranch: 'gh-pages'
+        serve:
+            listenOptions:
+                port: 9778
+                host: 'localhost'
 
 	# =================================
 	# Template Data
