@@ -22,7 +22,7 @@ type        : 'UI Module'
 
     <div class="no example">
       <h4 class="ui header">Responsive Aspect Ratio</h4>
-      <p>Embeds use an <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video">intrinsic aspect ratio</a> which allows them to resize responsively based on their expected aspect ratio and not by using a single specified width or height.</p>
+      <p>Embeds use an <a href="https://alistapart.com/article/creating-intrinsic-ratios-for-video">intrinsic aspect ratio</a> which allows them to resize responsively based on their expected aspect ratio and not by using a single specified width or height.</p>
     </div>
     <div class="no example">
       <h4 class="ui header">Only Load After Interaction</h4>
@@ -71,7 +71,7 @@ type        : 'UI Module'
 
     <div class="embed example">
       <h4 class="ui header">YouTube</h4>
-      <p>An embed can be used to display <a href="http://www.youtube.com" target="_blank">YouTube</a> Content</p>
+      <p>An embed can be used to display <a href="https://www.youtube.com" target="_blank">YouTube</a> Content</p>
 
       <div class="ui embed"
         data-source="youtube"
@@ -83,7 +83,7 @@ type        : 'UI Module'
 
     <div class="embed example">
       <h4 class="ui header">Vimeo</h4>
-      <p>An embed can be used to display <a href="http://www.vimeo.com" target="_blank">Vimeo</a> content.</p>
+      <p>An embed can be used to display <a href="https://www.vimeo.com" target="_blank">Vimeo</a> content.</p>
 
       <div class="ui embed"
         data-source="vimeo"
@@ -98,7 +98,7 @@ type        : 'UI Module'
       <p>An embed can display any web content</p>
       <div class="ui info ignored message">Embeds use an intrinsic aspect ratios to embed content responsively. Content will preserve their intrinsic aspect ratio for all browser sizes responsively</div>
       <div class="ui embed"
-        data-url="http://www.myfav.es/jack"
+        data-url="https://rasterbuster.lubber.de"
         data-placeholder="/images/image-16by9.png"
         data-icon="right circle arrow"
       >
@@ -197,7 +197,7 @@ type        : 'UI Module'
             type   : 'video',
             icon   : 'video play',
             domain : 'youtube.com',
-            url    : '//www.youtube.com/embed/{id}',
+            url    : 'https://www.youtube.com/embed/{id}',
             parameters: function(settings) {
               return {
                 autohide       : !settings.showUI,
@@ -214,7 +214,7 @@ type        : 'UI Module'
             type   : 'video',
             icon   : 'video play',
             domain : 'vimeo.com',
-            url    : '//www.youtube.com/embed/{id}',
+            url    : 'https://www.youtube.com/embed/{id}',
             parameters: function(settings) {
               return {
                 api      : settings.api,
@@ -537,22 +537,22 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
       </tbody>

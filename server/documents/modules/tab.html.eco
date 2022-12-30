@@ -99,6 +99,52 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="inverted example">
+      <h4 class="ui header">
+        Inverted
+      </h4>
+      <p>A tab can be shown inverted</p>
+      <div class="ui inverted segment">
+        <div class="ui top attached inverted tabular menu">
+          <a class="active item" data-tab="one">Active Tab</a>
+          <a class="item" data-tab="two">Tab 2</a>
+          <a class="item" data-tab="three">Tab 3</a>
+        </div>
+        <div class="ui bottom attached active inverted tab segment" data-tab="one">
+          <p>content one</p>
+        </div>
+        <div class="ui bottom attached inverted tab segment" data-tab="two">
+          <p>content two</p>
+        </div>
+        <div class="ui bottom attached inverted tab segment" data-tab="three">
+          <p>content three</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="inverted example">
+      <h4 class="ui header">
+        Bottom attached menu
+      </h4>
+      <p>You can display the tabular menu at the bottom of the tab segments</p>
+      <div class="ui inverted segment">
+        <div class="ui top attached inverted tab segment" data-tab="one1">
+          <p>content one</p>
+        </div>
+        <div class="ui top attached inverted tab segment" data-tab="two1">
+          <p>content two</p>
+        </div>
+        <div class="ui top attached inverted tab segment active" data-tab="three1">
+          <p>content three</p>
+        </div>
+        <div class="ui bottom attached inverted tabular menu">
+          <a class="item" data-tab="one1">Active Tab</a>
+          <a class="item" data-tab="two1">Tab 2</a>
+          <a class="item active" data-tab="three1">Tab 3</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="examples">
@@ -139,19 +185,19 @@ themes      : ['Default']
         If you are using tab contexts inside of tabs, you can also specify <code>childrenOnly: true</code> which will only look for tabs as the immediate children of the given context, or <code>context: 'parent'</code> a special keyword which avoids having to create unique selectors for each group.
       </div>
       <div class="code" data-type="javascript">
-        $('#context1 .menu .item')
+        $('.context1 .menu .item')
           .tab({
-            context: $('#context1')
+            context: '.context1'
           })
         ;
-        $('#context2 .menu .item')
+        $('.context2 .menu .item')
           .tab({
             // special keyword works same as above
             context: 'parent'
           })
         ;
       </div>
-      <div id="context1">
+      <div class="context1">
         <div class="ui secondary menu">
           <a class="item" data-tab="first">First</a>
           <a class="item active" data-tab="second">Second</a>
@@ -189,7 +235,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="ui divider"></div>
-      <div id="context2">
+      <div class="context2">
         <div class="ui secondary menu">
           <a class="item" data-tab="fourth">Fourth</a>
           <a class="item active" data-tab="fifth">Fifth</a>
@@ -206,7 +252,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="existing code" data-type="html">
-        <div id="context1">
+        <div class="context1">
           <div class="ui secondary menu">
             <a class="item" data-tab="first">First</a>
             <a class="item active" data-tab="second">Second</a>
@@ -244,7 +290,7 @@ themes      : ['Default']
           </div>
         </div>
         <div class="ui divider"></div>
-        <div id="context2">
+        <div class="context2">
           <div class="ui secondary menu">
             <a class="item" data-tab="fourth">Fourth</a>
             <a class="item active" data-tab="fifth">Fifth</a>
@@ -445,7 +491,7 @@ themes      : ['Default']
 
     <div class="state example">
       <h4>Using HTML5 State</h4>
-      <p>For sites that are able to replicate change on the server, tab can automatically map changes in tab navigation to <a href="http://diveintohtml5.info/history.html" target="_blank">html5 state.</a>
+      <p>For sites that are able to replicate change on the server, tab can automatically map changes in tab navigation to <a href="//diveintohtml5.info/history.html" target="_blank">html5 state.</a>
       </p>
       <div class="ui ignored warning message">
         Since these docs are statically hosted on GitHub Pages, html5 state tabs are not demonstrable from the docs. You will need to try this example in your own code.
@@ -518,6 +564,20 @@ themes      : ['Default']
         <h4 class="ui header">Default Tabs</h4>
         <p>After any tab is opened it will look for a default tab to open inside of the current tab. This is the first tab that begins with the same stem url as the parent tab. For example a tab with the path <code>data-tab="home"</code> might open a tab automatically <code>data-tab="/home/inbox"</code>.</p>
         <p>This will happen recursively for every tab open, allowing as many levels of tabs as you like.</p>
+      </div>
+      <div class="ignored ui warning message">
+        <h4 class="ui header">Using tab segments</h4>
+        <p>To avoid possible CSS issues when using <code>attached segments</code> you should wrap your tabular menu tab and related attached tab segments into a dedicated DOM node, for example a <code>ui segment</code></p>
+       <div class="code" data-type="html">
+          <div class="ui basic segment">
+            <div class="ui top attached tabular menu">
+              <a class="item" data-tab="entries">Tab menu item</a>
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="entries">
+              <p>Tab content</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -893,22 +953,22 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>

@@ -25,7 +25,7 @@ themes      : ['Default']
 
     <div class="highlighted example" data-class="grid">
       <h4 class="ui header">Grids</h4>
-      <p>A grid is a structure with a <a href="http://99designs.com/designer-blog/2013/03/21/history-of-the-grid-part-1/" target="_blank">long history</a> used to align negative space in designs.</p>
+      <p>A grid is a structure with a <a href="https://99designs.com/designer-blog/2013/03/21/history-of-the-grid-part-1/" target="_blank">long history</a> used to align negative space in designs.</p>
       <p>Using a grid makes content appear to flow more naturally on your page.</p>
       <div class="ui ignored toggle animation checkbox">
         <input type="checkbox" name="animation" />
@@ -120,7 +120,7 @@ themes      : ['Default']
 
     <div class="highlighted negative example">
       <h4 class="ui header">Negative Margins</h4>
-      <p>Since all grid columns include gutters, grids use <a href="http://csswizardry.com/2011/08/building-better-grid-systems/">negative margins</a> to make sure that the first and last columns sit flush with content outside the grid.</p>
+      <p>Since all grid columns include gutters, grids use <a href="https://csswizardry.com/2011/08/building-better-grid-systems/">negative margins</a> to make sure that the first and last columns sit flush with content outside the grid.</p>
       <p>In the following example, you can see even though the top row has padding, the <a href="/elements/button.html#vertically-attached"><code>attached button</code></a> still sits flush with the edge of the grid.<p>
       <p>In some cases, like when a column or row is <a href="#colored"><code>colored</code></a>, you may want to avoid using negative margins. You can do this by using a <a href="#padded"><code>padded grid</code></a> variation.</p>
        <div class="ui top attached button">Button before grid</div>

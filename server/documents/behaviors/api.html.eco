@@ -11,7 +11,6 @@ description : 'API allows elements to trigger actions on a server'
 type        : 'UI Behavior'
 ---
 
-<script src="/javascript/library/serialize-object.js"></script>
 <script src="/javascript/api.js"></script>
 
 <%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
@@ -34,7 +33,7 @@ type        : 'UI Behavior'
 
     <div class="no example">
       <h4 class="ui header">Preserve Templated URLs</h4>
-      <p>API helps you decouple URLs from your code. Use named API actions like <code>get followers</code> instead of URLs like <code>http://foo.com/get/1.0/followers.json</code> in your code.</p>
+      <p>API helps you decouple URLs from your code. Use named API actions like <code>get followers</code> instead of URLs like <code>https://foo.com/get/1.0/followers.json</code> in your code.</p>
       <div class="ignored code" data-type="javascript">
       $('.button')
         .api({
@@ -155,7 +154,7 @@ type        : 'UI Behavior'
         <div class="code">
         $('.search.button')
           .api({
-            url: 'http://www.google.com?q={value}'
+            url: 'https://www.google.com?q={value}'
           })
         ;
         </div>
@@ -629,7 +628,7 @@ type        : 'UI Behavior'
             type          : 'category',
             minCharacters : 3,
             apiSettings   : {
-              url        : '//api.github.com/search/repositories?q={query}',
+              url        : 'https://api.github.com/search/repositories?q={query}',
               onResponse : function(githubResponse) {
                 var
                   response = {
@@ -972,7 +971,7 @@ type        : 'UI Behavior'
       AJAX
     </h4>
     <div class="ui info message">
-      You can pass in any standard <a href="http://api.jquery.com/jquery.ajax/">jQuery AJAX setting</a> like <code>timeout</code> or <code>contentType</code> to API's settings and it will be automatically passed to the request's AJAX call.
+      You can pass in any standard <a href="https://api.jquery.com/jquery.ajax/">jQuery AJAX setting</a> like <code>timeout</code> or <code>contentType</code> to API's settings and it will be automatically passed to the request's AJAX call.
     </div>
 
     <h4 class="ui header">
@@ -1013,7 +1012,7 @@ type        : 'UI Behavior'
         <tr>
           <td>serializeForm</td>
           <td>false</td>
-          <td>Whether to serialize closest form and include in request</td>
+          <td>Whether to serialize closest form and include in request.<br>If set to <code>'formdata'</code> instead of <code>true</code> the Formdata Web API is used (formdata however does not support nested named keys like <code>a[b][c][d]</code>)</td>
         </tr>
         <tr>
           <td>throttle</td>
@@ -1308,7 +1307,6 @@ type        : 'UI Behavior'
               JSONParse         : 'JSON could not be parsed during error handling',
               legacyParameters  : 'You are using legacy API success callback names',
               missingAction     : 'API action used but no url was defined',
-              missingSerialize  : 'Required dependency jquery-serialize-object missing, using basic serialize',
               missingURL        : 'No URL specified for API event',
               noReturnedValue   : 'The beforeSend callback must return a settings object, beforeSend ignored.',
               parseError        : 'There was an error parsing your request',

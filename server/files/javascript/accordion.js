@@ -5,8 +5,9 @@ semantic.accordion.ready = function() {
 
   // selector cache
   var
-    $accordion     = $('.ui.accordion'),
+    $accordion     = $('.ui.accordion:not(details)'),
     $menuAccordion = $('.ui.menu.accordion'),
+    $treeAccordion = $('.ui.tree.accordion'),
     $checkbox      = $('.ui.checkbox'),
     // alias
     handler
@@ -18,6 +19,11 @@ semantic.accordion.ready = function() {
     .accordion({
      exclusive: true
     })
+  ;
+  $treeAccordion
+      .accordion({
+        exclusive: false
+      })
   ;
   $checkbox
     .checkbox()

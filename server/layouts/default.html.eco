@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <%- @partial('meta') %>
   <%- @partial('javascript') %>
   <%- @partial('css') %>
   <%- @partial('tracking') %>
-  <%- @partial('transifex') %>
 </head>
 <body id="example" class="<%= @document.css %>" ontouchstart="">
   <% if @document.element is 'sidebar': %>
   <%- @partial('demo-sidebar') %>
+  <% end %>
+  <% if @document.element is 'flyout': %>
+  <%- @partial('demo-flyout') %>
   <% end %>
   <%- @partial('sidebar') %>
   <%- @partial('fixed-menu') %>
@@ -26,7 +28,6 @@
       </div>
     </div>
   </div>
-  <%- @partial('language-modal') %>
   <%- @partial('dimmer-demo') %>
   <%- @partial('less') %>
 </body>

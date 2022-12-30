@@ -369,7 +369,7 @@ type        : 'UI Module'
        <tr>
          <td>easing</td>
          <td>easeOutQuad</td>
-         <td>Easing of open/close animation. EaseOutQuad is included with nag, for additional options you must include <a href="http://gsgd.co.uk/sandbox/jquery/easing/">easing equations</a>.</td>
+         <td>Easing of open/close animation. EaseOutQuad is included with nag, for additional options you must include <a href="https://gsgd.co.uk/sandbox/jquery/easing/">easing equations</a>.</td>
        </tr>
       </tbody>
     </table>

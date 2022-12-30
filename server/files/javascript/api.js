@@ -72,7 +72,7 @@ semantic.api.ready = function() {
           });
           return response;
         },
-        url: '//api.github.com/search/repositories?q={query}'
+        url: 'https://api.github.com/search/repositories?q={query}'
       }
     })
   ;

@@ -1,0 +1,899 @@
+---
+layout      : 'default'
+css         : 'flyout-page'
+element     : 'flyout'
+elementType : 'module'
+standalone  : true
+status      : 'BETA'
+statusColor : 'orange'
+
+title       : 'Flyout'
+description : 'A flyout is an overlay container that displays content from the edge of a viewport'
+type        : 'UI Module'
+
+themes      : ['Default']
+---
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/flyout.less" />
+<script src="/javascript/flyout.js"></script>
+
+<%- @partial('header', { tabs: 'module' }) %>
+<div class="main ui container">
+
+  <div class="ui active tab" data-tab="definition">
+
+    <h2 class="ui dividing header">Types</h2>
+
+    <div class="example">
+      <h4 class="ui header">Flyout</h4>
+      <p>A flyout</p>
+      <div class="code" data-type="html">
+        <div class="ui flyout">
+          <i class="close icon"></i>
+          <div class="ui header">
+            <i class="question icon"></i>
+            <div class="content">
+              Archive Old Messages
+            </div>
+          </div>
+          <div class="content">
+            <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+          </div>
+          <div class="actions">
+            <div class="ui red cancel button">
+              <i class="remove icon"></i>
+              No
+            </div>
+            <div class="ui green ok button">
+              <i class="checkmark icon"></i>
+              Yes
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.simple.flyout').flyout('toggle');">
+      $('.ui.flyout')
+        .flyout('toggle')
+      ;
+      </div>
+      <div class="ui ignored warning message">
+        <p><i class="exclamation circle icon"></i>On a mobile viewport, flyout will always be shown <code><a href="#fullscreen">fullscreen</a></code>.</p>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Variations</h2>
+
+    <div class="no example" data-class="thin, very thin, wide">
+      <h4 class="ui header">Width</h4>
+      <p>A flyout can specify its width.</p>
+      <div class="code" data-type="html">
+        <div class="ui thin flyout"></div>
+        <div class="ui very thin flyout"></div>
+        <div class="ui flyout"></div>
+        <div class="ui wide flyout"></div>
+        <div class="ui very wide flyout"></div>
+      </div>
+    </div>
+
+    <div class="another no example">
+      <p>Width can also be defined like the <a href="/collections/grid.html">ui grid</a> system.</p>
+      <div class="code" data-type="html">
+        <div class="ui two wide flyout"></div>
+        <div class="ui five wide flyout"></div>
+        <div class="ui eight wide flyout"></div>
+        <div class="ui twelve wide flyout"></div>
+      </div>
+      <div class="ui ignored warning message">
+        <p><i class="exclamation circle icon"></i>Flyout's width should be defined only with <code>left</code> and <code>right</code> classes.</p>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Position</h4>
+      <p>A flyout can specify its display position.</p>
+      <div class="code" data-type="html" data-class="position">
+        <div class="ui left flyout"></div>
+        <div class="ui right flyout"></div>
+        <div class="ui top flyout"></div>
+        <div class="ui bottom flyout"></div>
+      </div>
+      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.position.flyout').flyout('toggle');">
+      $('.ui.flyout')
+        .flyout('toggle')
+      ;
+      </div>
+      <div class="ui ignored info message">
+        <p><i class="info circle icon"></i><code>top</code> and <code>bottom</code> flyout's height is automatically defined.</p>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Fullscreen</h4>
+      <p>A flyout can take all the entire screen if needed.</p>
+      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.fullscreen.flyout').flyout('toggle');">
+        $('.ui.fullscreen.flyout')
+          .flyout('toggle')
+        ;
+      </div>
+
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Center Aligned
+      </h4>
+      <p>You can center align the header, the content or even actions individually</p>
+      <div class="code" data-type="html">
+        <div class="ui flyout">
+          <div class="ui center aligned header">Header is centered</div>
+          <div class="center aligned content">
+            <p>Content is centered</p>
+          </div>
+          <div class="center aligned actions">
+            <div class="ui negative button">Cancel</div>
+            <div class="ui positive button">OK</div>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#centerexample')
+          .flyout('show')
+          ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Left Actions
+      </h4>
+      <p>You can also place the action buttons to the left</p>
+      <div class="code" data-type="html">
+        <div class="ui flyout">
+          <div class="ui header">Look at the Actions</div>
+          <div class="content">
+            <p>They are aligned to the left</p>
+          </div>
+          <div class="left actions">
+            <div class="ui negative button">Cancel</div>
+            <div class="ui positive button">OK</div>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#leftactionsexample')
+          .flyout('show')
+          ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Basic Header and Actions
+      </h4>
+      <p>Header and/or Actions can also appear on the same basic background as the content</p>
+      <div class="code" data-type="html">
+          <div class="ui flyout">
+              <div class="ui basic header">Basic Header</div>
+              <div class="content">
+                <p>Basic Actions below</p>
+              </div>
+              <div class="basic actions">
+                  <div class="ui negative button">Cancel</div>
+                  <div class="ui positive button">OK</div>
+              </div>
+          </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#basicheaderactionsexample')
+          .flyout('show')
+          ;
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="context example">
+      <h4 class="ui header">Using a custom context</h4>
+      <p>A flyout can be initialized inside any element, not just a page's <code>body</code>.</p>
+      <div class="ui ignored info message">
+        A flyout's <code>context</code> cannot have any padding. You can solve this by padding its inner content, or using an additional containing element
+      </div>
+      <div class="ui top attached demo menu">
+        <a class="item">
+          <i class="sidebar icon"></i>
+          Toggle flyout
+        </a>
+      </div>
+      <div class="ui bottom attached segment">
+        <div class="ui flyout">
+          <i class="close icon"></i>
+          <div class="ui header">
+            <i class="question icon"></i>
+            <div class="content">
+              Archive Old Messages
+            </div>
+          </div>
+          <div class="content">
+            <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+          </div>
+          <div class="actions">
+            <div class="ui red cancel button">
+              <i class="remove icon"></i>
+              No
+            </div>
+            <div class="ui green ok button">
+              <i class="checkmark icon"></i>
+              Yes
+            </div>
+          </div>
+        </div>
+        <div class="pusher">
+          <div class="ui basic segment">
+            <h3 class="ui header">Application Content</h3>
+            <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+          </div>
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+      // using context
+      $('.context.example .ui.flyout')
+        .flyout({
+          context: $('.context.example .bottom.segment')
+        })
+        .flyout('attach events', '.context.example .menu .item')
+      ;
+      </div>
+    </div>
+  </div>
+
+  <div class="ui tab" data-tab="usage">
+
+    <h2 class="ui dividing header">Set-up</h2>
+
+    <div class="no example" data-class="flyout, pusher">
+      <h4 class="ui header">Page Structure</h4>
+      <p>Using a flyout requires a specific page structure. For optimal performance your page should be already set-up with this structure before initializing a flyout.</p>
+      <div class="ui info message">
+        Flyout will automatically add the correct layout on first load if it is not set-up, however fixing your page's layout on load <b>will reduce performance and is not recommended</b>.
+      </div>
+      <div class="code" data-type="html" data-escape="true">
+        &lt;body&gt;
+          &lt;div class=&quot;ui flyout&quot;&gt;
+            ...
+          &lt;/div&gt;
+          &lt;div class=&quot;pusher&quot;&gt;
+            Your site&#39;s actual content
+          &lt;/div&gt;
+        &lt;/body&gt;
+      </div>
+      <div class="ui message">
+        <ul class="ui list">
+          <li>The <code>pusher</code> is the element that will be pushed away by the flyout and should contain your site content.</li>
+          <li>If your pusher contains overflowing content, you might use <code>overflowing pusher</code> to prevent possible undesired side effects (for example when using <code>native sticky</code> somewhere)</li>
+        </ul>
+      </div>
+     </div>
+
+    <h2 class="ui dividing header">Initializing a flyout</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Via existing DOM node</h4>
+
+      <p>A flyout can be included anywhere on the page. On initialization a flyout's current size will be cached, and the element will be detached from the DOM and moved inside a dimmer.</p>
+      <div class="code" data-type="javascript">
+      $('.ui.flyout')
+        .flyout()
+      ;
+      </div>
+      <div class="code" data-type="html">
+        <div class="ui flyout">
+          <i class="close icon"></i>
+          <div class="header">
+            Flyout Title
+          </div>
+          <div class="image content">
+            <div class="image">
+              An image can appear on left or an icon
+            </div>
+            <div class="description">
+              A description can appear on the right
+            </div>
+          </div>
+          <div class="actions">
+            <div class="ui button">Cancel</div>
+            <div class="ui button">OK</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Via Javascript properties</h4>
+      <p>You can create temporary flyouts without the need to create markup on your own. Temporary flyouts will be removed from the DOM once closed by default if there isn't a custom <code>onHidden</code> callback given.</p>
+      <div class="code" data-demo="true">
+        $.flyout({
+          debug: true,
+          verbose: true,
+          autoShow: true,
+          title: 'Important Notice',
+          class: 'wide',
+          closeIcon: true,
+          content: 'You will be logged out in 5 Minutes',
+          actions: [{
+            text: 'Alright, got it',
+            class: 'green',
+            icon: 'save'
+          }]
+        });
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Behavior</h2>
+
+    <p>All the following behaviors can be called using the syntax:</p>
+    <div class="code">
+    $('.ui.flyout')
+      .flyout('behavior name', argumentOne, argumentTwo)
+    ;
+    </div>
+
+    <table class="ui definition celled sortable table segment">
+      <thead>
+        <tr>
+          <th>Behavior</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>attach events(selector, event)</td>
+          <td>Attaches flyout action to given selector. Default event if none specified is toggle</td>
+        </tr>
+        <tr>
+          <td>show</td>
+          <td>Shows the flyout</td>
+        </tr>
+        <tr>
+          <td>hide</td>
+          <td>Hides the flyout</td>
+        </tr>
+        <tr>
+          <td>toggle</td>
+          <td>Toggles the flyout</td>
+        </tr>
+        <tr>
+          <td>hide others</td>
+          <td>Hides all other displayed flyouts</td>
+        </tr>
+        <tr>
+          <td>is visible</td>
+          <td>Returns whether the flyout is visible</td>
+        </tr>
+        <tr>
+          <td>is hidden</td>
+          <td>Returns whether the flyout is hidden</td>
+        </tr>
+        <tr>
+          <td>get direction</td>
+          <td>Returns direction of current flyout</td>
+        </tr>
+        <tr>
+          <td>get settings</td>
+          <td>Returns current flyout's settings</td>
+        </tr>
+        <tr>
+          <td>destroy</td>
+          <td>Destroys instance and removes all events</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="ui dividing header">Config Templates</h2>
+    <p>A config template is a special behavior to immediately show preconfigured temporary flyouts. Three basic templates are included: <code>alert</code>, <code>confirm</code>, <code>prompt</code> as equivalents to existing vanilla JS variants, but with more possibilities to customize the look & feel. </p>
+    <div class="ui info message">
+      Config template flyouts will be always autoshown, so no manual <code>show</code> is needed)
+    </div>
+    <div class="code">
+      $.flyout('alert','hello')
+      $.flyout('confirm','Are you sure?',function(value){})
+      $.flyout('prompt','Enter Code', function(value){})
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Alert</h4>
+      <p>Possible parameters are: title, content, handler (in that order to stay nearly identical to vanilla js usage) or a given object <code>{title:'',content:'',handler:function(){}}</code> where as title and content can contain HTML.</p>
+      <div class="ui warning message">If you don't trust the content set the global flyout setting for <code>preserveHTML</code> to <code>false</code>.</div>
+      <div class="code" data-demo="true">
+          $.flyout('alert','<span class="ui big purple text">hello</span>');
+      </div>
+      <div class="code" data-demo="true">
+          $.flyout('alert','Watch out','This is an important message!');
+      </div>
+      <div class="code" data-demo="true">
+         $.flyout('alert',{
+            title: 'Listen to me',
+            content: 'I love Fomantic-UI',
+            handler: function() {
+              $.toast({message:'Great!'});
+            }
+          });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Confirm</h4>
+      <p>The parameter list and logic is the same as for alert. The selected boolean choice will be provided to a given callback handler.</p>
+      <div class="code" data-demo="true">
+      // title and content
+        $.flyout('confirm','Attention!','Ready?');
+      </div>
+      <div class="code" data-demo="true">
+      // title, content and handler
+        $.flyout('confirm','Attention!','Ready?', function(choice){
+          $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        });
+      </div>
+      <div class="code" data-demo="true">
+      // content and handler
+        $.flyout('confirm','Ready?', function(choice){
+          $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        });
+      </div>
+      <div class="code" data-demo="true">
+      // title and handler
+        $.flyout('confirm',{
+          title: 'Ready?',
+          handler: function(choice){
+            $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+          }
+        });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Prompt</h4>
+      <p>The call for prompt is basically identical to alert and confirm. There are 2 more options available when an object is given <code>placeholder</code> and <code>defaultValue</code>.
+        If you provide HTML Code for the content and this contains an input, this will be used as the inputfield. Otherwise it creates one dynamically for you.</p>
+      <div class="code" data-demo="true">
+  // provide a placeholder
+    $.flyout('prompt',{
+      title: 'Enter your name',
+      placeholder: 'Do not enter your mothers name!',
+      handler: function(name){
+          $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
+      }
+    });
+      </div>
+      <div class="code" data-demo="true">
+  // set a defaultValue
+    $.flyout('prompt',{
+      title: 'Enter your name',
+      defaultValue: 'mommy',
+      handler: function(name){
+          $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
+      }
+    });
+      </div>
+      <div class="code" data-demo="true">
+  // custom input
+    $.flyout('prompt', 'Custom Input', '<div class="ui labeled input"><div class="ui blue label">Nickname</div><input type="text" placeholder="Do not use your email!"></div>', function(name) {
+      $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
+    });
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Create your own template</h4>
+      <p>By extending the flyouts templates object once, you can define your own custom config templates. It has to return an object which will be merged into the flyouts settings prior to creating/showing the flyout.</p>
+      <div class="evaluated code">
+  $.fn.flyout.settings.templates.greet = function(username) {
+  // do something according to flyouts settings and/or given parameters
+    var settings = this.get.settings(); // "this" is the flyout instance
+    return {
+      title: 'Greetings to ' + username + '!',
+      content: '<span class="ui huge orange text">'+ username.toUpperCase() + '</span><br>is the best!',
+      class: 'inverted',
+      classContent: 'centered'
+    }
+  }
+      </div>
+      <p>Reuse this whenever you need</p>
+      <div class="code" data-demo="true">
+          $.flyout('greet','mom')
+      </div>
+      <div class="code" data-demo="true">
+          $.flyout('greet','dad')
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="ui tab" data-tab="settings">
+
+    <h2 class="ui dividing header">Settings</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Flyout Settings
+        <div class="sub header">Flyout settings modify the flyout's behavior.</div>
+      </h4>
+      <table class="ui celled sortable definition table segment">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th class="four wide">Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>context</td>
+            <td><code>'body'</code></td>
+            <td>Selector or jquery object specifying the area to dim</td>
+          </tr>
+          <tr>
+            <td>exclusive</td>
+            <td><code>false</code></td>
+            <td>Opening another flyout will dismiss the one displayed. Set to <code>true</code> to allow multiple flyout at the same time.</td>
+          </tr>
+          <tr>
+            <td>closable</td>
+            <td><code>true</code></td>
+            <td>Setting to <code>false</code> will not allow you to close the flyout by clicking on the dimmer.</td>
+          </tr>
+          <tr>
+            <td>dimPage</td>
+            <td><code>true</code></td>
+            <td>Whether to dim <code>context</code> contents when flyout is visible.</td>
+          </tr>
+          <tr>
+            <td>blurring</td>
+            <td><code>false</code></td>
+            <td>If dimmer should blur background</td>
+          </tr>
+          <tr>
+            <td>autofocus</td>
+            <td><code>true</code></td>
+            <td>When true, the first form input inside the flyout will receive focus when shown.  Set this to false to prevent this behavior.</td>
+          </tr>
+          <tr>
+            <td>restoreFocus</td>
+            <td><code>true</code></td>
+            <td>When false, the last focused element, before the flyout was shown, will not get refocused again when the flyout hides. This could prevent unwanted scrolling behaviors after closing a flyout.</td>
+          </tr>
+          <tr>
+            <td>keyboardShortcuts</td>
+            <td><code>true</code></td>
+            <td>Whether to automatically bind keyboard shortcuts. This will close the flyout when the ESC-key is pressed.</td>
+          </tr>
+          <tr>
+            <td>scrollLock</td>
+            <td><code>false</code></td>
+            <td>Whether to lock page scroll when flyout is visible.</td>
+          </tr>
+          <tr>
+            <td>returnScroll</td>
+            <td><code>false</code></td>
+            <td>Whether to return to original scroll position when flyout is hidden.</td>
+          </tr>
+          <tr>
+            <td>delaySetup</td>
+            <td><code>false</code></td>
+            <td>When flyout is initialized without the proper HTML, using this option will defer creation of DOM to use <code>requestAnimationFrame</code>.</td>
+          </tr>
+          <tr>
+            <td>autoShow</td>
+            <td><code>false</code></td>
+            <td>When true, immediately shows the flyout at instantiation time.</td>
+          </tr>
+          <!--
+          UNUSED FOR NOW
+          <tr>
+            <td>duration</td>
+            <td><code>500</code></td>
+            <td>Duration of animation.</td>
+          </tr>
+          -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Callbacks
+        <div class="sub header">Callbacks specify a function to occur after a specific behavior.</div>
+      </h4>
+
+      <table class="ui celled sortable definition table segment">
+        <thead>
+          <tr>
+            <th class="four wide">Setting</th>
+            <th>Context</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>onChange</td>
+            <td>Flyout</td>
+            <td>Is called when a flyout is either shown or hidden.</td>
+          </tr>
+          <tr>
+            <td>onShow</td>
+            <td>Flyout</td>
+            <td>Is called when a flyout starts to show.</td>
+          </tr>
+          <tr>
+            <td>onHide</td>
+            <td>Flyout</td>
+            <td>Is called after a flyout starts to hide.</td>
+          </tr>
+          <tr>
+            <td>onVisible</td>
+            <td>Flyout</td>
+            <td>Is called after a flyout has finished showing animating.</td>
+          </tr>
+          <tr>
+            <td>onHidden</td>
+            <td>Flyout</td>
+            <td>Is called after a flyout has finished hiding animation.</td>
+          </tr>
+          <tr>
+            <td>onApprove</td>
+            <td>Flyout</td>
+            <td>Is called after a positive, approve or ok button is pressed. If the function returns <code>false</code>, the flyout will not hide.</td>
+          </tr>
+          <tr>
+            <td>onDeny</td>
+            <td>Flyout</td>
+            <td>Is called after a negative, deny or cancel button is pressed. If the function returns <code>false</code>, the flyout will not hide.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">DOM Settings
+        <div class="sub header">DOM settings specify how this module should interface with the DOM.</div>
+      </h4>
+
+      <table class="ui celled sortable definition table segment">
+        <thead>
+          <tr>
+          <th>Setting</th>
+          <th class="four wide">Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>namespace</td>
+            <td>flyout</td>
+            <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+          </tr>
+          <tr>
+            <td>selector</td>
+            <td colspan="2">
+              <div class="code">
+              selector    : {
+                fixed   : '.fixed',
+                omitted : 'script, link, style, .ui.modal, .ui.dimmer, .ui.nag, .ui.fixed',
+                pusher  : '.pusher',
+                flyout  : '.ui.flyout',
+                header  : '.ui.header',
+                content : '.content',
+                actions : '.actions',
+                close   : '.close',
+                approve : '.actions .positive, .actions .approve, .actions .ok',
+                deny    : '.actions .negative, .actions .deny, .actions .cancel'
+              }
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>className</td>
+            <td colspan="2">
+              <div class="code">
+              className : {
+                flyout     : 'ui flyout',
+                close      : 'close icon',
+                header     : 'ui header',
+                content    : 'content',
+                actions    : 'actions',
+                active     : 'active',
+                animating  : 'animating',
+                dimmed     : 'dimmed',
+                ios        : 'ios',
+                pushable   : 'pushable',
+                pushed     : 'pushed',
+                right      : 'right',
+                top        : 'top',
+                left       : 'left',
+                bottom     : 'bottom',
+                visible    : 'visible',
+                overlay    : 'overlay',
+                fullscreen : 'fullscreen',
+                template   : 'ui flyout',
+                button     : 'ui button',
+                ok         : 'positive',
+                cancel     : 'negative',
+                prompt     : 'ui fluid input'
+              }
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>regExp</td>
+            <td colspan="2">
+              <div class="code">
+              regExp : {
+                ios          : /(iPad|iPhone|iPod)/g,
+                mobileChrome : /(CriOS)/g,
+                mobile       : /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/g
+              }
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Config Template Settings
+        <div class="sub header">Config Template Settings define default content for dynamically created flyouts.</div>
+      </h4>
+
+      <table class="ui celled sortable definition table segment">
+        <thead>
+          <tr>
+          <th>Setting</th>
+          <th class="four wide">Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>title</td>
+            <td><code>''</code></td>
+            <td>Content of the flyout header.</td>
+          </tr>
+          <tr>
+            <td>content</td>
+            <td><code>''</code></td>
+            <td>Content of the flyout content.</td>
+          </tr>
+          <tr>
+            <td>class</td>
+            <td><code>''</code></td>
+            <td>Can hold a string to be added to the flyout class to control its appearance.</td>
+          </tr>
+          <tr>
+            <td>classTitle</td>
+            <td><code>''</code></td>
+            <td>Can hold a string to be added to the title class to control its appearance.</td>
+          </tr>
+          <tr>
+            <td>classContent</td>
+            <td><code>''</code></td>
+            <td>Can hold a string to be added to the content class to control its appearance.</td>
+          </tr>
+          <tr>
+            <td>classActions</td>
+            <td><code>''</code></td>
+            <td>Can hold a string to be added to the actions class to control its appearance.</td>
+          </tr>
+          <tr>
+            <td>closeIcon</td>
+            <td><code>false</code></td>
+            <td>Whether the flyout should include a close icon.</td>
+          </tr>
+          <tr>
+            <td>actions</td>
+            <td><code>false</code></td>
+            <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>.
+              <div class="ui info message">Actions will close the flyout by default. Return false from the click handler to prevent that.</div>
+              <div class="ui warning message">If you use any of the approve (approve, ok, positive) or deny (deny, cancel, negative) classnames for the <code>class</code> property, a <code>click</code> handler will be ignored. In such cases use the <code>onApprove</code> and <code>onDeny</code> callbacks instead.</div>
+              <div class="code">
+              actions: [{
+                  text    : 'Wait',
+                  class   : 'red',
+                  icon    : 'exclamation',
+                  click   : function() {}
+              }]
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>preserveHTML</td>
+            <td><code>true</code></td>
+            <td>Whether HTML included in given title, content or actions should be preserved. Set to <code>false</code> in case you work with untrusted 3rd party content.</td>
+          </tr>
+          <tr>
+            <td>fields</td>
+            <td colspan="2">
+              <div class="code">
+              fields         : {
+                class        : 'class',
+                text         : 'text',
+                icon         : 'icon',
+                click        : 'click'
+              }
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>text</td>
+            <td colspan="2">
+              <div class="code">
+              text: {
+                ok    : 'Ok',
+                cancel: 'Cancel'
+              }
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Debug Settings
+        <div class="sub header">Debug settings controls debug output to the console.</div>
+      </h4>
+
+      <table class="ui celled sortable definition table segment">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th class="four wide">Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>name</td>
+            <td><code>Flyout</code></td>
+            <td>Name used in debug logs.</td>
+          </tr>
+          <tr>
+            <td>silent</td>
+            <td><code>false</code></td>
+            <td>Silences all console output including error messages, regardless of other debug settings.</td>
+          </tr>
+          <tr>
+            <td>debug</td>
+            <td><code>false</code></td>
+            <td>Provides standard debug output to console.</td>
+          </tr>
+          <tr>
+            <td>performance</td>
+            <td><code>true</code></td>
+            <td>Show <code>console.table</code> output with performance metrics.</td>
+          </tr>
+          <tr>
+            <td>verbose</td>
+            <td><code>true</code></td>
+            <td>Debug output includes all internal behaviors.</td>
+          </tr>
+          <tr>
+            <td>error</td>
+            <td colspan="2">
+              <div class="code">
+              error   : {
+                method      : 'The method you called is not defined.',
+                pusher      : 'Had to add pusher element. For optimal performance make sure body content is inside a pusher element',
+                movedFlyout : 'Had to move flyout. For optimal performance make sure flyout and pusher are direct children of your body tag',
+                notFound    : 'There were no elements that matched the specified selector'
+              }
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>

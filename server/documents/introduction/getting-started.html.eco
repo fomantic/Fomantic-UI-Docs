@@ -32,15 +32,16 @@ type        : 'Main'
 
     <h5 class="ui header">Requirements</h5>
     <ul class="ui list">
-      <li class="item">NodeJS >= v8</li>
-      <li class="item">NPM >= v5</li>
+      <li class="item">NodeJS >= v12</li>
+      <li class="item">NPM >= v6</li>
     </ul>
     <p>You can download NodeJS <a href="https://nodejs.org/en/download/" target="_blank">here</a>, NPM is installed with NodeJS.</p>
+    <div class="ui ignored info message"><i class="circle info icon"></i>Fomantic-UI also supports <code><a href="https://www.npmjs.com/package/yarn" target="_blank">yarn</a></code> as alternative package manager. <div class="ui black small horizontal label">New in 2.9.0</div></div>
     <br />
 
-    <p>Once you have NodeJS and NPM installed you will need to install <a href="https://npmjs.com/package/fomantic-ui">Fomantic-UI</a> as a dependency of your project.</p>
+    <p>Once you have NodeJS and NPM installed, you will need to install <a href="https://npmjs.com/package/fomantic-ui">Fomantic-UI</a> as a dependency of your project.</p>
 
-    <p>If you haven't already create a <code>package.json</code> file with the following command</p>
+    <p>If you haven't already, create a <code>package.json</code> file with the following command</p>
     <div class="ignored code" data-type="bash">
       $ npm init
     </div>
@@ -51,16 +52,23 @@ type        : 'Main'
 
     <p>To install Fomantic-UI run the following command</p>
     <div class="ignored code" data-type="bash">
-      $ npm install --ignore-scripts fomantic-ui
+      $ npm install fomantic-ui
     </div>
 
     <p>Or try living on the edge and give our nightly build a test and try new features and bug fixes early!</p>
     <div class="ignored code" data-type="bash">
-      $ npm install --ignore-scripts fomantic-ui@nightly
+      $ npm install fomantic-ui@nightly
     </div>
 
     <p>
-      When NPM finishes installing it will start the Fomantic-UI interactive installation prompt.
+      When NPM finishes installing, a precompiled version of Fomantic-UI is already available inside the <code>dist</code> folder.
+      Starting from 2.9.0, the interactive installation prompt will not start automatically after npm install anymore. If you need a custom installed version of Fomantic-UI, you have to manually run the following right after npm install
+    </p>
+    <div class="ignored code" data-type="bash">
+      $ cd node_modules/fomantic-ui
+      $ npx gulp install
+    </div>
+    <p>
       The installation prompt is used to create your <code>semantic.json</code> file which stores
       critical information for when you need to install Fomantic-UI and also about the build
       process. It will also create a new directory containing all the files needed to create a
@@ -82,8 +90,7 @@ type        : 'Main'
       This is <code>semantic/</code> by default.
     </p>
     <div class="ignored code" data-type="bash">
-      $ cd node_modules/fomantic-ui
-      $ npx gulp install
+      $ cd semantic/
       $ npx gulp build
     </div>
     <p>
@@ -91,8 +98,8 @@ type        : 'Main'
       and JavaScript files. You can now include these in your web page and start using Fomantic-UI.
     </p>
     <div class="code" data-type="html">
-      <!-- You MUST include jQuery before Fomantic -->
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+      <!-- You MUST include jQuery 3+ before Fomantic -->
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
       <link rel="stylesheet" type="text/css" href="/dist/semantic.min.css">
       <script src="/dist/semantic.min.js"></script>
     </div>
@@ -131,24 +138,24 @@ type        : 'Main'
     </div>
     <div class="ui active basic tab vertical segment" data-tab="jsdelivr">
       <div class="code" data-type="html">
-        <!-- You MUST include jQuery before Fomantic -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <!-- You MUST include jQuery 3+ before Fomantic -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.css">
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.js"></script>
       </div>
     </div>
     <div class="ui basic tab vertical segment" data-tab="cdnjs">
       <div class="code" data-type="html">
-        <!-- You MUST include jQuery before Fomantic -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- You MUST include jQuery 3+ before Fomantic -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/<%= @getVersion() %>/semantic.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/<%= @getVersion() %>/semantic.min.js"></script>
       </div>
     </div>
     <div class="ui basic tab vertical segment" data-tab="unpkg">
       <div class="code" data-type="html">
-        <!-- You MUST include jQuery before Fomantic -->
-        <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.js"></script>
+        <!-- You MUST include jQuery 3+ before Fomantic -->
+        <script src="https://unpkg.com/jquery@3.6.3/dist/jquery.js"></script>
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.css">
         <script src="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.js"></script>
       </div>

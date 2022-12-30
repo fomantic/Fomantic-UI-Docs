@@ -81,12 +81,12 @@ semantic.home.ready = function() {
         if(lines) {
           $.each(lines, function(index, line) {
             // clear whitespace
-            line = $.trim(line);
+            line = line.trim();
             // match variables only
             if(line[0] == '@') {
               name = line.match(/^@(.+?):/);
               value = line.match(/:\s*([\s|\S]+?;)/);
-              if( ($.isArray(name) && name.length >= 2) && ($.isArray(value) && value.length >= 2) ) {
+              if( (Array.isArray(name) && name.length >= 2) && (Array.isArray(value) && value.length >= 2) ) {
                 name = name[1];
                 value = value[1];
                 variables[name] = value;
@@ -297,13 +297,6 @@ semantic.home.ready = function() {
   $('.demo .ui.dropdown')
     .dropdown()
   ;
-
-  if(window.Transifex !== undefined) {
-    window.Transifex.live.onTranslatePage(function(countryCode){
-      var fullName = $('.language.dropdown .item[data-value=' + countryCode + ']').eq(0).text();
-      $('.language.dropdown > .text').html(fullName);
-    });
-  }
 
   $('.ui.sidebar')
     .sidebar('setting', {

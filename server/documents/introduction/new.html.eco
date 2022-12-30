@@ -9,13 +9,303 @@ description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { twoeight: 'New in 2.8', twoseven: 'New in 2.7', twosix: 'New in 2.6', twofive: 'New in 2.5', twofour: 'New in 2.4', twothree: 'New in 2.3' } }) %>
+<%- @partial('header',  { tabs: { twonine: 'New in 2.9', twoeight: 'New in 2.8', twoseven: 'New in 2.7', twosix: 'New in 2.6', twofive: 'New in 2.5', twofour: 'New in 2.4', twothree: 'New in 2.3' } }) %>
 <script src="/javascript/loader.js"></script>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
+  <div class="ui active tab" data-tab="twonine">
+    <h2 class="ui dividing header">One big step ahead</h2>
+    <p>Fomantic <code>2.9</code> once again includes more than <a href="https://github.com/fomantic/Fomantic-UI/pulls?q=is%3Apr+milestone%3A2.9.0+">200</a> new features, improvements and bugfixes.</p>
+    <div class="ui small info message">
+     The few SUI 2.5.0 fixes, which were not already been fixed within the past 4 years in previous Fomantic UI Versions <em class="ui emoji" data-emoji=":wink:"></em>, are included as well
+    </div>
+    <h2 class="ui dividing header">
+      New UI Component
+    </h2>
+    <div class="content example">
+      <h4 class="ui header">
+        Flyout
+      </h4>
+      <p><a href="/modules/flyout.html">Flyouts</a> are the result of a marriage between <a href="/modules/modal.html">Modal</a> and <a href="/modules/sidebar.html">Sidebar</a>.</p>
+      <div class="ui ignored warning message">If you are upgrading from a previous FUI version, be sure to add <code>@flyout</code> to your <a href="/introduction/build-tools.html#themeconfig"><code>theme.config</code></a> to include the flyout component in your code.</div>
+      <div class="code" data-demo="true">
+        $.flyout({
+          autoShow: true,
+          title: 'Flyout Notice',
+          class: 'wide',
+          closeIcon: true,
+          content: 'Fomantic-UI 2.9.0 was released today!',
+          actions: [{
+            text: 'Awesome, thanks!',
+            class: 'green',
+            icon: 'save'
+          }]
+        });
+      </div>
+    </div>
+    <h2 class="ui dividing header">
+      New features
+    </h2>
+    <div class="no example">
+      <h4 class="ui header">
+         General
+      </h4>
+      <div class="ui bulleted list">
+        <div class="item">
+          New variable<code>@supportIE</code> controls whether IE/old Edge specific CSS Code should be compiled
+        </div>
+        <div class="item">
+          Only <a target="_blank" href="https://caniuse.com/?search=woff">woff/woff2</a> font files are supported, eot/svg/ttf have been removed
+        </div>
+        <div class="item">
+          All <code>onShow</code> and <code>onHide</code> callbacks now have cancel support. Returning false from such callbacks will prevent the related module to be shown/hidden
+        </div>
+        <div class="item">
+          Emoji, Flag and Icon are now build out of <a target="_blank" href="https://lesscss.org/features/#maps-feature">LESS-maps</a> which can then be easily overridden or reduced to only the ones needed in your own theme
+        </div>
+        <div class="item">
+          A11y as well as jQuery short notation<code>$.</code> support for dynamically created modal, toast and the new flyout
+        </div>
+        <div class="item">
+          Focus trap in modals and flyouts
+        </div>
+        <div class="item">
+          Dependency to jquery serialize-object in Api was removed. It's now built-in and enhanced.
+        </div>
+        <div class="item">
+          Added input support for color,week,month,file (see below) and url inputs
+        </div>
+        <div class="item">
+          All elements can now have their individual color variants
+        </div>
+        <div class="item">
+          Accordion now has an <a href="/modules/accordion.html#inverted">inverted</a>, <a href="/modules/accordion.html#basic-styled">basic styled</a> and <a href="/modules/accordion.html#tree">tree</a> variant and icon can be displayed <a href="/modules/accordion.html#right-icon">to the right</a>
+        </div>
+        <div class="item">
+          Button Groups now supports <a href="/elements/button.html#wrapping-buttons">wrapping</a> and can be <a href="/elements/button.html#spaced-buttons">spaced</a>
+        </div>
+        <div class="item">
+          <a href="/modules/calendar.html">Calendar</a> now supports <code>disabledHours</code>
+        </div>
+        <div class="item">
+          <a href="/collections/table.html">Table</a> now supports inverted colors
+        </div>
+        <div class="item">
+          <a href="/modules/toast.html">Toast</a> now allows clickable items as content without closing the toast
+        </div>
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">
+         Bundled Lato Font
+      </h4>
+      <p>The Lato font of the default theme is now bundled and upgraded to 2.0 to also support cyrillic and greek characters. Loading via googleFonts is now disabled by default.</p>
+    </div>
+    <div class="file-input content example">
+      <h4 class="ui header">
+         File Inputs
+      </h4>
+      <p><a href="/elements/input.html#file-input">File inputs</a> are supported now</p>
+      <div class="ui file input">
+        <input type="file">
+      </div>
+      <div class="ui file action input">
+        <input id="actionfileinput" type="file">
+        <label for="actionfileinput" class="ui blue button">
+           <i class="wizard icon"></i>
+              Choose wisely
+        </label>
+      </div>
+    </div>
+    <div class="content example">
+      <h4 class="ui header">
+         SVG Flags
+      </h4>
+      <p><a href="/elements/flag.html">Flags</a> now use the same SVG icons as Emoji, making them now resizable and added lots of missing countrycodes and other global identifications.</p>
+      <i class="small de flag"></i>
+      <i class="medium fr flag"></i>
+      <i class="large li flag"></i>
+      <i class="big jp flag"></i>
+      <i class="huge gb flag"></i>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">
+         Calendar Token Format
+      </h4>
+      <p>Calendar now supports <a href="/modules/calendar.html#custom-format">tokens</a> as string formatter</p>
+      <div class="code" data-type="javascript">
+      $('.ui.calendar')
+        .calendar({
+          formatter: {
+            date: 'DD.MM.YYYY'
+          }
+        })
+      ;
+      </div>
+    </div>
+    <div class="content example">
+      <h4 class="ui header">
+        Icon Update
+      </h4>
+      <p>We have updated the icons to FontAwesome 5.15.4</p>
+        <i class="huge head side mask icon"></i>
+        <i class="huge hands wash icon"></i>
+        <i class="huge toilet paper icon"></i>
+        <i class="huge hand holding water icon"></i>
+        <p>You can see a list of all the available icons <a href="/elements/icon.html">here</a>.</p>
+        <div class="ui ignored info message">
+            As we optimized the way to reduce the icon list to only those you need in your custom theme via LESS maps, we also released a new version of <a target="_blank" href="https://github.com/fomantic/create-fomantic-icons">Create-Fomantic-Icons</a> which supports FUI 2.9.0.
+        </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">
+        Scrolling and Stuck Table
+      </h4>
+      <p>Tables now support <a href="/collections/table.html#scrolling">scrolling</a> tbody and <a href="/collections/table.html#stuck">stuck</a> columns</p>
+      <div class="code" data-type="html">
+        <table class="ui scrolling table">
+        </table>
+          ...
+        <table class="ui first last head foot stuck table">
+        </table>
+      </div>
+    </div>
+    <div class="content example">
+      <h4 class="ui header">
+        Accordion CSS Only
+      </h4>
+      <p>Accordion can now be used without Javascript using the details/summary tag</p>
+      <details class="ui basic styled accordion">
+        <summary class="title">
+          <i class="dropdown icon"></i> How many people are working on Fomantic-UI
+        </summary>
+        <div class="content">
+          <p><a target="_blank" href="https://github.com/fomantic/Fomantic-UI/blob/master/CONTRIBUTORS.md">Many people</a> from the community helped improving Fomantic-UI over the past 4 years. Thanks!</p>
+        </div>
+      </details>
+    </div>
+    <h2 class="ui dividing header">
+      Breaking changes
+    </h2>
+    <div class="ui bulleted list">
+      <div class="item">
+        <div>Build</div>
+        <div class="list">
+          <div class="item">Installing from npm does not automatically start the building script anymore to make other package managers, like yarn, work.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>API</div>
+        <div class="list">
+          <div class="item">New default value for <code>rawResponse</code> is <code>true</code></div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Button</div>
+        <div class="list">
+          <div class="item"><code>@tertiaryLinePadding</code> variable was split into <code>@tertiaryVerticalPadding</code> and <code>@tertiaryHorizontalPadding</code></div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Calendar</div>
+        <div class="list">
+          <div class="item"><code>ampm</code> setting is removed. Use the new <a href="/modules/calendar.html#custom-format">token string</a> formatters instead</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Checkbox</div>
+        <div class="list">
+          <div class="item">Legacy v1 <code>box</code> styling (instead of using <code>label</code> in v2) was removed</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Dropdown</div>
+        <div class="list">
+          <div class="item">New default value for <code>showOnFocus</code> is <code>false</code></div>
+          <div class="item">New default value for <code>fullTextSearch</code> is <code>'exact'</code></div>
+          <div class="item">New default value for <code>forceSelection</code> is <code>false</code></div>
+          <div class="item"><code>@upwardMenuBorderRadius</code> was renamed into <code>@upwardSelectionMenuBorderRadius</code></div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Emoji and Flag</div>
+        <div class="list">
+          <div class="item">The default line height was slightly reduced to match usage inside dropdowns. In case your emojis/flags appear too small, add a size class to them.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Form</div>
+        <div class="list">
+          <div class="item">New default value for <code>errorFocus</code> is <code>true</code></div>
+          <div class="item">"length" rule was removed, use <code>minlength</code> instead</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Icon</div>
+        <div class="list">
+          <div class="item"><code>chart line</code> was renamed to <code>chartline</code></div>
+          <div class="item"><code>line graph</code> was renamed to <code>linegraph</code></div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Label</div>
+        <div class="list">
+          <div class="item"><code>left icon</code> and <code>right icon</code> have to be declared in exact that class order</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Sidebar</div>
+        <div class="list">
+          <div class="item">Tabular menus and their related segments have to stay in a dedicated parent node to allow more than two attached segments</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Sidebar</div>
+        <div class="list">
+          <div class="item"><code>onShow</code> and <code>onVisible</code> callbacks have swapped to match the same logic as in all other modules</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Shape</div>
+        <div class="list">
+          <div class="item"><code>beforeChange</code> was renamed to <code>onBeforeChange</code></div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Table</div>
+        <div class="list">
+          <div class="item">When marked cells should also be colored you have to use an additional <code>colored</code> class and follow a fixed class order like <code>red colored right orange marked</code></div>
+        </div>
+      </div>
+    </div>
+    <h2 class="ui dividing header">
+      Bugfixes
+    </h2>
+    <p><a target="_blank" href="https://github.com/fomantic/Fomantic-UI/pulls?q=is%3Apr+sort%3Aupdated-desc+milestone%3A2.9.0+label%3Atype%2Fbug+">More than 80 Bugs</a> were fixed, some important to mention are</p>
+    <div class="ui bulleted list">
+      <div class="item">
+         Step had double semicolon in font face breaking webpack 5
+      </div>
+      <div class="item">
+        Dropdown additions were encoded in some cases and broke on mobile
+      </div>
+      <div class="item">
+        node 15+ / npm 7, yarn, pnpm broke on install
+      </div>
+      <div class="item">
+        Firefox font gap warning and Firefox 103+ broke Accordion
+      </div>
+      <div class="item">
+         ScrollLock in sidebar was not working
+      </div>
+      <div class="item">
+        Pressing Escape-Key in inputs inside modals closed the modal itself
+      </div>
+    </div>
+  </div>
 
-  <div class="ui active tab" data-tab="twoeight">
+  <div class="ui tab" data-tab="twoeight">
     <h2 class="ui dividing header">Toasty Emotion</h2>
     <p>Fomantic <code>2.8</code> brings some of the best updates yet including variation feature customization for components, more toast changes and EMOTES <em data-emoji="tada"></em> <em data-emoji="smile"></em> and of course A LOT of critical and much needed bug fixes.</p>
 

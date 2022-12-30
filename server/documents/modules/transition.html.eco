@@ -413,7 +413,7 @@ type        : 'UI Module'
       </div>
 
       <h3 class="ui header">Passing in settings</h3>
-      <p>Transitions use similar argument shorthand as <a href="http://api.jquery.com/animate/">animate</a>. You can specify callback functions, animation duration, and other settings using the same arguments. Durations can be specified as strings with CSS shorthand, or with numbers.</p>
+      <p>Transitions use similar argument shorthand as <a href="https://api.jquery.com/animate/">animate</a>. You can specify callback functions, animation duration, and other settings using the same arguments. Durations can be specified as strings with CSS shorthand, or with numbers.</p>
       <div class="code" data-demo="true" data-title="Settings objects">
       $('.green.leaf')
         .transition({
@@ -719,12 +719,32 @@ type        : 'UI Module'
         <tr>
           <td>onShow</td>
           <td>transitioned element</td>
-          <td>Callback on each transition that changes visibility to shown</td>
+          <td>Callback on each transition that changes visibility to shown. Returning <code>false</code> from this callback will cancel the transition from showing.</td>
+        </tr>
+        <tr>
+          <td>onBeforeShow(showFunction)</td>
+          <td>transitioned element</td>
+          <td>Callback right before the show transition should start. The showFunction parameter has to be called inside the callback to trigger the transition show</td>
+        </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>transitioned element</td>
+          <td>Callback once the show transition has finished.</td>
         </tr>
         <tr>
           <td>onHide</td>
           <td>transitioned element</td>
-          <td>Callback on each transition that changes visibility to hidden</td>
+          <td>Callback on each transition that changes visibility to hidden. Returning <code>false</code> from this callback will cancel the transition from hiding.</td>
+        </tr>
+        <tr>
+          <td>onBeforeHide(hideFunction)</td>
+          <td>transitioned element</td>
+          <td>Callback right before the hide transition should start. The hideFunction parameter has to be called inside the callback to trigger the transition hide</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>transitioned element</td>
+          <td>Callback once the transition hide has finished.</td>
         </tr>
         <tr>
           <td>onStart</td>
@@ -804,22 +824,22 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>

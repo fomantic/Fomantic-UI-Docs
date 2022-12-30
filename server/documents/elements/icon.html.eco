@@ -32,11 +32,13 @@ themes      : ['Default']
     <h2 class="ui header">Icon Set</h2>
     <p>An icon set contains an arbitrary number of glyphs</p>
     <div class="ui ignored warning message">
-      Icons serve a very similar function to text in a page. In Semantic icons receive a special tag <code>&lt;i&gt;</code> which allow for an abbreviated markup when sitting along-side text.
+      Icons serve a very similar function to text in a page. In Fomantic, icons receive a special tag <code>&lt;i&gt;</code> which allow for an abbreviated markup when sitting along-side text.
     </div>
 
     <div class="ui ignored message">Fomantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.15.4</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
-
+    <div class="ui ignored info message">
+        You can reduce your custom generated CSS by adjusting the <code>@icons-map</code>,<code>@icons-outline-map</code>, <code>@icons-brand-map</code>, ... variables in your themes <code>icon.variables</code> file to only the icons you need.
+    </div>
     <div class="icon example">
       <h4 class="ui header">Accessibility</h4>
       <p>Icons can represent accessibility standards</p>
@@ -191,7 +193,7 @@ themes      : ['Default']
         <div class="column"><i class="caret square up outline icon" data-search-terms="arrow, caret-square-o-up, collapse, triangle, upload"></i>caret square up outline</div>
         <div class="column"><i class="caret up icon" data-search-terms="arrow, collapse, triangle"></i>caret up</div>
         <div class="column"><i class="cart arrow down icon" data-search-terms="download, save, shopping"></i>cart arrow down</div>
-        <div class="column"><i class="chart line icon" data-search-terms="activity, analytics, chart, dashboard, gain, graph, increase, line"></i>chart line</div>
+        <div class="column"><i class="chartline icon" data-search-terms="activity, analytics, chart, dashboard, gain, graph, increase, line"></i>chartline</div>
         <div class="column"><i class="chevron circle down icon" data-search-terms="arrow, download, dropdown, menu, more"></i>chevron circle down</div>
         <div class="column"><i class="chevron circle left icon" data-search-terms="arrow, back, previous"></i>chevron circle left</div>
         <div class="column"><i class="chevron circle right icon" data-search-terms="arrow, forward, next"></i>chevron circle right</div>
@@ -306,7 +308,7 @@ themes      : ['Default']
         <i class="caret square up outline icon"></i>
         <i class="caret up icon"></i>
         <i class="cart arrow down icon"></i>
-        <i class="chart line icon"></i>
+        <i class="chartline icon"></i>
         <i class="chevron circle down icon"></i>
         <i class="chevron circle left icon"></i>
         <i class="chevron circle right icon"></i>
@@ -718,8 +720,8 @@ themes      : ['Default']
         <div class="column"><i class="chart area icon" data-search-terms="analytics, area, chart, graph"></i>chart area</div>
         <div class="column"><i class="chart bar icon" data-search-terms="analytics, bar, chart, graph"></i>chart bar</div>
         <div class="column"><i class="chart bar outline icon" data-search-terms="analytics, bar, chart, graph"></i>chart bar outline</div>
-        <div class="column"><i class="chart line icon" data-search-terms="activity, analytics, chart, dashboard, gain, graph, increase, line"></i>chart line</div>
         <div class="column"><i class="chart pie icon" data-search-terms="analytics, chart, diagram, graph, pie"></i>chart pie</div>
+        <div class="column"><i class="chartline icon" data-search-terms="activity, analytics, chart, dashboard, gain, graph, increase, line"></i>chartline</div>
         <div class="column"><i class="city icon" data-search-terms="buildings, busy, skyscrapers, urban, windows"></i>city</div>
         <div class="column"><i class="clipboard icon" data-search-terms="copy, notes, paste, record"></i>clipboard</div>
         <div class="column"><i class="clipboard outline icon" data-search-terms="copy, notes, paste, record"></i>clipboard outline</div>
@@ -818,8 +820,8 @@ themes      : ['Default']
         <i class="chart area icon"></i>
         <i class="chart bar icon"></i>
         <i class="chart bar outline icon"></i>
-        <i class="chart line icon"></i>
         <i class="chart pie icon"></i>
+        <i class="chartline icon"></i>
         <i class="city icon"></i>
         <i class="clipboard icon"></i>
         <i class="clipboard outline icon"></i>
@@ -2196,8 +2198,8 @@ themes      : ['Default']
         <div class="column"><i class="balance scale right icon" data-search-terms="justice, legal, measure, unbalanced, weight"></i>balance scale right</div>
         <div class="column"><i class="book icon" data-search-terms="diary, documentation, journal, library, read"></i>book</div>
         <div class="column"><i class="cash register icon" data-search-terms="buy, cha-ching, change, checkout, commerce, leaerboard, machine, pay, payment, purchase, store"></i>cash register</div>
-        <div class="column"><i class="chart line icon" data-search-terms="activity, analytics, chart, dashboard, gain, graph, increase, line"></i>chart line</div>
         <div class="column"><i class="chart pie icon" data-search-terms="analytics, chart, diagram, graph, pie"></i>chart pie</div>
+        <div class="column"><i class="chartline icon" data-search-terms="activity, analytics, chart, dashboard, gain, graph, increase, line"></i>chartline</div>
         <div class="column"><i class="coins icon" data-search-terms="currency, dime, financial, gold, money, penny"></i>coins</div>
         <div class="column"><i class="comment dollar icon" data-search-terms="bubble, chat, commenting, conversation, feedback, message, money, note, notification, pay, sms, speech, spend, texting, transfer"></i>comment dollar</div>
         <div class="column"><i class="comments dollar icon" data-search-terms="bubble, chat, commenting, conversation, feedback, message, money, note, notification, pay, sms, speech, spend, texting, transfer"></i>comments dollar</div>
@@ -2227,8 +2229,8 @@ themes      : ['Default']
         <i class="balance scale right icon"></i>
         <i class="book icon"></i>
         <i class="cash register icon"></i>
-        <i class="chart line icon"></i>
         <i class="chart pie icon"></i>
+        <i class="chartline icon"></i>
         <i class="coins icon"></i>
         <i class="comment dollar icon"></i>
         <i class="comments dollar icon"></i>
@@ -7059,7 +7061,7 @@ themes      : ['Default']
         <i class="zhihu icon"></i>
       </div>
     </div>
-    
+
   </div>
 
   <div class="ui tab" data-tab="definition">

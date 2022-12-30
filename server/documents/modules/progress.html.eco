@@ -124,6 +124,14 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </div>
         <div class="label">Tickets</div>
       </div>
+      <div class="code" data-type="javascript">
+        $('.ui.multiple.progress').progress({
+          text: {
+            percent : '{bar} {percent}%',
+            bars: ['WIP', 'Review', 'Hold', 'Merged']
+          }
+        });
+      </div>
     </div>
 
     <h2 class="ui dividing header">States</h2>
@@ -1108,22 +1116,22 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>

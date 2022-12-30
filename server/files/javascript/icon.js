@@ -64,6 +64,7 @@ semantic.icon.ready = function() {
     $iconSearch
       .search({
         type          : 'category',
+        fullTextSearch: true,
         minCharacters : 1,
         maxResults    : 10,
         cache         : false,
@@ -92,8 +93,8 @@ semantic.icon.ready = function() {
           var
             $search = $('iconSearch .input > input')
           ;
-          $search.blur();
-          $('body').toast({
+          $search.trigger('blur');
+          $.toast({
             class: 'inverted',
             compact: false,
             showIcon: 'copy',
@@ -108,20 +109,19 @@ semantic.icon.ready = function() {
   }
 
   // only show icon category when visible on screen
-  $(document).scroll(checkIconVisibility);
-  $(window).resize(checkIconVisibility);
+  $(document).on('scroll', checkIconVisibility);
+  $(window).on('resize', checkIconVisibility);
 
   checkIconVisibility();
-  
-  
+
+
   // check if icon list tab is selected (if so run the check visibility function)
   var tab = $('.ui.two.item.stackable.tabs > a').get(0);
-  console.log(tab);
-  
+
   var observer = new MutationObserver(function() {
     checkIconVisibility();
   });
-  
+
   observer.observe(tab, {
     attributes: true,
     attributeFilter: ['class'],

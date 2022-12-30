@@ -863,7 +863,7 @@ themes      : ['Default']
         <tr>
           <td>closable</td>
           <td>true</td>
-          <td>When using <code>on: 'click'</code> specifies whether clicking the page should close the popup</td>
+          <td>Whether popup should hide when clicking on the page, <code>auto</code> only hides for popups without <code>on: 'hover'</code></td>
         </tr>
         <tr>
           <td>addTouchEvents</td>
@@ -1089,7 +1089,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>verbose</td>
-          <td>true</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>
@@ -1100,7 +1100,7 @@ themes      : ['Default']
               invalidPosition : 'The position you specified is not a valid position',
               cannotPlace     : 'Popup does not fit within the boundaries of the viewport',
               method          : 'The method you called is not defined.',
-              noTransition    : 'This module requires ui transitions https://github.com/Semantic-Org/UI-Transition',
+              noElement       : 'This module requires ui {element}',
               notFound        : 'The target or popup you specified does not exist on the page'
             }
             </div>

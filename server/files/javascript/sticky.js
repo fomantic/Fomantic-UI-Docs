@@ -71,7 +71,7 @@ $(document)
   .ready(semantic.sticky.ready)
 ;
 
-$(window).load(function() {
+$(window).on('load',function() {
   $('.main.container .sticky.example .sticky').sticky('refresh');
   $('.main.container .pushing.example .sticky').sticky('refresh');
 });

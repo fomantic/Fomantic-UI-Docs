@@ -20,12 +20,12 @@ type        : 'Introduction'
 
     <p>To build all files:</p>
     <div class="code" data-type="bash">
-      gulp build
+      npx gulp build
     </div>
 
     <p>To watch for changes</p>
     <div class="code" data-type="bash">
-      gulp watch
+      npx gulp watch
     </div>
   </div>
   <div class="no example">
@@ -33,7 +33,7 @@ type        : 'Introduction'
     <p>Fomantic UI uses Gulp for several reasons:</p>
     <div class="ui large bulleted list">
       <div class="item">Process LESS files with <a href="/usage/theming.html">theming variables</a></div>
-      <div class="item">Add vendor prefixes for <a href="https://github.com/fomantic/Fomantic-UI/blob/master/tasks/config/project/tasks.js#L96">supported browsers</a> with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
+      <div class="item">Add vendor prefixes for <a href="https://github.com/fomantic/Fomantic-UI/blob/master/README.md#-browser-support">supported browsers</a> with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
       <div class="item">Watch file changes and rebuild the necessary files when adjusting themes</div>
       <div class="item">Automatically process asset paths, so that minified and concatenated releases can exist in different directories</div>
       <div class="item">Allow custom builds with only the required components for your site</div>
@@ -309,6 +309,108 @@ type        : 'Introduction'
   </div>
 
   <div class="no example">
+    <h4>colors.less <div class="ui black label">New in 2.7.0</div></h4>
+    <p>You can modify/define the global color palette entirely by adjusting a single LESS Map <code>@colors</code> in a custom <code>colors.less</code> file.</p>
+    <p>Each color consists of a predefined set of properties used in all components. You can define whatever color name you want.</p>
+    <div class="code" data-type="less" data-title="src/themes/default/globals/colors.less">
+// This example would only provide two custom colors "batman", "spiderman"
+// Your custom compiled build will contain all colorable components
+// like "ui batman button" or "ui spiderman label"
+    @colors: {
+      @batman: {
+        color          : @white;
+        light          : @grey;
+        border         : @grey;
+        background     : @black;
+        header         : #222222;
+        boxShadow      : @greyBoxShadow;
+        boxFloatShadow : @greyBoxFloatingShadow;
+        text           : @white;
+        lightText      : @white;
+        hoverText      : @grey;
+        focus          : @white;
+        lightFocus     : @grey;
+        down           : @white;
+        lightDown      : @grey;
+        active         : #888866;
+        lightActive    : #888822;
+        shadow         : @greyTextShadow;
+        lightShadow    : @lightGreyTextShadow;
+        hover          : @grey;
+        lightHover     : @grey;
+        ribbon         : @greyRibbonShadow;
+        invertedRibbon : @greyInvertedRibbonShadow;
+        tertiary       : @greyTertiaryColor;
+        tertiaryHover  : @greyTertiaryColorHover;
+        tertiaryFocus  : @greyTertiaryColorFocus;
+        tertiaryActive : @greyTertiaryColorActive;
+        bright         : @white;
+        brightHover    : @grey;
+        isDark         : false;     // 'true' will adjust light colors on non inverted variants
+        isVeryDark     : false;     // 'true' will use black/white in certain color/background situations
+      };
+      @spiderman: {
+        color          : @red;
+        light          : @lightRed;
+        border         : @lightRed;
+        ... // and all the other properties as above
+      };
+    };
+    </div>
+
+    <p>The colors.less file also contains another central LESS Map <code>@formStates</code>for defining form states. Also here, you can define any form state name and its colors as you like.</p>
+    <div class="code" data-type="less" data-title="src/themes/default/globals/colors.less">
+
+// Your final custom compiled build will offer form components like
+// "ui excited input" or ".ui.form > .excited.message"
+    @formStates: {
+      @excited: {
+        color: #880000;
+        background: ffcccc;
+        borderColor: @red;
+        borderRadius: 10px;
+        boxShadow: @inputErrorBoxShadow;
+        cornerLabelColor: @white;
+        labelBackground: @lightRed;
+        dropdownLabelColor: @red;
+        dropdownLabelBackground: @lightRed;
+        dropdownHoverBackground: @lightRed;
+        dropdownSelectedBackground: @lightRed;
+        dropdownActiveBackground: @lightRed;
+        inputAutoFillBackground: @lightRed;
+        inputAutoFillBorderColor: @red
+        inputFocusBackground: @lightRed;
+        inputFocusColor: @red;
+        inputFocusBorderColor: #440000;
+        inputFocusBoxShadow: @inputErrorFocusBoxShadow;
+        inputPlaceholderColor: #660000;
+        inputPlaceholderFocusColor: #550000;
+        transparentBackground: @white;
+        transparentColor: @red;
+      };
+    };
+
+    </div>
+
+  </div>
+
+  <div class="no example">
+    <h4>variation.variables <div class="ui black label">New in 2.8.1</div></h4>
+    <p>You can disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size</p>
+    <p>Most of the components also have a separate variable to decide which components should be rendered for which colors of your global color palette of colors.less or which sizes should be rendered.</p>
+
+    <div class="code" data-type="less" data-title="src/themes/default/globals/variation.variables">
+    // The defaults enable everything
+    // In a custom theme you could only disable/adjust the variables you don't need in your own {component}.variables
+    @variationButtonTertiary: false;          // don't compile tertiary button styles
+    @variationIconColors: red, green, batman; // only compile red and green as icon color options
+    @variationImageSizes: small, huge;        // only compile small and huge image sizes
+    @variationSegmentColors: false;           // don't compile any segment color styles
+    @variationBreadcrumbSizes: false;         // don't compile any breadcrumb size styles
+    </div>
+  </div>
+
+  <div class="no example">
     <h4>Excluding components from main css/js file</h4>
     <p>By default, all components listed in semantic.json are added to semantic.css and semantic.js on build, but sometimes you don't need a component to be included on every page. To keep the file size of your main assets down, it's better to separate these components and reference them individually in your HTML.</p>
     <p>To make this work, add these components to your semantic.json as "individuals" (see above example). Then the css/js files will still be generated/updated as usual under dist/components.</p>
@@ -331,7 +433,7 @@ type        : 'Introduction'
       <div class="ui teal horizontal label">New in 2.2</div>
     </h4>
     <p>We've added a new setting to <code>semantic.json</code> in 2.2 to help make working with a CLI, or other automated deployments more streamlined.</p>
-    <p>Specifying <code>autoInstall: true</code> in an environments <code>semantic.json</code> configuration will prevent any user prompting when running <code>npm install</code> allowing for automated deployment.</p>
+    <p>Specifying <code>autoInstall: true</code> in an environments <code>semantic.json</code> configuration will prevent any user prompting when running <code>npx gulp install</code> allowing for automated deployment.</p>
   </div>
 
 </div>

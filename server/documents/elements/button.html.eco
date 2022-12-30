@@ -13,7 +13,6 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
 <script src="/javascript/button.js"></script>
-<script src="/javascript/library/state.js"></script>
 
 <%- @partial('header') %>
 
@@ -30,7 +29,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   </div>
   <div class="another example">
     <div class="ui ignored warning message">
-      Although any tag can be used for a button, it will only be <a href="http://webaim.org/techniques/keyboard/tabindex">keyboard focusable</a> if you use a <code>&#x3C;button&#x3E;</code> tag or you add the property <code>tabindex="0"</code>. Keyboard accessible buttons will preserve focus styles after click, which may be visually jarring.</p>
+      Although any tag can be used for a button, it will only be <a href="https://webaim.org/techniques/keyboard/tabindex">keyboard focusable</a> if you use a <code>&#x3C;button&#x3E;</code> tag or you add the property <code>tabindex="0"</code>. Keyboard accessible buttons will preserve focus styles after click, which may be visually jarring.</p>
     </div>
     <button class="ui button">
       Button
@@ -149,6 +148,10 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <button class="ui right labeled icon button">
       <i class="right arrow icon"></i>
       Next
+    </button>
+    <button class="ui labeled icon button">
+      <i class="loading spinner icon"></i>
+      Loading
     </button>
   </div>
 
@@ -689,6 +692,66 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
       <button class="ui button">One</button>
       <div class="or"></div>
       <button class="ui button">Two</button>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Wrapping Buttons <span class="ui black label">New in 2.9.0</span></h4>
+    <p>Groups buttons can automatically wrap sharing the overall available width</p>
+    <div class="ui wrapped wrapping buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+      <button class="ui button">Four</button>
+      <button class="ui button">Five</button>
+      <button class="ui button">Six</button>
+      <button class="ui button">Seven</button>
+      <button class="ui button">Eight</button>
+      <button class="ui button">Nine</button>
+      <button class="ui button">Ten</button>
+      <button class="ui button">Eleven</button>
+      <button class="ui button">Twelve</button>
+      <button class="ui button">Thirteen</button>
+      <button class="ui button">Fourteen</button>
+      <button class="ui button">Fifteen</button>
+      <button class="ui button">Sixteen</button>
+      <button class="ui button">Seventeen</button>
+      <button class="ui button">Eighteen</button>
+      <button class="ui button">Nineteen</button>
+      <button class="ui button">Twenty</button>
+    </div>
+    <div class="ui ignored info message">
+        There exists an optional <code>wrapped</code> helper class which should be set to the button group when it's known if a button group is actually wrapped, which will adjust some border-radius. As it is not possible to detect a wrapping child automatically via pure CSS, you should use that helper class whenever appropriate.
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Spaced Buttons <span class="ui black label">New in 2.9.0</span></h4>
+    <p>Buttons inside groups can automatically get a margin so they dont appear attached together, especially when used together with <a href="#wrapping-buttons">wrapping</a> on responsive layouts</p>
+    <div class="ui wrapping spaced buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+      <button class="ui button">Four</button>
+      <button class="ui button">Five</button>
+      <button class="ui button">Six</button>
+      <button class="ui button">Seven</button>
+      <button class="ui button">Eight</button>
+      <button class="ui button">Nine</button>
+      <button class="ui button">Ten</button>
+      <button class="ui button">Eleven</button>
+      <button class="ui button">Twelve</button>
+      <button class="ui button">Thirteen</button>
+      <button class="ui button">Fourteen</button>
+      <button class="ui button">Fifteen</button>
+      <button class="ui button">Sixteen</button>
+      <button class="ui button">Seventeen</button>
+      <button class="ui button">Eighteen</button>
+      <button class="ui button">Nineteen</button>
+      <button class="ui button">Twenty</button>
+    </div>
+    <div class="ui ignored info message">
+        You can use <code>compact wrapping</code> if you need wrapping buttons which should not share the same width on each wrapped row. Especially for spaced buttons.
     </div>
   </div>
 

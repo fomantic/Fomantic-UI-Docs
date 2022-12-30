@@ -264,7 +264,8 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   <div class="another example">
     <div class="evaluated code" data-type="javascript">
     $('.special.cards .image').dimmer({
-      on: 'hover'
+    // As hover is not working on mobile, you might use click on those devices as fallback
+      on: 'ontouchstart' in document.documentElement ? 'click' : 'hover'
     });
     </div>
     <div class="ui special cards">
@@ -401,7 +402,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
             Elliot Fu is a film-maker from New York.
           </div>
         </div>
-        <div class="ui bottom attached button">
+        <div class="ui button">
           <i class="add icon"></i>
           Add Friend
         </div>
@@ -413,7 +414,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
             Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
           </div>
         </div>
-        <div class="ui bottom attached button">
+        <div class="ui button">
           <i class="add icon"></i>
           Add Friend
         </div>
@@ -425,7 +426,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
             Jenny is a student studying Media Management at the New School
           </div>
         </div>
-        <div class="ui bottom attached button">
+        <div class="ui button">
           <i class="add icon"></i>
           Add Friend
         </div>
@@ -723,7 +724,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   <div class="example">
     <h4 class="ui header">Link Card</h4>
     <p>A card can be formatted so that the entire contents link to another page</p>
-    <a class="ui card" href="http://www.dog.com">
+    <a class="ui card" href="https://www.dog.com">
       <div class="content">
         <div class="header">Cute Dog</div>
         <div class="meta">
@@ -889,6 +890,87 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     <h4 class="ui header">Colored</h4>
     <p>A card can specify a color</p>
     <div class="ui four cards">
+      <a class="primary card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="secondary card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="red card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="orange card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="yellow card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="olive card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="green card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="teal card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="blue card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="violet card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="purple card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="pink card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="brown card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="grey card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="black card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Basic <div class="ui small black label">New in 2.9.0</div></h4>
+    <p>A basic card does not have a border and also supports full color background</p>
+    <div class="ui four basic cards">
       <a class="primary card">
         <div class="image">
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">

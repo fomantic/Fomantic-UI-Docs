@@ -619,6 +619,9 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
   <div class="example">
     <h4 class="ui header">Marked<div class="ui black label">New in 2.8</div></h4>
     <p>A cell or row can be marked by a colored left or right border</p>
+    <div class="ui ignored warning message">
+      <p>Since 2.9.0 you have to follow the class order: First color name, then <code>marked</code>. This is to support <a href="#colored-and-marked">colored and marked</a> cells</p>
+    </div>
     <table class="ui celled table">
       <thead>
         <tr>
@@ -629,26 +632,47 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </thead>
       <tbody>
         <tr>
-          <td class="right marked blue">No Name Specified</td>
-          <td class="left marked red">Unknown</td>
+          <td class="right blue marked blue">No Name Specified</td>
+          <td class="left red marked">Unknown</td>
           <td>None</td>
         </tr>
-        <tr class="left marked green">
+        <tr class="left green marked">
           <td>Jimmy</td>
           <td><i class="microphone icon"></i> Recording session</td>
           <td>None</td>
         </tr>
         <tr>
           <td>Jamie</td>
-          <td class="right marked orange">Unknown</td>
+          <td class="right orange marked">Unknown</td>
           <td><i class="child icon"></i> Baby Party</td>
         </tr>
-        <tr class="right marked purple">
+        <tr class="right purple marked">
           <td>Jill</td>
           <td>Unknown</td>
           <td>Vacation</td>
         </tr>
         </tbody>
+    </table>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Colored and Marked<div class="ui black label">New in 2.9</div></h4>
+    <p>If you need colored cells which are also marked at the same time in a different color, you have to follow a specific class order and add the <code>colored</code> class to the cell color.<br>For example <code>red colored right blue marked</code> .</p>
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="red colored right blue marked">No Name Specified</td>
+          <td class="green colored left red marked">Unknown</td>
+          <td class="yellow colored right purple marked">None</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
@@ -2124,5 +2148,375 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
         <th></th>
       </tfoot>
     </table>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Scrolling<div class="ui black label">New in 2.9</div></h4>
+    <p>A table body can scroll vertically.</p>
+    <div class="ui ignored warning message">
+        Some table variants like <a href="#column-width">column width</a> or <a href="#single-line">single line</a> do not work with a scrolling table.
+        If you need such combinations use a <a href="#stuck">stuck table</a> instead.
+    </div>
+    <table class="ui unstackable celled scrolling table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Job</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>James</td>
+        <td>24</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>26</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Elyse</td>
+        <td>24</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Daphne</td>
+        <td>24</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Zoe</td>
+        <td>26</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Kirk</td>
+        <td>24</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Doug</td>
+        <td>24</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Francis</td>
+        <td>26</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Claire</td>
+        <td>24</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Thomas</td>
+        <td>27</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Clint</td>
+        <td>31</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Alison</td>
+        <td>21</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Rachel</td>
+        <td>19</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Dave</td>
+        <td>23</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Oliver</td>
+        <td>29</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Sue</td>
+        <td>23</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Jennifer</td>
+        <td>22</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Zak</td>
+        <td>27</td>
+        <td>Designer</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>18 Entries</td>
+        <td>Average age: 25</td>
+        <td>2 Job-Types</td>
+      </tr>
+    </tfoot>
+    </table>
+  </div>
+
+  <div class="another example">
+    <p>A scrolling table optionally supports predefined heights <code>long</code>, <code>very long</code>, <code>short</code> and <code>very short</code></p>
+    <table class="ui unstackable celled long scrolling table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Job</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>James</td>
+        <td>24</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>26</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Elyse</td>
+        <td>24</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Daphne</td>
+        <td>24</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Zoe</td>
+        <td>26</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Kirk</td>
+        <td>24</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Doug</td>
+        <td>24</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Francis</td>
+        <td>26</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Claire</td>
+        <td>24</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Thomas</td>
+        <td>27</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Clint</td>
+        <td>31</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Alison</td>
+        <td>21</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Rachel</td>
+        <td>19</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Dave</td>
+        <td>23</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Oliver</td>
+        <td>29</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Sue</td>
+        <td>23</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Jennifer</td>
+        <td>22</td>
+        <td>Engineer</td>
+      </tr>
+      <tr>
+        <td>Zak</td>
+        <td>27</td>
+        <td>Designer</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>18 Entries</td>
+        <td>Average age: 25</td>
+        <td>2 Job-Types</td>
+      </tr>
+    </tfoot>
+    </table>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Stuck<div class="ui black label">New in 2.9</div></h4>
+    <p>A table can scroll horizontally having its <code>head</code>, <code>foot</code>, <code>first</code> or <code>last</code> column keep staying stuck.</p>
+    <p>You can freely stick any combination like <code>head first stuck</code>, <code>foot first last stuck</code>, <code>head foot first stuck</code>, <code>first last stuck</code>, etc.</p>
+    <div class="ui ignored info message">
+    A stuck table possibly needs to be wrapped into an overflowing container like <a href="/elements/container.html#scrolling">scrolling container</a> or <a href="/elements/segment.html#scrolling">scrolling segment</a> when horizontal scrolling is not needed.<br>
+    If you don't want to have an extra wrapper, you can use <code>overflowing stuck table</code>. However, this only works if your overall table columns exceed available width.
+    </div>
+    <div class="ui ignored warning message">
+        A stuck table needs a modern browser with <a href="https://caniuse.com/?search=position%20sticky">position:sticky support</a>, so does not work in IE11 or legacy Edge
+    </div>
+    <div class="ui short scrolling container">
+      <table class="ui first last head foot stuck unstackable celled table">
+        <thead>
+         <tr>
+           <th>Name</th>
+           <th>Age</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Job</th>
+           <th>Summary</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td>James</td>
+           <td>24</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Accepted</td>
+         </tr>
+         <tr>
+           <td>Jill</td>
+           <td>26</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Accepted</td>
+         </tr>
+         <tr>
+           <td>Elyse</td>
+           <td>24</td>
+           <td>Designer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Pending</td>
+         </tr>
+         <tr>
+           <td>Daphne</td>
+           <td>24</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Accepted</td>
+         </tr>
+         <tr>
+           <td>Zoe</td>
+           <td>26</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Accepted</td>
+         </tr>
+         <tr>
+           <td>Kirk</td>
+           <td>24</td>
+           <td>Designer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Engineer</td>
+           <td>Pending</td>
+         </tr>
+        </tbody>
+        <tfoot>
+         <tr>
+           <td>Names:6</td>
+           <td>av.25</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>Jobs : 2</td>
+           <td>2 Pending</td>
+         </tr>
+        </tfoot>
+      </table>
+    </div>
   </div>
 </div>

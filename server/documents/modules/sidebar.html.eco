@@ -155,6 +155,12 @@ themes      : ['Default']
           &lt;/div&gt;
         &lt;/body&gt;
       </div>
+      <div class="ui message">
+        <ul class="ui list">
+          <li>The <code>pusher</code> is the element that will be pushed away by the sidebar and should contain your site content.</li>
+          <li>If your pusher contains overflowing content, you might use <code>overflowing pusher</code> to prevent possible undesired side effects (for example when using <code>native sticky</code> somewhere)</li>
+        </ul>
+      </div>
     </div>
     <div class="no example" data-class="vertical menu" data-use-content="true">
       <h4 class="ui header">Using with Menu</h4>
@@ -589,6 +595,11 @@ themes      : ['Default']
           <td>Whether to dim page contents when sidebar is visible</td>
         </tr>
         <tr>
+          <td>blurring</td>
+          <td>false</td>
+          <td>If dimmer should blur background</td>
+        </tr>
+        <tr>
           <td>scrollLock</td>
           <td>false</td>
           <td>Whether to lock page scroll when sidebar is visible</td>
@@ -652,21 +663,6 @@ themes      : ['Default']
           </td>
           <td>Default transitions for each direction and screen size, used with <code>transition: auto</code></td>
         </tr>
-        <tr>
-          <td>useLegacy</td>
-          <td>false</td>
-          <td>Whether Javascript animations should be used. Defaults to <code>false</code>. Setting to <code>auto</code> will use legacy animations only for browsers that do not support CSS transforms</td>
-        </tr>
-        <tr>
-          <td>duration</td>
-          <td>500</td>
-          <td>Duration of sidebar animation when using legacy Javascript animation</td>
-        </tr>
-        <tr>
-          <td>easing</td>
-          <td>easeInOutQuint</td>
-          <td>Easing to use when using legacy Javascript animation</td>
-        </tr>
       </tbody>
     </table>
 
@@ -686,12 +682,12 @@ themes      : ['Default']
         <tr>
           <td>onVisible</td>
           <td>Sidebar</td>
-          <td>Is called when a sidebar begins animating in.</td>
+          <td>Is called when a sidebar has finished animating in.</td>
         </tr>
         <tr>
           <td>onShow</td>
           <td>Sidebar</td>
-          <td>Is called when a sidebar has finished animating in.</td>
+          <td>Is called when a sidebar begins animating in. Returning <code>false</code> from this callback will cancel the sidebar from showing.</td>
         </tr>
         <tr>
           <td>onChange</td>
@@ -701,7 +697,7 @@ themes      : ['Default']
         <tr>
           <td>onHide</td>
           <td>Sidebar</td>
-          <td>Is called before a sidebar begins to animate out.</td>
+          <td>Is called before a sidebar begins to animate out. Returning <code>false</code> from this callback will cancel the sidebar from hiding.</td>
         </tr>
         <tr>
           <td>onHidden</td>
@@ -799,22 +795,22 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>

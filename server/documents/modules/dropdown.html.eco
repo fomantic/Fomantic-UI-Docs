@@ -941,7 +941,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="header">
             Search Issues
           </div>
-          <div class="ui left icon input">
+          <div class="ui left search icon input">
             <i class="search icon"></i>
             <input type="text" name="search" placeholder="Search...">
           </div>
@@ -1016,7 +1016,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="header">
             Search Issues
           </div>
-          <div class="ui left icon input">
+          <div class="ui left search icon input">
             <i class="search icon"></i>
             <input type="text" name="search" placeholder="Search...">
           </div>
@@ -1079,6 +1079,35 @@ themes      : ['Default', 'GitHub', 'Material']
             Justen Kitsune
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="actionable example">
+      <h4 class="ui header">Actionable <div class="ui black label">New in 2.9.0</div></h4>
+      <p>A dropdown menu can contain an actionable item which performs a custom callback once clicked instead of being selected itself</p>
+      <div class="ui selection dropdown">
+        <input type="hidden" name="">
+        <i class="dropdown icon"></i>
+        <div class="default text">Open me and select actionable items</div>
+        <div class="menu">
+          <div class="actionable item" data-value="abcdef">SECRET: Select me</div>
+          <div class="actionable item" data-value="21">TRUTH: Select me</div>
+          <div class="actionable item" data-value="0==1">LIE: Select me</div>
+          <div class="item">I am a selectable entry only</div>
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.actionable.example .ui.dropdown')
+          .dropdown({
+            collapseOnActionable: false,
+            onActionable: function(value, text, $selected) {
+              var type=text.split(":")[0];
+              $.toast({
+                title: type + ' Reveal',
+                message:'You need to know: '+ value
+              });
+            }
+          });
       </div>
     </div>
 
@@ -1681,6 +1710,44 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
+    <div class="stuck example">
+      <h4 class="ui header">Stuck User Additions <span class="ui black label">New in 2.9.0</span></h4>
+      <p>While using <code>allowAdditions: true</code> together with <code>hideAdditions: false</code>, the first line indicating "add:" with the user addition may not be correctly displayed, depending on the container size and the distance between topmost visible item and menu's top item.
+
+      <p>You can stick this addition line to the top of the menu by providing the additional <code>stuck</code> class.</p>
+
+      <div class="ui ignored warning message">
+        A stuck user additions dropdown needs a modern browser with <a href="https://caniuse.com/?search=position%20sticky">position:sticky support</a>, so does not work in IE11 or legacy Edge
+      </div>
+
+      <div class="ui sub header">Single</div>
+      <select name="skills" class="ui fluid search dropdown">
+        <%- @partial('examples/single/skill-menu') %>
+      </select>
+
+      <div class="ui sub header">Multiple</div>
+      <div class="ui fluid multiple search selection dropdown">
+        <input name="tags" type="hidden" />
+        <i class="dropdown icon"></i>
+        <div class="default text">Skills</div>
+        <div class="menu">
+          <%- @partial('examples/single/preset-menu') %>
+        </div>
+      </div>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.stuck.example .ui.dropdown')
+          .dropdown({
+            allowAdditions: true,
+            hideAdditions: false,
+            className: {
+              addition: 'stuck addition'
+            }
+          })
+        ;
+      </div>
+    </div>
+
     <div class="no label example">
       <h4 class="ui header">Text Labels</h4>
       <p>Sometimes multiselect include options which are long and would appear awkwardly as labels. Setting <code>useLabels: false</code> will display a selected count, and allow reselection directly from the menu.</p>
@@ -1857,7 +1924,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="ui form">
         <div class="two fields">
           <div class="field">
-            <label>Favorite Animal</label>
+            <label>Github Repositories</label>
             <div class="ui search selection dropdown">
               <input type="hidden">
               <i class="dropdown icon"></i>
@@ -1866,7 +1933,7 @@ themes      : ['Default', 'GitHub', 'Material']
             </div>
           </div>
           <div class="field">
-            <label>Favorite Animals</label>
+            <label>Github Repositories</label>
             <div class="ui multiple search selection dropdown">
               <input type="hidden">
               <i class="dropdown icon"></i>
@@ -1882,7 +1949,11 @@ themes      : ['Default', 'GitHub', 'Material']
           .dropdown({
             apiSettings: {
               // this url parses query server side and returns filtered results
-              url: '//api.semantic-ui.com/tags/{query}'
+              url: 'https://api.github.com/search/repositories?q={query}'
+            },
+            fields: {
+            // the remote api has a different structure than expected, which we can adjust
+              remoteValues : 'items'
             },
           })
         ;
@@ -1989,7 +2060,7 @@ themes      : ['Default', 'GitHub', 'Material']
           .dropdown({
             apiSettings: {
               // this url just returns a list of tags (with API response expected above)
-              url: '//api.semantic-ui.com/tags/'
+              url: '/animals.json'
             },
             filterRemoteData: true
           })
@@ -3057,12 +3128,21 @@ themes      : ['Default', 'GitHub', 'Material']
     $('.your.element')
       .dropdown('behavior name', argumentOne, argumentTwo)
     ;
+
+    // For example using the below mentioned 'clear(preventChangeTrigger)'
+    $('.ui.dropdown')
+      .dropdown('clear', true)
+    ;
+    // Using the same but omit the default value for the preventChangeTrigger argument (which is false)
+    $('.ui.dropdown')
+      .dropdown('clear')
+    ;
     </div>
 
     <table class="ui definition sortable celled table segment">
       <thead>
         <tr>
-          <th>Behavior</th>
+          <th>Behavior (arguments)</th>
           <th>Description</th>
         </tr>
       </thead>
@@ -3072,7 +3152,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Recreates dropdown menu from passed values. <code>values</code> should be an object with the following structure: <code>{ values: [ {value, text, name} ] }</code>.</td>
         </tr>
           <td>change values (values)</td>
-          <td>Changes dropdown to use new values</td>
+          <td>Changes dropdown to use new values. <code>values</code> structure: <code>[ {value, text, name} ]</code>.</td>
         </tr>
         <tr>
           <td>refresh</td>
@@ -3119,8 +3199,8 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Saves current text and value as new defaults (for use with restore)</td>
         </tr>
         <tr>
-          <td>set selected(value,$selectedItem,preventChangeTrigger)</td>
-          <td>Sets value as selected. <code>$selectedItem</code> is used internally and can be ignored. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event</td>
+          <td>set selected(value,preventChangeTrigger)</td>
+          <td>Sets value as selected. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event (default: <code>false</code>).</td>
         </tr>
         <tr>
           <td>remove selected(value)</td>
@@ -3139,8 +3219,8 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Sets dropdown text to a value</td>
         </tr>
         <tr>
-          <td>set value (value,text,$selected,preventChangeTrigger)</td>
-          <td>Sets dropdown input to value (does not update display state). <code>text</code> and <code>$selected</code> are used internally and can be ignored. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event</td>
+          <td>set value (value,preventChangeTrigger)</td>
+          <td>Sets dropdown input to value (does not update display state). Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event (default: <code>false</code>).</td>
         </tr>
         <tr>
           <td>get text</td>
@@ -3148,7 +3228,11 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>get value</td>
-          <td>Returns current dropdown input value</td>
+          <td>Returns current dropdown input value. When the dropdown was created out of a <code>select</code> tag, the value will always be an array, otherwise a string (delimited when multiple)</td>
+        </tr>
+        <tr>
+          <td>get values</td>
+          <td>Returns current dropdown input values as array. Useful for <a href="#multiple-selections">multiple selection</a> dropdowns regardless if made out of a div or select</td>
         </tr>
         <tr>
           <td>get item(value)</td>
@@ -3360,6 +3444,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Whether menu items with sub-menus (categories) should be selectable</td>
         </tr>
         <tr>
+          <td>fireOnInit</td>
+          <td>false</td>
+          <td>Whether callbacks should fire when initializing dropdown values</td>
+        </tr>
+        <tr>
           <td>placeholder</td>
           <td>auto</td>
           <td>
@@ -3399,7 +3488,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <thead>
         <tr>
         <th>Setting</th>
-        <th class="eight wide">Default</th>
+        <th class="ten wide">Default</th>
         <th>Description</th>
         </tr>
       </thead>
@@ -3414,19 +3503,22 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>
             <div class="code" data-type="css">
             fields: {
-              remoteValues : 'results',    // grouping for api results
-              values       : 'values',     // grouping for all dropdown values
-              disabled     : 'disabled',   // whether value should be disabled
-              name         : 'name',       // displayed dropdown text
-              value        : 'value',      // actual dropdown value
-              text         : 'text',       // displayed text when selected
-              type         : 'type',       // type of dropdown element
-              image        : 'image',      // optional image path
-              imageClass   : 'imageClass', // optional individual class for image
-              icon         : 'icon',       // optional icon name
-              iconClass    : 'iconClass',  // optional individual class for icon (for example to use flag instead)
-              class        : 'class',      // optional individual class for item/header
-              divider      : 'divider'     // optional divider append for group headers
+              remoteValues         : 'results',    // grouping for api results
+              values               : 'values',     // grouping for all dropdown values
+              disabled             : 'disabled',   // whether value should be disabled
+              name                 : 'name',       // displayed dropdown text
+              description          : 'description', // displayed dropdown description
+              descriptionVertical  : 'descriptionVertical', // whether description should be vertical
+              value                : 'value',      // actual dropdown value
+              text                 : 'text',       // displayed text when selected
+              type                 : 'type',       // type of dropdown element
+              image                : 'image',      // optional image path
+              imageClass           : 'imageClass', // optional individual class for image
+              icon                 : 'icon',       // optional icon name
+              iconClass            : 'iconClass',  // optional individual class for icon (for example to use flag instead)
+              class                : 'class',      // optional individual class for item/header
+              divider              : 'divider'     // optional divider append for group headers
+              actionable           : 'actionable'  // optional actionable item
             }
             </div>
           </td>
@@ -3442,6 +3534,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>true</td>
           <td>When enabled, will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>
         </tr>
+        <tr>
+          <td>throttle</td>
+          <td>200</td>
+          <td>How long to wait after last user input to search remotely</td>
+        </tr>
       </tbody>
     </table>
     </div>
@@ -3456,7 +3553,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <thead>
         <tr>
         <th>Setting</th>
-        <th class="eight wide">Default</th>
+        <th class="seven wide">Default</th>
         <th>Description</th>
         </tr>
       </thead>
@@ -3469,6 +3566,13 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Whether multiselect should use labels. Must be set to true when <code>allowAdditions</code> is <code>true</code></td>
         </tr>
         <tr>
+          <td>delimiter</td>
+          <td>
+           <code>,</code>
+          </td>
+          <td>When multiselect uses normal input tag, the values will be delimited with this character. Also used as the keyboard shortcut while entering multiple values</td>
+        </tr>
+        <tr>
           <td>maxSelections</td>
           <td>
            false
@@ -3478,9 +3582,23 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>glyphWidth</td>
           <td>
-           1.0714
+           1.037
           </td>
           <td>Maximum glyph width, used to calculate search size. This is usually size of a "W" in your font in <code>em</code></td>
+        </tr>
+        <tr>
+          <td>headerDivider</td>
+          <td>
+           true
+          </td>
+          <td>whether option headers should have an additional divider line underneath when converted from <code>&lt;select&gt;&lt;optgroup&gt;</code></td>
+        </tr>
+        <tr>
+          <td>collapseOnActionable</td>
+          <td>
+           true
+          </td>
+          <td>whether the dropdown should collapse upon selection of an actionable item</td>
         </tr>
         <tr>
           <td>label</td>
@@ -3623,7 +3741,6 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="code">
           keys : {
             backspace  : 8,
-            delimiter  : 188, // comma
             deleteKey  : 46,
             enter      : 13,
             escape     : 27,
@@ -3637,7 +3754,7 @@ themes      : ['Default', 'GitHub', 'Material']
           </div>
           </td>
           <td>
-            The <code>keycode</code> used to represent keyboard shortcuts. To avoid issues with some foreign languages, you can pass <code>false</code> for comma delimiter's value
+            The <code>keycode</code> used to represent keyboard shortcuts.
           </td>
         </tr>
         <tr>
@@ -3686,6 +3803,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>onRemove(removedValue, removedText, $removedChoice)</td>
           <td>Dropdown</td>
           <td>Is called after a dropdown selection is removed using a multiple select dropdown, only receives the removed value</td>
+        </tr>
+        <tr>
+          <td>onActionable(value, text, $choice)</td>
+          <td>Dropdown</td>
+          <td>Is called after an actionable item has been selected</td>
         </tr>
         <tr>
           <td>onLabelCreate(value, text)</td>
@@ -3782,7 +3904,10 @@ themes      : ['Default', 'GitHub', 'Material']
               message      : '.message',
               menuIcon     : '.dropdown.icon',
               search       : 'input.search, .menu > .search > input',
-              text         : '> .text:not(.icon)'
+              sizer        : '> span.sizer',
+              text         : '> .text:not(.icon)',
+              unselectable : '.disabled, .filtered',
+              clearIcon    : '> .remove.icon'
             }
             </div>
           </td>
@@ -3816,25 +3941,41 @@ themes      : ['Default', 'GitHub', 'Material']
           <td colspan="2">
             <div class="code">
             className : {
-              active      : 'active',
-              addition    : 'addition',
-              animating   : 'animating',
-              disabled    : 'disabled',
-              dropdown    : 'ui dropdown',
-              filtered    : 'filtered',
-              hidden      : 'hidden transition',
-              item        : 'item',
-              label       : 'ui label',
-              loading     : 'loading',
-              menu        : 'menu',
-              message     : 'message',
-              multiple    : 'multiple',
-              placeholder : 'default',
-              search      : 'search',
-              selected    : 'selected',
-              selection   : 'selection',
-              upward      : 'upward',
-              visible     : 'visible'
+              active              : 'active',
+              addition            : 'addition',
+              animating           : 'animating',
+              description         : 'description',
+              descriptionVertical : 'vertical',
+              disabled            : 'disabled',
+              empty               : 'empty',
+              dropdown            : 'ui dropdown',
+              filtered            : 'filtered',
+              hidden              : 'hidden transition',
+              icon                : 'icon',
+              image               : 'image',
+              item                : 'item',
+              label               : 'ui label',
+              loading             : 'loading',
+              menu                : 'menu',
+              message             : 'message',
+              multiple            : 'multiple',
+              placeholder         : 'default',
+              sizer               : 'sizer',
+              search              : 'search',
+              selected            : 'selected',
+              selection           : 'selection',
+              text                : 'text',
+              upward              : 'upward',
+              leftward            : 'left',
+              visible             : 'visible',
+              clearable           : 'clearable',
+              noselection         : 'noselection',
+              delete              : 'delete',
+              header              : 'header',
+              divider             : 'divider',
+              groupIcon           : '',
+              unfilterable        : 'unfilterable',
+              actionable          : 'actionable'
             }
             </div>
           </td>
@@ -3846,22 +3987,22 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides performance stats in console, and suppresses other debug output.</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>
@@ -3869,11 +4010,15 @@ themes      : ['Default', 'GitHub', 'Material']
           <td colspan="2">
             <div class="code">
             error   : {
-              action       : 'You called a dropdown action that was not defined',
-              alreadySetup : 'Once a select has been initialized behaviors must be called on the created ui dropdown',
-              labels       : 'Allowing user additions currently requires the use of labels.',
-              method       : 'The method you called is not defined.',
-              noTransition : 'This module requires ui transitions <https://github.com/Semantic-Org/UI-Transition>'
+              action          : 'You called a dropdown action that was not defined',
+              alreadySetup    : 'Once a select has been initialized behaviors must be called on the created ui dropdown',
+              labels          : 'Allowing user additions currently requires the use of labels.',
+              missingMultiple : '<select> requires multiple property to be set to correctly preserve multiple values',
+              method          : 'The method you called is not defined.',
+              noAPI           : 'The API module is required to load resources remotely',
+              noStorage       : 'Saving remote data requires session storage',
+              noElement       : 'This module requires ui {element}',
+              noNormalize     : '"ignoreDiacritics" setting will be ignored. Browser does not support String().normalize(). You may consider including <https://cdn.jsdelivr.net/npm/unorm@1.4.1/lib/unorm.min.js> as a polyfill.'
             }
             </div>
           </td>
@@ -3909,7 +4054,7 @@ themes      : ['Default', 'GitHub', 'Material']
       .dropdown({
         preserveHTML : false,
         apiSettings: {
-          url: '//api.github.com/search/repositories?q={query}'
+          url: 'https://api.github.com/search/repositories?q={query}'
         }
       });
     </div>

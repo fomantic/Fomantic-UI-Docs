@@ -35,7 +35,7 @@ standalone : false
             Follow
           </a>
           <a class="twitter-share-button twitter"
-            href="http://twitter.com/share"
+            href="https://twitter.com/share"
             data-text="Fomantic-UI <%= @getVersion() %> is out!"
             data-url="https://fomantic-ui.com"
             data-via="fomanticui">
@@ -43,7 +43,7 @@ standalone : false
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
-          <iframe class="github" src="//ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          <iframe title="github star button" class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@ standalone : false
       <a href="/introduction/getting-started.html" class="ui huge inverted download button">
         Get Started
       </a>
-      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.8</a>
+      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.9</a>
     </div>
   </div>
 </div>
@@ -88,7 +88,7 @@ standalone : false
         <h2 class="ui header">Concise HTML</h2>
         <p>Fomantic UI treats words and classes as exchangeable concepts.</p>
         <p>Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
-        <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="https://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
+        <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="http://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
         </p>
       </div>
       <div class="nine wide column">
@@ -148,7 +148,7 @@ standalone : false
       <div class="seven wide column">
         <h2 class="ui header">Simplified Debugging</h2>
         <p>Performance logging lets you track down bottlenecks without digging through stack traces.</p>
-        <div class="ui info message">Don't have access to development tools right now? Check out <a href="http://t.co/GOUQx8iCyG">this short clip</a>.</a>
+        <div class="ui info message">Don't have access to development tools right now? Check out <a href="https://t.co/GOUQx8iCyG">this short clip</a>.</a>
         </div>
       </div>
       <div class="nine wide column">
@@ -257,10 +257,10 @@ standalone : false
       <div class="column">
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/lab.png">
-          5000+ Commits
+          8000+ Commits
         </h2>
         <p>
-          Fomantic UI and Semantic UI are <b>free open source</b> projects already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
+          Fomantic UI and Semantic UI are <b>free open source</b> projects already used in multiple <a href="https://www.quirky.com" target="_blank">large</a> scale <a href="https://www.newrepublic.com" target="_blank">production</a> environments.
         </p>
         <a href="https://github.com/fomantic/Fomantic-UI/issues" class="ui large button">Visit GitHub</a>
       </div>
@@ -894,7 +894,7 @@ standalone : false
           <div class="ui hidden divider"></div>
           <div class="ui labeled right icon input">
             <div class="ui label">
-              http://
+              https://
             </div>
             <input type="text" placeholder="mysite.com">
             <i class="linkify link icon"></i>

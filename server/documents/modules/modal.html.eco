@@ -332,6 +332,28 @@ themes      : ['Default', 'Material']
     </div>
   </div>
 
+  <div class="ui modal" id="leftactionsexample">
+    <div class="header">Look at the Actions</div>
+    <div class="content">
+      <p>They are aligned to the left</p>
+    </div>
+    <div class="left actions">
+        <button class="ui negative button">Cancel</button>
+        <button class="ui positive button">OK</button>
+    </div>
+  </div>
+
+   <div class="ui modal" id="basicheaderactionsexample">
+     <div class="basic header">Basic Header</div>
+     <div class="content">
+         <p>Basic actions below</p>
+     </div>
+     <div class="basic actions">
+         <button class="ui negative button">Cancel</button>
+         <button class="ui positive button">OK</button>
+     </div>
+   </div>
+
   <div class="ui inverted test modal">
     <div class="header">
       Select a Photo
@@ -522,8 +544,9 @@ themes      : ['Default', 'Material']
       </h4>
       <p>A modal can contain a row of actions</p>
       <div class="ui ignored info message">
-        <p>Close actions are applied by default to all button actions, in addition an <code>onApprove</code> or <code>onDeny</code> callback will fire if the elements match either selector.</p>
+        <p>Close actions are applied by default to all button actions matching the <code>approve</code>, <code>deny</code> or <code>close</code> selector. In addition an <code>onApprove</code> or <code>onDeny</code> callback will only fire if the elements match the <code>approve</code> or <code>deny</code> selector.</p>
         <div class="code" data-type="css">
+          close    : '> .close',
           approve  : '.positive, .approve, .ok',
           deny     : '.negative, .deny, .cancel'
         </div>
@@ -656,6 +679,56 @@ themes      : ['Default', 'Material']
       </div>
       <div class="code" data-demo="true">
           $('#centerexample')
+          .modal('show')
+          ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Left Actions
+          <div class="ui black label">New in 2.9.0</div>
+      </h4>
+      <p>You can also place the action buttons to the left</p>
+      <div class="code" data-type="html">
+          <div class="ui modal">
+            <div class="header">Look at the Actions</div>
+            <div class="content">
+              <p>They are aligned to the left</p>
+            </div>
+              <div class="left actions">
+                  <div class="ui negative button">Cancel</div>
+                  <div class="ui positive button">OK</div>
+              </div>
+          </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#leftactionsexample')
+          .modal('show')
+          ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+          Basic Header and Actions
+          <div class="ui black label">New in 2.9.0</div>
+      </h4>
+      <p>Header and/or Actions can also appear on the same basic background as the content</p>
+      <div class="code" data-type="html">
+          <div class="ui modal">
+              <div class="basic header">Basic Header</div>
+              <div class="content">
+                <p>Basic Actions below</p>
+              </div>
+              <div class="basic actions">
+                  <div class="ui negative button">Cancel</div>
+                  <div class="ui positive button">OK</div>
+              </div>
+          </div>
+      </div>
+      <div class="code" data-demo="true">
+          $('#basicheaderactionsexample')
           .modal('show')
           ;
       </div>
@@ -870,8 +943,14 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Via Javascript properties<span class="ui black label">New in 2.8.8</span></h4>
       <p>You can create temporary modals without the need to create markup on your own. Temporary modals will be removed from the DOM once closed by default if there isn't a custom <code>onHidden</code> callback given.</p>
+      <div class="ui ignored info message">jQuery short notation <code>$.modal()</code> support was added in 2.9.0. If you want this for older FUI versions add
+          <code>
+          $.modal = $.fn.modal;
+          </code><br>
+          The old selector notation <code>$('body').modal()</code> still works as before.
+      </div>
       <div class="code" data-demo="true">
-      $('body').modal({
+      $.modal({
           title: 'Important Notice',
           class: 'mini',
           closeIcon: true,
@@ -1027,26 +1106,26 @@ themes      : ['Default', 'Material']
       Config template modals will be always autoshown, so no manual <code>show</code> is needed)
     </div>
     <div class="code">
-      $('body').modal('alert','hello')
-      $('body').modal('confirm','Are you sure?',function(value){})
-      $('body').modal('prompt','Enter Code', function(value){})
+      $.modal('alert','hello')
+      $.modal('confirm','Are you sure?',function(value){})
+      $.modal('prompt','Enter Code', function(value){})
     </div>
     <div class="no example">
       <h4 class="ui header">Alert</h4>
       <p>Possible parameters are: title, content, handler (in that order to stay nearly identical to vanilla js usage) or a given object <code>{title:'',content:'',handler:function(){}}</code> where as title and content can contain HTML.</p>
       <div class="ui warning message">If you don't trust the content set the global modal setting for <code>preserveHTML</code> to <code>false</code>.</div>
       <div class="code" data-demo="true">
-          $('body').modal('alert','<span class="ui big purple text">hello</span>');
+          $.modal('alert','<span class="ui big purple text">hello</span>');
       </div>
       <div class="code" data-demo="true">
-          $('body').modal('alert','Watch out','This is an important message!');
+          $.modal('alert','Watch out','This is an important message!');
       </div>
       <div class="code" data-demo="true">
-         $('body').modal('alert',{
+         $.modal('alert',{
             title: 'Listen to me',
             content: 'I love Fomantic-UI',
             handler: function() {
-              $('body').toast({message:'Great!'});
+              $.toast({message:'Great!'});
             }
           });
       </div>
@@ -1056,26 +1135,26 @@ themes      : ['Default', 'Material']
       <p>The parameter list and logic is the same as for alert. The selected boolean choice will be provided to a given callback handler.</p>
       <div class="code" data-demo="true">
       // title and content
-        $('body').modal('confirm','Attention!','Ready?');
+        $.modal('confirm','Attention!','Ready?');
       </div>
       <div class="code" data-demo="true">
       // title, content and handler
-        $('body').modal('confirm','Attention!','Ready?', function(choice){
-          $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        $.modal('confirm','Attention!','Ready?', function(choice){
+          $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
         });
       </div>
       <div class="code" data-demo="true">
       // content and handler
-        $('body').modal('confirm','Ready?', function(choice){
-          $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+        $.modal('confirm','Ready?', function(choice){
+          $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
         });
       </div>
       <div class="code" data-demo="true">
       // title and handler
-        $('body').modal('confirm',{
+        $.modal('confirm',{
           title: 'Ready?',
           handler: function(choice){
-            $('body').toast({message:'You '+ (choice ? 'Accepted':'Declined')});
+            $.toast({message:'You '+ (choice ? 'Accepted':'Declined')});
           }
         });
       </div>
@@ -1086,28 +1165,28 @@ themes      : ['Default', 'Material']
         If you provide HTML Code for the content and this contains an input, this will be used as the inputfield. Otherwise it creates one dynamically for you.</p>
       <div class="code" data-demo="true">
   // provide a placeholder
-    $('body').modal('prompt',{
+    $.modal('prompt',{
       title: 'Enter your name',
       placeholder: 'Do not enter your mothers name!',
       handler: function(name){
-          $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+          $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
       }
     });
       </div>
       <div class="code" data-demo="true">
   // set a defaultValue
-    $('body').modal('prompt',{
+    $.modal('prompt',{
       title: 'Enter your name',
       defaultValue: 'mommy',
       handler: function(name){
-          $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+          $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
       }
     });
       </div>
       <div class="code" data-demo="true">
   // custom input
-    $('body').modal('prompt', 'Custom Input', '<div class="ui labeled input"><div class="ui blue label">Nickname</div><input type="text" placeholder="Do not use your email!"></div>', function(name) {
-      $('body').toast({message: 'Your name is ' + (name || 'CANCELLED')});
+    $.modal('prompt', 'Custom Input', '<div class="ui labeled input"><div class="ui blue label">Nickname</div><input type="text" placeholder="Do not use your email!"></div>', function(name) {
+      $.toast({message: 'Your name is ' + (name || 'CANCELLED')});
     });
       </div>
     </div>
@@ -1131,10 +1210,10 @@ themes      : ['Default', 'Material']
       </div>
       <p>Reuse this whenever you need</p>
       <div class="code" data-demo="true">
-          $('body').modal('greet','mom')
+          $.modal('greet','mom')
       </div>
       <div class="code" data-demo="true">
-          $('body').modal('greet','dad')
+          $.modal('greet','dad')
       </div>
     </div>
   </div>
@@ -1209,7 +1288,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>keyboardShortcuts</td>
           <td>true</td>
-          <td>Whether to automatically bind keyboard shortcuts</td>
+          <td>Whether to automatically bind keyboard shortcuts. This will close the modal when the ESC-Key is pressed.</td>
         </tr>
         <tr>
           <td>offset</td>
@@ -1302,7 +1381,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>onShow</td>
           <td>Modal</td>
-          <td>Is called when a modal starts to show.</td>
+          <td>Is called when a modal starts to show. If the function returns <code>false</code>, the modal will not be shown.</td>
         </tr>
         <tr>
           <td>onVisible</td>
@@ -1352,7 +1431,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       selector    : {
         title    : '> .header',
         content  : '> .content',
@@ -1378,7 +1457,7 @@ themes      : ['Default', 'Material']
         inverted   : 'inverted',
         legacy     : 'legacy',
         loading    : 'loading',
-        scrolling : 'scrolling',
+        scrolling  : 'scrolling',
         undetached : 'undetached',
         front      : 'front',
         close      : 'close icon',
@@ -1390,7 +1469,8 @@ themes      : ['Default', 'Material']
         template   : 'ui tiny modal',
         ok         : 'positive',
         cancel     : 'negative',
-        prompt     : 'ui fluid input'
+        prompt     : 'ui fluid input',
+        innerDimmer: 'ui inverted dimmer'
       }
             </div>
           </td>
@@ -1512,18 +1592,23 @@ themes      : ['Default', 'Material']
           <td>Name used in debug logs</td>
         </tr>
         <tr>
+          <td>silent</td>
+          <td>false</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>false</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>

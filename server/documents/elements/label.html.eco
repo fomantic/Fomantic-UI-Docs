@@ -224,7 +224,7 @@ themes      : ['Default', 'GitHub']
       <div class="column">
         <div class="ui fluid image">
           <div class="ui black ribbon right icon label">
-            Hotel <i class="hotel icon"></i> 
+            Hotel <i class="hotel icon"></i>
           </div>
           <img src="/images/wireframe/image.png">
         </div>
@@ -244,7 +244,7 @@ themes      : ['Default', 'GitHub']
       <div class="column">
         <div class="ui fluid image">
           <div class="ui black ribbon icon label">
-            <i class="hotel icon"></i> 
+            <i class="hotel icon"></i>
           </div>
           <img src="/images/wireframe/image.png">
         </div>
@@ -437,6 +437,61 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Inverted <span class="ui black label">New in 2.7</span></h4>
+    <p>All Variants of Label can be inverted</p>
+    <div class="ui inverted segment" >
+        <a class="ui primary inverted label">Primary</a>
+        <a class="ui secondary inverted label">Secondary</a>
+        <a class="ui red inverted label">Red</a>
+        <a class="ui orange inverted label">Orange</a>
+        <a class="ui yellow inverted label">Yellow</a>
+        <a class="ui olive inverted label">Olive</a>
+        <a class="ui green inverted label">Green</a>
+        <a class="ui teal inverted label">Teal</a>
+        <a class="ui blue inverted label">Blue</a>
+        <a class="ui violet inverted label">Violet</a>
+        <a class="ui purple inverted label">Purple</a>
+        <a class="ui pink inverted label">Pink</a>
+        <a class="ui brown inverted label">Brown</a>
+        <a class="ui grey inverted label">Grey</a>
+        <a class="ui black inverted label">Black</a>
+        <p></p>
+        <a class="ui primary inverted basic label">Primary</a>
+        <a class="ui secondary inverted basic label">Secondary</a>
+        <a class="ui red inverted basic label">Red</a>
+        <a class="ui orange inverted basic label">Orange</a>
+        <a class="ui yellow inverted basic label">Yellow</a>
+        <a class="ui olive inverted basic label">Olive</a>
+        <a class="ui green inverted basic label">Green</a>
+        <a class="ui teal inverted basic label">Teal</a>
+        <a class="ui blue inverted basic label">Blue</a>
+        <a class="ui violet inverted basic label">Violet</a>
+        <a class="ui purple inverted basic label">Purple</a>
+        <a class="ui pink inverted basic label">Pink</a>
+        <a class="ui brown inverted basic label">Brown</a>
+        <a class="ui grey inverted basic label">Grey</a>
+        <a class="ui black inverted basic label">Black</a>
+        <p></p>
+        <a class="ui inverted tag label">Tag</a>
+        <a class="ui primary inverted tag label">Primary</a>
+        <a class="ui secondary inverted tag label">Secondary</a>
+        <a class="ui red inverted tag label">Red</a>
+        <a class="ui orange inverted tag label">Orange</a>
+        <a class="ui yellow inverted tag label">Yellow</a>
+        <a class="ui olive inverted tag label">Olive</a>
+        <a class="ui green inverted tag label">Green</a>
+        <a class="ui teal inverted tag label">Teal</a>
+        <a class="ui blue inverted tag label">Blue</a>
+        <a class="ui violet inverted tag label">Violet</a>
+        <a class="ui purple inverted tag label">Purple</a>
+        <a class="ui pink inverted tag label">Pink</a>
+        <a class="ui brown inverted tag label">Brown</a>
+        <a class="ui grey inverted tag label">Grey</a>
+        <a class="ui black inverted tag label">Black</a>
+    </div>
+  </div>
+
   <h2 class="ui dividing header">Content</h2>
 
   <div class="example" data-use-content="true">
@@ -468,7 +523,7 @@ themes      : ['Default', 'GitHub']
       Cat
     </div>
   </div>
-  
+
   <div class="another example" data-use-content="true">
     <div class="ignored ui info message">Icons can be placed to the right inside a label.</div>
 
@@ -561,9 +616,28 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
+  <h2 class="ui dividing header">States</h2>
+
+  <div class="example">
+    <h4 class="ui header">Disabled</h4>
+    <p>A label can show it is currently unable to be interacted with</p>
+    <a class="ui disabled label">
+      Disabled Label
+    </a>
+  </div>
+
   <h2 class="ui dividing header">Variations</h2>
 
-
+  <div class="example">
+    <h4 class="ui header">Fluid</h4>
+    <p>A label can take the width of its container</p>
+    <div class="ui fluid label">Fits container</div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Centered <span class="ui black label">New in 2.9.1</span></h4>
+    <p>Text can be shown centered</p>
+    <div class="ui fluid centered label">Fits container</div>
+  </div>
   <div class="example" data-class="empty circular, circular">
     <h4 class="ui header">Circular</h4>
     <p>A label can be circular</p>
@@ -795,63 +869,4 @@ themes      : ['Default', 'GitHub']
       </a>
     </div>
   </div>
-
- <h2 class="ui dividing header">Inverted
-    <div class="ui black label">New in 2.7</div>
-  </h2>
-
- <div class="example">
-    <h4 class="ui header">All Variants of Label can be inverted</h4>
-    <div class="ui inverted segment" >
-        <a class="ui primary inverted label">Primary</a>
-        <a class="ui secondary inverted label">Secondary</a>
-        <a class="ui red inverted label">Red</a>
-        <a class="ui orange inverted label">Orange</a>
-        <a class="ui yellow inverted label">Yellow</a>
-        <a class="ui olive inverted label">Olive</a>
-        <a class="ui green inverted label">Green</a>
-        <a class="ui teal inverted label">Teal</a>
-        <a class="ui blue inverted label">Blue</a>
-        <a class="ui violet inverted label">Violet</a>
-        <a class="ui purple inverted label">Purple</a>
-        <a class="ui pink inverted label">Pink</a>
-        <a class="ui brown inverted label">Brown</a>
-        <a class="ui grey inverted label">Grey</a>
-        <a class="ui black inverted label">Black</a>
-        <p></p>
-        <a class="ui primary inverted basic label">Primary</a>
-        <a class="ui secondary inverted basic label">Secondary</a>
-        <a class="ui red inverted basic label">Red</a>
-        <a class="ui orange inverted basic label">Orange</a>
-        <a class="ui yellow inverted basic label">Yellow</a>
-        <a class="ui olive inverted basic label">Olive</a>
-        <a class="ui green inverted basic label">Green</a>
-        <a class="ui teal inverted basic label">Teal</a>
-        <a class="ui blue inverted basic label">Blue</a>
-        <a class="ui violet inverted basic label">Violet</a>
-        <a class="ui purple inverted basic label">Purple</a>
-        <a class="ui pink inverted basic label">Pink</a>
-        <a class="ui brown inverted basic label">Brown</a>
-        <a class="ui grey inverted basic label">Grey</a>
-        <a class="ui black inverted basic label">Black</a>
-        <p></p>
-        <a class="ui inverted tag label">Tag</a>
-        <a class="ui primary inverted tag label">Primary</a>
-        <a class="ui secondary inverted tag label">Secondary</a>
-        <a class="ui red inverted tag label">Red</a>
-        <a class="ui orange inverted tag label">Orange</a>
-        <a class="ui yellow inverted tag label">Yellow</a>
-        <a class="ui olive inverted tag label">Olive</a>
-        <a class="ui green inverted tag label">Green</a>
-        <a class="ui teal inverted tag label">Teal</a>
-        <a class="ui blue inverted tag label">Blue</a>
-        <a class="ui violet inverted tag label">Violet</a>
-        <a class="ui purple inverted tag label">Purple</a>
-        <a class="ui pink inverted tag label">Pink</a>
-        <a class="ui brown inverted tag label">Brown</a>
-        <a class="ui grey inverted tag label">Grey</a>
-        <a class="ui black inverted tag label">Black</a>
-    </div>
- </div>
-
 </div>

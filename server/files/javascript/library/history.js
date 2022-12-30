@@ -2,7 +2,9 @@
 (function ($) {
 
     $.address = (function () {
-
+        function isFunction(obj) {
+            return typeof obj === "function" && typeof obj.nodeType !== "number";
+        }
         var _trigger = function(name) {
                var e = $.extend($.Event(name), (function() {
                     var parameters = {},
@@ -26,11 +28,11 @@
                 return Array.prototype.slice.call(obj);
             },
             _bind = function(value, data, fn) {
-                $().bind.apply($($.address), Array.prototype.slice.call(arguments));
+                $().on.apply($($.address), Array.prototype.slice.call(arguments));
                 return $.address;
             },
             _unbind = function(value,  fn) {
-                $().unbind.apply($($.address), Array.prototype.slice.call(arguments));
+                $().off.apply($($.address), Array.prototype.slice.call(arguments));
                 return $.address;
             },
             _supportsState = function() {
@@ -90,17 +92,17 @@
             },
             _track = function() {
                 if (_opts.tracker !== 'null' && _opts.tracker !== NULL) {
-                    var fn = $.isFunction(_opts.tracker) ? _opts.tracker : _t[_opts.tracker],
+                    var fn = isFunction(_opts.tracker) ? _opts.tracker : _t[_opts.tracker],
                         value = (_l.pathname + _l.search +
                                 ($.address && !_supportsState() ? $.address.value() : ''))
                                 .replace(/\/\//, '/').replace(/^\/$/, '');
-                    if ($.isFunction(fn)) {
+                    if (isFunction(fn)) {
                         fn(value);
-                    } else if ($.isFunction(_t.urchinTracker)) {
+                    } else if (isFunction(_t.urchinTracker)) {
                         _t.urchinTracker(value);
-                    } else if (_t.pageTracker !== UNDEFINED && $.isFunction(_t.pageTracker._trackPageview)) {
+                    } else if (_t.pageTracker !== UNDEFINED && isFunction(_t.pageTracker._trackPageview)) {
                         _t.pageTracker._trackPageview(value);
-                    } else if (_t._gaq !== UNDEFINED && $.isFunction(_t._gaq.push)) {
+                    } else if (_t._gaq !== UNDEFINED && isFunction(_t._gaq.push)) {
                         _t._gaq.push(['_trackPageview', decodeURI(value)]);
                     }
                 }
@@ -177,7 +179,7 @@
                             _d.body.insertAdjacentElement('afterBegin', _frame);
                         }
                         _st(function() {
-                            $(_frame).bind('load', function() {
+                            $(_frame).on('load', function() {
                                 var win = _frame.contentWindow;
                                 _value = win[ID] !== UNDEFINED ? win[ID] : '';
                                 if (_value != _href()) {
@@ -322,7 +324,7 @@
             _options();
             $(_load);
         }
-        $(window).bind('popstate', _popstate).bind('unload', _unload);
+        $(window).on('popstate', _popstate).on('unload', _unload);
 
         return {
             bind: function(type, data, fn) {

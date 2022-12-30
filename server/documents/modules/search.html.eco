@@ -49,7 +49,7 @@ type        : 'UI Module'
       <p>A search can display results from remote content ordered by categories</p>
       <div class="ui category search">
         <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="Search animals...">
+          <input class="prompt" type="text" placeholder="Search people...">
           <i class="search icon"></i>
         </div>
         <div class="results"></div>
@@ -643,7 +643,7 @@ type        : 'UI Module'
       $('.ui.search')
         .search({
           apiSettings: {
-            url: '//api.github.com/search/repositories?q={query}'
+            url: 'https://api.github.com/search/repositories?q={query}'
           },
           fields: {
             results : 'items',
@@ -718,7 +718,7 @@ type        : 'UI Module'
               });
               return response;
             },
-            url: '//api.github.com/search/repositories?q={query}'
+            url: 'https://api.github.com/search/repositories?q={query}'
           }
         })
       ;
@@ -765,14 +765,14 @@ type        : 'UI Module'
         <tr>
           <td>transition</td>
           <td>
-            fade
+            scale
           </td>
           <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
         </tr>
         <tr>
           <td>duration</td>
           <td>
-            300
+            200
           </td>
           <td>Duration of animation events</td>
         </tr>
@@ -797,8 +797,13 @@ type        : 'UI Module'
           <td>Whether the search should automatically select the first search result after searching</td>
         </tr>
         <tr>
+          <td>preserveHTML</td>
+          <td>true</td>
+          <td>Whether to preserve possible html of resultset values</td>
+        </tr>
+        <tr>
           <td>showNoResults</td>
-          <td>false</td>
+          <td>true</td>
           <td>Whether a "no results" message should be shown if no results are found. (These messages can be modified using the <code>template</code> object specified below)</td>
         </tr>
         <tr>
@@ -819,6 +824,7 @@ type        : 'UI Module'
               price           : 'price',       // result price
               results         : 'results',     // array of results (standard)
               title           : 'title',       // result title
+              url             : 'url',         // result url
               action          : 'action',      // "view more" object name
               actionText      : 'text',        // "view more" text
               actionURL       : 'url'          // "view more" url (if set to false the text will appear as a div)
@@ -832,6 +838,7 @@ type        : 'UI Module'
           <td>
             <div class="code" data-type="javascript">
               [
+                'id',
                 'title',
                 'description'
               ]
@@ -846,7 +853,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>searchDelay</td>
-          <td>100</td>
+          <td>200</td>
           <td>Delay before querying results on inputchange</td>
         </tr>
         <tr>
@@ -854,7 +861,7 @@ type        : 'UI Module'
           <td>
             easeOutExpo
           </td>
-          <td>Easing equation when using fallback Javascript animation</td>
+          <td>Easing equation when using fallback Javascript animation. EaseOutExpo is included with search, for additional options you must include <a href="https://gsgd.co.uk/sandbox/jquery/easing/">easing equations</td>
         </tr>
         <tr>
           <td>ignoreDiacritics</td>
@@ -990,8 +997,10 @@ type        : 'UI Module'
               prompt       : '.prompt',
               searchButton : '.search.button',
               results      : '.results',
+              message      : '.results > .message',
               category     : '.category',
-              result       : '.result'
+              result       : '.result',
+              title        : '.title, .name'
             }
             </div>
           </td>
@@ -1003,7 +1012,8 @@ type        : 'UI Module'
             <div class="code">
             metadata: {
               cache   : 'cache',
-              results : 'results'
+              results : 'results',
+              result  : 'result'
             }
             </div>
           </td>
@@ -1014,11 +1024,15 @@ type        : 'UI Module'
           <td>
             <div class="code">
             className: {
-              active  : 'active',
-              empty   : 'empty',
-              focus   : 'focus',
-              loading : 'loading',
-              pressed : 'down'
+              animating : 'animating',
+              active    : 'active',
+              category  : 'category',
+              empty     : 'empty',
+              focus     : 'focus',
+              hidden    : 'hidden',
+              loading   : 'loading',
+              results   : 'results',
+              pressed   : 'down'
             }
             </div>
           </td>
@@ -1026,7 +1040,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
@@ -1053,10 +1067,13 @@ type        : 'UI Module'
               noResultsHeader : 'No Results',
               noResults       : 'Your search returned no results',
               logging         : 'Error in debug logging, exiting.',
+              noEndpoint      : 'No search endpoint was specified',
               noTemplate      : 'A valid template name was not specified.',
+              oldSearchSyntax : 'searchFullText setting has been renamed fullTextSearch for consistency, please adjust your settings.',
               serverError     : 'There was an issue with querying the server.',
               maxResults      : 'Results must be an array to use maxResults setting',
-              method          : 'The method you called is not defined.'
+              method          : 'The method you called is not defined.',
+              noNormalize     : '"ignoreDiacritics" setting will be ignored. Browser does not support String().normalize(). You may consider including <https://cdn.jsdelivr.net/npm/unorm@1.4.1/lib/unorm.min.js> as a polyfill.'
             },
             </div>
           </td>
@@ -1091,7 +1108,7 @@ type        : 'UI Module'
       .search({
     	preserveHTML : false,
     	apiSettings: {
-    	  url: '//api.github.com/search/repositories?q={query}'
+    	  url: 'https://api.github.com/search/repositories?q={query}'
     	},
     	fields: {
     	  results : 'items',
