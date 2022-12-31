@@ -9,13 +9,13 @@ docpadConfig = {
 	# env: 'production'
 
 	plugins:
-        ghpages:
-            deployRemote: 'origin'
-            deployBranch: 'gh-pages'
-        serve:
-            listenOptions:
-                port: 9778
-                host: 'localhost'
+		ghpages:
+			deployRemote: 'origin'
+			deployBranch: 'gh-pages'
+		serve:
+			listenOptions:
+				port: 9778
+				host: 'localhost'
 
 	# =================================
 	# Template Data
