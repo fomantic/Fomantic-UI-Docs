@@ -1,0 +1,13 @@
+
+/*******************************
+        Calendar Example
+*******************************/
+
+
+#overflowing_area {
+  width: 20em;
+  background: #ddd;
+  height: 10em;
+  padding: 1em;
+  overflow: scroll;
+}

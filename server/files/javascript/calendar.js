@@ -225,6 +225,12 @@ semantic.calendar.ready = function() {
   $('#inverted_calendar')
     .calendar()
   ;
+
+  $('#context_calendar')
+    .calendar({
+        context: 'body'
+    })
+  ;
 };
 
 
