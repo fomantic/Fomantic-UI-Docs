@@ -534,6 +534,19 @@ themes      : ['Default']
   </div>
 
   <div class="example">
+    <h4 class="ui header">Fluid <span class="ui black label">New in 2.9.1</span></h4>
+    <p>A fluid statistic occupies the whole container width. It's a simpler alternative to a <code>one statistic</code> group.</p>
+    <div class="ui fluid statistic">
+      <div class="value">
+        2,204
+      </div>
+      <div class="label">
+        Views
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Floated</h4>
     <p>An statistic can sit to the left or right of other content</p>
 
