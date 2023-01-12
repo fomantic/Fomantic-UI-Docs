@@ -1263,7 +1263,7 @@ themes      : ['Default']
           <td>
             false
           </td>
-          <td>Dom selector where the calendar popup should be attached to. By default (false) the calendar popoup is attached as direct child of the triggering element</td>
+          <td>DOM selector where the calendar popup should be attached to. By default (false) the calendar popoup is attached as direct child of the triggering element</td>
         </tr>
       </tbody>
     </table>
