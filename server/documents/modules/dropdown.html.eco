@@ -3611,7 +3611,7 @@ themes      : ['Default', 'GitHub', 'Material']
             }
             </div>
           </td>
-          <td>Allows customization of multi-select labels</td>
+          <td>Allows customization of multi-select labels. Setting <code>transition: false</code> will not animate the label at all</td>
         </tr>
       </tbody>
     </table>
