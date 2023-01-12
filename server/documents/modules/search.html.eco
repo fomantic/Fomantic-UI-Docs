@@ -403,7 +403,7 @@ type        : 'UI Module'
     <h4 class="ui header">Local Object</h4>
     <p>Local search results allow you to search across specified properties of a javascript object literal looking for matching values</p>
     <p>
-      You can set which fields are searchable using the <code>searchFields</code> setting. Local object search can only display standard search results (not categories).
+      You can set which fields are searchable using the <code>searchFields</code> setting.
     </p>
     <div class="code" data-label="javascript">
       // searches across any array/object of searchable objects
@@ -809,7 +809,16 @@ type        : 'UI Module'
         <tr>
           <td>fullTextSearch</td>
           <td>'exact'</td>
-          <td>Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string, setting to <code>false</code> will only match to start of string. (This setting was previously called <code>searchFullText</code>.)</td>
+          <td>
+            <ul class="ui list"><div class="ui small header">Possible values</div>
+                <li><code>'exact'</code> will force the exact search to be matched somewhere in the string</li>
+                <li><code>'some'</code> Will do the same as <code>exact</code> but supports multiple search values separated by whitespace. At least one word must match <span class="ui black tiny label">New in 2.9.1</span></li>
+                <li><code>'all'</code> is same as <code>some</code> but all words have to match in all given searchfields of each record altogether <span class="ui black tiny label">New in 2.9.1</span></li>
+                <li><code>true</code> will use a fuzzy full text search</li>
+                <li><code>false</code> will only match to start of string.</li>
+            </ul>
+            (This setting was previously called <code>searchFullText</code>.)
+          </td>
         </tr>
         <tr>
           <td>fields</td>
