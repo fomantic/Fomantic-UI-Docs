@@ -649,7 +649,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Context <span class="ui black label">New in 2.9.1</span></h4>
       <p>A calendar popup inside an overflowing container does not allow the calendar popup to be shown completely, because it's still placed inside the same overflowing container of the triggering element by default.
-         To solve this, you can now use the context setting and provide a (non-overflowing) to move the calendar popup outside of the overflowing container and display the calendar popup properly.
+         To solve this, you can now use the context setting and provide a (non-overflowing) parent element to move the calendar popup outside of the overflowing container and display the calendar popup properly.
          <br>
          The following example places the calendar input inside a overflowing scrolling segment. By defining the context to body the calendar popup is rendered as direct child of body, thus displays the calendar popup properly overlaying the otherwise restricted segment.
       </p>
