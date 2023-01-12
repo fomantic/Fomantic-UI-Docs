@@ -3605,7 +3605,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>
             <div class="code">
             label: {
-              transition : 'horizontal flip',
+              transition : 'scale',
               duration   : 200,
               variation  : false
             }
@@ -3764,8 +3764,7 @@ themes      : ['Default', 'GitHub', 'Material']
           delay : {
             hide   : 300,
             show   : 200,
-            search : 50,
-            touch  : 50
+            search : 20
           }
           </div>
           </td>
