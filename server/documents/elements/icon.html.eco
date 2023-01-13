@@ -37,8 +37,9 @@ themes      : ['Default']
 
     <div class="ui ignored message">Fomantic includes a complete port of <a href="https://fontawesome.com/" target="_blank">Font Awesome 5.15.4</a> designed by the <a href="https://twitter.com/fontawesome">FontAwesome</a> team for its standard icon set.</div>
     <div class="ui ignored info message">
-        You can reduce your custom generated CSS by adjusting the <code>@icons-map</code>,<code>@icons-outline-map</code>, <code>@icons-brand-map</code>, ... variables in your themes <code>icon.variables</code> file to only the icons you need.
+      You can reduce your custom generated CSS by adjusting the <code>@icons-map</code>,<code>@icons-outline-map</code>, <code>@icons-brand-map</code>, ... variables in your themes <code>icon.variables</code> file to only the icons you need.
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Accessibility</h4>
       <p>Icons can represent accessibility standards</p>
@@ -81,6 +82,7 @@ themes      : ['Default']
         <i class="wheelchair icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Alert</h4>
       <p>Icons which can alert users to an action or information</p>
@@ -109,6 +111,7 @@ themes      : ['Default']
         <i class="skull crossbones icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Animals</h4>
       <p>Icons can represent animals</p>
@@ -149,6 +152,7 @@ themes      : ['Default']
         <i class="spider icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Arrows</h4>
       <p>Icons can be used to indicate a direction</p>
@@ -383,6 +387,7 @@ themes      : ['Default']
         <i class="upload icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Audio & Video</h4>
       <p>Icons can be used to represent common ways to interact with audio and video</p>
@@ -507,6 +512,7 @@ themes      : ['Default']
         <i class="youtube icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Automotive</h4>
       <p>Icons can represent vehicles and automotive activities</p>
@@ -557,6 +563,7 @@ themes      : ['Default']
         <i class="truck pickup icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Autumn</h4>
       <p>Icons which represent the Autumn season</p>
@@ -587,6 +594,7 @@ themes      : ['Default']
         <i class="wine bottle icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Beverage</h4>
       <p>Icons which represent types of beverages</p>
@@ -621,6 +629,7 @@ themes      : ['Default']
         <i class="wine glass alternate icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Buildings</h4>
       <p>Icons can represent common building types</p>
@@ -691,6 +700,7 @@ themes      : ['Default']
         <i class="warehouse icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Business</h4>
       <p>Icons can be used to represent business and common business actions</p>
@@ -895,6 +905,7 @@ themes      : ['Default']
         <i class="wallet icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Camping</h4>
       <p>Icons which represent camping activities and equipment</p>
@@ -945,6 +956,7 @@ themes      : ['Default']
         <i class="tree icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Charity</h4>
       <p>Icons can represent common charity activities</p>
@@ -989,6 +1001,7 @@ themes      : ['Default']
         <i class="seedling icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Chat</h4>
       <p>Icons can represent common chat symbols and actions</p>
@@ -1049,6 +1062,7 @@ themes      : ['Default']
         <i class="video slash icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Chess</h4>
       <p>Icons which represent the game chess</p>
@@ -1075,6 +1089,7 @@ themes      : ['Default']
         <i class="square full icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Childhood</h4>
       <p>Icons which represent childhood activities</p>
@@ -1113,6 +1128,7 @@ themes      : ['Default']
         <i class="snowman icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Clothing</h4>
       <p>Icons which represent types of clothing</p>
@@ -1139,6 +1155,7 @@ themes      : ['Default']
         <i class="user tie icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Code</h4>
       <p>Icons can represent programming and programming tools</p>
@@ -1223,6 +1240,7 @@ themes      : ['Default']
         <i class="window restore outline icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Communication</h4>
       <p>Icons which represent common ways of communication</p>
@@ -1329,6 +1347,7 @@ themes      : ['Default']
         <i class="wifi icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Computers</h4>
       <p>Icons can represent computing devices, or types of content found on a computer</p>
@@ -1401,6 +1420,7 @@ themes      : ['Default']
         <i class="upload icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Construction</h4>
       <p>Icons which represent construction activities</p>
@@ -1443,6 +1463,7 @@ themes      : ['Default']
         <i class="wrench icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Currency</h4>
       <p>Icons can represent units of currency</p>
@@ -1497,6 +1518,7 @@ themes      : ['Default']
         <i class="yen sign icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Date & Time</h4>
       <p>Icons that represent common ways of showing date and time</p>
@@ -1553,6 +1575,7 @@ themes      : ['Default']
         <i class="stopwatch icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Design</h4>
       <p>Icons can represent common design related symbols or techniques</p>
@@ -1669,6 +1692,7 @@ themes      : ['Default']
         <i class="vector square icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Editors</h4>
       <p>Icons can represent text editors and common editor actions</p>
@@ -1843,6 +1867,7 @@ themes      : ['Default']
         <i class="wrench icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Education</h4>
       <p>Icons can represent education types and activities</p>
@@ -1889,6 +1914,7 @@ themes      : ['Default']
         <i class="user graduate icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Emoji</h4>
       <p>Icons which represent emoji's</p>
@@ -2041,6 +2067,7 @@ themes      : ['Default']
         <i class="tired outline icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Energy</h4>
       <p>Icons which represent energy equipment, types and status</p>
@@ -2105,6 +2132,7 @@ themes      : ['Default']
         <i class="wind icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Files</h4>
       <p>Icons can represent elements of a computer and its file system</p>
@@ -2189,6 +2217,7 @@ themes      : ['Default']
         <i class="sticky note outline icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Finance</h4>
       <p>Icons which represent financial activities</p>
@@ -2255,6 +2284,7 @@ themes      : ['Default']
         <i class="wallet icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Fitness</h4>
       <p>Icons which represent fitness activities</p>
@@ -2297,6 +2327,7 @@ themes      : ['Default']
         <i class="walking icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Food</h4>
       <p>Icons which represent food</p>
@@ -2347,6 +2378,7 @@ themes      : ['Default']
         <i class="stroopwafel icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Fruits & Vegetables</h4>
       <p>Icons which represent fruit and vegetables</p>
@@ -2369,6 +2401,7 @@ themes      : ['Default']
         <i class="seedling icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Games</h4>
       <p>Icons which represent gaming equipment and platforms</p>
@@ -2435,6 +2468,7 @@ themes      : ['Default']
         <i class="xbox icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Genders</h4>
       <p>Icons can represent genders or types of sexuality</p>
@@ -2469,6 +2503,7 @@ themes      : ['Default']
         <i class="venus mars icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Halloween</h4>
       <p>Icons which represent Halloween</p>
@@ -2499,6 +2534,7 @@ themes      : ['Default']
         <i class="toilet paper icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Hands</h4>
       <p>Icons can represent hand signals and gestures</p>
@@ -2593,6 +2629,7 @@ themes      : ['Default']
         <i class="thumbs up outline icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Health</h4>
       <p>Icons which represent common health symbols</p>
@@ -2631,6 +2668,7 @@ themes      : ['Default']
         <i class="wheelchair icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Holiday</h4>
       <p>Icons which represent holiday items</p>
@@ -2659,6 +2697,7 @@ themes      : ['Default']
         <i class="snowman icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Hotel</h4>
       <p>Icons which represent hotel items and utilities</p>
@@ -2739,6 +2778,7 @@ themes      : ['Default']
         <i class="wifi icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Household</h4>
       <p>Icons which represent household items and utilities</p>
@@ -2803,6 +2843,7 @@ themes      : ['Default']
         <i class="tv icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Images</h4>
       <p>Icons that represent common image symbols and actions</p>
@@ -2873,6 +2914,7 @@ themes      : ['Default']
         <i class="unsplash icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Interfaces</h4>
       <p>Icons can represent common actions a user can take or use</p>
@@ -3295,6 +3337,7 @@ themes      : ['Default']
         <i class="wrench icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Logistics</h4>
       <p>Icons can represent common logistic activity</p>
@@ -3325,6 +3368,7 @@ themes      : ['Default']
         <i class="warehouse icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Maps</h4>
       <p>Icons can be used to represent elements on a map</p>
@@ -3621,6 +3665,7 @@ themes      : ['Default']
         <i class="wrench icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Maritime</h4>
       <p>Icons which represent maritime tools and activities</p>
@@ -3651,6 +3696,7 @@ themes      : ['Default']
         <i class="wind icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Marketing</h4>
       <p>Icons can represent marketing materials and symbols</p>
@@ -3687,6 +3733,7 @@ themes      : ['Default']
         <i class="search location icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Mathematics</h4>
       <p>Icons which represent common mathematic symbols</p>
@@ -3729,6 +3776,7 @@ themes      : ['Default']
         <i class="wave square icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Medical</h4>
       <p>Icons can represent common medical actions</p>
@@ -3889,6 +3937,7 @@ themes      : ['Default']
         <i class="x ray icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Moving</h4>
       <p>Icons can represent moving activities</p>
@@ -3925,6 +3974,7 @@ themes      : ['Default']
         <i class="wine glass icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Music</h4>
       <p>Icons which represent musical instruments, items and platforms</p>
@@ -3979,6 +4029,7 @@ themes      : ['Default']
         <i class="volume up icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Objects</h4>
       <p>Icons can be used to represent common objects</p>
@@ -4507,6 +4558,7 @@ themes      : ['Default']
         <i class="wrench icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Payments & Shopping</h4>
       <p>Icons can represent common forms of payment and shopping actions</p>
@@ -4627,6 +4679,7 @@ themes      : ['Default']
         <i class="trophy icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Pharmacy</h4>
       <p>Icons which represent pharmaceutical items and activities</p>
@@ -4689,6 +4742,7 @@ themes      : ['Default']
         <i class="vials icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Political</h4>
       <p>Icons which represent political activities and actions</p>
@@ -4731,6 +4785,7 @@ themes      : ['Default']
         <i class="vote yea icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Religion</h4>
       <p>Icons which represent religious activities and symbols</p>
@@ -4801,6 +4856,7 @@ themes      : ['Default']
         <i class="yin yang icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Science</h4>
       <p>Icons which represent science activities and items</p>
@@ -4867,6 +4923,7 @@ themes      : ['Default']
         <i class="vials icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Science Fiction</h4>
       <p>Icons which represent science fiction story items</p>
@@ -4913,6 +4970,7 @@ themes      : ['Default']
         <i class="user astronaut icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Security</h4>
       <p>Icons which represent security items and activities</p>
@@ -4977,6 +5035,7 @@ themes      : ['Default']
         <i class="user shield icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Shapes</h4>
       <p>Icons can be used to create shapes</p>
@@ -5033,6 +5092,7 @@ themes      : ['Default']
         <i class="star outline icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Shopping</h4>
       <p>Icons which represent shopping activities and actions</p>
@@ -5077,6 +5137,7 @@ themes      : ['Default']
         <i class="tshirt icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Social</h4>
       <p>Icons which represent social actions</p>
@@ -5171,6 +5232,7 @@ themes      : ['Default']
         <i class="video icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Spinners</h4>
       <p>Icons can represent loading</p>
@@ -5231,6 +5293,7 @@ themes      : ['Default']
         <i class="yin yang icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Sports</h4>
       <p>Icons which represent sports</p>
@@ -5277,6 +5340,7 @@ themes      : ['Default']
         <i class="volleyball ball icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Spring</h4>
       <p>Icons which represent spring activities</p>
@@ -5301,6 +5365,7 @@ themes      : ['Default']
         <i class="umbrella icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Status</h4>
       <p>Icons can represent different states</p>
@@ -5545,6 +5610,7 @@ themes      : ['Default']
         <i class="wifi icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Summer</h4>
       <p>Icons which represent summer activities</p>
@@ -5581,6 +5647,7 @@ themes      : ['Default']
         <i class="water icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Tabletop Gaming</h4>
       <p>Icons which represent table-top games</p>
@@ -5623,6 +5690,7 @@ themes      : ['Default']
         <i class="wizards of the coast icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Toggle</h4>
       <p>Icons which represent toggling an action</p>
@@ -5665,6 +5733,7 @@ themes      : ['Default']
         <i class="wifi icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Travel</h4>
       <p>Icons which represent traveling activities</p>
@@ -5751,6 +5820,7 @@ themes      : ['Default']
         <i class="wine glass alternate icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Users & People</h4>
       <p>Icons can represent users or people</p>
@@ -5901,6 +5971,7 @@ themes      : ['Default']
         <i class="wheelchair icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Vehicles</h4>
       <p>Icons can represent vehicles or transport</p>
@@ -5975,6 +6046,7 @@ themes      : ['Default']
         <i class="wheelchair icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Weather</h4>
       <p>Icons which represent the weather</p>
@@ -6031,6 +6103,7 @@ themes      : ['Default']
         <i class="wind icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Winter</h4>
       <p>Icons which represent winter activities</p>
@@ -6059,6 +6132,7 @@ themes      : ['Default']
         <i class="tram icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Writing</h4>
       <p>Icons can represent writing and editing</p>
@@ -6141,6 +6215,7 @@ themes      : ['Default']
         <i class="thumbtack icon"></i>
       </div>
     </div>
+
     <div class="icon example">
       <h4 class="ui header">Brands</h4>
       <p>Icons can represent logos to common brands</p>
@@ -6385,7 +6460,6 @@ themes      : ['Default']
         <div class="column"><i class="lesscss icon" data-search-terms=""></i>lesscss</div>
         <div class="column"><i class="linechat icon" data-search-terms=""></i>linechat</div>
         <div class="column"><i class="linkedin icon" data-search-terms="linkedin-square"></i>linkedin</div>
-        <div class="column"><i class="linkedin in icon" data-search-terms="linkedin"></i>linkedin in</div>
         <div class="column"><i class="linode icon" data-search-terms=""></i>linode</div>
         <div class="column"><i class="linux icon" data-search-terms="tux"></i>linux</div>
         <div class="column"><i class="lyft icon" data-search-terms=""></i>lyft</div>
@@ -6843,7 +6917,6 @@ themes      : ['Default']
         <i class="lesscss icon"></i>
         <i class="linechat icon"></i>
         <i class="linkedin icon"></i>
-        <i class="linkedin in icon"></i>
         <i class="linode icon"></i>
         <i class="linux icon"></i>
         <i class="lyft icon"></i>
@@ -7061,6 +7134,35 @@ themes      : ['Default']
         <i class="zhihu icon"></i>
       </div>
     </div>
+
+
+    <div class="icon example">
+      <h4 class="ui header">Deprecated</h4>
+      <p>Deprecated icons won't work properly when used with transitions as they contain <code>in</code> or <code>out</code></p>
+      <div class="ui doubling five column grid">
+        <div class="column"><i class="in cart icon" data-search-terms=""></i>in cart</div>
+        <div class="column"><i class="linkedin in icon" data-search-terms="linkedin"></i>linkedin in</div>
+        <div class="column"><i class="log out icon" data-search-terms=""></i>log out</div>
+        <div class="column"><i class="sign in icon" data-search-terms=""></i>sign in</div>
+        <div class="column"><i class="sign in alternate icon" data-search-terms="arrow, enter, join, log in, login, sign in, sign up, sign-in, signin, signup"></i>sign in alternate</div>
+        <div class="column"><i class="sign out icon" data-search-terms=""></i>sign out</div>
+        <div class="column"><i class="sign out alternate icon" data-search-terms="arrow, exit, leave, log out, logout, sign-out"></i>sign out alternate</div>
+        <div class="column"><i class="zoom in icon" data-search-terms=""></i>zoom in</div>
+        <div class="column"><i class="zoom out icon" data-search-terms=""></i>zoom out</div>
+      </div>
+      <div class="existing code">
+        <i class="in cart icon"></i>
+        <i class="linkedin in icon"></i>
+        <i class="log out icon"></i>
+        <i class="sign in icon"></i>
+        <i class="sign in alternate icon"></i>
+        <i class="sign out icon"></i>
+        <i class="sign out alternate icon"></i>
+        <i class="zoom in icon"></i>
+        <i class="zoom out icon"></i>
+      </div>
+    </div>
+
 
   </div>
 

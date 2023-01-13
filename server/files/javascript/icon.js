@@ -64,7 +64,12 @@ semantic.icon.ready = function() {
     $iconSearch
       .search({
         type          : 'category',
-        fullTextSearch: true,
+        fullTextSearch: 'all',
+        searchFields: [
+          'category',
+          'icon',
+          'description',
+        ],
         minCharacters : 1,
         maxResults    : 10,
         cache         : false,
@@ -85,7 +90,7 @@ semantic.icon.ready = function() {
                   ;
                   return iconHTML;
                 }
-            });
+              });
             });
           }, 0);
         },
