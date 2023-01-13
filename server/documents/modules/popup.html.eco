@@ -110,7 +110,7 @@ themes      : ['Default']
       <h4 class="ui header">Tooltip
         <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
-      <p>An element can specify a simple tooltip that can appear without javascript</p>
+      <p>An element can specify a simple tooltip that can appear without javascript via the <code>data-tooltip</code> attribute. If the tooltip should be shown inverted, also add the <code>data-inverted</code> attribute.</p>
       <div class="ui warning ignored message">
         Tooltips use an element's <code>:before</code> and <code>:after</code> pseudo classes. Elements like <code>icon</code> that already use these classes for styling will need to have the tooltips to a wrapping element, like a button, or a <code>span</code> to make sure tooltips work correctly.
       </div>
@@ -122,8 +122,8 @@ themes      : ['Default']
       </div>
     </div>
     <div class="example">
-      <h4 class="ui header">Position</h4>
-      <p></p>
+      <h4 class="ui header">Tooltip Position</h4>
+      <p>A tooltip can be shown at a specific position relative to the element via via the <code>data-position</code> attribute.</p>
       <div class="ui button" data-tooltip="Add users to your feed" data-position="top left">
         Top Left
       </div>
@@ -181,8 +181,11 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Size</h4>
-      <p>A tooltip can vary in size</p>
+      <h4 class="ui header">Tooltip Size</h4>
+      <p>A tooltip can vary in size via the <code>data-variation</code> attribute.</p>
+      <div class="ui ignored info message">
+        The <code>data-variation</code> attribute for the tooltip can be used for multiple variation definitions just like class would do for elements. However, at the moment, data-variation only supports <a href="#tooltip-sizes">sizes</a>, <a href="#basic-tooltip">basic</a>, <a href="">fixed</a>, <a href="#multiline-tooltip">multiline</a> and <a href="#colored-tooltip">color</a> variants
+      </div>
       <div class="ui button" data-tooltip="Add users to your feed" data-variation="mini">
         Mini
       </div>
@@ -223,7 +226,7 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Basic</h4>
+      <h4 class="ui header">Basic Tooltip</h4>
       <p>A tooltip can provide more basic formatting</p>
       <div class="ui button" data-tooltip="The default theme's basic tooltip removes the pointing arrow." data-variation="basic">
         Basic
@@ -239,6 +242,45 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Multiline Tooltip <span class="ui black label">New in 2.9.1</span></h4>
+      <p>A tooltip can show multiple lines via predefined line breaks in the HTML code and adding <code>multiline</code> to the <code>data-variation</code> attribute.</p>
+      <div class="ui ignored warning message">
+        <div class="header">
+            This has to be cleverly prepared as follows
+        </div>
+        <ul class="ui bulleted list content">
+          <li>non breaking spaces have to use a non visible character like U+A0 (<b>not</b> <code>&amp;nbsp;</code>!) (see <a target="_blank" href="https://qwerty.dev/whitespace">https://qwerty.dev/whitespace</a>)</li>
+          <li>newlines to break lines / trigger a tooltip newline</li>
+        </ul>
+      </div>
+      <div class="ui button" data-tooltip="Look, i have multiple lines!
+        -one
+        -two
+        -three" data-position="bottom center" data-variation="multiline">
+    Multiline tooltip
+      </div>
+    </div>
+
+    <div class="example">
+        <h4 class="ui header">Colored Tooltip<span class="ui black label">New in 2.9.1</span></h4>
+        <p>A tooltip can have different colors via the <code>data-variation</code> attribute.</p>
+        <div class="ui spaced compact wrapping buttons">
+            <button data-variation="red" data-tooltip="Red" class="ui button">Red</button>
+            <button data-variation="orange" data-tooltip="Orange" class="ui button">Orange</button>
+            <button data-variation="yellow" data-tooltip="Yellow" class="ui button">Yellow</button>
+            <button data-variation="olive" data-tooltip="Olive" class="ui button">Olive</button>
+            <button data-variation="green" data-tooltip="Green" class="ui button">Green</button>
+            <button data-variation="teal" data-tooltip="Teal" class="ui button">Teal</button>
+            <button data-variation="blue" data-tooltip="Blue" class="ui button">Blue</button>
+            <button data-variation="violet" data-tooltip="Violet" class="ui button">Violet</button>
+            <button data-variation="purple" data-tooltip="Purple" class="ui button">Purple</button>
+            <button data-variation="pink" data-tooltip="Pink" class="ui button">Pink</button>
+            <button data-variation="brown" data-tooltip="Brown" class="ui button">Brown</button>
+            <button data-variation="grey" data-tooltip="Grey" class="ui button">Grey</button>
+            <button data-variation="black" data-tooltip="Black" class="ui button">Black</button>
+        </div>
+    </div>
 
     <h2 class="ui dividing header">Variations</h2>
 
@@ -256,7 +298,7 @@ themes      : ['Default']
       <i class="circular heart icon link" data-content="Hello. This is a wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
       <i class="circular heart icon link" data-content="Hello. This is a very wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="very wide"></i>
         <div class="ui info message">
-            Usually a popup inherits its default width by its parent container. This could lead into situations where popups appear too small, even when the <code>wide</code> or <code>very wide</code> class is given.<br>To overcome this, you can force a fixed width by also adding the <code>fixed</code> class to the popup.<br>You can also use this feature on css only tooltips by adding the <code>fixed</code> class to the <code>data-variation</code> property of your tooltip
+            Usually a popup inherits its default width by its parent container. This could lead into situations where popups appear too small, even when the <code>wide</code> or <code>very wide</code> class is given.<br>To overcome this, you can force a fixed width by also adding the <code>fixed</code> class to the popup.<br>You can also use this feature on css only tooltips by adding the <code>fixed</code> class to the <code>data-variation</code> attribute of your tooltip
         </div>
     </div>
 
@@ -316,6 +358,51 @@ themes      : ['Default']
       <div class="ui icon button" data-tooltip="Hello. This is an inverted popup" data-position="top left" data-inverted>
         <i class="add icon"></i>
       </div>
+    </div>
+
+    <div class="colored example">
+        <h4 class="ui header">Colored<span class="ui black label">New in 2.9.1</span></h4>
+        <p>A popup can have different colors</p>
+        <div class="ui spaced compact wrapping buttons">
+            <button class="ui button">Red</button>
+            <div class="ui red popup">Red</div>
+
+            <button class="ui button">Orange</button>
+            <div class="ui orange popup">Orange</div>
+
+            <button class="ui button">Yellow</button>
+            <div class="ui yellow popup">Yellow</div>
+
+            <button class="ui button">Olive</button>
+            <div class="ui olive popup">Olive</div>
+
+            <button class="ui button">Green</button>
+            <div class="ui green popup">Green</div>
+
+            <button class="ui button">Teal</button>
+            <div class="ui teal popup">Teal</div>
+
+            <button class="ui button">Blue</button>
+            <div class="ui blue popup">Blue</div>
+
+            <button class="ui button">Violet</button>
+            <div class="ui violet popup">Violet</div>
+
+            <button class="ui button">Purple</button>
+            <div class="ui purple popup">Purple</div>
+
+            <button class="ui button">Pink</button>
+            <div class="ui pink popup">Pink</div>
+
+            <button class="ui button">Brown</button>
+            <div class="ui brown popup">Brown</div>
+
+            <button class="ui button">Grey</button>
+            <div class="ui grey popup">Grey</div>
+
+            <button class="ui button">Black</button>
+            <div class="ui black popup">Black</div>
+        </div>
     </div>
   </div>
 
@@ -677,7 +764,7 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Specifying an offset</h4>
-      <p>A popup position can be adjusted manually by specifying an offset property using <code>data-offset="value"</code></p>
+      <p>A popup position can be adjusted manually by specifying an offset property using <code>data-offset="value"</code> or via <code>offset</code> setting</p>
 
       <i class="heart circular icon link" data-offset="50" data-content="As expected this popup is way off to the right"></i>
     </div>

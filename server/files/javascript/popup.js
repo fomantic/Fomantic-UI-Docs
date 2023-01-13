@@ -35,7 +35,7 @@ semantic.popup.ready = function() {
       }
     })
   ;
-  $('.example:not(.no')
+  $('.example:not(.no)')
     .popup('destroy')
   ;
 
@@ -51,6 +51,9 @@ semantic.popup.ready = function() {
     })
   ;
 
+  $('.colored.example .ui.button')
+    .popup()
+  ;
 
 };
 
