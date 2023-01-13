@@ -688,7 +688,6 @@ type        : 'UI Module'
           <td colspan="2">
             <div class="code">
             error         : {
-              container      : 'Sticky element must be inside a relative container',
               visible        : 'Element is hidden, you must call refresh after element becomes visible',
               method         : 'The method you called is not defined.',
               invalidContext : 'Context specified does not exist',

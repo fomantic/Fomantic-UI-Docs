@@ -455,7 +455,7 @@ themes      : ['Default']
           <td colspan="2">
             <div class="code">
       error   : {
-        action    : 'You called a rating action that was not defined'
+        method    : 'The method you called is not defined'
       }
             </div>
           </td>

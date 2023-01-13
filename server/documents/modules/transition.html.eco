@@ -885,7 +885,8 @@ type        : 'UI Module'
             <div class="code">
   errors   : {
     noAnimation : 'There is no CSS animation matching the one you specified.',
-    method      : 'The method you called is not defined'
+    method      : 'The method you called is not defined',
+    support     : 'This browser does not support CSS animations'
   }
             </div>
           </td>
