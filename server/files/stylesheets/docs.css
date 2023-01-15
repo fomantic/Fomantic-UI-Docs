@@ -46,9 +46,6 @@ footer.footer {
 /* Inline Code */
 pre {
   white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
   word-wrap: break-word;
 }
 pre {
@@ -153,7 +150,6 @@ blockquote .author {
 #example #toc > .ui.menu {
   max-height: 100%;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 /* Incomplete Label */
@@ -373,22 +369,6 @@ blockquote .author {
   height: auto;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-transition:
-    0.3s width ease,
-    0.5s transform ease
-;
-  -moz-transition:
-    0.3s width ease,
-    0.5s transform ease
-;
-  -o-transition:
-    0.3s width ease,
-    0.5s transform ease
-;
-  -ms-transition:
-    0.3s width ease,
-    0.5s transform ease
-;
   transition:
     0.3s width ease,
     0.5s transform ease
@@ -405,18 +385,6 @@ blockquote .author {
   top: auto;
   left: 54px;
   opacity: 0;
-  -webkit-transition:
-    0.3s opacity 0.3s
-;
-  -moz-transition:
-    0.3s opacity 0.3s
-;
-  -o-transition:
-    0.3s opacity 0.3s
-;
-  -ms-transition:
-    0.3s opacity 0.3s
-;
   transition:
     0.3s opacity 0.3s
 ;
@@ -485,7 +453,6 @@ blockquote .author {
   overflow: hidden;
   vertical-align: top;
   z-index: 0;
-  -webkit-transition: color 0.2s;
   transition: color 0.2s;
   outline: none;
 }
@@ -508,11 +475,9 @@ blockquote .author {
   height: 1px;
   background-color: #4183C4;
   content: '';
-  -webkit-transition: all 0.2s;
   -webkit-backface-visibility: hidden;
   transition: all 0.2s;
   backface-visibility: hidden;
-  -webkit-transform: scaleX(0);
   transform: scaleX(0);
 }
 
@@ -538,7 +503,6 @@ blockquote .author {
 #example .main.container .example > p a:focus:before,
 #example .main.container .code .value a:hover:before  {
   background-color: #2C76BF;
-  -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
@@ -667,7 +631,7 @@ blockquote .author {
 }
 
 #example .example:last-child {
-  margin-bottom: none;
+  margin-bottom: 0;
 }
 
 /* Header */
@@ -901,10 +865,6 @@ blockquote .author {
   font-size: 20px;
   color: #000000;
 
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
 
@@ -936,7 +896,6 @@ blockquote .author {
 #example .annotation pre code {
   min-width: 500px;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 
@@ -954,7 +913,7 @@ blockquote .author {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 #example .example > .html > .top.attached.label {
-  -moz-user-select: none;
+  -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
   display: none;
@@ -1123,7 +1082,6 @@ blockquote .author {
 }
 #example .highlighted.example .grid .column:not(.row):not(.grid):after {
   background-color: rgba(86, 61, 124, .1);
-  -webkit-box-shadow: 0 0 0 1px rgba(86, 61, 124, 0.2) inset;
   box-shadow: 0 0 0 1px rgba(86, 61, 124, 0.2) inset;
   content: "";
   display: block;
@@ -1156,7 +1114,6 @@ blockquote .author {
 #example .highlighted.special.example .ui.grid .grid .column:not(.row):not(.grid):after {
   display: block;
   background-color: rgba(186, 61, 84, 0.1);
-  -webkit-box-shadow: 0 0 0 1px rgba(186, 61, 84, 0.2) inset;
   box-shadow: 0 0 0 1px rgba(186, 61, 84, 0.2) inset;
 }
 
@@ -1177,23 +1134,15 @@ blockquote .author {
 #example.animated .highlighted.example > .grid,
 #example.animated .animated.example > .grid {
   margin: -1rem auto;
-  -webkit-animation: grid 7s ease infinite;
-  -moz-animation: grid 7s ease infinite;
   animation: grid 7s ease infinite;
 }
 #example.animated .negative.example .html > .grid,
 #example.animated .negative.example > .grid {
-  -webkit-animation: none;
-  -moz-animation: none;
-  -ms-animation: none;
   animation: none;
 }
 /* Grid Inside Grid */
 #example.animated .highlighted.example .grid .grid,
 #example.animated .animated.example .grid .grid {
-  -webkit-animation: none;
-  -moz-animation: none;
-  -ms-animation: none;
   animation: none;
 }
 
@@ -1208,34 +1157,6 @@ blockquote .author {
   font-weight: bold;
 }
 
-@-webkit-keyframes grid {
-  0% {
-    width: 100%;
-  }
-  45% {
-    width: 90%;
-  }
-  55% {
-    width: 90%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-moz-keyframes grid {
-  0% {
-    width: 100%;
-  }
-  45% {
-    width: 90%;
-  }
-  55% {
-    width: 90%;
-  }
-  100% {
-    width: 100%;
-  }
-}
 @keyframes grid {
   0% {
     width: 100%;
@@ -1337,52 +1258,21 @@ blockquote .author {
 
 /* Flash Animation */
 .main.container .highlight {
-  -moz-animation: highlight 2s ease-out;
-  -moz-animation-iteration-count: 1;
-  -webkit-animation: highlight 2s ease-out;
-  -webkit-animation-iteration-count: 1;
-  -ms-animation: highlight 2s ease-out;
-  -ms-animation-iteration-count: 1;
   animation: highlight 2s ease-out;
   animation-iteration-count: 1;
 }
 
-@-webkit-keyframes highlight {
+@keyframes highlight {
   0% {
-    background-color: none;
+    background: none;
   }
   30% {
     background-color: #ffff00;
   }
   100% {
-    background-color: none;
+    background: none;
   }
 }
-
-@-moz-keyframes highlight {
-  0% {
-    background-color: none;
-  }
-  30% {
-    background-color: #ffff00;
-  }
-  100% {
-    background-color: none;
-  }
-}
-
-@-ms-keyframes highlight {
-  0% {
-    background-color: none;
-  }
-  30% {
-    background-color: #ffff00;
-  }
-  100% {
-    background-color: none;
-  }
-}
-
 
 /*--------------
    Progress
@@ -1390,9 +1280,6 @@ blockquote .author {
 
 
 body.progress.animated .ui.progress .bar {
-  -webkit-animation: finish 10s ease-in-out infinite;
-  -moz-animation: finish 10s ease-in-out infinite;
-  -ms-animation: finish 10s ease-in-out infinite;
   animation: finish 10s ease-in-out infinite;
 }
 
@@ -1666,9 +1553,6 @@ code.code {
 
 code.code,
 code.code span {
-  -moz-transition: 0.5s color ease;
-  -webkit-transition: 0.5s color ease;
-  -ms-transition: 0.5s color ease;
   transition: 0.5s color ease;
 }
 code.code {
@@ -1809,7 +1693,6 @@ code.code .class b {
   line-height: 1;
   vertical-align: baseline;
   display: inline-block;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin: 0 -4px;
   padding: 1px 4px;
@@ -1837,7 +1720,6 @@ code .tag .value a {
   margin: 0 -2px;
   padding: 1px 4px;
   background-color: rgba(150, 150, 150, 0.1);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 code .tag .value a b {
@@ -1925,12 +1807,7 @@ code .chunk {
 *******************************/
 
 #example > .pusher > .full.height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 #example:not(.site) > .pusher > .full.height {
@@ -1943,9 +1820,6 @@ code .chunk {
   z-index: 1;
   background-color: #1b1c1d;
   width: 250px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 #example .full.height > .toc .ui.menu {
@@ -1954,16 +1828,11 @@ code .chunk {
   box-shadow: none;
   margin: 0;
   width: inherit;
-  overflow: hidden;
   will-change: transform;
   max-height: 100vh;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 #example .article {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-width: 0;
   margin-left: 250px;
@@ -2341,18 +2210,10 @@ div.footer-sponsor a {
 
   /* Add Sticky Footers */
   body.pushable > .pusher {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   body.pushable > .pusher > .full.height {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
   }
 
@@ -2365,9 +2226,6 @@ div.footer-sponsor a {
     display: none;
   }
   #example .masthead .main.menu + .main.menu {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -2390,8 +2248,6 @@ div.footer-sponsor a {
     max-width: none;
   }
   #example .advertisement .carbon-wrap {
-    -webkit-flex-direction: column-reverse;
-    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
 
     text-align: center;
