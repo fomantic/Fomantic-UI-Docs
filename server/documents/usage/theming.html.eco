@@ -197,7 +197,7 @@ type        : 'Usage'
     /* Global */
     @site       : 'material';  /* Loads material site defaults */
     @reset      : 'default';
-    
+
     /* Text */
     @placeholder: 'default';
     @text       : 'default';
@@ -312,7 +312,7 @@ type        : 'Usage'
 
   font-family: @fontFamily;
 
-  margin: 0em @horizontalMargin @verticalMargin 0em;
+  margin: 0 @horizontalMargin @verticalMargin 0;
   padding: @verticalPadding @horizontalPadding (@verticalPadding + @shadowOffset);
 
   text-transform: @textTransform;
