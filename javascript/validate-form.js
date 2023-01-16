@@ -411,16 +411,16 @@ semantic.validateForm.ready = function() {
     })
   ;
 
-  $('#btn_set_clean').click(function() {
+  $('#btn_set_clean').on('click',function() {
     $dirtyForm.form('set as clean');
   });
 
-  $('#btn_show_dirty').click(function() {
+  $('#btn_show_dirty').on('click',function() {
     var dirty_fields = $dirtyForm.form('get dirty fields');
 
     dirty_fields.each(function(_, element) {
       $('#dirty_form_console').append('dirty element: ' + element.name + '<br>');
-    }); 
+    });
   });
 };
 

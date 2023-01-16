@@ -1,44 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Standard Meta -->
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
 
-<!-- Site Properities -->
-<meta name="generator" content="DocPad v6.79.4" />
+<!-- Site Properties -->
+<meta name="generator" content="DocPad v6.83.2" />
 <title>Transition | Fomantic-UI Docs</title>
 
 <meta name="description" content="A transition is an animation usually used to move content in or out of view" />
 <meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
   
-  <script src="/javascript/library/jquery.js"></script>
 
-  <script src="/javascript/library/clipboard.js"></script>
-  <script src="/javascript/library/easing.js"></script>
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/history.js"></script>
-  <script src="/javascript/library/tablesort.js"></script>
-  <script src="/javascript/library/underscore.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
 
-
-
-<script src="/dist/semantic.min.js?v=2.9.0"></script>
-
+<script src="/dist/semantic.min.js?v=2.9.1"></script>
 <script src="/javascript/docs.js"></script>
-
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=2.9.0">
-
+  <link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.1">
 
 
-<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
-<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
-
-
-
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rtl.css">
 
 
   
@@ -418,7 +410,6 @@
     
   </div>
 </div>
-
 </div>
 
 <div class="ui black big launch right attached fixed button">
@@ -442,6 +433,9 @@
     
     <div class="right menu">
       
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
       
       <!--
       <div class="item">
@@ -457,7 +451,6 @@
     </div>
   </div>
 </div>
-
   <div class="pusher">
     <div class="full height">
       <div class="toc">
@@ -832,7 +825,6 @@
     
   </div>
 </div>
-
         </div>
       </div>
       <div class="article">
@@ -848,14 +840,14 @@
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.0 is the official community fork of Semantic-UI&#010;Find the transition module here"
+            data-text="Fomantic-UI 2.9.1 is the official community fork of Semantic-UI&#010;Find the transition module here"
             data-url="https://fomantic-ui.com/modules/transition.html"
             data-via="fomanticui">
           </a>
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
-          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          <iframe title="github star button" class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           A transition is an animation usually used to move content in or out of view
         </div>
       </h1>
@@ -916,7 +908,6 @@
     
   </div>
 </div>
-
 <script src="/javascript/transition.js"></script>
 
 <div class="main ui container">
@@ -1102,6 +1093,43 @@
       </div>
 
       <h2 class="ui dividing header">Static Animations</h2>
+      <div class="ui ignored info message">
+        Static animation class names can be added without the need of setting them via javascript.
+        <div class="ui looping pulsating transition button">
+            CSS only transition
+        </div>
+        <div class="code" data-type="html">
+            <div class="ui looping pulsating transition button">
+                CSS only transition
+            </div>
+        </div>
+      </div>
+      <div class="no example">
+        <h4 class="ui header">
+          Pulsating
+        <div class="ui black label">New in 2.9.1</div>
+        </h4>
+        <p>An element can have pulsating edges. This works best on circular or square elements.</p>
+        <div class="ui ignored message">
+            When <code>pulsating</code> is used on colorable elements like button or label, the pulsating color adopts its element color
+            <p>
+              <div class="ui transition looping pulsating green label">
+                Label
+              </div>
+              <div class="ui transition looping pulsating blue circular label">
+                8
+              </div>
+              <div class="ui transition looping pulsating purple button">
+                Button
+              </div>
+            </p>
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+            .transition('pulsating')
+        ;
+      </div>
+    </div>
 
       <div class="no example">
         <h4 class="ui header">Jiggle</h4>
@@ -1754,7 +1782,8 @@
             <div class="code">
   errors   : {
     noAnimation : 'There is no CSS animation matching the one you specified.',
-    method      : 'The method you called is not defined'
+    method      : 'The method you called is not defined',
+    support     : 'This browser does not support CSS animations'
   }
             </div>
           </td>
@@ -1825,7 +1854,6 @@
     </div>
   </div>
 </footer>
-
       </div>
     </div>
   </div>
@@ -1851,8 +1879,7 @@ window.less = {
 };
 </script>
 
-<script src="/javascript/library/less.js"></script>
-
+<script src="/javascript/library/less.min.js"></script>
 
 </body>
 </html>

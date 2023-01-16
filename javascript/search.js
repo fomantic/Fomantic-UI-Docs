@@ -312,7 +312,7 @@ semantic.search.ready = function() {
   $mapping
     .search({
       apiSettings: {
-        url: '//api.github.com/search/repositories?q={query}',
+        url: 'https://api.github.com/search/repositories?q={query}',
         cache: true
       },
       fields: {
@@ -374,7 +374,7 @@ semantic.search.ready = function() {
           });
           return response;
         },
-        url: '//api.github.com/search/repositories?q={query}'
+        url: 'https://api.github.com/search/repositories?q={query}'
       }
     })
   ;

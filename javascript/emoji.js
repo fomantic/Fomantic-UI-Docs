@@ -67,7 +67,7 @@ semantic.emoji.ready = function() {
     $example.append($('<div>',{class:'ui doubling five column grid'}));
     $emojiContainer.append($example);
 
-    var $moreButton = $('<a>',{class:'emoji-category-button',text:'Show more '+cat+' emojis', 'data-chunkpos':0,'data-category':cat, click:addEmojiChunk});
+    var $moreButton = $('<a>',{class:'emoji-category-button',text:'Show more '+cat+' emojis', 'data-chunkpos':0,'data-category':cat, on:{click:addEmojiChunk}});
     $moreButton.append($('<i>', {class:'ui angle down icon'}));
 
     $emojiContainer.append($moreButton);
@@ -75,7 +75,7 @@ semantic.emoji.ready = function() {
     categories[cat].sort(function(a,b){
       return (a.shortname<b.shortname?-1:a.shortname>b.shortname?1:0);
     });
-    $moreButton.click();
+    $moreButton.trigger('click');
   });
 
   $('emojiSearch.ui.search')
@@ -115,7 +115,7 @@ semantic.emoji.ready = function() {
         var
             $search = $('emojiSearch .input > input')
         ;
-        $search.blur();
+        $search.trigger('blur');
         $.toast({
           class: 'inverted',
           compact: false,

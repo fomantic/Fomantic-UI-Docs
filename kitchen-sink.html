@@ -1,44 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Standard Meta -->
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
 
-<!-- Site Properities -->
-<meta name="generator" content="DocPad v6.79.4" />
+<!-- Site Properties -->
+<meta name="generator" content="DocPad v6.83.2" />
 <title>All UI | Fomantic-UI Docs</title>
 
 <meta name="description" content="Examples of all user interface elements" />
 <meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
   
-  <script src="/javascript/library/jquery.js"></script>
 
-  <script src="/javascript/library/clipboard.js"></script>
-  <script src="/javascript/library/easing.js"></script>
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/history.js"></script>
-  <script src="/javascript/library/tablesort.js"></script>
-  <script src="/javascript/library/underscore.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
 
-
-
-<script src="/dist/semantic.min.js?v=2.9.0"></script>
-
+<script src="/dist/semantic.min.js?v=2.9.1"></script>
 <script src="/javascript/docs.js"></script>
-
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=2.9.0">
-
+  <link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.1">
 
 
-<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
-<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
-
-
-
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rtl.css">
 
 
   
@@ -418,7 +410,6 @@
     
   </div>
 </div>
-
 </div>
 
 <div class="ui black big launch right attached fixed button">
@@ -442,6 +433,9 @@
     
     <div class="right menu">
       
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
       
       <!--
       <div class="item">
@@ -457,7 +451,6 @@
     </div>
   </div>
 </div>
-
   <div class="pusher">
     <div class="full height">
       <div class="toc">
@@ -832,7 +825,6 @@
     
   </div>
 </div>
-
         </div>
       </div>
       <div class="article">
@@ -848,14 +840,14 @@
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.0 is the official community fork of Semantic-UI&#010;Find the   here"
+            data-text="Fomantic-UI 2.9.1 is the official community fork of Semantic-UI&#010;Find the   here"
             data-url="https://fomantic-ui.com/s/.html"
             data-via="fomanticui">
           </a>
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
-          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          <iframe title="github star button" class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           Examples of all user interface elements
         </div>
       </h1>
@@ -907,7 +899,6 @@
     
   </div>
 </div>
-
 
 <div class="main demo ui container">
 
@@ -1974,7 +1965,7 @@ $('.button.demo .follow')
 <style type="text/css">
 .demo.icons .icon {
   font-size: 16px;
-  margin: 0em 4px 8px;
+  margin: 0 4px 8px;
 }
 </style>
     </div>
@@ -2600,7 +2591,6 @@ $('.button.demo .follow')
   <br><br>
   <br><br>
 </div>
-
     </div>
     <div class="example">
       <h4 class="ui header">
@@ -2688,7 +2678,6 @@ $('.button.demo .follow')
     <img src="/images/avatar/large/laura.jpg" class="ui small bordered circular image">
   </div>
 </div>
-
     </div>
     <div class="example">
       <h4 class="ui header">
@@ -3494,7 +3483,7 @@ $('.button.demo .follow')
 }
 
 .demo .grid.nested.examples .grid .grid {
-  box-shadow: 0px 0px 0px 1px #F0F0F0 inset;
+  box-shadow: 0 0 0 1px #F0F0F0 inset;
 }
 .demo .grid.nested.examples .grid .grid .column:after {
   background-color: #AAAAAA;
@@ -3512,8 +3501,8 @@ $('.button.demo .follow')
 
 /* Animation */
 .demo .grid.examples {
-  margin: 0em !important;
-  padding: 0em !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 </style>
@@ -4058,7 +4047,6 @@ $(document)
   })
 ;
 </script>
-
     </div>
     <div class="example">
       <h4 class="ui header">
@@ -4365,7 +4353,6 @@ $(document)
     </div>
   </div>
 </div>
-
     </div>
   </div>
   <div class="ui tab" data-tab="modules">
@@ -4649,10 +4636,10 @@ $(document)
 
 <style type="text/css">
   .dimmer.demo:not(.page) {
-    margin: 2em 0em;
+    margin: 2em 0;
   }
   h4 + .dimmer.demo {
-    margin-top: 0em;
+    margin-top: 0;
   }
 </style>
 <script type="text/javascript">
@@ -5175,7 +5162,6 @@ $(document)
   })
 ;
 </script>
-
     </div>
     <div class="example">
       <h4 class="ui header">
@@ -6288,7 +6274,7 @@ $(document)
             direction  = $('.sidebar.direction.demo .buttons .button.active').data('direction'),
             dimPage    = $('.sidebar.direction.demo .dim').checkbox('is checked')
           ;
-          if( $(this).filter('.disabled').size() === 0) {
+          if( $(this).filter('.disabled').length === 0) {
             $('.' + direction + '.demo.sidebar')
               .not('.styled')
               .sidebar('setting', {
@@ -6486,7 +6472,6 @@ $(document)
     </div>
   </div>
 </footer>
-
       </div>
     </div>
   </div>
@@ -6512,8 +6497,7 @@ window.less = {
 };
 </script>
 
-<script src="/javascript/library/less.js"></script>
-
+<script src="/javascript/library/less.min.js"></script>
 
 </body>
 </html>

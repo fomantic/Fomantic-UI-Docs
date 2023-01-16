@@ -283,7 +283,7 @@ semantic.ready = function() {
     },
 
     getPageTitle: function() {
-      return $.trim($('h1').eq(0).contents().filter(function() { return this.nodeType == 3; }).text().toLowerCase());
+      return $('h1').eq(0).contents().filter(function() { return this.nodeType == 3; }).text().toLowerCase().trim();
     },
     getSafeName: function(text) {
       return text.replace(/\s+/g, '-').replace(/[^-,'A-Za-z0-9]+/g, '').toLowerCase();
@@ -434,12 +434,12 @@ semantic.ready = function() {
         if(lines) {
           $.each(lines, function(index, line) {
             // clear whitespace
-            line = $.trim(line);
+            line = line.trim();
             // match variables only
             if(line[0] == '@') {
               name = line.match(/^@(.+?):/);
               value = line.match(/:\s*([\s|\S]+?;)/);
-              if( ($.isArray(name) && name.length >= 2) && ($.isArray(value) && value.length >= 2) ) {
+              if( (Array.isArray(name) && name.length >= 2) && (Array.isArray(value) && value.length >= 2) ) {
                 name = name[1];
                 value = value[1];
                 variables[name] = value;
@@ -872,7 +872,7 @@ semantic.ready = function() {
         // check if any class match
         $.each(classes, function(index, string) {
           var
-            className      = $.trim(string),
+            className      = string.trim(),
             isClassMatch   = (html.search(className) !== -1)
           ;
           if(className === '') {
@@ -923,7 +923,7 @@ semantic.ready = function() {
         indent     = handler.getIndent(code) || 2,
         whiteSpace = new RegExp('\\n\\s{' + indent + '}', 'g')
       ;
-      return $.trim(code).replace(whiteSpace, '\n');
+      return code.trim().replace(whiteSpace, '\n');
     },
 
     initializeCode: function(codeSample) {
@@ -1318,7 +1318,7 @@ semantic.ready = function() {
     categorySearch     : '/categories.json',
     getOverrides       : '/src/themes/{$theme}/{$type}s/{$element}.overrides',
     getVariables       : '/src/themes/{$theme}/{$type}s/{$element}.variables',
-    search             : '//api.github.com/search/repositories?q={query}'
+    search             : 'https://api.github.com/search/repositories?q={query}'
   });
 
 

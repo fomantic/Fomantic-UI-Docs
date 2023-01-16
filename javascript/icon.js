@@ -64,7 +64,12 @@ semantic.icon.ready = function() {
     $iconSearch
       .search({
         type          : 'category',
-        fullTextSearch: true,
+        fullTextSearch: 'all',
+        searchFields: [
+          'category',
+          'icon',
+          'description',
+        ],
         minCharacters : 1,
         maxResults    : 10,
         cache         : false,
@@ -85,7 +90,7 @@ semantic.icon.ready = function() {
                   ;
                   return iconHTML;
                 }
-            });
+              });
             });
           }, 0);
         },
@@ -93,7 +98,7 @@ semantic.icon.ready = function() {
           var
             $search = $('iconSearch .input > input')
           ;
-          $search.blur();
+          $search.trigger('blur');
           $.toast({
             class: 'inverted',
             compact: false,
@@ -109,19 +114,19 @@ semantic.icon.ready = function() {
   }
 
   // only show icon category when visible on screen
-  $(document).scroll(checkIconVisibility);
-  $(window).resize(checkIconVisibility);
+  $(document).on('scroll', checkIconVisibility);
+  $(window).on('resize', checkIconVisibility);
 
   checkIconVisibility();
-  
-  
+
+
   // check if icon list tab is selected (if so run the check visibility function)
   var tab = $('.ui.two.item.stackable.tabs > a').get(0);
 
   var observer = new MutationObserver(function() {
     checkIconVisibility();
   });
-  
+
   observer.observe(tab, {
     attributes: true,
     attributeFilter: ['class'],

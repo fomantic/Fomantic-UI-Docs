@@ -1,44 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Standard Meta -->
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
 
-<!-- Site Properities -->
-<meta name="generator" content="DocPad v6.79.4" />
+<!-- Site Properties -->
+<meta name="generator" content="DocPad v6.83.2" />
 <title>Label | Fomantic-UI Docs</title>
 
 <meta name="description" content="A label displays content classification" />
 <meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
   
-  <script src="/javascript/library/jquery.js"></script>
 
-  <script src="/javascript/library/clipboard.js"></script>
-  <script src="/javascript/library/easing.js"></script>
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/history.js"></script>
-  <script src="/javascript/library/tablesort.js"></script>
-  <script src="/javascript/library/underscore.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
 
-
-
-<script src="/dist/semantic.min.js?v=2.9.0"></script>
-
+<script src="/dist/semantic.min.js?v=2.9.1"></script>
 <script src="/javascript/docs.js"></script>
-
-  <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=2.9.0">
-
+  <link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.1">
 
 
-<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
-<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
-
-
-
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rtl.css">
 
 
   
@@ -418,7 +410,6 @@
     
   </div>
 </div>
-
 </div>
 
 <div class="ui black big launch right attached fixed button">
@@ -442,6 +433,9 @@
     
     <div class="right menu">
       
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
       
       <!--
       <div class="item">
@@ -457,7 +451,6 @@
     </div>
   </div>
 </div>
-
   <div class="pusher">
     <div class="full height">
       <div class="toc">
@@ -832,7 +825,6 @@
     
   </div>
 </div>
-
         </div>
       </div>
       <div class="article">
@@ -850,14 +842,14 @@
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.0 is the official community fork of Semantic-UI&#010;Find the label element here"
+            data-text="Fomantic-UI 2.9.1 is the official community fork of Semantic-UI&#010;Find the label element here"
             data-url="https://fomantic-ui.com/elements/label.html"
             data-via="fomanticui">
           </a>
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
-          <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          <iframe title="github star button" class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           A label displays content classification
         </div>
       </h1>
@@ -895,7 +887,6 @@
     
   </div>
 </div>
-
 
 <div class="main ui container">
 
@@ -1105,7 +1096,7 @@
       <div class="column">
         <div class="ui fluid image">
           <div class="ui black ribbon right icon label">
-            Hotel <i class="hotel icon"></i> 
+            Hotel <i class="hotel icon"></i>
           </div>
           <img src="/images/wireframe/image.png">
         </div>
@@ -1125,7 +1116,7 @@
       <div class="column">
         <div class="ui fluid image">
           <div class="ui black ribbon icon label">
-            <i class="hotel icon"></i> 
+            <i class="hotel icon"></i>
           </div>
           <img src="/images/wireframe/image.png">
         </div>
@@ -1318,6 +1309,61 @@
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Inverted <span class="ui black label">New in 2.7</span></h4>
+    <p>All Variants of Label can be inverted</p>
+    <div class="ui inverted segment" >
+        <a class="ui primary inverted label">Primary</a>
+        <a class="ui secondary inverted label">Secondary</a>
+        <a class="ui red inverted label">Red</a>
+        <a class="ui orange inverted label">Orange</a>
+        <a class="ui yellow inverted label">Yellow</a>
+        <a class="ui olive inverted label">Olive</a>
+        <a class="ui green inverted label">Green</a>
+        <a class="ui teal inverted label">Teal</a>
+        <a class="ui blue inverted label">Blue</a>
+        <a class="ui violet inverted label">Violet</a>
+        <a class="ui purple inverted label">Purple</a>
+        <a class="ui pink inverted label">Pink</a>
+        <a class="ui brown inverted label">Brown</a>
+        <a class="ui grey inverted label">Grey</a>
+        <a class="ui black inverted label">Black</a>
+        <p></p>
+        <a class="ui primary inverted basic label">Primary</a>
+        <a class="ui secondary inverted basic label">Secondary</a>
+        <a class="ui red inverted basic label">Red</a>
+        <a class="ui orange inverted basic label">Orange</a>
+        <a class="ui yellow inverted basic label">Yellow</a>
+        <a class="ui olive inverted basic label">Olive</a>
+        <a class="ui green inverted basic label">Green</a>
+        <a class="ui teal inverted basic label">Teal</a>
+        <a class="ui blue inverted basic label">Blue</a>
+        <a class="ui violet inverted basic label">Violet</a>
+        <a class="ui purple inverted basic label">Purple</a>
+        <a class="ui pink inverted basic label">Pink</a>
+        <a class="ui brown inverted basic label">Brown</a>
+        <a class="ui grey inverted basic label">Grey</a>
+        <a class="ui black inverted basic label">Black</a>
+        <p></p>
+        <a class="ui inverted tag label">Tag</a>
+        <a class="ui primary inverted tag label">Primary</a>
+        <a class="ui secondary inverted tag label">Secondary</a>
+        <a class="ui red inverted tag label">Red</a>
+        <a class="ui orange inverted tag label">Orange</a>
+        <a class="ui yellow inverted tag label">Yellow</a>
+        <a class="ui olive inverted tag label">Olive</a>
+        <a class="ui green inverted tag label">Green</a>
+        <a class="ui teal inverted tag label">Teal</a>
+        <a class="ui blue inverted tag label">Blue</a>
+        <a class="ui violet inverted tag label">Violet</a>
+        <a class="ui purple inverted tag label">Purple</a>
+        <a class="ui pink inverted tag label">Pink</a>
+        <a class="ui brown inverted tag label">Brown</a>
+        <a class="ui grey inverted tag label">Grey</a>
+        <a class="ui black inverted tag label">Black</a>
+    </div>
+  </div>
+
   <h2 class="ui dividing header">Content</h2>
 
   <div class="example" data-use-content="true">
@@ -1349,7 +1395,7 @@
       Cat
     </div>
   </div>
-  
+
   <div class="another example" data-use-content="true">
     <div class="ignored ui info message">Icons can be placed to the right inside a label.</div>
 
@@ -1442,9 +1488,28 @@
     </div>
   </div>
 
+  <h2 class="ui dividing header">States</h2>
+
+  <div class="example">
+    <h4 class="ui header">Disabled</h4>
+    <p>A label can show it is currently unable to be interacted with</p>
+    <a class="ui disabled label">
+      Disabled Label
+    </a>
+  </div>
+
   <h2 class="ui dividing header">Variations</h2>
 
-
+  <div class="example">
+    <h4 class="ui header">Fluid</h4>
+    <p>A label can take the width of its container</p>
+    <div class="ui fluid label">Fits container</div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Centered <span class="ui black label">New in 2.9.1</span></h4>
+    <p>Text can be shown centered</p>
+    <div class="ui fluid centered label">Fits container</div>
+  </div>
   <div class="example" data-class="empty circular, circular">
     <h4 class="ui header">Circular</h4>
     <p>A label can be circular</p>
@@ -1676,65 +1741,6 @@
       </a>
     </div>
   </div>
-
- <h2 class="ui dividing header">Inverted
-    <div class="ui black label">New in 2.7</div>
-  </h2>
-
- <div class="example">
-    <h4 class="ui header">All Variants of Label can be inverted</h4>
-    <div class="ui inverted segment" >
-        <a class="ui primary inverted label">Primary</a>
-        <a class="ui secondary inverted label">Secondary</a>
-        <a class="ui red inverted label">Red</a>
-        <a class="ui orange inverted label">Orange</a>
-        <a class="ui yellow inverted label">Yellow</a>
-        <a class="ui olive inverted label">Olive</a>
-        <a class="ui green inverted label">Green</a>
-        <a class="ui teal inverted label">Teal</a>
-        <a class="ui blue inverted label">Blue</a>
-        <a class="ui violet inverted label">Violet</a>
-        <a class="ui purple inverted label">Purple</a>
-        <a class="ui pink inverted label">Pink</a>
-        <a class="ui brown inverted label">Brown</a>
-        <a class="ui grey inverted label">Grey</a>
-        <a class="ui black inverted label">Black</a>
-        <p></p>
-        <a class="ui primary inverted basic label">Primary</a>
-        <a class="ui secondary inverted basic label">Secondary</a>
-        <a class="ui red inverted basic label">Red</a>
-        <a class="ui orange inverted basic label">Orange</a>
-        <a class="ui yellow inverted basic label">Yellow</a>
-        <a class="ui olive inverted basic label">Olive</a>
-        <a class="ui green inverted basic label">Green</a>
-        <a class="ui teal inverted basic label">Teal</a>
-        <a class="ui blue inverted basic label">Blue</a>
-        <a class="ui violet inverted basic label">Violet</a>
-        <a class="ui purple inverted basic label">Purple</a>
-        <a class="ui pink inverted basic label">Pink</a>
-        <a class="ui brown inverted basic label">Brown</a>
-        <a class="ui grey inverted basic label">Grey</a>
-        <a class="ui black inverted basic label">Black</a>
-        <p></p>
-        <a class="ui inverted tag label">Tag</a>
-        <a class="ui primary inverted tag label">Primary</a>
-        <a class="ui secondary inverted tag label">Secondary</a>
-        <a class="ui red inverted tag label">Red</a>
-        <a class="ui orange inverted tag label">Orange</a>
-        <a class="ui yellow inverted tag label">Yellow</a>
-        <a class="ui olive inverted tag label">Olive</a>
-        <a class="ui green inverted tag label">Green</a>
-        <a class="ui teal inverted tag label">Teal</a>
-        <a class="ui blue inverted tag label">Blue</a>
-        <a class="ui violet inverted tag label">Violet</a>
-        <a class="ui purple inverted tag label">Purple</a>
-        <a class="ui pink inverted tag label">Pink</a>
-        <a class="ui brown inverted tag label">Brown</a>
-        <a class="ui grey inverted tag label">Grey</a>
-        <a class="ui black inverted tag label">Black</a>
-    </div>
- </div>
-
 </div>
         <footer class="ui vertical footer segment">
   <div class="ui container">
@@ -1797,7 +1803,6 @@
     </div>
   </div>
 </footer>
-
       </div>
     </div>
   </div>
@@ -1823,8 +1828,7 @@ window.less = {
 };
 </script>
 
-<script src="/javascript/library/less.js"></script>
-
+<script src="/javascript/library/less.min.js"></script>
 
 </body>
 </html>
