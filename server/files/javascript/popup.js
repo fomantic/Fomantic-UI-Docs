@@ -55,6 +55,13 @@ semantic.popup.ready = function() {
     .popup()
   ;
 
+  $('.loading.example .ui.image')
+    .popup({
+        closable:false,
+        on: 'hover'
+    }).popup('show')
+  ;
+
 };
 
 
