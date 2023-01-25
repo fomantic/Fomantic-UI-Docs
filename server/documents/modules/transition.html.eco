@@ -711,13 +711,18 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>duration</td>
-          <td>500ms</td>
+          <td>false</td>
           <td>Duration of the CSS transition animation</td>
         </tr>
         <tr>
           <td>useFailSafe</td>
           <td>true</td>
           <td>If enabled a <code>timeout</code> will be added to ensure <code>animationend</code> callback occurs even if element is hidden</td>
+        </tr>
+        <tr>
+          <td>failSafeDelay</td>
+          <td>100</td>
+          <td>Delay in ms for fail safe</td>
         </tr>
         <tr>
           <td>allowRepeats</td>
