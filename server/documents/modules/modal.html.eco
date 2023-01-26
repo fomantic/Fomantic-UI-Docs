@@ -210,8 +210,8 @@ themes      : ['Default', 'Material']
       </div>
     </div>
     <div class="actions">
-      <div class="ui button">Cancel</div>
-      <div class="ui green button">Send</div>
+      <button class="ui button">Cancel</button>
+      <button class="ui green button">Send</button>
     </div>
   </div>
 
@@ -369,13 +369,13 @@ themes      : ['Default', 'Material']
       </div>
     </div>
     <div class="actions">
-      <div class="ui black deny button">
+      <button class="ui black deny button">
         Nope
-      </div>
-      <div class="ui positive right labeled icon button">
+      </button>
+      <button class="ui positive right labeled icon button">
         Yep, that's me
         <i class="checkmark icon"></i>
-      </div>
+      </button>
     </div>
   </div>
   <div class="ui standard test modal">
@@ -393,13 +393,13 @@ themes      : ['Default', 'Material']
       </div>
     </div>
     <div class="actions">
-      <div class="ui black deny button">
+      <button class="ui black deny button">
         Nope
-      </div>
-      <div class="ui positive right labeled icon button">
+      </button>
+      <button class="ui positive right labeled icon button">
         Yep, that's me
         <i class="checkmark icon"></i>
-      </div>
+      </button>
     </div>
   </div>
   <div class="ui reuse modal" id="reusemodal">
@@ -440,13 +440,13 @@ themes      : ['Default', 'Material']
             </div>
           </div>
           <div class="actions">
-            <div class="ui black deny button">
+            <button class="ui black deny button">
               Nope
-            </div>
-            <div class="ui positive right labeled icon button">
+            </button>
+            <button class="ui positive right labeled icon button">
               Yep, that's me
               <i class="checkmark icon"></i>
-            </div>
+            </button>
           </div>
         </div>
       </div>

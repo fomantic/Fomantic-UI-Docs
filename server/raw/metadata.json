@@ -619,7 +619,7 @@
     "standalone": true,
     "element": "slider",
     "elementType": "module",
-    "title": "Toast",
+    "title": "Slider",
     "description": "A slider allows users to select values within a range",
     "type": "UI Module",
     "themes": [
