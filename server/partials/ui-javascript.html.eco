@@ -1,1 +1,5 @@
+<% if 'development' in @getEnvironments(): %>
+<script src="/dist/semantic.js?v=<%= @getVersion() %>"></script>
+<% else: %>
 <script src="/dist/semantic.min.js?v=<%= @getVersion() %>"></script>
+<% end: %>

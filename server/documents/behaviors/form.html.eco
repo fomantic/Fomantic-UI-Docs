@@ -13,7 +13,6 @@ type        : 'UI Behavior'
 ---
 
 
-<script src="/dist/components/form.js"></script>
 <script src="/javascript/validate-form.js"></script>
 
 <%- @partial('header', { tabs: { usage: 'Usage', examples: 'Examples', settings: 'Settings'} }) %>

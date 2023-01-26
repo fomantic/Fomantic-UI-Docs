@@ -284,10 +284,6 @@ themes      : ['Default']
           <td>Removes any inline stylesheets for sidebar animation</td>
         </tr>
         <tr>
-          <td>get transition event</td>
-          <td>Returns vendor prefixed transition end event</td>
-        </tr>
-        <tr>
           <td>destroy</td>
           <td>Destroys instance and removes all events</td>
         </tr>
