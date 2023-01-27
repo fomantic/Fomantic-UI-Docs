@@ -1434,11 +1434,32 @@ themes      : ['Default', 'GitHub', 'Material']
     <div class="dropdown example">
       <h4 class="ui header">Compact</h4>
       <p>A compact dropdown has no minimum width</p>
+      <div class="ui ignored info message">
+          If you want menu items to linebreak on whitespace, use <code>multiline menu</code> as classname for the menu node
+      </div>
       <div class="ui compact selection dropdown">
         <i class="dropdown icon"></i>
         <div class="text">Compact</div>
         <div class="menu">
           <div class="item">A</div>
+          <div class="item">B</div>
+          <div class="item">C</div>
+        </div>
+      </div>
+      <div class="ui compact selection dropdown">
+        <i class="dropdown icon"></i>
+        <div class="text">Compact</div>
+        <div class="menu">
+          <div class="item">A very lone line here</div>
+          <div class="item">B</div>
+          <div class="item">C</div>
+        </div>
+      </div>
+      <div class="ui compact selection dropdown">
+        <i class="dropdown icon"></i>
+        <div class="text">Compact</div>
+        <div class="multiline menu">
+          <div class="item">A very long multiline here</div>
           <div class="item">B</div>
           <div class="item">C</div>
         </div>
