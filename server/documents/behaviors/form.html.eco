@@ -499,6 +499,11 @@ type        : 'UI Behavior'
             <td>A field is less than a max length</td>
             <td><code>maxLength[50]</code></td>
           </tr>
+          <tr>
+            <td>size <span class="ui mini black label">New in 2.9.2</span></td>
+            <td>A field has a size between min and max characters</td>
+            <td><code>size[6..12]</code></td>
+          </tr>
         </tbody>
       </table>
 
@@ -2183,6 +2188,7 @@ type        : 'UI Behavior'
                 minLength            : '{name} must be at least {ruleValue} characters',
                 exactLength          : '{name} must be exactly {ruleValue} characters',
                 maxLength            : '{name} cannot be longer than {ruleValue} characters',
+                size                 : '{name} must have a length between {min} and {max} characters',
                 match                : '{name} must match {ruleValue} field',
                 different            : '{name} must have a different value than {ruleValue} field',
                 creditCard           : '{name} must be a valid credit card number',
