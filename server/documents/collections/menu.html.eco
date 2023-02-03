@@ -266,7 +266,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <div class="ui grid">
-      <div class="four wide column">
+      <div class="four wide right attached column">
         <div class="ui vertical fluid tabular menu">
           <a class="active item">
             Bio
@@ -282,8 +282,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
           </a>
         </div>
       </div>
-      <div class="twelve wide stretched column">
-        <div class="ui segment">
+      <div class="twelve wide stretched left attached column">
+        <div class="ui left attached segment">
           This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
@@ -291,12 +291,12 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <div class="ui grid">
-      <div class="twelve wide stretched column">
-        <div class="ui segment">
+      <div class="twelve wide stretched right attached column">
+        <div class="ui right attached segment">
           This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
-      <div class="four wide column">
+      <div class="four wide left attached column">
         <div class="ui vertical fluid right tabular menu">
           <a class="active item">
             Bio
