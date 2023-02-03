@@ -461,14 +461,14 @@ themes      : ['default', 'GitHub']
   </div>
 
   <div class="example">
-      <h4 class="ui header">Left / Right Attached <span class="ui black label">New in 2.9.2</span></h4>
-      <p>A segment can be attached to the left or right removing the sides padding <b>and</b> border to be seamlessly attached.  This is especially useful when working with a <a href="/collections/menu.html#tabular"><code>vertical tabular menu</code></a></p>
+      <h4 class="ui header">Seamless attached <span class="ui black label">New in 2.9.2</span></h4>
+      <p>A segment can be seamless attached removing the related sides border. This is especially useful when working with a <a href="/collections/menu.html#tabular"><code>vertical tabular menu</code></a></p>
       <div class="ui horizontal segments">
-          <div class="ui right attached right aligned segment">
-            <p>This segment is right attached</p>
+          <div class="ui seamless left attached right aligned segment">
+            <p>This segment is seamless left attached</p>
           </div>
-          <div class="ui left attached segment">
-            <p>This segment is left attached</p>
+          <div class="ui seamless right attached segment">
+            <p>This segment is seamless right attached</p>
           </div>
       </div>
   </div>

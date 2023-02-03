@@ -206,8 +206,8 @@ themes      : ['Default']
       <h4 class="ui header">Left / Right Attached Column <span class="ui black label">New in 2.9.2</span></h4>
       <p>A column can be attached to the left or right without any padding. This is especially useful when working with a <a href="/collections/menu.html#tabular"><code>vertical tabular menu</code></a></p>
       <div class="ui two column grid">
-        <div class="right attached column"></div>
         <div class="left attached column"></div>
+        <div class="right attached column"></div>
       </div>
     </div>
 
