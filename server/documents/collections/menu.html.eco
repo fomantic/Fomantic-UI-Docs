@@ -265,8 +265,11 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another example">
+    <div class="ui ignored info message">
+        To make a vertical tabular menu appear seamless attached to the related segment, you should make use of <a href="/collections/grid.html#left--right-attached-column">left/right attached grid columns</a> and <a href="/elements/segment.html#seamless-attached">seamless attached segments</a>
+    </div>
     <div class="ui grid">
-      <div class="four wide right attached column">
+      <div class="four wide left attached column">
         <div class="ui vertical fluid tabular menu">
           <a class="active item">
             Bio
@@ -282,8 +285,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
           </a>
         </div>
       </div>
-      <div class="twelve wide stretched left attached column">
-        <div class="ui left attached segment">
+      <div class="twelve wide stretched right attached column">
+        <div class="ui seamless right attached segment">
           This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
@@ -291,12 +294,12 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <div class="ui grid">
-      <div class="twelve wide stretched right attached column">
-        <div class="ui right attached segment">
+      <div class="twelve wide stretched left attached column">
+        <div class="ui seamless left attached segment">
           This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
-      <div class="four wide left attached column">
+      <div class="four wide right attached column">
         <div class="ui vertical fluid right tabular menu">
           <a class="active item">
             Bio

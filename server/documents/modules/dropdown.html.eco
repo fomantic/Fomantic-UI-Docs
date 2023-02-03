@@ -1450,7 +1450,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <i class="dropdown icon"></i>
         <div class="text">Compact</div>
         <div class="menu">
-          <div class="item">A very lone line here</div>
+          <div class="item">A very long line here</div>
           <div class="item">B</div>
           <div class="item">C</div>
         </div>
