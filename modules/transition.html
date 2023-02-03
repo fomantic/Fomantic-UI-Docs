@@ -24,9 +24,13 @@
   <script src="/javascript/library/tablesort.min.js"></script>
   <script src="/javascript/library/underscore.min.js"></script>
 
-<script src="/dist/semantic.min.js?v=2.9.1"></script>
+
+<script src="/dist/semantic.min.js?v=2.9.2"></script>
+
 <script src="/javascript/docs.js"></script>
-  <link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.1">
+  
+<link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.2">
+
 
 
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
@@ -840,7 +844,7 @@
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.1 is the official community fork of Semantic-UI&#010;Find the transition module here"
+            data-text="Fomantic-UI 2.9.2 is the official community fork of Semantic-UI&#010;Find the transition module here"
             data-url="https://fomantic-ui.com/modules/transition.html"
             data-via="fomanticui">
           </a>
@@ -1539,14 +1543,6 @@
             <td>Adds back cached names and styles to element</td>
           </tr>
           <tr>
-            <td>get animation name</td>
-            <td>Returns vendor prefixed animation property for animationname</td>
-          </tr>
-          <tr>
-            <td>get animation event</td>
-            <td>Returns vendor prefixed animation property for animationend</td>
-          </tr>
-          <tr>
             <td>is visible</td>
             <td>Returns whether element is currently visible</td>
           </tr>
@@ -1608,13 +1604,18 @@
         </tr>
         <tr>
           <td>duration</td>
-          <td>500ms</td>
+          <td>false</td>
           <td>Duration of the CSS transition animation</td>
         </tr>
         <tr>
           <td>useFailSafe</td>
           <td>true</td>
           <td>If enabled a <code>timeout</code> will be added to ensure <code>animationend</code> callback occurs even if element is hidden</td>
+        </tr>
+        <tr>
+          <td>failSafeDelay</td>
+          <td>100</td>
+          <td>Delay in ms for fail safe</td>
         </tr>
         <tr>
           <td>allowRepeats</td>

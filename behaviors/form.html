@@ -24,9 +24,13 @@
   <script src="/javascript/library/tablesort.min.js"></script>
   <script src="/javascript/library/underscore.min.js"></script>
 
-<script src="/dist/semantic.min.js?v=2.9.1"></script>
+
+<script src="/dist/semantic.min.js?v=2.9.2"></script>
+
 <script src="/javascript/docs.js"></script>
-  <link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.1">
+  
+<link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.2">
+
 
 
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
@@ -828,8 +832,7 @@
         </div>
       </div>
       <div class="article">
-        <script src="/dist/components/form.js"></script>
-<script src="/javascript/validate-form.js"></script>
+        <script src="/javascript/validate-form.js"></script>
 
 
 
@@ -843,7 +846,7 @@
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.1 is the official community fork of Semantic-UI&#010;Find the validation behavior here"
+            data-text="Fomantic-UI 2.9.2 is the official community fork of Semantic-UI&#010;Find the validation behavior here"
             data-url="https://fomantic-ui.com/behaviors/validation.html"
             data-via="fomanticui">
           </a>
@@ -1379,6 +1382,11 @@
             <td>maxLength</td>
             <td>A field is less than a max length</td>
             <td><code>maxLength[50]</code></td>
+          </tr>
+          <tr>
+            <td>size <span class="ui mini black label">New in 2.9.2</span></td>
+            <td>A field has a size between min and max characters</td>
+            <td><code>size[6..12]</code></td>
           </tr>
         </tbody>
       </table>
@@ -2827,7 +2835,7 @@
 
     <table class="ui definition celled table">
       <tr>
-        <td class="four wide">submit</td>
+        <td class="five wide">submit</td>
         <td>Submits selected form</td>
       </tr>
       <tr>
@@ -2871,8 +2879,8 @@
         <td>Returns value of element with id</td>
       </tr>
       <tr>
-        <td>get values(identifiers)</td>
-        <td>Returns object of element values that match array of identifiers. If no IDS are passed will return all fields</td>
+        <td>get values([identifiers])</td>
+        <td>Returns object of element values that match array of string identifiers. If no IDs are passed will return all fields</td>
       </tr>
       <tr>
         <td>set value(identifier, value)</td>
@@ -2891,16 +2899,16 @@
         <td>Returns whether a field exists</td>
       </tr>
       <tr>
-        <td>add errors(errors)</td>
-        <td>Manually add errors to form, given an array errors</td>
+        <td>add errors(error)<br>add errors([errors])<br>add errors({identifier:error})<br>add errors({identifier:[errors]})</td>
+        <td>Manually add errors to form, given an array of string errors or an object using keys as field identifier each containing an error string/array of strings value. Such object will automatically add the field label infront of the error message or, if <code>inline:true</code>, will display the inline prompt to the related field. </td>
       </tr>
       <tr>
         <td>remove errors</td>
         <td>Removes all current errors from the error message box</td>
       </tr>
       <tr>
-        <td>add prompt(identifier, errors)</td>
-        <td>Adds a custom user prompt for a given element with identifier</td>
+        <td>add prompt(identifier, error)<br>add prompt(identifier, [errors])</td>
+        <td>Adds a custom user prompt for a given element with identifier displaying a given string or an array of strings as a <a href="/elements/list.html#bulleted">bulleted list</a></td>
       </tr>
       <tr>
         <td>clear</td>
@@ -3059,17 +3067,19 @@
                 notExactly           : '{name} cannot be set to exactly \'{ruleValue}\'',
                 contain              : '{name} cannot contain \'{ruleValue}\'',
                 containExactly       : '{name} cannot contain exactly \'{ruleValue}\'',
-                doesntContain        : '{name} must contain  \'{ruleValue}\'',
+                doesntContain        : '{name} must contain \'{ruleValue}\'',
                 doesntContainExactly : '{name} must contain exactly \'{ruleValue}\'',
                 minLength            : '{name} must be at least {ruleValue} characters',
                 exactLength          : '{name} must be exactly {ruleValue} characters',
                 maxLength            : '{name} cannot be longer than {ruleValue} characters',
+                size                 : '{name} must have a length between {min} and {max} characters',
                 match                : '{name} must match {ruleValue} field',
                 different            : '{name} must have a different value than {ruleValue} field',
                 creditCard           : '{name} must be a valid credit card number',
                 minCount             : '{name} must have at least {ruleValue} choices',
                 exactCount           : '{name} must have exactly {ruleValue} choices',
-                maxCount             : '{name} must have {ruleValue} or less choices'
+                maxCount             : '{name} must have {ruleValue} or less choices',
+                addErrors            : '{name}: {error}',
               }
               </div>
             </td>
@@ -3318,12 +3328,12 @@
             <td colspan="2">
               <div class="code">
         errors   : {
-          identifier : 'You must specify a string identifier for each field',
-          method     : 'The method you called is not defined.',
-          noRule     : 'There is no rule matching the one you specified',
-          oldSyntax  : 'Starting in 2.0 forms now only take a single settings object. Validation settings converted to new syntax automatically.'
-          noField    : 'Field identifier {identifier} not found',
-          noElement  : 'This module requires ui {element}'
+          method        : 'The method you called is not defined.',
+          noRule        : 'There is no rule matching the one you specified',
+          oldSyntax     : 'Starting in 2.0 forms now only take a single settings object. Validation settings converted to new syntax automatically.'
+          noField       : 'Field identifier {identifier} not found',
+          noElement     : 'This module requires ui {element}',
+          noErrorMessage: 'No error message provided',
         }
               </div>
             </td>

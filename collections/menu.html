@@ -24,9 +24,13 @@
   <script src="/javascript/library/tablesort.min.js"></script>
   <script src="/javascript/library/underscore.min.js"></script>
 
-<script src="/dist/semantic.min.js?v=2.9.1"></script>
+
+<script src="/dist/semantic.min.js?v=2.9.2"></script>
+
 <script src="/javascript/docs.js"></script>
-  <link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.1">
+  
+<link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.2">
+
 
 
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
@@ -843,7 +847,7 @@
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.1 is the official community fork of Semantic-UI&#010;Find the menu collection here"
+            data-text="Fomantic-UI 2.9.2 is the official community fork of Semantic-UI&#010;Find the menu collection here"
             data-url="https://fomantic-ui.com/collections/menu.html"
             data-via="fomanticui">
           </a>
@@ -1140,8 +1144,11 @@
     </div>
   </div>
   <div class="another example">
+    <div class="ui ignored info message">
+        To make a vertical tabular menu appear seamless attached to the related segment, you should make use of <a href="/collections/grid.html#left--right-attached-column">left/right attached grid columns</a> and <a href="/elements/segment.html#seamless-attached">seamless attached segments</a>
+    </div>
     <div class="ui grid">
-      <div class="four wide column">
+      <div class="four wide left attached column">
         <div class="ui vertical fluid tabular menu">
           <a class="active item">
             Bio
@@ -1157,8 +1164,8 @@
           </a>
         </div>
       </div>
-      <div class="twelve wide stretched column">
-        <div class="ui segment">
+      <div class="twelve wide stretched right attached column">
+        <div class="ui seamless right attached segment">
           This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
@@ -1166,12 +1173,12 @@
   </div>
   <div class="another example">
     <div class="ui grid">
-      <div class="twelve wide stretched column">
-        <div class="ui segment">
+      <div class="twelve wide stretched left attached column">
+        <div class="ui seamless left attached segment">
           This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
-      <div class="four wide column">
+      <div class="four wide right attached column">
         <div class="ui vertical fluid right tabular menu">
           <a class="active item">
             Bio
@@ -2541,6 +2548,78 @@
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Centered Fluid <span class="ui black label">New in 2.9.2</span></h4>
+    <p>A menu can be shown centered and fluid at the same time.</p>
+    <div class="ui centered fluid menu">
+      <a class="bug popup icon item">
+        <i class="edit icon"></i>
+      </a>
+      <a class="bug popup icon item">
+        <i class="bug icon"></i>
+      </a>
+      <a class="github popup icon item">
+        <i class="alternate github icon"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Wrapping <span class="ui black label">New in 2.9.2</span></h4>
+    <p>Menu items can automatically wrap on responsive layouts</p>
+    <div class="ui inverted wrapped green wrapping menu">
+      <a class="active item">One</a>
+      <a class="item">Two</a>
+      <a class="item">Three</a>
+      <a class="item">Four</a>
+      <a class="item">Five</a>
+      <a class="item">Six</a>
+      <a class="item">Seven</a>
+      <a class="item">Eight</a>
+      <a class="item">Nine</a>
+      <a class="item">Ten</a>
+      <a class="item">Eleven</a>
+      <a class="item">Twelve</a>
+      <a class="item">Thirteen</a>
+      <a class="item">Fourteen</a>
+      <a class="item">Fifteen</a>
+      <a class="item">Sixteen</a>
+      <a class="item">Seventeen</a>
+      <a class="item">Eighteen</a>
+      <a class="item">Nineteen</a>
+      <a class="item">Twenty</a>
+    </div>
+    <div class="ui ignored info message">
+        There exists an optional <code>wrapped</code> helper class which should be set to the menu when it's known if menu items are actually wrapped, which will adjust some border-radius. As it is not possible to detect a wrapping child automatically via pure CSS, you should use that helper class whenever appropriate.
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Centered Fluid Wrapping <span class="ui black label">New in 2.9.2</span></h4>
+    <p>By combining centered, fluid and wrapping you could create a menu similar to <a href="/elements/button.html#wrapping-buttons">Wrapping button groups</a></p>
+    <div class="ui inverted wrapped blue centered fluid wrapping menu">
+      <a class="active item">One</a>
+      <a class="item">Two</a>
+      <a class="item">Three</a>
+      <a class="item">Four</a>
+      <a class="item">Five</a>
+      <a class="item">Six</a>
+      <a class="item">Seven</a>
+      <a class="item">Eight</a>
+      <a class="item">Nine</a>
+      <a class="item">Ten</a>
+      <a class="item">Eleven</a>
+      <a class="item">Twelve</a>
+      <a class="item">Thirteen</a>
+      <a class="item">Fourteen</a>
+      <a class="item">Fifteen</a>
+      <a class="item">Sixteen</a>
+      <a class="item">Seventeen</a>
+      <a class="item">Eighteen</a>
+      <a class="item">Nineteen</a>
+      <a class="item">Twenty</a>
+    </div>
+  </div>
 
 </div>
         <footer class="ui vertical footer segment">

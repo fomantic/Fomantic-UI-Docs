@@ -24,9 +24,13 @@
   <script src="/javascript/library/tablesort.min.js"></script>
   <script src="/javascript/library/underscore.min.js"></script>
 
-<script src="/dist/semantic.min.js?v=2.9.1"></script>
+
+<script src="/dist/semantic.min.js?v=2.9.2"></script>
+
 <script src="/javascript/docs.js"></script>
-  <link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.1">
+  
+<link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.2">
+
 
 
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
@@ -843,7 +847,7 @@
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.1 is the official community fork of Semantic-UI&#010;Find the popup module here"
+            data-text="Fomantic-UI 2.9.2 is the official community fork of Semantic-UI&#010;Find the popup module here"
             data-url="https://fomantic-ui.com/modules/popup.html"
             data-via="fomanticui">
           </a>
@@ -1177,6 +1181,43 @@
         </div>
     </div>
 
+    <h2 class="ui dividing header">States</h2>
+
+    <div class="loading example">
+        <h4 class="ui header">Loading <div class="ui black label">New in 2.9.2</div></h4>
+        <p>A popup may show its content is being loaded</p>
+        <div class="ui grid">
+          <div class="doubling two column row">
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="inverted loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="another loading example">
+        <p>The loader inherits the color of the popup</p>
+        <div class="ui ignored info message">A loading popup supports <a href="/elements/loader#speed">loader speed</a> and the optional <code>double</code> style. <code>elastic</code> as loading style is currently <b>not</b> supported because popup uses the <code>:before</code> pseudoclass to display the pointer.</div>
+        <div class="ui grid">
+          <div class="doubling four column row">
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="purple loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="orange loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="blue double loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="green slow loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+          </div>
+        </div>
+    </div>
+
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="example">
@@ -1451,6 +1492,14 @@
         <tr>
           <td>remove popup</td>
           <td>Removes popup from the page</td>
+        </tr>
+        <tr>
+          <td>set loading</td>
+          <td>Sets popup into loading state displaying a loading spinner and disabled content</td>
+        </tr>
+        <tr>
+          <td>remove loading</td>
+          <td>Removes loading state from popup</td>
         </tr>
       </tbody>
     </table>
@@ -2021,6 +2070,7 @@
       basic       : 'basic',
       animating   : 'animating',
       dropdown    : 'dropdown',
+      invisible   : 'invisible',
       fluid       : 'fluid',
       loading     : 'loading',
       popup       : 'ui popup',
