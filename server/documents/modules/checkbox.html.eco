@@ -291,6 +291,134 @@ themes      : ['Default', 'Colored']
       </div>
     </div>
 
+    <div class="sizes example" data-class="size">
+      <h4 class="ui header">Size</h4>
+      <p>A checkbox can have different sizes</p>
+      <div class="ui mini checkbox">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+      <div class="ui mini radio checkbox">
+        <input type="checkbox">
+        <label>Radio</label>
+      </div>
+      <div class="ui mini toggle checkbox">
+        <input type="checkbox">
+        <label>Toggle</label>
+      </div>
+      <div class="ui mini slider checkbox">
+        <input type="checkbox">
+        <label>Slider</label>
+      </div>
+    </div>
+    <div class="another sizes example">
+      <div class="ui tiny checkbox">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+      <div class="ui tiny radio checkbox">
+        <input type="checkbox">
+        <label>Radio</label>
+      </div>
+      <div class="ui tiny toggle checkbox">
+        <input type="checkbox">
+        <label>Toggle</label>
+      </div>
+      <div class="ui tiny slider checkbox">
+        <input type="checkbox">
+        <label>Slider</label>
+      </div>
+    </div>
+    <div class="another sizes example">
+      <div class="ui small checkbox">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+      <div class="ui small radio checkbox">
+        <input type="checkbox">
+        <label>Radio</label>
+      </div>
+      <div class="ui small toggle checkbox">
+        <input type="checkbox">
+        <label>Toggle</label>
+      </div>
+      <div class="ui small slider checkbox">
+        <input type="checkbox">
+        <label>Slider</label>
+      </div>
+    </div>
+    <div class="another sizes example">
+      <div class="ui large checkbox">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+      <div class="ui large radio checkbox">
+        <input type="checkbox">
+        <label>Radio</label>
+      </div>
+      <div class="ui large toggle checkbox">
+        <input type="checkbox">
+        <label>Toggle</label>
+      </div>
+      <div class="ui large slider checkbox">
+        <input type="checkbox">
+        <label>Slider</label>
+      </div>
+    </div>
+    <div class="another sizes example">
+      <div class="ui big checkbox">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+      <div class="ui big radio checkbox">
+        <input type="checkbox">
+        <label>Radio</label>
+      </div>
+      <div class="ui big toggle checkbox">
+        <input type="checkbox">
+        <label>Toggle</label>
+      </div>
+      <div class="ui big slider checkbox">
+        <input type="checkbox">
+        <label>Slider</label>
+      </div>
+    </div>
+    <div class="another sizes example">
+      <div class="ui huge checkbox">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+      <div class="ui huge radio checkbox">
+        <input type="checkbox">
+        <label>Radio</label>
+      </div>
+      <div class="ui huge toggle checkbox">
+        <input type="checkbox">
+        <label>Toggle</label>
+      </div>
+      <div class="ui huge slider checkbox">
+        <input type="checkbox">
+        <label>Slider</label>
+      </div>
+    </div>
+    <div class="another sizes example">
+      <div class="ui massive checkbox">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+      <div class="ui massive radio checkbox">
+        <input type="checkbox">
+        <label>Radio</label>
+      </div>
+      <div class="ui massive toggle checkbox">
+        <input type="checkbox">
+        <label>Toggle</label>
+      </div>
+      <div class="ui massive slider checkbox">
+        <input type="checkbox">
+        <label>Slider</label>
+      </div>
+    </div>
   </div>
 
   <div class="ui examples tab" data-tab="examples">

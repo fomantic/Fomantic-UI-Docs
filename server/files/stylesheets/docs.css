@@ -1496,6 +1496,13 @@ color: #333333;
   max-width: 800px;
 }
 
+/*--------------
+      Checkbox
+---------------*/
+
+#example .sizes.example .checkbox {
+  padding-right: 2em;
+}
 
 /*--------------
       Search
