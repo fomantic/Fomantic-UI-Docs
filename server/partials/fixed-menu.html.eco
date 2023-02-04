@@ -3,7 +3,7 @@
 <% pageNumber        = @getPage(currentCollection, @document.id) %>
 <% pageCollection    = @getPageCollection(currentCollection, @document.id) %>
 
-<div class="ui fixed inverted main menu">
+<div class="ui big fixed inverted main menu">
   <div class="ui container">
     <a class="launch icon item">
       <i class="content icon"></i>
