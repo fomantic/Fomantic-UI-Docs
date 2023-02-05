@@ -35,7 +35,11 @@
 
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rtl.css">
-
+    <style>
+        .ui.flyout {
+            height: 100vh;
+        }
+    </style>
 
 
 
@@ -1490,6 +1494,7 @@
     return {
       title: 'Greetings to ' + username + '!',
       content: '<span class="ui huge orange text">'+ username.toUpperCase() + '</span><br>is the best!',
+      closeIcon: true,
       class: 'inverted',
       classContent: 'centered'
     }
