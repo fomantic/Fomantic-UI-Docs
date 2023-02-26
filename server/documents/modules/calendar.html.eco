@@ -876,11 +876,13 @@ themes      : ['Default']
               {
                 date: new Date('2019-04-21'),
                 message: 'Show me in light purple',
-                class: 'inverted purple'
+                class: 'inverted purple',   // cellclass
+                variation: 'purple'         // tooltip variation
               },{
                 date: new Date('2019-04-22'),
                 message: 'Show me in green',
-                class: 'green'
+                class: 'green',
+                variation: 'green'
               }
           ]
       });
