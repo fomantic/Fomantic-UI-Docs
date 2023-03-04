@@ -13,7 +13,7 @@ semantic.slider.ready = function() {
       start: 5
     })
   ;
-  
+
   $('#slider-1')
     .slider({
       min: 0,
@@ -40,6 +40,27 @@ semantic.slider.ready = function() {
           $('#range-slider-input-1').val('|' + secondVal + " - " + firstVal + '| = ' + range);
         }
       }
+    })
+  ;
+  $('#slider-range-minmax')
+    .slider({
+        min: 5,
+        max: 100,
+        start: 10,
+        end: 50,
+        minRange: 10,
+        maxRange: 40,
+        step: 0
+    })
+  ;
+
+  $('#restrictedlabelsslider')
+    .slider({
+        restrictedLabels: [0, 10, 15, 35, 80, 90, 100],
+        min: 0,
+        max: 100,
+        step: 0,
+        autoAdjustLabels: false
     })
   ;
 

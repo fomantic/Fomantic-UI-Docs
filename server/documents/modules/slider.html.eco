@@ -52,6 +52,23 @@ themes      : ['Default']
     </div>
 
     <div class="example">
+        <h4 class="ui header">Restricted Labels <div class="ui black label">New in 2.9.3</div></h4>
+        <p>You can restrict the display of labels to only the ones you want</p>
+        <div class="ui labeled ticked slider" id="restrictedlabelsslider"></div>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.slider')
+        .slider({
+            restrictedLabels: [0, 10, 15, 35, 80, 90, 100],
+            min: 0,
+            max: 100,
+            step: 0,
+            autoAdjustLabels: false
+        })
+      ;
+    </div>
+
+    <div class="example">
         <h4 class="ui header">Custom interpreted labels</h4>
         <p>You can provide a function which returns a custom label according to the label value</p>
         <div class="ui labeled ticked slider" id="interpretedlabel"></div>
@@ -83,6 +100,23 @@ themes      : ['Default']
           start: 10,
           end: 90,
           step: 5
+        })
+      ;
+      </div>
+      <div class="another example">
+      <p>A range slider can be limited to how far the distance between the two thumbs can be</p>
+      <div class="ui labeled ticked range slider" id="slider-range-minmax"></div><br>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.range.slider')
+        .slider({
+          min: 5,
+          max: 100,
+          start: 10,
+          end: 50,
+          minRange: 10,
+          maxRange: 40,
+          step: 0
         })
       ;
       </div>
@@ -316,6 +350,16 @@ themes      : ['Default']
           <td>The second value to set in case of a range slider</td>
         </tr>
         <tr>
+          <td>minRange</td>
+          <td>false</td>
+          <td>Makes sure that the two thumbs of a range slider always need to have a difference of the given value</td>
+        </tr>
+        <tr>
+          <td>maxRange</td>
+          <td>false</td>
+          <td>Makes sure that the two thumbs of a range slider don't exceed a difference of the given value</td>
+        </tr>
+        <tr>
           <td>labelType</td>
           <td>number</td>
           <td>The type of label to display for a labeled slider. Can be <code>number</code> or <code>letter</code></td>
@@ -334,9 +378,17 @@ themes      : ['Default']
           </td>
         </tr>
         <tr>
+            <td>restrictedLabels</td>
+            <td>[]</td>
+            <td>An array of label values which restrict the displayed labels to only those which are defined</td>
+        </tr>
+        <tr>
           <td>showLabelTicks</td>
           <td>false</td>
-          <td>Show ticks on a labeled slider</td>
+          <td>Show ticks on a labeled slider.<br>
+                <code>'always'</code>will always show the ticks for all labels (even if not shown)<br>
+                <code>true</code> will display the ticks only if the related label is also shown
+          </td>
         </tr>
         <tr>
           <td>smooth</td>
