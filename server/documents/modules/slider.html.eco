@@ -155,7 +155,7 @@ themes      : ['Default']
       ;
     </div>
     <div class="another example">
-      <p>The tooltips can stay visible all the time and can be customized by the <code>tooltipConfig</code> setting.<br>Refer to <a href="/modules/popup#tooltip">Toolip Variations</a> for possible values.</p>
+      <p>The tooltips can stay visible all the time and can be customized by the <code>tooltipConfig</code> setting.<br>Refer to <a href="/modules/popup#tooltip">Tooltip Variations</a> for possible values.</p>
       <div class="ui range slider" id="slider-tooltip-2"></div>
     </div>
     <div class="code" data-type="javascript">
