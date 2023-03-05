@@ -125,7 +125,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Disabled</h4>
       <p>A slider can appear disabled</p>
-      <div class="ui disabled slider" id="slider-2"></div>
+      <div class="ui disabled slider"></div>
     </div>
 
     <div class="example">
@@ -140,6 +140,34 @@ themes      : ['Default']
       <h4 class="ui header">Reversed</h4>
       <p>A slider can be reversed</p>
       <div class="ui reversed slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Thumb Tooltips <div class="ui black label">New in 2.9.3</div></h4>
+      <p>The slider thumbs can show a tooltip on hover containing the current value</p>
+      <div class="ui slider" id="slider-tooltip-1"></div>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.slider')
+        .slider({
+          showThumbTooltip: true
+        })
+      ;
+    </div>
+    <div class="another example">
+      <p>The tooltips can stay visible all the time and can be customized by the <code>tooltipConfig</code> setting.<br>Refer to <a href="/modules/popup#tooltip">Toolip Variations</a> for possible values.</p>
+      <div class="ui range slider" id="slider-tooltip-2"></div>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.slider')
+        .slider({
+          showThumbTooltip: true,
+          tooltipConfig: {
+            position: 'bottom center',
+            variation: 'small visible green'
+          }
+        })
+      ;
     </div>
 
     <div class="example">
@@ -320,7 +348,7 @@ themes      : ['Default']
     <table class="ui sortable celled definition table">
       <thead>
         <th>Setting</th>
-        <th class="four wide">Default</th>
+        <th class="five wide">Default</th>
         <th>Description</th>
       </thead>
       <tbody>
@@ -381,6 +409,23 @@ themes      : ['Default']
             <td>restrictedLabels</td>
             <td>[]</td>
             <td>An array of label values which restrict the displayed labels to only those which are defined</td>
+        </tr>
+        <tr>
+            <td>showThumbTooltip</td>
+            <td>false</td>
+            <td>Whether a tooltip should be shown to the thumb(s) on hover. Will contain the current slider value.</td>
+        </tr>
+        <tr>
+            <td>tooltipConfig</td>
+            <td>
+              <div class="code">
+                {
+                    position: 'top center',
+                    variation: 'tiny black'
+                }
+              </div>
+            </td>
+            <td>Tooltip configuration used when <code>showThumbTooltip</code> is true<br>Refer to <a href="/modules/popup#tooltip">Tooltip Variations</a> for possible values.</td>
         </tr>
         <tr>
           <td>showLabelTicks</td>

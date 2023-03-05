@@ -4,7 +4,7 @@ semantic.slider = {};
 semantic.slider.ready = function() {
   // selector cache
   var
-    $slider     = $('.ui.slider')
+    $slider     = $('.ui.slider:not([id])')
   ;
   $slider
     .slider({
@@ -63,6 +63,23 @@ semantic.slider.ready = function() {
         autoAdjustLabels: false
     })
   ;
+
+    $('#slider-tooltip-1')
+        .slider({
+            showThumbTooltip: true,
+            step: 0
+        })
+    ;
+    $('#slider-tooltip-2')
+        .slider({
+            showThumbTooltip: true,
+            tooltipConfig: {
+                position: 'bottom center',
+                variation: 'small visible green'
+            },
+            step: 0
+        })
+    ;
 
   $('#slider-custom-step')
     .slider({
