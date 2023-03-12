@@ -364,6 +364,32 @@ type        : 'UI Module'
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Size</h4>
+      <p>A search can vary in size</p>
+      <div class="ui mini search">
+        <input class="prompt" type="text" placeholder="Mini search...">
+      </div>
+      <div class="ui tiny search">
+        <input class="prompt" type="text" placeholder="Tiny search...">
+      </div>
+      <div class="ui small search">
+        <input class="prompt" type="text" placeholder="Small search...">
+      </div>
+      <div class="ui large search">
+        <input class="prompt" type="text" placeholder="Large search...">
+      </div>
+      <div class="ui big search">
+        <input class="prompt" type="text" placeholder="Big search...">
+      </div>
+      <div class="ui huge search">
+        <input class="prompt" type="text" placeholder="Huge search...">
+      </div>
+      <div class="ui massive search">
+        <input class="prompt" type="text" placeholder="Massive search...">
+      </div>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="usage">

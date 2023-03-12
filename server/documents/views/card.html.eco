@@ -1203,4 +1203,127 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Size</h4>
+    <p>A card text can vary in size</p>
+    <div class="ui three cards">
+        <div class="ui mini card">
+          <div class="content">
+            <div class="header">Mini Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a mini card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+        <div class="ui tiny card">
+          <div class="content">
+            <div class="header">Tiny Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a tiny card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+        <div class="ui small card">
+          <div class="content">
+            <div class="header">Small Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a small card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="ui two cards">
+        <div class="ui large card">
+          <div class="content">
+            <div class="header">Large Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a large card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+        <div class="ui big card">
+          <div class="content">
+            <div class="header">Big Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a big card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="ui two cards">
+        <div class="ui huge card">
+          <div class="content">
+            <div class="header">Huge Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a huge card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+        <div class="ui massive card">
+          <div class="content">
+            <div class="header">Massive Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a massive card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
 </div>

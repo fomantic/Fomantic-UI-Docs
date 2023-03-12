@@ -223,4 +223,16 @@ themes      : ['default']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Size</h4>
+    <p>A divider text can vary in size</p>
+    <div class="ui mini horizontal divider">Mini</div>
+    <div class="ui tiny horizontal divider">Tiny</div>
+    <div class="ui small horizontal divider">Small</div>
+    <div class="ui large horizontal divider">Large</div>
+    <div class="ui big horizontal divider">Big</div>
+    <div class="ui huge horizontal divider">Huge</div>
+    <div class="ui massive horizontal divider">Massive</div>
+  </div>
+
 </div>

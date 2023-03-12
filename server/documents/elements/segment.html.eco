@@ -681,4 +681,15 @@ themes      : ['default', 'GitHub']
       <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
     </div>
   </div>
+    <div class="example">
+      <h4 class="ui header">Size</h4>
+      <p>A segment can vary in size</p>
+      <div class="ui mini segment">Mini</div>
+      <div class="ui tiny segment">Tiny</div>
+      <div class="ui small segment">Small</div>
+      <div class="ui large segment">Large</div>
+      <div class="ui big segment">Big</div>
+      <div class="ui huge segment">Huge</div>
+      <div class="ui massive segment">Massive</div>
+    </div>
 </div>
