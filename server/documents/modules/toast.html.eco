@@ -781,6 +781,7 @@ themes      : ['Default']
             <p>The following structure is used to position the toasts. Each position container implements a <code>toast-box</code> per toast. The extra wrapper is needed to make dynamic elements like progressbar independent of the toast layout.</p>
             <div class="code" data-type="html">
                 <div class="ui toast-container">
+<!-- you can use 'floating' for shadow or 'hoverfloating' for shadow on hover -->
                     <div class="toast-box">
 <!-- only when vertical attached buttons are used an extra wrapping node is needed -->
                         <div class="vertical attached">
@@ -994,7 +995,8 @@ themes      : ['Default']
         showDuration : 500,
         hideMethod   : 'scale',
         hideDuration : 500,
-        closeEasing  : 'easeOutCubic'
+        closeEasing  : 'easeOutCubic',
+        closeDuration: 500,
       }
             </div>
           </td>
@@ -1118,6 +1120,10 @@ themes      : ['Default']
       container    : '.ui.toast-container',
       box          : '.toast-box',
       toast        : '.ui.toast',
+      title        : '.header',
+      message      : '.message:not(.ui)',
+      image        : '> img.image, > .image > img',
+      icon         : '> i.icon',
       input        : 'input:not([type="hidden"]), textarea, select, button, .ui.button, ui.dropdown',
       clickable    : 'a, details, .ui.accordion',
       approve      : '.actions .positive, .actions .approve, .actions .ok',
@@ -1132,14 +1138,35 @@ themes      : ['Default']
           <td>
             <div class="code">
     className   : {
-      container    : 'toast-container',
-      box          : 'toast-box',
+      container    : 'ui toast-container',
+      absolute     : 'absolute',
+      box          : 'floating toast-box',
       progress     : 'ui attached active progress',
       toast        : 'ui toast',
-      icon         : 'icon',
+      icon         : 'centered icon',
       visible      : 'visible',
       content      : 'content',
-      title        : 'header'
+      title        : 'ui header',
+      message      : 'message',
+      actions      : 'actions',
+      extraContent : 'extra content',
+      button       : 'ui button',
+      buttons      : 'ui buttons',
+      close        : 'close icon',
+      image        : 'ui image',
+      vertical     : 'vertical',
+      horizontal   : 'horizontal',
+      attached     : 'attached',
+      inverted     : 'inverted',
+      compact      : 'compact',
+      pausable     : 'pausable',
+      progressing  : 'progressing',
+      top          : 'top',
+      bottom       : 'bottom',
+      left         : 'left',
+      basic        : 'basic',
+      unclickable  : 'unclickable',
+
     }
             </div>
           </td>
@@ -1158,6 +1185,17 @@ themes      : ['Default']
             </div>
           </td>
           <td>Icon names used internally</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>
+            <div class="code">
+    text   : {
+      close        : 'Close'
+    }
+            </div>
+          </td>
+          <td>Display strings</td>
         </tr>
       </tbody>
     </table>
