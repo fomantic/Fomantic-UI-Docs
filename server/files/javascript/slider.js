@@ -4,7 +4,7 @@ semantic.slider = {};
 semantic.slider.ready = function() {
   // selector cache
   var
-    $slider     = $('.ui.slider')
+    $slider     = $('.ui.slider:not([id])')
   ;
   $slider
     .slider({
@@ -13,7 +13,7 @@ semantic.slider.ready = function() {
       start: 5
     })
   ;
-  
+
   $('#slider-1')
     .slider({
       min: 0,
@@ -42,6 +42,44 @@ semantic.slider.ready = function() {
       }
     })
   ;
+  $('#slider-range-minmax')
+    .slider({
+        min: 5,
+        max: 100,
+        start: 10,
+        end: 50,
+        minRange: 10,
+        maxRange: 40,
+        step: 0
+    })
+  ;
+
+  $('#restrictedlabelsslider')
+    .slider({
+        restrictedLabels: [0, 10, 15, 35, 80, 90, 100],
+        min: 0,
+        max: 100,
+        step: 0,
+        autoAdjustLabels: false
+    })
+  ;
+
+    $('#slider-tooltip-1')
+        .slider({
+            showThumbTooltip: true,
+            step: 0
+        })
+    ;
+    $('#slider-tooltip-2')
+        .slider({
+            showThumbTooltip: true,
+            tooltipConfig: {
+                position: 'bottom center',
+                variation: 'small visible green'
+            },
+            step: 0
+        })
+    ;
 
   $('#slider-custom-step')
     .slider({
