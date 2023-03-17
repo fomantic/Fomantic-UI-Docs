@@ -326,9 +326,43 @@ type        : 'Introduction'
   </div>
 
   <div class="no example">
+    <h4>variation.variables <div class="ui black label">New in 2.8.1</div></h4>
+    <p>You can disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size</p>
+    <p>Most of the components also have a separate variable to decide which components should be rendered for which colors of your global color palette of colors.less or which sizes should be rendered.</p>
+
+    <div class="code" data-type="less" data-title="src/themes/default/globals/variation.variables">
+    // The defaults enable everything
+    // In a custom theme you could only disable/adjust the variables you don't need in your own {component}.variables
+    @variationButtonTertiary: false;          // don't compile tertiary button styles
+    @variationIconColors: red, green, batman; // only compile red and green as icon color options
+    @variationImageSizes: small, huge;        // only compile small and huge image sizes
+    @variationSegmentColors: false;           // don't compile any segment color styles
+    @variationBreadcrumbSizes: false;         // don't compile any breadcrumb size styles
+    </div>
+  </div>
+
+  <div class="no example">
     <h4>colors.less <div class="ui black label">New in 2.7.0</div></h4>
     <p>You can modify/define the global color palette entirely by adjusting a single LESS Map <code>@colors</code> in a custom <code>colors.less</code> file.</p>
     <p>Each color consists of a predefined set of properties used in all components. You can define whatever color name you want.</p>
+    <div class="ui ignored info message">
+        If you only want to reduce the used colors from the default palette, you may only adjust the related colors-list variables inside <a href="#variationvariables"><code>variation.variables</code></a> instead of changing the colors.less file.
+        <div class="code">
+        // limit all components to yellow, purple and green
+        @variationAllColors: yellow, purple, green;
+        // purple buttons, red labels, green messages and no colors for all other components
+        @variationAllColors: false;
+        @variationButtonColors: purple;
+        @variationLabelColors: red;
+        @variationMessageColors: green;
+        </div>
+    </div>
+    <div class="ui ignored warning message">
+        If you change the whole available colors like in the example below, make sure you also adjust the related colors-list variables inside <a href="#variationvariables"><code>variation.variables</code></a> to avoid a build error.
+        <div class="code">
+            @variationAllComponents: batman, spiderman;
+        </div>
+    </div>
     <div class="code" data-type="less" data-title="src/themes/default/globals/colors.less">
 // This example would only provide two custom colors "batman", "spiderman"
 // Your custom compiled build will contain all colorable components
@@ -409,22 +443,6 @@ type        : 'Introduction'
 
     </div>
 
-  </div>
-
-  <div class="no example">
-    <h4>variation.variables <div class="ui black label">New in 2.8.1</div></h4>
-    <p>You can disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size</p>
-    <p>Most of the components also have a separate variable to decide which components should be rendered for which colors of your global color palette of colors.less or which sizes should be rendered.</p>
-
-    <div class="code" data-type="less" data-title="src/themes/default/globals/variation.variables">
-    // The defaults enable everything
-    // In a custom theme you could only disable/adjust the variables you don't need in your own {component}.variables
-    @variationButtonTertiary: false;          // don't compile tertiary button styles
-    @variationIconColors: red, green, batman; // only compile red and green as icon color options
-    @variationImageSizes: small, huge;        // only compile small and huge image sizes
-    @variationSegmentColors: false;           // don't compile any segment color styles
-    @variationBreadcrumbSizes: false;         // don't compile any breadcrumb size styles
-    </div>
   </div>
 
   <div class="no example">
