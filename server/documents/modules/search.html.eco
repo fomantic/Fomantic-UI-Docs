@@ -908,9 +908,9 @@ type        : 'UI Module'
           <td>Callback on search query</td>
         </tr>
         <tr>
-          <td>onResults(response)</td>
+          <td>onResults(response, fromCache)</td>
           <td>module</td>
-          <td>Callback on server response</td>
+          <td>Callback on server response. If the results were generated from cache, the <code>fromCache</code> parameter is <code>true</code></td>
         </tr>
         <tr>
           <td>onResultsOpen</td>
