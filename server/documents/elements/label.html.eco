@@ -260,6 +260,23 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
+  <div class="example" data-class="bottom ribbon, center ribbon, ribbon">
+    <h4 class="ui header">Bottom and Center Ribbon <div class="ui black label">New in 2.9.3</div></h4>
+    <p>A ribbon label can appear vertically centered or positioned to the bottom.</p>
+    <div class="ui raised horizontal segments">
+      <div class="ui segment">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <a class="ui red bottom ribbon label">Overview</a>
+        <span>Account Details</span>
+      </div>
+      <div class="ui segment">
+        <a class="ui red center right ribbon label">Overview</a>
+        <span>Account Details</span>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+  </div>
+
   <div class="clearing example">
     <h4 class="ui header">Attached</h4>
     <p>A label can attach to a content segment</p>
