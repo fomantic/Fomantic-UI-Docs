@@ -781,7 +781,8 @@ themes      : ['Default']
             <p>The following structure is used to position the toasts. Each position container implements a <code>toast-box</code> per toast. The extra wrapper is needed to make dynamic elements like progressbar independent of the toast layout.</p>
             <div class="code" data-type="html">
                 <div class="ui toast-container">
-<!-- you can use 'floating' for shadow or 'hoverfloating' for shadow on hover -->
+<!-- you can use 'floating' for shadow or 'hoverfloating' for shadow on hover. -->
+<!-- Also add 'inverted' for dark page backgrounds -->
                     <div class="toast-box">
 <!-- only when vertical attached buttons are used an extra wrapping node is needed -->
                         <div class="vertical attached">
