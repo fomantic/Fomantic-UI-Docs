@@ -26,7 +26,7 @@ type        : 'Main'
     <div class="example">
       <h4 class="ui header">Descriptive classnames</h4>
 
-        <p>The base concept of Fomantic-UI is adding classnames as a textual descriptional to HTML nodes</p>
+        <p>The base concept of Fomantic-UI is adding descriptional classnames to HTML nodes</p>
         <div class="ui basic segment">
             <code>ui primary button</code>
             <div class="ui primary button">Button</div>
