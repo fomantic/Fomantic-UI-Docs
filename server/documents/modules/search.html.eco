@@ -878,6 +878,21 @@ type        : 'UI Module'
           <td>When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
               It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui black label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
         </tr>
+        <tr>
+          <td>type</td>
+          <td>'standard'</td>
+          <td>Template to use (specified in settings.templates)</td>
+        </tr>
+        <tr>
+          <td>displayField</td>
+          <td>''</td>
+          <td>Field to display in standard results template</td>
+        </tr>
+        <tr>
+          <td>automatic</td>
+          <td>true</td>
+          <td>Whether to add events to prompt automatically</td>
+        </tr>
       </tbody>
     </table>
 
