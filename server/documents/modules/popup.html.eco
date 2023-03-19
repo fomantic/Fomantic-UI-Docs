@@ -123,7 +123,7 @@ themes      : ['Default']
     </div>
     <div class="example">
       <h4 class="ui header">Tooltip Position</h4>
-      <p>A tooltip can be shown at a specific position relative to the element via via the <code>data-position</code> attribute.</p>
+      <p>A tooltip can be shown at a specific position relative to the element via the <code>data-position</code> attribute.</p>
       <div class="ui button" data-tooltip="Add users to your feed" data-position="top left">
         Top Left
       </div>
@@ -259,6 +259,14 @@ themes      : ['Default']
         -two
         -three" data-position="bottom center" data-variation="multiline">
     Multiline tooltip
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Visible Tooltip <div class="ui black label">New in 2.9.3</div></h4>
+      <p>A tooltip can be shown visible all the time by adding <code>visible</code> to the <code>data-variation</code> attribute.</p>
+      <div class="ui button" data-tooltip="I am visible all the time" data-variation="visible" data-position="right center">
+        Important Button
       </div>
     </div>
 

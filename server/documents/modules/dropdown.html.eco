@@ -3196,6 +3196,10 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Clears dropdown of selection. Set <code>preventChangeTrigger</code> to <code>true</code> to omit the change event (default: <code>false</code>).</td>
         </tr>
         <tr>
+          <td>clear cache</td>
+          <td>Clears the remote api cache once</td>
+        </tr>
+        <tr>
           <td>hide others</td>
           <td>Hides all other dropdowns that is not current dropdown</td>
         </tr>

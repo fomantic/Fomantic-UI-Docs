@@ -364,6 +364,32 @@ type        : 'UI Module'
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Size</h4>
+      <p>A search can vary in size</p>
+      <div class="ui mini search">
+        <input class="prompt" type="text" placeholder="Mini search...">
+      </div>
+      <div class="ui tiny search">
+        <input class="prompt" type="text" placeholder="Tiny search...">
+      </div>
+      <div class="ui small search">
+        <input class="prompt" type="text" placeholder="Small search...">
+      </div>
+      <div class="ui large search">
+        <input class="prompt" type="text" placeholder="Large search...">
+      </div>
+      <div class="ui big search">
+        <input class="prompt" type="text" placeholder="Big search...">
+      </div>
+      <div class="ui huge search">
+        <input class="prompt" type="text" placeholder="Huge search...">
+      </div>
+      <div class="ui massive search">
+        <input class="prompt" type="text" placeholder="Massive search...">
+      </div>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="usage">
@@ -878,6 +904,21 @@ type        : 'UI Module'
           <td>When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
               It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui black label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
         </tr>
+        <tr>
+          <td>type</td>
+          <td>'standard'</td>
+          <td>Template to use (specified in settings.templates)</td>
+        </tr>
+        <tr>
+          <td>displayField</td>
+          <td>''</td>
+          <td>Field to display in standard results template</td>
+        </tr>
+        <tr>
+          <td>automatic</td>
+          <td>true</td>
+          <td>Whether to add events to prompt automatically</td>
+        </tr>
       </tbody>
     </table>
 
@@ -908,9 +949,9 @@ type        : 'UI Module'
           <td>Callback on search query</td>
         </tr>
         <tr>
-          <td>onResults(response)</td>
+          <td>onResults(response, fromCache)</td>
           <td>module</td>
-          <td>Callback on server response</td>
+          <td>Callback on server response. If the results were generated from cache, the <code>fromCache</code> parameter is <code>true</code></td>
         </tr>
         <tr>
           <td>onResultsOpen</td>

@@ -1300,8 +1300,16 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 
   <div class="example">
     <h4 class="ui header">Evenly Divided</h4>
-    <p>A menu may divide its items evenly</p>
-    <div class="ui fluid three item menu">
+        <p>A menu may divide its items evenly by either using <code>equal width</code> <span class="ui small black label">New in 2.9.3</span> ...</p>
+    <div class="ui equal width menu">
+      <a class="item">Buy</a>
+      <a class="item">Sell</a>
+      <a class="item">Rent</a>
+    </div>
+  </div>
+  <div class="another example">
+  <p>... or by declaring a fixed number of items like <code>three item menu</code>.</p>
+    <div class="ui three item menu">
       <a class="item">Buy</a>
       <a class="item">Sell</a>
       <a class="item">Rent</a>
