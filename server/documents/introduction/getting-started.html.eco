@@ -22,6 +22,53 @@ type        : 'Main'
     </a>.
   </p>
 
+  <h2 class="ui dividing header">General Usage</h2>
+    <div class="example">
+      <h4 class="ui header">Descriptive classnames</h4>
+
+        <p>The base concept of Fomantic-UI is adding descriptional classnames to HTML nodes</p>
+        <div class="ui basic segment">
+            <code>ui primary button</code>
+            <div class="ui primary button">Button</div>
+        </div>
+        <div class="ui ignored info message">
+         The <code>ui</code> class is used as namespace to avoid problems when additional custom CSS is used.
+        </div>
+        <p>In many cases you can also combine variations to achieve multiple effects on the same component.</p>
+        <div class="ui basic segment">
+            <code>ui huge primary button</code>
+            <div class="ui huge primary button">Button</div>
+        </div>
+        <p>By specification, CSS allows to declare classnames in any order.</p>
+        <div class="ui basic segment">
+            <code>huge ui button primary</code>
+            <div class="huge ui button primary">Button</div>
+        </div>
+        <p>
+            However, some combinations of FUI classnames <b>MUST</b> be declared in a strict predefined order divided by <b>ONE</b> space character.
+            This is sometimes needed to avoid decription confusion when the same classnames are used but have a different meaning.
+        </p>
+        <div class="ui basic segment">
+            <code>ui left labeled right floated button</code>
+            <div class="ui left labeled right floated button"><div class="ui secondary label">Labeled</div><div class="ui primary button">Button</div></div>
+        </div>
+        <p>If the classes are given unordered, the CSS selectors get confused and FUI does not know what the description means, thus the styling is broken.</p>
+        <div class="ui basic segment">
+            <code>ui left right button floated labeled</code>
+            <div class="ui left right button floated labeled"><div class="ui secondary label">Labeled</div><div class="ui primary button">Button</div></div>
+            <div class="ui bulleted list">
+                <div class="item">Where should the button be <b>floated</b>? Left or right?</div>
+                <div class="item">Where should the button be <b>labeled</b>? Left or right?</div>
+            </div>
+        </div>
+        <p>So, as a general advise, just declare the classname order like a grammatical correct spoken description.</p>
+        <div class="ui ignored warning message">
+            <div class="header">Use <code>&lt;&gt;</code></div>
+            <div class="content">
+            <p>While there are situations where a strict ordered class name list is important, in most cases it isn't. If in doubt, always watch out for the <code>&lt;&gt;</code> symbol displayed to the right of the examples which shows the source code when clicked and offers the correct classname order.</p>
+            </div>
+        </div>
+    </div>
   <h2 class="ui dividing header">Installation</h2>
 
   <p>You can install Fomantic-UI via NPM or one of our CDN providers. You can also host the distribution files locally if you prefer to.</p>
