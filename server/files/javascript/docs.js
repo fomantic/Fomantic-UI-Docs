@@ -265,10 +265,15 @@ semantic.ready = function() {
       $example
         .each(function() {
           var
-            $title   = $(this).children('h4').eq(0),
+            $example = $(this),
+            $title   = $example.children('h4').eq(0),
+            $firstP  = $example.children('p').eq(0),
             text     = handler.getText($title),
             safeName = handler.getSafeName(text),
-            id       = window.escape(safeName)
+            id       = window.escape(safeName),
+            since    = $example.data('since'),
+            classes  = $example.data('class'),
+            wordOrder = classes && classes.indexOf('!') >= 0
           ;
           if ($title.length > 0 && id.length > 0) {
             var $contentWrapped = $("<a/>").attr('href', '#' + id).html([
@@ -276,6 +281,16 @@ semantic.ready = function() {
               $title.html()
             ]).on('click', handler.scrollTo);
             $title.attr('id', id).html($contentWrapped);
+          }
+          if (since) {
+            if ($title.length > 0) {
+              $title.append(' <div class="ui teal label">New in ' + since + '</div>');
+            } else if ($firstP.length > 0) {
+                $firstP.append(' <span class="ui teal label">New in ' + since + '</span>');
+            }
+          }
+          if (wordOrder) {
+            $title.append(' <div class="ui small label"><i class="attention icon"></i>Word order required</div>');
           }
         })
       ;
@@ -870,9 +885,20 @@ semantic.ready = function() {
         isOtherUI     = (!isPageElement && isUI);
         isOtherIcon   = (!isPageElement && tagHTML === 'i' && html.search('icon') !== -1);
         // check if any class match
+        // check multi-word classes first
+        classes.sort(function(a,b){
+          var aSpaces = a.split(' ').length - 1,
+              bSpaces = b.split(' ').length - 1;
+          return aSpaces > bSpaces
+            ? -1
+            : aSpaces < bSpaces
+              ? 1
+              : 0;
+        });
         $.each(classes, function(index, string) {
           var
-            className      = string.trim(),
+            className      = string.trim().replace('!',''),
+            orderRequired  = string.trim()[0] === '!',
             isClassMatch   = (html.search(className) !== -1)
           ;
           if(className === '') {
@@ -880,7 +906,7 @@ semantic.ready = function() {
           }
           // class match on current page element (or content if allowed)
           if(isClassMatch && (isPageElement || useContent) ) {
-            newHTML = html.replace(className, '<b title="Required Class">' + className + '</b>');
+            newHTML = html.replace(className, '<b data-position="bottom center" data-variation="mini '+(orderRequired ? 'red' : 'black')+'" data-tooltip="'+(orderRequired ? 'Word order r' : 'R')+'equired Class">' + className + '</b>');
             return false;
           }
         });

@@ -1298,9 +1298,9 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-since="2.9.3">
     <h4 class="ui header">Evenly Divided</h4>
-        <p>A menu may divide its items evenly by either using <code>equal width</code> <span class="ui small black label">New in 2.9.3</span> ...</p>
+        <p>A menu may divide its items evenly by either using <code>equal width</code> ...</p>
     <div class="ui equal width menu">
       <a class="item">Buy</a>
       <a class="item">Sell</a>
@@ -1677,8 +1677,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Centered Fluid <span class="ui black label">New in 2.9.2</span></h4>
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Centered Fluid</h4>
     <p>A menu can be shown centered and fluid at the same time.</p>
     <div class="ui centered fluid menu">
       <a class="bug popup icon item">
@@ -1693,8 +1693,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Wrapping <span class="ui black label">New in 2.9.2</span></h4>
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Wrapping</h4>
     <p>Menu items can automatically wrap on responsive layouts</p>
     <div class="ui inverted wrapped green wrapping menu">
       <a class="active item">One</a>
@@ -1723,8 +1723,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Centered Fluid Wrapping <span class="ui black label">New in 2.9.2</span></h4>
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Centered Fluid Wrapping</h4>
     <p>By combining centered, fluid and wrapping you could create a menu similar to <a href="/elements/button.html#wrapping-buttons">Wrapping button groups</a></p>
     <div class="ui inverted wrapped blue centered fluid wrapping menu">
       <a class="active item">One</a>

@@ -260,8 +260,8 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="bottom ribbon, center ribbon, ribbon">
-    <h4 class="ui header">Bottom and Center Ribbon <div class="ui black label">New in 2.9.3</div></h4>
+  <div class="example" data-class="bottom ribbon, center ribbon, ribbon" data-since="2.9.3">
+    <h4 class="ui header">Bottom and Center Ribbon</h4>
     <p>A ribbon label can appear vertically centered or positioned to the bottom.</p>
     <div class="ui raised horizontal segments">
       <div class="ui segment">
@@ -410,9 +410,8 @@ themes      : ['Default', 'GitHub']
       </a>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-since="2.7.2">
     <h4 class="ui header">Floating left
-        <div class="ui black label">New in 2.7.2</div>
     </h4>
     <p>Floating Labels can be positioned to the left also</p>
     <div class="ui compact menu">
@@ -437,9 +436,8 @@ themes      : ['Default', 'GitHub']
       </a>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-since="2.7.2">
     <h4 class="ui header">Floating aligned
-      <div class="ui black label">New in 2.7.2</div>
     </h4>
     <p>Floating Labels containing large text can be aligned to the left or right</p>
     <div class="ui compact menu">
@@ -454,8 +452,8 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Inverted <span class="ui black label">New in 2.7</span></h4>
+  <div class="example" data-since="2.7">
+    <h4 class="ui header">Inverted</h4>
     <p>All Variants of Label can be inverted</p>
     <div class="ui inverted segment" >
         <a class="ui primary inverted label">Primary</a>
@@ -650,8 +648,8 @@ themes      : ['Default', 'GitHub']
     <p>A label can take the width of its container</p>
     <div class="ui fluid label">Fits container</div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Centered <span class="ui black label">New in 2.9.1</span></h4>
+  <div class="example" data-since="2.9.1">
+    <h4 class="ui header">Centered</h4>
     <p>Text can be shown centered</p>
     <div class="ui fluid centered label">Fits container</div>
   </div>
@@ -688,10 +686,8 @@ themes      : ['Default', 'GitHub']
     <a class="ui black empty circular label"></a>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Basic
-      <div class="ui black label">New in 2.1</div>
-    </h4>
+  <div class="example" data-since="2.1">
+    <h4 class="ui header">Basic</h4>
     <p>A label can reduce its complexity</p>
     <a class="ui basic label">Basic</a>
     <a class="ui pointing basic label">Pointing</a>
@@ -723,10 +719,8 @@ themes      : ['Default', 'GitHub']
     <a class="ui black label">Black</a>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Basic Tag Labels
-        <div class="ui black label">New in 2.7</div>
-    </h4>
+  <div class="example" data-since="2.7">
+    <h4 class="ui header">Basic Tag Labels</h4>
     <p></p>
     <a class="ui basic tag label">Standard Tag</a>
     <a class="ui primary basic tag label">Primary</a>
@@ -818,10 +812,8 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Basic Group
-        <div class="ui black label">New in 2.7</div>
-    </h4>
+  <div class="example" data-since="2.7">
+    <h4 class="ui header">Basic Group</h4>
     <p>Labels can share their style together</p>
     <div class="ui basic labels">
         <a class="ui label">

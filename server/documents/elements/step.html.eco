@@ -121,8 +121,8 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
-  <div class="another example">
-    <p>Right vertical steps will show the active arrow to the left <span class="ui horizontal black label">New in 2.8.5</span></p>
+  <div class="another example" data-since="2.8.5">
+    <p>Right vertical steps will show the active arrow to the left</p>
     <div class="ui right vertical steps">
       <div class="completed step">
         <i class="truck icon"></i>
@@ -317,10 +317,9 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="stackable">
+  <div class="example" data-class="stackable" data-since="2.2.11">
     <h4 class="ui header">
       Unstackable
-      <div class="ui teal label">New in 2.2.11</div>
     </h4>
     <p>A step can prevent itself from stacking on mobile</p>
     <div class="ui unstackable steps">

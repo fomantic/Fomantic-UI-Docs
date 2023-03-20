@@ -109,10 +109,9 @@ type        : 'UI Module'
     </div>
 
 
-    <div class="local-category example">
+    <div class="local-category example" data-since="2.3">
       <h4 class="ui header">
         Local Category Search
-        <div class="ui teal label">New in 2.3</div>
       </h4>
       <p>A search can look for category results inside a static local source.</p>
       <div class="ui ignored info message">
@@ -152,10 +151,9 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="diacritics example">
+    <div class="diacritics example" data-since="2.7.2">
       <h4 class="ui header">
         Search ignoring Diacritics
-        <div class="ui black label">New in 2.7.2</div>
       </h4>
       <p>A selection dropdown can allow a user to ignore all Diacritics while searching.</p>
       <div class="ui ignored info message">
@@ -286,10 +284,9 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="category example">
+    <div class="category example" data-since="2.3.1">
       <h4 class="ui header">
         Disabled
-        <div class="ui teal label">New in 2.3.1</div>
       </h4>
       <p>A search can show it is currently unable to be interacted with</p>
       <div class="ui disabled category search">

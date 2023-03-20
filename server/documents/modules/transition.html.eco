@@ -35,10 +35,9 @@ type        : 'UI Module'
         </div>
       </div>
 
-      <div class="no example">
+      <div class="no example" data-since="2.3">
         <h4 class="ui header">
           Zoom
-          <div class="ui teal label">New in 2.3</div>
         </h4>
         <p>An element can zoom into view from far away</p>
         <div class="code" data-demo="true">
@@ -207,10 +206,9 @@ type        : 'UI Module'
             </div>
         </div>
       </div>
-      <div class="no example">
+      <div class="no example" data-since="2.9.1">
         <h4 class="ui header">
           Pulsating
-        <div class="ui black label">New in 2.9.1</div>
         </h4>
         <p>An element can have pulsating edges. This works best on circular or square elements.</p>
         <div class="ui ignored message">
@@ -288,10 +286,9 @@ type        : 'UI Module'
         ;
         </div>
       </div>
-      <div class="no example">
+      <div class="no example" data-since="2.3">
         <h4 class="ui header">
           Glow
-          <div class="ui teal label">New in 2.3</div>
         </h4>
         <p>An element can glow to show its position in a page.</p>
         <div class="code" data-demo="true">

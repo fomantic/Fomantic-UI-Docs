@@ -291,8 +291,8 @@ themes      : ['Default']
       Curabitur ullamcorper ultricies nisi.</p>
     </div>
 
-  <div class="example">
-    <h4 class="ui header">Scrolling<div class="ui black label">New in 2.9</div></h4>
+  <div class="example" data-since="2.9">
+    <h4 class="ui header">Scrolling</h4>
     <p>A scrolling container has a predefined height to allow its content to be scrollable</p>
     <div class="ui scrolling container">
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>

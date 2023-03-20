@@ -180,9 +180,6 @@ standalone : false
       </h1>
       <p>Fomantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.</p>
       <p>Develop your UI once, then deploy with the same code everywhere.</p>
-      <div class="ui large source button" style="display:none;">
-        <i class="docs code icon"></i> View Source
-      </div>
     </div>
     <div class="left aligned column">
       <div data-type="element" data-element="button" class="ui large floating dropdown theme button">

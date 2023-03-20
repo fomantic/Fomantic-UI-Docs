@@ -174,8 +174,8 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="another example">
-      <p>You can also set the type or date using HTML markup <span class="ui black label">New in 2.8.0</span></p>
+    <div class="another example" data-since="2.8.0">
+      <p>You can also set the type or date using HTML markup</p>
       <div class="ui ignored info message">This could be useful when used with form validation without the need to instantiate the calendar via javascript before. Form validation recognizes a calendar component within the form and instantiates it automatically by using existing metadata values.</div>
       <div class="ui calendar" id="type_calendar" data-type="date" data-date="2019-12-24">
         <div class="ui input left icon">
@@ -311,8 +311,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Custom format <div class="ui small black label">New in 2.9.0</div></h4>
+    <div class="example" data-since="2.9.0">
+      <h4 class="ui header">Custom format</h4>
       <p>You can entirely change the date format by using a token string formatter.</p>
       <p>
         Tokens are placeholder characters for a specific output format. Fomantic-UI supports the following tokens:
@@ -646,8 +646,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="no example">
-      <h4 class="ui header">Context <span class="ui black label">New in 2.9.1</span></h4>
+    <div class="no example" data-since="2.9.1">
+      <h4 class="ui header">Context</h4>
       <p>A calendar popup inside an overflowing container does not allow the calendar popup to be shown completely, because it's still placed inside the same overflowing container of the triggering element by default.
          To solve this, you can now use the context setting and provide a (non-overflowing) parent element to move the calendar popup outside of the overflowing container and display the calendar popup properly.
          <br>
@@ -728,8 +728,8 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="example">
-      <h4 class="ui header">Hours <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="example" data-since="2.9.0">
+      <h4 class="ui header">Hours</h4>
       <p>Disabling specific hours of specific days which can optionally display a reason in popup on hover</p>
       <div class="ui calendar" id="disabledhours_calendar">
         <div class="ui fluid input left icon">
@@ -780,8 +780,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Whole Months <span class="ui black label">New in 2.8.4</span></h4>
+    <div class="example" data-since="2.8.4">
+      <h4 class="ui header">Whole Months</h4>
       <p>It's possible to disable all days of specific months</p>
       <div class="ui calendar" id="disabledmonth_calendar">
           <div class="ui input left icon">
@@ -807,8 +807,8 @@ themes      : ['Default']
           ;
       </div>
     </div>
-    <div class="example">
-      <h4 class="ui header">Whole Years <span class="ui black label">New in 2.8.4</span></h4>
+    <div class="example" data-since="2.8.4">
+      <h4 class="ui header">Whole Years</h4>
       <p>It's possible to disable all days of a whole year</p>
       <div class="ui calendar" id="disabledyear_calendar">
           <div class="ui input left icon">

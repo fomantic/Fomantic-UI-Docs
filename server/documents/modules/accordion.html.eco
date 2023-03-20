@@ -78,8 +78,8 @@ themes      : ['Default', 'Chubby']
         </div>
       </div>
     </div>
-    <div class="example">
-        <h4 class="ui header">Basic Styled <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="example" data-since="2.9.0">
+        <h4 class="ui header">Basic Styled</h4>
         <p>A basic styled accordion limits the formatting to the header only</p>
         <div class="ui basic styled accordion">
           <div class="active title">
@@ -107,8 +107,8 @@ themes      : ['Default', 'Chubby']
         </div>
 
     </div>
-    <div class="example">
-      <h4 class="ui header">Tree <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="example" data-since="2.9.0">
+      <h4 class="ui header">Tree</h4>
       <p>A tree accordion using <a href="#nested-accordions">nested accordions</a></p>
       <div class="ui tree accordion">
         <div class="active title">
@@ -263,8 +263,8 @@ themes      : ['Default', 'Chubby']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Compact <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="example" data-since="2.9.0">
+      <h4 class="ui header">Compact</h4>
       <p>An accordion can reduce its padding to appear compact</p>
       <div class="ui segment">
         <div class="ui compact accordion">
@@ -582,8 +582,8 @@ themes      : ['Default', 'Chubby']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Right Icon <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="example" data-since="2.9.0">
+      <h4 class="ui header">Right Icon</h4>
       <p>The dropdown icon can be placed to the right.</p>
       <div class="ui blue compact message">
         <div class="ui basic styled accordion">
@@ -613,8 +613,8 @@ themes      : ['Default', 'Chubby']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Without Javascript <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="example" data-since="2.9.0">
+      <h4 class="ui header">Without Javascript</h4>
       <p>Using the accordion classes on <code>details/summary</code> HTML Elements, results in an accordion element made of pure CSS.</p>
       <details class="ui accordion">
         <summary class="title">

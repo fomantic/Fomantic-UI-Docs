@@ -83,7 +83,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
   </div>
 
-  <div class="example" data-class="labeled, left labeled">
+  <div class="example" data-class="labeled, !left labeled">
     <h4 class="ui header">Labeled</h4>
     <p>A button can appear alongside a <a href="/elements/label.html">label</a></p>
     <div class="ui labeled button" tabindex="0">
@@ -695,8 +695,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Wrapping Buttons <span class="ui black label">New in 2.9.0</span></h4>
+  <div class="example" data-since="2.9.0">
+    <h4 class="ui header">Wrapping Buttons</h4>
     <p>Groups buttons can automatically wrap sharing the overall available width</p>
     <div class="ui wrapped wrapping buttons">
       <button class="ui button">One</button>
@@ -725,8 +725,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Spaced Buttons <span class="ui black label">New in 2.9.0</span></h4>
+  <div class="example" data-since="2.9.0">
+    <h4 class="ui header">Spaced Buttons</h4>
     <p>Buttons inside groups can automatically get a margin so they dont appear attached together, especially when used together with <a href="#wrapping-buttons">wrapping</a> on responsive layouts</p>
     <div class="ui wrapping spaced buttons">
       <button class="ui button">One</button>

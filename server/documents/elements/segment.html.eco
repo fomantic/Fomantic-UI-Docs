@@ -26,10 +26,9 @@ themes      : ['default', 'GitHub']
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-since="2.4.0">
     <h4 class="ui header">
       Placeholder Segment
-      <div class="ui teal horizontal label">New in 2.4.0</div>
     </h4>
     <p>A segment can be used to reserve space for conditionally displayed content.</p>
     <div class="ui placeholder segment">
@@ -283,9 +282,8 @@ themes      : ['default', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-since="2.8.8">
     <h4 class="ui header">Horizontal equal width Segments
-        <div class="ui black label">New in 2.8.8</div>
     </h4>
     <p>A horizontal segment group can automatically divide segments to be equal width</p>
     <div class="ui horizontal equal width segments">
@@ -300,10 +298,8 @@ themes      : ['default', 'GitHub']
         </div>
       </div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Horizontal wrapping Segments
-    <div class="ui black label">New in 2.9.3</div>
-    </h4>
+  <div class="example" data-since="2.9.3">
+    <h4 class="ui header">Horizontal wrapping Segments</h4>
     <div class="ui ignored warning message">
     There also exists a <code>horizontal stackable segments</code> alias but that alias is deprecated by 2.9.3 and will be removed in 2.10.0
     </div>
@@ -400,8 +396,8 @@ themes      : ['default', 'GitHub']
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
   </div>
-  <div class="another example">
-    <p>The loader inherits the color of the segment, if you want to prevent this, add the <code>usual</code> class, so the loader color stays default, while the segment still gets its color<div class="ui black label">New in 2.7.0</div></p>
+  <div class="another example" data-since="2.7.0">
+    <p>The loader inherits the color of the segment, if you want to prevent this, add the <code>usual</code> class, so the loader color stays default, while the segment still gets its color</p>
     <div class="ui ignored info message"><code>elastic</code> as loading style is currently not supported  because segment uses the <code>:before</code> pseudoclass to dimm the background.</div>
     <div class="ui brown double loading segment">
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
@@ -463,8 +459,8 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-      <h4 class="ui header">Seamless attached <span class="ui black label">New in 2.9.2</span></h4>
+  <div class="example" data-since="2.9.2">
+      <h4 class="ui header">Seamless attached</h4>
       <p>A segment can be seamless attached removing the related sides border. This is especially useful when working with a <a href="/collections/menu.html#tabular"><code>vertical tabular menu</code></a></p>
       <div class="ui horizontal segments">
           <div class="ui seamless left attached right aligned segment">
@@ -654,8 +650,8 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Scrolling<div class="ui black label">New in 2.9</div></h4>
+  <div class="example" data-since="2.9">
+    <h4 class="ui header">Scrolling</h4>
     <p>A scrolling segment has a predefined height to allow its content to be scrollable</p>
     <div class="ui scrolling segment">
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>

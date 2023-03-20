@@ -106,9 +106,8 @@ themes      : ['Default']
 
     <h3 class="ui header">No Javascript</h3>
 
-    <div class="example">
+    <div class="example" data-since="2.2">
       <h4 class="ui header">Tooltip
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>An element can specify a simple tooltip that can appear without javascript via the <code>data-tooltip</code> attribute. If the tooltip should be shown inverted, also add the <code>data-inverted</code> attribute.</p>
       <div class="ui warning ignored message">
@@ -242,8 +241,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Multiline Tooltip <span class="ui black label">New in 2.9.1</span></h4>
+    <div class="example" data-since="2.9.1">
+      <h4 class="ui header">Multiline Tooltip</h4>
       <p>A tooltip can show multiple lines via predefined line breaks in the HTML code and adding <code>multiline</code> to the <code>data-variation</code> attribute.</p>
       <div class="ui ignored warning message">
         <div class="header">
@@ -262,16 +261,16 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Visible Tooltip <div class="ui black label">New in 2.9.3</div></h4>
+    <div class="example" data-since="2.9.3">
+      <h4 class="ui header">Visible Tooltip</h4>
       <p>A tooltip can be shown visible all the time by adding <code>visible</code> to the <code>data-variation</code> attribute.</p>
       <div class="ui button" data-tooltip="I am visible all the time" data-variation="visible" data-position="right center">
         Important Button
       </div>
     </div>
 
-    <div class="example">
-        <h4 class="ui header">Colored Tooltip<span class="ui black label">New in 2.9.1</span></h4>
+    <div class="example" data-since="2.9.1">
+        <h4 class="ui header">Colored Tooltip</h4>
         <p>A tooltip can have different colors via the <code>data-variation</code> attribute.</p>
         <div class="ui spaced compact wrapping buttons">
             <button data-variation="red" data-tooltip="Red" class="ui button">Red</button>
@@ -292,8 +291,8 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">States</h2>
 
-    <div class="loading example">
-        <h4 class="ui header">Loading <div class="ui black label">New in 2.9.2</div></h4>
+    <div class="loading example" data-since="2.9.2">
+        <h4 class="ui header">Loading</h4>
         <p>A popup may show its content is being loaded</p>
         <div class="ui grid">
           <div class="doubling two column row">
@@ -405,8 +404,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="colored example">
-        <h4 class="ui header">Colored<span class="ui black label">New in 2.9.1</span></h4>
+    <div class="colored example" data-since="2.9.1">
+        <h4 class="ui header">Colored</h4>
         <p>A popup can have different colors</p>
         <div class="ui spaced compact wrapping buttons">
             <button class="ui button">Red</button>
@@ -620,9 +619,8 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Examples</h2>
 
-    <div class="boundary example">
+    <div class="boundary example" data-since="2.2">
       <h4 class="ui header">Specifying Popup Boundaries
-        <div class="ui horizontal teal label">New in 2.2</div>
       </h4>
       <p>Popups now include a new setting <code>boundary</code> that let you specify that a popup should not escape the boundary of another section. This can be useful in complex paned layouts</p>
       <p>Additionally popups can now specify a scroll context, to allow for scroll containers other than window to cause a clicked popup to hide on scroll.</p>

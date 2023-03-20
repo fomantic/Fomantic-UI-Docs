@@ -31,9 +31,9 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-since="2.9.0">
     <h4 class="ui header">
-      File Input <div class="ui black label">New in 2.9.0</div>
+      File Input
     </h4>
     <p>A file input</p>
     <div class="ui file input">
@@ -43,9 +43,9 @@ themes      : ['Default', 'GitHub']
     If you want the trigger button having a custom text or an icon, you should use a <a href="#file-action">File Action Input</a>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-since="2.9.0">
     <h4 class="ui header">
-      Invisible File Input <div class="ui black label">New in 2.9.0</div>
+      Invisible File Input
     </h4>
     <p>A file input can be made invisible so you are able to design another element to trigger the file dialog.</p>
     <p>To accomplish this, you have to use a corresponding <code>&lt;label&gt;</code> element. This can be styled as desired, most probably as a button element</p>
@@ -327,8 +327,8 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">File Action<div class="ui black label">New in 2.9.0</div></h4>
+  <div class="example" data-since="2.9.0">
+    <h4 class="ui header">File Action</h4>
     <p>A File action input allows custom content inside the file trigger button. File action input buttons have to be made out of a label element.</p>
     <div class="ui ignored warning message">
         Although <code>left action</code> also works with file action inputs, in order to support button highlighting on key tabbing, the action button needs to be placed after the file input so it appears to the right.
@@ -437,10 +437,9 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-since="2.7">
     <h4 class="ui header">
         Textarea
-        <div class="ui black label">New in 2.7</div>
     </h4>
     <p>Using the input class you can also use some features on <code>textarea</code> as well</p>
     <div class="ui form">

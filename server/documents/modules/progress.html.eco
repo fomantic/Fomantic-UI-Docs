@@ -74,8 +74,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Centered Progress Text<span class="ui small black label">New in 2.7.6</span></h4>
+    <div class="example" data-since="2.7.6">
+      <h4 class="ui header">Centered Progress Text</h4>
       <p>The text inside a progress can be centered</p>
       <div class="ui progress">
         <div class="bar">
@@ -189,8 +189,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Indeterminate<span class="ui small black label">New in 2.7.6</span></h4>
+    <div class="example" data-since="2.7.6">
+      <h4 class="ui header">Indeterminate</h4>
       <p>A progress bar can be shown in different indeterminate states.</p>
       <div class="ui warning ignored message">
         The <code>indeterminate</code> progress state is not supposed to be used in combination with <code>multiple</code> progress bars
@@ -232,8 +232,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="example">
-      <h4 class="ui header">Right aligned <div class="ui black label">New in 2.8.8</div></h4>
+    <div class="example" data-since="2.8.8">
+      <h4 class="ui header">Right aligned</h4>
       <p>A progress bar can be right aligned growing to the left</p>
       <div class="ui right aligned active progress">
         <div class="bar">

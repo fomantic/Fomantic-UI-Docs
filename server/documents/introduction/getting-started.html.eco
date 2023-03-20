@@ -46,7 +46,7 @@ type        : 'Main'
         </div>
         <p>
             However, some combinations of FUI classnames <b>MUST</b> be declared in a strict predefined order divided by <b>ONE</b> space character.
-            This is sometimes needed to avoid decription confusion when the same classnames are used but have a different meaning.
+            This is sometimes needed to avoid description confusion when the same classnames are used but have a different meaning.
         </p>
         <div class="ui basic segment">
             <code>ui left labeled right floated button</code>
@@ -61,6 +61,7 @@ type        : 'Main'
                 <div class="item">Where should the button be <b>labeled</b>? Left or right?</div>
             </div>
         </div>
+        <p>Some examples are labeled by <span class="ui small label"><i class="attention icon"></i>Word order required</span> to indicate the word order necessity.</p>
         <p>So, as a general advise, just declare the classname order like a grammatical correct spoken description.</p>
         <div class="ui ignored warning message">
             <div class="header">Use <code>&lt;&gt;</code></div>

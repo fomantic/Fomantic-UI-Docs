@@ -159,8 +159,8 @@ type        : 'UI Behavior'
         <div class="ui error message"></div>
       </div>
     </form>
-    <div class="color example">
-      <h4 class="ui header">Passing Parameters to Rules <div class="ui horizontal teal label">New in 2.2.3</div></h4>
+    <div class="color example" data-since="2.2.3">
+      <h4 class="ui header">Passing Parameters to Rules</h4>
       <p>Typically rules that include a parameter are written <code>minLength[2]</code> with the value being passed in as brackets.</p>
       <p>If passing in properties as a string is not ideal, or if you are pulling values from another javascript variable, it might make sense to consider using <code>value</code> to pass in the rule value.</p>
       <div class="ignored code">
@@ -1436,9 +1436,9 @@ type        : 'UI Behavior'
 
     <h2 class="ui dividing header">Form Examples</h2>
 
-    <div class="add example">
+    <div class="add example" data-since="2.2.11">
       <h4 class="ui header">
-        Adding Rules Programmatically <div class="ui teal label">New in 2.2.11</div>
+        Adding Rules Programmatically
       </h4>
       <p>You can use the special behaviors <code>add field/rule</code>, <code>remove rule</code> and <code>remove field</code> to dynamically add or remove fields or rules. </p>
       <div class="ui ignored info message">
@@ -1575,10 +1575,9 @@ type        : 'UI Behavior'
       </form>
     </div>
 
-    <div class="depends example">
+    <div class="depends example" data-since="2.2">
       <h4 class="ui header">
         Dependent Fields
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>You can specify validation fields to only be used when other fields are present. Simply add <code>depends: 'identifier'</code> with the ID of the field that must be non-blank for this rule to evaluate.</p>
       <div class="ignored code">

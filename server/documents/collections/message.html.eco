@@ -122,8 +122,8 @@ themes      : ['Default', 'GitHub', 'Gmail']
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="example">
-    <h4 class="ui header">Center Aligned <span class="ui black label">New in 2.8.8</span></h4>
+  <div class="example" data-since="2.8.8">
+    <h4 class="ui header">Center Aligned</h4>
     <p>A message can be displayed center aligned</p>
     <div class="ui center aligned message">
       <div class="content">
@@ -135,8 +135,8 @@ themes      : ['Default', 'GitHub', 'Gmail']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Right Aligned <span class="ui black label">New in 2.8.8</span></h4>
+  <div class="example" data-since="2.8.8">
+    <h4 class="ui header">Right Aligned</h4>
     <p>A message can be displayed right aligned</p>
     <div class="ui right aligned message">
       <div class="content">

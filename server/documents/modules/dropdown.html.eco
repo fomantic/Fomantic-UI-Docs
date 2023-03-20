@@ -185,10 +185,9 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
     </div>
 
-    <div class="diacritics example">
+    <div class="diacritics example" data-since="2.7.2">
       <h4 class="ui header">
         Search ignoring Diacritics
-        <div class="ui black label">New in 2.7.2</div>
       </h4>
       <p>A selection dropdown can allow a user to ignore all Diacritics while searching.</p>
       <div class="ui ignored info message">
@@ -236,10 +235,9 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-since="2.4.2">
       <h4 class="ui header">
         Clearable Selection
-        <div class="ui teal label">New in 2.4.2</div>
       </h4>
       <p>A clearable selection dropdown can allow a user to cancel to cancel a previous selection</p>
       <div class="ui clearable selection dropdown">
@@ -1082,8 +1080,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="actionable example">
-      <h4 class="ui header">Actionable <div class="ui black label">New in 2.9.0</div></h4>
+    <div class="actionable example" data-since="2.9.0">
+      <h4 class="ui header">Actionable</h4>
       <p>A dropdown menu can contain an actionable item which performs a custom callback once clicked instead of being selected itself</p>
       <div class="ui selection dropdown">
         <input type="hidden" name="">
@@ -1207,8 +1205,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Read-Only <span class="ui black label">New in 2.8.8</span></h4>
+    <div class="example" data-since="2.8.8">
+      <h4 class="ui header">Read-Only</h4>
       <p>A dropdown can be read-only and does not allow user interaction</p>
       <div class="ui read-only dropdown">
         Dropdown <i class="dropdown icon"></i>
@@ -1411,8 +1409,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="another dropdown example">
-      <p>The menu of a non-inverted dropdown can be inverted <span class="ui black label">New in 2.8.8</span></p>
+    <div class="another dropdown example" data-since="2.8.8">
+      <p>The menu of a non-inverted dropdown can be inverted</p>
         <div class="ui selection dropdown">
             <input type="hidden" name="choices">
             <div class="default text">Select choice</div>
@@ -1615,12 +1613,9 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <h2 class="ui header">Selection Dropdowns</h2>
 
-    <div class="clearable example">
+    <div class="clearable example" data-since="2.4.0">
       <h4 class="ui header">
         Clearable
-        <div class="ui teal label">
-          New in 2.4.0
-        </div>
       </h4>
       <p>Using the clearable setting will let users remove their selection from a dropdown.</p>
 
@@ -1731,8 +1726,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="stuck example">
-      <h4 class="ui header">Stuck User Additions <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="stuck example" data-since="2.9.0">
+      <h4 class="ui header">Stuck User Additions</h4>
       <p>While using <code>allowAdditions: true</code> together with <code>hideAdditions: false</code>, the first line indicating "add:" with the user addition may not be correctly displayed, depending on the container size and the distance between topmost visible item and menu's top item.
 
       <p>You can stick this addition line to the top of the menu by providing the additional <code>stuck</code> class.</p>
@@ -2550,10 +2545,9 @@ themes      : ['Default', 'GitHub', 'Material']
         ;
       </div>
     </div>
-    <div class="js example">
+    <div class="js example" data-since="2.2.12">
       <h4 class="ui header">
         Initializing with Javascript Only
-        <div class="ui teal label">New in 2.2.12</div>
       </h4>
       <p>You can specify a list of values in the settings object to avoid having to stub the html yourself.</p>
       <p>Adding <code>selected: true</code> to an item will have that item selected by default.</p>
@@ -2657,8 +2651,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
 
     </div>
-      <div class="no example">
-          <h4 class="ui header">Display images and/or icons by value setting<div class="ui black label">New in 2.7.7</div></h4>
+      <div class="no example" data-since="2.7.7">
+          <h4 class="ui header">Display images and/or icons by value setting</h4>
           <p>Images and/or icons in front of an item can be dynamically created by providing image paths, icon names or classnames for different styling</p>
           <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
           <div class="evaluated code" data-type="javascript">
@@ -2736,8 +2730,8 @@ themes      : ['Default', 'GitHub', 'Material']
 
       </div>
 
-      <div class="no example">
-          <h4 class="ui header">Display a (vertical) description by value setting<div class="ui black label">New in 2.8.8</div></h4>
+      <div class="no example" data-since="2.8.8">
+          <h4 class="ui header">Display a (vertical) description by value setting</h4>
           <p>An additional item description (optionally displayed vertically) can be dynamically created by providing two extra attributes</p>
           <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
           <div class="evaluated code" data-type="javascript">
@@ -2764,8 +2758,8 @@ themes      : ['Default', 'GitHub', 'Material']
           </div>
       </div>
 
-      <div class="no example">
-          <h4 class="ui header">Supporting image labels for multiselection<div class="ui black label">New in 2.7.7</div></h4>
+      <div class="no example" data-since="2.7.7">
+          <h4 class="ui header">Supporting image labels for multiselection</h4>
           <p>If needed, you can adjust the classname for multiselection labels to make use of <code><a href="/elements/label.html#image">image label</a></code></p>
           <div class="evaluated code" data-type="javascript">
               $('#imagelabels').dropdown({

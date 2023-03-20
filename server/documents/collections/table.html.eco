@@ -580,8 +580,8 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Colored Cells<div class="ui black label">New in 2.7</div></h4>
+  <div class="example" data-since="2.7">
+    <h4 class="ui header">Colored Cells</h4>
     <p>A cell can be styled by the central color palette colors</p>
     <table class="ui celled table">
       <thead>
@@ -616,8 +616,8 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Marked<div class="ui black label">New in 2.8</div></h4>
+  <div class="example" data-since="2.8.0" data-class="marked, !blue marked, !green marked, !orange marked, !red marked, !blue marked, !purple marked" data-use-content="true">
+    <h4 class="ui header">Marked</h4>
     <p>A cell or row can be marked by a colored left or right border</p>
     <div class="ui ignored warning message">
       <p>Since 2.9.0 you have to follow the class order: First color name, then <code>marked</code>. This is to support <a href="#colored-and-marked">colored and marked</a> cells</p>
@@ -655,8 +655,8 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Colored and Marked<div class="ui black label">New in 2.9</div></h4>
+  <div class="example" data-class="colored, marked, !red colored, !blue marked, !green colored, !yellow colored, !red marked, !purple marked" data-use-content="true" data-since="2.9">
+    <h4 class="ui header">Colored and Marked</h4>
     <p>If you need colored cells which are also marked at the same time in a different color, you have to follow a specific class order and add the <code>colored</code> class to the cell color.<br>For example <code>red colored right blue marked</code> .</p>
     <table class="ui celled table">
       <thead>
@@ -2149,8 +2149,8 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tfoot>
     </table>
   </div>
-  <div class="example">
-    <h4 class="ui header">Scrolling<div class="ui black label">New in 2.9</div></h4>
+  <div class="example" data-since="2.9">
+    <h4 class="ui header">Scrolling</h4>
     <p>A table body can scroll vertically.</p>
     <div class="ui ignored warning message">
         Some table variants like <a href="#column-width">column width</a> or <a href="#single-line">single line</a> do not work with a scrolling table.
@@ -2377,8 +2377,8 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </tfoot>
     </table>
   </div>
-  <div class="example">
-    <h4 class="ui header">Stuck<div class="ui black label">New in 2.9</div></h4>
+  <div class="example" data-since="2.9">
+    <h4 class="ui header">Stuck</h4>
     <p>A table can scroll horizontally having its <code>head</code>, <code>foot</code>, <code>first</code> or <code>last</code> column keep staying stuck.</p>
     <p>You can freely stick any combination like <code>head first stuck</code>, <code>foot first last stuck</code>, <code>head foot first stuck</code>, <code>first last stuck</code>, etc.</p>
     <div class="ui ignored info message">

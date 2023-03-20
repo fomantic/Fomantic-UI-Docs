@@ -136,10 +136,9 @@ themes      : ['Default']
     <h2 class="ui dividing header">Variations</h2>
 
     <h3>Dimmable</h3>
-    <div class="example">
+    <div class="example" data-since="2.0">
       <h4 class="ui header">
         Blurring
-        <span class="ui teal label">New in 2.0</span>
       </h4>
       <p>A dimmable element can blur its contents</p>
       <div class="ui blurring segment">
@@ -165,10 +164,9 @@ themes      : ['Default']
     </div>
 
     <h3>Alignment</h3>
-    <div class="example">
+    <div class="example" data-since="2.3">
       <h4 class="ui header">
         Vertical Alignment
-        <span class="ui teal label">New in 2.3</span>
       </h4>
       <p>A dimmer can have its content top or bottom aligned.</p>
       <div class="ui segment">
@@ -370,8 +368,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="dimmerloader example">
-      <p>You can customize a loader in a dimmer via javascript <div class="ui black label">New in 2.7.0</div></p>
+    <div class="dimmerloader example" data-since="2.7.0">
+      <p>You can customize a loader in a dimmer via javascript</p>
       <div class="evaluated code">
           $('.dimmerloader.example .image')
           .dimmer({
