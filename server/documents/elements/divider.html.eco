@@ -110,7 +110,7 @@ themes      : ['default']
       <div class="ui horizontal divider">
         Or
       </div>
-      <div class="ui teal labeled icon button">
+      <div class="ui green labeled icon button">
         Create New Order
         <i class="add icon"></i>
       </div>

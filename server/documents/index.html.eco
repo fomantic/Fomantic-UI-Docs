@@ -286,7 +286,7 @@ standalone : false
           <div class="ui vertical demo menu">
             <a class="active teal item">
               Inbox
-              <div class="ui teal label">1</div>
+              <div class="ui green label">1</div>
             </a>
             <a class="item">
               Trash
@@ -523,7 +523,7 @@ standalone : false
             molly@thebears.com
             <i class="delete icon"></i>
           </div>
-          <a class="ui teal label">
+          <a class="ui green label">
             <i class="mail icon"></i> 23 New
           </a>
           <a class="ui tag label">Dresses</a>

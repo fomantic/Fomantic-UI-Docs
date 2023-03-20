@@ -1281,7 +1281,7 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td class="five wide">onBeforeChange(date, text, mode) <span class="ui tiny black label">New in 2.8.0</span></td>
+          <td class="five wide">onBeforeChange(date, text, mode) <span class="ui tiny teal label">New in 2.8.0</span></td>
           <td>active content</td>
           <td>Is called before a calendar date changes. <code>return false;</code> will cancel the change</td>
         </tr>

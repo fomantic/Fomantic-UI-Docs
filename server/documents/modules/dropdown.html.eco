@@ -84,7 +84,7 @@ themes      : ['Default', 'GitHub', 'Material']
       		iOS devices or firefox mobile do not show a scrollbar by default!
       	</div>
       	<p>
-      		To indicate more possible entries than shown, you may add the <code>scrollhint</code> class to the <code>menu</code> to show a short swipe animation on such devices.<br>When transforming <code>select</code> dropdowns this is done by using <code>className:{menu:'scrollhint menu'}</code> as a config setting <span class="ui black mini label">New in 2.8.7</span>
+      		To indicate more possible entries than shown, you may add the <code>scrollhint</code> class to the <code>menu</code> to show a short swipe animation on such devices.<br>When transforming <code>select</code> dropdowns this is done by using <code>className:{menu:'scrollhint menu'}</code> as a config setting <span class="ui teal mini label">New in 2.8.7</span>
       	</p>
       </div>
       <div class="ui selection dropdown">
@@ -2603,7 +2603,7 @@ themes      : ['Default', 'GitHub', 'Material']
         ;
       </div>
       <br/>
-      <p>You can also add submenus by adding <code>type: 'menu'</code> or <code>type: 'left menu'</code> and another <code>values</code> object to the item itself. <span class="ui black label">New in 2.8.8</span></p>
+      <p>You can also add submenus by adding <code>type: 'menu'</code> or <code>type: 'left menu'</code> and another <code>values</code> object to the item itself. <span class="ui teal label">New in 2.8.8</span></p>
       <div class="code" data-label="Javascript" data-type="javascript">
           $('.ui.dropdown').dropdown({
             values: [
@@ -3368,12 +3368,12 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>ignoreCase</td>
-          <td>false<div class="ui label">New in 2.2.13</div></td>
+          <td>false<div class="ui teal label">New in 2.2.13</div></td>
           <td>Whether values with non matching cases should be treated as identical when adding them to a dropdown.</td>
         </tr>
         <tr>
           <td>ignoreSearchCase</td>
-          <td>true<div class="ui label">New in 2.8.0</div></td>
+          <td>true<div class="ui teal label">New in 2.8.0</div></td>
           <td>Whether values with non matching cases should be treated as identical when filtering the items.</td>
         </tr>
         <tr>
@@ -3491,7 +3491,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>ignoreDiacritics</td>
           <td>false</td>
           <td>When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
-              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui black label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
+              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui teal label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
         </tr>
       </tbody>
     </table>
@@ -3670,7 +3670,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string, setting to "false" will only match start of string.</td>
         </tr>
         <tr>
-          <td>hideDividers <div class="ui label">New in 2.4.0</div></td>
+          <td>hideDividers <div class="ui teal label">New in 2.4.0</div></td>
           <td>false</td>
           <td>How to handle dividers in the dropdown while searching. Dividers are defined as all siblings of items that match the <a href="#dom-settings">divider selector</a>
             <div class="ui vertical divided list">

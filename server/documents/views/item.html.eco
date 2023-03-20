@@ -25,7 +25,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">
       Items
-      <span class="ui teal label">Flexbox</span>
+      <span class="ui orange label">Flexbox</span>
     </h4>
     <p>A group of items.</p>
     <div class="ui ignored positive icon message">

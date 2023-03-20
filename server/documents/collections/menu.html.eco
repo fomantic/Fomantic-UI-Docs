@@ -1523,7 +1523,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <p>A vertical menu can also vary in size</p>
     <div class="ui mini vertical menu">
       <a class="active item">
-        <div class="ui teal label">1</div>
+        <div class="ui green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1545,7 +1545,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui small vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1567,7 +1567,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui large vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1589,7 +1589,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui massive vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">

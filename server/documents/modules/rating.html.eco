@@ -26,7 +26,7 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Rating
-        <span class="ui teal label">Flexbox</span>
+        <span class="ui orange label">Flexbox</span>
       </h4>
       <p>A basic rating </p>
       <div class="ui rating" data-max-rating="1"></div>

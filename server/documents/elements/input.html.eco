@@ -277,7 +277,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui left action input">
-      <button class="ui teal labeled icon button">
+      <button class="ui green labeled icon button">
         <i class="cart icon"></i>
         Checkout
       </button>

@@ -606,10 +606,9 @@ themes      : ['default', 'GitHub']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-since="2.0>
     <h4 class="ui header">
       Clearing
-      <span class="ui teal label">New</span>
     </h4>
     <p>A segment can clear floated content</p>
     <div class="ui clearing segment">
