@@ -282,7 +282,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A message can be formatted to be different colors</p>
     <div class="ui red message">Red</div>

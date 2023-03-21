@@ -269,7 +269,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-since="2.9.1">
+    <div class="example" data-since="2.9.1" data-class="colors">
         <h4 class="ui header">Colored Tooltip</h4>
         <p>A tooltip can have different colors via the <code>data-variation</code> attribute.</p>
         <div class="ui spaced compact wrapping buttons">
@@ -404,7 +404,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="colored example" data-since="2.9.1">
+    <div class="colored example" data-since="2.9.1" data-class="colors">
         <h4 class="ui header">Colored</h4>
         <p>A popup can have different colors</p>
         <div class="ui spaced compact wrapping buttons">

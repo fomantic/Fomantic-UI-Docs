@@ -176,7 +176,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A statistic can be formatted to be different colors</p>
     <div class="ui statistics">

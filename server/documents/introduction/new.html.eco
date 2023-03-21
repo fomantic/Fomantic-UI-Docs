@@ -861,7 +861,7 @@ type        : 'Main'
       <i class="wifi huge icon"></i>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-class="colors">
       <h4 class="ui header">Colored Loaders</h4>
       <div class="ui active red inline loader"></div>
       <div class="ui active orange inline loader"></div>

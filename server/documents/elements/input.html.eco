@@ -180,7 +180,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="left labeled, left corner labeled, right corner labeled, right labeled, labeled">
+  <div class="example" data-class="!left icon, left labeled, !left corner labeled, !corner labeled, right corner labeled, !right labeled, labeled">
     <h4 class="ui header">Labeled</h4>
     <p>An input can be formatted with a label</p>
     <div class="ui labeled input">
@@ -267,7 +267,7 @@ themes      : ['Default', 'GitHub']
         <div class="ui basic label">Persons</div>
       </div>
   </div>
-  <div class="example" data-class="left action, right action, action">
+  <div class="example" data-class="!left action, right action, action">
     <h4 class="ui header">Action</h4>
     <p>An input can be formatted to alert the user to an action they may perform</p>
     <div class="ui action input">

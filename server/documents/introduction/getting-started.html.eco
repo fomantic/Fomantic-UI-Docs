@@ -39,6 +39,9 @@ type        : 'Main'
             <code>ui huge primary button</code>
             <div class="ui huge primary button">Button</div>
         </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Class order</h4>
         <p>By specification, CSS allows to declare classnames in any order.</p>
         <div class="ui basic segment">
             <code>huge ui button primary</code>
@@ -61,12 +64,20 @@ type        : 'Main'
                 <div class="item">Where should the button be <b>labeled</b>? Left or right?</div>
             </div>
         </div>
-        <p>Some examples are labeled by <span class="ui small label"><i class="attention icon"></i>Word order required</span> to indicate the word order necessity.</p>
+        <p>Some examples are labeled by <span class="ui small wordorder label"><i class="attention icon"></i>Word order required</span> to indicate the word order necessity.</p>
         <p>So, as a general advise, just declare the classname order like a grammatical correct spoken description.</p>
         <div class="ui ignored warning message">
             <div class="header">Use <code>&lt;&gt;</code></div>
             <div class="content">
-            <p>While there are situations where a strict ordered class name list is important, in most cases it isn't. If in doubt, always watch out for the <code>&lt;&gt;</code> symbol displayed to the right of the examples which shows the source code when clicked and offers the correct classname order.</p>
+                <p>While there are situations where a strict ordered class name list is important, in most cases it isn't. If in doubt, always watch out for the <code>&lt;&gt;</code> symbol displayed to the right of the examples which shows the source code when clicked and highlights a possible required classname order.</p>
+                <div class="example" data-class="!left labeled, !right floated, button" data-use-content="true">
+                    <div class="code" data-type="html">
+                        <div class="ui left labeled right floated button">
+                            <div class="ui secondary label">Labeled</div>
+                            <div class="ui primary button">Button</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

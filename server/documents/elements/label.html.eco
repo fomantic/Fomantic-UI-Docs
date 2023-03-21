@@ -79,7 +79,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="pointing above, pointing below, left pointing, right pointing">
+  <div class="example" data-class="!pointing above, !pointing below, !left pointing, !right pointing">
     <h4 class="ui header">Pointing</h4>
     <p>A label can point to content next to it</p>
     <form class="ui fluid form">
@@ -176,7 +176,7 @@ themes      : ['Default', 'GitHub']
     <a class="ui teal tag label">Featured</a>
   </div>
 
-  <div class="example" data-class="left ribbon, right ribbon, ribbon">
+  <div class="example" data-class="left ribbon, !right ribbon, ribbon">
     <h4 class="ui header">Ribbon</h4>
     <p>A label can appear as a ribbon attaching itself to an element.</p>
     <div class="ui two column grid">
@@ -518,7 +518,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-use-content="true" data-class="icon">
+  <div class="example" data-use-content="true" data-class="icon, !left icon">
     <h4 class="ui header">Icon</h4>
     <p>A label can include an icon</p>
     <div class="ui label">
@@ -699,7 +699,7 @@ themes      : ['Default', 'GitHub']
     </a>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A label can have different colors</p>
     <a class="ui primary label">Primary</a>
@@ -789,7 +789,7 @@ themes      : ['Default', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored Group</h4>
     <p>Labels can share colors together</p>
     <div class="ui blue labels">

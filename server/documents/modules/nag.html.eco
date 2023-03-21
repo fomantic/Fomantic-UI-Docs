@@ -112,7 +112,7 @@ type        : 'UI Module'
         </div>
     </div>
     <h2 class="ui dividing header">Variations</h2>
-    <div class="example">
+    <div class="example" data-class="colors">
         <h4 class="ui header">Colored</h4>
         <p>A nag can be formatted to be different colors</p>
         <div class="ui red nag"><div class="title">Red</div><i class="close icon"></i></div> <p></p>

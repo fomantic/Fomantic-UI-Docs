@@ -7268,7 +7268,7 @@ themes      : ['Default']
       <i class="bordered colored green users icon"></i>
       <i class="bordered colored blue users icon"></i>
     </div>
-    <div class="example">
+    <div class="example" data-class="colors">
       <h4 class="ui header">Colored</h4>
       <p>An icon can be formatted with different colors</p>
       <i class="primary users icon"></i>
@@ -7326,7 +7326,7 @@ themes      : ['Default']
         <i class="black user icon"></i>
       </i>
     </div>
-    <div class="example" data-class="corner">
+    <div class="example" data-class="corner, !top left, !top right, !bottom left, !bottom right">
       <h4 class="ui header">Corner Icon</h4>
       <p>A group of icons can display a smaller corner icon</p>
       <i class="huge icons">

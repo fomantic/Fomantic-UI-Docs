@@ -220,7 +220,7 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="no example">
+    <div class="no example" data-class="!left aligned, !center aligned, !right aligned">
       <h4 class="ui header">Text Alignment</h4>
       <p>A container can specify its text alignment</p>
 
@@ -291,7 +291,7 @@ themes      : ['Default']
       Curabitur ullamcorper ultricies nisi.</p>
     </div>
 
-  <div class="example" data-since="2.9">
+  <div class="example" data-since="2.9" data-class="!very short, !very long">
     <h4 class="ui header">Scrolling</h4>
     <p>A scrolling container has a predefined height to allow its content to be scrollable</p>
     <div class="ui scrolling container">

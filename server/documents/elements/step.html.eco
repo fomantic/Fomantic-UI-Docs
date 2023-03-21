@@ -262,7 +262,7 @@ themes      : ['Default', 'Basic', 'GitHub']
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="example" data-class="stackable">
+  <div class="example" data-class="!tablet stackable, stackable">
     <h4 class="ui header">Stackable</h4>
     <p>A step can stack vertically only on smaller screens</p>
     <div class="ui tablet stackable steps">

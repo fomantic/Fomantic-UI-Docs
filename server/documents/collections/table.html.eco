@@ -580,7 +580,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example" data-since="2.7">
+  <div class="example" data-since="2.7" data-class="colors">
     <h4 class="ui header">Colored Cells</h4>
     <p>A cell can be styled by the central color palette colors</p>
     <table class="ui celled table">
@@ -632,7 +632,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </thead>
       <tbody>
         <tr>
-          <td class="right blue marked blue">No Name Specified</td>
+          <td class="right blue marked">No Name Specified</td>
           <td class="left red marked">Unknown</td>
           <td>None</td>
         </tr>
@@ -1337,7 +1337,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A table can be given a color to distinguish it from other tables.</p>
     <table class="ui red table">
@@ -1352,7 +1352,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
           <td>0g</td>
         </tr>
         <tr>
-          <td>Orange</td>
+          <td>Tomatoes</td>
           <td>310</td>
           <td>0g</td>
         </tr>

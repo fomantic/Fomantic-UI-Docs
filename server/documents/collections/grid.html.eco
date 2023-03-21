@@ -186,7 +186,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="highlighted example" data-use-content="true" data-class="wide">
+    <div class="highlighted example" data-use-content="true" data-class="!eight wide, wide">
       <h4 class="ui header">Column Widths</h4>
       <p>Column widths can be specified using <a href="#column-width"><code>(x) wide</code></a> class names. If a column cannot fit in a row it will automatically flow to the next row</p>
       <div class="ui grid">
@@ -298,7 +298,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="colored example" data-use-content="true" data-class="colored, padded">
+    <div class="colored example" data-use-content="true" data-class="colors, padded">
       <h4 class="ui header">Colored</h4>
       <p>Grids can use named <a href="#colored"><b>colors</b> variations</a> to add background colors, but only with <a href="#padded"><code>padded grid</code></a> that do not include negative margins.</p>
       <p>To include a color that is not available in the default palette its perfectly fine to use CSS</p>
@@ -326,7 +326,7 @@ themes      : ['Default']
     </div>
 
 
-    <div class="highlighted example" data-class="equal width">
+    <div class="highlighted example" data-class="!equal width">
       <h4 class="ui header">Automatic Column Count</h4>
       <p>The <a href="#equal-width"><code>equal width</code></a> variation will automatically divide column width evenly. This is useful with dynamic content where you do not know the column count in advance.</p>
       <div class="ui equal width grid">
@@ -692,7 +692,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true" data-class="wide">
+    <div class="example" data-use-content="true" data-class="!four wide,wide">
       <h4 class="ui header">Column Width</h4>
       <p>A column can vary in width taking up more than a single grid column.</p>
       <div class="ui grid">
@@ -944,7 +944,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-class="very compact, compact">
+    <div class="example" data-class="!very compact, compact">
       <h4 class="ui header">Compact</h4>
       <p>A grid can appear compact with no or very little padding</p>
 
@@ -1027,7 +1027,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true">
+    <div class="example" data-class="colors" data-use-content="true">
       <h4 class="ui header">Colored</h4>
       <p>A row or column can be colored</p>
       <div class="ui five column padded grid">

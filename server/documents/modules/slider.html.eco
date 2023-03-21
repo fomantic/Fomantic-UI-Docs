@@ -176,7 +176,7 @@ themes      : ['Default']
       <div class="ui vertical slider" style="height: 200px;"></div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="colors">
       <h4 class="ui header">Colored</h4>
       <p>A slider can be different colors</p>
       <div class="ui red slider"></div>

@@ -148,7 +148,7 @@ themes      : ['default']
     </table>
   </div>
 
-  <div class="example" data-class="left aligned,right aligned">
+  <div class="example" data-class="!left aligned,!right aligned">
     <h4 class="ui header">Horizontal Alignment</h4>
     <p>A horizontal divider can be aligned</p>
 
