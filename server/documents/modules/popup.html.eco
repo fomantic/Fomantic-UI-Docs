@@ -336,7 +336,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="!very wide" data-use-content="true">
       <h4 class="ui header">Width</h4>
       <p>A popup can be extra wide to allow for longer content</p>
       <i class="circular heart icon link" data-content="Hello. This is a wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>

@@ -978,7 +978,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-class="!right floated, !left floated">
       <h4 class="ui header">Floated Content</h4>
       <p>A dropdown menu can contain floated content.</p>
       <div class="ui ignored info message">Floated content may stack to two lines without manually setting a width when or using a <code>fluid</code> dropdown
@@ -1485,7 +1485,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-class="!very long, !very short, long, short">
       <h4 class="ui header">Height</h4>
       <p>A selection dropdown can be long (2x of default height) so that more items can be glanced.</p>
       <select class="ui search long dropdown" multiple>
@@ -1567,7 +1567,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-class="!two column, !three column, !four column, !five column">
       <h4 class="ui header">Columnar Menu</h4>
       <p>A selection dropdown can allow menu to be equally divided so that more items can be glanced.</p>
       <select class="ui two column dropdown" multiple>

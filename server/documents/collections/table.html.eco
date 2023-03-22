@@ -580,7 +580,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example" data-since="2.7" data-class="colors">
+  <div class="example" data-since="2.7" data-class="colors" data-use-content="true">
     <h4 class="ui header">Colored Cells</h4>
     <p>A cell can be styled by the central color palette colors</p>
     <table class="ui celled table">
@@ -678,7 +678,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="example">
+  <div class="example" data-class="!single line">
     <h4 class="ui header">Single Line</h4>
     <p>A table can specify that its cell contents should remain on a single line, and not wrap.</p>
     <table class="ui single line table">
@@ -773,7 +773,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
+  <div class="example" class="!tablet stackable, unstackable">
     <h4 class="ui header">Stacking</h4>
     <p>A table can specify how it stacks table content responsively</p>
 
@@ -965,7 +965,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!top aligned, !middle aligned, !bottom aligned">
     <h4 class="ui header">Vertical Alignment</h4>
     <p>A table header, row, or cell can adjust its vertical alignment</p>
     <table class="ui striped table">
@@ -999,7 +999,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!left aligned, !right aligned, !center aligned" data-use-content="true">
     <h4 class="ui header">Text Alignment</h4>
     <p>A table header, row, or cell can adjust its text alignment</p>
     <table class="ui striped table">
@@ -1131,7 +1131,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!very basic, basic">
     <h4 class="ui header">Basic</h4>
     <p>A table can reduce its complexity to increase readability.</p>
     <table class="ui basic table">
@@ -1271,7 +1271,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="ten wide, six wide" data-use-content="true">
     <h4 class="ui header">Column Width</h4>
     <p>A table can specify the width of individual columns independently.</p>
     <div class="ui ignored info message">Tables use a 16 column grid similar to <a href="/collections/grid.html">ui grid</a></div>
@@ -1917,7 +1917,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tfoot>
     </table>
   </div>
-  <div class="example">
+  <div class="example" data-class="!very padded, padded">
     <h4 class="ui header">Padded</h4>
     <p>A table may sometimes need to be more padded for legibility</p>
     <table class="ui padded table">
@@ -1965,7 +1965,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tbody>
     </table>
   </div>
-  <div class="example">
+  <div class="example" data-class="!very compact, compact">
     <h4 class="ui header">Compact</h4>
     <p>A table may sometimes need to be more compact to make more rows visible at a time</p>
     <table class="ui compact table">

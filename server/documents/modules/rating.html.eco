@@ -52,7 +52,7 @@ themes      : ['Default']
 
     </div>
 
-    <div class="example" data-since="2.7">
+    <div class="example" data-since="2.7" data-class="colors">
       <h4 class="ui header">Color</h4>
       <p>You can specify any color of the FUI color palette</p>
       <div class="ui red rating" data-icon="star" data-rating="1" data-max-rating="7"></div>

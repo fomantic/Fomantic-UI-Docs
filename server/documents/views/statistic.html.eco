@@ -45,7 +45,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="statistics">
     <h4 class="ui header">Statistic Group</h4>
     <p>A group of statistics</p>
     <div class="ui statistics">
@@ -119,7 +119,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Label</h4>
     <p>A statistic can contain a label to help provide context for the presented value</p>
     <div class="ui statistic">
@@ -546,7 +546,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!right floated,!left floated,floated">
     <h4 class="ui header">Floated</h4>
     <p>An statistic can sit to the left or right of other content</p>
 

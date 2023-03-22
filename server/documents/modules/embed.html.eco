@@ -69,7 +69,7 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Types</h2>
 
-    <div class="embed example">
+    <div class="embed example" data-class="embed">
       <h4 class="ui header">YouTube</h4>
       <p>An embed can be used to display <a href="https://www.youtube.com" target="_blank">YouTube</a> Content</p>
 
@@ -81,7 +81,7 @@ type        : 'UI Module'
 
     </div>
 
-    <div class="embed example">
+    <div class="embed example" data-class="embed">
       <h4 class="ui header">Vimeo</h4>
       <p>An embed can be used to display <a href="https://www.vimeo.com" target="_blank">Vimeo</a> content.</p>
 
@@ -93,7 +93,7 @@ type        : 'UI Module'
 
     </div>
 
-    <div class="embed example">
+    <div class="embed example" data-class="embed">
       <h4 class="ui header">Custom Content</h4>
       <p>An embed can display any web content</p>
       <div class="ui info ignored message">Embeds use an intrinsic aspect ratios to embed content responsively. Content will preserve their intrinsic aspect ratio for all browser sizes responsively</div>
@@ -108,9 +108,9 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="embed example">
+    <div class="embed example" data-class="square,4:3,16:9,21:9">
       <h4 class="ui header">Aspect Ratio</h4>
-      <p>An embed can specify an alternative aspect ratio</p>
+      <p>An embed can specify an alternative aspect ratio out of <code>square</code>, <code>4:3</code>, <code>16:9</code> or <code>21:9</code></p>
       <div class="ui 4:3 embed"
         data-source="youtube"
         data-id="HTZudKi36bo"

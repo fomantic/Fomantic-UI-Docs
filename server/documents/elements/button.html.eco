@@ -419,7 +419,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </button>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!right floated,!left floated,floated">
     <h4 class="ui header">Floated</h4>
     <p>A button can be aligned to the left or right of its container</p>
     <button class="ui right floated button">Right Floated</button>

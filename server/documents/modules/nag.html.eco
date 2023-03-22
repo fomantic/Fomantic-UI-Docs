@@ -31,7 +31,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Title</h4>
       <p>A nag can have a title</p>
       <div class="ui nag">
@@ -41,7 +41,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="fixed">
      <h4 class="ui header">Fixed Nag</h4>
       <p>A fixed nag appears at the top of the screen</p>
       <div class="ui fixed nag" id="fixednag">
@@ -60,7 +60,7 @@ type        : 'UI Module'
           ;
       </div>
     </div>
-    <div class="example">
+    <div class="example" data-class="bottom fixed">
       <p>A fixed nag can appear at the bottom of the screen</p>
       <div class="ui bottom fixed nag" id="bottomfixednag">
         Look, I am a bottom fixed nag!
@@ -75,7 +75,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="overlay">
      <h4 class="ui header">Overlay Nag</h4>
       <p>An overlay nag is absolute positioned and appears at the top of the parent DOM node</p>
       <div class="ui segment">
@@ -87,7 +87,7 @@ type        : 'UI Module'
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
       </div>
     </div>
-    <div class="example">
+    <div class="example" data-class="bottom overlay">
       <p>An overlay nag can appear at the bottom of the parent node</p>
       <div class="ui segment">
           <div class="ui bottom overlay nag">

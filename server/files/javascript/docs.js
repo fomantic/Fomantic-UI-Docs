@@ -806,17 +806,16 @@ semantic.ready = function() {
       }
       // Add common variations
       classes = classes.replace('text alignment', "left aligned, right aligned, justified, center aligned");
-      classes = classes.replace('floated', "!right floated,!left floated,floated");
       classes = classes.replace('floating', "!right floated,!left floated,floated");
       classes = classes.replace('horizontally aligned', "left aligned, center aligned, right aligned, justified");
       classes = classes.replace('vertically aligned', "top aligned, middle aligned, bottom aligned");
       classes = classes.replace('vertically attached', "attached");
       classes = classes.replace('horizontally attached', "attached");
-      classes = classes.replace('padded', "very padded, padded");
-      classes = classes.replace('relaxed', "very relaxed, relaxed");
+      classes = classes.replace('padded', "!very padded, padded");
+      classes = classes.replace('relaxed', "!very relaxed, relaxed");
       classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
-      classes = classes.replace('thin', "very thin, thin");
-      classes = classes.replace('wide', "!one wide,!two wide,!three wide,!four wide,!five wide,!six wide,!seven wide,!eight wide,!nine wide,!ten wide,!eleven wide,!twelve wide,!thirteen wide,!fourteen wide,!fifteen wide,!sixteen wide,!very wide,wide");
+      classes = classes.replace('thin', "!very thin, thin");
+      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,!very wide,wide");
       classes = classes.replace('count', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('column count', "one column,two column,three column,four column,five column,six column,seven column,eight column,nine column,ten column,eleven column,twelve column,thirteen column,fourteen column,fifteen column,sixteen column");
       classes = classes.replace('evenly divided', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");

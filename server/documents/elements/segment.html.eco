@@ -616,7 +616,7 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <div class="clearing example">
+  <div class="clearing example" data-class="!right floated,!left floated,floated">
     <h4 class="ui header">Floated</h4>
     <p>A segment can appear to the left or right of other content</p>
     <div class="ui right floated segment">

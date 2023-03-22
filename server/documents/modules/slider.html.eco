@@ -34,19 +34,19 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="another example">
+    <div class="example">
       <h4 class="ui header">Labeled slider</h4>
       <p>A slider that show its labels</p>
       <div class="ui labeled slider"></div>
     </div>
-    <div class="another example">
+    <div class="example">
       <h4 class="ui header">Labeled ticked slider</h4>
       <p>A slider that show its labels and ticks</p>
       <div class="ui labeled ticked slider"></div>
     </div>
 
     <div class="example">
-        <h4 class="ui header">Label at the bottom</h4>
+        <h4 class="ui header">Bottom aligned labeled</h4>
         <p>A slider can display the labels below the track</p>
         <div class="ui bottom aligned labeled slider"></div>
     </div>
@@ -194,7 +194,7 @@ themes      : ['Default']
       <div class="ui black slider"></div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="inverted, colors">
       <h4 class="ui header">Inverted Colored</h4>
       <p>A slider can be different colors while inverted</p>
       <div class="ui inverted segment">

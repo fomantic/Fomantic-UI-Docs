@@ -21,7 +21,7 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Types</h2>
 
-    <div class="standard example">
+    <div class="standard example" data-class="search">
       <h4 class="ui header">Standard</h4>
       <p>A search can display a set of results</p>
       <div class="ui search">
@@ -313,7 +313,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="local example">
+    <div class="local example" data-class="!very short, !very long, short, long">
       <h4 class="ui header">Height</h4>
       <p>A search can be very short (0.75x of default height) so that more results can be glanced.</p>
 	  <div class="ui ignored info message">
@@ -349,7 +349,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="category example">
+    <div class="category example" data-class="!right aligned">
       <h4 class="ui header">Aligned</h4>
       <p>A search can have its results aligned to its left or right container edge</p>
       <div class="ui right aligned category search">

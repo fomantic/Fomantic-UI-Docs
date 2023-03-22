@@ -200,7 +200,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
 
   <h2 class="ui dividing header">Content</h2>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Content Block</h4>
     <p>A card can contain blocks of content</p>
     <div class="ui card">
@@ -320,7 +320,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Header</h4>
     <p>A card can contain a header</p>
     <div class="ui cards">
@@ -354,7 +354,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="meta" data-use-content="true">
     <h4 class="ui header">Metadata</h4>
     <p>A card can contain content metadata</p>
 
@@ -434,7 +434,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="star,like" data-use-content="true">
     <h4 class="ui header">Approval</h4>
     <p>A card can contain a like or star action.</p>
     <div class="ui card">
@@ -459,7 +459,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Description</h4>
     <p>A card can contain a description with one or more paragraphs</p>
     <div class="ui card">
@@ -474,7 +474,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Extra Content</h4>
     <p>A card can contain extra content meant to be formatted separately from the main content</p>
     <div class="ui card">
@@ -760,7 +760,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!right floated,!left floated,floated" data-use-content="true">
     <h4 class="ui header">Floated Content</h4>
     <p>Any content element can be floated left or right</p>
     <div class="ui ignored info message">
@@ -786,7 +786,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!center aligned,!left aligned,!right aligned" data-use-content="true">
     <h4 class="ui header">Text Alignment</h4>
     <p>Any element inside a card can have its text alignment specified</p>
     <div class="ui ignored info message">

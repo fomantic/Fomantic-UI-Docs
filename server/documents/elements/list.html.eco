@@ -959,7 +959,7 @@ themes      : ['Default']
   </div>
 
 
-  <div class="example" data-use-content="true">
+  <div class="example" data-class="!right floated,!left floated,floated" data-use-content="true">
     <h4 class="ui header">Floated</h4>
     <p>An list, or an element inside a list can be floated left or right</p>
     <div class="ui middle aligned divided list">

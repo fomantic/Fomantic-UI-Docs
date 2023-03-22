@@ -66,7 +66,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="content" data-use-content="true">
       <h4 class="ui header">Content Dimmer</h4>
       <p>A dimmer can display content</p>
       <div class="ui ignored info message">Since <div class="ui horizontal label">2.3</div> dimmers with content now only need a single wrapping <code>content</code> container.</div>
@@ -164,7 +164,7 @@ themes      : ['Default']
     </div>
 
     <h3>Alignment</h3>
-    <div class="example" data-since="2.3">
+    <div class="example" data-since="2.3" data-class="!top aligned, !bottom aligned">
       <h4 class="ui header">
         Vertical Alignment
       </h4>
@@ -229,7 +229,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="medium, light, very light">
       <h4 class="ui header">Dimmer Shades</h4>
       <p>A dimmer can be formatted to have a different depth of background shading using the additional classes <code>medium</code>, <code>light</code> or <code>very light</code></p>
       <div class="ignored ui info message">Also works in combination with <code>inverted</code></div>
@@ -251,7 +251,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="!top dimmer, !center dimmer, !bottom dimmer">
       <h4 class="ui header">Partially Dimmer</h4>
       <p>A dimmer can be displayed only partially and limited to the overall height of its content instead of the whole to be covered area. This can be used for example as a caption on any element by using <code>top dimmer</code>, <code>center dimmer</code> or <code>bottom dimmer</code></p>
       <div class="ui segment">

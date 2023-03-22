@@ -485,7 +485,7 @@ themes      : ['Default', 'Material']
 
     <h2 class="ui dividing header">Content</h2>
 
-    <div class="no example">
+    <div class="no example" data-use-content="true">
       <h4 class="ui header">
         Header
       </h4>
@@ -514,7 +514,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example" data-since="2.0>
+    <div class="no example" data-since="2.0" data-use-content="true">
       <h4 class="ui header">
         Image Content
       </h4>
@@ -535,7 +535,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-use-content="true">
       <h4 class="ui header">
         Actions
       </h4>
@@ -568,7 +568,7 @@ themes      : ['Default', 'Material']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="no example">
+    <div class="no example" data-class="fullscreen">
       <h4 class="ui header">Full Screen</h4>
       <p>A modal can use the entire size of the screen</p>
       <div class="code" data-demo="true" data-eval="$('.fullscreen.modal').not('.overlay').modal('show')">
@@ -577,7 +577,7 @@ themes      : ['Default', 'Material']
       ;
       </div>
     </div>
-    <div class="no example">
+    <div class="no example" data-class="!overlay fullscreen">
       <h4 class="ui header">Overlay Full Screen</h4>
       <p>A modal can overlay the entire screen</p>
       <div class="ui ignored info message">
@@ -635,7 +635,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example" data-since="2.2.11">
+    <div class="no example" data-since="2.2.11" data-use-content="true">
       <h4 class="ui header">
         Scrolling Content
       </h4>
@@ -655,7 +655,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example" data-since="2.8.8">
+    <div class="no example" data-since="2.8.8" data-use-content="true">
       <h4 class="ui header">
           Center Aligned
       </h4>
@@ -679,7 +679,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example" data-since="2.9.0">
+    <div class="no example" data-since="2.9.0" data-use-content="true">
       <h4 class="ui header">
           Left Actions
       </h4>
@@ -703,7 +703,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example" data-since="2.9.0">
+    <div class="no example" data-since="2.9.0" data-class="basic" data-use-content="true">
       <h4 class="ui header">
           Basic Header and Actions
       </h4>
@@ -757,7 +757,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example" data-since="2.7.3">
+    <div class="no example" data-since="2.7.3" data-class="!top aligned">
       <h4 class="ui header">
           Top or Bottom aligned
       </h4>

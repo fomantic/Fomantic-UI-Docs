@@ -263,7 +263,7 @@ themes      : ['Default', 'Chubby']
       </div>
     </div>
 
-    <div class="example" data-since="2.9.0">
+    <div class="example" data-since="2.9.0" data-class="!very compact, compact">
       <h4 class="ui header">Compact</h4>
       <p>An accordion can reduce its padding to appear compact</p>
       <div class="ui segment">
