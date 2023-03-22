@@ -1711,6 +1711,7 @@ code.code .class b::after,
 code.code .class b::before,
 code.code .class b:hover {
   background-color: rgba(248, 219, 70, 1);
+  color: #7E4C00;
 }
 
 code.code .class b::after {
