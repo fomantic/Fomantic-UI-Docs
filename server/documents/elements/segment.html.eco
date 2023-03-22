@@ -606,7 +606,7 @@ themes      : ['default', 'GitHub']
   </div>
 
 
-  <div class="example" data-since="2.0 data-class="!left floated, !right floated">
+  <div class="example" data-since="2.0" data-class="!left floated, !right floated">
     <h4 class="ui header">
       Clearing
     </h4>

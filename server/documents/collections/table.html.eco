@@ -437,7 +437,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
   </div>
 
   <h3 class="ui header">Cells</h3>
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Error</h4>
     <p>A cell or row may call attention to an error or a negative value</p>
     <table class="ui celled table">
@@ -473,7 +473,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Warning</h4>
     <p>A cell or row may warn a user</p>
     <table class="ui celled table">
@@ -509,7 +509,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     </table>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Active</h4>
     <p>A cell or row can be active or selected by a user</p>
     <table class="ui celled table">
@@ -544,7 +544,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tbody>
     </table>
   </div>
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Disabled</h4>
     <p>A cell can be disabled</p>
     <table class="ui celled table">

@@ -235,7 +235,7 @@ themes      : ['Default', 'Duo', 'Pulsar']
     </div>
   </div>
 
-  <div class="example" data-since="2.7.0>
+  <div class="example" data-since="2.7.0">
     <h4 class="ui header">Styles</h4>
     <p>Loaders can also appear in <code>double</code> or <code>elastic</code> animation style. Can be combined with any color or speed.</p>
     <div class="ui segment">

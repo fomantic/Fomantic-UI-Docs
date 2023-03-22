@@ -352,7 +352,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true" data-class="!left floated, !right aligned, !right floated,  !left aligned, !center aligned, !sixteen wide">
+    <div class="example" data-use-content="true" data-class="!left floated, !right aligned, !right floated, !left aligned, !center aligned, !sixteen wide">
       <h4 class="ui header">Significant Word Order</h4>
       <p>Grids include many variations for adjusting things like vertical or horizontal alignment, text alignment, or default gutter sizes.</p>
       <p>Some multi-word variations, like <a href="#floated"><code>left floated</code></a> or <a href="#text-alignment"><code>right aligned</code></a> are word-order dependent and require you to use adjacent class names.</p>
