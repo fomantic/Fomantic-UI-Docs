@@ -50,7 +50,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Progress Bar</h4>
         <p>You can attach a progress bar to your toast.</p>
         <div class="code" data-demo="true">
@@ -203,7 +203,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Use Message Style</h4>
         <p>You can use all of the styles and colors from the message component</p>
         <div class="code" data-demo="true">
@@ -219,7 +219,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Increasing Progress Bar</h4>
         <p>The progress bar could be be raised instead of lowered</p>
         <div class="code" data-demo="true">
@@ -233,7 +233,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Color Variants</h4>
         <p>You can use all of the usual color names</p>
         <div class="code" data-demo="true">
@@ -464,7 +464,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
       <h4 class="ui header">Individual icon</h4>
       <p>Use whatever you like from the included FontAwesome gallery</p>
       <div class="code" data-demo="true">
@@ -503,7 +503,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
       <h4 class="ui header">Close Icon</h4>
       <p>You can force the user to click a close Icon instead of clicking anywhere on the toast to close it</p>
       <div class="code" data-demo="true">

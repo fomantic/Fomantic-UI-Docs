@@ -106,7 +106,7 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="example" data-class="inverted">
+  <div class="example" data-since="2.7.5" data-class="inverted">
     <h4 class="ui header">Inverted</h4>
     <p>A breadcrumb can be inverted</p>
     <div class="ui inverted segment">

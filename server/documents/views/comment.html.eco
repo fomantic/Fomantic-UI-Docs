@@ -671,7 +671,7 @@ themes      : ['Default', 'Chubby']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-since="2.5">
     <h4 class="ui header">Inverted</h4>
     <p>Comments' colors can be inverted</p>
     <div class="ui inverted segment">

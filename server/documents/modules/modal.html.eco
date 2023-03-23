@@ -577,7 +577,7 @@ themes      : ['Default', 'Material']
       ;
       </div>
     </div>
-    <div class="no example" data-class="!overlay fullscreen">
+    <div class="no example" data-since="2.7.3" data-class="!overlay fullscreen">
       <h4 class="ui header">Overlay Full Screen</h4>
       <p>A modal can overlay the entire screen</p>
       <div class="ui ignored info message">

@@ -1877,7 +1877,7 @@ type        : 'UI Behavior'
       </form>
     </div>
 
-    <div class="dirty example">
+    <div class="dirty example" data-since="2.7.5">
       <h4 class="ui header">Dirty / Clean state</h4>
       <p>
         When initialized, form has a <em>clean</em> state that record all field values. Once at least one field is modified, form enter in <em>dirty</em> state, that can be caught through the <code>onDirty</code> event.

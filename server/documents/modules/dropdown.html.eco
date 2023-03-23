@@ -1220,7 +1220,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="dropdown example" data-class="size">
+    <div class="dropdown example" data-class="size" data-since="2.5">
       <h4 class="ui header">Size</h4>
       <p>A dropdown can have different sizes</p>
       <div class="ui mini selection dropdown">
@@ -1485,7 +1485,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example" data-class="!very long, !very short, long, short">
+    <div class="dropdown example" data-since="2.7.3" data-class="!very long, !very short, long, short">
       <h4 class="ui header">Height</h4>
       <p>A selection dropdown can be long (2x of default height) so that more items can be glanced.</p>
       <select class="ui search long dropdown" multiple>
@@ -1567,7 +1567,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example" data-class="!two column, !three column, !four column, !five column">
+    <div class="dropdown example" data-since="2.7.3" data-class="!two column, !three column, !four column, !five column">
       <h4 class="ui header">Columnar Menu</h4>
       <p>A selection dropdown can allow menu to be equally divided so that more items can be glanced.</p>
       <select class="ui two column dropdown" multiple>

@@ -122,7 +122,7 @@ themes      : ['Default']
     </div>
 
     <h2 class="ui dividing header">States</h2>
-    <div class="example">
+    <div class="example" data-since="2.6.3">
       <h4 class="ui header">Disabled</h4>
       <p>A disabled calendar does not allow user interaction</p>
       <div class="ui disabled calendar">
@@ -584,7 +584,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-since="2.7.3">
       <h4 class="ui header">Select adjacent days</h4>
       <p>It's possible to also select adjacent days of the previous and next month in the current month view instead of being disabled</p>
       <div class="ui calendar" id="adjacentdays_calendar">
@@ -682,7 +682,7 @@ themes      : ['Default']
     </div>
 
     <h2 class="ui dividing header">Disabling specific Days</h2>
-    <div class="example">
+    <div class="example" data-since="2.6.4">
       <h4 class="ui header">Days of Week</h4>
       <p>Disable each Monday, Wednesday and Friday from selection</p>
       <div class="ui calendar" id="disableddaysofweek_calendar">
@@ -860,7 +860,7 @@ themes      : ['Default']
     </div>
 
     <h2 class="ui dividing header">Highlighting specific Days</h2>
-    <div class="example">
+    <div class="example" data-since="2.7.5">
       <h4 class="ui header">Event Dates</h4>
       <p>Mark specific days as events, giving them a different cell style and a tooltip message</p>
       <div class="ui calendar" id="eventdates_calendar">

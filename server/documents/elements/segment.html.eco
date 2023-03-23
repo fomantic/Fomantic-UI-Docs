@@ -485,7 +485,7 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-since="2.7.5">
     <h4 class="ui header">Fitted</h4>
     <p>A segment can remove its padding, vertically or horizontally</p>
     <div class="ui fitted segment">

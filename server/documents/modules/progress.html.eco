@@ -95,7 +95,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example" data-class="multiple">
+    <div class="example" data-since="2.7.3" data-class="multiple">
       <h4 class="ui header">Multiple Bars</h4>
       <p>A progress element can have multiple bars.</p>
       <div class="ui multiple progress" data-percent="50,0,10,20">

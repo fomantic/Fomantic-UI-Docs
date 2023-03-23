@@ -313,7 +313,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="local example" data-class="!very short, !very long, short, long">
+    <div class="local example" data-since="2.8.5" data-class="!very short, !very long, short, long">
       <h4 class="ui header">Height</h4>
       <p>A search can be very short (0.75x of default height) so that more results can be glanced.</p>
 	  <div class="ui ignored info message">

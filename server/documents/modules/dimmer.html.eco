@@ -251,7 +251,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-class="!top dimmer, !center dimmer, !bottom dimmer">
+    <div class="example" data-since="2.6.4" data-class="!top dimmer, !center dimmer, !bottom dimmer">
       <h4 class="ui header">Partially Dimmer</h4>
       <p>A dimmer can be displayed only partially and limited to the overall height of its content instead of the whole to be covered area. This can be used for example as a caption on any element by using <code>top dimmer</code>, <code>center dimmer</code> or <code>bottom dimmer</code></p>
       <div class="ui segment">
