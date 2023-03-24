@@ -360,7 +360,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div data-since="2.7.7" class="example" data-class="floating">
+  <div data-since="2.7.2" class="example" data-class="floating">
     <h4 class="ui header">Floating</h4>
     <p>A label can float above or below another element.</p>
     <div class="ui ignored warning message">A floating label must be positioned inside a container with <b>position: relative</b> to display properly.</div>
