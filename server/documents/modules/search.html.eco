@@ -835,8 +835,8 @@ type        : 'UI Module'
           <td>
             <ul class="ui list"><div class="ui small header">Possible values</div>
                 <li><code>'exact'</code> will force the exact search to be matched somewhere in the string</li>
-                <li><code>'some'</code> Will do the same as <code>exact</code> but supports multiple search values separated by whitespace. At least one word must match <span class="ui black tiny label">New in 2.9.1</span></li>
-                <li><code>'all'</code> is same as <code>some</code> but all words have to match in all given searchfields of each record altogether <span class="ui black tiny label">New in 2.9.1</span></li>
+                <li data-since="2.9.1"><code>'some'</code> Will do the same as <code>exact</code> but supports multiple search values separated by whitespace. At least one word must match</li>
+                <li data-since="2.9.1"><code>'all'</code> is same as <code>some</code> but all words have to match in all given searchfields of each record altogether </li>
                 <li><code>true</code> will use a fuzzy full text search</li>
                 <li><code>false</code> will only match to start of string.</li>
             </ul>
@@ -898,8 +898,8 @@ type        : 'UI Module'
         <tr>
           <td>ignoreDiacritics</td>
           <td>false</td>
-          <td>When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
-              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui black label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
+          <td data-since="2.7.2">When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
+              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on... <div class="ui tiny horizontal red label">Not available in IE</div></td>
         </tr>
         <tr>
           <td>type</td>
