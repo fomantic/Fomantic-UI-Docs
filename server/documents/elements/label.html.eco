@@ -79,7 +79,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="pointing above, pointing below, left pointing, right pointing">
+  <div class="example" data-class="!pointing above, !pointing below, !left pointing, !right pointing">
     <h4 class="ui header">Pointing</h4>
     <p>A label can point to content next to it</p>
     <form class="ui fluid form">
@@ -176,7 +176,7 @@ themes      : ['Default', 'GitHub']
     <a class="ui teal tag label">Featured</a>
   </div>
 
-  <div class="example" data-class="left ribbon, right ribbon, ribbon">
+  <div class="example" data-class="left ribbon, !right ribbon, ribbon">
     <h4 class="ui header">Ribbon</h4>
     <p>A label can appear as a ribbon attaching itself to an element.</p>
     <div class="ui two column grid">
@@ -260,8 +260,8 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="bottom ribbon, center ribbon, ribbon">
-    <h4 class="ui header">Bottom and Center Ribbon <div class="ui black label">New in 2.9.3</div></h4>
+  <div class="example" data-class="bottom ribbon, center ribbon, ribbon" data-since="2.9.3">
+    <h4 class="ui header">Bottom and Center Ribbon</h4>
     <p>A ribbon label can appear vertically centered or positioned to the bottom.</p>
     <div class="ui raised horizontal segments">
       <div class="ui segment">
@@ -371,7 +371,7 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="icon users"></i> Friends
-        <div class="floating ui teal label">22</div>
+        <div class="floating ui blue label">22</div>
       </a>
     </div>
     <br><br>
@@ -382,11 +382,11 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="icon users"></i> Friends
-        <div class="floating ui teal label">22 Friends</div>
+        <div class="floating ui blue label">22 Friends</div>
       </a>
     </div>
     <br><br>
-    <div class="ui black bottom pointing label">New in 2.7.2</div>
+    <div class="ui teal bottom pointing label">New in 2.7.2</div>
     <br>
     <div class="ui compact menu">
       <a class="item">
@@ -395,7 +395,7 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="icon users"></i> Friends
-        <div class="bottom floating ui teal label">22</div>
+        <div class="bottom floating ui blue label">22</div>
       </a>
     </div>
     <br><br>
@@ -406,13 +406,12 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="icon users"></i> Friends
-        <div class="bottom floating ui teal label">22 Friends</div>
+        <div class="bottom floating ui blue label">22 Friends</div>
       </a>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-since="2.7.2">
     <h4 class="ui header">Floating left
-        <div class="ui black label">New in 2.7.2</div>
     </h4>
     <p>Floating Labels can be positioned to the left also</p>
     <div class="ui compact menu">
@@ -422,7 +421,7 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="icon users"></i> Friends
-        <div class="left floating ui teal label">22</div>
+        <div class="left floating ui blue label">22</div>
       </a>
     </div>
     <br><br>
@@ -433,13 +432,12 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="icon users"></i> Friends
-        <div class="left floating ui teal label">22 Friends</div>
+        <div class="left floating ui blue label">22 Friends</div>
       </a>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-since="2.7.2">
     <h4 class="ui header">Floating aligned
-      <div class="ui black label">New in 2.7.2</div>
     </h4>
     <p>Floating Labels containing large text can be aligned to the left or right</p>
     <div class="ui compact menu">
@@ -449,13 +447,13 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="icon users"></i> Friends of the Fomantic-UI Community
-        <div class="right aligned floating ui teal label">22 Friends online</div>
+        <div class="right aligned floating ui blue label">22 Friends online</div>
       </a>
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Inverted <span class="ui black label">New in 2.7</span></h4>
+  <div class="example" data-since="2.7">
+    <h4 class="ui header">Inverted</h4>
     <p>All Variants of Label can be inverted</p>
     <div class="ui inverted segment" >
         <a class="ui primary inverted label">Primary</a>
@@ -520,7 +518,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-use-content="true" data-class="icon">
+  <div class="example" data-use-content="true" data-class="icon, !left icon">
     <h4 class="ui header">Icon</h4>
     <p>A label can include an icon</p>
     <div class="ui label">
@@ -650,8 +648,8 @@ themes      : ['Default', 'GitHub']
     <p>A label can take the width of its container</p>
     <div class="ui fluid label">Fits container</div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Centered <span class="ui black label">New in 2.9.1</span></h4>
+  <div class="example" data-since="2.9.1">
+    <h4 class="ui header">Centered</h4>
     <p>Text can be shown centered</p>
     <div class="ui fluid centered label">Fits container</div>
   </div>
@@ -688,10 +686,8 @@ themes      : ['Default', 'GitHub']
     <a class="ui black empty circular label"></a>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Basic
-      <div class="ui black label">New in 2.1</div>
-    </h4>
+  <div class="example" data-since="2.1">
+    <h4 class="ui header">Basic</h4>
     <p>A label can reduce its complexity</p>
     <a class="ui basic label">Basic</a>
     <a class="ui pointing basic label">Pointing</a>
@@ -703,7 +699,7 @@ themes      : ['Default', 'GitHub']
     </a>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A label can have different colors</p>
     <a class="ui primary label">Primary</a>
@@ -723,10 +719,8 @@ themes      : ['Default', 'GitHub']
     <a class="ui black label">Black</a>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Basic Tag Labels
-        <div class="ui black label">New in 2.7</div>
-    </h4>
+  <div class="example" data-since="2.7">
+    <h4 class="ui header">Basic Tag Labels</h4>
     <p></p>
     <a class="ui basic tag label">Standard Tag</a>
     <a class="ui primary basic tag label">Primary</a>
@@ -795,7 +789,7 @@ themes      : ['Default', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored Group</h4>
     <p>Labels can share colors together</p>
     <div class="ui blue labels">
@@ -818,10 +812,8 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Basic Group
-        <div class="ui black label">New in 2.7</div>
-    </h4>
+  <div class="example" data-since="2.7">
+    <h4 class="ui header">Basic Group</h4>
     <p>Labels can share their style together</p>
     <div class="ui basic labels">
         <a class="ui label">

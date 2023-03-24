@@ -742,7 +742,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="fixed example">
+  <div class="fixed example" data-class="!top fixed, !bottom fixed, !left fixed, !right fixed">
     <h4 class="ui header">Fixed</h4>
     <p>A menu can be fixed to a side of its context</p>
     <div class="ui ignored info message">These examples use a an <code>iframe</code>, to prevent content from sticking to the browser viewport.</div>
@@ -880,7 +880,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>Additional colors can be specified.</p>
     <div class="ui menu">
@@ -1298,9 +1298,9 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-since="2.9.3" data-class="!equal width, three item">
     <h4 class="ui header">Evenly Divided</h4>
-        <p>A menu may divide its items evenly by either using <code>equal width</code> <span class="ui small black label">New in 2.9.3</span> ...</p>
+        <p>A menu may divide its items evenly by either using <code>equal width</code> ...</p>
     <div class="ui equal width menu">
       <a class="item">Buy</a>
       <a class="item">Sell</a>
@@ -1342,7 +1342,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-class="!top attached, !bottom attached">
     <h4 class="ui header">Attached</h4>
     <p>A menu may be attached to other content segments</p>
     <div class="ui top attached tabular menu">
@@ -1523,7 +1523,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <p>A vertical menu can also vary in size</p>
     <div class="ui mini vertical menu">
       <a class="active item">
-        <div class="ui teal label">1</div>
+        <div class="ui green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1545,7 +1545,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui small vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1567,7 +1567,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui large vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1589,7 +1589,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui massive vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1677,8 +1677,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Centered Fluid <span class="ui black label">New in 2.9.2</span></h4>
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Centered Fluid</h4>
     <p>A menu can be shown centered and fluid at the same time.</p>
     <div class="ui centered fluid menu">
       <a class="bug popup icon item">
@@ -1693,8 +1693,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Wrapping <span class="ui black label">New in 2.9.2</span></h4>
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Wrapping</h4>
     <p>Menu items can automatically wrap on responsive layouts</p>
     <div class="ui inverted wrapped green wrapping menu">
       <a class="active item">One</a>
@@ -1723,8 +1723,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Centered Fluid Wrapping <span class="ui black label">New in 2.9.2</span></h4>
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Centered Fluid Wrapping</h4>
     <p>By combining centered, fluid and wrapping you could create a menu similar to <a href="/elements/button.html#wrapping-buttons">Wrapping button groups</a></p>
     <div class="ui inverted wrapped blue centered fluid wrapping menu">
       <a class="active item">One</a>

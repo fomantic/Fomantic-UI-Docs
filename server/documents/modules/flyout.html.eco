@@ -62,7 +62,7 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="no example" data-class="thin, very thin, wide">
+    <div class="no example" data-class="thin, !very thin, !very wide, wide">
       <h4 class="ui header">Width</h4>
       <p>A flyout can specify its width.</p>
       <div class="code" data-type="html">
@@ -74,7 +74,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="another no example">
+    <div class="another no example" data-class="!two wide, !five wide, !eight wide, !twelve wide">
       <p>Width can also be defined like the <a href="/collections/grid.html">ui grid</a> system.</p>
       <div class="code" data-type="html">
         <div class="ui two wide flyout"></div>
@@ -117,7 +117,7 @@ themes      : ['Default']
 
     </div>
 
-    <div class="no example">
+    <div class="no example" data-use-content="true">
       <h4 class="ui header">
           Center Aligned
       </h4>
@@ -141,7 +141,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-use-content="true">
       <h4 class="ui header">
           Left Actions
       </h4>
@@ -165,7 +165,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-class="basic" data-use-content="true">
       <h4 class="ui header">
           Basic Header and Actions
       </h4>

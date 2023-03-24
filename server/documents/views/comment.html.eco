@@ -129,7 +129,7 @@ themes      : ['Default', 'Chubby']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Metadata</h4>
     <p>A comment can contain metadata about the comment, an arbitrary amount of metadata may be defined.</p>
     <div class="ui comments">
@@ -154,7 +154,7 @@ themes      : ['Default', 'Chubby']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Actions</h4>
     <p>A comment can contain an list of actions a user may perform related to this comment.</p>
     <div class="ui comments">
@@ -671,7 +671,7 @@ themes      : ['Default', 'Chubby']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-since="2.5">
     <h4 class="ui header">Inverted</h4>
     <p>Comments' colors can be inverted</p>
     <div class="ui inverted segment">

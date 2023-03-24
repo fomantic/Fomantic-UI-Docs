@@ -66,7 +66,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="content" data-use-content="true">
       <h4 class="ui header">Content Dimmer</h4>
       <p>A dimmer can display content</p>
       <div class="ui ignored info message">Since <div class="ui horizontal label">2.3</div> dimmers with content now only need a single wrapping <code>content</code> container.</div>
@@ -136,10 +136,9 @@ themes      : ['Default']
     <h2 class="ui dividing header">Variations</h2>
 
     <h3>Dimmable</h3>
-    <div class="example">
+    <div class="example" data-since="2.0">
       <h4 class="ui header">
         Blurring
-        <span class="ui teal label">New in 2.0</span>
       </h4>
       <p>A dimmable element can blur its contents</p>
       <div class="ui blurring segment">
@@ -165,10 +164,9 @@ themes      : ['Default']
     </div>
 
     <h3>Alignment</h3>
-    <div class="example">
+    <div class="example" data-since="2.3" data-class="!top aligned, !bottom aligned">
       <h4 class="ui header">
         Vertical Alignment
-        <span class="ui teal label">New in 2.3</span>
       </h4>
       <p>A dimmer can have its content top or bottom aligned.</p>
       <div class="ui segment">
@@ -231,7 +229,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="medium, light, very light">
       <h4 class="ui header">Dimmer Shades</h4>
       <p>A dimmer can be formatted to have a different depth of background shading using the additional classes <code>medium</code>, <code>light</code> or <code>very light</code></p>
       <div class="ignored ui info message">Also works in combination with <code>inverted</code></div>
@@ -253,7 +251,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-since="2.6.4" data-class="!top dimmer, !center dimmer, !bottom dimmer">
       <h4 class="ui header">Partially Dimmer</h4>
       <p>A dimmer can be displayed only partially and limited to the overall height of its content instead of the whole to be covered area. This can be used for example as a caption on any element by using <code>top dimmer</code>, <code>center dimmer</code> or <code>bottom dimmer</code></p>
       <div class="ui segment">
@@ -370,8 +368,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="dimmerloader example">
-      <p>You can customize a loader in a dimmer via javascript <div class="ui black label">New in 2.7.0</div></p>
+    <div class="dimmerloader example" data-since="2.7.0">
+      <p>You can customize a loader in a dimmer via javascript</p>
       <div class="evaluated code">
           $('.dimmerloader.example .image')
           .dimmer({
@@ -599,7 +597,7 @@ themes      : ['Default']
           </td>
           <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
           <br>
-              <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
+              <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui teal tiny label">New in 2.8.8</span>
                   <div class="code">
                   {
                       showMethod   : 'fade',

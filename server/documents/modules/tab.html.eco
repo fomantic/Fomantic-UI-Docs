@@ -24,7 +24,7 @@ themes      : ['Default']
       Type
     </h2>
 
-    <div class="example">
+    <div class="example" data-class="tab">
       <h4 class="ui header">
         Tab
       </h4>
@@ -75,7 +75,7 @@ themes      : ['Default']
       Variations
     </h2>
 
-    <div class="center example">
+    <div class="center example" data-class="center" data-use-content="true">
       <h4 class="ui header">
         Centered Item
       </h4>

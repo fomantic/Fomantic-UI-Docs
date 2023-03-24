@@ -32,7 +32,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
   <h2 class="ui dividing header">Content</h2>
 
-  <div class="example">
+  <div class="no example">
 
     <h4 class="ui header">Headers</h4>
     <p>A site can define styles for headers</p>
@@ -44,7 +44,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <h5>Fifth Header</h5>
   </div>
 
-  <div class="example">
+  <div class="no example">
     <h4 class="ui header">Page Font</h4>
     <p>A site can specify styles for page content.</p>
 
@@ -55,15 +55,13 @@ themes      : ['Default', 'GitHub', 'Material']
 
   </div>
 
-  <div class="example">
+  <div class="no example">
     <h4 class="ui header">Text Selection</h4>
     <p>A site can specify text selection styles.</p>
     <div class="ui message ignored">Highlight the text below with your cursor to see a demonstration</div>
-
     <p>Fusce mollis sagittis elit ut maximus. Nullam blandit lacus sit amet luctus euismod. Duis luctus leo vel consectetur consequat. Phasellus ex ligula, pellentesque et neque vitae, elementum placerat eros. Proin eleifend odio nec velit lacinia suscipit. Morbi mollis ante nec dapibus gravida. In tincidunt augue eu elit porta, vel condimentum purus posuere. Maecenas tincidunt, erat sed elementum sagittis, tortor erat faucibus tellus, nec molestie mi purus sit amet tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris a tincidunt metus. Fusce congue metus aliquam ex auctor eleifend.</p>
-
   </div>
-  <div class="example">
+  <div class="no example">
     <h4 class="ui header">Spacing</h4>
     <p>A site can define default spacing for headers and paragraphs</p>
 
@@ -74,7 +72,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <p>Ut imperdiet dignissim feugiat. Phasellus tristique odio eu justo dapibus, nec rutrum ipsum luctus. Ut posuere nec tortor eu ullamcorper. Etiam pellentesque tincidunt tortor, non sagittis nibh pretium sit amet. Sed neque dolor, blandit eu ornare vel, lacinia porttitor nisi. Vestibulum sit amet diam rhoncus, consectetur enim sit amet, interdum mauris. Praesent feugiat finibus quam, porttitor varius est egestas id.</p>
   </div>
 
-  <div class="example">
+  <div class="no example">
     <h4 class="ui header">Links</h4>
     <p>A site can define link font formatting.</p>
     <p>Ut imperdiet dignissim feugiat. Phasellus tristique odio eu justo dapibus, nec rutrum ipsum luctus. Ut posuere nec tortor eu ullamcorper. <a href="#link">Etiam pellentesque</a> tincidunt tortor, non sagittis nibh pretium sit amet.</p>

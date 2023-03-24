@@ -134,7 +134,7 @@ themes      : ['Default', 'Timeline']
 
   <h2 class="ui dividing header">Content</h2>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Label</h4>
     <p>An event can contain an image or icon label</p>
     <div class="ui feed">
@@ -165,7 +165,7 @@ themes      : ['Default', 'Timeline']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Date</h4>
     <p>An event or an event summary can contain a date</p>
     <div class="ui feed">
@@ -202,7 +202,7 @@ themes      : ['Default', 'Timeline']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="summary, extra text, extra images" data-use-content="true">
     <h4 class="ui header">Additional information</h4>
     <p>An event can contain additional information like a set of images or text</p>
     <div class="ui feed">
@@ -347,7 +347,7 @@ themes      : ['Default', 'Timeline']
         </div>
       </div>
     </div>
-    <div class="example">
+    <div class="example" data-since="2.5">
       <h4 class="ui header">Inverted</h4>
       <p>A feed's color can be inverted</p>
 

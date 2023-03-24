@@ -7243,8 +7243,8 @@ themes      : ['Default']
       <i class="circular inverted users icon"></i>
       <i class="circular inverted teal users icon"></i>
     </div>
-    <div class="example">
-      <h4 class="ui header">Circular Colored <span class="ui black label">New in 2.8.8</span></h4>
+    <div class="example" data-since="2.8.8">
+      <h4 class="ui header">Circular Colored</h4>
       <p>The circular color can appear in the same color as the icon itself</p>
       <i class="circular colored red users icon"></i>
       <i class="circular colored green users icon"></i>
@@ -7261,14 +7261,14 @@ themes      : ['Default']
       <i class="bordered inverted black users icon"></i>
       <i class="bordered inverted teal users icon"></i>
     </div>
-    <div class="example">
-      <h4 class="ui header">Bordered Colored <span class="ui black label">New in 2.8.8</span></h4>
+    <div class="example" data-since="2.8.8">
+      <h4 class="ui header">Bordered Colored</h4>
       <p>The bordered color can appear in the same color as the icon itself</p>
       <i class="bordered colored red users icon"></i>
       <i class="bordered colored green users icon"></i>
       <i class="bordered colored blue users icon"></i>
     </div>
-    <div class="example">
+    <div class="example" data-class="colors">
       <h4 class="ui header">Colored</h4>
       <p>An icon can be formatted with different colors</p>
       <i class="primary users icon"></i>
@@ -7326,7 +7326,7 @@ themes      : ['Default']
         <i class="black user icon"></i>
       </i>
     </div>
-    <div class="example" data-class="corner">
+    <div class="example" data-class="corner, !top left, !top right, !bottom left, !bottom right">
       <h4 class="ui header">Corner Icon</h4>
       <p>A group of icons can display a smaller corner icon</p>
       <i class="huge icons">

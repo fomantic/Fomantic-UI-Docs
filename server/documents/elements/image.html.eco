@@ -126,7 +126,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!left spaced, !right spaced, spaced">
     <h4 class="ui header">Spaced</h4>
     <p>An image can specify that it needs an additional spacing to separate it from nearby content</p>
 
@@ -141,7 +141,7 @@ themes      : ['Default']
       <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.<img class="ui mini left spaced image" src="/images/wireframe/image.png"></p>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="left floated, right floated">
     <h4 class="ui header">Floated</h4>
     <p>An image can sit to the left or right of other content</p>
     <div class="ui segment">

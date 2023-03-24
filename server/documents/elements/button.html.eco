@@ -83,7 +83,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
   </div>
 
-  <div class="example" data-class="labeled, left labeled">
+  <div class="example" data-class="labeled, !left labeled">
     <h4 class="ui header">Labeled</h4>
     <p>A button can appear alongside a <a href="/elements/label.html">label</a></p>
     <div class="ui labeled button" tabindex="0">
@@ -138,7 +138,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </button>
   </div>
 
-  <div class="example" data-class="labeled icon, right labeled icon">
+  <div class="example" data-class="labeled icon, !right labeled, icon">
     <h4 class="ui header">Labeled Icon</h4>
     <p>A button can use an icon as a label</p>
     <button class="ui labeled icon button">
@@ -419,7 +419,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </button>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!right floated,!left floated,floated">
     <h4 class="ui header">Floated</h4>
     <p>A button can be aligned to the left or right of its container</p>
     <button class="ui right floated button">Right Floated</button>
@@ -427,7 +427,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   </div>
 
 
-  <div class="spaced example">
+  <div class="spaced example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A button can have different colors</p>
     <button class="ui red button">Red</button>
@@ -508,7 +508,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </button>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!top attached, !bottom attached, attached">
     <h4 class="ui header">Vertically Attached</h4>
     <p>A button can be attached to the top or bottom of other content</p>
     <div class="ui top attached button" tabindex="0">Top</div>
@@ -532,7 +532,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!left attached, !right attached">
     <h4 class="ui header">Horizontally Attached</h4>
     <p>A button can be attached to the left or right of other content</p>
     <button class="ui left attached button">Left</button>
@@ -598,7 +598,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
       </button>
     </div>
   </div>
-  <div class="example" data-class="labeled icon, ui button, ui buttons, right labeled icon">
+  <div class="example" data-class="labeled icon, ui button, ui buttons, !right labeled, icon">
     <h4 class="ui header">Mixed Group</h4>
     <p>Groups can be formatted to use multiple button types together</p>
     <div class="ui buttons">
@@ -637,7 +637,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   </div>
 
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored Buttons</h4>
     <p>Groups can have a shared color</p>
     <div class="blue ui buttons">
@@ -695,8 +695,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Wrapping Buttons <span class="ui black label">New in 2.9.0</span></h4>
+  <div class="example" data-since="2.9.0">
+    <h4 class="ui header">Wrapping Buttons</h4>
     <p>Groups buttons can automatically wrap sharing the overall available width</p>
     <div class="ui wrapped wrapping buttons">
       <button class="ui button">One</button>
@@ -725,8 +725,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Spaced Buttons <span class="ui black label">New in 2.9.0</span></h4>
+  <div class="example" data-since="2.9.0">
+    <h4 class="ui header">Spaced Buttons</h4>
     <p>Buttons inside groups can automatically get a margin so they dont appear attached together, especially when used together with <a href="#wrapping-buttons">wrapping</a> on responsive layouts</p>
     <div class="ui wrapping spaced buttons">
       <button class="ui button">One</button>

@@ -22,10 +22,10 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Types</h2>
 
-  <div class="example">
+  <div class="example" data-class="item, items" data-use-content="true">
     <h4 class="ui header">
       Items
-      <span class="ui teal label">Flexbox</span>
+      <span class="ui orange label">Flexbox</span>
     </h4>
     <p>A group of items.</p>
     <div class="ui ignored positive icon message">
@@ -75,7 +75,7 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Content</h2>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Image</h4>
     <p>An item can contain an image</p>
     <div class="ui divided items">
@@ -97,7 +97,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Content</h4>
     <p>An item can contain content</p>
     <div class="ui divided items">
@@ -128,7 +128,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Header</h4>
     <p>An item can contain a header</p>
     <div class="ui items">
@@ -159,7 +159,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="meta" data-use-content="true">
     <h4 class="ui header">Metadata</h4>
     <p>An item can contain content metadata</p>
     <div class="ui ignored info message">
@@ -278,7 +278,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="extra" data-use-content="true">
     <h4 class="ui header">Extra Content</h4>
     <p>An item can contain extra content meant to be formatted separately from the main content</p>
     <div class="ui items">
@@ -446,7 +446,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!very relaxed, relaxed">
     <h4 class="ui header">Relaxed</h4>
     <p>A group of items can relax its padding to provide more negative space</p>
     <div class="ui relaxed items">
@@ -506,7 +506,7 @@ themes      : ['Default']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-class="link" data-use-content="true">
     <h4 class="ui header">Link Item</h4>
     <p>An item can be formatted so that the entire contents link to another page</p>
     <div class="ui link items">
@@ -546,7 +546,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!middle aligned, !bottom aligned, content" data-use-content="true">
     <h4 class="ui header">Vertical Alignment</h4>
     <p>Content can specify its vertical alignment</p>
     <div class="ui ignored info message">
@@ -587,7 +587,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!right floated, !left floated">
     <h4 class="ui header">Floated Content</h4>
     <p>Any content element can be floated left or right</p>
     <div class="ui ignored info message">

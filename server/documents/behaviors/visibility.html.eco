@@ -961,10 +961,9 @@ type        : 'UI Behavior'
       </table>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.2">
       <h4 class="ui header">
         Image Callbacks
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>Callbacks that occur only when using <a href="#lazy-loading-images"><code>type: 'fixed'</code></a></p>
 
@@ -990,11 +989,10 @@ type        : 'UI Behavior'
         </tbody>
       </table>
     </div>
-    <div class="no example">
+    <div class="no example" data-since="2.2">
 
       <h4 class="ui header">
         Fixed Callbacks
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>Callbacks that occur only when using <a href="#fixing-content-to-viewport"><code>type: 'fixed'</code></a></p>
 

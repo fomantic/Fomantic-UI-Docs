@@ -283,7 +283,8 @@ semantic.search.ready = function() {
   $local
     .search({
       searchFields: ['title'],
-      source: content
+      source: content,
+      maxResults: 20
     })
   ;
 

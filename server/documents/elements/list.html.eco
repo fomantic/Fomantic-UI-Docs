@@ -602,7 +602,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!very relaxed" data-use-content="true">
     <h4 class="ui header">Relaxed</h4>
     <p>A list can relax its padding to provide more negative space</p>
 
@@ -933,7 +933,7 @@ themes      : ['Default']
   <h2 class="ui dividing header">Content Variations</h2>
 
 
-  <div class="example" data-use-content="true">
+  <div class="example" data-use-content="true" data-class="!top aligned, !middle aligned, !bottom aligned">
     <h4 class="ui header">Vertically Aligned</h4>
     <p>An element inside a list can be vertically aligned</p>
     <div class="ui horizontal list">
@@ -959,7 +959,7 @@ themes      : ['Default']
   </div>
 
 
-  <div class="example" data-use-content="true">
+  <div class="example" data-class="!right floated,!left floated,floated" data-use-content="true">
     <h4 class="ui header">Floated</h4>
     <p>An list, or an element inside a list can be floated left or right</p>
     <div class="ui middle aligned divided list">

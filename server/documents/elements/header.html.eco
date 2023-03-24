@@ -256,7 +256,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     </h3>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!left floated,!right floated" data-use-content="true">
     <h4 class="ui header">Floating</h4>
     <p>A header can sit to the left or right of other content</p>
     <div class="ui clearing segment">
@@ -287,7 +287,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A header can be formatted with different colors</p>
     <h4 class="ui primary header">Primary</h4>

@@ -265,10 +265,15 @@ semantic.ready = function() {
       $example
         .each(function() {
           var
-            $title   = $(this).children('h4').eq(0),
+            $example = $(this),
+            $title   = $example.children('h4').eq(0),
+            $firstP  = $example.children('p').eq(0),
             text     = handler.getText($title),
             safeName = handler.getSafeName(text),
-            id       = window.escape(safeName)
+            id       = window.escape(safeName),
+            since    = $example.data('since'),
+            classes  = $example.data('class'),
+            wordOrder = classes && classes.indexOf('!') >= 0
           ;
           if ($title.length > 0 && id.length > 0) {
             var $contentWrapped = $("<a/>").attr('href', '#' + id).html([
@@ -276,6 +281,16 @@ semantic.ready = function() {
               $title.html()
             ]).on('click', handler.scrollTo);
             $title.attr('id', id).html($contentWrapped);
+          }
+          if (since) {
+            if ($title.length > 0) {
+              $title.append(' <div class="ui teal label">New in ' + since + '</div>');
+            } else if ($firstP.length > 0) {
+                $firstP.append(' <span class="ui teal label">New in ' + since + '</span>');
+            }
+          }
+          if (wordOrder) {
+            $title.append(' <a href="/introduction/getting-started#class-order"><div class="ui small wordorder label"><i class="attention icon"></i>Word order required</div></a>');
           }
         })
       ;
@@ -791,24 +806,23 @@ semantic.ready = function() {
       }
       // Add common variations
       classes = classes.replace('text alignment', "left aligned, right aligned, justified, center aligned");
-      classes = classes.replace('floated', "right floated,left floated,floated");
-      classes = classes.replace('floating', "right floated,left floated,floated");
+      classes = classes.replace('floating', "!right floated,!left floated,floated");
       classes = classes.replace('horizontally aligned', "left aligned, center aligned, right aligned, justified");
       classes = classes.replace('vertically aligned', "top aligned, middle aligned, bottom aligned");
       classes = classes.replace('vertically attached', "attached");
       classes = classes.replace('horizontally attached', "attached");
-      classes = classes.replace('padded', "very padded, padded");
-      classes = classes.replace('relaxed', "very relaxed, relaxed");
+      classes = classes.replace('padded', "!very padded, padded");
+      classes = classes.replace('relaxed', "!very relaxed, relaxed");
       classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
-      classes = classes.replace('thin', "very thin, thin");
-      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,very wide,wide");
+      classes = classes.replace('thin', "!very thin, thin");
+      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,!very wide,wide");
       classes = classes.replace('count', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('column count', "one column,two column,three column,four column,five column,six column,seven column,eight column,nine column,ten column,eleven column,twelve column,thirteen column,fourteen column,fifteen column,sixteen column");
       classes = classes.replace('evenly divided', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('size', "mini,tiny,small,medium,large,big,huge,massive");
       classes = classes.replace('position', "left,right,top,bottom");
       classes = classes.replace('emphasis', "primary,secondary,tertiary");
-      classes = classes.replace('colored', "primary,secondary,red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
+      classes = classes.replace('colors', "primary,secondary,red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
       classes = (classes !== '')
         ? classes.split(',')
         : []
@@ -870,9 +884,22 @@ semantic.ready = function() {
         isOtherUI     = (!isPageElement && isUI);
         isOtherIcon   = (!isPageElement && tagHTML === 'i' && html.search('icon') !== -1);
         // check if any class match
+        // check multi-word classes first
+        classes.sort(function(a,b){
+          var aSpaces = a.split(' ').length - 1,
+              bSpaces = b.split(' ').length - 1;
+          return aSpaces > bSpaces
+            ? -1
+            : aSpaces < bSpaces
+              ? 1
+              : 0;
+        });
         $.each(classes, function(index, string) {
+          html = newHTML || html;
           var
-            className      = string.trim(),
+            className      = string.trim().replace('!',''),
+            orderRequired  = string.trim()[0] === '!',
+            classReg       = new RegExp('<b.*?<\\/b>|(\\b' + className + '\\b)', 'g'),
             isClassMatch   = (html.search(className) !== -1)
           ;
           if(className === '') {
@@ -880,8 +907,9 @@ semantic.ready = function() {
           }
           // class match on current page element (or content if allowed)
           if(isClassMatch && (isPageElement || useContent) ) {
-            newHTML = html.replace(className, '<b title="Required Class">' + className + '</b>');
-            return false;
+            newHTML = html.replace(classReg, function(match, group) {
+                return !group ? match : '<b data-position="right center" data-variation="mini" data-tooltip="'+(orderRequired ? 'Word order r' : 'R')+'equired Class">' + group + '</b>';
+            });
           }
         });
 

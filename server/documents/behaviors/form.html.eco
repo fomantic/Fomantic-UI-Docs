@@ -159,8 +159,8 @@ type        : 'UI Behavior'
         <div class="ui error message"></div>
       </div>
     </form>
-    <div class="color example">
-      <h4 class="ui header">Passing Parameters to Rules <div class="ui horizontal teal label">New in 2.2.3</div></h4>
+    <div class="color example" data-since="2.2.3">
+      <h4 class="ui header">Passing Parameters to Rules</h4>
       <p>Typically rules that include a parameter are written <code>minLength[2]</code> with the value being passed in as brackets.</p>
       <p>If passing in properties as a string is not ideal, or if you are pulling values from another javascript variable, it might make sense to consider using <code>value</code> to pass in the rule value.</p>
       <div class="ignored code">
@@ -353,7 +353,7 @@ type        : 'UI Behavior'
         <p>Validation rules are a set of conditions required to validate a field</p>
       <div class="ui info message">Validation rules are found in <code>$.fn.form.settings.rules</code>, to add new global validation rules, modify <code>$.fn.form.settings.rules</code> to include your function.</div>
       <div class="ui info message">To pass parameters to a rule, use bracket notation in your settings object. For example <code>type: 'not[dog]'</code></div>
-      <div class="ui info message">Despite the global setting <code>shouldTrim</code> you can optionally specify to trim/not trim values before validation by adding <code>shouldTrim:true</code> or <code>shouldTrim:false</code> to each rule <span class="ui tiny black label">New in 2.8.8</span></div>
+      <div class="ui info message">Despite the global setting <code>shouldTrim</code> you can optionally specify to trim/not trim values before validation by adding <code>shouldTrim:true</code> or <code>shouldTrim:false</code> to each rule <span class="ui tiny teal label">New in 2.8.8</span></div>
 
       <h3 class="ui header"><a href="#empty">Empty</a></h3>
       <table class="ui celled sortable basic table segment">
@@ -500,7 +500,7 @@ type        : 'UI Behavior'
             <td><code>maxLength[50]</code></td>
           </tr>
           <tr>
-            <td>size <span class="ui mini black label">New in 2.9.2</span></td>
+            <td>size <span class="ui mini teal label">New in 2.9.2</span></td>
             <td>A field has a size between min and max characters</td>
             <td><code>size[6..12]</code></td>
           </tr>
@@ -1436,9 +1436,9 @@ type        : 'UI Behavior'
 
     <h2 class="ui dividing header">Form Examples</h2>
 
-    <div class="add example">
+    <div class="add example" data-since="2.2.11">
       <h4 class="ui header">
-        Adding Rules Programmatically <div class="ui teal label">New in 2.2.11</div>
+        Adding Rules Programmatically
       </h4>
       <p>You can use the special behaviors <code>add field/rule</code>, <code>remove rule</code> and <code>remove field</code> to dynamically add or remove fields or rules. </p>
       <div class="ui ignored info message">
@@ -1575,10 +1575,9 @@ type        : 'UI Behavior'
       </form>
     </div>
 
-    <div class="depends example">
+    <div class="depends example" data-since="2.2">
       <h4 class="ui header">
         Dependent Fields
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>You can specify validation fields to only be used when other fields are present. Simply add <code>depends: 'identifier'</code> with the ID of the field that must be non-blank for this rule to evaluate.</p>
       <div class="ignored code">
@@ -1878,7 +1877,7 @@ type        : 'UI Behavior'
       </form>
     </div>
 
-    <div class="dirty example">
+    <div class="dirty example" data-since="2.7.5">
       <h4 class="ui header">Dirty / Clean state</h4>
       <p>
         When initialized, form has a <em>clean</em> state that record all field values. Once at least one field is modified, form enter in <em>dirty</em> state, that can be caught through the <code>onDirty</code> event.
@@ -1959,19 +1958,19 @@ type        : 'UI Behavior'
         <td>Returns true/false whether a form passes its validation rules</td>
       </tr>
       <tr>
-        <td>add rule(field, rules)<div class="ui label">New in 2.2.11</div></td>
+        <td>add rule(field, rules)<div class="ui teal label">New in 2.2.11</div></td>
         <td>Adds rule to existing rules for field, also aliased as <code>add field</code></td>
       </tr>
       <tr>
-        <td>add fields(fields) <div class="ui label">New in 2.2.11</div></td>
+        <td>add fields(fields) <div class="ui teal label">New in 2.2.11</div></td>
         <td>Adds fields object to existing fields</td>
       </tr>
       <tr>
-        <td>remove rule(field, rules)<div class="ui label">New in 2.2.11</div></td>
+        <td>remove rule(field, rules)<div class="ui teal label">New in 2.2.11</div></td>
         <td>Removes specific rule from field leaving other rules</td>
       </tr>
       <tr>
-        <td>remove field(field)<div class="ui label">New in 2.2.11</div></td>
+        <td>remove field(field)<div class="ui teal label">New in 2.2.11</div></td>
         <td>Remove all validation for a field</td>
       </tr>
       <tr>
@@ -2051,7 +2050,7 @@ type        : 'UI Behavior'
         <td>Automatically adds the "empty" rule or automatically checks a checkbox for all fields with classname or attribute <code>required</code></td>
       </tr>
       <tr>
-        <td>set optional(identifier, bool = true)<div class="ui label">New in 2.8.8</div></td>
+        <td>set optional(identifier, bool = true)<div class="ui teal label">New in 2.8.8</div></td>
         <td>Set or unset matching fields as optional</td>
       </tr>
     </table>
@@ -2097,7 +2096,7 @@ type        : 'UI Behavior'
             <td>Adds inline error on field validation error</td>
           </tr>
           <tr>
-            <td>shouldTrim <div class="ui label">New in 2.4.0</div></td>
+            <td>shouldTrim <div class="ui teal label">New in 2.4.0</div></td>
             <td>true</td>
             <td>Whether or not the form should trim the value before validating</td>
           </tr>
@@ -2129,7 +2128,7 @@ type        : 'UI Behavior'
             <td>Whether fields with classname or attribute <code>required</code> should automatically add the "empty" rule or automatically checks checkbox fields</td>
           </tr>
           <tr>
-            <td>errorFocus<div class="ui label">New in 2.8.8</div></td>
+            <td>errorFocus<div class="ui teal label">New in 2.8.8</div></td>
             <td>true</td>
             <td>Whether, on an invalid form validation, it should automatically focus either the first error field (<code>true</code>) or a specific dom node (Use a unique selector string such as <code>.ui.error.message</code> or <code>#myelement</code>) or nothing (<code>false</code>)</td>
           </tr>

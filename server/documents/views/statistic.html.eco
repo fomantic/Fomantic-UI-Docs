@@ -45,7 +45,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="statistics">
     <h4 class="ui header">Statistic Group</h4>
     <p>A group of statistics</p>
     <div class="ui statistics">
@@ -119,7 +119,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Label</h4>
     <p>A statistic can contain a label to help provide context for the presented value</p>
     <div class="ui statistic">
@@ -176,7 +176,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A statistic can be formatted to be different colors</p>
     <div class="ui statistics">
@@ -533,8 +533,8 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Fluid <span class="ui black label">New in 2.9.1</span></h4>
+  <div class="example" data-since="2.9.1">
+    <h4 class="ui header">Fluid</h4>
     <p>A fluid statistic occupies the whole container width. It's a simpler alternative to a <code>one statistic</code> group.</p>
     <div class="ui fluid statistic">
       <div class="value">
@@ -546,7 +546,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!right floated,!left floated,floated">
     <h4 class="ui header">Floated</h4>
     <p>An statistic can sit to the left or right of other content</p>
 

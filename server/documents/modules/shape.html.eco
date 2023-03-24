@@ -25,7 +25,7 @@ themes      : ['default']
 
     <h2 class="ui dividing header">Types</h2>
 
-    <div class="example">
+    <div class="example" data-class="shape">
       <h4 class="ui header">Shape</h4>
       <p>A shape is a three dimensional object including any flat content as a side.</p>
 

@@ -34,25 +34,25 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="another example">
+    <div class="example">
       <h4 class="ui header">Labeled slider</h4>
       <p>A slider that show its labels</p>
       <div class="ui labeled slider"></div>
     </div>
-    <div class="another example">
+    <div class="example">
       <h4 class="ui header">Labeled ticked slider</h4>
       <p>A slider that show its labels and ticks</p>
       <div class="ui labeled ticked slider"></div>
     </div>
 
     <div class="example">
-        <h4 class="ui header">Label at the bottom</h4>
+        <h4 class="ui header">Bottom aligned labeled</h4>
         <p>A slider can display the labels below the track</p>
         <div class="ui bottom aligned labeled slider"></div>
     </div>
 
-    <div class="example">
-        <h4 class="ui header">Restricted Labels <div class="ui black label">New in 2.9.3</div></h4>
+    <div class="example" data-since="2.9.3">
+        <h4 class="ui header">Restricted Labels</h4>
         <p>You can restrict the display of labels to only the ones you want</p>
         <div class="ui labeled ticked slider" id="restrictedlabelsslider"></div>
     </div>
@@ -142,8 +142,8 @@ themes      : ['Default']
       <div class="ui reversed slider"></div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Thumb Tooltips <div class="ui black label">New in 2.9.3</div></h4>
+    <div class="example" data-since="2.9.3">
+      <h4 class="ui header">Thumb Tooltips</h4>
       <p>The slider thumbs can show a tooltip on hover containing the current value</p>
       <div class="ui slider" id="slider-tooltip-1"></div>
     </div>
@@ -176,7 +176,7 @@ themes      : ['Default']
       <div class="ui vertical slider" style="height: 200px;"></div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="colors">
       <h4 class="ui header">Colored</h4>
       <p>A slider can be different colors</p>
       <div class="ui red slider"></div>
@@ -194,7 +194,7 @@ themes      : ['Default']
       <div class="ui black slider"></div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="inverted, colors">
       <h4 class="ui header">Inverted Colored</h4>
       <p>A slider can be different colors while inverted</p>
       <div class="ui inverted segment">

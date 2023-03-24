@@ -40,7 +40,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="highlighted example" data-use-content="true" data-class="column">
+    <div class="highlighted example" data-use-content="true" data-class="!two wide, !four wide, !six wide, !eight wide, wide, column">
       <h4 class="ui header">Columns</h4>
       <p>Grids divide horizontal space into indivisible units called "columns". All columns in a grid must specify their width as proportion of the total available row width.</p>
       <p>All grid systems choose an arbitrary column count to allow per row. Fomantic's default theme uses <b>16 columns</b>.</p>
@@ -186,7 +186,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="highlighted example" data-use-content="true" data-class="wide">
+    <div class="highlighted example" data-use-content="true" data-class="!two wide, !four wide, !six wide, !eight wide, !ten wide, !twelve wide, !fourteen wide, !sixteen wide, wide">
       <h4 class="ui header">Column Widths</h4>
       <p>Column widths can be specified using <a href="#column-width"><code>(x) wide</code></a> class names. If a column cannot fit in a row it will automatically flow to the next row</p>
       <div class="ui grid">
@@ -202,8 +202,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="highlighted example" data-use-content="true" data-class="wide">
-      <h4 class="ui header">Left / Right Attached Column <span class="ui black label">New in 2.9.2</span></h4>
+    <div class="highlighted example" data-use-content="true" data-class="left attached, right attached" data-since="2.9.2">
+      <h4 class="ui header">Left / Right Attached Column</h4>
       <p>A column can be attached to the left or right without any padding. This is especially useful when working with a <a href="/collections/menu.html#tabular"><code>vertical tabular menu</code></a></p>
       <div class="ui two column grid">
         <div class="left attached column"></div>
@@ -213,7 +213,7 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Rows</h2>
 
-    <div class="highlighted example">
+    <div class="highlighted example" data-class="row, !two column, !four column">
       <h4 class="ui header">Grouping</h4>
       <p>Row wrappers allow you to apply variations to a group of columns.</p>
       <div class="ui four column grid">
@@ -242,7 +242,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-class="internally celled">
+    <div class="example" data-class="!internally celled">
       <h4 class="ui header">Special Grids</h4>
       <p>Additionally, some types of grids, like <a href="#divided"><code>divided</code></a> or <a href="#celled"><code>celled</code></a> require row wrappers to apply formatting correctly.</p>
 
@@ -298,7 +298,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="colored example" data-use-content="true" data-class="colored, padded">
+    <div class="colored example" data-use-content="true" data-class="colors, padded">
       <h4 class="ui header">Colored</h4>
       <p>Grids can use named <a href="#colored"><b>colors</b> variations</a> to add background colors, but only with <a href="#padded"><code>padded grid</code></a> that do not include negative margins.</p>
       <p>To include a color that is not available in the default palette its perfectly fine to use CSS</p>
@@ -326,7 +326,7 @@ themes      : ['Default']
     </div>
 
 
-    <div class="highlighted example" data-class="equal width">
+    <div class="highlighted example" data-class="!equal width">
       <h4 class="ui header">Automatic Column Count</h4>
       <p>The <a href="#equal-width"><code>equal width</code></a> variation will automatically divide column width evenly. This is useful with dynamic content where you do not know the column count in advance.</p>
       <div class="ui equal width grid">
@@ -352,7 +352,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true" data-class="left floated right aligned, right floated left aligned, center aligned, sixteen wide">
+    <div class="example" data-use-content="true" data-class="!left floated, !right aligned, !right floated, !left aligned, !center aligned, !sixteen wide">
       <h4 class="ui header">Significant Word Order</h4>
       <p>Grids include many variations for adjusting things like vertical or horizontal alignment, text alignment, or default gutter sizes.</p>
       <p>Some multi-word variations, like <a href="#floated"><code>left floated</code></a> or <a href="#text-alignment"><code>right aligned</code></a> are word-order dependent and require you to use adjacent class names.</p>
@@ -415,7 +415,7 @@ themes      : ['Default']
         <div class="column"></div>
       </div>
     </div>
-    <div class="example" data-class="mobile reversed">
+    <div class="example" data-class="!mobile reversed">
       <h4 class="ui header">Reverse Order</h4>
       <p>Fomantic includes special <a href="#reversed"><code>reversed</code></a> variations that allow you to reverse the order of columns or rows by device</p>
       <div class="ui mobile reversed equal width grid">
@@ -540,7 +540,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="!vertically divided">
       <h4 class="ui header">
         Vertically Divided
         <span class="ui black label">Requires Rows</span>
@@ -679,7 +679,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Variations</h2>
 
 
-    <div class="example" data-use-content="true">
+    <div class="example" data-use-content="true" data-class="!right floated,!left floated,floated">
       <h4 class="ui header">Floated</h4>
       <p>A column can sit flush against the left or right edge of a row</p>
       <div class="ui grid">
@@ -692,7 +692,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true" data-class="wide">
+    <div class="example" data-use-content="true" data-class="!three wide, !four wide, !nine wide">
       <h4 class="ui header">Column Width</h4>
       <p>A column can vary in width taking up more than a single grid column.</p>
       <div class="ui grid">
@@ -757,7 +757,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true">
+    <div class="example" data-use-content="true" data-class="!equal width">
       <h4 class="ui header">
         Equal Width
       </h4>
@@ -944,7 +944,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-class="very compact, compact">
+    <div class="example" data-class="!very compact, compact">
       <h4 class="ui header">Compact</h4>
       <p>A grid can appear compact with no or very little padding</p>
 
@@ -1027,7 +1027,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true">
+    <div class="example" data-class="colors" data-use-content="true">
       <h4 class="ui header">Colored</h4>
       <p>A row or column can be colored</p>
       <div class="ui five column padded grid">
@@ -1342,7 +1342,7 @@ themes      : ['Default']
         </div>
       </div>
     </div>
-    <div class="example" data-use-content="true" data-class="computer reversed, tablet reversed, mobile reversed, computer vertically reversed, mobile vertically reversed, tablet vertically reversed">
+    <div class="example" data-use-content="true" data-class="!computer reversed, !tablet reversed, !mobile reversed, !computer vertically reversed, !mobile vertically reversed, !tablet vertically reversed">
       <h4 class="ui header">Reversed</h4>
       <p>A grid or row can specify that its columns should reverse order at different device sizes</p>
       <div class="ui ignored info message message">Reversed grids are compatible with <code>divided</code> grids and other complex grid types.</div>
@@ -1454,7 +1454,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true" data-class="widescreen only, large screen only, computer only, tablet only, mobile only">
+    <div class="example" data-use-content="true" data-class="!widescreen only, !large screen only, !computer only, !tablet only, !mobile only">
       <h4 class="ui header">Device Visibility</h4>
       <p>A columns or row can appear only for a specific device, or screen sizes</p>
       <div class="ui text message info ignore">
