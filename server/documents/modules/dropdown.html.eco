@@ -308,12 +308,25 @@ themes      : ['Default', 'GitHub', 'Material']
         <%- @partial('examples/single/skill-menu') %>
       </select>
     </div>
-    <div class="dropdown example">
+    <div class="dropdown example" data-class="search">
       <h4 class="ui header">Multiple Search Selection</h4>
       <p>A selection dropdown can allow multiple search selections</p>
       <select class="ui fluid search dropdown" multiple>
         <%- @partial('examples/single/state-options') %>
       </select>
+    </div>
+    <div class="keepsearchterm example" data-since="2.9.3" data-class="multiple search selection">
+      <p>A multiple search selection dropdown can keep its search value on item selection so the menu stays filtered</p>
+      <select class="ui fluid multiple search selection dropdown">
+        <%- @partial('examples/single/state-options') %>
+      </select>
+      <div class="code">
+          $('.ui.search.selection.dropdown')
+            .dropdown({
+              keepSearchTerm: true
+            })
+          ;
+      </div>
     </div>
     <div class="another dropdown example">
       <div class="ui ignored info message">
@@ -3458,6 +3471,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Whether search selection will force currently selected choice when element is blurred.<br>If a <code>select</code> tag with a <code>required</code> attribute was used, the forceSelection setting will be set to true automatically</td>
         </tr>
         <tr>
+          <td>keepSearchTerm</td>
+          <td>false</td>
+          <td>Whether the search value should be kept and menu stays filtered on item selection.</td>
+        </tr>
+        <tr>
           <td>allowCategorySelection</td>
           <td>false</td>
           <td>Whether menu items with sub-menus (categories) should be selectable</td>
@@ -3597,13 +3615,6 @@ themes      : ['Default', 'GitHub', 'Material']
            false
           </td>
           <td>When set to a number, sets the maximum number of selections</td>
-        </tr>
-        <tr>
-          <td>glyphWidth</td>
-          <td>
-           1.037
-          </td>
-          <td>Maximum glyph width, used to calculate search size. This is usually size of a "W" in your font in <code>em</code></td>
         </tr>
         <tr>
           <td>headerDivider</td>
