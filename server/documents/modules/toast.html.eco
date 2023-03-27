@@ -491,7 +491,7 @@ themes      : ['Default']
         ;
         </div>
 
-        <p>The image can be shown without any padding by providing the <code>image</code> class <span class="ui black label">New in 2.9.0</span></p>
+        <p>The image can be shown without any padding by providing the <code>image</code> class <span class="ui teal label">New in 2.9.0</span></p>
         <div class="code" data-demo="true">
         $.toast({
           showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
@@ -515,7 +515,7 @@ themes      : ['Default']
       })
       ;
       </div>
-      <p>The close icon can also be displayed to the left <span class="ui black label">New in 2.8.0</span></p>
+      <p>The close icon can also be displayed to the left <span class="ui teal label">New in 2.8.0</span></p>
       <div class="code" data-demo="true">
       $.toast({
         class: 'info',
@@ -566,9 +566,9 @@ themes      : ['Default']
           ;
       </div>
     </div>
-    <h2 class="ui dividing header">Create from DOM</h2>
+    <h2 data-since="2.8.0" class="ui dividing header">Create from DOM</h2>
 
-    <p>By creating your toasts out of existing DOM nodes you can make use of other existing FUI components <span class="ui black label">New in 2.8.0</span></p>
+    <p>By creating your toasts out of existing DOM nodes you can make use of other existing FUI components</p>
 
     <div class="example">
         <h4 class="ui header">Toast</h4>

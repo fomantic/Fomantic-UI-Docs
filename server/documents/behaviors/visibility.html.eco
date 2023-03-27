@@ -854,7 +854,7 @@ type        : 'UI Behavior'
           <tr>
             <td>zIndex</td>
             <td>1</td>
-            <td>Specify a z-index when using <code>type: 'fixed'</code>. <div class="ui teal horizontal label">New in 2.2</div></td>
+            <td data-since="2.2">Specify a z-index when using <code>type: 'fixed'</code>.</td>
           </tr>
           <tr>
             <td>offset</td>

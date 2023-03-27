@@ -595,9 +595,9 @@ themes      : ['Default']
           <td>
             fade
           </td>
-          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
+          <td data-since="2.8.8">Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
           <br>
-              <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui teal tiny label">New in 2.8.8</span>
+              <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration
                   <div class="code">
                   {
                       showMethod   : 'fade',

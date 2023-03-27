@@ -1737,6 +1737,9 @@ code.code .class b[data-tooltip~="order"]:hover {
   }
 }
 
+.newsince {
+  margin-left: 1em !important;
+}
 
 /* Linked UI */
 code .tag .value a {

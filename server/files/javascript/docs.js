@@ -50,6 +50,7 @@ semantic.ready = function() {
     $sectionExample      = $container.find('.example'),
     $exampleHeaders      = $sectionExample.children('h4'),
     $footer              = $('.page > .footer'),
+    $tableSinceCells     = $('.ui.table [data-since]'),
 
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
@@ -77,11 +78,7 @@ semantic.ready = function() {
 
     metadata,
 
-    requestAnimationFrame = window.requestAnimationFrame
-      || window.mozRequestAnimationFrame
-      || window.webkitRequestAnimationFrame
-      || window.msRequestAnimationFrame
-      || function(callback) { setTimeout(callback, 0); },
+    requestAnimationFrame = window.requestAnimationFrame,
 
     // alias
     handler
@@ -90,6 +87,12 @@ semantic.ready = function() {
 
   // event handlers
   handler = {
+
+    createNewInLabel: function(since, extraClass, tag) {
+        extraClass = extraClass || '';
+        tag = tag || 'div';
+        return $('<' + tag + '/>', { class: 'ui teal label newsince ' + extraClass, text: 'New in ' + since });
+    },
 
     getMetadata: function() {
       $.api({
@@ -252,6 +255,7 @@ semantic.ready = function() {
         .each(function() {
           var
             $section = $(this),
+            since    = $section.data('since'),
             text     = handler.getText($section),
             safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
@@ -260,6 +264,9 @@ semantic.ready = function() {
           $section
             .append($anchor)
           ;
+          if (since) {
+            $section.append(handler.createNewInLabel(since));
+          }
         })
       ;
       $example
@@ -268,6 +275,7 @@ semantic.ready = function() {
             $example = $(this),
             $title   = $example.children('h4').eq(0),
             $firstP  = $example.children('p').eq(0),
+            $sinces  = $example.find('.ui.message[data-since]'),
             text     = handler.getText($title),
             safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
@@ -284,16 +292,26 @@ semantic.ready = function() {
           }
           if (since) {
             if ($title.length > 0) {
-              $title.append(' <div class="ui teal label">New in ' + since + '</div>');
+              $title.append(handler.createNewInLabel(since));
             } else if ($firstP.length > 0) {
-                $firstP.append(' <span class="ui teal label">New in ' + since + '</span>');
+                $firstP.append(handler.createNewInLabel(since,'','span'));
             }
           }
           if (wordOrder) {
             $title.append(' <a href="/introduction/getting-started#class-order"><div class="ui small wordorder label"><i class="attention icon"></i>Word order required</div></a>');
           }
+          $sinces.each(function(){
+              var $el = $(this),
+                  since = $el.data('since');
+              $el.append(handler.createNewInLabel(since,'tiny horizontal'));
+          })
         })
       ;
+      $tableSinceCells.each(function(){
+        var $el = $(this),
+            since = $el.data('since');
+        $el.append(handler.createNewInLabel(since,'tiny horizontal', 'span'));
+      });
 
     },
 
@@ -349,10 +367,10 @@ semantic.ready = function() {
           ;
           html += '<div class="item">';
           if($examples.length === 0) {
-            html += '<a class="'+activeClass+'title" href="#'+ id +'"><b>' + $(this).text() + '</b></a>';
+            html += '<a class="'+activeClass+'title" href="#'+ id +'"><b>' + handler.getText($(this)) + '</b></a>';
           }
           else {
-            html += '<a class="'+activeClass+'title"><i class="dropdown icon"></i> <b>' + $(this).text() + '</b></a>';
+            html += '<a class="'+activeClass+'title"><i class="dropdown icon"></i> <b>' + handler.getText($(this)) + '</b></a>';
           }
           if($examples.length > 0) {
             html += '<div class="'+activeClass+'content menu">';
@@ -382,7 +400,6 @@ semantic.ready = function() {
       $sticky = $('<div />')
         .addClass('ui sticky')
         .html($followMenu)
-        //.prepend($advertisement)
         .prepend('<h3 class="ui header">' + title + '</h3>')
       ;
       if (activeTab !== "") {
