@@ -16,9 +16,7 @@ type        : 'UI Element'
 
 <div class="main ui container">
 
-  <div class="ui active tab" data-tab="text">
-
-    <h2 class="ui header">Definition</h2>
+    <h2 class="ui dividing header">Types</h2>
 
     <div class="no example">
       <h4 class="ui header">Text</h4>
@@ -59,5 +57,4 @@ type        : 'UI Element'
         </div>
     </div>
 
-  </div>
 </div>

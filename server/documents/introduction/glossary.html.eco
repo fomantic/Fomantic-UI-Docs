@@ -168,6 +168,10 @@ type        : 'Introduction'
       <td>NPM is a package manager used for downloading Node JS packages.</td>
     </tr>
     <tr>
+      <td>yarn</td>
+      <td>yarn is an alternative package manager used for downloading Node JS packages.</td>
+    </tr>
+    <tr>
       <td>Node JS</td>
       <td>Node is a event driven programming language frequently used to run command line tools for front end development. <a href="https://www.nodejs.org" target="_blank">nodejs.org</a></td>
     </tr>
