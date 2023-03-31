@@ -257,7 +257,7 @@ standalone : false
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/lab.png">
           8000+ Commits
-          <div class="sub header"><a target="_blank" href="https://github.com/fomantic/Fomantic-UI/blob/develop/CONTRIBUTORS.md">60+ Contributors</a></div>
+          <div class="sub header"><a target="_blank" href="https://github.com/fomantic/Fomantic-UI/blob/master/CONTRIBUTORS.md">60+ Contributors</a></div>
         </h2>
         <p>
           Fomantic UI and Semantic UI are <b>free open source</b> projects already used in multiple <a href="https://www.quirky.com" target="_blank">large</a> scale <a href="https://www.newrepublic.com" target="_blank">production</a> environments.
