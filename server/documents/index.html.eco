@@ -238,7 +238,8 @@ standalone : false
       <div class="column">
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/paint.png">
-          3000+ Theming Variables
+          5000+ Theming Variables
+          <div class="sub header">600+ Switches to reduce CSS size</div>
         </h2>
         <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
         <a class="ui large button" href="/usage/theming.html">Theming Guide</a>
@@ -246,7 +247,8 @@ standalone : false
       <div class="column">
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/book.png">
-          50+ UI Components
+          60+ UI Components
+          <div class="sub header">250+ Variations</div>
         </h2>
         <p>Build your entire site with one UI stack. Share your UI between multiple projects.</p>
         <div class="ui primary view-ui large button">Browse UI</div>
@@ -255,6 +257,7 @@ standalone : false
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/lab.png">
           8000+ Commits
+          <div class="sub header"><a target="_blank" href="https://github.com/fomantic/Fomantic-UI/blob/master/CONTRIBUTORS.md">60+ Contributors</a></div>
         </h2>
         <p>
           Fomantic UI and Semantic UI are <b>free open source</b> projects already used in multiple <a href="https://www.quirky.com" target="_blank">large</a> scale <a href="https://www.newrepublic.com" target="_blank">production</a> environments.
