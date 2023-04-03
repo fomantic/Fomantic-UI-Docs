@@ -2156,6 +2156,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
         Some table variants like <a href="#column-width">column width</a> or <a href="#single-line">single line</a> do not work with a scrolling table.
         If you need such combinations use a <a href="#stuck">stuck table</a> instead.
     </div>
+    <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling</code> and a native resize drag handler will appear to the bottom right of the table body. This needs a <a href="https://caniuse.com/?search=resize">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
     <table class="ui unstackable celled scrolling table">
     <thead>
       <tr>
