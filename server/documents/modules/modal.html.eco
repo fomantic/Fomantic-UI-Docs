@@ -640,7 +640,7 @@ themes      : ['Default', 'Material']
         Scrolling Content
       </h4>
       <p>A modal can have a scrolling content</p>
-      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling content</code> and a native resize drag handler will appear to the bottom right of the content. This needs a <a href="https://caniuse.com/?search=resize">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
+      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling content</code> and a native resize drag handler will appear to the bottom right of the content. This needs a <a href="https://caniuse.com/?search=resize" target="_blank">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
       <div class="code" data-type="html" data-variation="scrolling">
         <div class="ui modal">
           <div class="header">Header</div>
@@ -786,7 +786,7 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Internally Scrolling Content</h4>
       <p>You may prefer to have the content of your modal scroll itself, you can do this by using the <code>scrolling content</code> variation.</p>
-      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling content</code> and a native resize drag handler will appear to the bottom right of the content. This needs a <a href="https://caniuse.com/?search=resize">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
+      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling content</code> and a native resize drag handler will appear to the bottom right of the content. This needs a <a href="https://caniuse.com/?search=resize" target="_blank">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
       <div class="code" data-demo="true">
       $('.longer.modal')
         .modal('show')
