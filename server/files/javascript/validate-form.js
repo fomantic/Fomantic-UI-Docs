@@ -11,6 +11,7 @@ semantic.validateForm.ready = function() {
     $autoForm     = $('.auto.example .ui.form'),
     $colorForm    = $('.color.example .ui.form'),
     $promptForm   = $('.prompt.example .ui.form'),
+    $nativeForm   = $('.native.example .ui.form'),
     $ruleForm     = $('.custom.rule.example .ui.form'),
     $dropdownForm = $('.dropdown.example .ui.form'),
     $optionalForm = $('.optional.example .ui.form'),
@@ -235,6 +236,9 @@ semantic.validateForm.ready = function() {
     }
   });
 
+  $nativeForm.form({
+    inline: true
+  });
 
   $promptForm
     .form({
