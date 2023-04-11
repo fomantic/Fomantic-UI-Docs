@@ -304,6 +304,7 @@ type        : 'UI Module'
 	  <div class="ui ignored info message">
         <p>The search scroll height depends on viewport size. The search scroll height is calculated using <strong>search item height * number of items</strong> to be shown for applicable media query break point.</p>
       </div>
+      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling</code> and a native resize drag handler will appear to the bottom right of the results. This needs a <a href="https://caniuse.com/?search=resize" target="_blank">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
       <div class="ui scrolling local search">
         <div class="ui icon input">
           <input class="prompt" type="text" placeholder="Search countries...">
