@@ -29,7 +29,7 @@ type        : 'UI Behavior'
       <div class="ui ignored info message">
         A validation object includes a list of form elements, and rules to validate each field against. Fields are matched by either the <code>id</code>, <code>name</code>, or <code>data-validate</code> property (in that order) matching the identifier specified in the settings object. As of 2.8.8, validation objects can mix shorthand or longhand notation.
       </div>
-      <div class="ignore code" data-title="Shorthand Validation">
+      <div class="ignore code" data-title="Shorthand Validation" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -43,8 +43,8 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="ui horizontal divider">or</div>
-      <div class="ignore code" data-title="Full Validation Settings">
+      <div class="ui horizontal divider ignored">or</div>
+      <div class="ignore code" data-title="Full Validation Settings" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -225,7 +225,7 @@ type        : 'UI Behavior'
             field2: {
               rules: [
                 {
-                  type   : 'exactly[dog]',
+                  type   : 'isExactly[dog]',
                   prompt : '{name} is set to "{value}" that is totally wrong. It should be {ruleValue}'
                 }
               ]
@@ -233,7 +233,7 @@ type        : 'UI Behavior'
             field3: {
               rules: [
                 {
-                  type   : 'exactly[cat]',
+                  type   : 'isExactly[cat]',
                   prompt : function(value) {
                     if(value == 'dog') {
                       return 'I told you to put cat, not dog!';
@@ -2131,6 +2131,11 @@ type        : 'UI Behavior'
             <td>errorFocus</td>
             <td>true</td>
             <td data-since="2.8.8">Whether, on an invalid form validation, it should automatically focus either the first error field (<code>true</code>) or a specific dom node (Use a unique selector string such as <code>.ui.error.message</code> or <code>#myelement</code>) or nothing (<code>false</code>)</td>
+          </tr>
+          <tr>
+            <td>errorLimit</td>
+            <td>0</td>
+            <td data-since="2.9.3">Number of max shown errors per field if a field got multiple rules (0=unlimited)</td>
           </tr>
         </tbody>
       </table>

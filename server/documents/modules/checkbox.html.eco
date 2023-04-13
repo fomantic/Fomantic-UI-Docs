@@ -571,7 +571,7 @@ themes      : ['Default', 'Colored']
           </div>
         </div>
       </div>
-      <div class="evaluated code" data-title="Master Checkboxes">
+      <div class="evaluated code" data-title="Master Checkboxes" data-type="javascript">
         $('.list .master.checkbox')
           .checkbox({
             // check all children
@@ -591,7 +591,7 @@ themes      : ['Default', 'Colored']
           })
         ;
       </div>
-      <div class="evaluated code" data-title="Child Checkboxes">
+      <div class="evaluated code" data-title="Child Checkboxes" data-type="javascript">
         $('.list .child.checkbox')
           .checkbox({
             // Fire on load to set parent value

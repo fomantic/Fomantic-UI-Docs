@@ -18,7 +18,7 @@ type        : 'Introduction'
     <h4>Importing Gulp Tasks</h4>
     <p>You don't have to use <a href="/introduction/build-tools.html">our gulp pipeline</a>, just import the task into your own <code>gulpfile</code></p>
     <p>You can <a href="https://github.com/Semantic-Org/Example-External-Gulpfile" target="_blank">fork this example project</a> to see an example of how to import Fomantic UI tasks into your project.</p>
-    <div class="ignored code" data-type="JS" data-title="Custom gulpfile.js">
+    <div class="ignored code" data-type="javascript" data-title="Custom gulpfile.js">
     var
       gulp  = require('gulp'),
       watch = require('./semantic/tasks/watch'),
@@ -35,7 +35,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Auto-Install</h4>
     <p>Running <code>npx gulp install</code> normally will launch an interactive installer, to allow this installer to run without user interaction and use all settings from your semantic.json instead, include a special flag <code>autoInstall: true</code>in your <code>semantic.json</code> file.</p>
-    <div class="ignored code" data-type="JS" data-title="semantic.json">
+    <div class="ignored code" data-type="json" data-title="semantic.json">
      {
       // install will now automatically build your project files without user interaction
       "autoInstall": true,
@@ -67,7 +67,7 @@ type        : 'Introduction'
       <h4>Right-to-left (RTL) Languages</h4>
       <p>Including the flag <code>rtl:true</code> will build Fomantic UI using <a href="https://github.com/MohammadYounes/rtlcss" target="_blank">RTLCSS</a>.</p>
       <p>To build both LTR and RTL versions use the flag <code>rtl: 'both'</code></p>
-      <div class="ignored code" data-type="JS" data-title="semantic.json">
+      <div class="ignored code" data-type="json" data-title="semantic.json">
        {
         // builds both LTR and RTL version
         "rtl": "both",
@@ -150,7 +150,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Importing Semantic</h4>
     <p><code>semantic.less</code> is available in all releases as an entry point for importing multiple components from other LESS files.</p>
-    <div class="ignored code"  data-type="LESS" data-title="Importing LESS">
+    <div class="ignored code"  data-type="less" data-title="Importing LESS">
       /* Import all components */
       @import 'src/semantic';
     </div>
@@ -159,7 +159,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Importing Components</h4>
     <p>If you need to import individual components, you should scope each import to avoid inheritance issues.</p>
-    <div class="ignored code" data-type="LESS" data-title="Importing LESS Components">
+    <div class="ignored code" data-type="less" data-title="Importing LESS Components">
       /* Import specific components with scope */
       & { @import 'src/definitions/elements/button'; }
       & { @import 'src/definitions/elements/list'; }

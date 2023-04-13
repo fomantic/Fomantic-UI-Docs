@@ -189,7 +189,7 @@ type        : 'Usage'
     <p>The default <code>theme.config</code> will have all component values set to default. To choose a theme, simply change a component to match the theme name.</p>
 
     <p>For example: </p>
-    <div class="code" data-title="src/theme.config">
+    <div class="code" data-title="src/theme.config" data-type="less">
     /*******************************
             Theme Selection
     *******************************/

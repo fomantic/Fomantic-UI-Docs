@@ -992,7 +992,10 @@ semantic.ready = function() {
           html       : 'HTML',
           javascript : 'Javascript',
           css        : 'CSS',
+          less       : 'LESS',
+          json       : 'JSON',
           text       : 'Command Line',
+          terminal   : 'Command Line',
           sh         : 'Command Line'
         },
         padding    = 20,
