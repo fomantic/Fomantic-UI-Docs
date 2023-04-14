@@ -25,7 +25,7 @@ type        : 'UI Module'
       <h4 class="ui header">Standard</h4>
       <p>A search can display a set of results</p>
       <div class="ui search">
-        <input class="prompt" type="text" placeholder="Common passwords...">
+        <input class="prompt" type="text" placeholder="Github Repositories...">
         <div class="results"></div>
       </div>
     </div>
@@ -36,7 +36,7 @@ type        : 'UI Module'
       </div>
       <div class="ui search">
         <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="Common passwords...">
+          <input class="prompt" type="text" placeholder="Github Repositories...">
           <i class="search icon"></i>
         </div>
         <div class="results"></div>

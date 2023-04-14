@@ -297,7 +297,14 @@ semantic.search.ready = function() {
   ;
 
   $standard
-    .search()
+    .search({
+      fields: {
+        results : 'items',
+        title   : 'name',
+        url     : false,
+        description: false
+      }
+    })
   ;
 
   $category
