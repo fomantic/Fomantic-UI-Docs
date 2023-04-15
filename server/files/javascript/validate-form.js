@@ -105,7 +105,7 @@ semantic.validateForm.ready = function() {
           prompt : 'Please enter a username'
         },
         {
-          type   : 'length[5]',
+          type   : 'minLength[5]',
           prompt : 'Your username must be at least 5 characters'
         }
       ]
@@ -127,7 +127,7 @@ semantic.validateForm.ready = function() {
           prompt : 'Please enter a password'
         },
         {
-          type   : 'length[6]',
+          type   : 'minLength[6]',
           prompt : 'Your password must be at least 6 characters'
         }
       ]

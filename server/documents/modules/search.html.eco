@@ -459,7 +459,7 @@ type        : 'UI Module'
     <div class="ui info message">You may also consider adding a top level property like <code>success: true</code> and using API's <code>successTest</code> parameter to determine whether a server response is actually successful, even if it returns the correct HTTP code</div>
 
     <h4 class="ui header">Standard</h4>
-    <div class="code" data-title="Server JSON Response">
+    <div class="code" data-title="Server JSON Response" data-type="json">
       {
         "results": [
           {
@@ -484,7 +484,7 @@ type        : 'UI Module'
 
 
     <h4 class="ui header">Category</h4>
-    <div class="code" data-title="Server JSON Response">
+    <div class="code" data-title="Server JSON Response" data-type="json">
       {
         "results": {
           "category1": {

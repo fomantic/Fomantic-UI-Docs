@@ -317,7 +317,7 @@ type        : 'UI Module'
 
       <h2 class="ui dividing header">Specifying a direction</h2>
       <p>To force an animation direction, add either <code>in</code> or <code>out</code> to the animation name.</p>
-      <div class="code" data-demo="true" data-title="Specifying a direction">
+      <div class="code" data-demo="true" data-title="Specifying a direction" data-type="javascript">
       $('.long.leaf.image')
         // if a direction if specified it will be obeyed
         .transition('horizontal flip in')
@@ -329,7 +329,7 @@ type        : 'UI Module'
 
       <p>If an animation direction is not specified it will automatically be determined based on the elements current visibility. For example, if the element is visible the animation "fade out" will be called, if the animation is not visible "fade in".</p>
 
-      <div class="code" data-demo="true" data-title="Automatically choosing direction">
+      <div class="code" data-demo="true" data-title="Automatically choosing direction" data-type="javascript">
       $('.long.leaf.image')
         // fade up out is used if available
         .transition('fade up')
@@ -342,7 +342,7 @@ type        : 'UI Module'
 
       <h4 class="ui header">Animation Intervals</h4>
       <p>When animating several different items in a group you may want to use an interval so that each item appears consecutively</p>
-      <div class="code" data-demo="true" data-title="Animation Intervals">
+      <div class="code" data-demo="true" data-title="Animation Intervals" data-type="javascript">
       $('.jiggle.images .image')
         .transition({
           animation : 'jiggle',
@@ -378,7 +378,7 @@ type        : 'UI Module'
 
       <h4 class="ui header">Forcing Order</h4>
       <p>If you need to manually force reverse animations regardless of the animation direction, you can use <code>reverse: true</code>.</p>
-      <div class="code" data-demo="true" data-title="Reversing Animation Order">
+      <div class="code" data-demo="true" data-title="Reversing Animation Order" data-type="javascript">
       $('.reverse.images .image')
         .transition({
           animation : 'pulse',
@@ -395,7 +395,7 @@ type        : 'UI Module'
 
       <h2 class="ui dividing header">Static Animations</h2>
       <p>Animations that do not have an in or out animation defined, will maintain their current visibility after running</p>
-      <div class="code" data-demo="true" data-title="Static transitions">
+      <div class="code" data-demo="true" data-title="Static transitions" data-type="javascript">
       $('.long.leaf.image')
         .transition('pulse')
       ;
@@ -403,13 +403,13 @@ type        : 'UI Module'
 
       <h2 class="ui dividing header">Looping</h2>
       <p>Animation loops can be controlled by setting looping. Callbacks will occur after each loop cycle</p>
-      <div class="code" data-demo="true" data-title="Starting looping">
+      <div class="code" data-demo="true" data-title="Starting looping" data-type="javascript">
       $('.long.leaf.image')
         .transition('set looping')
         .transition('bounce', '2000ms')
       ;
       </div>
-      <div class="code" data-demo="true" data-title="Ending looping">
+      <div class="code" data-demo="true" data-title="Ending looping" data-type="javascript">
       $('.long.leaf.image')
         .transition('remove looping')
       ;
@@ -439,7 +439,7 @@ type        : 'UI Module'
 
       <p>If a transition is called without any arguments all default settings will be used.</p>
 
-      <div class="code" data-demo="true" data-title="Initializing a transition">
+      <div class="code" data-demo="true" data-title="Initializing a transition" data-type="javascript">
       $('.green.leaf')
         // default everything
         .transition()
@@ -448,7 +448,7 @@ type        : 'UI Module'
 
       <h3 class="ui header">Passing in settings</h3>
       <p>Transitions use similar argument shorthand as <a href="https://api.jquery.com/animate/">animate</a>. You can specify callback functions, animation duration, and other settings using the same arguments. Durations can be specified as strings with CSS shorthand, or with numbers.</p>
-      <div class="code" data-demo="true" data-title="Settings objects">
+      <div class="code" data-demo="true" data-title="Settings objects" data-type="javascript">
       $('.green.leaf')
         .transition({
           animation  : 'scale',
@@ -463,7 +463,7 @@ type        : 'UI Module'
       <h3 class="ui header">Display Type</h3>
 
       <p>Animations can be used on any display type not just block level elements. For example you can animate a button while preserving its <code>inline-block</code> status.</p>
-      <div class="code" data-demo="true" data-title="Queueing animations">
+      <div class="code" data-demo="true" data-title="Queueing animations" data-type="javascript">
       $('.test.button')
         .transition('horizontal flip', '500ms')
       ;
@@ -476,7 +476,7 @@ type        : 'UI Module'
       <h3 class="ui header">Queuing animations</h3>
 
       <p>Animations called in sequence will be queued. Any queued animation will automatically determine the transition direction if none is specified.</p>
-      <div class="code" data-demo="true" data-title="Queueing animations">
+      <div class="code" data-demo="true" data-title="Queueing animations" data-type="javascript">
       $('.green.leaf')
         .transition('horizontal flip', '500ms')
         .transition('horizontal flip', 500, function() {
@@ -490,7 +490,7 @@ type        : 'UI Module'
 
       <p>Animations can be stopped using three methods. <code>stop</code> will end the current animation, <code>stop all</code> will end animation and remove queued animations, and <code>clear queue</code> will continue the current playback but remove queued animations.</p>
 
-      <div class="code" data-demo="true" data-title="Stopping Animations">
+      <div class="code" data-demo="true" data-title="Stopping Animations" data-type="javascript">
       // only first horizontal flip cancelled
       $('.green.leaf')
         .transition('horizontal flip')
@@ -500,7 +500,7 @@ type        : 'UI Module'
         .transition('vertical flip')
       ;
       </div>
-      <div class="code" data-demo="true" data-title="Stopping All Animations">
+      <div class="code" data-demo="true" data-title="Stopping All Animations" data-type="javascript">
       // all horizontal flip cancelled
       $('.green.leaf')
         .transition('horizontal flip')
@@ -510,7 +510,7 @@ type        : 'UI Module'
         .transition('vertical flip')
       ;
       </div>
-      <div class="code" data-demo="true" data-title="Clearing Animation Queue">
+      <div class="code" data-demo="true" data-title="Clearing Animation Queue" data-type="javascript">
       // all queued animations cancelled
       $('.green.leaf')
         .transition('horizontal flip')
@@ -526,12 +526,12 @@ type        : 'UI Module'
 
       <div class="ui ignored info message">Transition only use inline styles when an element's final display state is not <code>block</code>, or when an element cannot be hidden without an inline override.</div>
 
-      <div class="code" data-demo="true" data-title="Toggling State">
+      <div class="code" data-demo="true" data-title="Toggling State" data-type="javascript">
       $('.demo.table tr:last-child')
         .transition('toggle')
       ;
       </div>
-      <div class="code" data-demo="true" data-title="Hiding">
+      <div class="code" data-demo="true" data-title="Hiding" data-type="javascript">
       $('.demo.table td:last-child')
         .transition('hide')
       ;
