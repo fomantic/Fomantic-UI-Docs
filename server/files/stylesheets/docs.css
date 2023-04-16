@@ -1625,12 +1625,14 @@ code:hover .tag .title {
 }
 
 /* Attribute */
+code .attr,
 code .attribute,
 code .variable,
 code .lisp .body {
   color: #8D8A8A;
   transition: color 0.3s;
 }
+code:hover .attr,
 code:hover .attribute,
 code:hover .variable,
 code:hover .lisp .body {
@@ -1646,9 +1648,11 @@ code .scss .preprocessor {
 }
 
 /* CSS Attribute */
+code .rule .attr,
 code .rule .attribute {
   color: #892A6F;
 }
+code:hover .rule .attr,
 code:hover .rule .attribute {
   color: #892A6F;
 }
@@ -1678,12 +1682,14 @@ code.less:hover .ruby .constant {
   color: #005FAA;
 }
 /* LESS Variable */
+code.less .attr,
 code.less .attribute,
 code.less .variable,
 code.less .lisp .body {
   color: #333333;
   transition: color 0.3s;
 }
+code.less:hover .attr,
 code.less:hover .attribute,
 code.less:hover .variable,
 code.less:hover .lisp .body {

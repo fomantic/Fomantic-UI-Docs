@@ -30,7 +30,7 @@ themes      : ['Default']
     <div class="no example">
         <h4 class="ui header">Minimal</h4>
         <p>A minimal toast will just display a message.</p>
-        <div class="code" data-demo="true">
+        <div class="code" data-demo="true" data-type="javascript">
         $.toast({
           message: 'I am a toast, nice to meet you !'
         })
@@ -41,7 +41,7 @@ themes      : ['Default']
     <div class="no example">
         <h4 class="ui header">Titled</h4>
         <p>You can add a title to your toast.</p>
-        <div class="code" data-demo="true">
+        <div class="code" data-demo="true" data-type="javascript">
         $.toast({
           title: 'Better ?',
           message: 'Hey look, I have a title !'
@@ -53,7 +53,7 @@ themes      : ['Default']
     <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Progress Bar</h4>
         <p>You can attach a progress bar to your toast.</p>
-        <div class="code" data-demo="true">
+        <div class="code" data-demo="true" data-type="javascript">
         $.toast({
           title: 'LOOK',
           message: 'See, how long i will last',
@@ -62,7 +62,7 @@ themes      : ['Default']
         ;
         </div>
         <p>The progress bar can have its own individual color</p>
-        <div class="code" data-demo="true">
+        <div class="code" data-demo="true" data-type="javascript">
         $.toast({
           title: 'LOOK',
           message: 'See, how long i will last',
@@ -78,14 +78,14 @@ themes      : ['Default']
     <div class="no example">
         <h4 class="ui header">Toast Type</h4>
         <p>A toast can be used to display different types of informations.</p>
-        <div class="code" data-demo="true">
+        <div class="code" data-demo="true" data-type="javascript">
         $.toast({
           class: 'success',
           message: `You're using the good framework !`
         })
         ;
         </div>
-        <div class="code" data-demo="true">
+        <div class="code" data-demo="true" data-type="javascript">
         $.toast({
           class: 'error',
           message: `An error occurred !`
@@ -731,7 +731,7 @@ themes      : ['Default']
         <button class="ui button" id="jsaccess_toast_close">
             Close toast
         </button>
-        <div class="code">
+        <div class="code" data-type="javascript">
             var myToast = $.toast();
             var remainingTime = myToast.toast('get remainingTime');
         </div>
@@ -823,7 +823,7 @@ themes      : ['Default']
         <h2 class="ui dividing header">Behaviors</h2>
 
         <p>All the following behaviors can be called using the syntax:<p>
-        <div class="code">
+        <div class="code" data-type="javascript">
             $('.ui.toast').toast('behavior', argumentOne, argumentTwo...);
         </div>
 
@@ -990,7 +990,7 @@ themes      : ['Default']
         </tr>       <tr>
           <td>transition</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
       transition: {
         showMethod   : 'scale',
         showDuration : 500,
@@ -1084,7 +1084,7 @@ themes      : ['Default']
             <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>
                 <div class="ui info message">Actions will close the toast by default. Return false from the click handler to prevent that.</div>
                 <div class="ui warning message">If you use any of the approve (approve, ok, positive) or deny (deny, cancel, negative) classnames for the <code>class</code> property, a <code>click</code> handler will be ignored. In such cases use the <code>onApprove</code> and <code>onDeny</code> callbacks instead</div>
-                <div class="code">
+                <div class="code" data-type="javascript">
                 actions: [{
                     text    : 'Wait',
                     class   : 'red',
@@ -1116,7 +1116,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     selector    : {
       container    : '.ui.toast-container',
       box          : '.toast-box',
@@ -1137,7 +1137,7 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     className   : {
       container    : 'ui toast-container',
       absolute     : 'absolute',
@@ -1176,7 +1176,7 @@ themes      : ['Default']
         <tr>
           <td>icons</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     icons   : {
       info         : 'info',
       success      : 'checkmark',
@@ -1190,7 +1190,7 @@ themes      : ['Default']
         <tr>
           <td>text</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     text   : {
       close        : 'Close'
     }
@@ -1243,7 +1243,7 @@ themes      : ['Default']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error: {
               method       : 'The method you called is not defined.',
               noElement    : 'This module requires ui transitions.',

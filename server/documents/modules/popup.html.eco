@@ -457,7 +457,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Initializing A Popup</h4>
       <p>A popup is initialized on an activating element</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.activating.element')
         .popup()
       ;
@@ -524,7 +524,7 @@ themes      : ['Default']
     </div>
     <div class="no example">
       <h4 class="ui header">Specifying Content In Javascript</h4>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.ui.popup')
         .popup({
           title   : 'Popup Title',
@@ -537,7 +537,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .popup('behavior name', argumentOne, argumentTwo)
     ;
@@ -645,7 +645,7 @@ themes      : ['Default']
 
       <p>Tweaking settings like the delay for show, and hide, and making the menu hoverable will help it function   more like a dropdown menu</p>
 
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.example .menu .browse')
         .popup({
           inline     : true,
@@ -716,7 +716,7 @@ themes      : ['Default']
       <div class="ui warning ignored message">
         Using an <code>inline</code> popup may require specifying a <code>min-width</code> on your popup, if your popup content will appear outside the boundaries of its parent element.
       </div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.example .custom.button')
         .popup({
           popup : $('.custom.popup'),
@@ -736,7 +736,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Specifying a trigger event</h4>
       <p>A popup trigger event can be specified</p>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
     $('.example .teal.button')
       .popup({
         on: 'click'
@@ -758,7 +758,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Target Element</h4>
       <p>A popup can specify a different target element than itself to show a popup</p>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.test.button')
         .popup({
           position : 'right center',
@@ -787,7 +787,7 @@ themes      : ['Default']
         color: #FF0000;
       }
       </div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.inline.icon')
         .popup({
           inline: true
@@ -841,7 +841,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="ui clearing divider"></div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
     $('.selection')
       .dropdown({
         onChange: function(value) {
@@ -949,7 +949,7 @@ themes      : ['Default']
         <tr>
           <td>delay</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     delay: {
       show: 50,
       hide: 70
@@ -965,7 +965,7 @@ themes      : ['Default']
           </td>
           <td data-since="2.8.8">Named transition to use when animating menu in and out.<br>
             <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration
-                <div class="code">
+                <div class="code" data-type="javascript">
                 {
                     showMethod   : 'fade',
                     showDuration : 200,
@@ -1143,7 +1143,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     selector    : {
       popup    : '.ui.popup'
     }
@@ -1154,7 +1154,7 @@ themes      : ['Default']
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     metadata: {
       activator : 'activator',
       content   : 'content',
@@ -1171,7 +1171,7 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     className   : {
       active      : 'active',
       basic       : 'basic',
@@ -1234,7 +1234,7 @@ themes      : ['Default']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error: {
               invalidPosition : 'The position you specified is not a valid position',
               cannotPlace     : 'Popup does not fit within the boundaries of the viewport',

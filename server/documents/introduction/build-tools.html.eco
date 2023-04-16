@@ -347,7 +347,7 @@ type        : 'Introduction'
     <p>Each color consists of a predefined set of properties used in all components. You can define whatever color name you want.</p>
     <div class="ui ignored info message">
         If you only want to reduce the used colors from the default palette, you may only adjust the related colors-list variables inside <a href="#variationvariables"><code>variation.variables</code></a> instead of changing the colors.less file.
-        <div class="code">
+        <div class="code" data-type="less">
         // limit all components to yellow, purple and green
         @variationAllColors: yellow, purple, green;
         // purple buttons, red labels, green messages and no colors for all other components
@@ -359,7 +359,7 @@ type        : 'Introduction'
     </div>
     <div class="ui ignored warning message">
         If you change the whole available colors like in the example below, make sure you also adjust the related colors-list variables inside <a href="#variationvariables"><code>variation.variables</code></a> to avoid a build error.
-        <div class="code">
+        <div class="code" data-type="less">
             @variationAllComponents: batman, spiderman;
         </div>
     </div>
@@ -417,7 +417,7 @@ type        : 'Introduction'
     @formStates: {
       @excited: {
         color: #880000;
-        background: ffcccc;
+        background: #ffcccc;
         borderColor: @red;
         borderRadius: 10px;
         boxShadow: @inputErrorBoxShadow;

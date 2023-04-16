@@ -648,7 +648,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .progress('behavior name', argumentOne, argumentTwo)
     ;
@@ -920,7 +920,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>random</td>
           <td>
-          <div class="code">
+          <div class="code" data-type="javascript">
             className : {
               active  : 'active',
               error   : 'error',
@@ -1019,7 +1019,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>text</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             text : {
               active  : false,
               error   : false,
@@ -1042,7 +1042,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>regExp</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             regExp: {
               variable: /\{\$*[A-z0-9]+\}/g
             }
@@ -1053,7 +1053,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             selector : {
               bar      : '> .bar',
               label    : '> .label',
@@ -1066,7 +1066,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata: {
               percent : 'percent',
               total   : 'total',
@@ -1079,7 +1079,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className : {
               active  : 'active',
               error   : 'error',
@@ -1137,7 +1137,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error    : {
               method     : 'The method you called is not defined.',
               nonNumeric : 'Progress value is non numeric',

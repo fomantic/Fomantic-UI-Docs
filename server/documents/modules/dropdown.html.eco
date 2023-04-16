@@ -320,7 +320,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <select class="ui fluid multiple search selection dropdown">
         <%- @partial('examples/single/state-options') %>
       </select>
-      <div class="code">
+      <div class="code" data-type="javascript">
           $('.ui.search.selection.dropdown')
             .dropdown({
               keepSearchTerm: true
@@ -3153,7 +3153,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .dropdown('behavior name', argumentOne, argumentTwo)
     ;
@@ -3539,7 +3539,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>fields</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             fields: {
               remoteValues         : 'results',    // grouping for api results
               values               : 'values',     // grouping for all dropdown values
@@ -3634,7 +3634,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>label</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             label: {
               transition : 'scale',
               duration   : 200,
@@ -3743,7 +3743,7 @@ themes      : ['Default', 'GitHub', 'Material']
           </td>
           <td data-since="2.8.8">Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
                 <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration
-                    <div class="code">
+                    <div class="code" data-type="javascript">
                     {
                         showMethod   : 'fade',
                         showDuration : 200,
@@ -3769,7 +3769,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>keys</td>
           <td>
-          <div class="code">
+          <div class="code" data-type="javascript">
           keys : {
             backspace  : 8,
             deleteKey  : 46,
@@ -3791,7 +3791,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>delay</td>
           <td>
-          <div class="code">
+          <div class="code" data-type="javascript">
           delay : {
             hide   : 300,
             show   : 200,
@@ -3906,7 +3906,7 @@ themes      : ['Default', 'GitHub', 'Material']
               You can specify site wide messages by modifying <code>$.fn.dropdown.settings.message</code>
               that will apply on any dropdown if it appears in the page.
             </p>
-            <div class="code">
+            <div class="code" data-type="javascript">
             message: {
               addResult     : 'Add <b>{term}</b>',
               count         : '{count} selected',
@@ -3919,7 +3919,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector : {
               addition     : '.addition',
               divider      : '.divider, .header',
@@ -3945,7 +3945,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>regExp</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             regExp : {
               escape   : /[-[\]{}()*+?.,\\^$|#\s]/g,
             }
@@ -3955,7 +3955,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>metadata</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata : {
               defaultText     : 'defaultText',
               defaultValue    : 'defaultValue',
@@ -3969,7 +3969,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>className</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             className : {
               active              : 'active',
               addition            : 'addition',
@@ -4038,7 +4038,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>error</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error   : {
               action          : 'You called a dropdown action that was not defined',
               alreadySetup    : 'Once a select has been initialized behaviors must be called on the created ui dropdown',
