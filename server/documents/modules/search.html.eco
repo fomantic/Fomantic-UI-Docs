@@ -554,7 +554,7 @@ type        : 'UI Module'
     <h2 class="ui dividing header">Behaviors</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .search('behavior name', argumentOne, argumentTwo)
     ;
@@ -663,7 +663,7 @@ type        : 'UI Module'
     <div class="mapping example">
       <h4 class="ui header">Using Different Response Fields</h4>
       <p>Search expects a very specific API response, however you can easily modify the mapping of server response to displayed field using the <code>fields</code> parameter.
-      <div class="ui ignored code">
+      <div class="ui ignored code" data-type="javascript">
       $('.ui.search')
         .search({
           apiSettings: {
@@ -768,7 +768,7 @@ type        : 'UI Module'
         <tr>
           <td>apiSettings</td>
           <td>
-          <div class="code">
+          <div class="code" data-type="javascript">
           {
             action: 'search'
           }
@@ -847,7 +847,7 @@ type        : 'UI Module'
         <tr>
           <td>fields</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             fields: {
               categories      : 'results',     // array of categories (category view)
               categoryName    : 'name',        // name of category (category view)
@@ -981,7 +981,7 @@ type        : 'UI Module'
         <tr>
           <td>templates</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             $.fn.search.settings.templates : {
               escape: function(string) {
                 // returns escaped string for injected results
@@ -1028,7 +1028,7 @@ type        : 'UI Module'
         <tr>
           <td>regExp</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             regExp: {
               escape     : /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,
               beginsWith : '(?:\s|^)'
@@ -1040,7 +1040,7 @@ type        : 'UI Module'
         <tr>
           <td>selector</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector : {
               prompt       : '.prompt',
               searchButton : '.search.button',
@@ -1057,7 +1057,7 @@ type        : 'UI Module'
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata: {
               cache   : 'cache',
               results : 'results',
@@ -1070,7 +1070,7 @@ type        : 'UI Module'
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className: {
               animating : 'animating',
               active    : 'active',
@@ -1109,7 +1109,7 @@ type        : 'UI Module'
         <tr>
           <td>error</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error : {
               source          : 'Cannot search. No source used, and Semantic API module was not included',
               noResultsHeader : 'No Results',

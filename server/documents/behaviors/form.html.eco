@@ -164,7 +164,7 @@ type        : 'UI Behavior'
       <h4 class="ui header">Passing Parameters to Rules</h4>
       <p>Typically rules that include a parameter are written <code>minLength[2]</code> with the value being passed in as brackets.</p>
       <p>If passing in properties as a string is not ideal, or if you are pulling values from another javascript variable, it might make sense to consider using <code>value</code> to pass in the rule value.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
         $('.ui.form').form({
           fields: {
             color: {
@@ -212,7 +212,7 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -273,7 +273,7 @@ type        : 'UI Behavior'
       <h4 class="ui header">Matching Fields</h4>
       <p>By default the property name used in the validation object will match against the <code>id</code>, <code>name</code>, or <code>data-validate</code> property of each input to find the corresponding field to match validation rules against.</p>
       <p>If you need to specify a different identifier you can use the <code>identifier</code> property on each validation rule</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -327,7 +327,7 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -348,7 +348,7 @@ type        : 'UI Behavior'
     <div class="native example" data-since="2.9.3">
       <h4 class="ui header">Native Browser Validation</h4>
       <p>You can also make use of the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation">native browser built-in form validation</a> without the need to specify rules. You can still provide rules in addition, but you could also completely rely on native validation.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
             inline: true
@@ -576,7 +576,7 @@ type        : 'UI Behavior'
     <div class="custom rule example">
       <h4 class="ui header">Adding Custom Rules</h4>
       <p>You can extend form validation to include your own rules. Keep in mind these will need to be executed synchronously.</p>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
       // some arbitrary business-logic
       window.user = {
         name       : 'Simon',
@@ -697,7 +697,7 @@ type        : 'UI Behavior'
       <p>
         Form includes behaviors for reading from and writing to form fields.
       </p>
-      <div class="code" data-demo="true">
+      <div class="code" data-demo="true" data-type="javascript">
       $('.writing.example form')
         // set one value
         .form('set value', 'name', 'Jack')
@@ -786,7 +786,7 @@ type        : 'UI Behavior'
       <div class="ui ignored info message">
         Although <code>get values</code> allows you to use any matching identifier, returned values will always use the corresponding <code>name</code> attribute of the element.
       </div>
-      <div class="code" data-demo="true">
+      <div class="code" data-demo="true" data-type="javascript">
       var
         $form = $('.get.example form'),
         // get one value
@@ -895,7 +895,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         $('.field.example form')
           .form({
             on: 'blur',
@@ -970,7 +970,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         $('.type.example form')
           .form({
             on: 'blur',
@@ -1111,7 +1111,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         $('.payment.example form')
           .form({
             on: 'blur',
@@ -1166,7 +1166,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         $('.match.example form')
           .form({
             on: 'blur',
@@ -1214,7 +1214,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         $('.length.example form')
           .form({
             on: 'blur',
@@ -1300,7 +1300,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         $('.content.example form')
           .form({
             on: 'blur',
@@ -1425,7 +1425,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         $('.multi.example form')
           .form({
             on: 'blur',
@@ -1473,7 +1473,7 @@ type        : 'UI Behavior'
         <div class="ui header">Adding Multiple Rules and Complex Rules</div>
         You can specify shorthand or full rule objects when adding rules. You can also specify fields as an array to modify multiple fields.</code>.
       </div>
-      <div class="code">
+      <div class="code" data-type="javascript">
       // lets only validate username to start
       $('.add.example .ui.form')
         .form({
@@ -1481,7 +1481,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       // lets toggle some validation based on button
       $('.add.example .ui.positive.button')
         .on('click', function() {
@@ -1501,7 +1501,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.add.example .ui.negative.button')
         .on('click', function() {
           $('.add.example .ui.form')
@@ -1547,7 +1547,7 @@ type        : 'UI Behavior'
     <div class="dropdown example">
       <h4 class="ui header">Validating Dropdowns</h4>
       <p><a href="/modules/dropdown.html">Dropdowns</a> can also be validated like other form fields. Simply match the validation rule to the <code>input</code> or <code>select</code> associated with the dropdown</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.dropdown')
         .dropdown()
       ;
@@ -1585,7 +1585,7 @@ type        : 'UI Behavior'
     <div class="data example">
       <h4 class="ui header">Using Server Name Attributes</h4>
       <p>Sometimes an integration requires you to use a specific value for <code>name</code>, or <code>id</code>. In these cases, you can match a form field using the <code>data-validate</code> property.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form(
           fields: {
@@ -1608,7 +1608,7 @@ type        : 'UI Behavior'
         Dependent Fields
       </h4>
       <p>You can specify validation fields to only be used when other fields are present. Simply add <code>depends: 'identifier'</code> with the ID of the field that must be non-blank for this rule to evaluate.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -1646,7 +1646,7 @@ type        : 'UI Behavior'
     <div class="optional example">
       <h4 class="ui header">Optional Fields</h4>
       <p>Adding the parameter <code>optional: true</code> will only add your validation rules when the field is <b>not empty</b>.
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -1694,7 +1694,7 @@ type        : 'UI Behavior'
     <div class="optional example">
       <h4 class="ui header">Setting Site Defaults</h4>
       <p>You can specify site wide validation settings by modifying <code>$.fn.form.settings.defaults</code> that will apply on any form validation if the field appears in the form</b>.
-      <div class="code">
+      <div class="code" data-type="javascript">
       $.fn.form.settings.defaults = {
         email: {
           identifier : 'email',
@@ -1812,7 +1812,7 @@ type        : 'UI Behavior'
     <div class="dog example">
       <h4 class="ui header">Creating Custom Validation</h4>
       <p>You can use multiple arbitrary rules to validate a form</p>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -1854,17 +1854,17 @@ type        : 'UI Behavior'
     <div class="calendar example">
       <h4 class="ui header">Handling dates from calendars</h4>
       <p>Calendar fields are automatically validated, but you might want to grab the value as a Date object, or as its input, or maybe format it to exactly fit your needs.</p>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
         $('.ui.form').form({
           dateHandling: 'date'
         });
       </div>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
         $('.ui.form').form({
           dateHandling: 'input'
         });
       </div>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
         $('.ui.form').form({
           dateHandling: 'formatter'
         });
@@ -2184,7 +2184,7 @@ type        : 'UI Behavior'
           <tr>
             <td>text</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
               text: {
                 unspecifiedRule  : 'Please enter a valid value',
                 unspecifiedField : 'This field',
@@ -2199,7 +2199,7 @@ type        : 'UI Behavior'
           <tr>
             <td>prompt</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
               prompt: {
                 empty                : '{name} must have a value',
                 checked              : '{name} must be checked',
@@ -2251,7 +2251,7 @@ type        : 'UI Behavior'
           <tr>
             <td>formatter</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
               formatter: {
                 date: function(date) {
                   return Intl.DateTimeFormat('en-GB').format(date);
@@ -2385,7 +2385,7 @@ type        : 'UI Behavior'
           <tr>
             <td>selector</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
         selector : {
           checkbox  : 'input[type="checkbox"], input[type="radio"]',
           clear     : '.clear',
@@ -2408,7 +2408,7 @@ type        : 'UI Behavior'
           <tr>
             <td>metadata</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
 
         metadata : {
           defaultValue : 'default',
@@ -2424,7 +2424,7 @@ type        : 'UI Behavior'
           <tr>
             <td>className</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
         className : {
           error   : 'error',
           label   : 'ui basic red pointing prompt label',
@@ -2474,7 +2474,7 @@ type        : 'UI Behavior'
           <tr>
             <td>errors</td>
             <td colspan="2">
-              <div class="code">
+              <div class="code" data-type="javascript">
         errors   : {
           method        : 'The method you called is not defined.',
           noRule        : 'There is no rule matching the one you specified',

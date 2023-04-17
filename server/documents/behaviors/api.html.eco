@@ -55,7 +55,7 @@ type        : 'UI Behavior'
     <div class="no example">
       <h4 class="ui header">HTTP 200 is Not Success</h4>
       <p>Parse your JSON for <code>success</code> conditions before callbacks fire, making sure server errors caught correctly, still trigger error conditions in your front end code.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
         // Responses without this status will trigger error conditions
         $.fn.api.settings.successTest = function(response) {
           return response.status == 'OK';
@@ -151,7 +151,7 @@ type        : 'UI Behavior'
       <div class="no example">
         <h4 class="ui header">Using URLs</h4>
         <p>Named API actions are not required to use API, you can also manually specify the URL for a request and use the same templating:</p>
-        <div class="code">
+        <div class="code" data-type="javascript">
         $('.search.button')
           .api({
             url: 'https://www.google.com?q={value}'
@@ -178,7 +178,7 @@ type        : 'UI Behavior'
             Follow
           </div>
         </div>
-        <div class="evaluated code">
+        <div class="evaluated code" data-type="javascript">
         // translates '/follow/{id}' to 'follow/22'
         $('.follow.button')
           .api({
@@ -197,7 +197,7 @@ type        : 'UI Behavior'
             Follow
           </div>
         </div>
-        <div class="code">
+        <div class= data-type="javascript""code">
         // also calls '/follow/22'
         $('.follow.button')
           .api()
@@ -393,7 +393,7 @@ type        : 'UI Behavior'
         <h4 class="ui header">Disabling Requests</h4>
         <p>As a convenience, API will automatically prevent requests from occurring on elements that are currently disabled.</p>
         <div class="ui disabled button">Disabled</div>
-        <div class="evaluated code">
+        <div class="evaluated code" data-type="javascript">
           // this will never occur
           $('.disabled.button')
             .api({
@@ -855,7 +855,7 @@ type        : 'UI Behavior'
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .api('behavior name', argumentOne, argumentTwo)
     ;
@@ -1230,7 +1230,7 @@ type        : 'UI Behavior'
         <tr>
           <td>regExp</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             regExp  : {
               required: /\{\$*[A-z0-9]+\}/g,
               optional: /\{\/\$*[A-z0-9]+\}/g,
@@ -1242,7 +1242,7 @@ type        : 'UI Behavior'
         <tr>
           <td>selector</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector: {
               disabled : '.disabled',
               form     : 'form'
@@ -1254,7 +1254,7 @@ type        : 'UI Behavior'
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className: {
               loading : 'loading',
               error   : 'error'
@@ -1266,7 +1266,7 @@ type        : 'UI Behavior'
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata: {
               action  : 'action',
               url     : 'url'
@@ -1298,7 +1298,7 @@ type        : 'UI Behavior'
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             // errors
             error : {
               beforeSend        : 'The before send function has aborted the request',

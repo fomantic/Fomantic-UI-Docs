@@ -232,7 +232,7 @@ type        : 'UI Module'
 
     <h2>Behaviors</h2>
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .embed('behavior name', argumentOne, argumentTwo)
     ;
@@ -436,7 +436,7 @@ type        : 'UI Module'
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             selector : {
               embed       : '.embed',
               placeholder : '.placeholder',
@@ -449,7 +449,7 @@ type        : 'UI Module'
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata    : {
               id          : 'id',
               icon        : 'icon',
@@ -464,7 +464,7 @@ type        : 'UI Module'
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className : {
               active : 'active',
               embed  : 'embed'
@@ -476,7 +476,7 @@ type        : 'UI Module'
         <tr>
           <td>templates</td>
           <td colspan="2">
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             $.fn.embed.settings.templates = {
               iframe: function(url, parameters) {
                 // returns html for iframe
@@ -491,7 +491,7 @@ type        : 'UI Module'
         <tr>
           <td>metadata</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata    : {
               id          : 'id',
               icon        : 'icon',
@@ -505,7 +505,7 @@ type        : 'UI Module'
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error : {
               noURL  : 'No URL specified',
               method : 'The method you called is not defined'

@@ -4,11 +4,11 @@ css         : 'state'
 standalone  : true
 
 element     : 'State'
-elementType : 'draft'
+elementType : 'behavior'
 
 title       : 'State'
 description : 'State allows elements to trigger actions on a server'
-type        : 'Draft'
+type        : 'UI Behavior'
 ---
 
 
@@ -42,7 +42,7 @@ type        : 'Draft'
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .state('behavior name', argumentOne, argumentTwo)
     ;
@@ -340,7 +340,7 @@ type        : 'Draft'
         <tr>
           <td>regExp</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             regExp  : {
               required: /\{\$*[A-z0-9]+\}/g,
               optional: /\{\/\$*[A-z0-9]+\}/g,
@@ -352,7 +352,7 @@ type        : 'Draft'
         <tr>
           <td>selector</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector: {
               text : false
             }
@@ -363,7 +363,7 @@ type        : 'Draft'
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className: {
               active   : 'active',
               disabled : 'disabled',
@@ -379,7 +379,7 @@ type        : 'Draft'
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata: {
               promise    : 'promise',
               storedText : 'stored-text'
@@ -411,7 +411,7 @@ type        : 'Draft'
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             // errors
             error : {
               method     : 'The method you called is not defined.'

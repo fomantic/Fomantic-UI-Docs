@@ -606,7 +606,7 @@ themes      : ['Default', 'Chubby']
     <div class="no example">
       <h4 class="ui header">Initializing an accordion</h4>
       <p>Accordion is initialized on pre-existing markup</p>
-      <div class="test code">
+      <div class="test code" data-type="javascript">
       $('.ui.accordion')
         .accordion()
       ;
@@ -641,7 +641,7 @@ themes      : ['Default', 'Chubby']
     <p>Behaviors are short english phrases used for accessing specific functionality in
 
     <p>Behaviors are accessible with Javascript using the syntax:<p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.ui.accordion').accordion('behavior', argumentOne, argumentTwo...);
     </div>
 
@@ -797,7 +797,7 @@ themes      : ['Default', 'Chubby']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector    : {
               accordion : '.accordion',
               title     : '.title',
@@ -812,7 +812,7 @@ themes      : ['Default', 'Chubby']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className   : {
               active    : 'active',
               animating : 'animating'
@@ -844,7 +844,7 @@ themes      : ['Default', 'Chubby']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error   : {
               method   : 'The method you called is not defined.'
             }

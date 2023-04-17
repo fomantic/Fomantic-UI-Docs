@@ -474,7 +474,7 @@ themes      : ['Default', 'Colored']
           </div>
         </div>
       </div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         var
           $console = $('.callback .console')
         ;
@@ -690,7 +690,7 @@ themes      : ['Default', 'Colored']
     <div class="example">
       <h4 class="ui header">Attaching Events to other Elements</h4>
       <p>Checkbox can use the <code>attach events</code> behavior to attach events easily to other activating elements. This defaults to toggling, but other behaviors can be used as well.</p>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
         $('.test.checkbox').checkbox('attach events', '.toggle.button');
         $('.test.checkbox').checkbox('attach events', '.check.button', 'check');
         $('.test.checkbox').checkbox('attach events', '.uncheck.button', 'uncheck');
@@ -791,7 +791,7 @@ themes      : ['Default', 'Colored']
     <h2 class="ui dividing header">Behavior</h2
       >
     <p>Behaviors are accessible with Javascript using the syntax:<p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.ui.checkbox').checkbox(<i>behavior</i>, argumentOne, argumentTwo...);
     </div>
 
@@ -1026,7 +1026,7 @@ themes      : ['Default', 'Colored']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector : {
               input  : 'input[type=checkbox], input[type=radio]',
               label  : 'label'
@@ -1038,7 +1038,7 @@ themes      : ['Default', 'Colored']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className   : {
               checked  : 'checked',
               disabled : 'disabled',
@@ -1072,7 +1072,7 @@ themes      : ['Default', 'Colored']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error   : {
               method   : 'The method you called is not defined.'
             }

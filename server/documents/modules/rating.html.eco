@@ -268,7 +268,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Behaviors</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.ui.rating')
       .rating('behavior name', argumentOne, argumentTwo)
     ;
@@ -391,7 +391,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       selector  : {
         icon : '.icon'
       }
@@ -401,7 +401,7 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       className : {
         active     : 'active',
         hover      : 'hover',
@@ -453,7 +453,7 @@ themes      : ['Default']
         <tr>
           <td>error</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       error   : {
         method    : 'The method you called is not defined'
       }

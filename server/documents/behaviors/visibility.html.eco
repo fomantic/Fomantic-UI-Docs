@@ -66,7 +66,7 @@ type        : 'UI Behavior'
 
       <div class="ui ignored info message">The following examples use sticky columns to help display data alongside each example. Please consult the <a href="/modules/sticky.html">sticky documentation</a> for usage examples.</div>
 
-      <div class="ui ignored code">
+      <div class="ui ignored code" data-type="javascript">
       // some example callbacks
       $('.demo.segment')
         .visibility({

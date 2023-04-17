@@ -803,7 +803,7 @@ semantic.ready = function() {
             ? $closestExample.prevAll('.example').not('.another').eq(0)
             : $closestExample,
         $header     = $example.find('h4').eq(0),
-        $attributes = $code.find('.attribute, .class'),
+        $attributes = $code.find('.attribute, .class, .attr'),
         $tags       = $code.find('.title'),
         pageName    = handler.getPageTitle(),
         name        = handler.getText($header).toLowerCase(),
@@ -995,7 +995,7 @@ semantic.ready = function() {
           less       : 'LESS',
           json       : 'JSON',
           text       : 'Command Line',
-          terminal   : 'Command Line',
+          bash       : 'Command Line',
           sh         : 'Command Line'
         },
         padding    = 20,
@@ -1042,7 +1042,7 @@ semantic.ready = function() {
       }
 
       // color code
-      formattedCode = window.hljs.highlightAuto(formattedCode);
+      formattedCode = window.hljs.highlight(formattedCode, {language: contentType});
 
       // create <code> tag
       $codeTag
@@ -1179,6 +1179,7 @@ semantic.ready = function() {
   window.hljs.configure({
     classPrefix : '',
     languages   : [
+      'json',
       'xml',
       'bash',
       'css',
