@@ -330,6 +330,26 @@ themes      : ['Default']
     </div>
   </div>
 
+  <h2 class="ui dividing header">States</h2>
+
+  <div class="example" data-since="2.9.3">
+    <h4 class="ui header">Disabled</h4>
+    <p>An item can be disabled</p>
+    <div class="ui items">
+      <div class="disabled item">
+        <a class="ui tiny image">
+          <img src="/images/avatar/large/veronika.jpg">
+        </a>
+        <div class="content">
+          <a class="header">Veronika Ossi</a>
+          <div class="description">
+            <p>Veronika Ossi is a set designer living in New York who <a>enjoys</a> kittens, music, and partying.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <h2 class="ui dividing header">Variations</h2>
 
