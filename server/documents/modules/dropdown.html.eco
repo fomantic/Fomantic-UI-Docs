@@ -1778,7 +1778,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="no label example">
+    <div class="label example">
       <h4 class="ui header">Text Labels</h4>
       <p>Sometimes multiselect include options which are long and would appear awkwardly as labels. Setting <code>useLabels: false</code> will display a selected count, and allow reselection directly from the menu.</p>
       <div class="ui ignored info message">
@@ -1802,7 +1802,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
 
       <div class="evaluated code" data-type="javascript">
-        $('.no.label.example .ui.dropdown')
+        $('.label.example .ui.dropdown')
           .dropdown({
             useLabels: false
           })
