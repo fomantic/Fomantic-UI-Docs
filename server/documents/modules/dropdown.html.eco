@@ -3805,7 +3805,7 @@ themes      : ['Default', 'GitHub', 'Material']
     </table>
 
     </div>
-
+    <div class="no example">
     <h4 class="ui header">
       Callbacks
     </h4>
@@ -3876,15 +3876,60 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
       </tbody>
     </table>
+    </div>
 
-    <h4 class="ui header">
+    <h2 class="ui dividing header">
+      Templates
+    </h2>
+
+    <p>These templates are used to generate the HTML structures for parts of dropdown</p>
+
+     <table class="ui sortable celled definition table">
+      <thead>
+        <th></th>
+        <th class="twelve wide">Functions</th>
+      </thead>
+        <tr>
+          <td>templates</td>
+          <td>
+            <div class="code" data-type="javascript">
+            $.fn.dropdown.settings.templates : {
+              deQuote: function(string) {
+                // returns removed/replaced double quotes from a string
+              },
+              escape: function(string) {
+                // returns escaped string for injected results
+              },
+              dropdown: function (select, fields, preserveHTML, className) {
+               // returns dropdown HTML from select values
+              },
+              menu: function (response, fields, preserveHTML, className) {
+               // returns menu html from response data
+              },
+              label: function (value, text, preserveHTML, className) {
+               // returns label html for multiselect
+              },
+              message: function (message) {
+               // returns messages like "No results"
+              },
+              addition: function (choice) {
+               // return user addition for selection menu
+              }
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="ui dividing header">
       Module Settings
-    </h4>
-
-    <h3 class="ui header">
+    </h2>
+    <div class="no example">
+    <h4 class="ui header">
       DOM Settings
       <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
-    </h3>
+    </h4>
     <table class="ui celled sortable definition table segment">
       <thead>
         <tr>
@@ -4055,7 +4100,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
       </tbody>
     </table>
-
+    </div>
   </div>
 
   <div class="ui tab" data-tab="security">
