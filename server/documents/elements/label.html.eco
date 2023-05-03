@@ -27,6 +27,12 @@ themes      : ['Default', 'GitHub']
       <i class="mail icon"></i> 23
     </div>
   </div>
+  <div class="another example">
+      <p>Highlight keyboard shortcuts</p>
+      <kbd class="ui label">CTRL</kbd> + <kbd class="ui label">Alt</kbd> + <kbd class="ui label">Del</kbd>
+      <kbd class="ui inverted icon label"><i class="windows icon"></i></kbd> + <kbd class="ui inverted label">L</kbd>
+      <kbd class="ui basic label">W</kbd><kbd class="ui basic label">A</kbd><kbd class="ui basic label">S</kbd><kbd class="ui basic label">D</kbd>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Image</h4>
