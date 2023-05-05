@@ -642,10 +642,10 @@ blockquote .author {
   padding-top: 2em;
 }
 
-#example .example > h4 > a {
+#example .example > h4 > a[href^="#"] {
   color: rgba(0, 0, 0, 0.87);
 }
-#example .example > h4 > a:hover {
+#example .example > h4 > a[href^="#"]:hover {
   color: rgba(0, 0, 0, 0.95);
 }
 #example .example > h4 > a > i.linkify.icon {
