@@ -283,7 +283,7 @@ semantic.ready = function() {
             classes  = $example.data('class'),
             wordOrder = classes && classes.indexOf('!') >= 0
           ;
-          if ($title.length > 0 && id.length > 0) {
+          if ($title.length > 0 && id.length > 0 && $title.find('a').length === 0) {
             var $contentWrapped = $("<a/>").attr('href', '#' + id).html([
               $('<i class="fitted small linkify icon"></i>'),
               $title.html()
