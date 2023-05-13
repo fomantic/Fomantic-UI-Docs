@@ -28,7 +28,7 @@ themes      : ['Default']
     </emojiSearch>
 
     <h2 class="ui header">Emoji Set</h2>
-    <p>An emoji set contains all <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Unicode 13.1 Emoji Characters</a></p>
+    <p>An emoji set contains all <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Unicode 14.0 Emoji Characters</a></p>
     <div class="ui ignored warning message">
       Emojis serve a very similar function to text in a page. In Fomantic emojis receive a special tag <code>&lt;em&gt;</code> which allow for an abbreviated markup when sitting along-side text.
         <br>
@@ -37,8 +37,8 @@ themes      : ['Default']
     <div class="ui ignored message">
         By default all emoji images are linked to a CDN and are <b>not part of Fomantic itself</b>.
           <ul class="ui list">
-              <li>The default theme links to the set by <a href="https://twemoji.twitter.com/">Twemoji v13.1</a> under CC-BY 4.0 license</li>
-              <li>As an alternative the available joypixels theme links to the Emoji set designed by <a href="https://www.joypixels.com/emoji/">Joypixels 6</a> under their <a href="https://www.joypixels.com/licenses/free">free license model</a></li>
+              <li>The default theme links to the set by <a href="https://twemoji.twitter.com/">Twemoji v14.0</a> under CC-BY 4.0 license</li>
+              <li>As an alternative the available joypixels theme links to the Emoji set designed by <a href="https://www.joypixels.com/emoji/">Joypixels 7</a> under their <a href="https://www.joypixels.com/licenses/free">free license model</a></li>
           </ul>
           If needed, you might download your personal icon set from the respective websites respecting their individual licenses, host it locally and change the <code>@emojiPath</code> in <code>emoji.variables</code> of the theme you are using.
     </div>
