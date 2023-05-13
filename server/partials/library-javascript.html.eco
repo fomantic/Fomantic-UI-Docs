@@ -6,7 +6,6 @@
   <script src="/javascript/library/highlight.min.js"></script>
   <script src="/javascript/library/history.js"></script>
   <script src="/javascript/library/tablesort.js"></script>
-  <script src="/javascript/library/underscore.js"></script>
 <% else: %>
 <% #  <script src="/javascript/library/detect.min.js"></script> %>
   <script src="/javascript/library/jquery.min.js"></script>
@@ -15,6 +14,5 @@
   <script src="/javascript/library/highlight.min.js"></script>
   <script src="/javascript/library/history.min.js"></script>
   <script src="/javascript/library/tablesort.min.js"></script>
-  <script src="/javascript/library/underscore.min.js"></script>
 <% end %>
 
