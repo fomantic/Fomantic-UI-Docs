@@ -891,7 +891,7 @@ semantic.ready = function() {
           return true;
         }
         $value        = $attribute.next('.value, .string').eq(0);
-        $tag          = $attribute.prev('.title').eq(0);
+        $tag          = $attribute.prev('.title, .name').eq(0);
         tagHTML       = $tag.html();
         html          = $value.html();
         classNames    = html.replace(/\"/g, '').split(' ');

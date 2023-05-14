@@ -466,6 +466,7 @@ blockquote .author {
 #example .main.container > .tab > p a:before,
 #example .main.container .example > .ignored a:before,
 #example .main.container .example > p a:before,
+#example .main.container .code .string a:before,
 #example .main.container .code .value a:before {
   position: absolute;
   top: auto;
@@ -501,6 +502,7 @@ blockquote .author {
 #example .main.container .example > .ignored a:focus:before,
 #example .main.container .example > p a:hover:before,
 #example .main.container .example > p a:focus:before,
+#example .main.container .code .string a:hover:before,
 #example .main.container .code .value a:hover:before  {
   background-color: #2C76BF;
   transform: scaleX(1);
@@ -1748,6 +1750,7 @@ code.code .class b[data-tooltip~="order"]:hover {
 }
 
 /* Linked UI */
+code .tag .string a,
 code .tag .value a {
   position: relative;
   border-radius: 5px;
@@ -1761,10 +1764,12 @@ code .tag .value a {
 code .tag .value a b {
   border-radius: 0;
 }
+code .tag .string a:hover,
 code .tag .value a:hover {
   background-color: rgba(40, 150, 218, 0.2);
   color: #00689E;
 }
+code .tag .string a:hover b,
 code .tag .value a:hover b {
   background-color: transparent;
   color: inherit;
