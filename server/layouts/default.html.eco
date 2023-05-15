@@ -4,7 +4,6 @@
   <%- @partial('meta') %>
   <%- @partial('javascript') %>
   <%- @partial('css') %>
-  <%- @partial('tracking') %>
 </head>
 <body id="example" class="<%= @document.css %>" ontouchstart="">
   <% if @document.element is 'sidebar': %>
