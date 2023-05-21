@@ -30,7 +30,7 @@ type        : 'UI Behavior'
         A validation object includes a list of form elements, and rules to validate each field against. Fields are matched by either the <code>id</code>, <code>name</code>, or <code>data-validate</code> property (in that order) matching the identifier specified in the settings object. As of 2.8.8, validation objects can mix shorthand or longhand notation.
       </div>
       <div class="ui ignored warning message">
-        When a form is initialized, it also automatically initializes existing <a href="/modules/dropdown.html">Dropdown</a> or <a href="/modules/calendar.html">Calendar</a> fields inside the form, using their default settings. If your dropdown or calendar fields inside the form need a custom setup, initialize them separately <b>before</b> initializing the form itself.
+        When a form is initialized, it also automatically initializes existing <a href="/modules/dropdown.html">Dropdown</a> or <a href="/modules/calendar.html">Calendar</a> fields inside the form, using their default settings. If your dropdown or calendar fields inside the form need a custom setup, initialize them separately <b>before</b> initializing the form itself or use <code>ignoreModulesOnInit: true</code>.
       </div>
       <div class="ignore code" data-title="Shorthand Validation" data-type="javascript">
       $('.ui.form')
@@ -2157,6 +2157,11 @@ type        : 'UI Behavior'
             <td>autoCheckRequired</td>
             <td>false</td>
             <td>Whether fields with classname or attribute <code>required</code> should automatically add the "empty" rule or automatically checks checkbox fields</td>
+          </tr>
+          <tr>
+            <td>ignoreModulesOnInit</td>
+            <td>false</td>
+            <td>Whether existing FUI modules like <a href="/modules/dropdown.html">Dropdown</a> or <a href="/modules/calendar.html">Calendar</a> should not be auto initiated when the form is initiated.</td>
           </tr>
           <tr>
             <td>errorFocus</td>
