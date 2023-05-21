@@ -2159,9 +2159,9 @@ type        : 'UI Behavior'
             <td>Whether fields with classname or attribute <code>required</code> should automatically add the "empty" rule or automatically checks checkbox fields</td>
           </tr>
           <tr>
-            <td>ignoreModulesOnInit</td>
-            <td>false</td>
-            <td>Whether existing FUI modules like <a href="/modules/dropdown.html">Dropdown</a> or <a href="/modules/calendar.html">Calendar</a> should not be auto initiated when the form is initiated.</td>
+            <td>initChildModules</td>
+            <td>true</td>
+            <td>Whether existing FUI modules like <a href="/modules/dropdown.html">Dropdown</a> or <a href="/modules/calendar.html">Calendar</a> should be auto initiated when the form is initiated.</td>
           </tr>
           <tr>
             <td>errorFocus</td>
