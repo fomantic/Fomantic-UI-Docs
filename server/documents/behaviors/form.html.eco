@@ -2204,6 +2204,9 @@ type        : 'UI Behavior'
             <td>
               <div class="code" data-type="javascript">
               prompt: {
+                range                : '{name} must be in a range from {min} to {max}',
+                maxValue             : '{name} must have a maximum value of {ruleValue}',
+                minValue             : '{name} must have a minimum value of {ruleValue}',
                 empty                : '{name} must have a value',
                 checked              : '{name} must be checked',
                 email                : '{name} must be a valid e-mail',
@@ -2392,7 +2395,8 @@ type        : 'UI Behavior'
         selector : {
           checkbox  : 'input[type="checkbox"], input[type="radio"]',
           clear     : '.clear',
-          field     : 'input, textarea, select',
+          field     : 'input:not(.search):not([type="reset"]):not([type="button"]):not([type="submit"]), textarea, select',
+          file      : 'input[type="file"]',
           group     : '.field',
           input     : 'input',
           message   : '.error.message',
@@ -2429,10 +2433,13 @@ type        : 'UI Behavior'
             <td>
               <div class="code" data-type="javascript">
         className : {
+          initial: 'initial',
           error   : 'error',
           label   : 'ui basic red pointing prompt label',
           pressed : 'down',
-          success : 'success'
+          success : 'success',
+          required: 'required',
+          disabled: 'disabled'
         }
               </div>
             </td>
