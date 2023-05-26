@@ -2142,7 +2142,7 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>duration</td>
-            <td>150</td>
+            <td>200</td>
             <td>Animation speed for inline prompt</td>
           </tr>
           <tr>
