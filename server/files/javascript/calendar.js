@@ -222,6 +222,18 @@ semantic.calendar.ready = function() {
       })
   ;
 
+  $('#tiny_calendar')
+    .calendar()
+  ;
+
+  $('#medium_calendar')
+    .calendar()
+  ;
+
+  $('#big_calendar')
+    .calendar()
+  ;
+
   $('#inverted_calendar')
     .calendar()
   ;

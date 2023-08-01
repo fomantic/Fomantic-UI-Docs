@@ -90,6 +90,31 @@ themes      : ['Default']
     </div>
 
    <h2 class="ui dividing header">Variations</h2>
+    <div class="example" data-since="2.9.3">
+      <h4 class="ui header">Size</h4>
+      <p>A calendar can have different sizes</p>
+      <div class="ui tiny calendar" id="tiny_calendar">
+        <div class="ui fluid input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+      <br />
+      <div class="ui medium calendar" id="medium_calendar">
+        <div class="ui fluid input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+      <br />
+      <div class="ui big calendar" id="big_calendar">
+        <div class="ui fluid input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+    </div>
+
     <div class="example">
       <h4 class="ui header">Inverted</h4>
       <p>A calendar can have its colors inverted</p>
