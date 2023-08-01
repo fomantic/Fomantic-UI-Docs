@@ -242,7 +242,227 @@ themes      : ['Default', 'Timeline']
     </div>
   </div>
 
+  <h2 class="ui dividing header">States</h2>
+
+  <div class="example" data-since="2.9.3" data-use-content="true">
+    <h4 class="ui header">Disabled</h4>
+    <p>A feed or a single event can be disabled</p>
+    <div class="ui feed">
+      <div class="disabled event">
+        <div class="label">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
+        <div class="content">
+          <div class="summary">
+            <a class="user">
+              I am a disabled feed event
+            </a>
+          </div>
+          <div class="meta">
+            <a class="like">
+              <i class="like icon"></i> 4 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="label">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
+        <div class="content">
+          <div class="summary">
+            <a class="user">
+              I am a normal feed event
+            </a>
+          </div>
+          <div class="meta">
+            <a class="like">
+              <i class="like icon"></i> 4 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example" data-use-content="true">
+    <div class="ui disabled feed">
+      <div class="event">
+        <div class="label">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
+        <div class="content">
+          <div class="summary">
+            <a class="user">
+              I am a feed event of a whole disabled feed
+            </a>
+          </div>
+          <div class="meta">
+            <a class="like">
+              <i class="like icon"></i> 4 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="label">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
+        <div class="content">
+          <div class="summary">
+            <a class="user">
+              Me too
+            </a>
+          </div>
+          <div class="meta">
+            <a class="like">
+              <i class="like icon"></i> 4 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <h2 class="ui dividing header">Variations</h2>
+  <div class="example" data-since="2.9.3" data-use-content="true">
+      <h4 class="ui header">Connected</h4>
+      <p>Feed events can be connected to visualize a linear timeline</p>
+      <div class="ui ignored info message">
+        You can add a color class like <code>ui <b>blue</b> connected feed</code> to get the connection line colored accordingly
+      </div>
+      <div class="ui connected feed">
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/elliot.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a class="user">
+                Elliot Fu
+              </a> added you as a friend
+              <div class="date">
+                1 Hour Ago
+              </div>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 4 Likes
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <i class="pencil icon"></i>
+          </div>
+          <div class="content">
+            <div class="summary">
+              You submitted a new post to the page
+              <div class="date">
+                3 days ago
+              </div>
+            </div>
+            <div class="extra text">
+              I'm having a BBQ this weekend. Come by around 4pm if you can.
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 11 Likes
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/helen.jpg">
+          </div>
+          <div class="content">
+            <div class="date">
+              4 days ago
+            </div>
+            <div class="summary">
+              <a>Helen Troy</a> added <a>2 new illustrations</a>
+            </div>
+            <div class="extra images">
+              <a><img src="/images/wireframe/image.png"></a>
+              <a><img src="/images/wireframe/image.png"></a>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 1 Like
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="example" data-since="2.9.3" data-use-content="true">
+      <h4 class="ui header">Ordered</h4>
+      <p>Ordered feeds will automatically create labels, or via data-text attribute for the event. You can again combine this using a color class for the whole feed or each event individually. Also a basic variant is available.</p>
+      <div class="ui ignored warning message">
+        When used in combination with <a href="#connected"><code>connected</code></a> the connection line gets the feed color. If you want the connection line color being different than each event color, you have to define the colors for each event individually
+      </div>
+      <div class="ui orange ordered feed">
+        <div class="label"></div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+                Welcome and Meetup
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+              Agenda
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+              Lunch
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="example" data-since="2.9.3" data-use-content="true">
+      <h4 class="ui header">Divided</h4>
+      <p>Feed events can be divided to better distinguish between grouped content</p>
+      <div class="ui divided feed">
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+               <a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+               <a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+               <a>Helen Troy</a> added <a>Christian Rocha</a> as a friend
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+               <a>Christian Rocha</a> signed up for the  site.
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
   <div class="example">
     <h4 class="ui header">Size</h4>
     <p>A feed can have different sizes</p>
