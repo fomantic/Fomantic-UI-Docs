@@ -706,7 +706,7 @@ themes      : ['Default', 'Chubby']
         </tr>
         <tr>
           <td>closeNested</td>
-          <td>true</td>
+          <td>false</td>
           <td>Close open nested accordion content when an element closes</td>
         </tr>
         <tr>
