@@ -706,7 +706,7 @@ themes      : ['Default', 'Chubby']
         </tr>
         <tr>
           <td>closeNested</td>
-          <td>true</td>
+          <td>false</td>
           <td>Close open nested accordion content when an element closes</td>
         </tr>
         <tr>
@@ -716,7 +716,7 @@ themes      : ['Default', 'Chubby']
         </tr>
         <tr>
           <td>duration</td>
-          <td>500</td>
+          <td>350</td>
           <td>Duration in ms of opening animation</td>
         </tr>
         <tr>
@@ -815,7 +815,8 @@ themes      : ['Default', 'Chubby']
             <div class="code" data-type="javascript">
             className   : {
               active    : 'active',
-              animating : 'animating'
+              animating : 'animating',
+              transition: 'transition'
             }
             </div>
           </td>
