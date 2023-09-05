@@ -136,7 +136,7 @@ themes      : ['Default', 'Timeline']
 
   <div class="example" data-use-content="true">
     <h4 class="ui header">Label</h4>
-    <p>An event can contain an image or icon label</p>
+    <p>An event label can contain an <a href="/elements/image.html">image</a>, <a href="/elements/icon.html">icon</a>, <a href="/elements/text.html">text</a> or <a href="/elements/label.html">label</a></p>
     <div class="ui feed">
       <div class="event">
         <div class="label">
@@ -159,6 +159,65 @@ themes      : ['Default', 'Timeline']
             You posted on your friend <a>Stevie Feliciano's</a> wall.
             <div class="date">Today</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui ignored info message" data-since="2.9.3">Longer label text can use the <code>multiline</code>class</div>
+    <div class="ui feed">
+      <div class="event">
+        <div class="label">
+          <span class="ui purple text">NEW</span>
+        </div>
+        <div class="content">
+          Check the latest sales offers
+        </div>
+      </div>
+      <div class="event">
+        <div class="label">
+          <span class="ui purple multiline text">THIS FALL</span>
+        </div>
+        <div class="content">
+          Only in selected theaters!
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui feed">
+      <div class="event">
+        <div class="label">
+          <div class="ui small green label">OK</div>
+        </div>
+        <div class="content">
+            Deployment was successful
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example" data-since="2.9.3">
+    <p>Using a data-text attribute for the label will automatically create a round label containing the given value</p>
+    <div class="ui ignored info message">
+        You can also add a color class. Also add <code>basic</code> for a variant without background color.
+    </div>
+    <div class="ui feed">
+      <div class="event">
+        <div class="label" data-text="Run"></div>
+        <div class="content">
+          Run, Forrest, run!
+        </div>
+      </div>
+      <div class="event">
+        <div class="red label" data-text="Stop"></div>
+        <div class="content">
+          Don't move!
+        </div>
+      </div>
+      <div class="event">
+        <div class="yellow basic label" data-text="Zzz"></div>
+        <div class="content">
+          Nap time
         </div>
       </div>
     </div>
@@ -205,6 +264,9 @@ themes      : ['Default', 'Timeline']
   <div class="example" data-class="summary, extra text, extra images" data-use-content="true">
     <h4 class="ui header">Additional information</h4>
     <p>An event can contain additional information like a set of images or text</p>
+    <div class="ui ignored info message" data-since="2.9.3">
+        You could add <code>right floated</code> to feed content elements to make them appear to the right of the content block
+    </div>
     <div class="ui feed">
       <div class="event">
         <div class="label">
@@ -228,7 +290,7 @@ themes      : ['Default', 'Timeline']
           <img src="/images/avatar/small/laura.jpg">
         </div>
         <div class="content">
-          <div class="date">
+          <div class="right floated date">
             3 days ago
           </div>
           <div class="summary">
@@ -398,30 +460,40 @@ themes      : ['Default', 'Timeline']
 
   <div class="example" data-since="2.9.3" data-use-content="true">
       <h4 class="ui header">Ordered</h4>
-      <p>Ordered feeds will automatically create labels, or via data-text attribute for the event. You can again combine this using a color class for the whole feed or each event individually. Also a basic variant is available.</p>
+      <p>Ordered feeds will automatically create ordered label content for the event. You can again combine this using a color class for the whole feed or each label individually. Also a basic variant is available.</p>
       <div class="ui ignored warning message">
         When used in combination with <a href="#connected"><code>connected</code></a> the connection line gets the feed color. If you want the connection line color being different than each event color, you have to define the colors for each event individually
       </div>
-      <div class="ui orange ordered feed">
-        <div class="label"></div>
+      <div class="ui orange ordered connected feed">
         <div class="event">
+          <div class="blue label"></div>
           <div class="content">
             <div class="summary">
-                Welcome and Meetup
+                Different Labels color than whole feed color
+            </div>
+          </div>
+        </div>
+        <div class="black event">
+          <div class="label"></div>
+          <div class="content">
+            <div class="summary">
+              Automatic label content, line color taken from event color
             </div>
           </div>
         </div>
         <div class="event">
+          <div class="label" data-text="3rd"></div>
           <div class="content">
             <div class="summary">
-              Agenda
+              Content via data-text attribute
             </div>
           </div>
         </div>
         <div class="event">
+        <div class="basic label"></div>
           <div class="content">
             <div class="summary">
-              Lunch
+              Basic Label
             </div>
           </div>
         </div>
