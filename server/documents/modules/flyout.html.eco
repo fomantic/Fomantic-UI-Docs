@@ -751,7 +751,6 @@ themes      : ['Default']
                 active     : 'active',
                 animating  : 'animating',
                 dimmed     : 'dimmed',
-                ios        : 'ios',
                 pushable   : 'pushable',
                 pushed     : 'pushed',
                 right      : 'right',
@@ -775,8 +774,6 @@ themes      : ['Default']
             <td colspan="2">
               <div class="code">
               regExp : {
-                ios          : /(iPad|iPhone|iPod)/g,
-                mobileChrome : /(CriOS)/g,
                 mobile       : /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/g
               }
               </div>
