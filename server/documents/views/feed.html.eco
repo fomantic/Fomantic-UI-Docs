@@ -164,7 +164,7 @@ themes      : ['Default', 'Timeline']
     </div>
   </div>
   <div class="another example">
-    <div class="ui ignored info message" data-since="2.9.3">Longer label text can use the <code>multiline</code>class</div>
+    <div class="ui ignored info message" data-since="2.9.3">Longer label text can use the <code>multiline</code> class</div>
     <div class="ui feed">
       <div class="event">
         <div class="label">
