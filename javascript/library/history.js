@@ -1,4 +1,4 @@
-/*! jQuery Address v${version} | (c) 2009, 2013 Rostislav Hristov | jquery.org/license */
+/*! jQuery Address v1.6 | (c) 2009, 2013 Rostislav Hristov | jquery.org/license */
 (function ($) {
 
     $.address = (function () {
@@ -6,7 +6,7 @@
             return typeof obj === "function" && typeof obj.nodeType !== "number";
         }
         var _trigger = function(name) {
-               var e = $.extend($.Event(name), (function() {
+                var e = $.extend($.Event(name), (function() {
                     var parameters = {},
                         parameterNames = $.address.parameterNames();
                     for (var i = 0, l = parameterNames.length; i < l; i++) {
@@ -84,9 +84,7 @@
                 }
             },
             _update = function(internal) {
-                if (_opts.tracker !== 'null' && _opts.tracker !== NULL) {
-                    _st(_track, 10);
-                }
+                _st(_track, 10);
                 return _trigger(CHANGE).isDefaultPrevented() ||
                     _trigger(internal ? INTERNAL_CHANGE : EXTERNAL_CHANGE).isDefaultPrevented();
             },
@@ -94,8 +92,8 @@
                 if (_opts.tracker !== 'null' && _opts.tracker !== NULL) {
                     var fn = isFunction(_opts.tracker) ? _opts.tracker : _t[_opts.tracker],
                         value = (_l.pathname + _l.search +
-                                ($.address && !_supportsState() ? $.address.value() : ''))
-                                .replace(/\/\//, '/').replace(/^\/$/, '');
+                            ($.address && !_supportsState() ? $.address.value() : ''))
+                            .replace(/\/\//, '/').replace(/^\/$/, '');
                     if (isFunction(fn)) {
                         fn(value);
                     } else if (isFunction(_t.urchinTracker)) {
@@ -272,7 +270,7 @@
             _browser = _detectBrowser(),
             _version = parseFloat(_browser.version),
             _webkit = _browser.webkit || _browser.safari,
-            _msie = _browser.msie,
+            _msie = !$.support.opacity,
             _t = _window(),
             _d = _t.document,
             _h = _t.history,
@@ -444,7 +442,7 @@
                         }
                         if (_supportsState()) {
                             _h[_opts.history ? 'pushState' : 'replaceState']({}, '',
-                                    _opts.state.replace(/\/$/, '') + (_value === '' ? '/' : _value));
+                                _opts.state.replace(/\/$/, '') + (_value === '' ? '/' : _value));
                         } else {
                             _silent = TRUE;
                             if (_webkit) {
@@ -580,7 +578,7 @@
                     e.preventDefault();
                     var value = fn ? fn.call(target) :
                         /address:/.test($(target).attr('rel')) ? $(target).attr('rel').split('address:')[1].split(' ')[0] :
-                        $.address.state() !== undefined && !/^\/?$/.test($.address.state()) ?
+                            $.address.state() !== undefined && !/^\/?$/.test($.address.state()) ?
                                 $(target).attr('href').replace(new RegExp('^(.*' + $.address.state() + '|\\.)'), '') :
                                 $(target).attr('href').replace(/^(#\!?|\.)/, '');
                     $.address.value(value);

@@ -50,6 +50,7 @@ semantic.ready = function() {
     $sectionExample      = $container.find('.example'),
     $exampleHeaders      = $sectionExample.children('h4'),
     $footer              = $('.page > .footer'),
+    $tableSinceCells     = $('.ui.table [data-since]'),
 
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
@@ -77,11 +78,7 @@ semantic.ready = function() {
 
     metadata,
 
-    requestAnimationFrame = window.requestAnimationFrame
-      || window.mozRequestAnimationFrame
-      || window.webkitRequestAnimationFrame
-      || window.msRequestAnimationFrame
-      || function(callback) { setTimeout(callback, 0); },
+    requestAnimationFrame = window.requestAnimationFrame,
 
     // alias
     handler
@@ -90,6 +87,12 @@ semantic.ready = function() {
 
   // event handlers
   handler = {
+
+    createNewInLabel: function(since, extraClass, tag) {
+        extraClass = extraClass || '';
+        tag = tag || 'div';
+        return $('<' + tag + '/>', { class: 'ui teal label newsince ' + extraClass, text: 'New in ' + since });
+    },
 
     getMetadata: function() {
       $.api({
@@ -252,6 +255,7 @@ semantic.ready = function() {
         .each(function() {
           var
             $section = $(this),
+            since    = $section.data('since'),
             text     = handler.getText($section),
             safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
@@ -260,25 +264,54 @@ semantic.ready = function() {
           $section
             .append($anchor)
           ;
+          if (since) {
+            $section.append(handler.createNewInLabel(since));
+          }
         })
       ;
       $example
         .each(function() {
           var
-            $title   = $(this).children('h4').eq(0),
+            $example = $(this),
+            $title   = $example.children('h4').eq(0),
+            $firstP  = $example.children('p').eq(0),
+            $sinces  = $example.find('.ui.message[data-since]'),
             text     = handler.getText($title),
             safeName = handler.getSafeName(text),
-            id       = window.escape(safeName)
+            id       = window.escape(safeName),
+            since    = $example.data('since'),
+            classes  = $example.data('class'),
+            wordOrder = classes && classes.indexOf('!') >= 0
           ;
-          if ($title.length > 0 && id.length > 0) {
+          if ($title.length > 0 && id.length > 0 && $title.find('a').length === 0) {
             var $contentWrapped = $("<a/>").attr('href', '#' + id).html([
               $('<i class="fitted small linkify icon"></i>'),
               $title.html()
             ]).on('click', handler.scrollTo);
             $title.attr('id', id).html($contentWrapped);
           }
+          if (since) {
+            if ($title.length > 0) {
+              $title.append(handler.createNewInLabel(since));
+            } else if ($firstP.length > 0) {
+                $firstP.append(handler.createNewInLabel(since,'','span'));
+            }
+          }
+          if (wordOrder) {
+            $title.append(' <a href="/introduction/getting-started#class-order"><div class="ui small wordorder label"><i class="attention icon"></i>Word order required</div></a>');
+          }
+          $sinces.each(function(){
+              var $el = $(this),
+                  since = $el.data('since');
+              $el.append(handler.createNewInLabel(since,'tiny horizontal'));
+          })
         })
       ;
+      $tableSinceCells.each(function(){
+        var $el = $(this),
+            since = $el.data('since');
+        $el.append(handler.createNewInLabel(since,'tiny horizontal', 'span'));
+      });
 
     },
 
@@ -334,10 +367,10 @@ semantic.ready = function() {
           ;
           html += '<div class="item">';
           if($examples.length === 0) {
-            html += '<a class="'+activeClass+'title" href="#'+ id +'"><b>' + $(this).text() + '</b></a>';
+            html += '<a class="'+activeClass+'title" href="#'+ id +'"><b>' + handler.getText($(this)) + '</b></a>';
           }
           else {
-            html += '<a class="'+activeClass+'title"><i class="dropdown icon"></i> <b>' + $(this).text() + '</b></a>';
+            html += '<a class="'+activeClass+'title"><i class="dropdown icon"></i> <b>' + handler.getText($(this)) + '</b></a>';
           }
           if($examples.length > 0) {
             html += '<div class="'+activeClass+'content menu">';
@@ -367,7 +400,6 @@ semantic.ready = function() {
       $sticky = $('<div />')
         .addClass('ui sticky')
         .html($followMenu)
-        //.prepend($advertisement)
         .prepend('<h3 class="ui header">' + title + '</h3>')
       ;
       if (activeTab !== "") {
@@ -771,7 +803,7 @@ semantic.ready = function() {
             ? $closestExample.prevAll('.example').not('.another').eq(0)
             : $closestExample,
         $header     = $example.find('h4').eq(0),
-        $attributes = $code.find('.attribute, .class'),
+        $attributes = $code.find('.attribute, .class, .attr'),
         $tags       = $code.find('.title'),
         pageName    = handler.getPageTitle(),
         name        = handler.getText($header).toLowerCase(),
@@ -791,24 +823,23 @@ semantic.ready = function() {
       }
       // Add common variations
       classes = classes.replace('text alignment', "left aligned, right aligned, justified, center aligned");
-      classes = classes.replace('floated', "right floated,left floated,floated");
-      classes = classes.replace('floating', "right floated,left floated,floated");
+      classes = classes.replace('floating', "!right floated,!left floated,floated");
       classes = classes.replace('horizontally aligned', "left aligned, center aligned, right aligned, justified");
       classes = classes.replace('vertically aligned', "top aligned, middle aligned, bottom aligned");
       classes = classes.replace('vertically attached', "attached");
       classes = classes.replace('horizontally attached', "attached");
-      classes = classes.replace('padded', "very padded, padded");
-      classes = classes.replace('relaxed', "very relaxed, relaxed");
+      classes = classes.replace('padded', "!very padded, padded");
+      classes = classes.replace('relaxed', "!very relaxed, relaxed");
       classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
-      classes = classes.replace('thin', "very thin, thin");
-      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,very wide,wide");
+      classes = classes.replace('thin', "!very thin, thin");
+      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,!very wide,wide");
       classes = classes.replace('count', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('column count', "one column,two column,three column,four column,five column,six column,seven column,eight column,nine column,ten column,eleven column,twelve column,thirteen column,fourteen column,fifteen column,sixteen column");
       classes = classes.replace('evenly divided', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('size', "mini,tiny,small,medium,large,big,huge,massive");
       classes = classes.replace('position', "left,right,top,bottom");
       classes = classes.replace('emphasis', "primary,secondary,tertiary");
-      classes = classes.replace('colored', "primary,secondary,red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
+      classes = classes.replace('colors', "primary,secondary,red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
       classes = (classes !== '')
         ? classes.split(',')
         : []
@@ -860,7 +891,7 @@ semantic.ready = function() {
           return true;
         }
         $value        = $attribute.next('.value, .string').eq(0);
-        $tag          = $attribute.prev('.title').eq(0);
+        $tag          = $attribute.prev('.title, .name').eq(0);
         tagHTML       = $tag.html();
         html          = $value.html();
         classNames    = html.replace(/\"/g, '').split(' ');
@@ -870,9 +901,22 @@ semantic.ready = function() {
         isOtherUI     = (!isPageElement && isUI);
         isOtherIcon   = (!isPageElement && tagHTML === 'i' && html.search('icon') !== -1);
         // check if any class match
+        // check multi-word classes first
+        classes.sort(function(a,b){
+          var aSpaces = a.split(' ').length - 1,
+              bSpaces = b.split(' ').length - 1;
+          return aSpaces > bSpaces
+            ? -1
+            : aSpaces < bSpaces
+              ? 1
+              : 0;
+        });
         $.each(classes, function(index, string) {
+          html = newHTML || html;
           var
-            className      = string.trim(),
+            className      = string.trim().replace('!',''),
+            orderRequired  = string.trim()[0] === '!',
+            classReg       = new RegExp('<b.*?<\\/b>|(\\b' + className + '\\b)', 'g'),
             isClassMatch   = (html.search(className) !== -1)
           ;
           if(className === '') {
@@ -880,8 +924,9 @@ semantic.ready = function() {
           }
           // class match on current page element (or content if allowed)
           if(isClassMatch && (isPageElement || useContent) ) {
-            newHTML = html.replace(className, '<b title="Required Class">' + className + '</b>');
-            return false;
+            newHTML = html.replace(classReg, function(match, group) {
+                return !group ? match : '<b data-position="right center" data-variation="mini" data-tooltip="'+(orderRequired ? 'Word order r' : 'R')+'equired Class">' + group + '</b>';
+            });
           }
         });
 
@@ -947,7 +992,10 @@ semantic.ready = function() {
           html       : 'HTML',
           javascript : 'Javascript',
           css        : 'CSS',
+          less       : 'LESS',
+          json       : 'JSON',
           text       : 'Command Line',
+          bash       : 'Command Line',
           sh         : 'Command Line'
         },
         padding    = 20,
@@ -994,7 +1042,7 @@ semantic.ready = function() {
       }
 
       // color code
-      formattedCode = window.hljs.highlightAuto(formattedCode);
+      formattedCode = window.hljs.highlight(formattedCode, {language: contentType});
 
       // create <code> tag
       $codeTag
@@ -1131,6 +1179,7 @@ semantic.ready = function() {
   window.hljs.configure({
     classPrefix : '',
     languages   : [
+      'json',
       'xml',
       'bash',
       'css',

@@ -1,7 +1,7 @@
-semantic.dropdown = {};
+semantic.tab = {};
 
 // ready event
-semantic.dropdown.ready = function() {
+semantic.tab.ready = function() {
 
 
   $.fn.api.settings.mockResponse = function(settings) {
@@ -92,5 +92,5 @@ semantic.dropdown.ready = function() {
 
 // attach ready event
 $(document)
-  .ready(semantic.dropdown.ready)
+  .ready(window.setTimeout(semantic.tab.ready,100))
 ;
