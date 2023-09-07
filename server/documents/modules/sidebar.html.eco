@@ -207,22 +207,6 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="no example">
-      <h4 class="ui header">iOS Sidebars</h4>
-      <p>Sidebars use a special fix for iOS that are added using <code>userAgent</code> detection.</p>
-      <p>This should have no meaningful affect on your code, but will prevent the canvas from incorrectly autoresizing when a sidebar opens.</p>
-      <div class="code" data-type="css">
-      html.ios {
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-      }
-      html.ios,
-      html.ios body {
-        height: initial !important;
-      }
-      </div>
-    </div>
-
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
@@ -731,7 +715,6 @@ themes      : ['Default']
               active    : 'active',
               animating : 'animating',
               dimmed    : 'dimmed',
-              ios       : 'ios',
               pushable  : 'pushable',
               pushed    : 'pushed',
               right     : 'right',
@@ -748,7 +731,6 @@ themes      : ['Default']
           <td>
             <div class="code" data-type="javascript">
             regExp: {
-              ios    : /(iPad|iPhone|iPod)/g,
               mobile : /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/g
             }
             </div>
