@@ -154,6 +154,55 @@ themes      : ['Default', 'Colored']
       </div>
     </div>
 
+    <div class="example" data-since="2.9.3" data-use-content="true">
+      <h4 class="ui header">Invisible</h4>
+      <p>An invisible checkbox allows to use text- or image-only check/radioboxes which are styled by using any other component for the checkbox's label tag like <a href="/elements/button.html">button</a>, <a href="/collections/message.html">message</a> or <a href="/elements/segment.html">segment</a></p>
+      <div class="ui ignored info message">
+          Using <code>compact invisible</code> keeps the width to the content
+      </div>
+      <div class="ui form">
+        <div class="grouped fields">
+          <div class="ui invisible checkbox">
+            <input type="radio" id="ex12" name="example">
+            <label for="ex12" class="ui purple button "><b>Option One</b><br/>I am a radio checkbox styled as button when clicked</label>
+          </div>
+          <div class="ui invisible checkbox">
+            <input type="radio" id="ex22" name="example">
+            <label for="ex22" class="ui orange message "><b>Option Two</b><br/>I am a radio checkbox styled as message component when clicked</label>
+          </div>
+          <div class="ui invisible checkbox">
+            <input type="radio" id="ex32" name="example">
+            <label for="ex32" class="ui teal segment"><b>Option Three</b><br/>I am a radio checkbox styled as segment when clicked</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <p>Icons, emojis or flag only need the <code>image</code> class for the label tag. A classic <code>ui image</code> works as well</p>
+      <div class="ui form">
+        <div class="inline fields">
+          <div class="ui invisible checkbox">
+            <input type="checkbox" id="cb12" checked="checked">
+            <label for="cb12" class="image"><i class="ui large germany flag"></i></label>
+          </div>
+          <div class="ui invisible checkbox">
+            <input type="checkbox" id="cb121" checked="checked">
+            <label for="cb121" class="image"><i class="huge ui toilet paper icon"></i></label>
+          </div>
+          <div class="ui invisible checkbox">
+            <input type="checkbox" id="cb22">
+            <label for="cb22" class="image"><em class="large" data-emoji=":wink:"></em></label>
+          </div>
+          <div class="ui invisible checkbox">
+            <input type="checkbox" id="cb32">
+            <label for="cb32" class="ui small image">
+              <img src="/images/avatar/large/ade.jpg">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
 
     <div class="example">
