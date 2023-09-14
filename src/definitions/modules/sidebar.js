@@ -28,15 +28,25 @@
             $html           = $('html'),
             $head           = $('head'),
 
-            moduleSelector  = $allModules.selector || '',
-
             time            = Date.now(),
             performance     = [],
 
             query           = arguments[0],
             methodInvoked   = typeof query === 'string',
             queryArguments  = [].slice.call(arguments, 1),
+            contextCheck    = function (context, win) {
+                var $context;
+                if ([window, document].indexOf(context) >= 0) {
+                    $context = $body;
+                } else {
+                    $context = $(win.document).find(context);
+                    if ($context.length === 0) {
+                        $context = win.frameElement ? contextCheck(context, win.parent) : $body;
+                    }
+                }
 
+                return $context;
+            },
             returnedValue;
 
         $allModules.each(function () {
@@ -55,7 +65,7 @@
                 moduleNamespace = 'module-' + namespace,
 
                 $module         = $(this),
-                $context        = [window, document].indexOf(settings.context) < 0 ? $document.find(settings.context) : $body,
+                $context        = contextCheck(settings.context, window),
                 isBody          = $context[0] === $body[0],
 
                 $sidebars       = $module.children(selector.sidebar),
@@ -69,7 +79,6 @@
                 elementNamespace,
                 id,
                 currentScroll,
-                transitionEvent,
                 initialBodyMargin = '',
                 tempBodyMargin = '',
                 hadScrollbar = false,
@@ -83,8 +92,6 @@
                     module.debug('Initializing sidebar', parameters);
 
                     module.create.id();
-
-                    transitionEvent = module.get.transitionEvent();
 
                     // avoids locking rendering if initialized in onReady
                     if (settings.delaySetup) {
@@ -122,9 +129,6 @@
                         .off(eventNamespace)
                         .removeData(moduleNamespace)
                     ;
-                    if (module.is.ios()) {
-                        module.remove.ios();
-                    }
                     // bound by uuid
                     $context.off(elementNamespace);
                     $window.off(elementNamespace);
@@ -280,7 +284,7 @@
 
                 refresh: function () {
                     module.verbose('Refreshing selector cache');
-                    $context = [window, document].indexOf(settings.context) < 0 ? $document.find(settings.context) : $body;
+                    $context = contextCheck(settings.context, window);
                     module.refreshSidebars();
                     $pusher = $context.children(selector.pusher);
                     $fixed = $context.children(selector.fixed);
@@ -492,13 +496,13 @@
                     };
                     transitionEnd = function (event) {
                         if (event.target === $transition[0]) {
-                            $transition.off(transitionEvent + elementNamespace, transitionEnd);
+                            $transition.off('transitionend' + elementNamespace, transitionEnd);
                             module.remove.animating();
                             callback.call(element);
                         }
                     };
-                    $transition.off(transitionEvent + elementNamespace);
-                    $transition.on(transitionEvent + elementNamespace, transitionEnd);
+                    $transition.off('transitionend' + elementNamespace);
+                    $transition.on('transitionend' + elementNamespace, transitionEnd);
                     requestAnimationFrame(animate);
                     if (settings.dimPage && !module.othersVisible()) {
                         requestAnimationFrame(dim);
@@ -532,7 +536,7 @@
                     };
                     transitionEnd = function (event) {
                         if (event.target === $transition[0]) {
-                            $transition.off(transitionEvent + elementNamespace, transitionEnd);
+                            $transition.off('transitionend' + elementNamespace, transitionEnd);
                             module.remove.animating();
                             module.remove.closing();
                             module.remove.transition();
@@ -546,8 +550,8 @@
                             callback.call(element);
                         }
                     };
-                    $transition.off(transitionEvent + elementNamespace);
-                    $transition.on(transitionEvent + elementNamespace, transitionEnd);
+                    $transition.off('transitionend' + elementNamespace);
+                    $transition.on('transitionend' + elementNamespace, transitionEnd);
                     requestAnimationFrame(animate);
                 },
 
@@ -587,11 +591,6 @@
                         } else {
                             $pusher.removeClass(className.blurring);
                         }
-                    },
-                    // ios only (scroll on html not document). This prevent auto-resize canvas/scroll in ios
-                    // (This is no longer necessary in latest iOS)
-                    ios: function () {
-                        $html.addClass(className.ios);
                     },
 
                     // container
@@ -639,11 +638,6 @@
                         if ($style && $style.length > 0) {
                             $style.remove();
                         }
-                    },
-
-                    // ios scroll on html not document
-                    ios: function () {
-                        $html.removeClass(className.ios);
                     },
 
                     // context
@@ -722,23 +716,6 @@
 
                         return transition;
                     },
-                    transitionEvent: function () {
-                        var
-                            element     = document.createElement('element'),
-                            transitions = {
-                                transition: 'transitionend',
-                                OTransition: 'oTransitionEnd',
-                                MozTransition: 'transitionend',
-                                WebkitTransition: 'webkitTransitionEnd',
-                            },
-                            transition
-                        ;
-                        for (transition in transitions) {
-                            if (element.style[transition] !== undefined) {
-                                return transitions[transition];
-                            }
-                        }
-                    },
                 },
                 has: {
                     scrollbar: function () {
@@ -782,20 +759,6 @@
                         return module.cache.isIE;
                     },
 
-                    ios: function () {
-                        var
-                            userAgent      = navigator.userAgent,
-                            isIOS          = userAgent.match(regExp.ios),
-                            isMobileChrome = userAgent.match(regExp.mobileChrome)
-                        ;
-                        if (isIOS && !isMobileChrome) {
-                            module.verbose('Browser was found to be iOS', userAgent);
-
-                            return true;
-                        }
-
-                        return false;
-                    },
                     mobile: function () {
                         var
                             userAgent    = navigator.userAgent,
@@ -908,7 +871,7 @@
                             });
                         }
                         clearTimeout(module.performance.timer);
-                        module.performance.timer = setTimeout(module.performance.display, 500);
+                        module.performance.timer = setTimeout(function () { module.performance.display(); }, 500);
                     },
                     display: function () {
                         var
@@ -921,9 +884,6 @@
                             totalTime += data['Execution Time'];
                         });
                         title += ' ' + totalTime + 'ms';
-                        if (moduleSelector) {
-                            title += ' \'' + moduleSelector + '\'';
-                        }
                         if (performance.length > 0) {
                             console.groupCollapsed(title);
                             if (console.table) {
@@ -1058,7 +1018,6 @@
             blurring: 'blurring',
             closing: 'closing',
             dimmed: 'dimmed',
-            ios: 'ios',
             locked: 'locked',
             pushable: 'pushable',
             pushed: 'pushed',
@@ -1078,8 +1037,6 @@
         },
 
         regExp: {
-            ios: /(iPad|iPhone|iPod)/g,
-            mobileChrome: /(CriOS)/g,
             mobile: /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/g,
         },
 

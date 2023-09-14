@@ -26,15 +26,25 @@
             $document      = $(document),
             $body          = $('body'),
 
-            moduleSelector = $allModules.selector || '',
-
             time           = Date.now(),
             performance    = [],
 
             query          = arguments[0],
             methodInvoked  = typeof query === 'string',
             queryArguments = [].slice.call(arguments, 1),
+            contextCheck   = function (context, win) {
+                var $context;
+                if ([window, document].indexOf(context) >= 0) {
+                    $context = $body;
+                } else {
+                    $context = $(win.document).find(context);
+                    if ($context.length === 0) {
+                        $context = win.frameElement ? contextCheck(context, win.parent) : $body;
+                    }
+                }
 
+                return $context;
+            },
             returnedValue
         ;
 
@@ -54,7 +64,7 @@
                 moduleNamespace = 'module-' + namespace,
 
                 $module         = $(this),
-                $context        = [window, document].indexOf(settings.context) < 0 ? $document.find(settings.context) : $body,
+                $context        = contextCheck(settings.context, window),
                 isBody          = $context[0] === $body[0],
                 $closeIcon      = $module.find(selector.closeIcon),
                 $inputs,
@@ -78,10 +88,12 @@
                 tempBodyMargin = '',
                 keepScrollingClass = false,
                 hadScrollbar = false,
+                windowRefocused = false,
 
                 elementEventNamespace,
                 id,
                 observer,
+                observeAttributes = false,
                 module
             ;
             module = {
@@ -240,6 +252,7 @@
                         .off(eventNamespace)
                     ;
                     $window.off(elementEventNamespace);
+                    $context.off(elementEventNamespace);
                     $dimmer.off(elementEventNamespace);
                     $closeIcon.off(elementEventNamespace);
                     if ($inputs) {
@@ -261,11 +274,12 @@
                                     return nodes;
                                 },
                                 shouldRefresh = false,
-                                shouldRefreshInputs = false
+                                shouldRefreshInputs = false,
+                                ignoreAutofocus = true
                             ;
                             mutations.every(function (mutation) {
                                 if (mutation.type === 'attributes') {
-                                    if (mutation.attributeName === 'disabled' || $(mutation.target).find(':input').addBack(':input')) {
+                                    if (observeAttributes && (mutation.attributeName === 'disabled' || $(mutation.target).find(':input').addBack(':input').filter(':visible').length > 0)) {
                                         shouldRefreshInputs = true;
                                     }
                                 } else {
@@ -276,6 +290,9 @@
                                         $removedInputs = $(collectNodes(mutation.removedNodes)).filter('a[href], [tabindex], :input');
                                     if ($addedInputs.length > 0 || $removedInputs.length > 0) {
                                         shouldRefreshInputs = true;
+                                        if ($addedInputs.filter(':input').length > 0 || $removedInputs.filter(':input').length > 0) {
+                                            ignoreAutofocus = false;
+                                        }
                                     }
                                 }
 
@@ -287,7 +304,7 @@
                                 module.refresh();
                             }
                             if (shouldRefreshInputs) {
-                                module.refreshInputs();
+                                module.refreshInputs(ignoreAutofocus);
                             }
                         });
                         observer.observe(element, {
@@ -315,7 +332,7 @@
                     $allModals = $otherModals.add($module);
                 },
 
-                refreshInputs: function () {
+                refreshInputs: function (ignoreAutofocus) {
                     if ($inputs) {
                         $inputs
                             .off('keydown' + elementEventNamespace)
@@ -324,10 +341,11 @@
                     $inputs = $module.find('a[href], [tabindex], :input:enabled').filter(':visible').filter(function () {
                         return $(this).closest('.disabled').length === 0;
                     });
-                    $module.removeAttr('tabindex');
-                    if ($inputs.length === 0) {
-                        $inputs = $module;
+                    if ($inputs.filter(':input').length === 0) {
+                        $inputs = $module.add($inputs);
                         $module.attr('tabindex', -1);
+                    } else {
+                        $module.removeAttr('tabindex');
                     }
                     $inputs.first()
                         .on('keydown' + elementEventNamespace, module.event.inputKeyDown.first)
@@ -335,7 +353,7 @@
                     $inputs.last()
                         .on('keydown' + elementEventNamespace, module.event.inputKeyDown.last)
                     ;
-                    if (settings.autofocus && $inputs.filter(':focus').length === 0) {
+                    if (!ignoreAutofocus && settings.autofocus && $inputs.filter(':focus').length === 0) {
                         module.set.autofocus();
                     }
                 },
@@ -372,6 +390,9 @@
                         $window
                             .on('resize' + elementEventNamespace, module.event.resize)
                             .on('focus' + elementEventNamespace, module.event.focus)
+                        ;
+                        $context
+                            .on('click' + elementEventNamespace, module.event.click)
                         ;
                     },
                     scrollLock: function () {
@@ -506,7 +527,7 @@
                     },
                     debounce: function (method, delay) {
                         clearTimeout(module.timer);
-                        module.timer = setTimeout(method, delay);
+                        module.timer = setTimeout(function () { method(); }, delay);
                     },
                     keyboard: function (event) {
                         var
@@ -530,9 +551,13 @@
                         }
                     },
                     focus: function () {
-                        if ($dimmable.dimmer('is active') && module.is.active() && settings.autofocus) {
+                        windowRefocused = true;
+                    },
+                    click: function (event) {
+                        if (windowRefocused && document.activeElement !== event.target && $dimmable.dimmer('is active') && module.is.active() && settings.autofocus && $(document.activeElement).closest(selector.modal).length === 0) {
                             requestAnimationFrame(module.set.autofocus);
                         }
+                        windowRefocused = false;
                     },
                 },
 
@@ -597,15 +622,16 @@
                             ignoreRepeatedEvents = false;
                             if (settings.allowMultiple) {
                                 if (module.others.active()) {
-                                    $otherModals.filter('.' + className.active).find(selector.dimmer).addClass('active');
+                                    $otherModals.filter('.' + className.active).find(selector.dimmer).removeClass('out').addClass('transition fade in active');
                                 }
 
                                 if (settings.detachable) {
                                     $module.detach().appendTo($dimmer);
                                 }
                             }
-                            if (settings.transition && $.fn.transition !== undefined && $module.transition('is supported')) {
+                            if (settings.transition && $.fn.transition !== undefined) {
                                 module.debug('Showing modal with css animations');
+                                module.set.observeAttributes(false);
                                 $module
                                     .transition({
                                         debug: settings.debug,
@@ -623,6 +649,7 @@
                                             module.save.focus();
                                             module.set.active();
                                             module.refreshInputs();
+                                            requestAnimationFrame(module.set.observeAttributes);
                                             callback();
                                         },
                                     })
@@ -652,8 +679,9 @@
 
                     if (module.is.animating() || module.is.active()) {
                         module.debug('Hiding modal');
-                        if (settings.transition && $.fn.transition !== undefined && $module.transition('is supported')) {
+                        if (settings.transition && $.fn.transition !== undefined) {
                             module.remove.active();
+                            module.set.observeAttributes(false);
                             $module
                                 .transition({
                                     debug: settings.debug,
@@ -666,6 +694,8 @@
                                     onStart: function () {
                                         if (!module.others.active() && !module.others.animating() && !keepDimmed) {
                                             module.hideDimmer();
+                                        } else if (settings.allowMultiple) {
+                                            (hideOthersToo ? $allModals : $previousModal).find(selector.dimmer).removeClass('in').addClass('out');
                                         }
                                         if (settings.keyboardShortcuts && !module.others.active()) {
                                             module.remove.keyboardShortcuts();
@@ -673,15 +703,12 @@
                                     },
                                     onComplete: function () {
                                         module.unbind.scrollLock();
+                                        module.remove.active();
                                         if (settings.allowMultiple) {
                                             $previousModal.addClass(className.front);
                                             $module.removeClass(className.front);
 
-                                            if (hideOthersToo) {
-                                                $allModals.find(selector.dimmer).removeClass('active');
-                                            } else {
-                                                $previousModal.find(selector.dimmer).removeClass('active');
-                                            }
+                                            (hideOthersToo ? $allModals : $previousModal).find(selector.dimmer).removeClass('active');
                                         }
                                         if (isFunction(settings.onHidden)) {
                                             settings.onHidden.call(element);
@@ -988,9 +1015,7 @@
                         return module.cache.isIE;
                     },
                     animating: function () {
-                        return $module.transition('is supported')
-                            ? $module.transition('is animating')
-                            : $module.is(':visible');
+                        return $module.transition('is animating');
                     },
                     scrolling: function () {
                         return $dimmable.hasClass(className.scrolling);
@@ -1033,24 +1058,21 @@
                 },
 
                 set: {
+                    observeAttributes: function (state) {
+                        observeAttributes = state !== false;
+                    },
                     autofocus: function () {
                         var
                             $autofocus = $inputs.filter('[autofocus]'),
                             $rawInputs = $inputs.filter(':input'),
-                            $input     = $autofocus.length > 0
-                                ? $autofocus.first()
+                            $input     = ($autofocus.length > 0
+                                ? $autofocus
                                 : ($rawInputs.length > 0
                                     ? $rawInputs
-                                    : $inputs.filter(':not(i.close)')
-                                ).first()
+                                    : $module)
+                            ).first()
                         ;
-                        // check if only the close icon is remaining
-                        if ($input.length === 0 && $inputs.length > 0) {
-                            $input = $inputs.first();
-                        }
-                        if ($input.length > 0) {
-                            $input.trigger('focus');
-                        }
+                        $input.trigger('focus');
                     },
                     bodyMargin: function () {
                         var position = module.can.leftBodyScrollbar() ? 'left' : 'right';
@@ -1251,7 +1273,7 @@
                             });
                         }
                         clearTimeout(module.performance.timer);
-                        module.performance.timer = setTimeout(module.performance.display, 500);
+                        module.performance.timer = setTimeout(function () { module.performance.display(); }, 500);
                     },
                     display: function () {
                         var
@@ -1264,9 +1286,6 @@
                             totalTime += data['Execution Time'];
                         });
                         title += ' ' + totalTime + 'ms';
-                        if (moduleSelector) {
-                            title += ' \'' + moduleSelector + '\'';
-                        }
                         if (performance.length > 0) {
                             console.groupCollapsed(title);
                             if (console.table) {
