@@ -258,7 +258,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example" data-since="2.9.4">
     <h4 class="ui header">Seamless attached</h4>
-    <p>A top header can be seamless attached removing it's bottom border.</p>
+    <p>A header can be seamless attached at the top or bottom removing its related attached border.</p>
     <h3 class="ui seamless top attached header">
       Seamless Top Attached
     </h3>
@@ -271,8 +271,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     <div class="ui attached segment">
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
-    <h3 class="ui bottom attached header">
-      Bottom Attached
+    <h3 class="ui seamless bottom attached header">
+      Seamless Bottom Attached
     </h3>
   </div>
 
