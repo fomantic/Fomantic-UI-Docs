@@ -256,6 +256,26 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     </h3>
   </div>
 
+  <div class="example" data-since="2.9.4">
+    <h4 class="ui header">Seamless attached</h4>
+    <p>A top header can be seamless attached removing it's bottom border.</p>
+    <h3 class="ui seamless top attached header">
+      Seamless Top Attached
+    </h3>
+    <div class="ui attached segment">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+    <h3 class="ui attached header">
+      Attached
+    </h3>
+    <div class="ui attached segment">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+    <h3 class="ui bottom attached header">
+      Bottom Attached
+    </h3>
+  </div>
+
   <div class="example" data-class="!left floated,!right floated" data-use-content="true">
     <h4 class="ui header">Floating</h4>
     <p>A header can sit to the left or right of other content</p>
