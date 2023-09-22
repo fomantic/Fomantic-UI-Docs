@@ -281,7 +281,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
     <h3 class="ui bottom attached header">
-      Bottom Attached
+      Seamless Bottom Attached
     </h3>
   </div>
 
