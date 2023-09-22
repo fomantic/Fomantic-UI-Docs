@@ -258,21 +258,30 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example" data-since="2.9.4">
     <h4 class="ui header">Seamless attached</h4>
-    <p>A header can be seamless attached at the top or bottom removing its related attached border.</p>
+    <p>A top header can be seamless attached without related attached border.</p>
     <h3 class="ui seamless top attached header">
       Seamless Top Attached
     </h3>
     <div class="ui attached segment">
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
-    <h3 class="ui attached header">
-      Attached
-    </h3>
     <div class="ui attached segment">
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
-    <h3 class="ui seamless bottom attached header">
-      Seamless Bottom Attached
+  </div>
+
+  <div class="example" data-since="2.9.4">
+    <div class="ui ignore warning message">
+      This variant is not available for the bottom header which doesn't have the attached border. In order to get seamless effect for the bottom header, make the previous attached element as seamless.
+    </div>
+    <div class="ui attached segment">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+    <div class="ui seamless attached segment">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+    <h3 class="ui bottom attached header">
+      Bottom Attached
     </h3>
   </div>
 
