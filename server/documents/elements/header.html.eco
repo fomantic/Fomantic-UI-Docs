@@ -256,7 +256,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     </h3>
   </div>
 
-  <div class="example" data-since="2.9.4">
+  <div class="example" data-since="2.9.4" data-class="seamless,attached">
     <h4 class="ui header">Seamless attached</h4>
     <p>A top header can be seamless attached without related attached border.</p>
     <h3 class="ui seamless top attached header">
@@ -270,8 +270,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     </div>
   </div>
 
-  <div class="example" data-since="2.9.4">
-    <div class="ui ignore warning message">
+  <div class="another example" data-class="seamless,attached">
+    <div class="ui ignored warning message">
       This variant is not available for the bottom header which doesn't have the attached border. In order to get seamless effect for the bottom header, make the previous attached element as seamless.
     </div>
     <div class="ui attached segment">
