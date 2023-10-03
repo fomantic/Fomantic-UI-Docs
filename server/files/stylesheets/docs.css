@@ -1616,6 +1616,9 @@ code:hover .django .tag .keyword {
   color: #892A6F;
   font-weight: normal;
 }
+.item:hover svg g{
+fill-opacity:1;
+}
 
 /* HTML Tag */
 code .tag .title {
