@@ -38,8 +38,17 @@ p:last-child {
 footer.footer {
   padding: 4em 1em !important;
 }
-.footer .ui.link.list > .item:hover svg g{
-  fill-opacity:1;
+.footer .ui.link.list > .item svg {
+  width: 0.7em;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  fill: rgba(0,0,0,0.4);
+  transition: 0.1s fill ease;
+}
+.footer .ui.link.list > .item:hover svg {
+fill: rgba(0,0,0,0.8);
 }
 /*--------------
      Code
@@ -1603,7 +1612,6 @@ code .javadoc {
   font-style: italic;
 }
 
-
 /* Properties */
 code .tag,
 code .rules .property,
@@ -1618,7 +1626,6 @@ code:hover .django .tag .keyword {
   color: #892A6F;
   font-weight: normal;
 }
- 
 /* HTML Tag */
 code .tag .title {
   color: #858188;
