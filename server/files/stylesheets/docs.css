@@ -38,6 +38,17 @@ p:last-child {
 footer.footer {
   padding: 4em 1em !important;
 }
+.footer .ui.link.list > .item svg {
+  width: 0.7em;
+  height: auto;
+  margin-left: 0.2em;
+  margin-right: 0.3em;
+  fill: rgba(0,0,0,0.4);
+  transition: 0.1s fill ease;
+}
+.footer .ui.link.list > .item:hover svg {
+  fill: rgba(0,0,0,0.8);
+}
 
 /*--------------
      Code
@@ -1600,7 +1611,6 @@ code .javadoc {
   color: #AAAAAA;
   font-style: italic;
 }
-
 
 /* Properties */
 code .tag,
