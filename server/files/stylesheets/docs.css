@@ -42,7 +42,6 @@ footer.footer {
   width: 0.7em;
   height: auto;
   vertical-align: middle;
-  margin-left: 0.25em;
   margin-right: 0.25em;
   fill: rgba(0,0,0,0.4);
   transition: 0.1s fill ease;
