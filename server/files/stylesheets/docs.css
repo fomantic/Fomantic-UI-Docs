@@ -41,8 +41,7 @@ footer.footer {
 .footer .ui.link.list > .item svg {
   width: 0.7em;
   height: auto;
-  vertical-align: middle;
-  margin-right: 0.25em;
+  margin-right: 0.30em;
   fill: rgba(0,0,0,0.4);
   transition: 0.1s fill ease;
 }
