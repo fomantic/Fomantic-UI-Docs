@@ -48,7 +48,7 @@ footer.footer {
   transition: 0.1s fill ease;
 }
 .footer .ui.link.list > .item:hover svg {
-fill: rgba(0,0,0,0.8);
+  fill: rgba(0,0,0,0.8);
 }
 /*--------------
      Code
