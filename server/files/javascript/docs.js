@@ -27,22 +27,16 @@ semantic.ready = function() {
 
   // selector cache
   var
-    $document            = $(document),
-    $sortableTables      = $('.sortable.table'),
     $sticky              = $('.ui.sticky'),
 
     $themeDropdown       = $('.theme.dropdown'),
 
-    $ui                  = $('.ui').not('.hover, .down'),
     $swap                = $('.theme.menu .item'),
     $menu                = $('#toc'),
-    $hideMenu            = $('#toc .hide.item'),
     $search              = $('#search'),
     $sortTable           = $('.sortable.table'),
     $demo                = $('.demo'),
-    $begSegment          = $('.beg.segment'),
 
-    $fullHeightContainer = $('.pusher > .full.height'),
     $container           = $('.main.container'),
     $allHeaders          = $('.main.container > h2, .main.container > .tab > h2, .main.container > .tab > .examples h2'),
     $sectionHeaders      = $container.children('h2'),
@@ -71,8 +65,6 @@ semantic.ready = function() {
 
     $visibilityExample   = $example.filter('.visiblity').find('.overlay, .demo.segment, .items img'),
 
-
-    $sidebarButton       = $('.fixed.launch.button'),
     $code                = $('div.code').not('.existing'),
     $existingCode        = $('.existing.code'),
 
@@ -169,7 +161,7 @@ semantic.ready = function() {
         .visibility({
           observeChanges: false,
           once: false,
-          onBottomVisible: function(calculations) {
+          onBottomVisible: function() {
             var
               $title = $followMenu.find('> .item > .title').last()
             ;
@@ -240,7 +232,7 @@ semantic.ready = function() {
       }
     },
 
-    tryCreateMenu: function(event) {
+    tryCreateMenu: function() {
       if($(window).width() > 640 && !$('body').hasClass('basic')) {
         if($container.length > 0 && $container.find('.following.menu').length === 0) {
           handler.createMenu();
@@ -304,7 +296,7 @@ semantic.ready = function() {
               var $el = $(this),
                   since = $el.data('since');
               $el.append(handler.createNewInLabel(since,'tiny horizontal'));
-          })
+          });
         })
       ;
       $tableSinceCells.each(function(){
@@ -362,8 +354,7 @@ semantic.ready = function() {
               : '',
             text     = handler.getText($currentHeader),
             safeName = handler.getSafeName(text),
-            id       = window.escape(safeName),
-            $anchor  = $('<a />').addClass('anchor').attr('id', id)
+            id       = window.escape(safeName)
           ;
           html += '<div class="item">';
           if($examples.length === 0) {
@@ -380,8 +371,7 @@ semantic.ready = function() {
                   $title   = $(this).children('h4').eq(0),
                   text     = handler.getText($title),
                   safeName = handler.getSafeName(text),
-                  id       = window.escape(safeName),
-                  $anchor  = $('<a />').addClass('anchor').attr('id', id)
+                  id       = window.escape(safeName)
                 ;
                 if($title.length > 0) {
                   html += '<a class="item" href="#'+id+'">' + text + '</a>';
@@ -468,7 +458,7 @@ semantic.ready = function() {
             // clear whitespace
             line = line.trim();
             // match variables only
-            if(line[0] == '@') {
+            if(line[0] === '@') {
               name = line.match(/^@(.+?):/);
               value = line.match(/:\s*([\s|\S]+?;)/);
               if( (Array.isArray(name) && name.length >= 2) && (Array.isArray(value) && value.length >= 2) ) {
@@ -479,7 +469,7 @@ semantic.ready = function() {
             }
           });
         }
-        console.log(variables);
+
         return variables;
       },
 
@@ -517,10 +507,10 @@ semantic.ready = function() {
                   dataType : 'text',
                   urlData  : urlData,
                   onSuccess: function(content) {
-                    if( $('style.override').length > 0 ) {
-                      $('style.override').remove();
+                    var styleOverride = $('style.override');
+                    if( styleOverride.length > 0 ) {
+                        styleOverride.remove();
                     }
-                    console.log(content);
                     $('<style>' + content + '</style>')
                       .addClass('override')
                       .appendTo('body')
@@ -534,47 +524,6 @@ semantic.ready = function() {
         ;
       }
 
-    },
-
-    create: {
-      examples: function(json) {
-        var
-          types      = json['Types'],
-          text       = json['Text'],
-          states     = json['States'],
-          variations = json['Variations'],
-
-          $element,
-          html
-        ;
-        $.each(types, function(name, type){
-          html += '<h2 class="ui dividing header">' + name + '</h2';
-          if($.isPlainObject(type)) {
-            $.each(type, function(name, subType) {
-              $element = $.zc(subType);
-              $element = handler.create.text($element, text);
-              html += '<h3 class="ui header">' + name + '</h3';
-              html += handler.create.variations($element, variations);
-            });
-          }
-          else {
-            $element = $.zc(type);
-            $element = handler.create.text($element);
-            html += handler.create.variations($element, variations);
-          }
-        });
-      },
-      variations: function($element, variations) {
-        $.each(variations, function(name, variation){
-
-        });
-      },
-      text: function($element, text) {
-        $.each(text, function(selector, text) {
-          $element.find(selector).text(text);
-        });
-        return $element;
-      }
     },
 
     getIndent: function(text) {
@@ -828,10 +777,7 @@ semantic.ready = function() {
       classes = classes.replace('vertically aligned', "top aligned, middle aligned, bottom aligned");
       classes = classes.replace('vertically attached', "attached");
       classes = classes.replace('horizontally attached', "attached");
-      classes = classes.replace('padded', "!very padded, padded");
-      classes = classes.replace('relaxed', "!very relaxed, relaxed");
       classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
-      classes = classes.replace('thin', "!very thin, thin");
       classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,!very wide,wide");
       classes = classes.replace('count', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('column count', "one column,two column,three column,four column,five column,six column,seven column,eight column,nine column,ten column,eleven column,twelve column,thirteen column,fourteen column,fifteen column,sixteen column");
@@ -943,7 +889,7 @@ semantic.ready = function() {
               className = string.replace('"', '')
             ;
             // yep..
-            if(className == 'item') {
+            if(className === 'item') {
               return;
             }
             if(metadata && metadata[className] && metadata[className].url) {
@@ -977,7 +923,6 @@ semantic.ready = function() {
         $code         = $(this).show(),
         $codeTag      = $('<code />'),
         code          = $code.html(),
-        existingCode  = $code.hasClass('existing'),
         evaluatedCode = $code.hasClass('evaluated'),
         contentType   = $code.data('type')     || 'html',
         title         = $code.data('title')    || false,
@@ -998,24 +943,12 @@ semantic.ready = function() {
           bash       : 'Command Line',
           sh         : 'Command Line'
         },
-        padding    = 20,
         name = (codeSample === true)
           ? 'instructive bottom attached'
           : 'existing',
-        formattedCode = code,
-        styledCode,
-        $example,
-        $label,
-        codeHeight
+        formattedCode = code
       ;
-      var entityMap = {
-        "&amp;"  : "&",
-        "&lt;"   : "<",
-        "&gt;"   : ">",
-        '&quot;' : '"',
-        '&#39;'  : "'",
-        '&#x2F;' : "/"
-      };
+
       contentType = contentType.toLowerCase();
 
       function escapeHTML(string) {
@@ -1024,7 +957,7 @@ semantic.ready = function() {
 
 
       // escape html entities
-      if(contentType != 'html' || escape) {
+      if(contentType !== 'html' || escape) {
         code = escapeHTML(code);
       }
 
@@ -1058,7 +991,7 @@ semantic.ready = function() {
         .wrap('<pre></pre>')
       ;
 
-      if(contentType == 'html') {
+      if(contentType === 'html') {
         // add class emphasis to used classes
         handler.highlightClasses($code);
       }

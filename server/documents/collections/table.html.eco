@@ -1942,7 +1942,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tbody>
     </table>
   </div>
-  <div class="another example">
+  <div class="another example" data-class="!very padded">
     <table class="ui very padded table">
       <thead>
         <tr>
