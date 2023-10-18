@@ -652,7 +652,7 @@ themes      : ['Default']
       </div>
     </div>
   </div>
-  <div class="another example">
+  <div class="another example" data-class="!very relaxed">
     <div class="ui very relaxed list">
       <div class="item">
         <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
@@ -677,7 +677,7 @@ themes      : ['Default']
       </div>
     </div>
   </div>
-  <div class="another example">
+  <div class="another example" data-class="!very relaxed">
     <div class="ui very relaxed horizontal list">
       <div class="item">
         <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">

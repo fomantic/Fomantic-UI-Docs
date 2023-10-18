@@ -496,7 +496,7 @@ themes      : ['Default']
       </div>
     </div>
   </div>
-  <div class="another example">
+  <div class="another example" data-class="!very relaxed">
     <div class="ui very relaxed items">
       <div class="item">
         <div class="ui tiny image">
