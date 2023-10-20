@@ -7,7 +7,7 @@ element     : 'State'
 elementType : 'behavior'
 
 title       : 'State'
-description : 'State allows elements to trigger actions on a server'
+description : 'State is a simple state machine for controlling the look and feel of an element based on what state it occupies'
 type        : 'UI Behavior'
 ---
 
@@ -16,6 +16,19 @@ type        : 'UI Behavior'
 
 <div class="main ui container">
   <div class="ui active intro tab" data-tab="overview">
+
+    <div class="no example">
+      <h2 class="ui dividing header">Description</h2>
+      <p>State allows you to do things like
+        <ul class="ui large list">
+            <li>Tie loading state to AJAX requests</li>
+            <li>Tie text to different states, so for example having a button go from `Follow to Followed to Unfollow`` on hover depending on its current state</li>
+            <li>Tie multiple elements state to each other, for example, automatically having all `follow` buttons activate on a page after a successfully activating one button.</li>
+            <li>Give activate/deactivate test functions which give criteria to allow or reject an item 'activating'</li>
+            <li>Handle correctly removing/adding class names signifying states without having to have garbled `addClass` `removeClass` sprinkled over your site</li>
+        </ul>
+      </p>
+    </div>
 
     <div class="test example">
       <h4 class="ui header">Activate Elements Programmatically</h4>
@@ -55,92 +68,92 @@ type        : 'UI Behavior'
       </thead>
       <tbody>
         <tr>
-          <td>query</td>
-          <td>Execute query using existing State settings</td>
+          <td>is active</td>
+          <td>Returns whether element state is active</td>
         </tr>
         <tr>
-          <td>add url data(url, data)</td>
-          <td>Adds data to existing templated url and returns full url string</td>
+          <td>is inactive</td>
+          <td>Returns whether element state is inactive</td>
         </tr>
         <tr>
-          <td>get request</td>
-          <td>Gets promise for current State request</td>
+          <td>is state(type)</td>
+          <td>Checks the element for specific state, given by a string name</td>
         </tr>
         <tr>
-          <td>abort</td>
-          <td>Aborts current State request</td>
-        </tr>
-        <tr>
-          <td>reset</td>
-          <td>Removes loading and error state from element</td>
-        </tr>
-        <tr>
-          <td>was cancelled</td>
-          <td>Returns whether last request was cancelled</td>
-        </tr>
-        <tr>
-          <td>was failure</td>
-          <td>Returns whether last request was failure</td>
-        </tr>
-        <tr>
-          <td>was successful</td>
-          <td>Returns whether last request was successful</td>
-        </tr>
-        <tr>
-          <td>was complete</td>
-          <td>Returns whether last request was completed</td>
+          <td>is enabled</td>
+          <td>Returns whether element is enabled</td>
         </tr>
         <tr>
           <td>is disabled</td>
           <td>Returns whether element is disabled</td>
         </tr>
         <tr>
-          <td>is mocked</td>
-          <td>Returns whether element response is mocked</td>
-        </tr>
-        <tr>
           <td>is loading</td>
           <td>Returns whether element is loading</td>
         </tr>
         <tr>
-          <td>set loading</td>
-          <td>Sets loading state to element</td>
+          <td>is textEnabled</td>
+          <td>Returns whether element is capable to show text which could be changed by stages</td>
         </tr>
         <tr>
-          <td>set error</td>
-          <td>Sets error state to element</td>
+          <td>is button</td>
+          <td>Returns whether element is a <a href="/elements/button.html">progress</a></td>
         </tr>
         <tr>
-          <td>remove loading</td>
-          <td>Removes loading state to element</td>
+          <td>is input</td>
+          <td>Returns whether element is a n<a href="/elements/input.html">progress</a></td>
         </tr>
         <tr>
-          <td>remove error</td>
-          <td>Removes error state to element</td>
+          <td>is progress</td>
+          <td>Returns whether element is a <a href="/modules/progress.html">progress</a></td>
         </tr>
         <tr>
-          <td>get event</td>
-          <td>Gets event that State request will occur on</td>
+          <td>allows(state)</td>
+          <td>Checks is a specific state, given by a string name, is currently allowed to be changed</td>
         </tr>
         <tr>
-          <td>get url encoded value(value)</td>
-          <td>Returns <code>encodeURIComponent</code> value only if value passed is not already encoded
+          <td>allow(state)</td>
+          <td>Allow change of element state, given by a string name</td>
         </tr>
         <tr>
-          <td>read cached response(url)</td>
-          <td>Reads a locally cached response for a URL</td>
+          <td>disallow(state)</td>
+          <td>Disallow change of element state, given by a string name</td>
         </tr>
         <tr>
-          <td>write cached response(url, response)</td>
-          <td>Writes a cached response for a URL</td>
+          <td>enable</td>
+          <td>Set element as enabled</td>
         </tr>
         <tr>
-          <td>create cache</td>
-          <td>Creates new cache, removing all locally cached URLs</td>
+          <td>disable</td>
+          <td>Set element as disabled</td>
+        </tr>
+        <tr>
+          <td>set state(state)</td>
+          <td>Sets a specific state, given by a string name</td>
+        </tr>
+        <tr>
+          <td>remove state(state)</td>
+          <td>Removes a specific state, given by a string name</td>
+        </tr>
+        <tr>
+          <td>change state</td>
+          <td>Toggles between active/inactive state immediatly without any checks</td>
+        </tr>
+        <tr>
+          <td>toggle state</td>
+          <td>Toggles between active/inactive state but checks if element is active and uses a possible attached <a href="/behaviors/api.html">api</a></td>
+        </tr>
+        <tr>
+          <td>flash text(text, duration, callback)</td>
+          <td>Changes the elements text for a optional given amount of time. After that, reverts the text to the previous value and optionally calls a given callback function</td>
+        </tr>
+        <tr>
+          <td>refresh</td>
+          <td>Refreshes cached selectors</td>
         </tr>
         <tr>
           <td>destroy</td>
-          <td>Removes State settings from the page and all events</td>
+          <td>Removes State settings from the element and all events</td>
         </tr>
       </tbody>
     </table>
@@ -150,16 +163,13 @@ type        : 'UI Behavior'
 
 
   <div class="ui tab" data-tab="settings">
-    <h2 class="ui dividing header">
-      State
-    </h2>
 
-    <h4 class="ui header">
+    <h2 class="ui header">
       Behavior
-    </h4>
+    </h2>
     <table class="ui sortable celled definition table">
       <thead>
-        <th class="three wide"></th>
+        <th class="three wide">Setting</th>
         <th class="three wide">Default</th>
         <th>Description</th>
       </thead>
@@ -180,6 +190,18 @@ type        : 'UI Behavior'
           <td>Default duration to show text when using <code>flash text</code>.</td>
         </tr>
         <tr>
+          <td>filter</td>
+          <td>
+          <div class="code" data-type="javascript">
+            filter: {
+                text: '.loading, .disabled',
+                active: '.disabled',
+            }
+          </div>
+          </td>
+          <td>Selector filter to recognize element states which cannot be changed</code></td>
+        </tr>
+        <tr>
           <td>context</td>
           <td>false</td>
           <td>When set to a selector, will use a delegated pattern to bind events from this element.</td>
@@ -187,129 +209,41 @@ type        : 'UI Behavior'
       </tbody>
     </table>
 
-    <h4 class="ui header">
-      Request Settings
-    </h4>
-    <table class="ui sortable celled definition table">
-      <thead>
-        <th class="three wide"></th>
-        <th class="three wide">Default</th>
-        <th>Description</th>
-        <th>Possible Values</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>action</td>
-          <td>false</td>
-          <td>Named State action for query, originally specified in $.fn.settings.state</td>
-          <td>String or false</td>
-        </tr>
-        <tr>
-          <td>url</td>
-          <td>false</td>
-          <td>Templated URL for query, will override specified action</td>
-          <td>String or false</td>
-        </tr>
-        <tr>
-          <td>urlData</td>
-          <td>false</td>
-          <td>Variables to use for replacement</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>mockResponse</td>
-          <td>false</td>
-          <td>Can be set to a javascript object which will be returned automatically instead of requesting JSON from server </td>
-          <td>{} or false</td>
-        </tr>
-        <tr>
-          <td>mockResponseAsync(settings, callback)</td>
-          <td>false</td>
-          <td>When specified, this function can be used to retrieve content from a server and return it asynchronously <b>instead of</b> a standard AJAX call. The callback function should return the server response.</td>
-          <td>function or false</td>
-        </tr>
-        <tr>
-          <td>method</td>
-          <td>get</td>
-          <td>Method for transmitting request to server</td>
-          <td>post, get</td>
-        </tr>
-        <tr>
-          <td>dataType</td>
-          <td>JSON</td>
-          <td>Expected data type of response </td>
-          <td>xml, json, jsonp, script, html, text</td>
-        </tr>
-        <tr>
-          <td>data</td>
-          <td>{}</td>
-          <td>POST/GET Data to Send with Request</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h4 class="ui header">
+    <h2 class="ui header">
       Callbacks
-    </h4>
+    </h2>
 
     <table class="ui sortable celled definition table">
       <thead>
-        <th class="three wide"></th>
+        <th class="three wide">Setting</th>
         <th class="three wide">Context</th>
         <th>Description</th>
       </thead>
       <tbody>
         <tr>
-          <td>beforeSend(settings)</td>
+          <td>activateTest</td>
           <td>initialized element</td>
-          <td>Allows modifying settings before request, or cancelling request</td>
+          <td>Called before a state is activated. Return false to cancel state activation</td>
         </tr>
         <tr>
-          <td>beforeXHR(xhrObject)</td>
-          <td></td>
-          <td>Allows modifying XHR object for request</td>
+          <td>deactivateTest</td>
+          <td>initialized element</td>
+          <td>Called before a state is deactivated. Return false to cancel state deactivation</td>
         </tr>
         <tr>
-          <td>onRequest(promise, xhr)</td>
-          <td>state context</td>
-          <td>Callback that occurs when request is made. Receives both the state success promise and the xhr request promise.</td>
+          <td>onActivate</td>
+          <td>initialized element</td>
+          <td>Call when state was activated</td>
         </tr>
         <tr>
-          <td>onResponse(response)</td>
-          <td>state context</td>
-          <td>Allows modifying the server's response before parsed by other callbacks to determine State event success</td>
+          <td>onDeactivate</td>
+          <td>initialized element</td>
+          <td>Call when state was deactivated</td>
         </tr>
         <tr>
-          <td>successTest(response)</td>
-          <td></td>
-          <td>Determines whether completed JSON response should be <a href="#determining-json-success">treated as successful</a>
-          </td>
-        </tr>
-        <tr>
-          <td>onSuccess(response, element, xhr)</td>
-          <td>state context</td>
-          <td>Callback after successful response, JSON response must pass <code>successTest</code></td>
-        </tr>
-        <tr>
-          <td>onComplete(response, element, xhr)</td>
-          <td>state context</td>
-          <td>Callback on request complete regardless of conditions</td>
-        </tr>
-        <tr>
-          <td>onFailure(response, element)</td>
-          <td>state context</td>
-          <td>Callback on failed response, or JSON response that fails <code>successTest</code></td>
-        </tr>
-        <tr>
-          <td>onError(errorMessage, element, xhr)</td>
-          <td>state context</td>
-          <td>Callback on server error from returned status code, or XHR failure.</td>
-        </tr>
-        <tr>
-          <td>onAbort(errorMessage, element, xhr)</td>
-          <td>state context</td>
-          <td>Callback on abort caused by user clicking a link or manually cancelling request.</td>
+          <td>onChange</td>
+          <td>initialized element</td>
+          <td>Called after a state has changed</td>
         </tr>
       </tbody>
     </table>
@@ -322,7 +256,7 @@ type        : 'UI Behavior'
 
     <table class="ui sortable celled definition table">
       <thead>
-        <th></th>
+        <th>Setting</th>
         <th class="six wide">Default</th>
         <th>Description</th>
       </thead>
@@ -375,6 +309,39 @@ type        : 'UI Behavior'
             </div>
           </td>
           <td>Class names used to determine element state</td>
+        </tr>
+        <tr>
+          <td>states</td>
+          <td>
+            <div class="code" data-type="javascript">
+            states: {
+                active: true,
+                disabled: true,
+                error: true,
+                loading: true,
+                success: true,
+                warning: true
+            }
+            </div>
+          </td>
+          <td>Default states. When set to <code>false</code> those are disallowed for a change.</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>
+            <div class="code" data-type="javascript">
+            text: {
+                disabled: false,
+                flash: false,
+                hover: false,
+                active: false,
+                inactive: false,
+                activate: false,
+                deactivate: false
+            }
+            </div>
+          </td>
+          <td>State texts for relevant elements like <a href="/elements/button.html">button</a>. Provide strings here when needed.</td>
         </tr>
         <tr>
           <td>metadata</td>

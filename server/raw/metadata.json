@@ -1,5 +1,5 @@
 {
-  "API": {
+  "api": {
     "layout": "default",
     "css": "api",
     "standalone": true,
@@ -7,6 +7,19 @@
     "elementType": "behavior",
     "title": "API",
     "description": "API allows elements to trigger actions on a server",
+    "type": "UI Behavior",
+    "category": "UI Behavior",
+    "filename": "behaviors/api.html",
+    "url": "/behaviors/api.html"
+  },
+  "state": {
+    "layout": "default",
+    "css": "state",
+    "standalone": true,
+    "element": "state",
+    "elementType": "behavior",
+    "title": "Sate",
+    "description": "State allows elements to trigger actions on a server",
     "type": "UI Behavior",
     "category": "UI Behavior",
     "filename": "behaviors/api.html",
