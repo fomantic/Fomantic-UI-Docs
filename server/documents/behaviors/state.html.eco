@@ -11,8 +11,9 @@ description : 'State is a simple state machine for controlling the look and feel
 type        : 'UI Behavior'
 ---
 
+<script src="/javascript/api.js"></script>
 
-<%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
+<%- @partial('header',  { tabs: { overview: 'Overview', examples: 'Examples',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
 
 <div class="main ui container">
   <div class="ui active intro tab" data-tab="overview">
@@ -22,37 +23,94 @@ type        : 'UI Behavior'
       <p>State allows you to do things like
         <ul class="ui large list">
             <li>Tie loading state to AJAX requests</li>
-            <li>Tie text to different states, so for example having a button go from `Follow to Followed to Unfollow`` on hover depending on its current state</li>
+            <li>Tie text to different states, so for example having a button go from 'Follow to Followed to Unfollow' on hover depending on its current state</li>
             <li>Tie multiple elements state to each other, for example, automatically having all `follow` buttons activate on a page after a successfully activating one button.</li>
             <li>Give activate/deactivate test functions which give criteria to allow or reject an item 'activating'</li>
-            <li>Handle correctly removing/adding class names signifying states without having to have garbled `addClass` `removeClass` sprinkled over your site</li>
+            <li>Handle correctly removing/adding class names signifying states without having to have garbled 'addClass' 'removeClass' sprinkled over your site</li>
         </ul>
       </p>
     </div>
 
-    <div class="test example">
-      <h4 class="ui header">Activate Elements Programmatically</h4>
-      <p>State is designed to make the process of integrating data sources to UI components seamless, <a href="#state-state-management">tying State request state</a> to UI states automatically.</p>
-      <p>For example adding an State behavior to an <a href="/elements/input.html"><code>input</code></a> will occur <code>oninput</code>, while a <a href="/elements/button.html"><code>button</code></a>, will query the server <code>onclick</code>.</p>
-      <div class="ui icon input">
-        <i class="search icon"></i>
-        <input type="text" placeholder="Type here...">
-      </div>
-      <div class="ui hidden divider"></div>
-      <div class="ui primary button">Click Me</div>
-      <div class="ui disabled button">Disabled</div>
-    </div>
-
-
   </div>
 
-  <div class="ui intro tab" data-tab="usage">
+  <div class="ui intro tab" data-tab="examples">
+    <div class="no example">
+      <h4 class="ui header">Simple activate example</h4>
+      <div class="code" data-type="javascript">
+        // immediately activates element
+        $('.my.button')
+          .state('activate')
+        ;
+        // activates element on click
+        $('.my.button')
+         .state()
+        ;
+       </div>
+    </div>
 
+    <div class="example">
+      <h4 class="ui header">API example</h4>
+      <div class="evaluated code" data-type="javascript">
+        // typically you'd define all your templated urls in one config file
+        $.fn.api.settings.api.follow = '/follow/{id}/'
+        $('.foo.button')
+          .api({ action: 'follow' })
+          .state({
+            onActivate: function() {
+              $(this).state('flash text');
+            },
+            text: {
+              inactive   : 'Follow',
+              active     : 'Followed',
+              deactivate : 'Unfollow',
+              flash      : 'Added follower!'
+            }
+          })
+        ;
+       </div>
+       <div>
+            <button class="ui foo button" data-id="22">Follow</button>
+        </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Text example</h4>
+      <div class="evaluated code" data-type="javascript">
+        // Changes button between Follow and Following
+        $('.follow.button')
+          .state({
+            text: {
+              inactive : 'Follow',
+              active   : 'Following'
+            }
+          })
+        ;
+       </div>
+       <button class="ui follow button">Follow</button>
+    </div>
+
+    <div class="another example">
+      <div class="evaluated code" data-type="javascript">
+        // Changes text on activation and hover
+        // The hover text is different when active and inactive
+        $('.vote.button')
+          .state({
+            text: {
+              inactive  : 'Vote',
+              activate  : 'Cast Vote',
+              active    : 'Voted',
+              deactivate: 'Remove Vote'
+            }
+          })
+        ;
+       </div>
+       <button class="ui green vote button">Vote</button>
+    </div>
   </div>
 
   <div class="ui tab" data-tab="behaviors">
 
-    <h2 class="ui dividing header">Behavior</h2>
+    <h2 class="ui dividing header">Behaviors</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
     <div class="code" data-type="javascript">
@@ -93,15 +151,15 @@ type        : 'UI Behavior'
         </tr>
         <tr>
           <td>is textEnabled</td>
-          <td>Returns whether element is capable to show text which could be changed by stages</td>
+          <td>Returns whether element is capable to show text which could be changed by states</td>
         </tr>
         <tr>
           <td>is button</td>
-          <td>Returns whether element is a <a href="/elements/button.html">progress</a></td>
+          <td>Returns whether element is a <a href="/elements/button.html">button</a></td>
         </tr>
         <tr>
           <td>is input</td>
-          <td>Returns whether element is a n<a href="/elements/input.html">progress</a></td>
+          <td>Returns whether element is an <a href="/elements/input.html">input</a></td>
         </tr>
         <tr>
           <td>is progress</td>
@@ -109,7 +167,7 @@ type        : 'UI Behavior'
         </tr>
         <tr>
           <td>allows(state)</td>
-          <td>Checks is a specific state, given by a string name, is currently allowed to be changed</td>
+          <td>Checks if a specific state, given by a string name, is currently allowed to be changed</td>
         </tr>
         <tr>
           <td>allow(state)</td>
@@ -118,6 +176,14 @@ type        : 'UI Behavior'
         <tr>
           <td>disallow(state)</td>
           <td>Disallow change of element state, given by a string name</td>
+        </tr>
+        <tr>
+          <td>activate</td>
+          <td>Set element to active state</td>
+        </tr>
+        <tr>
+          <td>deactivate</td>
+          <td>Set element to inactive state</td>
         </tr>
         <tr>
           <td>enable</td>
@@ -164,13 +230,13 @@ type        : 'UI Behavior'
 
   <div class="ui tab" data-tab="settings">
 
-    <h2 class="ui header">
-      Behavior
+    <h2 class="ui dividing header">
+      Settings
     </h2>
     <table class="ui sortable celled definition table">
       <thead>
         <th class="three wide">Setting</th>
-        <th class="three wide">Default</th>
+        <th class="five wide">Default</th>
         <th>Description</th>
       </thead>
       <tbody>
@@ -206,110 +272,6 @@ type        : 'UI Behavior'
           <td>false</td>
           <td>When set to a selector, will use a delegated pattern to bind events from this element.</td>
         </tr>
-      </tbody>
-    </table>
-
-    <h2 class="ui header">
-      Callbacks
-    </h2>
-
-    <table class="ui sortable celled definition table">
-      <thead>
-        <th class="three wide">Setting</th>
-        <th class="three wide">Context</th>
-        <th>Description</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>activateTest</td>
-          <td>initialized element</td>
-          <td>Called before a state is activated. Return false to cancel state activation</td>
-        </tr>
-        <tr>
-          <td>deactivateTest</td>
-          <td>initialized element</td>
-          <td>Called before a state is deactivated. Return false to cancel state deactivation</td>
-        </tr>
-        <tr>
-          <td>onActivate</td>
-          <td>initialized element</td>
-          <td>Call when state was activated</td>
-        </tr>
-        <tr>
-          <td>onDeactivate</td>
-          <td>initialized element</td>
-          <td>Call when state was deactivated</td>
-        </tr>
-        <tr>
-          <td>onChange</td>
-          <td>initialized element</td>
-          <td>Called after a state has changed</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2 class="ui dividing header">
-      Module
-    </h2>
-
-    <p>These settings are native to all modules, and define how the component ties content to DOM attributes, and debugging settings for the module.</p>
-
-    <table class="ui sortable celled definition table">
-      <thead>
-        <th>Setting</th>
-        <th class="six wide">Default</th>
-        <th>Description</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>name</td>
-          <td>State</td>
-          <td>Name used in log statements</td>
-        </tr>
-        <tr>
-          <td>namespace</td>
-          <td>state</td>
-          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
-        </tr>
-        <tr>
-          <td>regExp</td>
-          <td>
-            <div class="code" data-type="javascript">
-            regExp  : {
-              required: /\{\$*[A-z0-9]+\}/g,
-              optional: /\{\/\$*[A-z0-9]+\}/g,
-            }
-            </div>
-          </td>
-          <td>Regular expressions used for template matching</td>
-        </tr>
-        <tr>
-          <td>selector</td>
-          <td>
-            <div class="code" data-type="javascript">
-            selector: {
-              text : false
-            }
-            </div>
-          </td>
-          <td>Selectors used to find parts of a module</td>
-        </tr>
-        <tr>
-          <td>className</td>
-          <td>
-            <div class="code" data-type="javascript">
-            className: {
-              active   : 'active',
-              disabled : 'disabled',
-              error    : 'error',
-              loading  : 'loading',
-              success  : 'success',
-              warning  : 'warning'
-            }
-            </div>
-          </td>
-          <td>Class names used to determine element state</td>
-        </tr>
         <tr>
           <td>states</td>
           <td>
@@ -343,6 +305,93 @@ type        : 'UI Behavior'
           </td>
           <td>State texts for relevant elements like <a href="/elements/button.html">button</a>. Provide strings here when needed.</td>
         </tr>
+      </tbody>
+    </table>
+
+    <h2 class="ui header">
+      Callbacks
+      <div class="sub header">Callbacks specify a function to occur after a specific behavior.</div>
+    </h2>
+
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th class="three wide">Setting</th>
+        <th class="three wide">Context</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>activateTest</td>
+          <td>initialized element</td>
+          <td>Called before a state is activated. Return false to cancel state activation</td>
+        </tr>
+        <tr>
+          <td>deactivateTest</td>
+          <td>initialized element</td>
+          <td>Called before a state is deactivated. Return false to cancel state deactivation</td>
+        </tr>
+        <tr>
+          <td>onActivate</td>
+          <td>initialized element</td>
+          <td>Called when state was activated</td>
+        </tr>
+        <tr>
+          <td>onDeactivate</td>
+          <td>initialized element</td>
+          <td>Called when state was deactivated</td>
+        </tr>
+        <tr>
+          <td>onChange</td>
+          <td>initialized element</td>
+          <td>Called after a state has changed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="ui header">
+      DOM Settings
+      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
+    </h2>
+
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th>Setting</th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>namespace</td>
+          <td>state</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>
+            <div class="code" data-type="javascript">
+            selector: {
+              text : false
+            }
+            </div>
+          </td>
+          <td>Selectors used to find parts of a module</td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code" data-type="javascript">
+            className: {
+              active   : 'active',
+              disabled : 'disabled',
+              error    : 'error',
+              loading  : 'loading',
+              success  : 'success',
+              warning  : 'warning'
+            }
+            </div>
+          </td>
+          <td>Class names used to determine element state</td>
+        </tr>
         <tr>
           <td>metadata</td>
           <td>
@@ -354,6 +403,28 @@ type        : 'UI Behavior'
             </div>
           </td>
           <td>Metadata used to store xhr and response promise</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="ui header">
+      Debug Settings
+      <div class="sub header">Debug settings controls debug output to the console</div>
+    </h2>
+
+    <p>These settings are native to all modules, and define how the component ties content to DOM attributes, and debugging settings for the module.</p>
+
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th>Setting</th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>State</td>
+          <td>Name used in log statements</td>
         </tr>
         <tr>
           <td>silent</td>

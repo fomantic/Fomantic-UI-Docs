@@ -18,12 +18,12 @@
     "standalone": true,
     "element": "state",
     "elementType": "behavior",
-    "title": "Sate",
-    "description": "State allows elements to trigger actions on a server",
+    "title": "State",
+    "description": "State is a simple state machine for controlling the look and feel of an element based on what state it occupies",
     "type": "UI Behavior",
     "category": "UI Behavior",
-    "filename": "behaviors/api.html",
-    "url": "/behaviors/api.html"
+    "filename": "behaviors/state.html",
+    "url": "/behaviors/state.html"
   },
   "validation": {
     "layout": "default",
