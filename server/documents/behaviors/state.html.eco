@@ -171,27 +171,27 @@ type        : 'UI Behavior'
         </tr>
         <tr>
           <td>allow(state)</td>
-          <td>Allow change of element state, given by a string name</td>
+          <td>Allows change of element state, given by a string name</td>
         </tr>
         <tr>
           <td>disallow(state)</td>
-          <td>Disallow change of element state, given by a string name</td>
+          <td>Disallows change of element state, given by a string name</td>
         </tr>
         <tr>
           <td>activate</td>
-          <td>Set element to active state</td>
+          <td>Sets element to active state</td>
         </tr>
         <tr>
           <td>deactivate</td>
-          <td>Set element to inactive state</td>
+          <td>Sets element to inactive state</td>
         </tr>
         <tr>
           <td>enable</td>
-          <td>Set element as enabled</td>
+          <td>Sets element as enabled</td>
         </tr>
         <tr>
           <td>disable</td>
-          <td>Set element as disabled</td>
+          <td>Sets element as disabled</td>
         </tr>
         <tr>
           <td>set state(state)</td>
@@ -402,7 +402,7 @@ type        : 'UI Behavior'
             }
             </div>
           </td>
-          <td>Metadata used to store xhr and response promise</td>
+          <td>Metadata used to store text changes</td>
         </tr>
       </tbody>
     </table>
