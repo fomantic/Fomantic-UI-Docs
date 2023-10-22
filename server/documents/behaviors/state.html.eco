@@ -211,7 +211,7 @@ type        : 'UI Behavior'
         </tr>
         <tr>
           <td>flash text(text, duration, callback)</td>
-          <td>Changes the elements text for a optional given amount of time. After that, reverts the text to the previous value and optionally calls a given callback function</td>
+          <td>Changes the elements text for an optional given amount of time. After that, reverts the text to the previous value and optionally calls a given callback function</td>
         </tr>
         <tr>
           <td>refresh</td>
