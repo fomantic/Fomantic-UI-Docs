@@ -1514,6 +1514,13 @@ themes      : ['Default', 'GitHub', 'Material']
       </select>
     </div>
 
+    <div class="another dropdown example">
+      <p>Unlimited. No scrollbar and no height limitation. This is especially needed when used in combination with <a href="#pointing">Pointing</a> to keep the arrow being displayed.</p>
+      <select class="ui search unlimited pointing dropdown" multiple>
+        <%- @partial('examples/single/state-options') %>
+      </select>
+    </div>
+
     <div class="dropdown example">
       <h4 class="ui header">Menu Direction</h4>
       <p>A dropdown menu or sub-menu can specify the direction it should open</p>
