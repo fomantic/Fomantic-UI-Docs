@@ -33,11 +33,11 @@ type        : 'UI Behavior'
       $('.ui.form')
         .form({
           fields: {
-            name     : 'empty',
-            gender   : 'empty',
-            username : 'empty',
-            password : ['minLength[6]', 'empty'],
-            skills   : ['minCount[2]', 'empty'],
+            name     : 'notEmpty',
+            gender   : 'notEmpty',
+            username : 'notEmpty',
+            password : ['minLength[6]', 'notEmpty'],
+            skills   : ['minCount[2]', 'notEmpty'],
             terms    : 'checked'
           }
         })
@@ -52,7 +52,7 @@ type        : 'UI Behavior'
               identifier: 'name',
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please enter your name'
                 }
               ]
@@ -70,7 +70,7 @@ type        : 'UI Behavior'
               identifier: 'gender',
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please select a gender'
                 }
               ]
@@ -79,7 +79,7 @@ type        : 'UI Behavior'
               identifier: 'username',
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please enter a username'
                 }
               ]
@@ -89,7 +89,7 @@ type        : 'UI Behavior'
               errorLimit: 1,
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please enter a password'
                 },
                 {
@@ -219,7 +219,7 @@ type        : 'UI Behavior'
             field1: {
               rules: [
                 {
-                  type   : 'empty'
+                  type   : 'notEmpty'
                 }
               ]
             },
@@ -281,7 +281,7 @@ type        : 'UI Behavior'
               identifier : 'special-name',
               rules: [
                 {
-                  type   : 'empty'
+                  type   : 'notEmpty'
                 }
               ]
             }
@@ -331,8 +331,8 @@ type        : 'UI Behavior'
       $('.ui.form')
         .form({
           fields: {
-           email: 'empty',
-           name: 'empty'
+           email: 'notEmpty',
+           name: 'notEmpty'
           }
         })
       ;
@@ -383,12 +383,16 @@ type        : 'UI Behavior'
       <div class="ui info message">To pass parameters to a rule, use bracket notation in your settings object. For example <code>type: 'not[dog]'</code></div>
       <div data-since="2.8.8" class="ui info message">Despite the global setting <code>shouldTrim</code> you can optionally specify to trim/not trim values before validation by adding <code>shouldTrim:true</code> or <code>shouldTrim:false</code> to each rule</div>
 
-      <h3 class="ui header"><a href="#empty">Empty</a></h3>
+      <h3 class="ui header"><a href="#notempty">Not Empty</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
-            <td class="four wide">empty</td>
-            <td class="twelve wide">A field is empty</td>
+            <td class="four wide">notEmpty</td>
+            <td class="twelve wide">A field is not empty</td>
+          </tr>
+          <tr data-deprecated="[2.9.4]Use 'notEmpty' instead">
+            <td>empty</td>
+            <td>A field is not empty</td>
           </tr>
           <tr>
             <td>checked</td>
@@ -904,7 +908,7 @@ type        : 'UI Behavior'
                 identifier  : 'empty',
                 rules: [
                   {
-                    type   : 'empty',
+                    type   : 'notEmpty',
                     prompt : 'Please enter a value'
                   }
                 ]
@@ -913,7 +917,7 @@ type        : 'UI Behavior'
                 identifier  : 'dropdown',
                 rules: [
                   {
-                    type   : 'empty',
+                    type   : 'notEmpty',
                     prompt : 'Please select a dropdown value'
                   }
                 ]
@@ -1477,7 +1481,7 @@ type        : 'UI Behavior'
       // lets only validate username to start
       $('.add.example .ui.form')
         .form({
-          username: ['empty', 'minLength[5]']
+          username: ['notEmpty', 'minLength[5]']
         })
       ;
       </div>
@@ -1490,13 +1494,13 @@ type        : 'UI Behavior'
             .form('add rule', 'gender', {
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Entering your gender is necessary'
                 }
               ]
             })
             // adding shorthand
-            .form('add rule', 'password', ['empty', 'minLength[5]'])
+            .form('add rule', 'password', ['notEmpty', 'minLength[5]'])
           ;
         })
       ;
@@ -1554,8 +1558,8 @@ type        : 'UI Behavior'
       $('.ui.form')
         .form({
           fields: {
-            gender: 'empty',
-            name: 'empty'
+            gender: 'notEmpty',
+            name: 'notEmpty'
           }
         })
       ;
@@ -1589,7 +1593,7 @@ type        : 'UI Behavior'
       $('.ui.form')
         .form(
           fields: {
-            name: 'empty'
+            name: 'notEmpty'
           }
         })
       ;
@@ -1617,7 +1621,7 @@ type        : 'UI Behavior'
               depends    : 'isDoctor',
               rules      : [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please enter the number of years you have been a doctor'
                 }
               ]
@@ -1820,7 +1824,7 @@ type        : 'UI Behavior'
               identifier: 'dog',
               rules: [
                 {
-                  type: 'empty',
+                  type: 'notEmpty',
                   prompt: 'You must have a dog to add'
                 },
                 {
@@ -2075,7 +2079,7 @@ type        : 'UI Behavior'
       </tr>
       <tr>
         <td>set auto check</td>
-        <td>Automatically adds the "empty" rule or automatically checks a checkbox for all fields with classname or attribute <code>required</code></td>
+        <td>Automatically adds the "notEmpty" rule or automatically checks a checkbox for all fields with classname or attribute <code>required</code></td>
       </tr>
       <tr>
         <td>set optional(identifier, bool = true)</td>
@@ -2157,7 +2161,7 @@ type        : 'UI Behavior'
           <tr>
             <td>autoCheckRequired</td>
             <td>false</td>
-            <td>Whether fields with classname or attribute <code>required</code> should automatically add the "empty" rule or automatically checks checkbox fields</td>
+            <td>Whether fields with classname or attribute <code>required</code> should automatically add the "notEmpty" rule or automatically checks checkbox fields</td>
           </tr>
           <tr>
             <td>errorFocus</td>
@@ -2208,7 +2212,7 @@ type        : 'UI Behavior'
                 range                : '{name} must be in a range from {min} to {max}',
                 maxValue             : '{name} must have a maximum value of {ruleValue}',
                 minValue             : '{name} must have a minimum value of {ruleValue}',
-                empty                : '{name} must have a value',
+                notEmpty             : '{name} must have a value',
                 checked              : '{name} must be checked',
                 email                : '{name} must be a valid e-mail',
                 url                  : '{name} must be a valid url',

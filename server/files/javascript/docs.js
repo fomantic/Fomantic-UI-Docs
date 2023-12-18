@@ -45,6 +45,7 @@ semantic.ready = function() {
     $exampleHeaders      = $sectionExample.children('h4'),
     $footer              = $('.page > .footer'),
     $tableSinceCells     = $('.ui.table [data-since]'),
+    $tableDeprecatedRows = $('.ui.table tr[data-deprecated]'),
 
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
@@ -79,11 +80,42 @@ semantic.ready = function() {
 
   // event handlers
   handler = {
+    createLabel: function(text, className, tag, tooltip, tooltipVariation) {
+       text = text || '';
+       className = className || 'ui label';
+       tag = tag || 'div';
+
+       var $label =  $('<' + tag + '/>', { class: className, text: text });
+       if (tooltip) {
+           $label.attr('data-tooltip', tooltip);
+           $label.attr('data-position', 'right center');
+           if (tooltipVariation) {
+               $label.attr('data-variation', tooltipVariation);
+           }
+       }
+       return $label;
+    },
+
+    createDeprecatedLabel: function(feature, hint, extraClass) {
+      hint = hint || '';
+      extraClass = extraClass || '';
+      var deprecatedSinceRegex = new RegExp(/^\[.*?\]/),
+          deprecatedSince = String(hint).match(deprecatedSinceRegex);
+      if (deprecatedSince) {
+          deprecatedSince = deprecatedSince[0].replace(/[\[\]]/g,'');
+          hint = hint.replace(deprecatedSinceRegex,'');
+      }
+      var tooltip = ((feature && feature !== '' ? '\'' + feature + '\' is DEPRECATED' + (deprecatedSince ? ' since ' + deprecatedSince : '') + ' and' : 'This') + ' will be REMOVED in a future version')
+          .replace(/ /g,' ');
+      if (hint!=='') {
+          tooltip += '\n\n--> ' + hint.replace(/ /g,' ');
+      }
+      return handler.createLabel('DEPRECATED','ui grey label deprecated ' + extraClass, 'a', tooltip, 'grey' + (hint !== '' ? ' multiline' : ''));
+    },
 
     createNewInLabel: function(since, extraClass, tag) {
         extraClass = extraClass || '';
-        tag = tag || 'div';
-        return $('<' + tag + '/>', { class: 'ui teal label newsince ' + extraClass, text: 'New in ' + since });
+        return handler.createLabel('New in ' + since,'ui teal label newsince ' + extraClass, tag);
     },
 
     getMetadata: function() {
@@ -248,6 +280,7 @@ semantic.ready = function() {
           var
             $section = $(this),
             since    = $section.data('since'),
+            deprecated = $section.data('deprecated'),
             text     = handler.getText($section),
             safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
@@ -256,6 +289,9 @@ semantic.ready = function() {
           $section
             .append($anchor)
           ;
+          if (deprecated) {
+            $section.append(handler.createDeprecatedLabel($section.text(),deprecated.trim()));
+          }
           if (since) {
             $section.append(handler.createNewInLabel(since));
           }
@@ -272,6 +308,7 @@ semantic.ready = function() {
             safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
             since    = $example.data('since'),
+            deprecated = $title.data('deprecated'),
             classes  = $example.data('class'),
             wordOrder = classes && classes.indexOf('!') >= 0
           ;
@@ -281,6 +318,9 @@ semantic.ready = function() {
               $title.html()
             ]).on('click', handler.scrollTo);
             $title.attr('id', id).html($contentWrapped);
+          }
+          if (deprecated) {
+            $title.append(handler.createDeprecatedLabel($title.text(),deprecated.trim()));
           }
           if (since) {
             if ($title.length > 0) {
@@ -303,6 +343,14 @@ semantic.ready = function() {
         var $el = $(this),
             since = $el.data('since');
         $el.append(handler.createNewInLabel(since,'tiny horizontal', 'span'));
+      });
+
+      $tableDeprecatedRows.each(function(){
+        var $el = $(this),
+            deprecatedHint = $el.data('deprecated'),
+            $parameterCell = $el.find('>td:first-child'),
+            parameter = $parameterCell.text();
+        $parameterCell.append(handler.createDeprecatedLabel(parameter, deprecatedHint, 'tiny left aligned floating'));
       });
 
     },
