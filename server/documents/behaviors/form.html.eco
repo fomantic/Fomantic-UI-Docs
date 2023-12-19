@@ -77,6 +77,7 @@ type        : 'UI Behavior'
             },
             username: {
               identifier: 'username',
+              noNativeValidation: true,
               rules: [
                 {
                   type   : 'empty',
@@ -2168,6 +2169,11 @@ type        : 'UI Behavior'
             <td>errorLimit</td>
             <td>0</td>
             <td data-since="2.9.3">Number of max shown errors per field if a field got multiple rules (0=unlimited). This can also be provided for each field individually inside the <code>fields</code> setting. See the <a href="#specifying-validation-rules">Full Validation Settings Example</a></td>
+          </tr>
+          <tr>
+            <td>noNativeValidation</td>
+            <td>false</td>
+            <td data-since="2.9.4">Whether native browser form validation messages should be ignored for the whole form. This can also be provided for each field individually inside the <code>fields</code> setting. See the <a href="#specifying-validation-rules">Full Validation Settings Example</a></td>
           </tr>
         </tbody>
       </table>
