@@ -1755,8 +1755,15 @@ code.code .class b[data-tooltip~="order"]:hover {
   }
 }
 
+.deprecated:not(.floating),
 .newsince {
   margin-left: 1em !important;
+}
+
+tr[data-deprecated] {
+  position: relative;
+  font-style: italic;
+  background: #dddddd;
 }
 
 /* Linked UI */
