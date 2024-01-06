@@ -166,7 +166,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </select>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-since="2.8.3">
       <h4 class="ui header">Unfilterable items in Search Selection</h4>
       <p>You can define items to always be listed, even if the search filter would not match, by adding the <code>unfilterable</code> class to the desired items</p>
         <div class="ui search selection dropdown">
@@ -917,7 +917,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
     </div>
-    <div class="dropdown example">
+    <div class="dropdown example" data-since="2.8.7">
       <p>The description can be shown vertically underneath the entry using <code>vertical item</code>.</p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
