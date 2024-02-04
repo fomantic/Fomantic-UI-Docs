@@ -776,6 +776,102 @@ themes      : ['Default', 'GitHub']
   <h2 class="ui dividing header">Groups</h2>
 
   <div class="example">
+    <p>Label groups also have a vertical margin to make sure labels don't appear attached together when wrapped</p>
+    <div class="ui labels">
+      <div class="ui label">
+        One
+      </div>
+      <div class="ui label">
+        Two
+      </div>
+      <div class="ui label">
+        Three
+      </div>
+      <div class="ui label">
+        Four
+      </div>
+      <div class="ui label">
+        Five
+      </div>
+      <div class="ui label">
+        Six
+      </div>
+      <div class="ui label">
+        Seven
+      </div>
+      <div class="ui label">
+        Eight
+      </div>
+      <div class="ui label">
+        Nine
+      </div>
+      <div class="ui label">
+        Ten
+      </div>
+      <div class="ui label">
+        Eleven
+      </div>
+      <div class="ui label">
+        Twelve
+      </div>
+      <div class="ui label">
+        Thirteen
+      </div>
+      <div class="ui label">
+        Fourteen
+      </div>
+      <div class="ui label">
+        Fifteen
+      </div>
+      <div class="ui label">
+        Sixteen
+      </div>
+      <div class="ui label">
+        Seventeen
+      </div>
+      <div class="ui label">
+        Eighteen
+      </div>
+      <div class="ui label">
+        Nineteen
+      </div>
+      <div class="ui label">
+        Twenty
+      </div>
+      <div class="ui label">
+        Twentyone
+      </div>
+      <div class="ui label">
+        Twentytwo
+      </div>
+      <div class="ui label">
+        Twentythree
+      </div>
+      <div class="ui label">
+        Twentyfour
+      </div>
+      <div class="ui label">
+        Twentyfive
+      </div>
+      <div class="ui label">
+        Twentysix
+      </div>
+      <div class="ui label">
+        Twentyseven
+      </div>
+      <div class="ui label">
+        Twentyeight
+      </div>
+      <div class="ui label">
+        Twentynine
+      </div>
+      <div class="ui label">
+        Thirty
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Group Size</h4>
     <p>Labels can share sizes together</p>
     <div class="ui huge labels">
