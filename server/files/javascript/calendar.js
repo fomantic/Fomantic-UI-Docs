@@ -146,7 +146,7 @@ semantic.calendar.ready = function() {
 
   $('#disableddates_calendar')
     .calendar({
-      initialDate: new Date('2018-12-1'),
+      initialDate: new Date('2018-12-01'),
       disabledDates: [{
         date: new Date('2018-12-22'),
         message: 'xmas gift shopping'
@@ -213,12 +213,12 @@ semantic.calendar.ready = function() {
   $('#enableddates_calendar')
       .calendar({
         type: 'date',
-        initialDate: new Date('2019-3-1'),
-        enabledDates: [
-          new Date('2018-3-5'),
-          new Date('2018-3-10'),
-          new Date('2018-3-20')
-        ]
+          initialDate: new Date('2019-03-01'),
+          enabledDates: [
+              new Date('2019-03-05'),
+              new Date('2019-03-10'),
+              new Date('2019-03-20')
+          ]
       })
   ;
 
