@@ -273,8 +273,16 @@ type        : 'Main'
       $ npm update fomantic-ui
     </div>
     <p>
-      This will install the latest version and will run the interactive installer to install any new
-      files which are required. You will need to rebuild Fomantic-UI after the installer has
+      This will install the latest version. When NPM finishes updating, a precompiled version of Fomantic-UI is already available inside the <code>dist</code> folder.
+      Starting from 2.9.0, the interactive installation prompt will not start automatically after npm update anymore. If you need a custom installed version of Fomantic-UI, you have to manually run the following right after npm update
+    </p>
+    <div class="ignored code" data-type="bash">
+      $ cd node_modules/fomantic-ui
+      $ npx gulp install
+    </div>
+
+    <p>
+      You will need to rebuild Fomantic-UI after the installer has
       finished.
     </p>
 
