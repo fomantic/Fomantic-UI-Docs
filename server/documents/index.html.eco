@@ -180,9 +180,6 @@ standalone : false
       </h1>
       <p>Fomantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.</p>
       <p>Develop your UI once, then deploy with the same code everywhere.</p>
-      <div class="ui large source button" style="display:none;">
-        <i class="docs code icon"></i> View Source
-      </div>
     </div>
     <div class="left aligned column">
       <div data-type="element" data-element="button" class="ui large floating dropdown theme button">
@@ -241,7 +238,8 @@ standalone : false
       <div class="column">
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/paint.png">
-          3000+ Theming Variables
+          5000+ Theming Variables
+          <div class="sub header">600+ Switches to reduce CSS size</div>
         </h2>
         <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
         <a class="ui large button" href="/usage/theming.html">Theming Guide</a>
@@ -249,7 +247,8 @@ standalone : false
       <div class="column">
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/book.png">
-          50+ UI Components
+          60+ UI Components
+          <div class="sub header">250+ Variations</div>
         </h2>
         <p>Build your entire site with one UI stack. Share your UI between multiple projects.</p>
         <div class="ui primary view-ui large button">Browse UI</div>
@@ -258,6 +257,7 @@ standalone : false
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/lab.png">
           8000+ Commits
+          <div class="sub header"><a target="_blank" href="https://github.com/fomantic/Fomantic-UI/blob/master/CONTRIBUTORS.md">60+ Contributors</a></div>
         </h2>
         <p>
           Fomantic UI and Semantic UI are <b>free open source</b> projects already used in multiple <a href="https://www.quirky.com" target="_blank">large</a> scale <a href="https://www.newrepublic.com" target="_blank">production</a> environments.
@@ -289,7 +289,7 @@ standalone : false
           <div class="ui vertical demo menu">
             <a class="active teal item">
               Inbox
-              <div class="ui teal label">1</div>
+              <div class="ui green label">1</div>
             </a>
             <a class="item">
               Trash
@@ -526,7 +526,7 @@ standalone : false
             molly@thebears.com
             <i class="delete icon"></i>
           </div>
-          <a class="ui teal label">
+          <a class="ui green label">
             <i class="mail icon"></i> 23 New
           </a>
           <a class="ui tag label">Dresses</a>

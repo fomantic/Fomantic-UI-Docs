@@ -187,7 +187,7 @@ type        : 'Introduction'
     <h4>semantic.json</h4>
     <p>Build tool settings are stored in a special file called <code>semantic.json</code> It can be included in any folder that is in a parent folder of the fomantic install folder.</p>
     <p>If you used the npm or meteor, a <code>semantic.json</code> file is automatically generated for you in the root of your project. If you used a different package manager you can run <code>gulp install</code> to run the interactive installer.</p>
-    <div class="ignored code" data-type="JS" data-title="semantic.json">
+    <div class="ignored code" data-type="json" data-title="semantic.json">
     {
       // base path added to all other paths specified in "paths"
       "base": "",
@@ -325,8 +325,8 @@ type        : 'Introduction'
     </div>
   </div>
 
-  <div class="no example">
-    <h4>variation.variables <div class="ui black label">New in 2.8.1</div></h4>
+  <div class="no example" data-since="2.8.1">
+    <h4>variation.variables</h4>
     <p>You can disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size</p>
     <p>Most of the components also have a separate variable to decide which components should be rendered for which colors of your global color palette of colors.less or which sizes should be rendered.</p>
 
@@ -341,13 +341,13 @@ type        : 'Introduction'
     </div>
   </div>
 
-  <div class="no example">
-    <h4>colors.less <div class="ui black label">New in 2.7.0</div></h4>
+  <div class="no example" data-since="2.7.0">
+    <h4>colors.less</h4>
     <p>You can modify/define the global color palette entirely by adjusting a single LESS Map <code>@colors</code> in a custom <code>colors.less</code> file.</p>
     <p>Each color consists of a predefined set of properties used in all components. You can define whatever color name you want.</p>
     <div class="ui ignored info message">
         If you only want to reduce the used colors from the default palette, you may only adjust the related colors-list variables inside <a href="#variationvariables"><code>variation.variables</code></a> instead of changing the colors.less file.
-        <div class="code">
+        <div class="code" data-type="less">
         // limit all components to yellow, purple and green
         @variationAllColors: yellow, purple, green;
         // purple buttons, red labels, green messages and no colors for all other components
@@ -359,7 +359,7 @@ type        : 'Introduction'
     </div>
     <div class="ui ignored warning message">
         If you change the whole available colors like in the example below, make sure you also adjust the related colors-list variables inside <a href="#variationvariables"><code>variation.variables</code></a> to avoid a build error.
-        <div class="code">
+        <div class="code" data-type="less">
             @variationAllComponents: batman, spiderman;
         </div>
     </div>
@@ -417,7 +417,7 @@ type        : 'Introduction'
     @formStates: {
       @excited: {
         color: #880000;
-        background: ffcccc;
+        background: #ffcccc;
         borderColor: @red;
         borderRadius: 10px;
         boxShadow: @inputErrorBoxShadow;
@@ -462,10 +462,9 @@ type        : 'Introduction'
     <h4>Importing Gulp Tasks</h4>
     <p>See our <a href="/introduction/advanced-usage.html">recipes section</a> for examples on how to import individual gulp tasks into your custom Gulpfile.</p>
   </div>
-  <div class="no example">
+  <div class="no example" data-since="2.2">
     <h4>
       Auto-Install & Continuous Integration
-      <div class="ui teal horizontal label">New in 2.2</div>
     </h4>
     <p>We've added a new setting to <code>semantic.json</code> in 2.2 to help make working with a CLI, or other automated deployments more streamlined.</p>
     <p>Specifying <code>autoInstall: true</code> in an environments <code>semantic.json</code> configuration will prevent any user prompting when running <code>npx gulp install</code> allowing for automated deployment.</p>

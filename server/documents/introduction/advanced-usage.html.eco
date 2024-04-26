@@ -18,7 +18,7 @@ type        : 'Introduction'
     <h4>Importing Gulp Tasks</h4>
     <p>You don't have to use <a href="/introduction/build-tools.html">our gulp pipeline</a>, just import the task into your own <code>gulpfile</code></p>
     <p>You can <a href="https://github.com/Semantic-Org/Example-External-Gulpfile" target="_blank">fork this example project</a> to see an example of how to import Fomantic UI tasks into your project.</p>
-    <div class="ignored code" data-type="JS" data-title="Custom gulpfile.js">
+    <div class="ignored code" data-type="javascript" data-title="Custom gulpfile.js">
     var
       gulp  = require('gulp'),
       watch = require('./semantic/tasks/watch'),
@@ -35,7 +35,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Auto-Install</h4>
     <p>Running <code>npx gulp install</code> normally will launch an interactive installer, to allow this installer to run without user interaction and use all settings from your semantic.json instead, include a special flag <code>autoInstall: true</code>in your <code>semantic.json</code> file.</p>
-    <div class="ignored code" data-type="JS" data-title="semantic.json">
+    <div class="ignored code" data-type="json" data-title="semantic.json">
      {
       // install will now automatically build your project files without user interaction
       "autoInstall": true,
@@ -67,7 +67,7 @@ type        : 'Introduction'
       <h4>Right-to-left (RTL) Languages</h4>
       <p>Including the flag <code>rtl:true</code> will build Fomantic UI using <a href="https://github.com/MohammadYounes/rtlcss" target="_blank">RTLCSS</a>.</p>
       <p>To build both LTR and RTL versions use the flag <code>rtl: 'both'</code></p>
-      <div class="ignored code" data-type="JS" data-title="semantic.json">
+      <div class="ignored code" data-type="json" data-title="semantic.json">
        {
         // builds both LTR and RTL version
         "rtl": "both",
@@ -120,7 +120,7 @@ type        : 'Introduction'
     <p>Component repos are released on NPM and as tagged releases on GitHub.</p>
     <p>Check the list of repos available under <a href="https://github.com/fomantic?utf8=%E2%9C%93&query=ui-">fomantic</a> on GitHub</p>
     <p>Each component's release notes will automatically update with the relevant notes for that component from the main release.</p>
-    <div class="ignored code">
+    <div class="ignored code" data-type="bash">
      npm install semantic-ui-component
     </div>
   </div>
@@ -128,10 +128,10 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Server-Side Rendering</h4>
     <p>Individual components repos include an <a href="https://github.com/fomantic/Fomantic-UI/blob/master/tasks/admin/components/create.js" target="_blank">auto-generated</a> <code>index.js</code> file to simplify <a href="https://www.sitepoint.com/understanding-module-exports-exports-node-js/" target="_blank"><code>require</code></a> use with NodeJS, for server-side rendering or with <a href="https://browserify.org/" target="_blank">Browserify</a>.</p>
-    <div class="ignored code">
+    <div class="ignored code" data-type="bash">
      npm install semantic-ui-dropdown
     </div>
-    <div class="ignored code">
+    <div class="ignored code" data-type="javascript">
       var
         dropdown = require('semantic-ui-dropdown')
       ;
@@ -150,7 +150,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Importing Semantic</h4>
     <p><code>semantic.less</code> is available in all releases as an entry point for importing multiple components from other LESS files.</p>
-    <div class="ignored code"  data-type="LESS" data-title="Importing LESS">
+    <div class="ignored code"  data-type="less" data-title="Importing LESS">
       /* Import all components */
       @import 'src/semantic';
     </div>
@@ -159,7 +159,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Importing Components</h4>
     <p>If you need to import individual components, you should scope each import to avoid inheritance issues.</p>
-    <div class="ignored code" data-type="LESS" data-title="Importing LESS Components">
+    <div class="ignored code" data-type="less" data-title="Importing LESS Components">
       /* Import specific components with scope */
       & { @import 'src/definitions/elements/button'; }
       & { @import 'src/definitions/elements/list'; }
@@ -171,14 +171,14 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Download Docs Server</h4>
     <p>The easiest way to get <a href="https://github.com/fomantic/Fomantic-UI-Docs/">Fomantic UI docs</a> is to clone the repo</p>
-    <div class="code">
+    <div class="code" data-type="bash">
       git clone https://github.com/fomantic/Fomantic-UI-Docs.git
     </div>
   </div>
   <div class="no example">
     <h4>Install Dependencies</h4>
     <p>Fomantic UI's documentation is written in <a href="https://docpad.bevry.me/" target="_blank">Docpad</a> an amazing static site generator built in NodeJS</p>
-    <div class="code">
+    <div class="code" data-type="bash">
       cd docs/
       npm install
     </div>
@@ -208,7 +208,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Build UI</h4>
     <p>The first time you run docs you will need to build the whole project once</p>
-    <div class="code">
+    <div class="code" data-type="bash">
       cd ui/
       npx gulp build-docs
     </div>
@@ -216,7 +216,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Run Docpad Server</h4>
     <p>Docpad</p>
-    <div class="code">
+    <div class="code" data-type="bash">
       cd docs/
       # initial build may take several minutes
       docpad run
@@ -225,7 +225,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Serve UI to Docs</h4>
     <p>You can then continue to make modifications to UI and "serve" these files to a live docs instance to see your changes immediately</p>
-    <div class="code">
+    <div class="code" data-type="bash">
       cd ui/
       gulp serve-docs
     </div>
@@ -234,7 +234,7 @@ type        : 'Introduction'
     <h4>Hosted Docs</h4>
     <p>If you are managing your documentation you can automatically deploy to GitHub Pages using a built in <a href="https://github.com/docpad/docpad-plugin-ghpages">docpad gh-pages</a> plugin</p>
     <p>For more information about GitHub Pages, check out the <a href="https://pages.github.com/" target="_blank">docs on GitHub</a></p>
-    <div class="code">
+    <div class="code" data-type="bash">
       docpad deploy-ghpages --env static
     </div>
   </div>

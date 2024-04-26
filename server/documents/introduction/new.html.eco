@@ -257,12 +257,6 @@ type        : 'Main'
       <div class="item">
         <div>Sidebar</div>
         <div class="list">
-          <div class="item">Tabular menus and their related segments have to stay in a dedicated parent node to allow more than two attached segments</div>
-        </div>
-      </div>
-      <div class="item">
-        <div>Sidebar</div>
-        <div class="list">
           <div class="item"><code>onShow</code> and <code>onVisible</code> callbacks have swapped to match the same logic as in all other modules</div>
         </div>
       </div>
@@ -270,6 +264,18 @@ type        : 'Main'
         <div>Shape</div>
         <div class="list">
           <div class="item"><code>beforeChange</code> was renamed to <code>onBeforeChange</code></div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Slider</div>
+        <div class="list">
+          <div class="item">Behavior<code>is touch</code> was removed</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Tab</div>
+        <div class="list">
+          <div class="item">Tabular menus and their related segments have to stay in a dedicated parent node to allow more than two attached segments</div>
         </div>
       </div>
       <div class="item">
@@ -861,7 +867,7 @@ type        : 'Main'
       <i class="wifi huge icon"></i>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-class="colors">
       <h4 class="ui header">Colored Loaders</h4>
       <div class="ui active red inline loader"></div>
       <div class="ui active orange inline loader"></div>

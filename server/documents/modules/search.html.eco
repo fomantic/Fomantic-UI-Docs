@@ -21,11 +21,11 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Types</h2>
 
-    <div class="standard example">
+    <div class="standard example" data-class="search">
       <h4 class="ui header">Standard</h4>
       <p>A search can display a set of results</p>
       <div class="ui search">
-        <input class="prompt" type="text" placeholder="Common passwords...">
+        <input class="prompt" type="text" placeholder="Github Repositories...">
         <div class="results"></div>
       </div>
     </div>
@@ -36,7 +36,7 @@ type        : 'UI Module'
       </div>
       <div class="ui search">
         <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="Common passwords...">
+          <input class="prompt" type="text" placeholder="Github Repositories...">
           <i class="search icon"></i>
         </div>
         <div class="results"></div>
@@ -56,6 +56,17 @@ type        : 'UI Module'
       </div>
     </div>
 
+    <div class="category example" data-since="2.9.3">
+     <h4 class="ui header">Horizontal Category</h4>
+      <p>You can also display horizontal category names on top of each results instead.</p>
+      <div class="ui horizontal category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search people...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
 
     <div class="local example">
       <h4 class="ui header">Local Search</h4>
@@ -109,10 +120,9 @@ type        : 'UI Module'
     </div>
 
 
-    <div class="local-category example">
+    <div class="local-category example" data-since="2.3">
       <h4 class="ui header">
         Local Category Search
-        <div class="ui teal label">New in 2.3</div>
       </h4>
       <p>A search can look for category results inside a static local source.</p>
       <div class="ui ignored info message">
@@ -152,10 +162,9 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="diacritics example">
+    <div class="diacritics example" data-since="2.7.2">
       <h4 class="ui header">
         Search ignoring Diacritics
-        <div class="ui black label">New in 2.7.2</div>
       </h4>
       <p>A selection dropdown can allow a user to ignore all Diacritics while searching.</p>
       <div class="ui ignored info message">
@@ -286,10 +295,9 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="category example">
+    <div class="category example" data-since="2.3.1">
       <h4 class="ui header">
         Disabled
-        <div class="ui teal label">New in 2.3.1</div>
       </h4>
       <p>A search can show it is currently unable to be interacted with</p>
       <div class="ui disabled category search">
@@ -307,6 +315,7 @@ type        : 'UI Module'
 	  <div class="ui ignored info message">
         <p>The search scroll height depends on viewport size. The search scroll height is calculated using <strong>search item height * number of items</strong> to be shown for applicable media query break point.</p>
       </div>
+      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling</code> and a native resize drag handler will appear to the bottom right of the results. This needs a <a href="https://caniuse.com/?search=resize" target="_blank">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
       <div class="ui scrolling local search">
         <div class="ui icon input">
           <input class="prompt" type="text" placeholder="Search countries...">
@@ -316,7 +325,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="local example">
+    <div class="local example" data-since="2.8.5" data-class="!very short, !very long, short, long">
       <h4 class="ui header">Height</h4>
       <p>A search can be very short (0.75x of default height) so that more results can be glanced.</p>
 	  <div class="ui ignored info message">
@@ -352,7 +361,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="category example">
+    <div class="category example" data-class="!right aligned">
       <h4 class="ui header">Aligned</h4>
       <p>A search can have its results aligned to its left or right container edge</p>
       <div class="ui right aligned category search">
@@ -461,7 +470,7 @@ type        : 'UI Module'
     <div class="ui info message">You may also consider adding a top level property like <code>success: true</code> and using API's <code>successTest</code> parameter to determine whether a server response is actually successful, even if it returns the correct HTTP code</div>
 
     <h4 class="ui header">Standard</h4>
-    <div class="code" data-title="Server JSON Response">
+    <div class="code" data-title="Server JSON Response" data-type="json">
       {
         "results": [
           {
@@ -486,7 +495,7 @@ type        : 'UI Module'
 
 
     <h4 class="ui header">Category</h4>
-    <div class="code" data-title="Server JSON Response">
+    <div class="code" data-title="Server JSON Response" data-type="json">
       {
         "results": {
           "category1": {
@@ -556,7 +565,7 @@ type        : 'UI Module'
     <h2 class="ui dividing header">Behaviors</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .search('behavior name', argumentOne, argumentTwo)
     ;
@@ -665,7 +674,7 @@ type        : 'UI Module'
     <div class="mapping example">
       <h4 class="ui header">Using Different Response Fields</h4>
       <p>Search expects a very specific API response, however you can easily modify the mapping of server response to displayed field using the <code>fields</code> parameter.
-      <div class="ui ignored code">
+      <div class="ui ignored code" data-type="javascript">
       $('.ui.search')
         .search({
           apiSettings: {
@@ -770,7 +779,7 @@ type        : 'UI Module'
         <tr>
           <td>apiSettings</td>
           <td>
-          <div class="code">
+          <div class="code" data-type="javascript">
           {
             action: 'search'
           }
@@ -838,8 +847,8 @@ type        : 'UI Module'
           <td>
             <ul class="ui list"><div class="ui small header">Possible values</div>
                 <li><code>'exact'</code> will force the exact search to be matched somewhere in the string</li>
-                <li><code>'some'</code> Will do the same as <code>exact</code> but supports multiple search values separated by whitespace. At least one word must match <span class="ui black tiny label">New in 2.9.1</span></li>
-                <li><code>'all'</code> is same as <code>some</code> but all words have to match in all given searchfields of each record altogether <span class="ui black tiny label">New in 2.9.1</span></li>
+                <li data-since="2.9.1"><code>'some'</code> Will do the same as <code>exact</code> but supports multiple search values separated by whitespace. At least one word must match</li>
+                <li data-since="2.9.1"><code>'all'</code> is same as <code>some</code> but all words have to match in all given searchfields of each record altogether </li>
                 <li><code>true</code> will use a fuzzy full text search</li>
                 <li><code>false</code> will only match to start of string.</li>
             </ul>
@@ -849,7 +858,7 @@ type        : 'UI Module'
         <tr>
           <td>fields</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             fields: {
               categories      : 'results',     // array of categories (category view)
               categoryName    : 'name',        // name of category (category view)
@@ -901,8 +910,8 @@ type        : 'UI Module'
         <tr>
           <td>ignoreDiacritics</td>
           <td>false</td>
-          <td>When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
-              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui black label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
+          <td data-since="2.7.2">When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
+              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on... <div class="ui tiny horizontal red label">Not available in IE</div></td>
         </tr>
         <tr>
           <td>type</td>
@@ -983,7 +992,7 @@ type        : 'UI Module'
         <tr>
           <td>templates</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             $.fn.search.settings.templates : {
               escape: function(string) {
                 // returns escaped string for injected results
@@ -1030,7 +1039,7 @@ type        : 'UI Module'
         <tr>
           <td>regExp</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             regExp: {
               escape     : /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,
               beginsWith : '(?:\s|^)'
@@ -1042,7 +1051,7 @@ type        : 'UI Module'
         <tr>
           <td>selector</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector : {
               prompt       : '.prompt',
               searchButton : '.search.button',
@@ -1059,7 +1068,7 @@ type        : 'UI Module'
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata: {
               cache   : 'cache',
               results : 'results',
@@ -1072,7 +1081,7 @@ type        : 'UI Module'
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className: {
               animating : 'animating',
               active    : 'active',
@@ -1111,7 +1120,7 @@ type        : 'UI Module'
         <tr>
           <td>error</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error : {
               source          : 'Cannot search. No source used, and Semantic API module was not included',
               noResultsHeader : 'No Results',

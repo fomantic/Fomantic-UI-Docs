@@ -134,9 +134,9 @@ themes      : ['Default', 'Timeline']
 
   <h2 class="ui dividing header">Content</h2>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Label</h4>
-    <p>An event can contain an image or icon label</p>
+    <p>An event label can contain an <a href="/elements/image.html">image</a>, <a href="/elements/icon.html">icon</a>, <a href="/elements/text.html">text</a> or <a href="/elements/label.html">label</a></p>
     <div class="ui feed">
       <div class="event">
         <div class="label">
@@ -163,9 +163,68 @@ themes      : ['Default', 'Timeline']
       </div>
     </div>
   </div>
+  <div class="another example">
+    <div class="ui ignored info message" data-since="2.9.3">Longer label text can use the <code>multiline</code> class</div>
+    <div class="ui feed">
+      <div class="event">
+        <div class="label">
+          <span class="ui purple text">NEW</span>
+        </div>
+        <div class="content">
+          Check the latest sales offers
+        </div>
+      </div>
+      <div class="event">
+        <div class="label">
+          <span class="ui purple multiline text">THIS FALL</span>
+        </div>
+        <div class="content">
+          Only in selected theaters!
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui feed">
+      <div class="event">
+        <div class="label">
+          <div class="ui small green label">OK</div>
+        </div>
+        <div class="content">
+            Deployment was successful
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example" data-since="2.9.3">
+    <p>Using a data-text attribute for the label will automatically create a round label containing the given value</p>
+    <div class="ui ignored info message">
+        You can also add a color class. Also add <code>basic</code> for a variant without background color.
+    </div>
+    <div class="ui feed">
+      <div class="event">
+        <div class="label" data-text="Run"></div>
+        <div class="content">
+          Run, Forrest, run!
+        </div>
+      </div>
+      <div class="event">
+        <div class="red label" data-text="Stop"></div>
+        <div class="content">
+          Don't move!
+        </div>
+      </div>
+      <div class="event">
+        <div class="yellow basic label" data-text="Zzz"></div>
+        <div class="content">
+          Nap time
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Date</h4>
     <p>An event or an event summary can contain a date</p>
     <div class="ui feed">
@@ -202,9 +261,12 @@ themes      : ['Default', 'Timeline']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="summary, extra text, extra images" data-use-content="true">
     <h4 class="ui header">Additional information</h4>
     <p>An event can contain additional information like a set of images or text</p>
+    <div class="ui ignored info message" data-since="2.9.3">
+        You could add <code>right floated</code> to feed content elements to make them appear to the right of the content block
+    </div>
     <div class="ui feed">
       <div class="event">
         <div class="label">
@@ -228,7 +290,7 @@ themes      : ['Default', 'Timeline']
           <img src="/images/avatar/small/laura.jpg">
         </div>
         <div class="content">
-          <div class="date">
+          <div class="right floated date">
             3 days ago
           </div>
           <div class="summary">
@@ -242,8 +304,237 @@ themes      : ['Default', 'Timeline']
     </div>
   </div>
 
+  <h2 class="ui dividing header">States</h2>
 
+  <div class="example" data-since="2.9.3" data-use-content="true">
+    <h4 class="ui header">Disabled</h4>
+    <p>A feed or a single event can be disabled</p>
+    <div class="ui feed">
+      <div class="disabled event">
+        <div class="label">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
+        <div class="content">
+          <div class="summary">
+            <a class="user">
+              I am a disabled feed event
+            </a>
+          </div>
+          <div class="meta">
+            <a class="like">
+              <i class="like icon"></i> 4 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="label">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
+        <div class="content">
+          <div class="summary">
+            <a class="user">
+              I am a normal feed event
+            </a>
+          </div>
+          <div class="meta">
+            <a class="like">
+              <i class="like icon"></i> 4 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example" data-use-content="true">
+    <div class="ui disabled feed">
+      <div class="event">
+        <div class="label">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
+        <div class="content">
+          <div class="summary">
+            <a class="user">
+              I am a feed event of a whole disabled feed
+            </a>
+          </div>
+          <div class="meta">
+            <a class="like">
+              <i class="like icon"></i> 4 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="label">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
+        <div class="content">
+          <div class="summary">
+            <a class="user">
+              Me too
+            </a>
+          </div>
+          <div class="meta">
+            <a class="like">
+              <i class="like icon"></i> 4 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <h2 class="ui dividing header">Variations</h2>
+  <div class="example" data-since="2.9.3" data-use-content="true">
+      <h4 class="ui header">Connected</h4>
+      <p>Feed events can be connected to visualize a linear timeline</p>
+      <div class="ui ignored info message">
+        You can add a color class like <code>ui <b>blue</b> connected feed</code> to get the connection line colored accordingly
+      </div>
+      <div class="ui connected feed">
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/elliot.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a class="user">
+                Elliot Fu
+              </a> added you as a friend
+              <div class="date">
+                1 Hour Ago
+              </div>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 4 Likes
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <i class="pencil icon"></i>
+          </div>
+          <div class="content">
+            <div class="summary">
+              You submitted a new post to the page
+              <div class="date">
+                3 days ago
+              </div>
+            </div>
+            <div class="extra text">
+              I'm having a BBQ this weekend. Come by around 4pm if you can.
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 11 Likes
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/helen.jpg">
+          </div>
+          <div class="content">
+            <div class="date">
+              4 days ago
+            </div>
+            <div class="summary">
+              <a>Helen Troy</a> added <a>2 new illustrations</a>
+            </div>
+            <div class="extra images">
+              <a><img src="/images/wireframe/image.png"></a>
+              <a><img src="/images/wireframe/image.png"></a>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 1 Like
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="example" data-since="2.9.3" data-use-content="true">
+      <h4 class="ui header">Ordered</h4>
+      <p>Ordered feeds will automatically create ordered label content for the event. You can again combine this using a color class for the whole feed or each label individually. Also a basic variant is available.</p>
+      <div class="ui ignored warning message">
+        When used in combination with <a href="#connected"><code>connected</code></a> the connection line gets the feed color. If you want the connection line color being different than each event color, you have to define the colors for each event individually
+      </div>
+      <div class="ui orange ordered connected feed">
+        <div class="event">
+          <div class="blue label"></div>
+          <div class="content">
+            <div class="summary">
+                Different Labels color than whole feed color
+            </div>
+          </div>
+        </div>
+        <div class="black event">
+          <div class="label"></div>
+          <div class="content">
+            <div class="summary">
+              Automatic label content, line color taken from event color
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label" data-text="3rd"></div>
+          <div class="content">
+            <div class="summary">
+              Content via data-text attribute
+            </div>
+          </div>
+        </div>
+        <div class="event">
+        <div class="basic label"></div>
+          <div class="content">
+            <div class="summary">
+              Basic Label
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="example" data-since="2.9.3" data-use-content="true">
+      <h4 class="ui header">Divided</h4>
+      <p>Feed events can be divided to better distinguish between grouped content</p>
+      <div class="ui divided feed">
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+               <a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+               <a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+               <a>Helen Troy</a> added <a>Christian Rocha</a> as a friend
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="content">
+            <div class="summary">
+               <a>Christian Rocha</a> signed up for the  site.
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
   <div class="example">
     <h4 class="ui header">Size</h4>
     <p>A feed can have different sizes</p>
@@ -278,8 +569,7 @@ themes      : ['Default', 'Timeline']
           </div>
         </div>
       </div>
-    </div
-    >
+    </div>
   </div>
   <div class="another example">
     <div class="ui large feed">
@@ -347,135 +637,134 @@ themes      : ['Default', 'Timeline']
         </div>
       </div>
     </div>
-    <div class="example">
-      <h4 class="ui header">Inverted</h4>
-      <p>A feed's color can be inverted</p>
+  </div>
 
-      <div class="ui inverted segment">
-        <div class="ui inverted feed">
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/elliot.jpg">
+  <div class="example" data-since="2.5">
+    <h4 class="ui header">Inverted</h4>
+    <p>A feed's color can be inverted</p>
+
+    <div class="ui inverted segment">
+      <div class="ui inverted feed">
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/elliot.jpg">
+          </div>
+          <div class="content">
+            <div class="date">
+                Just now
+              </div>
+            <div class="summary">
+              <a class="user">
+                Elliot Fu
+              </a> posted on his page
             </div>
-            <div class="content">
+            <div class="extra text">
+                Hey there !
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/elliot.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a class="user">
+                Elliot Fu
+              </a> added you as a friend
               <div class="date">
-                  Just now
-                </div>
-              <div class="summary">
-                <a class="user">
-                  Elliot Fu
-                </a> posted on his page
-              </div>
-              <div class="extra text">
-                  Hey there !
+                1 Hour Ago
               </div>
             </div>
           </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/elliot.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a class="user">
-                  Elliot Fu
-                </a> added you as a friend
-                <div class="date">
-                  1 Hour Ago
-                </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/helen.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a>Helen Troy</a> added <a>2 new illustrations</a>
+              <div class="date">
+                4 days ago
               </div>
+            </div>
+            <div class="extra images">
+              <a><img src="/images/wireframe/image.png"></a>
+              <a><img src="/images/wireframe/image.png"></a>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 1 Like
+              </a>
             </div>
           </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/helen.jpg">
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/jenny.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a class="user">
+                Jenny Hess
+              </a> added you as a friend
+              <div class="date">
+                2 Days Ago
+              </div>
             </div>
-            <div class="content">
-              <div class="summary">
-                <a>Helen Troy</a> added <a>2 new illustrations</a>
-                <div class="date">
-                  4 days ago
-                </div>
-              </div>
-              <div class="extra images">
-                <a><img src="/images/wireframe/image.png"></a>
-                <a><img src="/images/wireframe/image.png"></a>
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 1 Like
-                </a>
-              </div>
+            <div class="meta">
+              <a class="like">
+                 <i class="like icon"></i> 8 Likes
+              </a>
             </div>
           </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/jenny.jpg">
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/joe.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a>Joe Henderson</a> posted on his page
+              <div class="date">
+                3 days ago
+              </div>
             </div>
-            <div class="content">
-              <div class="summary">
-                <a class="user">
-                  Jenny Hess
-                </a> added you as a friend
-                <div class="date">
-                  2 Days Ago
-                </div>
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 8 Likes
-                </a>
-              </div>
+            <div class="extra text">
+              Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 5 Likes
+              </a>
             </div>
           </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/joe.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a>Joe Henderson</a> posted on his page
-                <div class="date">
-                  3 days ago
-                </div>
-              </div>
-              <div class="extra text">
-                Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 5 Likes
-                </a>
-              </div>
-            </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/avatar/small/justen.jpg">
           </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/avatar/small/justen.jpg">
+          <div class="content">
+            <div class="summary">
+              <a>Justen Kitsune</a> added <a>2 new photos</a> of you
+              <div class="date">
+                4 days ago
+              </div>
             </div>
-            <div class="content">
-              <div class="summary">
-                <a>Justen Kitsune</a> added <a>2 new photos</a> of you
-                <div class="date">
-                  4 days ago
-                </div>
-              </div>
-              <div class="extra images">
-                <a><img src="/images/wireframe/image.png"></a>
-                <a><img src="/images/wireframe/image.png"></a>
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 41 Likes
-                </a>
-              </div>
+            <div class="extra images">
+              <a><img src="/images/wireframe/image.png"></a>
+              <a><img src="/images/wireframe/image.png"></a>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 41 Likes
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
 
 </div>

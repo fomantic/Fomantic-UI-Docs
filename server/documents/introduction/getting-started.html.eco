@@ -23,7 +23,7 @@ type        : 'Main'
   </p>
 
   <h2 class="ui dividing header">General Usage</h2>
-    <div class="example">
+    <div class="no example">
       <h4 class="ui header">Descriptive classnames</h4>
 
         <p>The base concept of Fomantic-UI is adding descriptional classnames to HTML nodes</p>
@@ -39,6 +39,9 @@ type        : 'Main'
             <code>ui huge primary button</code>
             <div class="ui huge primary button">Button</div>
         </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Class order</h4>
         <p>By specification, CSS allows to declare classnames in any order.</p>
         <div class="ui basic segment">
             <code>huge ui button primary</code>
@@ -46,7 +49,7 @@ type        : 'Main'
         </div>
         <p>
             However, some combinations of FUI classnames <b>MUST</b> be declared in a strict predefined order divided by <b>ONE</b> space character.
-            This is sometimes needed to avoid decription confusion when the same classnames are used but have a different meaning.
+            This is sometimes needed to avoid description confusion when the same classnames are used but have a different meaning.
         </p>
         <div class="ui basic segment">
             <code>ui left labeled right floated button</code>
@@ -61,11 +64,20 @@ type        : 'Main'
                 <div class="item">Where should the button be <b>labeled</b>? Left or right?</div>
             </div>
         </div>
+        <p>Some examples are labeled by <span class="ui small wordorder label"><i class="attention icon"></i>Word order required</span> to indicate the word order necessity.</p>
         <p>So, as a general advise, just declare the classname order like a grammatical correct spoken description.</p>
         <div class="ui ignored warning message">
             <div class="header">Use <code>&lt;&gt;</code></div>
             <div class="content">
-            <p>While there are situations where a strict ordered class name list is important, in most cases it isn't. If in doubt, always watch out for the <code>&lt;&gt;</code> symbol displayed to the right of the examples which shows the source code when clicked and offers the correct classname order.</p>
+                <p>While there are situations where a strict ordered class name list is important, in most cases it isn't. If in doubt, always watch out for the <code>&lt;&gt;</code> symbol displayed to the right of the examples which shows the source code when clicked and highlights a possible required classname order.</p>
+                <div class="example" data-class="!left labeled, !right floated, button, primary, secondary, tiny" data-use-content="true">
+                    <div class="code" data-type="html">
+                        <div class="ui left labeled tiny right floated button">
+                            <div class="ui secondary label">Labeled</div>
+                            <div class="ui primary button">Button</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -83,7 +95,7 @@ type        : 'Main'
       <li class="item">NPM >= v6</li>
     </ul>
     <p>You can download NodeJS <a href="https://nodejs.org/en/download/" target="_blank">here</a>, NPM is installed with NodeJS.</p>
-    <div class="ui ignored info message"><i class="circle info icon"></i>Fomantic-UI also supports <code><a href="https://www.npmjs.com/package/yarn" target="_blank">yarn</a></code> as alternative package manager. <div class="ui black small horizontal label">New in 2.9.0</div></div>
+    <div class="ui ignored info message" data-since="2.9.0"><i class="circle info icon"></i>Fomantic-UI also supports <code><a href="https://www.npmjs.com/package/yarn" target="_blank">yarn</a></code> as alternative package manager.</div>
     <br />
 
     <p>Once you have NodeJS and NPM installed, you will need to install <a href="https://npmjs.com/package/fomantic-ui">Fomantic-UI</a> as a dependency of your project.</p>
@@ -146,7 +158,7 @@ type        : 'Main'
     </p>
     <div class="code" data-type="html">
       <!-- You MUST include jQuery 3.4+ before Fomantic -->
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
       <link rel="stylesheet" type="text/css" href="/dist/semantic.min.css">
       <script src="/dist/semantic.min.js"></script>
     </div>
@@ -186,7 +198,7 @@ type        : 'Main'
     <div class="ui active basic tab vertical segment" data-tab="jsdelivr">
       <div class="code" data-type="html">
         <!-- You MUST include jQuery 3.4+ before Fomantic -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.css">
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.js"></script>
       </div>
@@ -194,7 +206,7 @@ type        : 'Main'
     <div class="ui basic tab vertical segment" data-tab="cdnjs">
       <div class="code" data-type="html">
         <!-- You MUST include jQuery 3.4+ before Fomantic -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/<%= @getVersion() %>/semantic.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/<%= @getVersion() %>/semantic.min.js"></script>
       </div>
@@ -202,7 +214,7 @@ type        : 'Main'
     <div class="ui basic tab vertical segment" data-tab="unpkg">
       <div class="code" data-type="html">
         <!-- You MUST include jQuery 3.4+ before Fomantic -->
-        <script src="https://unpkg.com/jquery@3.6.4/dist/jquery.js"></script>
+        <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.js"></script>
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.css">
         <script src="https://unpkg.com/fomantic-ui@<%= @getVersion() %>/dist/semantic.min.js"></script>
       </div>
@@ -261,8 +273,16 @@ type        : 'Main'
       $ npm update fomantic-ui
     </div>
     <p>
-      This will install the latest version and will run the interactive installer to install any new
-      files which are required. You will need to rebuild Fomantic-UI after the installer has
+      This will install the latest version. When NPM finishes updating, a precompiled version of Fomantic-UI is already available inside the <code>dist</code> folder.
+      Starting from 2.9.0, the interactive installation prompt will not start automatically after npm update anymore. If you need a custom installed version of Fomantic-UI, you have to manually run the following right after npm update
+    </p>
+    <div class="ignored code" data-type="bash">
+      $ cd node_modules/fomantic-ui
+      $ npx gulp install
+    </div>
+
+    <p>
+      You will need to rebuild Fomantic-UI after the installer has
       finished.
     </p>
 

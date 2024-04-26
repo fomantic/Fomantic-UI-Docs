@@ -66,7 +66,7 @@ type        : 'UI Behavior'
 
       <div class="ui ignored info message">The following examples use sticky columns to help display data alongside each example. Please consult the <a href="/modules/sticky.html">sticky documentation</a> for usage examples.</div>
 
-      <div class="ui ignored code">
+      <div class="ui ignored code" data-type="javascript">
       // some example callbacks
       $('.demo.segment')
         .visibility({
@@ -532,6 +532,10 @@ type        : 'UI Behavior'
               Returns screen size as object
             </td>
           </tr>
+          <tr>
+            <td>destroy</td>
+            <td>Destroys instance and removes all events</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -854,7 +858,7 @@ type        : 'UI Behavior'
           <tr>
             <td>zIndex</td>
             <td>1</td>
-            <td>Specify a z-index when using <code>type: 'fixed'</code>. <div class="ui teal horizontal label">New in 2.2</div></td>
+            <td data-since="2.2">Specify a z-index when using <code>type: 'fixed'</code>.</td>
           </tr>
           <tr>
             <td>offset</td>
@@ -961,10 +965,9 @@ type        : 'UI Behavior'
       </table>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.2">
       <h4 class="ui header">
         Image Callbacks
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>Callbacks that occur only when using <a href="#lazy-loading-images"><code>type: 'fixed'</code></a></p>
 
@@ -990,11 +993,10 @@ type        : 'UI Behavior'
         </tbody>
       </table>
     </div>
-    <div class="no example">
+    <div class="no example" data-since="2.2">
 
       <h4 class="ui header">
         Fixed Callbacks
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>Callbacks that occur only when using <a href="#fixing-content-to-viewport"><code>type: 'fixed'</code></a></p>
 
@@ -1102,22 +1104,22 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>silent</td>
-            <td>False</td>
+            <td>false</td>
             <td>Silences all console output including error messages, regardless of other debug settings.</td>
           </tr>
           <tr>
             <td>debug</td>
-            <td>False</td>
+            <td>false</td>
             <td>Provides standard debug output to console</td>
           </tr>
           <tr>
             <td>performance</td>
-            <td>True</td>
+            <td>true</td>
             <td>Provides standard debug output to console</td>
           </tr>
           <tr>
             <td>verbose</td>
-            <td>True</td>
+            <td>true</td>
             <td>Provides ancillary debug output to console</td>
           </tr>
           <tr>

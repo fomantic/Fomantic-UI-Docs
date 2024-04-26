@@ -110,7 +110,7 @@ themes      : ['default']
       <div class="ui horizontal divider">
         Or
       </div>
-      <div class="ui teal labeled icon button">
+      <div class="ui green labeled icon button">
         Create New Order
         <i class="add icon"></i>
       </div>
@@ -148,7 +148,7 @@ themes      : ['default']
     </table>
   </div>
 
-  <div class="example" data-class="left aligned,right aligned">
+  <div class="example" data-class="!left aligned,!right aligned">
     <h4 class="ui header">Horizontal Alignment</h4>
     <p>A horizontal divider can be aligned</p>
 

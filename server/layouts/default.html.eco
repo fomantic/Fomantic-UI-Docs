@@ -4,7 +4,6 @@
   <%- @partial('meta') %>
   <%- @partial('javascript') %>
   <%- @partial('css') %>
-  <%- @partial('tracking') %>
 </head>
 <body id="example" class="<%= @document.css %>" ontouchstart="">
   <% if @document.element is 'sidebar': %>
@@ -18,7 +17,7 @@
   <div class="pusher">
     <div class="full height">
       <div class="toc">
-        <div class="ui vertical inverted menu">
+        <div class="ui big vertical inverted menu">
           <%- @partial('site-menu') %>
         </div>
       </div>

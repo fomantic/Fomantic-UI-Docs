@@ -27,22 +27,16 @@ semantic.ready = function() {
 
   // selector cache
   var
-    $document            = $(document),
-    $sortableTables      = $('.sortable.table'),
     $sticky              = $('.ui.sticky'),
 
     $themeDropdown       = $('.theme.dropdown'),
 
-    $ui                  = $('.ui').not('.hover, .down'),
     $swap                = $('.theme.menu .item'),
     $menu                = $('#toc'),
-    $hideMenu            = $('#toc .hide.item'),
     $search              = $('#search'),
     $sortTable           = $('.sortable.table'),
     $demo                = $('.demo'),
-    $begSegment          = $('.beg.segment'),
 
-    $fullHeightContainer = $('.pusher > .full.height'),
     $container           = $('.main.container'),
     $allHeaders          = $('.main.container > h2, .main.container > .tab > h2, .main.container > .tab > .examples h2'),
     $sectionHeaders      = $container.children('h2'),
@@ -50,6 +44,8 @@ semantic.ready = function() {
     $sectionExample      = $container.find('.example'),
     $exampleHeaders      = $sectionExample.children('h4'),
     $footer              = $('.page > .footer'),
+    $tableSinceCells     = $('.ui.table [data-since]'),
+    $tableDeprecatedRows = $('.ui.table tr[data-deprecated]'),
 
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
@@ -70,18 +66,12 @@ semantic.ready = function() {
 
     $visibilityExample   = $example.filter('.visiblity').find('.overlay, .demo.segment, .items img'),
 
-
-    $sidebarButton       = $('.fixed.launch.button'),
     $code                = $('div.code').not('.existing'),
     $existingCode        = $('.existing.code'),
 
     metadata,
 
-    requestAnimationFrame = window.requestAnimationFrame
-      || window.mozRequestAnimationFrame
-      || window.webkitRequestAnimationFrame
-      || window.msRequestAnimationFrame
-      || function(callback) { setTimeout(callback, 0); },
+    requestAnimationFrame = window.requestAnimationFrame,
 
     // alias
     handler
@@ -90,6 +80,43 @@ semantic.ready = function() {
 
   // event handlers
   handler = {
+    createLabel: function(text, className, tag, tooltip, tooltipVariation) {
+       text = text || '';
+       className = className || 'ui label';
+       tag = tag || 'div';
+
+       var $label =  $('<' + tag + '/>', { class: className, text: text });
+       if (tooltip) {
+           $label.attr('data-tooltip', tooltip);
+           $label.attr('data-position', 'right center');
+           if (tooltipVariation) {
+               $label.attr('data-variation', tooltipVariation);
+           }
+       }
+       return $label;
+    },
+
+    createDeprecatedLabel: function(feature, hint, extraClass) {
+      hint = hint || '';
+      extraClass = extraClass || '';
+      var deprecatedSinceRegex = new RegExp(/^\[.*?\]/),
+          deprecatedSince = String(hint).match(deprecatedSinceRegex);
+      if (deprecatedSince) {
+          deprecatedSince = deprecatedSince[0].replace(/[\[\]]/g,'');
+          hint = hint.replace(deprecatedSinceRegex,'');
+      }
+      var tooltip = ((feature && feature !== '' ? '\'' + feature + '\' is DEPRECATED' + (deprecatedSince ? ' since ' + deprecatedSince : '') + ' and' : 'This') + ' will be REMOVED in a future version')
+          .replace(/ /g,' ');
+      if (hint!=='') {
+          tooltip += '\n\n--> ' + hint.replace(/ /g,' ');
+      }
+      return handler.createLabel('DEPRECATED','ui grey label deprecated ' + extraClass, 'a', tooltip, 'grey' + (hint !== '' ? ' multiline' : ''));
+    },
+
+    createNewInLabel: function(since, extraClass, tag) {
+        extraClass = extraClass || '';
+        return handler.createLabel('New in ' + since,'ui teal label newsince ' + extraClass, tag);
+    },
 
     getMetadata: function() {
       $.api({
@@ -166,7 +193,7 @@ semantic.ready = function() {
         .visibility({
           observeChanges: false,
           once: false,
-          onBottomVisible: function(calculations) {
+          onBottomVisible: function() {
             var
               $title = $followMenu.find('> .item > .title').last()
             ;
@@ -237,7 +264,7 @@ semantic.ready = function() {
       }
     },
 
-    tryCreateMenu: function(event) {
+    tryCreateMenu: function() {
       if($(window).width() > 640 && !$('body').hasClass('basic')) {
         if($container.length > 0 && $container.find('.following.menu').length === 0) {
           handler.createMenu();
@@ -252,6 +279,8 @@ semantic.ready = function() {
         .each(function() {
           var
             $section = $(this),
+            since    = $section.data('since'),
+            deprecated = $section.data('deprecated'),
             text     = handler.getText($section),
             safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
@@ -260,25 +289,69 @@ semantic.ready = function() {
           $section
             .append($anchor)
           ;
+          if (deprecated) {
+            $section.append(handler.createDeprecatedLabel($section.text(),deprecated.trim()));
+          }
+          if (since) {
+            $section.append(handler.createNewInLabel(since));
+          }
         })
       ;
       $example
         .each(function() {
           var
-            $title   = $(this).children('h4').eq(0),
+            $example = $(this),
+            $title   = $example.children('h4').eq(0),
+            $firstP  = $example.children('p').eq(0),
+            $sinces  = $example.find('.ui.message[data-since]'),
             text     = handler.getText($title),
             safeName = handler.getSafeName(text),
-            id       = window.escape(safeName)
+            id       = window.escape(safeName),
+            since    = $example.data('since'),
+            deprecated = $title.data('deprecated'),
+            classes  = $example.data('class'),
+            wordOrder = classes && classes.indexOf('!') >= 0
           ;
-          if ($title.length > 0 && id.length > 0) {
+          if ($title.length > 0 && id.length > 0 && $title.find('a').length === 0) {
             var $contentWrapped = $("<a/>").attr('href', '#' + id).html([
               $('<i class="fitted small linkify icon"></i>'),
               $title.html()
             ]).on('click', handler.scrollTo);
             $title.attr('id', id).html($contentWrapped);
           }
+          if (deprecated) {
+            $title.append(handler.createDeprecatedLabel($title.text(),deprecated.trim()));
+          }
+          if (since) {
+            if ($title.length > 0) {
+              $title.append(handler.createNewInLabel(since));
+            } else if ($firstP.length > 0) {
+                $firstP.append(handler.createNewInLabel(since,'','span'));
+            }
+          }
+          if (wordOrder) {
+            $title.append(' <a href="/introduction/getting-started#class-order"><div class="ui small wordorder label"><i class="attention icon"></i>Word order required</div></a>');
+          }
+          $sinces.each(function(){
+              var $el = $(this),
+                  since = $el.data('since');
+              $el.append(handler.createNewInLabel(since,'tiny horizontal'));
+          });
         })
       ;
+      $tableSinceCells.each(function(){
+        var $el = $(this),
+            since = $el.data('since');
+        $el.append(handler.createNewInLabel(since,'tiny horizontal', 'span'));
+      });
+
+      $tableDeprecatedRows.each(function(){
+        var $el = $(this),
+            deprecatedHint = $el.data('deprecated'),
+            $parameterCell = $el.find('>td:first-child'),
+            parameter = $parameterCell.text();
+        $parameterCell.append(handler.createDeprecatedLabel(parameter, deprecatedHint, 'tiny left aligned floating'));
+      });
 
     },
 
@@ -329,15 +402,14 @@ semantic.ready = function() {
               : '',
             text     = handler.getText($currentHeader),
             safeName = handler.getSafeName(text),
-            id       = window.escape(safeName),
-            $anchor  = $('<a />').addClass('anchor').attr('id', id)
+            id       = window.escape(safeName)
           ;
           html += '<div class="item">';
           if($examples.length === 0) {
-            html += '<a class="'+activeClass+'title" href="#'+ id +'"><b>' + $(this).text() + '</b></a>';
+            html += '<a class="'+activeClass+'title" href="#'+ id +'"><b>' + handler.getText($(this)) + '</b></a>';
           }
           else {
-            html += '<a class="'+activeClass+'title"><i class="dropdown icon"></i> <b>' + $(this).text() + '</b></a>';
+            html += '<a class="'+activeClass+'title"><i class="dropdown icon"></i> <b>' + handler.getText($(this)) + '</b></a>';
           }
           if($examples.length > 0) {
             html += '<div class="'+activeClass+'content menu">';
@@ -347,8 +419,7 @@ semantic.ready = function() {
                   $title   = $(this).children('h4').eq(0),
                   text     = handler.getText($title),
                   safeName = handler.getSafeName(text),
-                  id       = window.escape(safeName),
-                  $anchor  = $('<a />').addClass('anchor').attr('id', id)
+                  id       = window.escape(safeName)
                 ;
                 if($title.length > 0) {
                   html += '<a class="item" href="#'+id+'">' + text + '</a>';
@@ -367,7 +438,6 @@ semantic.ready = function() {
       $sticky = $('<div />')
         .addClass('ui sticky')
         .html($followMenu)
-        //.prepend($advertisement)
         .prepend('<h3 class="ui header">' + title + '</h3>')
       ;
       if (activeTab !== "") {
@@ -436,7 +506,7 @@ semantic.ready = function() {
             // clear whitespace
             line = line.trim();
             // match variables only
-            if(line[0] == '@') {
+            if(line[0] === '@') {
               name = line.match(/^@(.+?):/);
               value = line.match(/:\s*([\s|\S]+?;)/);
               if( (Array.isArray(name) && name.length >= 2) && (Array.isArray(value) && value.length >= 2) ) {
@@ -447,7 +517,7 @@ semantic.ready = function() {
             }
           });
         }
-        console.log(variables);
+
         return variables;
       },
 
@@ -485,10 +555,10 @@ semantic.ready = function() {
                   dataType : 'text',
                   urlData  : urlData,
                   onSuccess: function(content) {
-                    if( $('style.override').length > 0 ) {
-                      $('style.override').remove();
+                    var styleOverride = $('style.override');
+                    if( styleOverride.length > 0 ) {
+                        styleOverride.remove();
                     }
-                    console.log(content);
                     $('<style>' + content + '</style>')
                       .addClass('override')
                       .appendTo('body')
@@ -502,47 +572,6 @@ semantic.ready = function() {
         ;
       }
 
-    },
-
-    create: {
-      examples: function(json) {
-        var
-          types      = json['Types'],
-          text       = json['Text'],
-          states     = json['States'],
-          variations = json['Variations'],
-
-          $element,
-          html
-        ;
-        $.each(types, function(name, type){
-          html += '<h2 class="ui dividing header">' + name + '</h2';
-          if($.isPlainObject(type)) {
-            $.each(type, function(name, subType) {
-              $element = $.zc(subType);
-              $element = handler.create.text($element, text);
-              html += '<h3 class="ui header">' + name + '</h3';
-              html += handler.create.variations($element, variations);
-            });
-          }
-          else {
-            $element = $.zc(type);
-            $element = handler.create.text($element);
-            html += handler.create.variations($element, variations);
-          }
-        });
-      },
-      variations: function($element, variations) {
-        $.each(variations, function(name, variation){
-
-        });
-      },
-      text: function($element, text) {
-        $.each(text, function(selector, text) {
-          $element.find(selector).text(text);
-        });
-        return $element;
-      }
     },
 
     getIndent: function(text) {
@@ -771,7 +800,7 @@ semantic.ready = function() {
             ? $closestExample.prevAll('.example').not('.another').eq(0)
             : $closestExample,
         $header     = $example.find('h4').eq(0),
-        $attributes = $code.find('.attribute, .class'),
+        $attributes = $code.find('.attribute, .class, .attr'),
         $tags       = $code.find('.title'),
         pageName    = handler.getPageTitle(),
         name        = handler.getText($header).toLowerCase(),
@@ -791,24 +820,20 @@ semantic.ready = function() {
       }
       // Add common variations
       classes = classes.replace('text alignment', "left aligned, right aligned, justified, center aligned");
-      classes = classes.replace('floated', "right floated,left floated,floated");
-      classes = classes.replace('floating', "right floated,left floated,floated");
+      classes = classes.replace('floating', "!right floated,!left floated,floated");
       classes = classes.replace('horizontally aligned', "left aligned, center aligned, right aligned, justified");
       classes = classes.replace('vertically aligned', "top aligned, middle aligned, bottom aligned");
       classes = classes.replace('vertically attached', "attached");
       classes = classes.replace('horizontally attached', "attached");
-      classes = classes.replace('padded', "very padded, padded");
-      classes = classes.replace('relaxed', "very relaxed, relaxed");
       classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
-      classes = classes.replace('thin', "very thin, thin");
-      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,very wide,wide");
+      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide,!very wide,wide");
       classes = classes.replace('count', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('column count', "one column,two column,three column,four column,five column,six column,seven column,eight column,nine column,ten column,eleven column,twelve column,thirteen column,fourteen column,fifteen column,sixteen column");
       classes = classes.replace('evenly divided', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('size', "mini,tiny,small,medium,large,big,huge,massive");
       classes = classes.replace('position', "left,right,top,bottom");
       classes = classes.replace('emphasis', "primary,secondary,tertiary");
-      classes = classes.replace('colored', "primary,secondary,red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
+      classes = classes.replace('colors', "primary,secondary,red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
       classes = (classes !== '')
         ? classes.split(',')
         : []
@@ -860,7 +885,7 @@ semantic.ready = function() {
           return true;
         }
         $value        = $attribute.next('.value, .string').eq(0);
-        $tag          = $attribute.prev('.title').eq(0);
+        $tag          = $attribute.prev('.title, .name').eq(0);
         tagHTML       = $tag.html();
         html          = $value.html();
         classNames    = html.replace(/\"/g, '').split(' ');
@@ -870,9 +895,22 @@ semantic.ready = function() {
         isOtherUI     = (!isPageElement && isUI);
         isOtherIcon   = (!isPageElement && tagHTML === 'i' && html.search('icon') !== -1);
         // check if any class match
+        // check multi-word classes first
+        classes.sort(function(a,b){
+          var aSpaces = a.split(' ').length - 1,
+              bSpaces = b.split(' ').length - 1;
+          return aSpaces > bSpaces
+            ? -1
+            : aSpaces < bSpaces
+              ? 1
+              : 0;
+        });
         $.each(classes, function(index, string) {
+          html = newHTML || html;
           var
-            className      = string.trim(),
+            className      = string.trim().replace('!',''),
+            orderRequired  = string.trim()[0] === '!',
+            classReg       = new RegExp('<b.*?<\\/b>|(\\b' + className + '\\b)', 'g'),
             isClassMatch   = (html.search(className) !== -1)
           ;
           if(className === '') {
@@ -880,8 +918,9 @@ semantic.ready = function() {
           }
           // class match on current page element (or content if allowed)
           if(isClassMatch && (isPageElement || useContent) ) {
-            newHTML = html.replace(className, '<b title="Required Class">' + className + '</b>');
-            return false;
+            newHTML = html.replace(classReg, function(match, group) {
+                return !group ? match : '<b data-position="right center" data-variation="mini" data-tooltip="'+(orderRequired ? 'Word order r' : 'R')+'equired Class">' + group + '</b>';
+            });
           }
         });
 
@@ -898,7 +937,7 @@ semantic.ready = function() {
               className = string.replace('"', '')
             ;
             // yep..
-            if(className == 'item') {
+            if(className === 'item') {
               return;
             }
             if(metadata && metadata[className] && metadata[className].url) {
@@ -932,7 +971,6 @@ semantic.ready = function() {
         $code         = $(this).show(),
         $codeTag      = $('<code />'),
         code          = $code.html(),
-        existingCode  = $code.hasClass('existing'),
         evaluatedCode = $code.hasClass('evaluated'),
         contentType   = $code.data('type')     || 'html',
         title         = $code.data('title')    || false,
@@ -947,27 +985,18 @@ semantic.ready = function() {
           html       : 'HTML',
           javascript : 'Javascript',
           css        : 'CSS',
+          less       : 'LESS',
+          json       : 'JSON',
           text       : 'Command Line',
+          bash       : 'Command Line',
           sh         : 'Command Line'
         },
-        padding    = 20,
         name = (codeSample === true)
           ? 'instructive bottom attached'
           : 'existing',
-        formattedCode = code,
-        styledCode,
-        $example,
-        $label,
-        codeHeight
+        formattedCode = code
       ;
-      var entityMap = {
-        "&amp;"  : "&",
-        "&lt;"   : "<",
-        "&gt;"   : ">",
-        '&quot;' : '"',
-        '&#39;'  : "'",
-        '&#x2F;' : "/"
-      };
+
       contentType = contentType.toLowerCase();
 
       function escapeHTML(string) {
@@ -976,7 +1005,7 @@ semantic.ready = function() {
 
 
       // escape html entities
-      if(contentType != 'html' || escape) {
+      if(contentType !== 'html' || escape) {
         code = escapeHTML(code);
       }
 
@@ -994,7 +1023,7 @@ semantic.ready = function() {
       }
 
       // color code
-      formattedCode = window.hljs.highlightAuto(formattedCode);
+      formattedCode = window.hljs.highlight(formattedCode, {language: contentType});
 
       // create <code> tag
       $codeTag
@@ -1010,7 +1039,7 @@ semantic.ready = function() {
         .wrap('<pre></pre>')
       ;
 
-      if(contentType == 'html') {
+      if(contentType === 'html') {
         // add class emphasis to used classes
         handler.highlightClasses($code);
       }
@@ -1131,6 +1160,7 @@ semantic.ready = function() {
   window.hljs.configure({
     classPrefix : '',
     languages   : [
+      'json',
       'xml',
       'bash',
       'css',

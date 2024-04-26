@@ -283,7 +283,8 @@ semantic.search.ready = function() {
   $local
     .search({
       searchFields: ['title'],
-      source: content
+      source: content,
+      maxResults: 20
     })
   ;
 
@@ -296,7 +297,14 @@ semantic.search.ready = function() {
   ;
 
   $standard
-    .search()
+    .search({
+      fields: {
+        results : 'items',
+        title   : 'name',
+        url     : false,
+        description: false
+      }
+    })
   ;
 
   $category

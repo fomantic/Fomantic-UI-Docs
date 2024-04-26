@@ -21,10 +21,9 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Types</h2>
 
-  <div class="example" data-class="image header, paragraph, line, content, loader, image">
+  <div class="example" data-class="image header, paragraph, line, content, loader, image" data-since="2.4.0">
     <h4 class="ui header">
       Placeholder
-      <div class="ui teal horizontal label">New in 2.4.0</div>
     </h4>
     <p>A placeholder is used to reserve space for content that soon will appear in a layout.</p>
     <div class="ui ignored info message">

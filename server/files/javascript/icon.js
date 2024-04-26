@@ -12,6 +12,7 @@ semantic.icon.ready = function() {
       getIconList: function() {
         var
           $examples   = $('.icon .example'),
+          collectedIcons = [],
           icons       = []
         ;
         $examples.each(function() {
@@ -27,7 +28,8 @@ semantic.icon.ready = function() {
               terms = $icon.data('search-terms') || "",
               title = '<i class="' + icon +' icon"></i> ' + icon
             ;
-            if(!_.findWhere(icons, { icon: icon})) {
+            if(collectedIcons.indexOf(icon) === -1) {
+              collectedIcons.push(icon);
               icons.push({
                 category    : category,
                 description : terms,

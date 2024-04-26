@@ -127,18 +127,18 @@ type        : 'Introduction'
     <p>Include the library as an NPM dependency, from within an ember-cli app.</p>
 
     <p>If you are using Ember CLI <code>1.13-2.X</code>
-    <div class="code">
+    <div class="code" data-type="bash">
       ember install semantic-ui-ember
     </div>
     <p>If you are using an older version <code>< 0.1.5</code>
-    <div class="code">
+    <div class="code" data-type="bash">
     npm install --save-dev Semantic-Org/Semantic-UI-Ember
     </div>
   </div>
 
   <div class="example">
     <h4 class="ui header">Run the Library's Blueprint</h4>
-    <div class="code">
+    <div class="code" data-type="bash">
       ember generate semantic-ui-ember
     </div>
   </div>

@@ -24,7 +24,7 @@ themes      : ['Default']
       Type
     </h2>
 
-    <div class="example">
+    <div class="example" data-class="tab">
       <h4 class="ui header">
         Tab
       </h4>
@@ -75,7 +75,7 @@ themes      : ['Default']
       Variations
     </h2>
 
-    <div class="center example">
+    <div class="center example" data-class="center" data-use-content="true">
       <h4 class="ui header">
         Centered Item
       </h4>
@@ -368,7 +368,7 @@ themes      : ['Default']
       <div class="ui ignored warning message">
         API requests for the following example have been faked using <a href="/behaviors/api.html#using-custom-backends">mockResponse</a> API setting to avoid network overhead.
       </div>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.dynamic.example .menu .item')
         .tab({
           cache: false,
@@ -410,7 +410,7 @@ themes      : ['Default']
     <div class="eval no example">
       <h4 class="header">Evaluating Scripts in HTML</h4>
       <p>By default, <code>script</code> tags included in HTML will only be evaluated on first load. To change this behavior you can adjust the  <code>evaluateScripts</code> setting.</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.eval.example .menu .item')
         .tab({
           evaluateScripts : 'once',
@@ -593,7 +593,7 @@ themes      : ['Default']
         <p>Tabs use Asual's <a href="https://github.com/asual/jquery-address">Address library</a> to provide cross-browser push state support. This is a <b>required dependency</b> for tabs with history to work correctly.</p>
       </div>
 
-      <div class="code">
+      <div class="code" data-type="javascript">
         $('.ui.menu .item')
           .tab({
             history: true,
@@ -606,7 +606,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">...with HTML5 State</h4>
       <p>Tabs can can use html5 push state to manage page state without using <code>#/foo</code> links. When a user refreshes a page using push state the server will be queried for the new url. This means you must set up appropriate routes in your backend to match each link.</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.ui.menu .item')
         .tab({
           history: true,
@@ -621,7 +621,7 @@ themes      : ['Default']
       <h4 class="ui header">Setting Paths</h4>
       <p>Using <code>historyType: state</code> requires specifying a <b>base URL without any internal state</b>. This cannot be set automatically to <code>window.location</code> because all tabs with html5 state will appear as normal page urls, and route accordingly.</p>
       <p>HTML5 state will only work with dynamic site back-ends because it requires each tab path to correctly route on the server to the appropriate content.</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.ui.menu .item')
         .tab({
           history: true,
@@ -881,7 +881,7 @@ themes      : ['Default']
         <tr>
           <td>templates</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             templates    : {
               // returns page title
               determineTitle: function(tabArray) {}
@@ -893,7 +893,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             selector    : {
               tabs : '.ui.tab',
               parent : '.ui:not(.menu)'
@@ -905,7 +905,7 @@ themes      : ['Default']
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata : {
               tab    : 'tab',
               loaded : 'loaded',
@@ -918,7 +918,7 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className   : {
               loading : 'loading',
               active  : 'active'
@@ -974,7 +974,7 @@ themes      : ['Default']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       error: {
         api        : 'You attempted to load content without API module',
         method     : 'The method you called is not defined',

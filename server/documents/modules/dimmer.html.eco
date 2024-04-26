@@ -27,7 +27,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Dimmer</h4>
       <p>A simple dimmer displays no content</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
         // left button
         $('.segment').dimmer('show');
         // right button
@@ -66,7 +66,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="content" data-use-content="true">
       <h4 class="ui header">Content Dimmer</h4>
       <p>A dimmer can display content</p>
       <div class="ui ignored info message">Since <div class="ui horizontal label">2.3</div> dimmers with content now only need a single wrapping <code>content</code> container.</div>
@@ -136,10 +136,9 @@ themes      : ['Default']
     <h2 class="ui dividing header">Variations</h2>
 
     <h3>Dimmable</h3>
-    <div class="example">
+    <div class="example" data-since="2.0">
       <h4 class="ui header">
         Blurring
-        <span class="ui teal label">New in 2.0</span>
       </h4>
       <p>A dimmable element can blur its contents</p>
       <div class="ui blurring segment">
@@ -165,10 +164,9 @@ themes      : ['Default']
     </div>
 
     <h3>Alignment</h3>
-    <div class="example">
+    <div class="example" data-since="2.3" data-class="!top aligned, !bottom aligned">
       <h4 class="ui header">
         Vertical Alignment
-        <span class="ui teal label">New in 2.3</span>
       </h4>
       <p>A dimmer can have its content top or bottom aligned.</p>
       <div class="ui segment">
@@ -231,7 +229,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="medium, light, very light">
       <h4 class="ui header">Dimmer Shades</h4>
       <p>A dimmer can be formatted to have a different depth of background shading using the additional classes <code>medium</code>, <code>light</code> or <code>very light</code></p>
       <div class="ignored ui info message">Also works in combination with <code>inverted</code></div>
@@ -253,7 +251,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-since="2.6.4" data-class="!top dimmer, !center dimmer, !bottom dimmer">
       <h4 class="ui header">Partially Dimmer</h4>
       <p>A dimmer can be displayed only partially and limited to the overall height of its content instead of the whole to be covered area. This can be used for example as a caption on any element by using <code>top dimmer</code>, <code>center dimmer</code> or <code>bottom dimmer</code></p>
       <div class="ui segment">
@@ -290,7 +288,7 @@ themes      : ['Default']
     </div>
     <div class="partially example">
       <div class="ignored ui info message">Works also very well with transitions <code>fade up</code> or <code>fade down</code></div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.partially.example .dimmer')
         .dimmer({
             transition: 'fade up',
@@ -326,7 +324,7 @@ themes      : ['Default']
     <div class="event example">
       <h4 class="ui header">Dimmer Events</h4>
       <p>A dimmer can trigger a visibility change on an event</p>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.event.example .image')
         .dimmer({
           on: 'hover'
@@ -370,9 +368,9 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="dimmerloader example">
-      <p>You can customize a loader in a dimmer via javascript <div class="ui black label">New in 2.7.0</div></p>
-      <div class="evaluated code">
+    <div class="dimmerloader example" data-since="2.7.0">
+      <p>You can customize a loader in a dimmer via javascript</p>
+      <div class="evaluated code" data-type="javascript">
           $('.dimmerloader.example .image')
           .dimmer({
               displayLoader: true,
@@ -398,7 +396,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Display</h4>
       <p>You can display a dimmer by either invoking .dimmer('show') on a section or a dimmer itself. If you choose to  dim a dimmable section, a dimmer will automatically be created.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       // these two are the same
       $('.ui.dimmable')
         .dimmer('show')
@@ -412,7 +410,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Creating Dimmers</h4>
       <p>If a dimmer does not exist inside the element it will be created on first use.</p>
-      <div class="code" data-demo="true">
+      <div class="code" data-demo="true" data-type="javascript">
         $('h4')
           .dimmer('toggle')
         ;
@@ -422,7 +420,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Showing a Specific Dimmer</h4>
       <p>If a dimmer is already inside an element, you can call behavior on the dimmable section or the dimmer itself.</p>
-      <div class="code" data-demo="true">
+      <div class="code" data-demo="true" data-type="javascript">
         // If a dimmer exists on a page, you can make it appear by calling it directly
         $('.page.dimmer:first')
           .dimmer('toggle')
@@ -438,7 +436,7 @@ themes      : ['Default']
       Behaviors must be called on the same content which you originally initialize the dimmer, whether it is the <code>dimmable</code> context, or the <code>ui dimmer</code>
     </div>
 
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .dimmer('behavior name', argumentOne, argumentTwo)
     ;
@@ -597,10 +595,10 @@ themes      : ['Default']
           <td>
             fade
           </td>
-          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
+          <td data-since="2.8.8">Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
           <br>
-              <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
-                  <div class="code">
+              <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration
+                  <div class="code" data-type="javascript">
                   {
                       showMethod   : 'fade',
                       showDuration : 200,
@@ -614,7 +612,7 @@ themes      : ['Default']
         <tr>
           <td>duration</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             duration    : {
               show : 500,
               hide : 500
@@ -709,7 +707,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector: {
               dimmable : '.dimmable',
               dimmer   : '.ui.dimmer',
@@ -722,7 +720,7 @@ themes      : ['Default']
         <tr>
           <td>template</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             template : {
               dimmer: function() {
                return $('<div />').attr('class', 'ui dimmer');
@@ -735,7 +733,7 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className : {
               active     : 'active',
               dimmable   : 'dimmable',
@@ -778,7 +776,7 @@ themes      : ['Default']
         <tr>
           <td>errors</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             error   : {
               method   : 'The method you called is not defined.'
             }

@@ -16,9 +16,7 @@ type        : 'UI Element'
 
 <div class="main ui container">
 
-  <div class="ui active tab" data-tab="text">
-
-    <h2 class="ui header">Definition</h2>
+    <h2 class="ui dividing header">Types</h2>
 
     <div class="no example">
       <h4 class="ui header">Text</h4>
@@ -44,10 +42,8 @@ type        : 'UI Element'
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="example">
-      <h4 class="ui header">Size
-        <div class="ui black label">New in 2.7.2</div>
-      </h4>
+    <div class="example" data-since="2.7.2">
+      <h4 class="ui header">Size</h4>
       <p>Text can vary in the same sizes as icons</p>
         <div class="ui segment">
           <p>Starting with <span class="ui mini red text">mini</span> text</p>
@@ -61,5 +57,4 @@ type        : 'UI Element'
         </div>
     </div>
 
-  </div>
 </div>

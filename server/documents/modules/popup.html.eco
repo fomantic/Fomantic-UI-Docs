@@ -106,9 +106,8 @@ themes      : ['Default']
 
     <h3 class="ui header">No Javascript</h3>
 
-    <div class="example">
+    <div class="example" data-since="2.2">
       <h4 class="ui header">Tooltip
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>An element can specify a simple tooltip that can appear without javascript via the <code>data-tooltip</code> attribute. If the tooltip should be shown inverted, also add the <code>data-inverted</code> attribute.</p>
       <div class="ui warning ignored message">
@@ -242,8 +241,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Multiline Tooltip <span class="ui black label">New in 2.9.1</span></h4>
+    <div class="example" data-since="2.9.1">
+      <h4 class="ui header">Multiline Tooltip</h4>
       <p>A tooltip can show multiple lines via predefined line breaks in the HTML code and adding <code>multiline</code> to the <code>data-variation</code> attribute.</p>
       <div class="ui ignored warning message">
         <div class="header">
@@ -262,16 +261,16 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Visible Tooltip <div class="ui black label">New in 2.9.3</div></h4>
+    <div class="example" data-since="2.9.3">
+      <h4 class="ui header">Visible Tooltip</h4>
       <p>A tooltip can be shown visible all the time by adding <code>visible</code> to the <code>data-variation</code> attribute.</p>
       <div class="ui button" data-tooltip="I am visible all the time" data-variation="visible" data-position="right center">
         Important Button
       </div>
     </div>
 
-    <div class="example">
-        <h4 class="ui header">Colored Tooltip<span class="ui black label">New in 2.9.1</span></h4>
+    <div class="example" data-since="2.9.1" data-class="colors">
+        <h4 class="ui header">Colored Tooltip</h4>
         <p>A tooltip can have different colors via the <code>data-variation</code> attribute.</p>
         <div class="ui spaced compact wrapping buttons">
             <button data-variation="red" data-tooltip="Red" class="ui button">Red</button>
@@ -292,8 +291,8 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">States</h2>
 
-    <div class="loading example">
-        <h4 class="ui header">Loading <div class="ui black label">New in 2.9.2</div></h4>
+    <div class="loading example" data-since="2.9.2">
+        <h4 class="ui header">Loading</h4>
         <p>A popup may show its content is being loaded</p>
         <div class="ui grid">
           <div class="doubling two column row">
@@ -337,7 +336,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="!very wide" data-use-content="true">
       <h4 class="ui header">Width</h4>
       <p>A popup can be extra wide to allow for longer content</p>
       <i class="circular heart icon link" data-content="Hello. This is a wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
@@ -405,8 +404,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="colored example">
-        <h4 class="ui header">Colored<span class="ui black label">New in 2.9.1</span></h4>
+    <div class="colored example" data-since="2.9.1" data-class="colors">
+        <h4 class="ui header">Colored</h4>
         <p>A popup can have different colors</p>
         <div class="ui spaced compact wrapping buttons">
             <button class="ui button">Red</button>
@@ -458,7 +457,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Initializing A Popup</h4>
       <p>A popup is initialized on an activating element</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.activating.element')
         .popup()
       ;
@@ -525,7 +524,7 @@ themes      : ['Default']
     </div>
     <div class="no example">
       <h4 class="ui header">Specifying Content In Javascript</h4>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.ui.popup')
         .popup({
           title   : 'Popup Title',
@@ -538,7 +537,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .popup('behavior name', argumentOne, argumentTwo)
     ;
@@ -620,9 +619,8 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Examples</h2>
 
-    <div class="boundary example">
+    <div class="boundary example" data-since="2.2">
       <h4 class="ui header">Specifying Popup Boundaries
-        <div class="ui horizontal teal label">New in 2.2</div>
       </h4>
       <p>Popups now include a new setting <code>boundary</code> that let you specify that a popup should not escape the boundary of another section. This can be useful in complex paned layouts</p>
       <p>Additionally popups can now specify a scroll context, to allow for scroll containers other than window to cause a clicked popup to hide on scroll.</p>
@@ -647,7 +645,7 @@ themes      : ['Default']
 
       <p>Tweaking settings like the delay for show, and hide, and making the menu hoverable will help it function   more like a dropdown menu</p>
 
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.example .menu .browse')
         .popup({
           inline     : true,
@@ -718,7 +716,7 @@ themes      : ['Default']
       <div class="ui warning ignored message">
         Using an <code>inline</code> popup may require specifying a <code>min-width</code> on your popup, if your popup content will appear outside the boundaries of its parent element.
       </div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.example .custom.button')
         .popup({
           popup : $('.custom.popup'),
@@ -738,7 +736,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Specifying a trigger event</h4>
       <p>A popup trigger event can be specified</p>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
     $('.example .teal.button')
       .popup({
         on: 'click'
@@ -760,7 +758,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Target Element</h4>
       <p>A popup can specify a different target element than itself to show a popup</p>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.test.button')
         .popup({
           position : 'right center',
@@ -789,7 +787,7 @@ themes      : ['Default']
         color: #FF0000;
       }
       </div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
       $('.inline.icon')
         .popup({
           inline: true
@@ -843,7 +841,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="ui clearing divider"></div>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
     $('.selection')
       .dropdown({
         onChange: function(value) {
@@ -951,7 +949,7 @@ themes      : ['Default']
         <tr>
           <td>delay</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     delay: {
       show: 50,
       hide: 70
@@ -965,9 +963,9 @@ themes      : ['Default']
           <td>
             scale
           </td>
-          <td>Named transition to use when animating menu in and out.<br>
-            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
-                <div class="code">
+          <td data-since="2.8.8">Named transition to use when animating menu in and out.<br>
+            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration
+                <div class="code" data-type="javascript">
                 {
                     showMethod   : 'fade',
                     showDuration : 200,
@@ -986,9 +984,9 @@ themes      : ['Default']
           <td>Duration of animation events. The value will be ignored when individual hide/show duration values are provided via the <code>transition</code> setting</td>
         </tr>
         <tr>
-          <td>arrowPixelsFromEdge <div class="ui teal label">New in 2.3</div></td>
+          <td>arrowPixelsFromEdge</td>
           <td>20</td>
-          <td>When a target element is less than 2x this amount, the popup will appear with the arrow centered on the target element, instead of with the popup edge matching the target's edge.</td>
+          <td data-since="2.3">When a target element is less than 2x this amount, the popup will appear with the arrow centered on the target element, instead of with the popup edge matching the target's edge.</td>
         </tr>
         <tr>
           <td>setFluidWidth</td>
@@ -1145,7 +1143,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     selector    : {
       popup    : '.ui.popup'
     }
@@ -1156,7 +1154,7 @@ themes      : ['Default']
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     metadata: {
       activator : 'activator',
       content   : 'content',
@@ -1173,7 +1171,7 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     className   : {
       active      : 'active',
       basic       : 'basic',
@@ -1236,7 +1234,7 @@ themes      : ['Default']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error: {
               invalidPosition : 'The position you specified is not a valid position',
               cannotPlace     : 'Popup does not fit within the boundaries of the viewport',

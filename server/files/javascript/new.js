@@ -112,7 +112,7 @@ semantic.new.ready = function() {
           identifier  : 'first-name',
           rules: [
             {
-              type   : 'empty',
+              type   : 'notEmpty',
               prompt : 'Please enter your first name'
             }
           ]
@@ -121,7 +121,7 @@ semantic.new.ready = function() {
           identifier  : 'last-name',
           rules: [
             {
-              type   : 'empty',
+              type   : 'notEmpty',
               prompt : 'Please enter your last name'
             }
           ]

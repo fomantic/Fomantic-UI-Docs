@@ -31,9 +31,9 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-since="2.9.0">
     <h4 class="ui header">
-      File Input <div class="ui black label">New in 2.9.0</div>
+      File Input
     </h4>
     <p>A file input</p>
     <div class="ui file input">
@@ -43,9 +43,9 @@ themes      : ['Default', 'GitHub']
     If you want the trigger button having a custom text or an icon, you should use a <a href="#file-action">File Action Input</a>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-since="2.9.0">
     <h4 class="ui header">
-      Invisible File Input <div class="ui black label">New in 2.9.0</div>
+      Invisible File Input
     </h4>
     <p>A file input can be made invisible so you are able to design another element to trigger the file dialog.</p>
     <p>To accomplish this, you have to use a corresponding <code>&lt;label&gt;</code> element. This can be styled as desired, most probably as a button element</p>
@@ -180,7 +180,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="left labeled, left corner labeled, right corner labeled, right labeled, labeled">
+  <div class="example" data-class="!left icon, left labeled, !left corner labeled, !corner labeled, right corner labeled, !right labeled, labeled">
     <h4 class="ui header">Labeled</h4>
     <p>An input can be formatted with a label</p>
     <div class="ui labeled input">
@@ -267,7 +267,7 @@ themes      : ['Default', 'GitHub']
         <div class="ui basic label">Persons</div>
       </div>
   </div>
-  <div class="example" data-class="left action, right action, action">
+  <div class="example" data-class="!left action, right action, action">
     <h4 class="ui header">Action</h4>
     <p>An input can be formatted to alert the user to an action they may perform</p>
     <div class="ui action input">
@@ -277,7 +277,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui left action input">
-      <button class="ui teal labeled icon button">
+      <button class="ui green labeled icon button">
         <i class="cart icon"></i>
         Checkout
       </button>
@@ -327,8 +327,8 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">File Action<div class="ui black label">New in 2.9.0</div></h4>
+  <div class="example" data-since="2.9.0">
+    <h4 class="ui header">File Action</h4>
     <p>A File action input allows custom content inside the file trigger button. File action input buttons have to be made out of a label element.</p>
     <div class="ui ignored warning message">
         Although <code>left action</code> also works with file action inputs, in order to support button highlighting on key tabbing, the action button needs to be placed after the file input so it appears to the right.
@@ -437,10 +437,9 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-since="2.7">
     <h4 class="ui header">
         Textarea
-        <div class="ui black label">New in 2.7</div>
     </h4>
     <p>Using the input class you can also use some features on <code>textarea</code> as well</p>
     <div class="ui form">

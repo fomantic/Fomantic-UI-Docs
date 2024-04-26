@@ -31,7 +31,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Title</h4>
       <p>A nag can have a title</p>
       <div class="ui nag">
@@ -41,7 +41,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="fixed">
      <h4 class="ui header">Fixed Nag</h4>
       <p>A fixed nag appears at the top of the screen</p>
       <div class="ui fixed nag" id="fixednag">
@@ -60,7 +60,7 @@ type        : 'UI Module'
           ;
       </div>
     </div>
-    <div class="example">
+    <div class="example" data-class="bottom fixed">
       <p>A fixed nag can appear at the bottom of the screen</p>
       <div class="ui bottom fixed nag" id="bottomfixednag">
         Look, I am a bottom fixed nag!
@@ -75,7 +75,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="overlay">
      <h4 class="ui header">Overlay Nag</h4>
       <p>An overlay nag is absolute positioned and appears at the top of the parent DOM node</p>
       <div class="ui segment">
@@ -87,7 +87,7 @@ type        : 'UI Module'
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
       </div>
     </div>
-    <div class="example">
+    <div class="example" data-class="bottom overlay">
       <p>An overlay nag can appear at the bottom of the parent node</p>
       <div class="ui segment">
           <div class="ui bottom overlay nag">
@@ -112,7 +112,7 @@ type        : 'UI Module'
         </div>
     </div>
     <h2 class="ui dividing header">Variations</h2>
-    <div class="example">
+    <div class="example" data-class="colors">
         <h4 class="ui header">Colored</h4>
         <p>A nag can be formatted to be different colors</p>
         <div class="ui red nag"><div class="title">Red</div><i class="close icon"></i></div> <p></p>
@@ -239,7 +239,7 @@ type        : 'UI Module'
       <h2 class="ui dividing header">Behaviors</h2>
 
         <p>All the following behaviors can be called using the syntax:<p>
-        <div class="code">
+        <div class="code" data-type="javascript">
             $('.ui.nag').nag('behavior', argumentOne, argumentTwo...);
         </div>
 
@@ -352,7 +352,7 @@ type        : 'UI Module'
         <tr>
           <td>animation</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
               animation   : {
                 show : 'slide',
                 hide : 'slide'
@@ -440,7 +440,7 @@ type        : 'UI Module'
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     className   : {
       bottom    : 'bottom',
       fixed     : 'fixed'
@@ -494,7 +494,7 @@ type        : 'UI Module'
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
               error: {
                 noStorage       : 'Unsupported storage method',
                 method          : 'The method you called is not defined.',

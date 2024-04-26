@@ -373,7 +373,7 @@ type        : 'UI Module'
 
       <p>Content that sticks to its own context will adjust its own layout when being "stuck". You can fix layout issues caused by this reflow by adding styles to the next element after a <code>ui fixed sticky</code>
 
-      <div class="code">
+      <div class="code" data-type="css">
         .ui.fixed.sticky + p {
           margin-top: 39px;
         }
@@ -448,7 +448,7 @@ type        : 'UI Module'
         <div class="item">Hiding elements using Javascript</div>
       </div>
       <p>Refreshing cached values just requires calling the <code>refresh</code> behavior.</p>
-      <div class="ui code">
+      <div class="ui code" data-type="javascript">
         // recalculates offsets
         $('.ui.sticky')
           .sticky('refresh')
@@ -529,8 +529,8 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>setSize</td>
-          <td>true <div class="ui label">New in 2.2.11</div></td>
-          <td>Sets size of <code>fixed</code> content to match its width before fixing to screen dynamically. This is used because fixed may display block or 100% width content differently than it appears before sticking.</td>
+          <td>true</td>
+          <td data-since="2.2.11">Sets size of <code>fixed</code> content to match its width before fixing to screen dynamically. This is used because fixed may display block or 100% width content differently than it appears before sticking.</td>
         </tr>
         <tr>
           <td>jitter</td>
@@ -629,7 +629,7 @@ type        : 'UI Module'
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className : {
               bound     : 'bound',
               fixed     : 'fixed',
@@ -686,7 +686,7 @@ type        : 'UI Module'
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error         : {
               visible        : 'Element is hidden, you must call refresh after element becomes visible',
               method         : 'The method you called is not defined.',

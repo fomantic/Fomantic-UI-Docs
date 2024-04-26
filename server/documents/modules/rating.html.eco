@@ -26,14 +26,14 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Rating
-        <span class="ui teal label">Flexbox</span>
+        <span class="ui orange label">Flexbox</span>
       </h4>
       <p>A basic rating </p>
       <div class="ui rating" data-max-rating="1"></div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Icon <div class="ui black label">New in 2.7</div></h4>
+    <div class="example" data-since="2.7">
+      <h4 class="ui header">Icon</h4>
       <p>You can use any available icon as rating indicator</p>
 
       <div class="ui yellow rating" data-icon="star" data-rating="2"></div>
@@ -52,8 +52,8 @@ themes      : ['Default']
 
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Color <div class="ui black label">New in 2.7</div></h4>
+    <div class="example" data-since="2.7" data-class="colors">
+      <h4 class="ui header">Color</h4>
       <p>You can specify any color of the FUI color palette</p>
       <div class="ui red rating" data-icon="star" data-rating="1" data-max-rating="7"></div>
       <br><br>
@@ -83,8 +83,8 @@ themes      : ['Default']
       <br><br>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Partial Ratings <div class="ui black label">New in 2.8.0</div></h4>
+    <div class="example" data-since="2.8.0">
+      <h4 class="ui header">Partial Ratings</h4>
       <p>You can use decimal values for showing partially filled ratings</p>
       <div class="ui ignored warning message">
         <p>Partial ratings require jQuery version >3.2 and are only supported by browsers with support for <a href="https://caniuse.com/#feat=css-variables">CSS Variables</a> and <a href="https://caniuse.com/#feat=mdn-css_types_image_gradient_linear-gradient_interpolation_hints">Gradient Midpoints</a>. Unsupported browsers will use a rounded down value.</p>
@@ -268,7 +268,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Behaviors</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.ui.rating')
       .rating('behavior name', argumentOne, argumentTwo)
     ;
@@ -391,7 +391,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       selector  : {
         icon : '.icon'
       }
@@ -401,7 +401,7 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       className : {
         active     : 'active',
         hover      : 'hover',
@@ -453,7 +453,7 @@ themes      : ['Default']
         <tr>
           <td>error</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       error   : {
         method    : 'The method you called is not defined'
       }

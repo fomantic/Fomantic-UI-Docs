@@ -25,7 +25,7 @@ themes      : ['default']
 
     <h2 class="ui dividing header">Types</h2>
 
-    <div class="example">
+    <div class="example" data-class="shape">
       <h4 class="ui header">Shape</h4>
       <p>A shape is a three dimensional object including any flat content as a side.</p>
 
@@ -261,17 +261,17 @@ themes      : ['default']
       <p>Animations use CSS3 transitions and Javascript to set-up the correct conditions.</p>
 
       <p>Initializing a shape</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
         $('.shape').shape();
       </div>
 
       <p>Transitions automatically assume next side is the next sibling (or first if last element)</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
         $('.shape').shape('flip up');
       </div>
 
       <p>To manually set the next side to appear use a selector or jQuery object</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.shape')
         .shape('set next side', '.second.side')
         .shape('flip up')
@@ -279,7 +279,7 @@ themes      : ['default']
       </div>
 
       <p>Any internal method can be invoked programmatically</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
         $('.shape').shape('repaint');
       </div>
 
@@ -289,7 +289,7 @@ themes      : ['default']
 
     <div class="no example">
       <p>All the following behaviors can be called using the syntax:</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.your.element')
         .shape('behavior name', argumentOne, argumentTwo)
       ;
@@ -481,7 +481,7 @@ themes      : ['default']
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             selector    : {
               sides : '.sides',
               side  : '.side'
@@ -492,7 +492,7 @@ themes      : ['default']
         <tr>
           <td>className</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             className   : {
               animating : 'animating',
               hidden    : 'hidden',
@@ -547,7 +547,7 @@ themes      : ['default']
         <tr>
           <td>error</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error: {
               side   : 'You tried to switch to a side that does not exist.',
               method : 'The method you called is not defined'

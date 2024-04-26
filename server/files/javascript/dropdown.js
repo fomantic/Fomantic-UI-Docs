@@ -10,6 +10,7 @@ semantic.dropdown.ready = function() {
     $clearingDropdown = $examples.filter('.clearing').find('.ui.dropdown'),
     $buttonDropdown   = $examples.filter('.button.example').find('.ui.dropdown'),
     $dropdown         = $examples.filter('.dropdown').find('.menu > .item > .ui.dropdown, .menu > .item.ui.dropdown, > .ui.dropdown:not(.simple):not(.selection), .inline.dropdown, .icon.buttons .button, .form .dropdown.selection'),
+    $keepSearchTerm   = $examples.filter('.keepsearchterm').find(' > .ui.selection.dropdown'),
     $selectionDropdown= $examples.filter('.dropdown').find(' > .ui.selection.dropdown'),
     $transition       = $examples.filter('.transition').find('.ui.dropdown'),
     $simpleDropdown   = $examples.filter('.simple').find('.ui.dropdown'),
@@ -58,6 +59,14 @@ semantic.dropdown.ready = function() {
   ;
   $selectionDropdown
     .dropdown({
+        className: {
+            menu: 'scrollhint menu'
+        }
+    })
+  ;
+  $keepSearchTerm
+    .dropdown({
+        keepSearchTerm: true,
         className: {
             menu: 'scrollhint menu'
         }

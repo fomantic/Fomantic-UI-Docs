@@ -261,7 +261,7 @@ themes      : ['Default', 'Material']
       </div>
       <div class="description">
         <div class="ui header">Modal Header</div>
-        <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
+        <p>This is an example of expanded content that will cause the modal's content to scroll</p>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         <div class="ui divider"></div>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
@@ -485,7 +485,7 @@ themes      : ['Default', 'Material']
 
     <h2 class="ui dividing header">Content</h2>
 
-    <div class="no example">
+    <div class="no example" data-use-content="true">
       <h4 class="ui header">
         Header
       </h4>
@@ -514,12 +514,9 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.0" data-use-content="true">
       <h4 class="ui header">
         Image Content
-        <span class="ui teal label">
-          New in 2.0
-        </span>
       </h4>
       <p>A modal can contain image content</p>
       <div class="ui ignored info message">
@@ -538,14 +535,14 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-use-content="true">
       <h4 class="ui header">
         Actions
       </h4>
       <p>A modal can contain a row of actions</p>
       <div class="ui ignored info message">
         <p>Close actions are applied by default to all button actions matching the <code>approve</code>, <code>deny</code> or <code>close</code> selector. In addition an <code>onApprove</code> or <code>onDeny</code> callback will only fire if the elements match the <code>approve</code> or <code>deny</code> selector.</p>
-        <div class="code" data-type="css">
+        <div class="code" data-type="javascript">
           close    : '> .close',
           approve  : '.positive, .approve, .ok',
           deny     : '.negative, .deny, .cancel'
@@ -571,7 +568,7 @@ themes      : ['Default', 'Material']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="no example">
+    <div class="no example" data-class="fullscreen">
       <h4 class="ui header">Full Screen</h4>
       <p>A modal can use the entire size of the screen</p>
       <div class="code" data-demo="true" data-eval="$('.fullscreen.modal').not('.overlay').modal('show')">
@@ -580,7 +577,7 @@ themes      : ['Default', 'Material']
       ;
       </div>
     </div>
-    <div class="no example">
+    <div class="no example" data-since="2.7.3" data-class="!overlay fullscreen">
       <h4 class="ui header">Overlay Full Screen</h4>
       <p>A modal can overlay the entire screen</p>
       <div class="ui ignored info message">
@@ -638,12 +635,12 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.2.11" data-use-content="true">
       <h4 class="ui header">
         Scrolling Content
-        <div class="ui teal label">New in 2.2.11</div>
       </h4>
-      <p>A modal can use the entire size of the screen</p>
+      <p>A modal can have a scrolling content</p>
+      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling content</code> and a native resize drag handler will appear to the bottom right of the content. This needs a <a href="https://caniuse.com/?search=resize" target="_blank">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
       <div class="code" data-type="html" data-variation="scrolling">
         <div class="ui modal">
           <div class="header">Header</div>
@@ -659,10 +656,9 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.8.8" data-use-content="true">
       <h4 class="ui header">
           Center Aligned
-          <div class="ui black label">New in 2.8.8</div>
       </h4>
       <p>You can center align the header, the content or even actions individually</p>
       <div class="code" data-type="html">
@@ -684,10 +680,9 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.9.0" data-use-content="true">
       <h4 class="ui header">
           Left Actions
-          <div class="ui black label">New in 2.9.0</div>
       </h4>
       <p>You can also place the action buttons to the left</p>
       <div class="code" data-type="html">
@@ -709,10 +704,9 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.9.0" data-class="basic" data-use-content="true">
       <h4 class="ui header">
           Basic Header and Actions
-          <div class="ui black label">New in 2.9.0</div>
       </h4>
       <p>Header and/or Actions can also appear on the same basic background as the content</p>
       <div class="code" data-type="html">
@@ -749,10 +743,9 @@ themes      : ['Default', 'Material']
 
     <h2 class="ui dividing header">Examples</h2>
 
-    <div class="no example">
+    <div class="no example" data-since="2.3">
       <h4 class="ui header">
         Disabling Vertical Centering
-        <div class="ui horizontal teal label">New in 2.3</div>
       </h4>
       <p>When your modal has dynamic content, or multiple steps, it can make sense to disable centering so content doesn't jump around vertically when its height changes.</p>
       <div class="code" data-demo="true">
@@ -765,10 +758,9 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.7.3" data-class="!top aligned">
       <h4 class="ui header">
           Top or Bottom aligned
-          <div class="ui horizontal teal label">New in 2.7.3</div>
       </h4>
       <p>If you leave the <code>centered</code> option to the default <code>true</code>, you can also force positioning of the modal by adding additional classes <code>top aligned</code> (which equals to the usage of <code>centered:false</code>) or <code>bottom aligned</code> to the modal itself</p>
       <div class="ui ignored info message">
@@ -794,6 +786,7 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Internally Scrolling Content</h4>
       <p>You may prefer to have the content of your modal scroll itself, you can do this by using the <code>scrolling content</code> variation.</p>
+      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling content</code> and a native resize drag handler will appear to the bottom right of the content. This needs a <a href="https://caniuse.com/?search=resize" target="_blank">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
       <div class="code" data-demo="true">
       $('.longer.modal')
         .modal('show')
@@ -898,7 +891,7 @@ themes      : ['Default', 'Material']
         </div>
       </div>
       <div class="ui clearing divider"></div>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.selection.dropdown')
         .dropdown({
           onChange: function(value) {
@@ -940,8 +933,8 @@ themes      : ['Default', 'Material']
 
     <h2 class="ui dividing header">Initializing a modal</h2>
 
-    <div class="no example">
-      <h4 class="ui header">Via Javascript properties<span class="ui black label">New in 2.8.8</span></h4>
+    <div class="no example" data-since="2.8.8">
+      <h4 class="ui header">Via Javascript properties</h4>
       <p>You can create temporary modals without the need to create markup on your own. Temporary modals will be removed from the DOM once closed by default if there isn't a custom <code>onHidden</code> callback given.</p>
       <div class="ui ignored info message">jQuery short notation <code>$.modal()</code> support was added in 2.9.0. If you want this for older FUI versions add
           <code>
@@ -1003,8 +996,8 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="no example">
-      <h4 class="ui header">Reuse existing modal with new content <span class="ui black label">New in 2.8.8</span></h4>
+    <div class="no example" data-since="2.8.8">
+      <h4 class="ui header">Reuse existing modal with new content</h4>
       <p>You can prepare a modal markup as a general template and reuse it's general style but provide actual content via js properties.</p>
       <div class="code" data-demo="true">
         var now = new Date();now.setDate(now.getDate()+Math.floor(Math.random() * 31 + 1));
@@ -1031,7 +1024,7 @@ themes      : ['Default', 'Material']
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.ui.modal')
       .modal('behavior name', argumentOne, argumentTwo)
     ;
@@ -1100,12 +1093,12 @@ themes      : ['Default', 'Material']
       </tbody>
     </table>
 
-    <h2 class="ui dividing header">Config Templates</h2> <span class="ui black label">New in 2.8.8</span>
+    <h2 data-since="2.8.8" class="ui dividing header">Config Templates</h2>
     <p>A config template is a special behavior to immediately show preconfigured temporary modals. Three basic templates are included: <code>alert</code>, <code>confirm</code>, <code>prompt</code> as equivalents to existing vanilla JS variants, but with more possibilities to customize the look & feel. </p>
     <div class="ui info message">
       Config template modals will be always autoshown, so no manual <code>show</code> is needed)
     </div>
-    <div class="code">
+    <div class="code" data-type="javascript">
       $.modal('alert','hello')
       $.modal('confirm','Are you sure?',function(value){})
       $.modal('prompt','Enter Code', function(value){})
@@ -1193,7 +1186,7 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Create your own template</h4>
       <p>By extending the modals templates object once, you can define your own custom config templates. It has to return an object which will be merged into the modals settings prior to creating/showing the modal.</p>
-      <div class="evaluated code">
+      <div class="evaluated code" data-type="javascript">
   $.fn.modal.settings.templates.greet = function(username) {
   // do something according to modals settings and/or given parameters
     var settings = this.get.settings(); // "this" is the modal instance
@@ -1253,12 +1246,12 @@ themes      : ['Default', 'Material']
         <tr>
           <td>restoreFocus</td>
           <td>true</td>
-          <td>When false, the last focused element, before the modal was shown, will not get refocused again when the modal hides. This could prevent unwanted scrolling behaviors after closing a modal. <div class="ui tiny black label">new in 2.7.2</div></td>
+          <td data-since="2.7.2">When false, the last focused element, before the modal was shown, will not get refocused again when the modal hides. This could prevent unwanted scrolling behaviors after closing a modal.</td>
         </tr>
         <tr>
           <td>autoShow</td>
           <td>false</td>
-          <td>When true, immediately shows the modal at instantiation time. <div class="ui tiny black label">new in 2.8.8</div></td>
+          <td data-since="2.8.8">When true, immediately shows the modal at instantiation time.</td>
         </tr>
         <tr>
           <td>observeChanges</td>
@@ -1326,9 +1319,9 @@ themes      : ['Default', 'Material']
           <td>
             scale
           </td>
-          <td>Named transition to use when animating menu in and out, full list can be found in <a href="/modules/transition.html">ui transitions</a> docs.<br>
-            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration. <span class="ui black tiny label">New in 2.8.8</span>
-                <div class="code">
+          <td data-since="2.8.8">Named transition to use when animating menu in and out, full list can be found in <a href="/modules/transition.html">ui transitions</a> docs.<br>
+            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration.
+                <div class="code" data-type="javascript">
                 {
                     showMethod   : 'fade',
                     showDuration : 200,
@@ -1449,7 +1442,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>className</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       className : {
         active    : 'active',
         animating  : 'animating',
@@ -1511,7 +1504,7 @@ themes      : ['Default', 'Material']
           <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>.
             <div class="ui info message">Actions will close the modal by default. Return false from the click handler to prevent that.</div>
             <div class="ui warning message">If you use any of the approve (approve, ok, positive) or deny (deny, cancel, negative) classnames for the <code>class</code> property, a <code>click</code> handler will be ignored. In such cases use the <code>onApprove</code> and <code>onDeny</code> callbacks instead</div>
-            <div class="code">
+            <div class="code" data-type="javascript">
             actions: [{
                 text    : 'Wait',
                 class   : 'red',
@@ -1549,7 +1542,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>fields</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
         fields         : {
           class        : 'class',
           text         : 'text',
@@ -1562,7 +1555,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>text</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
   text: {
     ok    : 'Ok',
     cancel: 'Cancel'
@@ -1614,7 +1607,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>error</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
       error   : {
         dimmer    : 'UI Dimmer, a required component is not included in this page',
         method    : 'The method you called is not defined.',

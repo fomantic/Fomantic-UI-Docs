@@ -78,13 +78,13 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="ui ignored info message">
         Selection dropdowns can be initialized directly on a <code>select</code> or with the matching HTML and a hidden <code>input</code>.
       </div>
-      <div class="ui ignored warning message">
+      <div class="ui ignored warning message" data-since="2.8.7">
       	<div class="header">
       		<i class="mobile icon"></i><i class="apple icon"></i><i class="firefox icon"></i>
       		iOS devices or firefox mobile do not show a scrollbar by default!
       	</div>
       	<p>
-      		To indicate more possible entries than shown, you may add the <code>scrollhint</code> class to the <code>menu</code> to show a short swipe animation on such devices.<br>When transforming <code>select</code> dropdowns this is done by using <code>className:{menu:'scrollhint menu'}</code> as a config setting <span class="ui black mini label">New in 2.8.7</span>
+      		To indicate more possible entries than shown, you may add the <code>scrollhint</code> class to the <code>menu</code> to show a short swipe animation on such devices.<br>When transforming <code>select</code> dropdowns this is done by using <code>className:{menu:'scrollhint menu'}</code> as a config setting
       	</p>
       </div>
       <div class="ui selection dropdown">
@@ -166,7 +166,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </select>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-since="2.8.3">
       <h4 class="ui header">Unfilterable items in Search Selection</h4>
       <p>You can define items to always be listed, even if the search filter would not match, by adding the <code>unfilterable</code> class to the desired items</p>
         <div class="ui search selection dropdown">
@@ -185,10 +185,9 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
     </div>
 
-    <div class="diacritics example">
+    <div class="diacritics example" data-since="2.7.2">
       <h4 class="ui header">
         Search ignoring Diacritics
-        <div class="ui black label">New in 2.7.2</div>
       </h4>
       <p>A selection dropdown can allow a user to ignore all Diacritics while searching.</p>
       <div class="ui ignored info message">
@@ -236,10 +235,9 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-since="2.4.2">
       <h4 class="ui header">
         Clearable Selection
-        <div class="ui teal label">New in 2.4.2</div>
       </h4>
       <p>A clearable selection dropdown can allow a user to cancel to cancel a previous selection</p>
       <div class="ui clearable selection dropdown">
@@ -310,12 +308,25 @@ themes      : ['Default', 'GitHub', 'Material']
         <%- @partial('examples/single/skill-menu') %>
       </select>
     </div>
-    <div class="dropdown example">
+    <div class="dropdown example" data-class="search">
       <h4 class="ui header">Multiple Search Selection</h4>
       <p>A selection dropdown can allow multiple search selections</p>
       <select class="ui fluid search dropdown" multiple>
         <%- @partial('examples/single/state-options') %>
       </select>
+    </div>
+    <div class="keepsearchterm example" data-since="2.9.3" data-class="multiple search selection">
+      <p>A multiple search selection dropdown can keep its search value on item selection so the menu stays filtered</p>
+      <select class="ui fluid multiple search selection dropdown">
+        <%- @partial('examples/single/state-options') %>
+      </select>
+      <div class="code" data-type="javascript">
+          $('.ui.search.selection.dropdown')
+            .dropdown({
+              keepSearchTerm: true
+            })
+          ;
+      </div>
     </div>
     <div class="another dropdown example">
       <div class="ui ignored info message">
@@ -906,7 +917,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
     </div>
-    <div class="dropdown example">
+    <div class="dropdown example" data-since="2.8.7">
       <p>The description can be shown vertically underneath the entry using <code>vertical item</code>.</p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
@@ -980,7 +991,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-class="!right floated, !left floated">
       <h4 class="ui header">Floated Content</h4>
       <p>A dropdown menu can contain floated content.</p>
       <div class="ui ignored info message">Floated content may stack to two lines without manually setting a width when or using a <code>fluid</code> dropdown
@@ -1082,8 +1093,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="actionable example">
-      <h4 class="ui header">Actionable <div class="ui black label">New in 2.9.0</div></h4>
+    <div class="actionable example" data-since="2.9.0">
+      <h4 class="ui header">Actionable</h4>
       <p>A dropdown menu can contain an actionable item which performs a custom callback once clicked instead of being selected itself</p>
       <div class="ui selection dropdown">
         <input type="hidden" name="">
@@ -1207,8 +1218,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Read-Only <span class="ui black label">New in 2.8.8</span></h4>
+    <div class="example" data-since="2.8.8">
+      <h4 class="ui header">Read-Only</h4>
       <p>A dropdown can be read-only and does not allow user interaction</p>
       <div class="ui read-only dropdown">
         Dropdown <i class="dropdown icon"></i>
@@ -1222,7 +1233,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="dropdown example" data-class="size">
+    <div class="dropdown example" data-class="size" data-since="2.5">
       <h4 class="ui header">Size</h4>
       <p>A dropdown can have different sizes</p>
       <div class="ui mini selection dropdown">
@@ -1305,9 +1316,10 @@ themes      : ['Default', 'GitHub', 'Material']
     <div class="dropdown example">
       <h4 class="ui header">Scrolling</h4>
       <p>A dropdown can have its menu scroll</p>
-      <div class="ui ignored warning message">
+     <div class="ui ignored warning message">
         Scrolling dropdowns are incompatible with the usage of <code>sub menu</code>.
       </div>
+      <div class="ui ignored message" data-since="2.9.3">You can also use <code>resizable scrolling</code> and a native resize drag handler will appear to the bottom right of the menu. This needs a <a href="https://caniuse.com/?search=resize" target="_blank">modern browser</a>, so does not work in IE11 or legacy Edge.</div>
       <div class="ui scrolling dropdown">
         <input type="hidden" name="gender">
         <div class="default text">Select choice</div>
@@ -1411,8 +1423,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="another dropdown example">
-      <p>The menu of a non-inverted dropdown can be inverted <span class="ui black label">New in 2.8.8</span></p>
+    <div class="another dropdown example" data-since="2.8.8">
+      <p>The menu of a non-inverted dropdown can be inverted</p>
         <div class="ui selection dropdown">
             <input type="hidden" name="choices">
             <div class="default text">Select choice</div>
@@ -1487,7 +1499,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-since="2.7.3" data-class="!very long, !very short, long, short">
       <h4 class="ui header">Height</h4>
       <p>A selection dropdown can be long (2x of default height) so that more items can be glanced.</p>
       <select class="ui search long dropdown" multiple>
@@ -1498,6 +1510,13 @@ themes      : ['Default', 'GitHub', 'Material']
     <div class="another dropdown example">
       <p>Very long: 3x of default height.</p>
       <select class="ui search very long dropdown" multiple>
+        <%- @partial('examples/single/state-options') %>
+      </select>
+    </div>
+
+    <div class="another dropdown example">
+      <p>Unlimited. No scrollbar and no height limitation. This is especially needed when used in combination with <a href="#pointing">Pointing</a> to keep the arrow being displayed.</p>
+      <select class="ui search unlimited pointing dropdown" multiple>
         <%- @partial('examples/single/state-options') %>
       </select>
     </div>
@@ -1569,7 +1588,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="dropdown example">
+    <div class="dropdown example" data-since="2.7.3" data-class="!two column, !three column, !four column, !five column">
       <h4 class="ui header">Columnar Menu</h4>
       <p>A selection dropdown can allow menu to be equally divided so that more items can be glanced.</p>
       <select class="ui two column dropdown" multiple>
@@ -1615,12 +1634,9 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <h2 class="ui header">Selection Dropdowns</h2>
 
-    <div class="clearable example">
+    <div class="clearable example" data-since="2.4.0">
       <h4 class="ui header">
         Clearable
-        <div class="ui teal label">
-          New in 2.4.0
-        </div>
       </h4>
       <p>Using the clearable setting will let users remove their selection from a dropdown.</p>
 
@@ -1731,14 +1747,14 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="stuck example">
-      <h4 class="ui header">Stuck User Additions <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="stuck example" data-since="2.9.0">
+      <h4 class="ui header">Stuck User Additions</h4>
       <p>While using <code>allowAdditions: true</code> together with <code>hideAdditions: false</code>, the first line indicating "add:" with the user addition may not be correctly displayed, depending on the container size and the distance between topmost visible item and menu's top item.
 
       <p>You can stick this addition line to the top of the menu by providing the additional <code>stuck</code> class.</p>
 
       <div class="ui ignored warning message">
-        A stuck user additions dropdown needs a modern browser with <a href="https://caniuse.com/?search=position%20sticky">position:sticky support</a>, so does not work in IE11 or legacy Edge
+        A stuck user additions dropdown needs a modern browser with <a href="https://caniuse.com/?search=position%20sticky" target="_blank">position:sticky support</a>, so does not work in IE11 or legacy Edge
       </div>
 
       <div class="ui sub header">Single</div>
@@ -1769,7 +1785,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="no label example">
+    <div class="label example">
       <h4 class="ui header">Text Labels</h4>
       <p>Sometimes multiselect include options which are long and would appear awkwardly as labels. Setting <code>useLabels: false</code> will display a selected count, and allow reselection directly from the menu.</p>
       <div class="ui ignored info message">
@@ -1793,7 +1809,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
 
       <div class="evaluated code" data-type="javascript">
-        $('.no.label.example .ui.dropdown')
+        $('.label.example .ui.dropdown')
           .dropdown({
             useLabels: false
           })
@@ -2550,10 +2566,9 @@ themes      : ['Default', 'GitHub', 'Material']
         ;
       </div>
     </div>
-    <div class="js example">
+    <div class="js example" data-since="2.2.12">
       <h4 class="ui header">
         Initializing with Javascript Only
-        <div class="ui teal label">New in 2.2.12</div>
       </h4>
       <p>You can specify a list of values in the settings object to avoid having to stub the html yourself.</p>
       <p>Adding <code>selected: true</code> to an item will have that item selected by default.</p>
@@ -2609,7 +2624,7 @@ themes      : ['Default', 'GitHub', 'Material']
         ;
       </div>
       <br/>
-      <p>You can also add submenus by adding <code>type: 'menu'</code> or <code>type: 'left menu'</code> and another <code>values</code> object to the item itself. <span class="ui black label">New in 2.8.8</span></p>
+      <p>You can also add submenus by adding <code>type: 'menu'</code> or <code>type: 'left menu'</code> and another <code>values</code> object to the item itself. <span class="ui teal label">New in 2.8.8</span></p>
       <div class="code" data-label="Javascript" data-type="javascript">
           $('.ui.dropdown').dropdown({
             values: [
@@ -2657,8 +2672,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
 
     </div>
-      <div class="no example">
-          <h4 class="ui header">Display images and/or icons by value setting<div class="ui black label">New in 2.7.7</div></h4>
+      <div class="no example" data-since="2.7.7">
+          <h4 class="ui header">Display images and/or icons by value setting</h4>
           <p>Images and/or icons in front of an item can be dynamically created by providing image paths, icon names or classnames for different styling</p>
           <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
           <div class="evaluated code" data-type="javascript">
@@ -2736,8 +2751,8 @@ themes      : ['Default', 'GitHub', 'Material']
 
       </div>
 
-      <div class="no example">
-          <h4 class="ui header">Display a (vertical) description by value setting<div class="ui black label">New in 2.8.8</div></h4>
+      <div class="no example" data-since="2.8.8">
+          <h4 class="ui header">Display a (vertical) description by value setting</h4>
           <p>An additional item description (optionally displayed vertically) can be dynamically created by providing two extra attributes</p>
           <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
           <div class="evaluated code" data-type="javascript">
@@ -2764,8 +2779,8 @@ themes      : ['Default', 'GitHub', 'Material']
           </div>
       </div>
 
-      <div class="no example">
-          <h4 class="ui header">Supporting image labels for multiselection<div class="ui black label">New in 2.7.7</div></h4>
+      <div class="no example" data-since="2.7.7">
+          <h4 class="ui header">Supporting image labels for multiselection</h4>
           <p>If needed, you can adjust the classname for multiselection labels to make use of <code><a href="/elements/label.html#image">image label</a></code></p>
           <div class="evaluated code" data-type="javascript">
               $('#imagelabels').dropdown({
@@ -3145,7 +3160,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .dropdown('behavior name', argumentOne, argumentTwo)
     ;
@@ -3374,13 +3389,13 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>ignoreCase</td>
-          <td>false<div class="ui label">New in 2.2.13</div></td>
-          <td>Whether values with non matching cases should be treated as identical when adding them to a dropdown.</td>
+          <td>false</td>
+          <td data-since="2.2.13">Whether values with non matching cases should be treated as identical when adding them to a dropdown.</td>
         </tr>
         <tr>
           <td>ignoreSearchCase</td>
-          <td>true<div class="ui label">New in 2.8.0</div></td>
-          <td>Whether values with non matching cases should be treated as identical when filtering the items.</td>
+          <td>true</td>
+          <td data-since="2.8.0">Whether values with non matching cases should be treated as identical when filtering the items.</td>
         </tr>
         <tr>
           <td>allowReselection</td>
@@ -3464,6 +3479,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Whether search selection will force currently selected choice when element is blurred.<br>If a <code>select</code> tag with a <code>required</code> attribute was used, the forceSelection setting will be set to true automatically</td>
         </tr>
         <tr>
+          <td>keepSearchTerm</td>
+          <td>false</td>
+          <td>Whether the search value should be kept and menu stays filtered on item selection.</td>
+        </tr>
+        <tr>
           <td>allowCategorySelection</td>
           <td>false</td>
           <td>Whether menu items with sub-menus (categories) should be selectable</td>
@@ -3496,8 +3516,8 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>ignoreDiacritics</td>
           <td>false</td>
-          <td>When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
-              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on...<div class="ui black label">New in 2.7.2</div><div class="ui red label">Not available in IE</div></td>
+          <td data-since="2.7.2">When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
+              It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on... <div class="ui tiny horizontal red label">Not available in IE</div></td>
         </tr>
       </tbody>
     </table>
@@ -3526,7 +3546,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>fields</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             fields: {
               remoteValues         : 'results',    // grouping for api results
               values               : 'values',     // grouping for all dropdown values
@@ -3605,13 +3625,6 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>When set to a number, sets the maximum number of selections</td>
         </tr>
         <tr>
-          <td>glyphWidth</td>
-          <td>
-           1.037
-          </td>
-          <td>Maximum glyph width, used to calculate search size. This is usually size of a "W" in your font in <code>em</code></td>
-        </tr>
-        <tr>
           <td>headerDivider</td>
           <td>
            true
@@ -3628,7 +3641,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>label</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             label: {
               transition : 'scale',
               duration   : 200,
@@ -3676,9 +3689,9 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string, setting to "false" will only match start of string.</td>
         </tr>
         <tr>
-          <td>hideDividers <div class="ui label">New in 2.4.0</div></td>
+          <td>hideDividers</td>
           <td>false</td>
-          <td>How to handle dividers in the dropdown while searching. Dividers are defined as all siblings of items that match the <a href="#dom-settings">divider selector</a>
+          <td data-since="2.4.0">How to handle dividers in the dropdown while searching. Dividers are defined as all siblings of items that match the <a href="#dom-settings">divider selector</a>
             <div class="ui vertical divided list">
               <div class="item">
                 <div class="header">false</div>
@@ -3735,9 +3748,9 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>
             auto (slide down / slide up)
           </td>
-          <td>Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
-                <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
-                    <div class="code">
+          <td data-since="2.8.8">Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a>
+                <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration
+                    <div class="code" data-type="javascript">
                     {
                         showMethod   : 'fade',
                         showDuration : 200,
@@ -3763,7 +3776,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>keys</td>
           <td>
-          <div class="code">
+          <div class="code" data-type="javascript">
           keys : {
             backspace  : 8,
             deleteKey  : 46,
@@ -3785,7 +3798,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>delay</td>
           <td>
-          <div class="code">
+          <div class="code" data-type="javascript">
           delay : {
             hide   : 300,
             show   : 200,
@@ -3799,7 +3812,7 @@ themes      : ['Default', 'GitHub', 'Material']
     </table>
 
     </div>
-
+    <div class="no example">
     <h4 class="ui header">
       Callbacks
     </h4>
@@ -3840,7 +3853,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
         <tr>
           <td>onLabelRemove(value)</td>
-          <td>$label (jqDOM)</td>
+          <td>$label (jQDOM)</td>
           <td>Called when a label is remove, <code>return false;</code> will prevent the label from being removed.</td>
         </tr>
         <tr>
@@ -3870,15 +3883,60 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
       </tbody>
     </table>
+    </div>
 
-    <h4 class="ui header">
+    <h2 class="ui dividing header">
+      Templates
+    </h2>
+
+    <p>These templates are used to generate the HTML structures for parts of dropdown</p>
+
+     <table class="ui sortable celled definition table">
+      <thead>
+        <th></th>
+        <th class="twelve wide">Functions</th>
+      </thead>
+        <tr>
+          <td>templates</td>
+          <td>
+            <div class="code" data-type="javascript">
+            $.fn.dropdown.settings.templates : {
+              deQuote: function(string) {
+                // returns removed/replaced double quotes from a string
+              },
+              escape: function(string) {
+                // returns escaped string for injected results
+              },
+              dropdown: function (select, fields, preserveHTML, className) {
+               // returns dropdown HTML from select values
+              },
+              menu: function (response, fields, preserveHTML, className) {
+               // returns menu html from response data
+              },
+              label: function (value, text, preserveHTML, className) {
+               // returns label html for multiselect
+              },
+              message: function (message) {
+               // returns messages like "No results"
+              },
+              addition: function (choice) {
+               // return user addition for selection menu
+              }
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="ui dividing header">
       Module Settings
-    </h4>
-
-    <h3 class="ui header">
+    </h2>
+    <div class="no example">
+    <h4 class="ui header">
       DOM Settings
       <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
-    </h3>
+    </h4>
     <table class="ui celled sortable definition table segment">
       <thead>
         <tr>
@@ -3900,7 +3958,7 @@ themes      : ['Default', 'GitHub', 'Material']
               You can specify site wide messages by modifying <code>$.fn.dropdown.settings.message</code>
               that will apply on any dropdown if it appears in the page.
             </p>
-            <div class="code">
+            <div class="code" data-type="javascript">
             message: {
               addResult     : 'Add <b>{term}</b>',
               count         : '{count} selected',
@@ -3913,7 +3971,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector : {
               addition     : '.addition',
               divider      : '.divider, .header',
@@ -3939,7 +3997,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>regExp</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             regExp : {
               escape   : /[-[\]{}()*+?.,\\^$|#\s]/g,
             }
@@ -3949,7 +4007,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>metadata</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata : {
               defaultText     : 'defaultText',
               defaultValue    : 'defaultValue',
@@ -3963,7 +4021,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>className</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             className : {
               active              : 'active',
               addition            : 'addition',
@@ -4032,7 +4090,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>error</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error   : {
               action          : 'You called a dropdown action that was not defined',
               alreadySetup    : 'Once a select has been initialized behaviors must be called on the created ui dropdown',
@@ -4049,7 +4107,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
       </tbody>
     </table>
-
+    </div>
   </div>
 
   <div class="ui tab" data-tab="security">
