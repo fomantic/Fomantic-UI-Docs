@@ -190,7 +190,7 @@ type        : 'UI Behavior'
     <div class="prompt example">
       <h4 class="ui header">Customizing Prompts</h4>
       <p>Form validation includes default error prompts for most cases, however these can be quite generic. To specify custom personalized values for a validation prompt use the <code>prompt</code> property with a rule.</p>
-      <div class="ui ignored info message">Starting in <div class="ui teal label">2.3.1</div> you can specify prompts as a function. This may be useful when returning validation for fields that require dynamic validation messages.</div>
+      <div class="ui ignored info message">Starting in <div class="ui teal label">2.3.1</div> you can specify prompts as a function. This may be useful when returning validation for fields that require dynamic validation messages. The functions thisArg will be set to the related field element.</div>
       <div class="ui ignored info message">You can set default messages for each validation rule type by modifying <code>$fn.form.settings.prompt</code></div>
       <p>Prompt also supports custom templating with the following values replaced</p>
       <table class="ui celled sortable basic table segment">
