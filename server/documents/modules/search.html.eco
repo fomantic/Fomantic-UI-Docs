@@ -166,7 +166,7 @@ type        : 'UI Module'
       <h4 class="ui header">
         Search ignoring Diacritics
       </h4>
-      <p>A selection dropdown can allow a user to ignore all Diacritics while searching.</p>
+      <p>A search field can allow a user to ignore all Diacritics while searching.</p>
       <div class="ui ignored info message">
           If you want to support IE using the <code>ignoreDiacritics</code> option, you have to include a polyfill for the   <code>String().normalize()</code> method like <a href="https://cdn.jsdelivr.net/npm/unorm@1.4.1/lib/unorm.min.js">unorm</a>.
       </div>
@@ -208,6 +208,53 @@ type        : 'UI Module'
                     { title: 'voilà'},
                     { title: 'whekī'},
                     { title: 'c Zoë'}
+                ]
+            })
+        ;
+      </div>
+    </div>
+
+    <div class="highlight example" data-since="2.9.4">
+      <h4 class="ui header">
+        Highlight search matches
+      </h4>
+      <p>A search field can highlight matching strings inside the search results.</p>
+      <div class="ui search" id="highlightexample">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('#highlightexample')
+            .search({
+                highlightMatches: true,
+                source: [
+                    { title: 'Andorra' },
+                    { title: 'United Arab Emirates' },
+                    { title: 'Afghanistan' },
+                    { title: 'Antigua' },
+                    { title: 'Anguilla' },
+                    { title: 'Albania' },
+                    { title: 'Armenia' },
+                    { title: 'Netherlands Antilles' },
+                    { title: 'Angola' },
+                    { title: 'Argentina' },
+                    { title: 'American Samoa' },
+                    { title: 'Austria' },
+                    { title: 'Australia' },
+                    { title: 'Aruba' },
+                    { title: 'Aland Islands' },
+                    { title: 'Azerbaijan' },
+                    { title: 'Bosnia' },
+                    { title: 'Barbados' },
+                    { title: 'Bangladesh' },
+                    { title: 'Belgium' },
+                    { title: 'Burkina Faso' },
+                    { title: 'Bulgaria' },
+                    { title: 'Bahrain' },
+                    { title: 'Burundi' }
                 ]
             })
         ;
@@ -908,10 +955,20 @@ type        : 'UI Module'
           <td>Easing equation when using fallback Javascript animation. EaseOutExpo is included with search, for additional options you must include <a href="https://gsgd.co.uk/sandbox/jquery/easing/">easing equations</td>
         </tr>
         <tr>
+          <td>highlightMatches</td>
+          <td>false</td>
+          <td data-since="2.9.4">Whether search result should highlight matching strings.</td>
+        </tr>
+        <tr>
           <td>ignoreDiacritics</td>
           <td>false</td>
           <td data-since="2.7.2">When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
               It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on... <div class="ui tiny horizontal red label">Not available in IE</div></td>
+        </tr>
+        <tr>
+          <td>ignoreSearchCase</td>
+          <td>true</td>
+          <td data-since="2.9.4">Whether to consider case sensitivity on local searching.</td>
         </tr>
         <tr>
           <td>type</td>

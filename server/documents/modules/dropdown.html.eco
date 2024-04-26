@@ -235,6 +235,22 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
+    <div class="highlight example" data-since="2.9.4">
+      <h4 class="ui header">
+        Highlight search matches
+      </h4>
+      <p>You can automatically highlight the matching strings inside the search results.</p>
+      <select class="ui fluid search dropdown" multiple id="highlightexample">
+        <%- @partial('examples/single/state-options') %>
+      </select>
+      <div class="evaluated code" data-type="javascript">
+      $('#highlightexample')
+        .dropdown({
+          highlightMatches: true
+        });
+      </div>
+    </div>
+
     <div class="dropdown example" data-since="2.4.2">
       <h4 class="ui header">
         Clearable Selection
@@ -3518,6 +3534,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>false</td>
           <td data-since="2.7.2">When activated, searches will also match results for base diacritic letters. For example when searching for 'a', it will also match 'á' or 'â' or 'å' and so on...
               It will also ignore diacritics for the searchterm, so if searching for 'ó', it will match 'ó', but also 'o', 'ô' or 'õ' and so on... <div class="ui tiny horizontal red label">Not available in IE</div></td>
+        </tr>
+        <tr>
+          <td>highlightMatches</td>
+          <td>false</td>
+          <td data-since="2.9.4">Whether search result should highlight matching strings.</td>
         </tr>
       </tbody>
     </table>
