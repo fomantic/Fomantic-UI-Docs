@@ -923,11 +923,6 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <td>Milliseconds the bar gets animated to the next value</td>
         </tr>
         <tr>
-          <td>counter</td>
-          <td>false</td>
-          <td>Whether an automatic progress should be shown. Use <code>'up'</code> when the progress should count up instead of count down. This only controls the time counting for the label. Any setting for <code>value</code> &gt; 0 will decrease the bar instead of increasing by default.</td>
-        </tr>
-        <tr>
           <td>random</td>
           <td>
           <div class="code" data-type="javascript">
@@ -1078,8 +1073,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
             metadata: {
               percent : 'percent',
               total   : 'total',
-              value   : 'value',
-              duration: 'duration'
+              value   : 'value'
             }
             </div>
           </td>
