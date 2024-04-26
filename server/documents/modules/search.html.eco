@@ -477,6 +477,7 @@ type        : 'UI Module'
             "title": "Result Title",
             "url": "/optional/url/on/click",
             "image": "optional-image.jpg",
+            "alt": "optional alt attribute text for the given image",
             "price": "Optional Price",
             "description": "Optional Description"
           },
@@ -865,6 +866,7 @@ type        : 'UI Module'
               categoryResults : 'results',     // array of results (category view)
               description     : 'description', // result description
               image           : 'image',       // result image
+              alt             : 'alt',         // result alt text for image
               price           : 'price',       // result price
               results         : 'results',     // array of results (standard)
               title           : 'title',       // result title
