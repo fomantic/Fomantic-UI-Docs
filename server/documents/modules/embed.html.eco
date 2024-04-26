@@ -76,6 +76,7 @@ type        : 'UI Module'
       <div class="ui embed"
         data-source="youtube"
         data-id="O6Xo21L0ybE"
+        data-alt="A Youtube Video about a waving bear"
         data-placeholder="/images/image-16by9.png">
       </div>
 
@@ -164,6 +165,7 @@ type        : 'UI Module'
           data-source="youtube"
           data-id="O6Xo21L0ybE"
           data-icon="video"
+          data-alt="A video about a waving bear"
           data-placeholder="/images/bear-waving.jpg"
         ></div>
       </div>
@@ -176,6 +178,7 @@ type        : 'UI Module'
         $('.custom.example .ui.embed').embed({
           source      : 'youtube',
           id          : 'O6Xo21L0ybE',
+          alt         : 'A video about a waving bear',
           placeholder : '/images/bear-waving.jpg'
         });
       </div>
@@ -328,6 +331,16 @@ type        : 'UI Module'
           <td>Specifies an id value to replace with the <code>{id}</code> value found in templated urls</td>
         </tr>
         <tr>
+          <td>placeholder</td>
+          <td>false</td>
+          <td>Specifies a placeholder image path</td>
+        </tr>
+        <tr>
+          <td>alt</td>
+          <td>false</td>
+          <td>Specifies an alt attribute string for the placeholder image</td>
+        </tr>
+        <tr>
           <td>parameters</td>
           <td>false</td>
           <td>Specify an object containing key/value pairs to add to the iframes GET parameters</td>
@@ -454,6 +467,7 @@ type        : 'UI Module'
               id          : 'id',
               icon        : 'icon',
               placeholder : 'placeholder',
+              alt         : 'alt',
               source      : 'source',
               url         : 'url'
             }
@@ -481,7 +495,7 @@ type        : 'UI Module'
               iframe: function(url, parameters) {
                 // returns html for iframe
               },
-              placeholder: function(image, icon) {
+              placeholder: function(image, icon, alt) {
                // returns html for placeholder element
               }
             }
