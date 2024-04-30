@@ -2019,8 +2019,8 @@ type        : 'UI Behavior'
         <td>Validates field, updates UI, and calls onSuccess or onFailure</td>
       </tr>
       <tr>
-        <td>get field(identifier)</td>
-        <td>Returns element with matching name, id, or data-validate metadata to identifier</td>
+        <td>get field(identifier, strict, ignoreMissing)</td>
+        <td>Returns element with matching name, id, or data-validate metadata to identifier. When <code>strict</code> is true and field is not found, it returns an empty jquery Object, otherwise a fallback jquery input element. Does not throw an error when field is not found and <code>ignoreMissing</code> is set to true </td>
       </tr>
       <tr>
         <td>get value(identifier)</td>
@@ -2043,8 +2043,8 @@ type        : 'UI Behavior'
         <td>Returns validation rules for a given jQuery-referenced input field</td>
       </tr>
       <tr>
-        <td>has field(identifier)</td>
-        <td>Returns whether a field exists</td>
+        <td>has field(identifier, ignoreMissing)</td>
+        <td>Returns whether a field exists. Does not throw an error when field is not found and <code>ignoreMissing</code> is set to true</td>
       </tr>
       <tr>
         <td>add errors(error)<br>add errors([errors])<br>add errors({identifier:error})<br>add errors({identifier:[errors]})</td>
