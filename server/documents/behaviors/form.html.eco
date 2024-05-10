@@ -1145,7 +1145,7 @@ type        : 'UI Behavior'
       </div>
     </div>
     <div class="match example">
-      <h4 class="ui header">Matching Fields</h4>
+      <h4 class="ui header">Matching other Fields</h4>
       <p>Fields can be required to match, or not match other fields. You may consider using this with <a href="#optional-fields">optional fields</a>.</p>
       <form class="ui form">
         <div class="two fields">
