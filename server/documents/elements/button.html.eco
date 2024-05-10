@@ -727,7 +727,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
 
   <div class="example" data-since="2.9.0">
     <h4 class="ui header">Spaced Buttons</h4>
-    <p>Buttons inside groups can automatically get a margin so they dont appear attached together, especially when used together with <a href="#wrapping-buttons">wrapping</a> on responsive layouts</p>
+    <p>Buttons inside groups can automatically get a margin so they don't appear attached together, especially when used together with <a href="#wrapping-buttons">wrapping</a> on responsive layouts</p>
     <div class="ui wrapping spaced buttons">
       <button class="ui button">One</button>
       <button class="ui button">Two</button>
@@ -752,6 +752,17 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
     <div class="ui ignored info message">
         You can use <code>compact wrapping</code> if you need wrapping buttons which should not share the same width on each wrapped row. Especially for spaced buttons.
+    </div>
+  </div>
+
+<div class="example" data-since="2.9.4">
+    <h4 class="ui header">Circular Buttons</h4>
+    <p>Circular buttons inside groups receive a slight margin so they don't appear attached together</p>
+    <div class="ui circular buttons">
+      <button class="ui button">One</button>
+      <button class="ui button">Two</button>
+      <button class="ui button">Three</button>
+      <button class="ui button">Four</button>
     </div>
   </div>
 
