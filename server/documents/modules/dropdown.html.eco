@@ -2799,6 +2799,31 @@ themes      : ['Default', 'GitHub', 'Material']
           </div>
       </div>
 
+      <div class="no example" data-since="2.9.4">
+          <h4 class="ui header">Use custom data attributes for items</h4>
+          <p>You can add custom data attributes for each dropdown item by providing a <code>data</code> key object. Every key inside the data object will be rendered as data attribute (except for "text" and "value", which will be ignored as those are already used by the dropdown module internally)</p>
+          <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
+         <div class="code" data-label="Javascript" data-type="javascript">
+              $('.ui.dropdown').dropdown({
+                  values: [
+                      {
+                          name: 'Mother',
+                          value: 'mom',
+                          data: {
+                            husband: 'george',
+                            age: 73
+                          }
+                      }
+                  ]
+              })
+              ;
+          </div>
+          <p>Items will be rendered as </p>
+          <div class="code" data-label="HTML" data-type="html">
+              <div class="item" data-value="mom" data-husband="george" data-age="73">Mother</div>
+          </div>
+      </div>
+
       <div class="no example" data-since="2.7.7">
           <h4 class="ui header">Supporting image labels for multiselection</h4>
           <p>If needed, you can adjust the classname for multiselection labels to make use of <code><a href="/elements/label.html#image">image label</a></code></p>
