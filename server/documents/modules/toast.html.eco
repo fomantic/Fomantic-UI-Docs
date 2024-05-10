@@ -934,6 +934,11 @@ themes      : ['Default']
             <td>If an URL to an image is given, that image will be shown to the left of the toast</td>
         </tr>
         <tr>
+            <td>alt</td>
+            <td>false</td>
+            <td>If <code>showImage</code> is true, the alt setting can provide a string used for the image alt attribute</td>
+        </tr>
+        <tr>
           <td>showIcon</td>
           <td>true</td>
           <td>Define if the toast should display an icon which matches to a given class. If a string is given, this will be used as icon classname</td>

@@ -2022,6 +2022,9 @@ themes      : ['Default', 'GitHub', 'Material']
               // path to image to be displayed to the left (optional)
               "image"  : false,
 
+              // text for the alt attribute if an image is also provided above (optional)
+              "alt"  : '',
+
               // whether the image should be displayed in a different style (optional)
               "imageClass"  : "ui avatar image",
 
@@ -2683,6 +2686,7 @@ themes      : ['Default', 'GitHub', 'Material']
                   "name": "Avatar",
                   "value": "jenny",
                   "image": "https://fomantic-ui.com/images/avatar/small/jenny.jpg",
+                  "alt": "A picture of jenny",
                   "imageClass": "ui avatar image"
                 },
                 {
@@ -3559,6 +3563,7 @@ themes      : ['Default', 'GitHub', 'Material']
               type                 : 'type',       // type of dropdown element
               image                : 'image',      // optional image path
               imageClass           : 'imageClass', // optional individual class for image
+              alt                  : 'alt',        // optional alt text for image
               icon                 : 'icon',       // optional icon name
               iconClass            : 'iconClass',  // optional individual class for icon (for example to use flag instead)
               class                : 'class',      // optional individual class for item/header
