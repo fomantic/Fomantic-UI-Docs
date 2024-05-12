@@ -3878,7 +3878,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </thead>
       <tbody>
         <tr>
-          <td>onChange(value, text, $choice)</td>
+          <td>onChange(value, text, $selectedItem)</td>
           <td>Dropdown</td>
           <td>Is called after a dropdown value changes. Receives the name and value of selection and the active menu element</td>
         </tr>
