@@ -611,7 +611,7 @@ type        : 'UI Module'
             <td>Resets all conditions changes during transition</td>
           </tr>
           <tr>
-            <td>looping</td>
+            <td>set looping</td>
             <td>Enables animation looping</td>
           </tr>
           <tr>
