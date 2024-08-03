@@ -2252,7 +2252,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="item">Hide</div>
         </div>
       </div>
-
+    </div>
 
       <div class="divider example">
         <h4 class="ui header">Dropdown Dividers / Headers</h4>
@@ -2411,8 +2411,6 @@ themes      : ['Default', 'GitHub', 'Material']
           </div>
         </div>
       </div>
-
-    </div>
 
 
     <h2 class="ui header">Adjusting Actions</h2>
