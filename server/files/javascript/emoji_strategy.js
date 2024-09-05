@@ -29277,7 +29277,7 @@ var emojiStrategy = [
     "unicode_output": "1f1f2-1f1f4"
   },
   "1f1f2-1f1f0": {
-    "name": "flag: Macedonia",
+    "name": "flag: Republic of North Macedonia",
     "category": "flags",
     "shortname": ":flag_mk:",
     "shortname_alternates": [":mk:"],
