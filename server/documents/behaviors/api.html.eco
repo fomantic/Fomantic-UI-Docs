@@ -178,7 +178,7 @@ type        : 'UI Behavior'
             Follow
           </div>
         </div>
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
         // translates '/follow/{id}' to 'follow/22'
         $('.follow.button')
           .api({
@@ -286,7 +286,7 @@ type        : 'UI Behavior'
             <input type="text" class="search">
           </div>
         </div>
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
           $.fn.api.settings.api.search = '/search/?query={value}';
 
           $('.routed.example .search input')
@@ -393,7 +393,7 @@ type        : 'UI Behavior'
         <h4 class="ui header">Disabling Requests</h4>
         <p>As a convenience, API will automatically prevent requests from occurring on elements that are currently disabled.</p>
         <div class="ui disabled button">Disabled</div>
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
           // this will never occur
           $('.disabled.button')
             .api({
@@ -484,7 +484,7 @@ type        : 'UI Behavior'
           </div>
           <div class="ui submit button">Submit</div>
         </form>
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
           $('form .submit.button')
             .api({
               action: 'create user',

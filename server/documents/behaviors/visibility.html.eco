@@ -555,7 +555,7 @@ type        : 'UI Behavior'
 
       <p>By default images will appear without animation, however you can also specify a named <a href="/modules/transition.html">transition</a>, and a duration that should be used for animating the image into view</p>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.demo.items .image img')
           .visibility({
             type       : 'image',
@@ -681,7 +681,7 @@ type        : 'UI Behavior'
       <h4 class="ui header">Gradual Changes</h4>
       <p>Each callback receives all calculated values as its first parameter, allowing you to adjust an element using </p>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.changing.example .demo.segment')
           .visibility({
             once       : false,
@@ -707,7 +707,7 @@ type        : 'UI Behavior'
       <div class="ui ignored warning message">
         You may need to adjust your fixed content's <code>z-index</code> to ensure it appears above other page content.
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.overlay.example .overlay')
           .visibility({
             type   : 'fixed',
@@ -764,7 +764,7 @@ type        : 'UI Behavior'
       <h4 class="ui header">Infinite Scroll</h4>
       <p>As an alternative to pagination you can use <code>onBottomVisible</code> to load content automatically when the bottom of a container is reached.</p>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.infinite.example .demo.segment')
           .visibility({
             once: false,

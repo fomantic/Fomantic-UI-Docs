@@ -47,7 +47,7 @@ themes      : ['Default']
           &lt;/div&gt;
         &lt;/body&gt;
       </div>
-      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.simple.sidebar').sidebar('toggle');">
+      <div class="code" data-demo="true" data-eval="$('.simple.sidebar').sidebar('toggle');">
       $('.ui.sidebar')
         .sidebar('toggle')
       ;
@@ -70,7 +70,7 @@ themes      : ['Default']
           &lt;/a&gt;
         &lt;/div&gt;
       </div>
-      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.left.demo.sidebar').sidebar('toggle');">
+      <div class="code" data-demo="true" data-eval="$('.left.demo.sidebar').sidebar('toggle');">
       $('.ui.labeled.icon.sidebar')
         .sidebar('toggle')
       ;
@@ -392,7 +392,7 @@ themes      : ['Default']
         If you are triggering multiple sidebars at the same time, its recommended to set the transition to overlay.
       </div>
 
-      <div class="code" data-demo="true" data-type="javascript">
+      <div class="code" data-demo="true">
       // showing multiple
       $('.demo.sidebar')
         .sidebar('setting', 'transition', 'overlay')
@@ -441,7 +441,7 @@ themes      : ['Default']
           </div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       // using context
       $('.context.example .ui.sidebar')
         .sidebar({
@@ -524,7 +524,7 @@ themes      : ['Default']
           </div>
         </div>
       </div>
-      <div class="code" data-demo="true" data-type="javascript">
+      <div class="code" data-demo="true">
       // showing multiple
       $('.visible.example .ui.sidebar')
         .sidebar({

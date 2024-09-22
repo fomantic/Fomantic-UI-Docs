@@ -900,7 +900,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.field.example form')
           .form({
             on: 'blur',
@@ -975,7 +975,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.type.example form')
           .form({
             on: 'blur',
@@ -1116,7 +1116,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.payment.example form')
           .form({
             on: 'blur',
@@ -1171,7 +1171,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.match.example form')
           .form({
             on: 'blur',
@@ -1219,7 +1219,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.length.example form')
           .form({
             on: 'blur',
@@ -1305,7 +1305,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.content.example form')
           .form({
             on: 'blur',
@@ -1430,7 +1430,7 @@ type        : 'UI Behavior'
         <div class="ui submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.multi.example form')
           .form({
             on: 'blur',
@@ -1486,7 +1486,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       // lets toggle some validation based on button
       $('.add.example .ui.positive.button')
         .on('click', function() {
@@ -1506,7 +1506,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('.add.example .ui.negative.button')
         .on('click', function() {
           $('.add.example .ui.form')

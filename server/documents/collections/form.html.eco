@@ -291,7 +291,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     <div class="ui ignored info message">
       UI checkbox are special, styled versions of standard HTML checkboxes.
     </div>
-    <div class="evaluated code" data-type="javascript" data-label="true">
+    <div class="evaluated code" data-label="true">
     $('.ui.checkbox')
       .checkbox()
     ;
@@ -322,7 +322,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   <div data-use-content="true" class="example">
     <h4 class="ui header">Radio Checkbox</h4>
     <p>A form can include a <a href="/modules/checkbox.html#radio">radio checkbox</a></p>
-    <div class="evaluated code" data-type="javascript" data-label="true">
+    <div class="evaluated code" data-label="true">
     $('.ui.radio.checkbox')
       .checkbox()
     ;

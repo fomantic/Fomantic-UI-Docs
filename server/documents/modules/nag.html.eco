@@ -48,7 +48,7 @@ type        : 'UI Module'
         Look, i am a fixed nag!
         <i class="close icon"></i>
       </div>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
           /*
            persist:true is used to ignore dismiss storage when closing
            for demo purposes here, not related to 'fixed' variant
@@ -66,7 +66,7 @@ type        : 'UI Module'
         Look, I am a bottom fixed nag!
         <i class="close icon"></i>
       </div>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
           $('#bottomfixednag')
           .nag({
             persist:true
@@ -188,7 +188,7 @@ type        : 'UI Module'
           <i class="close icon"></i>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       // Automatically shows on init if cookie isn't set
       $('.cookie.nag')
         .nag({
@@ -197,13 +197,13 @@ type        : 'UI Module'
         })
       ;
       </div>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
       // Wont re-appear unless cleared
       $('.cookie.nag')
         .nag('show')
       ;
       </div>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
       // Clears cookie so nag shows again
       $('.cookie.nag')
         .nag('clear')

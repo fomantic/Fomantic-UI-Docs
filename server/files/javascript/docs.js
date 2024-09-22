@@ -997,7 +997,7 @@ semantic.ready = function() {
         formattedCode = code
       ;
 
-      contentType = contentType.toLowerCase();
+      contentType = demo || evaluatedCode ? 'javascript' : contentType.toLowerCase();
 
       function escapeHTML(string) {
         return $('<div>').html(string).text();

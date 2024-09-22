@@ -129,7 +129,7 @@ type        : 'UI Module'
     <div class="no url example">
       <h4 class="ui header">Specifying a URL</h4>
       <p>Specifying a url will automatically match to an embed source using the domain of the url.</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('.url.example .ui.embed').embed();
       </div>
       <div class="code" data-type="html" data-preview="true">
@@ -143,7 +143,7 @@ type        : 'UI Module'
     <div class="no content example">
       <h4 class="ui header">Using Content IDs</h4>
       <p>Embed is designed to automatically generate urls from content ids. This way your site's backend can store meaningful content metadata and not worry about generating urls.</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('.content.example .ui.embed').embed();
       </div>
       <div class="code" data-type="html" data-preview="true">
@@ -157,7 +157,7 @@ type        : 'UI Module'
     <div class="no metadata example">
       <h4 class="ui header">Specifying Metadata</h4>
       <p>Other settings like icons and placeholder images can be specified in metadata overriding presets for a site.</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('.metadata.example .ui.embed').embed();
       </div>
       <div class="code" data-type="html" data-preview="true">
@@ -174,7 +174,7 @@ type        : 'UI Module'
     <div class="no custom example">
       <h4 class="ui header">Specifying Programmatically</h4>
       <p>You can also specify embed settings at run-time in the settings object.</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('.custom.example .ui.embed').embed({
           source      : 'youtube',
           id          : 'O6Xo21L0ybE',
