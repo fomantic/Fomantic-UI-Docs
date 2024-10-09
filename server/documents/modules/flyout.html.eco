@@ -76,7 +76,7 @@ themes      : ['Default']
           </div>
         </div>
       </div>
-      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.simple.flyout').flyout('toggle');">
+      <div class="code" data-demo="true" data-eval="$('.simple.flyout').flyout('toggle');">
       $('.ui.flyout')
         .flyout('toggle')
       ;
@@ -122,7 +122,7 @@ themes      : ['Default']
         <div class="ui top flyout"></div>
         <div class="ui bottom flyout"></div>
       </div>
-      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.position.flyout').flyout('toggle');">
+      <div class="code" data-demo="true" data-eval="$('.position.flyout').flyout('toggle');">
       $('.ui.flyout')
         .flyout('toggle')
       ;
@@ -135,7 +135,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Fullscreen</h4>
       <p>A flyout can take all the entire screen if needed.</p>
-      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.fullscreen.flyout').flyout('toggle');">
+      <div class="code" data-demo="true" data-eval="$('.fullscreen.flyout').flyout('toggle');">
         $('.ui.fullscreen.flyout')
           .flyout('toggle')
         ;
@@ -286,7 +286,7 @@ themes      : ['Default']
           </div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       // using context
       $('.context.example .ui.flyout')
         .flyout({
@@ -534,7 +534,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Create your own template</h4>
       <p>By extending the flyouts templates object once, you can define your own custom config templates. It has to return an object which will be merged into the flyouts settings prior to creating/showing the flyout.</p>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
   $.fn.flyout.settings.templates.greet = function(username) {
   // do something according to flyouts settings and/or given parameters
     var settings = this.get.settings(); // "this" is the flyout instance

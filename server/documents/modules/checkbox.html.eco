@@ -523,7 +523,7 @@ themes      : ['Default', 'Colored']
           </div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         var
           $console = $('.callback .console')
         ;
@@ -620,7 +620,7 @@ themes      : ['Default', 'Colored']
           </div>
         </div>
       </div>
-      <div class="evaluated code" data-title="Master Checkboxes" data-type="javascript">
+      <div class="evaluated code" data-title="Master Checkboxes">
         $('.list .master.checkbox')
           .checkbox({
             // check all children
@@ -640,7 +640,7 @@ themes      : ['Default', 'Colored']
           })
         ;
       </div>
-      <div class="evaluated code" data-title="Child Checkboxes" data-type="javascript">
+      <div class="evaluated code" data-title="Child Checkboxes">
         $('.list .child.checkbox')
           .checkbox({
             // Fire on load to set parent value
@@ -687,7 +687,7 @@ themes      : ['Default', 'Colored']
         <input type="checkbox" name="example" />
         <label>Maybe this will work</label>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.cancel.example .ui.checkbox')
           .checkbox({
             beforeChecked: function() {
@@ -706,7 +706,7 @@ themes      : ['Default', 'Colored']
       <p class="ignored">To make a user able to check a box, but unable to uncheck it, use the <code>uncheckable</code> setting.</p>
       <p class="ignored">To always disable a checkbox, add the property <code>disabled</code> to your input.</p>
       <p class="ignored">To make a checkbox read-only do not initialize it, or include the <code>read-only</code> class which will not allow events.</p>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.state.example .checkbox')
           .last()
           .checkbox({
@@ -739,7 +739,7 @@ themes      : ['Default', 'Colored']
     <div class="example">
       <h4 class="ui header">Attaching Events to other Elements</h4>
       <p>Checkbox can use the <code>attach events</code> behavior to attach events easily to other activating elements. This defaults to toggling, but other behaviors can be used as well.</p>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.test.checkbox').checkbox('attach events', '.toggle.button');
         $('.test.checkbox').checkbox('attach events', '.check.button', 'check');
         $('.test.checkbox').checkbox('attach events', '.uncheck.button', 'uncheck');

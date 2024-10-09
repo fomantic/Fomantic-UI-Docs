@@ -202,7 +202,7 @@ themes      : ['Default']
     <div class="clearing no example">
       <h4 class="ui header">Clearing Ratings</h4>
       <p>When clearable is set to <code>true</code> you can clear the rating by clicking on the current start rating.</p>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('.clearing.example .rating')
         .rating('setting', 'clearable', true)
       ;

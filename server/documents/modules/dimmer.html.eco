@@ -288,7 +288,7 @@ themes      : ['Default']
     </div>
     <div class="partially example">
       <div class="ignored ui info message">Works also very well with transitions <code>fade up</code> or <code>fade down</code></div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('.partially.example .dimmer')
         .dimmer({
             transition: 'fade up',
@@ -324,7 +324,7 @@ themes      : ['Default']
     <div class="event example">
       <h4 class="ui header">Dimmer Events</h4>
       <p>A dimmer can trigger a visibility change on an event</p>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('.event.example .image')
         .dimmer({
           on: 'hover'
@@ -370,7 +370,7 @@ themes      : ['Default']
 
     <div class="dimmerloader example" data-since="2.7.0">
       <p>You can customize a loader in a dimmer via javascript</p>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
           $('.dimmerloader.example .image')
           .dimmer({
               displayLoader: true,

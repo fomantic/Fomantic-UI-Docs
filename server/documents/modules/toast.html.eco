@@ -30,7 +30,7 @@ themes      : ['Default']
     <div class="no example">
         <h4 class="ui header">Minimal</h4>
         <p>A minimal toast will just display a message.</p>
-        <div class="code" data-demo="true" data-type="javascript">
+        <div class="code" data-demo="true">
         $.toast({
           message: 'I am a toast, nice to meet you !'
         })
@@ -41,7 +41,7 @@ themes      : ['Default']
     <div class="no example">
         <h4 class="ui header">Titled</h4>
         <p>You can add a title to your toast.</p>
-        <div class="code" data-demo="true" data-type="javascript">
+        <div class="code" data-demo="true">
         $.toast({
           title: 'Better ?',
           message: 'Hey look, I have a title !'
@@ -53,7 +53,7 @@ themes      : ['Default']
     <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Progress Bar</h4>
         <p>You can attach a progress bar to your toast.</p>
-        <div class="code" data-demo="true" data-type="javascript">
+        <div class="code" data-demo="true">
         $.toast({
           title: 'LOOK',
           message: 'See, how long i will last',
@@ -62,7 +62,7 @@ themes      : ['Default']
         ;
         </div>
         <p>The progress bar can have its own individual color</p>
-        <div class="code" data-demo="true" data-type="javascript">
+        <div class="code" data-demo="true">
         $.toast({
           title: 'LOOK',
           message: 'See, how long i will last',
@@ -78,14 +78,14 @@ themes      : ['Default']
     <div class="no example">
         <h4 class="ui header">Toast Type</h4>
         <p>A toast can be used to display different types of informations.</p>
-        <div class="code" data-demo="true" data-type="javascript">
+        <div class="code" data-demo="true">
         $.toast({
           class: 'success',
           message: `You're using the good framework !`
         })
         ;
         </div>
-        <div class="code" data-demo="true" data-type="javascript">
+        <div class="code" data-demo="true">
         $.toast({
           class: 'error',
           message: `An error occurred !`

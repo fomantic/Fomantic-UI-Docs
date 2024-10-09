@@ -114,7 +114,7 @@ standalone : false
         <p>Any arbitrary decision in a component is included as a setting that developers can modify.</p>
       </div>
       <div class="nine wide column">
-        <div class="hidden code" data-demo="true" data-type="javascript">
+        <div class="hidden code" data-demo="true">
           $('select.dropdown')
             .dropdown('set selected', ['meteor', 'ember'])
           ;
@@ -152,7 +152,7 @@ standalone : false
         </div>
       </div>
       <div class="nine wide column">
-        <div class="hidden code" data-demo="true" data-type="javascript">
+        <div class="hidden code" data-demo="true">
         $('.sequenced.images .image')
           .transition({
             debug     : true,

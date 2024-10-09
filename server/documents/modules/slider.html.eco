@@ -73,7 +73,7 @@ themes      : ['Default']
         <p>You can provide a function which returns a custom label according to the label value</p>
         <div class="ui labeled ticked slider" id="interpretedlabel"></div>
     </div>
-    <div class="evaluated code" data-type="javascript">
+    <div class="evaluated code">
         var labels = ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ/ς", "τ", "υ", "φ", "χ", "ψ", "ω"];
         $('#interpretedlabel')
           .slider({

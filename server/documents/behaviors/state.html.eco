@@ -50,7 +50,7 @@ type        : 'UI Behavior'
 
     <div class="example">
       <h4 class="ui header">API example</h4>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         // typically you'd define all your templated urls in one config file
         $.fn.api.settings.api.follow = '/follow/{id}/'
         $('.foo.button')
@@ -75,7 +75,7 @@ type        : 'UI Behavior'
 
     <div class="example">
       <h4 class="ui header">Text example</h4>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         // Changes button between Follow and Following
         $('.follow.button')
           .state({
@@ -90,7 +90,7 @@ type        : 'UI Behavior'
     </div>
 
     <div class="another example">
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         // Changes text on activation and hover
         // The hover text is different when active and inactive
         $('.vote.button')

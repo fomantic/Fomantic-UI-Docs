@@ -177,7 +177,7 @@ type        : 'UI Module'
         </div>
         <div class="results"></div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('#diacriticsexample')
             .search({
                 ignoreDiacritics: true,
@@ -226,7 +226,7 @@ type        : 'UI Module'
         </div>
         <div class="results"></div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('#highlightexample')
             .search({
                 highlightMatches: true,
@@ -1254,7 +1254,7 @@ type        : 'UI Module'
           </div>
         </div>
 
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
         $('.ui.search.evilexample')
           .search({
         	apiSettings: {
@@ -1277,7 +1277,7 @@ type        : 'UI Module'
           </div>
         </div>
 
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
         $('.ui.search.evilexample_sanitized')
           .search({
         	preserveHTML : false,

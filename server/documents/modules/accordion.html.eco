@@ -439,7 +439,7 @@ themes      : ['Default', 'Chubby']
         Starting from <span class="ui tiny horizontal black label">2.9.0</span> there also exists a <code>ignore</code> selector to be able to define elements which should <b>not</b> trigger the accordion toggle.
         <br>For example when a dropdown is part of the accordion title, you may not want to toggle the accordion when you click on the dropdown.
       </div>
-      <div class="ui code" data-type="javascript" data-demo="true">
+      <div class="ui code" data-demo="true">
         $('.trigger.example .accordion')
           .accordion({
             selector: {

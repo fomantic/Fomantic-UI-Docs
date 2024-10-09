@@ -507,7 +507,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">With metadata</h4>
       <p>A progress bar can be initialized with metadata</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example1').progress();
       </div>
       <div class="code" data-type="html" data-preview="true">
@@ -520,7 +520,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">With Javascript</h4>
       <p>A progress bar can be initialized with a Javascript settings object</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example2').progress({
           percent: 22
         });
@@ -539,7 +539,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <h4 class="ui header">Adding a Total Value</h4>
       <p>A progress bar can keep track of the current value as a ratio of a total value. This is useful for tracking the progress of a series of events with a known quantity, for example "uploading 1 of 20" photos.</p>
       <p>Each call to increment will increase the value by 1, or the value specified as the second parameter</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example3')
           .progress('increment')
         ;
@@ -552,7 +552,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Adding Photos</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('#example3')
           .progress({
             total: 3
@@ -566,7 +566,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <p>A progress bar can keep track of the current value as a ratio of a total value. This is useful for tracking the progress of a series of events with a known quantity, for example "uploading 1 of 20" photos.</p>
       <p>Each call to increment will increase the value by 1, or the value specified as the second parameter</p>
       <p>In addition you can pass in templates text for each state available to your progress bar which will automatically be updated when your progress bar reaches that state</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example4')
           .progress('increment')
         ;
@@ -603,7 +603,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <td>Distance to total, or % progress left</td>
         </tr>
       </table>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example5')
           .progress('increment')
         ;
@@ -614,7 +614,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Adding Photos</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('#example5')
           .progress({
             text: {
@@ -629,7 +629,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">Translation</h4>
       <p>You can also adjust text labels to help strings appear translated</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example6')
           .progress('increment')
         ;
@@ -642,7 +642,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Carga de archivos</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('#example6')
           .progress({
             label: 'ratio',
@@ -822,7 +822,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Waiting for you to press button</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.rapid.example .ui.button')
           .on('click', function() {
             var
@@ -868,7 +868,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Uploading File</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript" data-demo="true">
+      <div class="evaluated code" data-demo="true">
         $('.upload.example .ui.button')
           .api({
             debug: true,

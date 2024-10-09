@@ -225,7 +225,7 @@ themes      : ['Default', 'GitHub', 'Material']
             <div class="item">c Zoë</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('#diacriticsexample')
         .dropdown({
           ignoreDiacritics: true,
@@ -243,7 +243,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <select class="ui fluid search dropdown" multiple id="highlightexample">
         <%- @partial('examples/single/state-options') %>
       </select>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('#highlightexample')
         .dropdown({
           highlightMatches: true
@@ -1123,7 +1123,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="item">I am a selectable entry only</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.actionable.example .ui.dropdown')
           .dropdown({
             collapseOnActionable: false,
@@ -1676,7 +1676,7 @@ themes      : ['Default', 'GitHub', 'Material']
         classes currently available.
       </div>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.clearable.example .ui.selection.dropdown')
           .dropdown({
             clearable: true
@@ -1716,7 +1716,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <%- @partial('examples/single/flag-menu') %>
       </div>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.max.example .ui.normal.dropdown')
           .dropdown({
             maxSelections: 3
@@ -1754,7 +1754,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.tag.example .ui.dropdown')
           .dropdown({
             allowAdditions: true
@@ -1788,7 +1788,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.stuck.example .ui.dropdown')
           .dropdown({
             allowAdditions: true,
@@ -1824,7 +1824,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <%- @partial('examples/single/flag-menu') %>
       </div>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.label.example .ui.dropdown')
           .dropdown({
             useLabels: false
@@ -1858,7 +1858,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="ui button">
         Clear
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.clear.example .button')
           .on('click', function() {
             $('.clear.example .ui.dropdown')
@@ -1908,7 +1908,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="ui primary button">
           Restore All Dropdowns
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.restore.example .button')
           .on('click', function() {
             $('.restore.example .ui.dropdown')
@@ -1997,7 +1997,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.remote.filter.example .ui.dropdown')
           .dropdown({
             apiSettings: {
@@ -2111,7 +2111,7 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
 
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.remote.choices.example .ui.dropdown')
           .dropdown({
             apiSettings: {
@@ -2421,7 +2421,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <p>A <a href="/elements/button.html">button</a> can be formatted with a dropdown.</p>
         <p>Using the <code>combo</code> action will change the preceding element to the selected value.</p>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('.combo.dropdown')
         .dropdown({
           action: 'combo'
@@ -2446,7 +2446,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <h4 class="ui header">Link Dropdowns</h4>
       <div class="ignored">
         <p>Dropdowns support different default actions that can occur when an item is selected. For example, you can set your dropdown not to change its text, or select a value from its menu.</p>
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
         $('.link.example .dropdown')
           .dropdown({
             action: 'hide'
@@ -2693,7 +2693,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <h4 class="ui header">Display images and/or icons by value setting</h4>
           <p>Images and/or icons in front of an item can be dynamically created by providing image paths, icon names or classnames for different styling</p>
           <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
-          <div class="evaluated code" data-type="javascript">
+          <div class="evaluated code">
               $('#imagesandicons').dropdown({
                 placeholder: 'Show images and icons',
                 values:[{
@@ -2742,7 +2742,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
       <div class="no example">
           <p>To avoid adding the classNames to every item entry (for example if you want to display a list of avatars or flags), you could override the default setting for <code>className.image</code> or <code>className.icon</code> when initializing the dropdown</p>
-          <div class="evaluated code" data-type="javascript">
+          <div class="evaluated code">
               $('#allavatars').dropdown({
                 className: {
                   image: 'ui avatar image'
@@ -2773,7 +2773,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <h4 class="ui header">Display a (vertical) description by value setting</h4>
           <p>An additional item description (optionally displayed vertically) can be dynamically created by providing two extra attributes</p>
           <div class="ui ignored info message">Also works in a JSON response from a <code><a href="#match-search-query-on-server">remote API call</a></code></div>
-          <div class="evaluated code" data-type="javascript">
+          <div class="evaluated code">
               $('#verticaldescription').dropdown({
                   placeholder: 'Show (vertical) descriptions',
                   values:[{
@@ -2825,7 +2825,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="no example" data-since="2.7.7">
           <h4 class="ui header">Supporting image labels for multiselection</h4>
           <p>If needed, you can adjust the classname for multiselection labels to make use of <code><a href="/elements/label.html#image">image label</a></code></p>
-          <div class="evaluated code" data-type="javascript">
+          <div class="evaluated code">
               $('#imagelabels').dropdown({
                 className: {
                   label: 'ui image label',
@@ -2911,7 +2911,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <option value="female">Female</option>
         </select>
       </div>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#select')
           .dropdown()
         ;
@@ -2933,7 +2933,7 @@ themes      : ['Default', 'GitHub', 'Material']
                 <option value="b" data-text="I am Option B">Opt. B</option>
         </select>
       </div>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#data-text-select')
           .dropdown()
         ;
@@ -2973,7 +2973,7 @@ themes      : ['Default', 'GitHub', 'Material']
           </div>
         </div>
       </div>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#hybrid select')
           .dropdown({
             on: 'hover'
@@ -3007,7 +3007,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <div class="no example">
       <h4 class="ui header">Searching Dropdowns</h4>
       <p>Using a <code>search selection dropdown</code> will allow you users to search more easily through large lists. This can also be converted directly from a form select element.</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#search-select')
           .dropdown()
         ;
@@ -3048,7 +3048,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <h4 class="ui header">Multiple Selections</h4>
       <p>You can allow multiple selections by the <code>multiple</code> property on a <code>select</code> element, or by including the class <code>multiple</code> on a dropdown.</p>
       <p>When pre-existing HTML with a hidden input is used, values will be passed through a single value separated by a delimiter. The default is "," but this can be changed by adjusting the <code>delimiter</code> setting.</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#multi-select')
           .dropdown()
         ;
@@ -4208,7 +4208,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="default text">Select Animal</div>
         </div>
 
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
         $('.ui.dropdown.evilexample')
           .dropdown({
             apiSettings: {
@@ -4226,7 +4226,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <div class="default text">Select Animal</div>
         </div>
 
-        <div class="evaluated code" data-type="javascript">
+        <div class="evaluated code">
         $('.ui.dropdown.evilexample_sanitized')
           .dropdown({
             preserveHTML : false,

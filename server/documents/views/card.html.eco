@@ -262,7 +262,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
   <div class="another example">
-    <div class="evaluated code" data-type="javascript">
+    <div class="evaluated code">
     $('.special.cards .image').dimmer({
     // As hover is not working on mobile, you might use click on those devices as fallback
       on: 'ontouchstart' in document.documentElement ? 'click' : 'hover'

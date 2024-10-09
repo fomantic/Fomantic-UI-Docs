@@ -1503,7 +1503,7 @@ type        : 'Main'
       <a class="ui button" data-url="/images/large-pdf.pdf">
         Open Top Aligned Modal
       </a>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.ui.special.modal')
           .modal({
             centered: false
@@ -1551,7 +1551,7 @@ type        : 'Main'
         </div>
         <div class="results"></div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         var categoryContent = [
           { category: 'South America', title: 'Brazil' },
           { category: 'South America', title: 'Peru' },
@@ -1589,7 +1589,7 @@ type        : 'Main'
 
       <div class="ui divider"></div>
       <img src="/images/avatar/small/elliot.jpg" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.centering.example .avatar.image').popup();
       </div>
     </div>
@@ -1641,7 +1641,7 @@ type        : 'Main'
           padding: 50px 8px;
         }
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.complex-popup.example .ui.button')
           .popup({
             movePopup: false,
