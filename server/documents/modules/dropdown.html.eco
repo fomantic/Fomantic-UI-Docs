@@ -3688,6 +3688,13 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>whether the dropdown should collapse upon selection of an actionable item</td>
         </tr>
         <tr>
+          <td>collapseOnClearable</td>
+          <td>
+           false
+          </td>
+          <td>Whether the dropdown should collapse upon clicking the clearable icon</td>
+        </tr>
+        <tr>
           <td>label</td>
           <td>
             <div class="code" data-type="javascript">
