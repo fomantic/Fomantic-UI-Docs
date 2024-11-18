@@ -12,7 +12,7 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/dimmer.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/dimmer.less" />
 <script src="/javascript/dimmer.js"></script>
 
 

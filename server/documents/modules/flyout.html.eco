@@ -13,7 +13,7 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/flyout.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/flyout.less" />
 <script src="/javascript/flyout.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>

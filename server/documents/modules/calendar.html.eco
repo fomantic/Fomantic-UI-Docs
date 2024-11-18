@@ -11,8 +11,8 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/calendar.less" />
-<link rel="stylesheet" type="text/css" class="ui" href="/stylesheets/calendar.css">
+<link rel="stylesheet/less" href="/src/definitions/modules/calendar.less" />
+<link rel="stylesheet" class="ui" href="/stylesheets/calendar.css">
 
 <script src="/javascript/calendar.js"></script>
 

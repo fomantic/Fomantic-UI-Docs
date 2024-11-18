@@ -15,7 +15,7 @@ themes      : ['Default']
 
 <%- @partial('header') %>
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/views/statistic.less" />
+<link rel="stylesheet/less" href="/src/definitions/views/statistic.less" />
 <script src="/javascript/card.js"></script>
 
 <div class="main ui container">

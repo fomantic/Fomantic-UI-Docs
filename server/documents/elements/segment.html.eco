@@ -13,7 +13,7 @@ themes      : ['default', 'GitHub']
 ---
 <%- @partial('header') %>
 <script src="/javascript/search.js"></script>
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/segment.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/segment.less" />
 
 <div class="main ui container">
 

@@ -15,7 +15,7 @@ themes      : ['Default']
 
 <%- @partial('header') %>
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/views/item.less" />
+<link rel="stylesheet/less" href="/src/definitions/views/item.less" />
 <script src="/javascript/item.js"></script>
 
 <div class="main ui container">

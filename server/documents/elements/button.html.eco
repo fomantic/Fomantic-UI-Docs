@@ -11,7 +11,7 @@ type        : 'UI Element'
 
 themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised', 'Chubby', 'Round', 'Amazon', 'Material', 'GitHub']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/button.less" />
 <script src="/javascript/button.js"></script>
 
 <%- @partial('header') %>

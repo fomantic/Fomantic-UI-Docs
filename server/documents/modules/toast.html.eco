@@ -11,7 +11,7 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/toast.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/toast.less" />
 <script src="/javascript/toast.js"></script>
 
 <%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples', usage: 'Usage', settings: 'Settings'} }) %>

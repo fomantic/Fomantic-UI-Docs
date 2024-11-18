@@ -21,7 +21,7 @@ standalone : false
       <div id="docs-searchbox" class="item">
         <input type="search" placeholder="Search...">
       </div>
-      <script type="application/javascript">
+      <script>
         docsearch({
           apiKey: 'b97fcb6d1c62e4cdc4b4f3945c49d9d7',
           indexName: 'fomantic-ui',
@@ -40,7 +40,7 @@ standalone : false
             data-url="https://fomantic-ui.com"
             data-via="fomanticui">
           </a>
-          <script type="text/javascript">
+          <script>
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
           <iframe title="github star button" class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>

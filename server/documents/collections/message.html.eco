@@ -12,7 +12,7 @@ type        : 'UI Collection'
 
 themes      : ['Default', 'GitHub', 'Gmail']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/message.less" />
+<link rel="stylesheet/less" href="/src/definitions/collections/message.less" />
 <script src="/javascript/message.js"></script>
 
 <%- @partial('header') %>

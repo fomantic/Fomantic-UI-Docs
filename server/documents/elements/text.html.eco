@@ -10,7 +10,7 @@ description : 'A text is used to style some inline text with a simple color'
 type        : 'UI Element'
 
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/text.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/text.less" />
 
 <%- @partial('header') %>
 

@@ -15,7 +15,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
 
 <%- @partial('header') %>
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/views/card.less" />
+<link rel="stylesheet/less" href="/src/definitions/views/card.less" />
 <script src="/javascript/card.js"></script>
 
 <div class="main ui container">

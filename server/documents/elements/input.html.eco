@@ -15,7 +15,7 @@ themes      : ['Default', 'GitHub']
 
 <%- @partial('header') %>
 <script src="/javascript/input.js"></script>
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/input.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/input.less" />
 
 <div class="main ui container">
 

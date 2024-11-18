@@ -10,7 +10,7 @@ description : 'A nag is an important message that persists until dismissed by a 
 type        : 'UI Module'
 
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/nag.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/nag.less" />
 <script src="/javascript/nag.js"></script>
 
 <%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples', usage: 'Usage', settings: 'Settings'} }) %>

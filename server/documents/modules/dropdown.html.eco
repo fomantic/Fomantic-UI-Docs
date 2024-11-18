@@ -13,7 +13,7 @@ elementType : 'module'
 themes      : ['Default', 'GitHub', 'Material']
 ---
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/dropdown.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/dropdown.less" />
 <script src="/javascript/dropdown.js"></script>
 
 

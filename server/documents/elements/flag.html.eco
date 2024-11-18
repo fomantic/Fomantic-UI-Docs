@@ -10,7 +10,7 @@ description : 'A flag is used to represent a political state'
 type        : 'UI Element'
 
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/flag.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/flag.less" />
 
 <%- @partial('header') %>
 
