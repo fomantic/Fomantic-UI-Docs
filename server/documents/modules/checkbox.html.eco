@@ -12,7 +12,7 @@ type        : 'UI Module'
 themes      : ['Default', 'Colored']
 ---
 <script src="/javascript/checkbox.js"></script>
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/checkbox.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/checkbox.less" />
 
 <%- @partial('header', { tabs: 'module' }) %>
 

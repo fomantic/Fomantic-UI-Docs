@@ -13,7 +13,7 @@ elementType : 'view'
 themes      : ['Default', 'Timeline']
 ---
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/views/feed.less" />
+<link rel="stylesheet/less" href="/src/definitions/views/feed.less" />
 
 <%- @partial('header') %>
 <div class="main ui container">

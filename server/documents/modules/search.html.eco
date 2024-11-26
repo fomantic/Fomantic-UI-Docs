@@ -10,7 +10,7 @@ description : 'A search module allows a user to query for results from a selecti
 type        : 'UI Module'
 ---
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/search.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/search.less" />
 <script src="/javascript/search.js"></script>
 
 <%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples', usage: 'Usage', settings: 'Settings', security: 'Security'} }) %>

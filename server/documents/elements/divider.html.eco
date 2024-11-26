@@ -14,7 +14,7 @@ themes      : ['default']
 ---
 
 <%- @partial('header') %>
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/divider.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/divider.less" />
 
 <div class="main ui container">
 

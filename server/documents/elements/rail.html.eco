@@ -10,7 +10,7 @@ description : 'A rail is used to show accompanying content outside the boundarie
 type        : 'UI Element'
 
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/rail.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/rail.less" />
 
 <%- @partial('header') %>
 

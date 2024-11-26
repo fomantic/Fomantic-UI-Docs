@@ -13,7 +13,7 @@ themes      : ['Default']
 ---
 
 <script src="/javascript/container.js"></script>
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/container.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/container.less" />
 
 <%- @partial('header', { tabs: {  introduction: 'Introduction', definition: 'Definition', examples: 'Examples' } }) %>
 

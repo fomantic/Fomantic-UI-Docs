@@ -11,7 +11,7 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/slider.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/slider.less" />
 <script src="/javascript/slider.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>

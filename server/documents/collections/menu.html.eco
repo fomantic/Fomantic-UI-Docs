@@ -13,7 +13,7 @@ type        : 'UI Collection'
 themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 ---
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/menu.less" />
+<link rel="stylesheet/less" href="/src/definitions/collections/menu.less" />
 <script src="/javascript/menu.js"></script>
 
 <%- @partial('header') %>

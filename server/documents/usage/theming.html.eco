@@ -13,9 +13,9 @@ type        : 'Usage'
 
 <script src="/javascript/theming.js"></script>
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/site.less" />
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/checkbox.less" />
+<link rel="stylesheet/less" href="/src/definitions/globals/site.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/button.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/checkbox.less" />
 
 <div class="main ui intro container">
 

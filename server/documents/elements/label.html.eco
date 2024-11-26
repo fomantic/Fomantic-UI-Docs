@@ -12,7 +12,7 @@ type        : 'UI Element'
 
 themes      : ['Default', 'GitHub']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/label.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/label.less" />
 
 <%- @partial('header') %>
 

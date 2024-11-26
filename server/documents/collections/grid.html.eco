@@ -12,7 +12,7 @@ type        : 'UI Collection'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/grid.less" />
+<link rel="stylesheet/less" href="/src/definitions/collections/grid.less" />
 <script src="/javascript/grid.js"></script>
 
 <%- @partial('header', { tabs: { overview: 'Overview', definition: 'Definition' } }) %>

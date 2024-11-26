@@ -16,7 +16,7 @@ themes      : ['Default']
 <%- @partial('header') %>
 
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/breadcrumb.less" />
+<link rel="stylesheet/less" href="/src/definitions/collections/breadcrumb.less" />
 
 
 <div class="main ui container">
