@@ -224,7 +224,7 @@ type        : 'Main'
   <div class="no example">
     <h4 class="ui header">CSS, LESS & SASS distributions</h4>
 
-    <p>Fomantic-UI provides a separate repository for a CSS, LESS & SASS only distributions.</p>
+    <p>Fomantic-UI provides a separate repository for a CSS, LESS & SASS* only distributions.</p>
 
     <ul class="ui list">
       <li class="item">
@@ -241,6 +241,7 @@ type        : 'Main'
         <a href="https://github.com/fomantic/Fomantic-UI-SASS" target="_blank">
           SASS Repository
         </a>
+        * (A Ruby Gem offered by third party maintainers)
       </li>
     </ul>
     <br />
@@ -309,7 +310,7 @@ type        : 'Main'
   </div>
 
   <div class="no example">
-    <h4 class="ui header">Updating CSS, LESS & SASS Distributions</h4>
+    <h4 class="ui header">Updating CSS & LESS Distributions</h4>
 
     <p>If you are using the CSS or LESS distributions via NPM you can run the following command</p>
     <div class="ui secondary menu">
