@@ -195,6 +195,9 @@ type        : 'Introduction'
       // current version of Fomantic UI
       "version": "<%= @getVersion() %>",
 
+      // output fileName (without extension) for packaged files (.min, .css, .js will be added automatically)
+      "fileName": "semantic",
+
       // Whether to include the version string to the released files. Default: false
       "includeVersionInFileName": false,
 
