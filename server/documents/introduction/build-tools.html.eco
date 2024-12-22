@@ -195,8 +195,6 @@ type        : 'Introduction'
       // current version of Fomantic UI
       "version": "<%= @getVersion() %>",
 
-
-
       // Whether to include the version string to the released files. Default: false
       "includeVersionInFileName": false,
 
