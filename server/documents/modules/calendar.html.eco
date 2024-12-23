@@ -986,7 +986,7 @@ themes      : ['Default']
       <tr>
         <td>get date(format = '')</td>
         <td>Get the selected date.
-        If <code>format</code> is omitted, a JavaScript date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
+        If <code>format</code> is omitted, a JavaScript Date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set date(date, updateInput = true, fireChange = true)</td>
@@ -1003,7 +1003,7 @@ themes      : ['Default']
       <tr>
         <td>get startDate(format = '')</td>
         <td>Get the start date for range selection.
-        If <code>format</code> is omitted, a JavaScript date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
+        If <code>format</code> is omitted, a JavaScript Date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set startDate(date)</td>
@@ -1012,7 +1012,7 @@ themes      : ['Default']
       <tr>
         <td>get endDate(format = '')</td>
         <td>Get the end date for range selection.
-        If <code>format</code> is omitted, a JavaScript date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
+        If <code>format</code> is omitted, a JavaScript Date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set endDate(date)</td>
@@ -1021,7 +1021,7 @@ themes      : ['Default']
       <tr>
         <td>get focusDate(format = '')</td>
         <td>Get the currently focused date.
-        If <code>format</code> is omitted, a JavaScript date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
+        If <code>format</code> is omitted, a JavaScript Date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set focusDate(date)</td>
