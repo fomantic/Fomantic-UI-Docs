@@ -339,6 +339,8 @@ themes      : ['Default']
     <div class="example" data-since="2.9.0">
       <h4 class="ui header">Custom format</h4>
       <p>You can entirely change the date format by using a token string formatter.</p>
+      <p>The format is applied to the calendar cells.</p>
+      <p>These same tokens can be used to format the date gotten through <a href="#/usage>behaviors</a>.</p>
       <p>
         Tokens are placeholder characters for a specific output format. Fomantic-UI supports the following tokens:
         <table class="ui celled table">
@@ -982,8 +984,9 @@ themes      : ['Default']
         <td>Clear the selected date</td>
       </tr>
       <tr>
-        <td>get date</td>
-        <td>Get the selected date</td>
+        <td>get date(format = '')</td>
+        <td>Get the selected date.
+        If <code>format</code> is omitted, a JavaScript date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set date(date, updateInput = true, fireChange = true)</td>
@@ -998,24 +1001,27 @@ themes      : ['Default']
         <td>Set the current selection mode (<code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>)</td>
       </tr>
       <tr>
-        <td>get startDate</td>
-        <td>Get the start date for range selection</td>
+        <td>get startDate(format = '')</td>
+        <td>Get the start date for range selection.
+        If <code>format</code> is omitted, a JavaScript date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set startDate(date)</td>
         <td>Set the start date for range selection</td>
       </tr>
       <tr>
-        <td>get endDate</td>
-        <td>Get the end date for range selection</td>
+        <td>get endDate(format = '')</td>
+        <td>Get the end date for range selection.
+        If <code>format</code> is omitted, a JavaScript date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set endDate(date)</td>
         <td>Set the end date for range selection</td>
       </tr>
       <tr>
-        <td>get focusDate</td>
-        <td>Get the currently focused date</td>
+        <td>get focusDate(format = '')</td>
+        <td>Get the currently focused date.
+        If <code>format</code> is omitted, a JavaScript date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set focusDate(date)</td>
