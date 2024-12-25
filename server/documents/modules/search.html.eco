@@ -1053,16 +1053,16 @@ type        : 'UI Module'
           <td>
             <div class="code" data-type="javascript">
             $.fn.search.settings.templates : {
-              escape: function(string) {
+              escape: function(string, preserveHTML) {
                 // returns escaped string for injected results
               },
-              message: function(message, type) {
+              message: function(message, type, header) {
                // returns html for message with given message and type
               },
-              category: function(response) {
+              category: function(response, fields, preserveHTML) {
                // returns results html for category results
               },
-              standard: function(response) {
+              standard: function(response, fields, preserveHTML) {
                // returns results html for standard results
               }
             }
