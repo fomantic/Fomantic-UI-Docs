@@ -339,11 +339,15 @@ themes      : ['Default']
     <div class="example" data-since="2.9.0">
       <h4 class="ui header">Custom format</h4>
       <p>You can entirely change the date format by using a token string formatter.</p>
-      <p>The format is applied to several date outputs mentioned as tokens in the <a href="#/settings">formatter settings</a>.</p>
-      <p>These same tokens can also be used to format the date gotten through <a href="#/usage>behaviors</a>, like 'get date'.</p>
-      <p>
+      <div class="ui ignored info message">
+        <ul class="ui list">
+          <li>The format is applied to several date outputs mentioned as tokens in the <a href="#/settings">formatter settings</a>.</li>
+          <li>These same tokens can also be used to format the date gotten through <a href="#/behaviors">behaviors</a>, like 'get date'.</li>
+        </ul>
+      </div>
+      <p class="ignored">
         Tokens are placeholder characters for a specific output format. Fomantic-UI supports the following tokens:
-        <table class="ui celled table">
+        <table class="ui ignored celled table">
           <thead>
             <tr>
               <th>Description</th>
