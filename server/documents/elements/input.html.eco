@@ -221,8 +221,8 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui right labeled left icon input">
-      <i class="tags icon"></i>
       <input type="text" placeholder="Enter tags">
+      <i class="tags icon"></i>
       <a class="ui tag label">
         Add Tag
       </a>
@@ -286,8 +286,8 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui right action left icon input">
-      <i class="search icon"></i>
       <input type="text" placeholder="Search">
+      <i class="search icon"></i>
       <div class="ui basic floating dropdown button">
         <div class="text">This Page</div>
         <i class="dropdown icon"></i>

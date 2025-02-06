@@ -103,8 +103,8 @@ themes      : ['default']
     <div class="ui ignored info message">Dividers will automatically vary the size of their dividing rules to match the length of your text</div>
     <div class="ui center aligned basic segment">
       <div class="ui left icon action input">
-        <i class="search icon"></i>
         <input type="text" placeholder="Order #">
+        <i class="search icon"></i>
         <div class="ui blue submit button">Search</div>
       </div>
       <div class="ui horizontal divider">
