@@ -62,7 +62,7 @@ themes      : ['default']
       A vertical divider will automatically swap to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid"><code>stackable grid</code></a>
     </div>
     <div class="ui placeholder segment">
-      <div class="ui two column very relaxed stackable grid">
+      <div class="ui equal width very relaxed stackable grid">
         <div class="column">
           <div class="ui form">
             <div class="field">
@@ -82,15 +82,17 @@ themes      : ['default']
             <div class="ui blue submit button">Login</div>
           </div>
         </div>
+        <div class="one wide column">
+          <div class="ui vertical divider">
+            Or
+          </div>
+        </div>
         <div class="middle aligned column">
           <div class="ui big button">
             <i class="signup icon"></i>
             Sign Up
           </div>
         </div>
-      </div>
-      <div class="ui vertical divider">
-        Or
       </div>
     </div>
   </div>
