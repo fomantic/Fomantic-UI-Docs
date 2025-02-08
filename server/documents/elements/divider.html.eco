@@ -82,10 +82,8 @@ themes      : ['default']
             <div class="ui blue submit button">Login</div>
           </div>
         </div>
-        <div class="one wide column">
-          <div class="ui vertical divider">
-            Or
-          </div>
+        <div class="ui vertical divider">
+          Or
         </div>
         <div class="middle aligned column">
           <div class="ui big button">
