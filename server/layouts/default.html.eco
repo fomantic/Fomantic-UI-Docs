@@ -29,5 +29,6 @@
   </div>
   <%- @partial('dimmer-demo') %>
   <%- @partial('less') %>
+  <%- @partial('gurubase') %>
 </body>
 </html>
