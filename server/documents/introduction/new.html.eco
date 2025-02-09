@@ -18,7 +18,7 @@ type        : 'Main'
     <h2 class="ui dividing header">One big step ahead</h2>
     <p>Fomantic <code>2.9</code> once again includes more than <a href="https://github.com/fomantic/Fomantic-UI/pulls?q=is%3Apr+milestone%3A2.9.0+">200</a> new features, improvements and bugfixes.</p>
     <div class="ui small info message">
-     The few SUI 2.5.0 fixes, which were not already been fixed within the past 4 years in previous Fomantic UI Versions <em class="ui emoji" data-emoji=":wink:"></em>, are included as well
+     The few SUI 2.5.0 fixes, which were not already fixed within the past 4 years in previous Fomantic UI Versions <em class="ui emoji" data-emoji=":wink:"></em>, are included as well
     </div>
     <h2 class="ui dividing header">
       New UI Component
@@ -242,15 +242,16 @@ type        : 'Main'
         </div>
       </div>
       <div class="item">
-        <div>Label</div>
+        <div>Icon</div>
         <div class="list">
-          <div class="item"><code>left icon</code> and <code>right icon</code> have to be declared in exact that class order</div>
+          <div class="item"><code>chart line</code> was renamed to <code>chartline</code></div>
+          <div class="item"><code>line graph</code> was renamed to <code>linegraph</code></div>
         </div>
       </div>
       <div class="item">
-        <div>Sidebar</div>
+        <div>Label</div>
         <div class="list">
-          <div class="item">Tabular menus and their related segments have to stay in a dedicated parent node to allow more than two attached segments</div>
+          <div class="item"><code>left icon</code> and <code>right icon</code> have to be declared in exact that class order</div>
         </div>
       </div>
       <div class="item">
@@ -263,6 +264,18 @@ type        : 'Main'
         <div>Shape</div>
         <div class="list">
           <div class="item"><code>beforeChange</code> was renamed to <code>onBeforeChange</code></div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Slider</div>
+        <div class="list">
+          <div class="item">Behavior<code>is touch</code> was removed</div>
+        </div>
+      </div>
+      <div class="item">
+        <div>Tab</div>
+        <div class="list">
+          <div class="item">Tabular menus and their related segments have to stay in a dedicated parent node to allow more than two attached segments</div>
         </div>
       </div>
       <div class="item">
@@ -854,7 +867,7 @@ type        : 'Main'
       <i class="wifi huge icon"></i>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-class="colors">
       <h4 class="ui header">Colored Loaders</h4>
       <div class="ui active red inline loader"></div>
       <div class="ui active orange inline loader"></div>
@@ -1490,7 +1503,7 @@ type        : 'Main'
       <a class="ui button" data-url="/images/large-pdf.pdf">
         Open Top Aligned Modal
       </a>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.ui.special.modal')
           .modal({
             centered: false
@@ -1538,7 +1551,7 @@ type        : 'Main'
         </div>
         <div class="results"></div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         var categoryContent = [
           { category: 'South America', title: 'Brazil' },
           { category: 'South America', title: 'Peru' },
@@ -1576,7 +1589,7 @@ type        : 'Main'
 
       <div class="ui divider"></div>
       <img src="/images/avatar/small/elliot.jpg" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.centering.example .avatar.image').popup();
       </div>
     </div>
@@ -1628,7 +1641,7 @@ type        : 'Main'
           padding: 50px 8px;
         }
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.complex-popup.example .ui.button')
           .popup({
             movePopup: false,

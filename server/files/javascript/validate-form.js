@@ -11,6 +11,7 @@ semantic.validateForm.ready = function() {
     $autoForm     = $('.auto.example .ui.form'),
     $colorForm    = $('.color.example .ui.form'),
     $promptForm   = $('.prompt.example .ui.form'),
+    $nativeForm   = $('.native.example .ui.form'),
     $ruleForm     = $('.custom.rule.example .ui.form'),
     $dropdownForm = $('.dropdown.example .ui.form'),
     $optionalForm = $('.optional.example .ui.form'),
@@ -55,7 +56,7 @@ semantic.validateForm.ready = function() {
       identifier  : 'first-name',
       rules: [
         {
-          type   : 'empty',
+          type   : 'notEmpty',
           prompt : 'Please enter your first name'
         }
       ]
@@ -73,7 +74,7 @@ semantic.validateForm.ready = function() {
       identifier  : 'name',
       rules: [
         {
-          type   : 'empty',
+          type   : 'notEmpty',
           prompt : 'Please enter your name'
         }
       ]
@@ -82,7 +83,7 @@ semantic.validateForm.ready = function() {
       identifier  : 'gender',
       rules: [
         {
-          type   : 'empty',
+          type   : 'notEmpty',
           prompt : 'Please select a gender'
         }
       ]
@@ -91,7 +92,7 @@ semantic.validateForm.ready = function() {
       identifier  : 'last-name',
       rules: [
         {
-          type   : 'empty',
+          type   : 'notEmpty',
           prompt : 'Please enter your last name'
         }
       ]
@@ -100,11 +101,11 @@ semantic.validateForm.ready = function() {
       identifier : 'username',
       rules: [
         {
-          type   : 'empty',
+          type   : 'notEmpty',
           prompt : 'Please enter a username'
         },
         {
-          type   : 'length[5]',
+          type   : 'minLength[5]',
           prompt : 'Your username must be at least 5 characters'
         }
       ]
@@ -122,11 +123,11 @@ semantic.validateForm.ready = function() {
       identifier : 'password',
       rules: [
         {
-          type   : 'empty',
+          type   : 'notEmpty',
           prompt : 'Please enter a password'
         },
         {
-          type   : 'length[6]',
+          type   : 'minLength[6]',
           prompt : 'Your password must be at least 6 characters'
         }
       ]
@@ -135,7 +136,7 @@ semantic.validateForm.ready = function() {
       identifier : 'password-confirm',
       rules: [
         {
-          type   : 'empty',
+          type   : 'notEmpty',
           prompt : 'Please confirm your password'
         },
         {
@@ -167,7 +168,7 @@ semantic.validateForm.ready = function() {
           identifier : 'special-name',
           rules: [
             {
-              type   : 'empty'
+              type   : 'notEmpty'
             }
           ]
         }
@@ -189,7 +190,7 @@ semantic.validateForm.ready = function() {
           identifier  : 'gender',
           rules: [
             {
-              type   : 'empty',
+              type   : 'notEmpty',
               prompt : 'Please enter a gender'
             }
           ]
@@ -198,7 +199,7 @@ semantic.validateForm.ready = function() {
           identifier  : 'name',
           rules: [
             {
-              type   : 'empty',
+              type   : 'notEmpty',
               prompt : 'Please enter your name'
             }
           ]
@@ -212,11 +213,11 @@ semantic.validateForm.ready = function() {
 /*  $autoForm
     .form({
       fields: {
-        name     : 'empty',
-        gender   : 'empty',
-        username : 'empty',
-        password : ['minLength[6]', 'empty'],
-        skills   : ['minCount[2]', 'empty'],
+        name     : 'notEmpty',
+        gender   : 'notEmpty',
+        username : 'notEmpty',
+        password : ['minLength[6]', 'notEmpty'],
+        skills   : ['minCount[2]', 'notEmpty'],
         terms    : 'checked'
       }
     })
@@ -235,6 +236,9 @@ semantic.validateForm.ready = function() {
     }
   });
 
+  $nativeForm.form({
+    inline: true
+  });
 
   $promptForm
     .form({
@@ -242,7 +246,7 @@ semantic.validateForm.ready = function() {
         field1: {
           rules: [
             {
-              type   : 'empty'
+              type   : 'notEmpty'
             }
           ]
         },
@@ -259,7 +263,7 @@ semantic.validateForm.ready = function() {
             {
               type   : 'isExactly[cat]',
               prompt : function(value) {
-                if(value == 'dog') {
+                if(value === 'dog') {
                   return 'I told you to put cat, not dog!';
                 }
                 return 'That is not cat';
@@ -279,7 +283,7 @@ semantic.validateForm.ready = function() {
           depends    : 'isDoctor',
           rules      : [
             {
-              type   : 'empty',
+              type   : 'notEmpty',
               prompt : 'Please enter the number of years you have been a doctor'
             }
           ]
@@ -340,7 +344,7 @@ semantic.validateForm.ready = function() {
         dog: {
           rules: [
             {
-              type: 'empty',
+              type: 'notEmpty',
               prompt: 'You must have a dog to add'
             },
             {
@@ -363,7 +367,7 @@ semantic.validateForm.ready = function() {
         calendar: {
           rules: [
             {
-              type: 'empty',
+              type: 'notEmpty',
               prompt: 'You must select a date'
             }
           ]
@@ -411,16 +415,16 @@ semantic.validateForm.ready = function() {
     })
   ;
 
-  $('#btn_set_clean').click(function() {
+  $('#btn_set_clean').on('click',function() {
     $dirtyForm.form('set as clean');
   });
 
-  $('#btn_show_dirty').click(function() {
+  $('#btn_show_dirty').on('click',function() {
     var dirty_fields = $dirtyForm.form('get dirty fields');
 
     dirty_fields.each(function(_, element) {
       $('#dirty_form_console').append('dirty element: ' + element.name + '<br>');
-    }); 
+    });
   });
 };
 

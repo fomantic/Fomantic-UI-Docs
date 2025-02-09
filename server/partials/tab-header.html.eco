@@ -13,8 +13,5 @@
       </div>
       <% end %>
     </div>
-    <div class="advertisement">
-      <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div></div></div>
-    </div>
   </div>
 </div>

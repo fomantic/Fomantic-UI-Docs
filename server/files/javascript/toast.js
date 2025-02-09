@@ -13,7 +13,7 @@ var noPinkFound = function() {
 semantic.toast.ready = function() {
 
   /* Behaviors */
-  $('#jsaccess_toast_init').click(function(){
+  $('#jsaccess_toast_init').on('click',function(){
     if(!globalToast) {
       globalToast = $.toast({
         message: 'This pink toast stays for a long time. It is returned as object when created, so you can interact with it via Javascript',
@@ -34,7 +34,7 @@ semantic.toast.ready = function() {
   });
 
 
-  $('#jsaccess_toast_remaining').click(function(){
+  $('#jsaccess_toast_remaining').on('click',function(){
     if (globalToast) {
       var remainingTime = $(globalToast).toast('get remainingTime');
       $.toast({
@@ -46,7 +46,7 @@ semantic.toast.ready = function() {
       noPinkFound();
     }
   });
-  $('#jsaccess_toast_howmany').click(function(){
+  $('#jsaccess_toast_howmany').on('click',function(){
     if (globalToast) {
       var howMany = $(globalToast).toast('get toasts');
       $.toast({
@@ -58,7 +58,7 @@ semantic.toast.ready = function() {
       noPinkFound();
     }
   });
-  $('#jsaccess_toast_close').click(function(){
+  $('#jsaccess_toast_close').on('click',function(){
     if (globalToast) {
       $(globalToast).toast('close');
     } else {

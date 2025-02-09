@@ -11,7 +11,7 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/slider.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/slider.less" />
 <script src="/javascript/slider.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
@@ -34,21 +34,38 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="another example">
+    <div class="example">
       <h4 class="ui header">Labeled slider</h4>
       <p>A slider that show its labels</p>
       <div class="ui labeled slider"></div>
     </div>
-    <div class="another example">
+    <div class="example">
       <h4 class="ui header">Labeled ticked slider</h4>
       <p>A slider that show its labels and ticks</p>
       <div class="ui labeled ticked slider"></div>
     </div>
 
     <div class="example">
-        <h4 class="ui header">Label at the bottom</h4>
+        <h4 class="ui header">Bottom aligned labeled</h4>
         <p>A slider can display the labels below the track</p>
         <div class="ui bottom aligned labeled slider"></div>
+    </div>
+
+    <div class="example" data-since="2.9.3">
+        <h4 class="ui header">Restricted Labels</h4>
+        <p>You can restrict the display of labels to only the ones you want</p>
+        <div class="ui labeled ticked slider" id="restrictedlabelsslider"></div>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.slider')
+        .slider({
+            restrictedLabels: [0, 10, 15, 35, 80, 90, 100],
+            min: 0,
+            max: 100,
+            step: 0,
+            autoAdjustLabels: false
+        })
+      ;
     </div>
 
     <div class="example">
@@ -56,7 +73,7 @@ themes      : ['Default']
         <p>You can provide a function which returns a custom label according to the label value</p>
         <div class="ui labeled ticked slider" id="interpretedlabel"></div>
     </div>
-    <div class="evaluated code" data-type="javascript">
+    <div class="evaluated code">
         var labels = ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ/ς", "τ", "υ", "φ", "χ", "ψ", "ω"];
         $('#interpretedlabel')
           .slider({
@@ -86,12 +103,29 @@ themes      : ['Default']
         })
       ;
       </div>
+      <div class="another example">
+      <p>A range slider can be limited to how far the distance between the two thumbs can be</p>
+      <div class="ui labeled ticked range slider" id="slider-range-minmax"></div><br>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.range.slider')
+        .slider({
+          min: 5,
+          max: 100,
+          start: 10,
+          end: 50,
+          minRange: 10,
+          maxRange: 40,
+          step: 0
+        })
+      ;
+      </div>
 
     <h2 class="ui dividing header">Variations</h2>
     <div class="example">
       <h4 class="ui header">Disabled</h4>
       <p>A slider can appear disabled</p>
-      <div class="ui disabled slider" id="slider-2"></div>
+      <div class="ui disabled slider"></div>
     </div>
 
     <div class="example">
@@ -108,13 +142,41 @@ themes      : ['Default']
       <div class="ui reversed slider"></div>
     </div>
 
+    <div class="example" data-since="2.9.3">
+      <h4 class="ui header">Thumb Tooltips</h4>
+      <p>The slider thumbs can show a tooltip on hover containing the current value</p>
+      <div class="ui slider" id="slider-tooltip-1"></div>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.slider')
+        .slider({
+          showThumbTooltip: true
+        })
+      ;
+    </div>
+    <div class="another example">
+      <p>The tooltips can stay visible all the time and can be customized by the <code>tooltipConfig</code> setting.<br>Refer to <a href="/modules/popup#tooltip">Tooltip Variations</a> for possible values.</p>
+      <div class="ui range slider" id="slider-tooltip-2"></div>
+    </div>
+    <div class="code" data-type="javascript">
+      $('.ui.slider')
+        .slider({
+          showThumbTooltip: true,
+          tooltipConfig: {
+            position: 'bottom center',
+            variation: 'small visible green'
+          }
+        })
+      ;
+    </div>
+
     <div class="example">
       <h4 class="ui header">Vertical</h4>
       <p>A slider can be vertical</p>
       <div class="ui vertical slider" style="height: 200px;"></div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="colors">
       <h4 class="ui header">Colored</h4>
       <p>A slider can be different colors</p>
       <div class="ui red slider"></div>
@@ -132,7 +194,7 @@ themes      : ['Default']
       <div class="ui black slider"></div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="inverted, colors">
       <h4 class="ui header">Inverted Colored</h4>
       <p>A slider can be different colors while inverted</p>
       <div class="ui inverted segment">
@@ -230,7 +292,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Initializing a slider</h4>
       <p>Slider is initialized on pre-existing markup</p>
-      <div class="test code">
+      <div class="test code" data-type="javascript">
       $('.ui.slider')
         .slider()
       ;
@@ -242,7 +304,7 @@ themes      : ['Default']
     <p>Behaviors are short english phrases used for accessing specific functionality in
 
     <p>Behaviors are accessible with Javascript using the syntax:<p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.ui.slider').slider('behavior', argumentOne, argumentTwo...);
     </div>
 
@@ -286,7 +348,7 @@ themes      : ['Default']
     <table class="ui sortable celled definition table">
       <thead>
         <th>Setting</th>
-        <th class="four wide">Default</th>
+        <th class="five wide">Default</th>
         <th>Description</th>
       </thead>
       <tbody>
@@ -316,6 +378,16 @@ themes      : ['Default']
           <td>The second value to set in case of a range slider</td>
         </tr>
         <tr>
+          <td>minRange</td>
+          <td>false</td>
+          <td>Makes sure that the two thumbs of a range slider always need to have a difference of the given value</td>
+        </tr>
+        <tr>
+          <td>maxRange</td>
+          <td>false</td>
+          <td>Makes sure that the two thumbs of a range slider don't exceed a difference of the given value</td>
+        </tr>
+        <tr>
           <td>labelType</td>
           <td>number</td>
           <td>The type of label to display for a labeled slider. Can be <code>number</code> or <code>letter</code></td>
@@ -325,7 +397,7 @@ themes      : ['Default']
           <td>false</td>
           <td>
             You can specify a function here which consumes the current label value as parameter and should return a custom label text according to the given value
-            <div class="code">
+            <div class="code" data-type="javascript">
             interpretLabel: function(value){
             //do something with 'value' and return matching text
               return myCustomText;
@@ -334,9 +406,34 @@ themes      : ['Default']
           </td>
         </tr>
         <tr>
+            <td>restrictedLabels</td>
+            <td>[]</td>
+            <td>An array of label values which restrict the displayed labels to only those which are defined</td>
+        </tr>
+        <tr>
+            <td>showThumbTooltip</td>
+            <td>false</td>
+            <td>Whether a tooltip should be shown to the thumb(s) on hover. Will contain the current slider value.</td>
+        </tr>
+        <tr>
+            <td>tooltipConfig</td>
+            <td>
+              <div class="code" data-type="javascript">
+                {
+                    position: 'top center',
+                    variation: 'tiny black'
+                }
+              </div>
+            </td>
+            <td>Tooltip configuration used when <code>showThumbTooltip</code> is true<br>Refer to <a href="/modules/popup#tooltip">Tooltip Variations</a> for possible values.</td>
+        </tr>
+        <tr>
           <td>showLabelTicks</td>
           <td>false</td>
-          <td>Show ticks on a labeled slider</td>
+          <td>Show ticks on a labeled slider.<br>
+                <code>'always'</code>will always show the ticks for all labels (even if not shown)<br>
+                <code>true</code> will display the ticks only if the related label is also shown
+          </td>
         </tr>
         <tr>
           <td>smooth</td>

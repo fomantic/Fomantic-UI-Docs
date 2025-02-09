@@ -11,7 +11,7 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/toast.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/toast.less" />
 <script src="/javascript/toast.js"></script>
 
 <%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples', usage: 'Usage', settings: 'Settings'} }) %>
@@ -50,7 +50,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Progress Bar</h4>
         <p>You can attach a progress bar to your toast.</p>
         <div class="code" data-demo="true">
@@ -119,8 +119,8 @@ themes      : ['Default']
         ;
         </div>
     </div>
-    <div class="no example">
-          <h4 class="ui header">Attached Position<span class="ui black label">New in 2.8.8</span></h4>
+    <div class="no example" data-since="2.8.8">
+          <h4 class="ui header">Attached Position</h4>
           <p>A toast can have an attached position which will show the toast over the whole width of the screen. Just like notifications on mobile devices.</p>
           <div class="ui warning message">
             Attached positions with centered content only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
@@ -143,8 +143,8 @@ themes      : ['Default']
             ;
           </div>
       </div>
-    <div class="no example">
-      <h4 class="ui header">Direction <span class="ui black label">New in 2.8.8</span></h4>
+    <div class="no example" data-since="2.8.8">
+      <h4 class="ui header">Direction</h4>
       <p>Toasts can stack horizontal</p>
       <div class="code" data-demo="true">
       $.toast({
@@ -155,8 +155,8 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="no example">
-          <h4 class="ui header">Center Aligned<span class="ui black label">New in 2.8.8</span></h4>
+    <div class="no example" data-since="2.8.8">
+          <h4 class="ui header">Center Aligned</h4>
           <p>The toasts content can be shown center aligned.</p>
           <div class="ui warning message">
               Centered content in <a href="#attached-position">attached toasts</a> only support attached actions. See the  <a href="#actions-and-centered-and-attached-position">examples tab</a> for more info.
@@ -203,7 +203,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Use Message Style</h4>
         <p>You can use all of the styles and colors from the message component</p>
         <div class="code" data-demo="true">
@@ -219,7 +219,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Increasing Progress Bar</h4>
         <p>The progress bar could be be raised instead of lowered</p>
         <div class="code" data-demo="true">
@@ -233,7 +233,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
         <h4 class="ui header">Color Variants</h4>
         <p>You can use all of the usual color names</p>
         <div class="code" data-demo="true">
@@ -282,8 +282,8 @@ themes      : ['Default']
     </div>
 
     <h2 class="ui dividing header">Actions</h2>
-    <div class="no example">
-        <h4 class="ui header">General<div class="ui black label">New in 2.8.0</div></h4>
+    <div class="no example" data-since="2.8.0">
+        <h4 class="ui header">General</h4>
         <p>Define click actions to your toast by providing a text and/or icon, optional class and click handler.</p>
         <div class="ui ignored message">
             <ul class="ui list">
@@ -340,8 +340,8 @@ themes      : ['Default']
         ;
         </div>
     </div>
-    <div class="no example">
-        <h4 class="ui header">Centered<div class="ui black label">New in 2.8.8</div></h4>
+    <div class="no example" data-since="2.8.8">
+        <h4 class="ui header">Centered</h4>
         <p>The actions buttons can also be shown <code>centered</code></p>
         <div class="code" data-demo="true">
           $.toast({
@@ -464,7 +464,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
       <h4 class="ui header">Individual icon</h4>
       <p>Use whatever you like from the included FontAwesome gallery</p>
       <div class="code" data-demo="true">
@@ -476,8 +476,8 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="no example">
-        <h4 class="ui header">Image<div class="ui black label">New in 2.8.0</div></h4>
+    <div class="no example" data-since="2.8.0">
+        <h4 class="ui header">Image</h4>
         <p>Provide an image path to display it just like the icon does. <br> Adjust the image via the separate <code>classImage</code> setting</p>
         <div class="ui ignored message">
             For image sizes, only <code>mini</code>, <code>tiny</code>, <code>small</code> and <code>avatar</code> are supported
@@ -491,7 +491,7 @@ themes      : ['Default']
         ;
         </div>
 
-        <p>The image can be shown without any padding by providing the <code>image</code> class <span class="ui black label">New in 2.9.0</span></p>
+        <p>The image can be shown without any padding by providing the <code>image</code> class <span class="ui teal label">New in 2.9.0</span></p>
         <div class="code" data-demo="true">
         $.toast({
           showImage: 'https://fomantic-ui.com/images/avatar/small/veronika.jpg',
@@ -503,7 +503,7 @@ themes      : ['Default']
         </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-since="2.6.3">
       <h4 class="ui header">Close Icon</h4>
       <p>You can force the user to click a close Icon instead of clicking anywhere on the toast to close it</p>
       <div class="code" data-demo="true">
@@ -515,7 +515,7 @@ themes      : ['Default']
       })
       ;
       </div>
-      <p>The close icon can also be displayed to the left <span class="ui black label">New in 2.8.0</span></p>
+      <p>The close icon can also be displayed to the left <span class="ui teal label">New in 2.8.0</span></p>
       <div class="code" data-demo="true">
       $.toast({
         class: 'info',
@@ -566,9 +566,9 @@ themes      : ['Default']
           ;
       </div>
     </div>
-    <h2 class="ui dividing header">Create from DOM</h2>
+    <h2 data-since="2.8.0" class="ui dividing header">Create from DOM</h2>
 
-    <p>By creating your toasts out of existing DOM nodes you can make use of other existing FUI components <span class="ui black label">New in 2.8.0</span></p>
+    <p>By creating your toasts out of existing DOM nodes you can make use of other existing FUI components</p>
 
     <div class="example">
         <h4 class="ui header">Toast</h4>
@@ -586,8 +586,8 @@ themes      : ['Default']
         ;
         </div>
     </div>
-    <div class="example">
-      <h4 class="ui header">Template <span class="ui black label">New in 2.8.8</span></h4>
+    <div class="example" data-since="2.8.8">
+      <h4 class="ui header">Template</h4>
       <p>You can reuse a dom template and provide its content via setting parameters</p>
       <div class="ui pink toast" id="domtemplate" >
           <img class="ui image avatar">
@@ -684,8 +684,8 @@ themes      : ['Default']
 
       <h2 class="ui dividing header">Interaction</h2>
 
-      <div class="no example">
-          <h4 class="ui header">Prevent pausing <div class="ui black label">New in 2.8.0</div></h4>
+      <div class="no example" data-since="2.8.0">
+          <h4 class="ui header">Prevent pausing</h4>
           <p>The default behavior when hovering over the toast is to pause decreasing of the display time.<br>
               You can force the toast to not pause by setting <code>pauseOnHover</code> to <code>false</code></p>
           <div class="code" data-demo="true">
@@ -696,8 +696,8 @@ themes      : ['Default']
             });
           </div>
       </div>
-      <div class="no example">
-          <h4 class="ui header">Prevent closing <div class="ui black label">New in 2.8.0</div></h4>
+      <div class="no example" data-since="2.8.0">
+          <h4 class="ui header">Prevent closing</h4>
           <p>The default behavior when clicking on a toast is to close it.<br>
               You can force the toast to not do this by setting <code>closeOnClick</code> to <code>false</code></p>
           <div class="ui ignored info message">
@@ -717,8 +717,8 @@ themes      : ['Default']
           </div>
       </div>
 
-    <div class="no example">
-        <h4 class="ui header">Access created toast<div class="ui black label">New in 2.8.0</div></h4>
+    <div class="no example" data-since="2.8.0">
+        <h4 class="ui header">Access created toast</h4>
         <p>As each call to <code>.toast()</code> returns the instance of the created toast, you are able to interact with the displayed toast via javascript <a href="#behaviors">behaviors</a> </p>
         <button class="ui pink button" id="jsaccess_toast_init">
             Open pink toast first
@@ -731,7 +731,7 @@ themes      : ['Default']
         <button class="ui button" id="jsaccess_toast_close">
             Close toast
         </button>
-        <div class="code">
+        <div class="code" data-type="javascript">
             var myToast = $.toast();
             var remainingTime = myToast.toast('get remainingTime');
         </div>
@@ -781,6 +781,8 @@ themes      : ['Default']
             <p>The following structure is used to position the toasts. Each position container implements a <code>toast-box</code> per toast. The extra wrapper is needed to make dynamic elements like progressbar independent of the toast layout.</p>
             <div class="code" data-type="html">
                 <div class="ui toast-container">
+<!-- you can use 'floating' for shadow or 'hoverfloating' for shadow on hover. -->
+<!-- Also add 'inverted' for dark page backgrounds -->
                     <div class="toast-box">
 <!-- only when vertical attached buttons are used an extra wrapping node is needed -->
                         <div class="vertical attached">
@@ -821,7 +823,7 @@ themes      : ['Default']
         <h2 class="ui dividing header">Behaviors</h2>
 
         <p>All the following behaviors can be called using the syntax:<p>
-        <div class="code">
+        <div class="code" data-type="javascript">
             $('.ui.toast').toast('behavior', argumentOne, argumentTwo...);
         </div>
 
@@ -932,6 +934,11 @@ themes      : ['Default']
             <td>If an URL to an image is given, that image will be shown to the left of the toast</td>
         </tr>
         <tr>
+            <td>alt</td>
+            <td>false</td>
+            <td>If <code>showImage</code> is true, the alt setting can provide a string used for the image alt attribute</td>
+        </tr>
+        <tr>
           <td>showIcon</td>
           <td>true</td>
           <td>Define if the toast should display an icon which matches to a given class. If a string is given, this will be used as icon classname</td>
@@ -988,13 +995,14 @@ themes      : ['Default']
         </tr>       <tr>
           <td>transition</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
       transition: {
         showMethod   : 'scale',
         showDuration : 500,
         hideMethod   : 'scale',
         hideDuration : 500,
-        closeEasing  : 'easeOutCubic'
+        closeEasing  : 'easeOutCubic',
+        closeDuration: 500,
       }
             </div>
           </td>
@@ -1081,7 +1089,7 @@ themes      : ['Default']
             <td>An array of objects. Each object defines an action with properties <code>text</code>,<code>class</code>,<code>icon</code> and <code>click</code>
                 <div class="ui info message">Actions will close the toast by default. Return false from the click handler to prevent that.</div>
                 <div class="ui warning message">If you use any of the approve (approve, ok, positive) or deny (deny, cancel, negative) classnames for the <code>class</code> property, a <code>click</code> handler will be ignored. In such cases use the <code>onApprove</code> and <code>onDeny</code> callbacks instead</div>
-                <div class="code">
+                <div class="code" data-type="javascript">
                 actions: [{
                     text    : 'Wait',
                     class   : 'red',
@@ -1113,11 +1121,15 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     selector    : {
       container    : '.ui.toast-container',
       box          : '.toast-box',
       toast        : '.ui.toast',
+      title        : '.header',
+      message      : '.message:not(.ui)',
+      image        : '> img.image, > .image > img',
+      icon         : '> i.icon',
       input        : 'input:not([type="hidden"]), textarea, select, button, .ui.button, ui.dropdown',
       clickable    : 'a, details, .ui.accordion',
       approve      : '.actions .positive, .actions .approve, .actions .ok',
@@ -1130,16 +1142,37 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     className   : {
-      container    : 'toast-container',
-      box          : 'toast-box',
+      container    : 'ui toast-container',
+      absolute     : 'absolute',
+      box          : 'floating toast-box',
       progress     : 'ui attached active progress',
       toast        : 'ui toast',
-      icon         : 'icon',
+      icon         : 'centered icon',
       visible      : 'visible',
       content      : 'content',
-      title        : 'header'
+      title        : 'ui header',
+      message      : 'message',
+      actions      : 'actions',
+      extraContent : 'extra content',
+      button       : 'ui button',
+      buttons      : 'ui buttons',
+      close        : 'close icon',
+      image        : 'ui image',
+      vertical     : 'vertical',
+      horizontal   : 'horizontal',
+      attached     : 'attached',
+      inverted     : 'inverted',
+      compact      : 'compact',
+      pausable     : 'pausable',
+      progressing  : 'progressing',
+      top          : 'top',
+      bottom       : 'bottom',
+      left         : 'left',
+      basic        : 'basic',
+      unclickable  : 'unclickable',
+
     }
             </div>
           </td>
@@ -1148,7 +1181,7 @@ themes      : ['Default']
         <tr>
           <td>icons</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     icons   : {
       info         : 'info',
       success      : 'checkmark',
@@ -1158,6 +1191,17 @@ themes      : ['Default']
             </div>
           </td>
           <td>Icon names used internally</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>
+            <div class="code" data-type="javascript">
+    text   : {
+      close        : 'Close'
+    }
+            </div>
+          </td>
+          <td>Display strings</td>
         </tr>
       </tbody>
     </table>
@@ -1204,7 +1248,7 @@ themes      : ['Default']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error: {
               method       : 'The method you called is not defined.',
               noElement    : 'This module requires ui transitions.',

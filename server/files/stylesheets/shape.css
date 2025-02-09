@@ -10,11 +10,11 @@
 }
 
 #example .dog.shape {
-  margin: 0em 0em 3em;
+  margin: 0 0 3em;
 }
 
 #example .dog.shape .side .item {
-  margin: 0em;
+  margin: 0;
   min-height: 400px;
 }
 #example .dog.two.shape .side {
@@ -54,7 +54,7 @@
 
 #example .demo.shape .side img {
   display: block;
-  margin: 0px auto;
+  margin: 0 auto;
   max-width: 100%;
   max-height: 100%;
 }

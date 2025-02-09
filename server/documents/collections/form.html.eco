@@ -12,7 +12,7 @@ type        : 'UI Collection'
 
 themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/form.less" />
+<link rel="stylesheet/less" href="/src/definitions/collections/form.less" />
 <script src="/javascript/form.js"></script>
 
 <%- @partial('header') %>
@@ -291,7 +291,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     <div class="ui ignored info message">
       UI checkbox are special, styled versions of standard HTML checkboxes.
     </div>
-    <div class="evaluated code" data-type="javascript" data-label="true">
+    <div class="evaluated code" data-label="true">
     $('.ui.checkbox')
       .checkbox()
     ;
@@ -322,7 +322,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   <div data-use-content="true" class="example">
     <h4 class="ui header">Radio Checkbox</h4>
     <p>A form can include a <a href="/modules/checkbox.html#radio">radio checkbox</a></p>
-    <div class="evaluated code" data-type="javascript" data-label="true">
+    <div class="evaluated code" data-label="true">
     $('.ui.radio.checkbox')
       .checkbox()
     ;
@@ -962,7 +962,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
           <div class="ui input left icon">
             <i class="calendar icon"></i>
             <input type="text" placeholder="Pick up a date" name="date">
-          </div>        
+          </div>
         </div>
       </div>
     </div>
@@ -1369,7 +1369,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-use-content="true">
+  <div class="example" data-class="!equal width" data-use-content="true">
     <h4 class="ui header">Equal Width Form</h4>
     <p>Forms can automatically divide fields to be equal width</p>
     <div class="ui equal width form">

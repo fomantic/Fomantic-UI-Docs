@@ -13,7 +13,6 @@ type        : 'UI Behavior'
 ---
 
 
-<script src="/dist/components/form.js"></script>
 <script src="/javascript/validate-form.js"></script>
 
 <%- @partial('header', { tabs: { usage: 'Usage', examples: 'Examples', settings: 'Settings'} }) %>
@@ -30,22 +29,22 @@ type        : 'UI Behavior'
       <div class="ui ignored info message">
         A validation object includes a list of form elements, and rules to validate each field against. Fields are matched by either the <code>id</code>, <code>name</code>, or <code>data-validate</code> property (in that order) matching the identifier specified in the settings object. As of 2.8.8, validation objects can mix shorthand or longhand notation.
       </div>
-      <div class="ignore code" data-title="Shorthand Validation">
+      <div class="ignore code" data-title="Shorthand Validation" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
-            name     : 'empty',
-            gender   : 'empty',
-            username : 'empty',
-            password : ['minLength[6]', 'empty'],
-            skills   : ['minCount[2]', 'empty'],
+            name     : 'notEmpty',
+            gender   : 'notEmpty',
+            username : 'notEmpty',
+            password : ['minLength[6]', 'notEmpty'],
+            skills   : ['minCount[2]', 'notEmpty'],
             terms    : 'checked'
           }
         })
       ;
       </div>
-      <div class="ui horizontal divider">or</div>
-      <div class="ignore code" data-title="Full Validation Settings">
+      <div class="ui horizontal divider ignored">or</div>
+      <div class="ignore code" data-title="Full Validation Settings" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -53,7 +52,7 @@ type        : 'UI Behavior'
               identifier: 'name',
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please enter your name'
                 }
               ]
@@ -71,25 +70,27 @@ type        : 'UI Behavior'
               identifier: 'gender',
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please select a gender'
                 }
               ]
             },
             username: {
               identifier: 'username',
+              noNativeValidation: true,
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please enter a username'
                 }
               ]
             },
             password: {
               identifier: 'password',
+              errorLimit: 1,
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please enter a password'
                 },
                 {
@@ -160,11 +161,11 @@ type        : 'UI Behavior'
         <div class="ui error message"></div>
       </div>
     </form>
-    <div class="color example">
-      <h4 class="ui header">Passing Parameters to Rules <div class="ui horizontal teal label">New in 2.2.3</div></h4>
+    <div class="color example" data-since="2.2.3">
+      <h4 class="ui header">Passing Parameters to Rules</h4>
       <p>Typically rules that include a parameter are written <code>minLength[2]</code> with the value being passed in as brackets.</p>
       <p>If passing in properties as a string is not ideal, or if you are pulling values from another javascript variable, it might make sense to consider using <code>value</code> to pass in the rule value.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
         $('.ui.form').form({
           fields: {
             color: {
@@ -189,7 +190,7 @@ type        : 'UI Behavior'
     <div class="prompt example">
       <h4 class="ui header">Customizing Prompts</h4>
       <p>Form validation includes default error prompts for most cases, however these can be quite generic. To specify custom personalized values for a validation prompt use the <code>prompt</code> property with a rule.</p>
-      <div class="ui ignored info message">Starting in <div class="ui teal label">2.3.1</div> you can specify prompts as a function. This may be useful when returning validation for fields that require dynamic validation messages.</div>
+      <div class="ui ignored info message">Starting in <div class="ui teal label">2.3.1</div> you can specify prompts as a function. This may be useful when returning validation for fields that require dynamic validation messages. The functions thisArg will be set to the related field element.</div>
       <div class="ui ignored info message">You can set default messages for each validation rule type by modifying <code>$fn.form.settings.prompt</code></div>
       <p>Prompt also supports custom templating with the following values replaced</p>
       <table class="ui celled sortable basic table segment">
@@ -212,21 +213,21 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
             field1: {
               rules: [
                 {
-                  type   : 'empty'
+                  type   : 'notEmpty'
                 }
               ]
             },
             field2: {
               rules: [
                 {
-                  type   : 'exactly[dog]',
+                  type   : 'isExactly[dog]',
                   prompt : '{name} is set to "{value}" that is totally wrong. It should be {ruleValue}'
                 }
               ]
@@ -234,7 +235,7 @@ type        : 'UI Behavior'
             field3: {
               rules: [
                 {
-                  type   : 'exactly[cat]',
+                  type   : 'isExactly[cat]',
                   prompt : function(value) {
                     if(value == 'dog') {
                       return 'I told you to put cat, not dog!';
@@ -273,7 +274,7 @@ type        : 'UI Behavior'
       <h4 class="ui header">Matching Fields</h4>
       <p>By default the property name used in the validation object will match against the <code>id</code>, <code>name</code>, or <code>data-validate</code> property of each input to find the corresponding field to match validation rules against.</p>
       <p>If you need to specify a different identifier you can use the <code>identifier</code> property on each validation rule</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -281,7 +282,7 @@ type        : 'UI Behavior'
               identifier : 'special-name',
               rules: [
                 {
-                  type   : 'empty'
+                  type   : 'notEmpty'
                 }
               ]
             }
@@ -327,12 +328,12 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
-           email: 'empty',
-           name: 'empty'
+           email: 'notEmpty',
+           name: 'notEmpty'
           }
         })
       ;
@@ -345,6 +346,33 @@ type        : 'UI Behavior'
       </div>
     </div>
 
+    <div class="native example" data-since="2.9.3">
+      <h4 class="ui header">Native Browser Validation</h4>
+      <p>You can also make use of the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation">native browser built-in form validation</a> without the need to specify rules. You can still provide rules in addition, but you could also completely rely on native validation.</p>
+      <div class="ignored code" data-type="javascript">
+      $('.ui.form')
+        .form({
+            inline: true
+        })
+      ;
+      </div>
+      <form class="ui form segment">
+        <div class="field">
+          <label>Number</label>
+          <input type="number" name="number" min="1" max="10" placeholder="Anything between 1 and 10" required>
+        </div>
+        <div class="field">
+          <label>Url</label>
+          <input type="url" name="url" placeholder="A valid url needed" required>
+        </div>
+        <div class="field">
+          <label>File</label>
+          <input type="file" name="file" placeholder="A valid url needed" required>
+        </div>
+        <div class="ui primary submit button">Submit</div>
+        </form>
+    </div>
+
     <h2 class="ui dividing header">Rules</h2>
 
     <div class="no example">
@@ -354,14 +382,18 @@ type        : 'UI Behavior'
         <p>Validation rules are a set of conditions required to validate a field</p>
       <div class="ui info message">Validation rules are found in <code>$.fn.form.settings.rules</code>, to add new global validation rules, modify <code>$.fn.form.settings.rules</code> to include your function.</div>
       <div class="ui info message">To pass parameters to a rule, use bracket notation in your settings object. For example <code>type: 'not[dog]'</code></div>
-      <div class="ui info message">Despite the global setting <code>shouldTrim</code> you can optionally specify to trim/not trim values before validation by adding <code>shouldTrim:true</code> or <code>shouldTrim:false</code> to each rule <span class="ui tiny black label">New in 2.8.8</span></div>
+      <div data-since="2.8.8" class="ui info message">Despite the global setting <code>shouldTrim</code> you can optionally specify to trim/not trim values before validation by adding <code>shouldTrim:true</code> or <code>shouldTrim:false</code> to each rule</div>
 
-      <h3 class="ui header"><a href="#empty">Empty</a></h3>
+      <h3 class="ui header"><a href="#notempty">Not Empty</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
-            <td class="four wide">empty</td>
-            <td class="twelve wide">A field is empty</td>
+            <td class="four wide">notEmpty</td>
+            <td class="twelve wide">A field is not empty</td>
+          </tr>
+          <tr data-deprecated="[2.9.4]Use 'notEmpty' instead">
+            <td>empty</td>
+            <td>A field is not empty</td>
           </tr>
           <tr>
             <td>checked</td>
@@ -370,7 +402,7 @@ type        : 'UI Behavior'
         </tbody>
       </table>
 
-      <h3 class="ui header"><a href="#content-type">Content Type</h3>
+      <h3 class="ui header"><a href="#content-type">Content Type</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
@@ -500,6 +532,11 @@ type        : 'UI Behavior'
             <td>A field is less than a max length</td>
             <td><code>maxLength[50]</code></td>
           </tr>
+          <tr>
+            <td>size</td>
+            <td>A field has a size between min and max characters</td>
+            <td data-since="2.9.2"><code>size[6..12]</code></td>
+          </tr>
         </tbody>
       </table>
 
@@ -544,7 +581,7 @@ type        : 'UI Behavior'
     <div class="custom rule example">
       <h4 class="ui header">Adding Custom Rules</h4>
       <p>You can extend form validation to include your own rules. Keep in mind these will need to be executed synchronously.</p>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
       // some arbitrary business-logic
       window.user = {
         name       : 'Simon',
@@ -665,7 +702,7 @@ type        : 'UI Behavior'
       <p>
         Form includes behaviors for reading from and writing to form fields.
       </p>
-      <div class="code" data-demo="true">
+      <div class="code" data-demo="true" data-type="javascript">
       $('.writing.example form')
         // set one value
         .form('set value', 'name', 'Jack')
@@ -754,7 +791,7 @@ type        : 'UI Behavior'
       <div class="ui ignored info message">
         Although <code>get values</code> allows you to use any matching identifier, returned values will always use the corresponding <code>name</code> attribute of the element.
       </div>
-      <div class="code" data-demo="true">
+      <div class="code" data-demo="true" data-type="javascript">
       var
         $form = $('.get.example form'),
         // get one value
@@ -872,7 +909,7 @@ type        : 'UI Behavior'
                 identifier  : 'empty',
                 rules: [
                   {
-                    type   : 'empty',
+                    type   : 'notEmpty',
                     prompt : 'Please enter a value'
                   }
                 ]
@@ -881,7 +918,7 @@ type        : 'UI Behavior'
                 identifier  : 'dropdown',
                 rules: [
                   {
-                    type   : 'empty',
+                    type   : 'notEmpty',
                     prompt : 'Please select a dropdown value'
                   }
                 ]
@@ -1108,7 +1145,7 @@ type        : 'UI Behavior'
       </div>
     </div>
     <div class="match example">
-      <h4 class="ui header">Matching Fields</h4>
+      <h4 class="ui header">Matching other Fields</h4>
       <p>Fields can be required to match, or not match other fields. You may consider using this with <a href="#optional-fields">optional fields</a>.</p>
       <form class="ui form">
         <div class="two fields">
@@ -1432,20 +1469,20 @@ type        : 'UI Behavior'
 
     <h2 class="ui dividing header">Form Examples</h2>
 
-    <div class="add example">
+    <div class="add example" data-since="2.2.11">
       <h4 class="ui header">
-        Adding Rules Programmatically <div class="ui teal label">New in 2.2.11</div>
+        Adding Rules Programmatically
       </h4>
       <p>You can use the special behaviors <code>add field/rule</code>, <code>remove rule</code> and <code>remove field</code> to dynamically add or remove fields or rules. </p>
       <div class="ui ignored info message">
         <div class="ui header">Adding Multiple Rules and Complex Rules</div>
         You can specify shorthand or full rule objects when adding rules. You can also specify fields as an array to modify multiple fields.</code>.
       </div>
-      <div class="code">
+      <div class="code" data-type="javascript">
       // lets only validate username to start
       $('.add.example .ui.form')
         .form({
-          username: ['empty', 'minLength[5]']
+          username: ['notEmpty', 'minLength[5]']
         })
       ;
       </div>
@@ -1458,13 +1495,13 @@ type        : 'UI Behavior'
             .form('add rule', 'gender', {
               rules: [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Entering your gender is necessary'
                 }
               ]
             })
             // adding shorthand
-            .form('add rule', 'password', ['empty', 'minLength[5]'])
+            .form('add rule', 'password', ['notEmpty', 'minLength[5]'])
           ;
         })
       ;
@@ -1515,15 +1552,15 @@ type        : 'UI Behavior'
     <div class="dropdown example">
       <h4 class="ui header">Validating Dropdowns</h4>
       <p><a href="/modules/dropdown.html">Dropdowns</a> can also be validated like other form fields. Simply match the validation rule to the <code>input</code> or <code>select</code> associated with the dropdown</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.dropdown')
         .dropdown()
       ;
       $('.ui.form')
         .form({
           fields: {
-            gender: 'empty',
-            name: 'empty'
+            gender: 'notEmpty',
+            name: 'notEmpty'
           }
         })
       ;
@@ -1553,11 +1590,11 @@ type        : 'UI Behavior'
     <div class="data example">
       <h4 class="ui header">Using Server Name Attributes</h4>
       <p>Sometimes an integration requires you to use a specific value for <code>name</code>, or <code>id</code>. In these cases, you can match a form field using the <code>data-validate</code> property.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form(
           fields: {
-            name: 'empty'
+            name: 'notEmpty'
           }
         })
       ;
@@ -1571,13 +1608,12 @@ type        : 'UI Behavior'
       </form>
     </div>
 
-    <div class="depends example">
+    <div class="depends example" data-since="2.2">
       <h4 class="ui header">
         Dependent Fields
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
       <p>You can specify validation fields to only be used when other fields are present. Simply add <code>depends: 'identifier'</code> with the ID of the field that must be non-blank for this rule to evaluate.</p>
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -1586,7 +1622,7 @@ type        : 'UI Behavior'
               depends    : 'isDoctor',
               rules      : [
                 {
-                  type   : 'empty',
+                  type   : 'notEmpty',
                   prompt : 'Please enter the number of years you have been a doctor'
                 }
               ]
@@ -1615,7 +1651,7 @@ type        : 'UI Behavior'
     <div class="optional example">
       <h4 class="ui header">Optional Fields</h4>
       <p>Adding the parameter <code>optional: true</code> will only add your validation rules when the field is <b>not empty</b>.
-      <div class="ignored code">
+      <div class="ignored code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -1663,7 +1699,7 @@ type        : 'UI Behavior'
     <div class="optional example">
       <h4 class="ui header">Setting Site Defaults</h4>
       <p>You can specify site wide validation settings by modifying <code>$.fn.form.settings.defaults</code> that will apply on any form validation if the field appears in the form</b>.
-      <div class="code">
+      <div class="code" data-type="javascript">
       $.fn.form.settings.defaults = {
         email: {
           identifier : 'email',
@@ -1781,7 +1817,7 @@ type        : 'UI Behavior'
     <div class="dog example">
       <h4 class="ui header">Creating Custom Validation</h4>
       <p>You can use multiple arbitrary rules to validate a form</p>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
       $('.ui.form')
         .form({
           fields: {
@@ -1789,7 +1825,7 @@ type        : 'UI Behavior'
               identifier: 'dog',
               rules: [
                 {
-                  type: 'empty',
+                  type: 'notEmpty',
                   prompt: 'You must have a dog to add'
                 },
                 {
@@ -1823,17 +1859,17 @@ type        : 'UI Behavior'
     <div class="calendar example">
       <h4 class="ui header">Handling dates from calendars</h4>
       <p>Calendar fields are automatically validated, but you might want to grab the value as a Date object, or as its input, or maybe format it to exactly fit your needs.</p>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
         $('.ui.form').form({
           dateHandling: 'date'
         });
       </div>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
         $('.ui.form').form({
           dateHandling: 'input'
         });
       </div>
-      <div class="ignore code">
+      <div class="ignore code" data-type="javascript">
         $('.ui.form').form({
           dateHandling: 'formatter'
         });
@@ -1874,7 +1910,7 @@ type        : 'UI Behavior'
       </form>
     </div>
 
-    <div class="dirty example">
+    <div class="dirty example" data-since="2.7.5">
       <h4 class="ui header">Dirty / Clean state</h4>
       <p>
         When initialized, form has a <em>clean</em> state that record all field values. Once at least one field is modified, form enter in <em>dirty</em> state, that can be caught through the <code>onDirty</code> event.
@@ -1947,7 +1983,7 @@ type        : 'UI Behavior'
 
     <table class="ui definition celled table">
       <tr>
-        <td class="four wide">submit</td>
+        <td class="five wide">submit</td>
         <td>Submits selected form</td>
       </tr>
       <tr>
@@ -1955,20 +1991,20 @@ type        : 'UI Behavior'
         <td>Returns true/false whether a form passes its validation rules</td>
       </tr>
       <tr>
-        <td>add rule(field, rules)<div class="ui label">New in 2.2.11</div></td>
-        <td>Adds rule to existing rules for field, also aliased as <code>add field</code></td>
+        <td>add rule(field, rules)</td>
+        <td data-since="2.2.11">Adds rule to existing rules for field, also aliased as <code>add field</code></td>
       </tr>
       <tr>
-        <td>add fields(fields) <div class="ui label">New in 2.2.11</div></td>
-        <td>Adds fields object to existing fields</td>
+        <td>add fields(fields)</div></td>
+        <td data-since="2.2.11">Adds fields object to existing fields</td>
       </tr>
       <tr>
-        <td>remove rule(field, rules)<div class="ui label">New in 2.2.11</div></td>
-        <td>Removes specific rule from field leaving other rules</td>
+        <td>remove rule(field, rules)</td>
+        <td data-since="2.2.11">Removes specific rule from field leaving other rules</td>
       </tr>
       <tr>
-        <td>remove field(field)<div class="ui label">New in 2.2.11</div></td>
-        <td>Remove all validation for a field</td>
+        <td>remove field(field)</td>
+        <td data-since="2.2.11">Remove all validation for a field</td>
       </tr>
       <tr>
         <td>is valid(fieldName, showErrors)</td>
@@ -1983,16 +2019,16 @@ type        : 'UI Behavior'
         <td>Validates field, updates UI, and calls onSuccess or onFailure</td>
       </tr>
       <tr>
-        <td>get field(identifier)</td>
-        <td>Returns element with matching name, id, or data-validate metadata to identifier</td>
+        <td>get field(identifier, strict, ignoreMissing)</td>
+        <td>Returns element with matching name, id, or data-validate metadata to identifier. When <code>strict</code> is true and field is not found, it returns an empty jquery Object, otherwise a fallback jquery input element. Does not throw an error when field is not found and <code>ignoreMissing</code> is set to true </td>
       </tr>
       <tr>
         <td>get value(identifier)</td>
         <td>Returns value of element with id</td>
       </tr>
       <tr>
-        <td>get values(identifiers)</td>
-        <td>Returns object of element values that match array of identifiers. If no IDS are passed will return all fields</td>
+        <td>get values([identifiers])</td>
+        <td>Returns object of element values that match array of string identifiers. If no IDs are passed will return all fields</td>
       </tr>
       <tr>
         <td>set value(identifier, value)</td>
@@ -2007,20 +2043,20 @@ type        : 'UI Behavior'
         <td>Returns validation rules for a given jQuery-referenced input field</td>
       </tr>
       <tr>
-        <td>has field(identifier)</td>
-        <td>Returns whether a field exists</td>
+        <td>has field(identifier, ignoreMissing)</td>
+        <td>Returns whether a field exists. Does not throw an error when field is not found and <code>ignoreMissing</code> is set to true</td>
       </tr>
       <tr>
-        <td>add errors(errors)</td>
-        <td>Manually add errors to form, given an array errors</td>
+        <td>add errors(error)<br>add errors([errors])<br>add errors({identifier:error})<br>add errors({identifier:[errors]})</td>
+        <td>Manually add errors to form, given an array of string errors or an object using keys as field identifier each containing an error string/array of strings value. Such object will automatically add the field label infront of the error message or, if <code>inline:true</code>, will display the inline prompt to the related field. </td>
       </tr>
       <tr>
         <td>remove errors</td>
         <td>Removes all current errors from the error message box</td>
       </tr>
       <tr>
-        <td>add prompt(identifier, errors)</td>
-        <td>Adds a custom user prompt for a given element with identifier</td>
+        <td>add prompt(identifier, error)<br>add prompt(identifier, [errors])</td>
+        <td>Adds a custom user prompt for a given element with identifier displaying a given string or an array of strings as a <a href="/elements/list.html#bulleted">bulleted list</a></td>
       </tr>
       <tr>
         <td>clear</td>
@@ -2044,11 +2080,15 @@ type        : 'UI Behavior'
       </tr>
       <tr>
         <td>set auto check</td>
-        <td>Automatically adds the "empty" rule or automatically checks a checkbox for all fields with classname or attribute <code>required</code></td>
+        <td>Automatically adds the "notEmpty" rule or automatically checks a checkbox for all fields with classname or attribute <code>required</code></td>
       </tr>
       <tr>
-        <td>set optional(identifier, bool = true)<div class="ui label">New in 2.8.8</div></td>
-        <td>Set or unset matching fields as optional</td>
+        <td>set optional(identifier, bool = true)</td>
+        <td data-since="2.8.8">Set or unset matching fields as optional</td>
+      </tr>
+      <tr>
+        <td>destroy</td>
+        <td>Destroys instance and removes all events</td>
       </tr>
     </table>
 
@@ -2093,9 +2133,9 @@ type        : 'UI Behavior'
             <td>Adds inline error on field validation error</td>
           </tr>
           <tr>
-            <td>shouldTrim <div class="ui label">New in 2.4.0</div></td>
+            <td>shouldTrim</td>
             <td>true</td>
-            <td>Whether or not the form should trim the value before validating</td>
+            <td data-since="2.4.0">Whether or not the form should trim the value before validating</td>
           </tr>
           <tr>
             <td>dateHandling</td>
@@ -2111,7 +2151,7 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>duration</td>
-            <td>150</td>
+            <td>200</td>
             <td>Animation speed for inline prompt</td>
           </tr>
           <tr>
@@ -2122,12 +2162,22 @@ type        : 'UI Behavior'
           <tr>
             <td>autoCheckRequired</td>
             <td>false</td>
-            <td>Whether fields with classname or attribute <code>required</code> should automatically add the "empty" rule or automatically checks checkbox fields</td>
+            <td>Whether fields with classname or attribute <code>required</code> should automatically add the "notEmpty" rule or automatically checks checkbox fields</td>
           </tr>
           <tr>
-            <td>errorFocus<div class="ui label">New in 2.8.8</div></td>
+            <td>errorFocus</td>
             <td>true</td>
-            <td>Whether, on an invalid form validation, it should automatically focus either the first error field (<code>true</code>) or a specific dom node (Use a unique selector string such as <code>.ui.error.message</code> or <code>#myelement</code>) or nothing (<code>false</code>)</td>
+            <td data-since="2.8.8">Whether, on an invalid form validation, it should automatically focus either the first error field (<code>true</code>) or a specific dom node (Use a unique selector string such as <code>.ui.error.message</code> or <code>#myelement</code>) or nothing (<code>false</code>)</td>
+          </tr>
+          <tr>
+            <td>errorLimit</td>
+            <td>0</td>
+            <td data-since="2.9.3">Number of max shown errors per field if a field got multiple rules (0=unlimited). This can also be provided for each field individually inside the <code>fields</code> setting. See the <a href="#specifying-validation-rules">Full Validation Settings Example</a></td>
+          </tr>
+          <tr>
+            <td>noNativeValidation</td>
+            <td>false</td>
+            <td data-since="2.9.4">Whether native browser form validation messages should be ignored for the whole form. This can also be provided for each field individually inside the <code>fields</code> setting. See the <a href="#specifying-validation-rules">Full Validation Settings Example</a></td>
           </tr>
         </tbody>
       </table>
@@ -2148,7 +2198,7 @@ type        : 'UI Behavior'
           <tr>
             <td>text</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
               text: {
                 unspecifiedRule  : 'Please enter a valid value',
                 unspecifiedField : 'This field',
@@ -2163,9 +2213,12 @@ type        : 'UI Behavior'
           <tr>
             <td>prompt</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
               prompt: {
-                empty                : '{name} must have a value',
+                range                : '{name} must be in a range from {min} to {max}',
+                maxValue             : '{name} must have a maximum value of {ruleValue}',
+                minValue             : '{name} must have a minimum value of {ruleValue}',
+                notEmpty             : '{name} must have a value',
                 checked              : '{name} must be checked',
                 email                : '{name} must be a valid e-mail',
                 url                  : '{name} must be a valid url',
@@ -2179,17 +2232,19 @@ type        : 'UI Behavior'
                 notExactly           : '{name} cannot be set to exactly \'{ruleValue}\'',
                 contain              : '{name} cannot contain \'{ruleValue}\'',
                 containExactly       : '{name} cannot contain exactly \'{ruleValue}\'',
-                doesntContain        : '{name} must contain  \'{ruleValue}\'',
+                doesntContain        : '{name} must contain \'{ruleValue}\'',
                 doesntContainExactly : '{name} must contain exactly \'{ruleValue}\'',
                 minLength            : '{name} must be at least {ruleValue} characters',
                 exactLength          : '{name} must be exactly {ruleValue} characters',
                 maxLength            : '{name} cannot be longer than {ruleValue} characters',
+                size                 : '{name} must have a length between {min} and {max} characters',
                 match                : '{name} must match {ruleValue} field',
                 different            : '{name} must have a different value than {ruleValue} field',
                 creditCard           : '{name} must be a valid credit card number',
                 minCount             : '{name} must have at least {ruleValue} choices',
                 exactCount           : '{name} must have exactly {ruleValue} choices',
-                maxCount             : '{name} must have {ruleValue} or less choices'
+                maxCount             : '{name} must have {ruleValue} or less choices',
+                addErrors            : '{name}: {error}',
               }
               </div>
             </td>
@@ -2213,7 +2268,7 @@ type        : 'UI Behavior'
           <tr>
             <td>formatter</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
               formatter: {
                 date: function(date) {
                   return Intl.DateTimeFormat('en-GB').format(date);
@@ -2347,11 +2402,12 @@ type        : 'UI Behavior'
           <tr>
             <td>selector</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
         selector : {
           checkbox  : 'input[type="checkbox"], input[type="radio"]',
           clear     : '.clear',
-          field     : 'input, textarea, select',
+          field     : 'input:not(.search):not([type="reset"]):not([type="button"]):not([type="submit"]), textarea, select',
+          file      : 'input[type="file"]',
           group     : '.field',
           input     : 'input',
           message   : '.error.message',
@@ -2370,7 +2426,7 @@ type        : 'UI Behavior'
           <tr>
             <td>metadata</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
 
         metadata : {
           defaultValue : 'default',
@@ -2386,12 +2442,15 @@ type        : 'UI Behavior'
           <tr>
             <td>className</td>
             <td>
-              <div class="code">
+              <div class="code" data-type="javascript">
         className : {
+          initial: 'initial',
           error   : 'error',
           label   : 'ui basic red pointing prompt label',
           pressed : 'down',
-          success : 'success'
+          success : 'success',
+          required: 'required',
+          disabled: 'disabled'
         }
               </div>
             </td>
@@ -2420,30 +2479,30 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>debug</td>
-            <td>False</td>
+            <td>false</td>
             <td>Provides standard debug output to console</td>
           </tr>
           <tr>
             <td>performance</td>
-            <td>True</td>
+            <td>true</td>
             <td>Provides standard debug output to console</td>
           </tr>
           <tr>
             <td>verbose</td>
-            <td>False</td>
+            <td>false</td>
             <td>Provides ancillary debug output to console</td>
           </tr>
           <tr>
             <td>errors</td>
             <td colspan="2">
-              <div class="code">
+              <div class="code" data-type="javascript">
         errors   : {
-          identifier : 'You must specify a string identifier for each field',
-          method     : 'The method you called is not defined.',
-          noRule     : 'There is no rule matching the one you specified',
-          oldSyntax  : 'Starting in 2.0 forms now only take a single settings object. Validation settings converted to new syntax automatically.'
-          noField    : 'Field identifier {identifier} not found',
-          noElement  : 'This module requires ui {element}'
+          method        : 'The method you called is not defined.',
+          noRule        : 'There is no rule matching the one you specified',
+          oldSyntax     : 'Starting in 2.0 forms now only take a single settings object. Validation settings converted to new syntax automatically.'
+          noField       : 'Field identifier {identifier} not found',
+          noElement     : 'This module requires ui {element}',
+          noErrorMessage: 'No error message provided',
         }
               </div>
             </td>

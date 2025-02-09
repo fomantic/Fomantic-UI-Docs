@@ -14,7 +14,7 @@ themes      : ['default']
 ---
 
 <%- @partial('header') %>
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/divider.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/divider.less" />
 
 <div class="main ui container">
 
@@ -110,7 +110,7 @@ themes      : ['default']
       <div class="ui horizontal divider">
         Or
       </div>
-      <div class="ui teal labeled icon button">
+      <div class="ui green labeled icon button">
         Create New Order
         <i class="add icon"></i>
       </div>
@@ -148,7 +148,7 @@ themes      : ['default']
     </table>
   </div>
 
-  <div class="example" data-class="left aligned,right aligned">
+  <div class="example" data-class="!left aligned,!right aligned">
     <h4 class="ui header">Horizontal Alignment</h4>
     <p>A horizontal divider can be aligned</p>
 
@@ -221,6 +221,18 @@ themes      : ['default']
       <div class="ui clearing divider"></div>
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
     </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Size</h4>
+    <p>A divider text can vary in size</p>
+    <div class="ui mini horizontal divider">Mini</div>
+    <div class="ui tiny horizontal divider">Tiny</div>
+    <div class="ui small horizontal divider">Small</div>
+    <div class="ui large horizontal divider">Large</div>
+    <div class="ui big horizontal divider">Big</div>
+    <div class="ui huge horizontal divider">Huge</div>
+    <div class="ui massive horizontal divider">Massive</div>
   </div>
 
 </div>

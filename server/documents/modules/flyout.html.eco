@@ -13,11 +13,37 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/flyout.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/flyout.less" />
 <script src="/javascript/flyout.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
 <div class="main ui container">
+
+  <div class="ui longer test flyout">
+    <div class="ui header">Flyout Header</div>
+    <div class="scrolling content">
+        <p>This is an example of expanded content that will cause the flyout's content to scroll</p>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+    <div class="actions">
+      <div class="ui primary approve button">
+        Proceed
+        <i class="right chevron icon"></i>
+      </div>
+    </div>
+  </div>
 
   <div class="ui active tab" data-tab="definition">
 
@@ -50,7 +76,7 @@ themes      : ['Default']
           </div>
         </div>
       </div>
-      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.simple.flyout').flyout('toggle');">
+      <div class="code" data-demo="true" data-eval="$('.simple.flyout').flyout('toggle');">
       $('.ui.flyout')
         .flyout('toggle')
       ;
@@ -62,7 +88,7 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="no example" data-class="thin, very thin, wide">
+    <div class="no example" data-class="thin, !very thin, !very wide, wide">
       <h4 class="ui header">Width</h4>
       <p>A flyout can specify its width.</p>
       <div class="code" data-type="html">
@@ -74,7 +100,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="another no example">
+    <div class="another no example" data-class="!two wide, !five wide, !eight wide, !twelve wide">
       <p>Width can also be defined like the <a href="/collections/grid.html">ui grid</a> system.</p>
       <div class="code" data-type="html">
         <div class="ui two wide flyout"></div>
@@ -96,7 +122,7 @@ themes      : ['Default']
         <div class="ui top flyout"></div>
         <div class="ui bottom flyout"></div>
       </div>
-      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.position.flyout').flyout('toggle');">
+      <div class="code" data-demo="true" data-eval="$('.position.flyout').flyout('toggle');">
       $('.ui.flyout')
         .flyout('toggle')
       ;
@@ -106,10 +132,10 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="no example">
       <h4 class="ui header">Fullscreen</h4>
       <p>A flyout can take all the entire screen if needed.</p>
-      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.fullscreen.flyout').flyout('toggle');">
+      <div class="code" data-demo="true" data-eval="$('.fullscreen.flyout').flyout('toggle');">
         $('.ui.fullscreen.flyout')
           .flyout('toggle')
         ;
@@ -117,7 +143,27 @@ themes      : ['Default']
 
     </div>
 
-    <div class="no example">
+    <div class="no example" data-use-content="true">
+      <h4 class="ui header">
+        Scrolling Content
+      </h4>
+      <p>A flyout can have a scrolling content</p>
+      <div class="code" data-type="html" data-variation="scrolling">
+        <div class="ui flyout">
+          <div class="header">Header</div>
+          <div class="scrolling content">
+            <p>Very long content goes here</p>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-demo="true">
+      $('.ui.longer.flyout')
+        .flyout('show')
+      ;
+      </div>
+    </div>
+
+    <div class="no example" data-use-content="true">
       <h4 class="ui header">
           Center Aligned
       </h4>
@@ -141,7 +187,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-use-content="true">
       <h4 class="ui header">
           Left Actions
       </h4>
@@ -165,7 +211,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="no example">
+    <div class="no example" data-class="basic" data-use-content="true">
       <h4 class="ui header">
           Basic Header and Actions
       </h4>
@@ -240,7 +286,7 @@ themes      : ['Default']
           </div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       // using context
       $('.context.example .ui.flyout')
         .flyout({
@@ -495,6 +541,7 @@ themes      : ['Default']
     return {
       title: 'Greetings to ' + username + '!',
       content: '<span class="ui huge orange text">'+ username.toUpperCase() + '</span><br>is the best!',
+      closeIcon: true,
       class: 'inverted',
       classContent: 'centered'
     }
@@ -704,7 +751,6 @@ themes      : ['Default']
                 active     : 'active',
                 animating  : 'animating',
                 dimmed     : 'dimmed',
-                ios        : 'ios',
                 pushable   : 'pushable',
                 pushed     : 'pushed',
                 right      : 'right',
@@ -728,8 +774,6 @@ themes      : ['Default']
             <td colspan="2">
               <div class="code">
               regExp : {
-                ios          : /(iPad|iPhone|iPod)/g,
-                mobileChrome : /(CriOS)/g,
                 mobile       : /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/g
               }
               </div>

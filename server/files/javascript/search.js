@@ -283,7 +283,8 @@ semantic.search.ready = function() {
   $local
     .search({
       searchFields: ['title'],
-      source: content
+      source: content,
+      maxResults: 20
     })
   ;
 
@@ -296,7 +297,14 @@ semantic.search.ready = function() {
   ;
 
   $standard
-    .search()
+    .search({
+      fields: {
+        results : 'items',
+        title   : 'name',
+        url     : false,
+        description: false
+      }
+    })
   ;
 
   $category
@@ -312,7 +320,7 @@ semantic.search.ready = function() {
   $mapping
     .search({
       apiSettings: {
-        url: '//api.github.com/search/repositories?q={query}',
+        url: 'https://api.github.com/search/repositories?q={query}',
         cache: true
       },
       fields: {
@@ -374,7 +382,7 @@ semantic.search.ready = function() {
           });
           return response;
         },
-        url: '//api.github.com/search/repositories?q={query}'
+        url: 'https://api.github.com/search/repositories?q={query}'
       }
     })
   ;

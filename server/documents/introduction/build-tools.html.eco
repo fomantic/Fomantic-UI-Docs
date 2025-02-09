@@ -33,7 +33,7 @@ type        : 'Introduction'
     <p>Fomantic UI uses Gulp for several reasons:</p>
     <div class="ui large bulleted list">
       <div class="item">Process LESS files with <a href="/usage/theming.html">theming variables</a></div>
-      <div class="item">Add vendor prefixes for <a href="https://github.com/fomantic/Fomantic-UI/blob/master/tasks/config/project/tasks.js#L96">supported browsers</a> with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
+      <div class="item">Add vendor prefixes for <a href="https://github.com/fomantic/Fomantic-UI/blob/master/README.md#-browser-support">supported browsers</a> with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
       <div class="item">Watch file changes and rebuild the necessary files when adjusting themes</div>
       <div class="item">Automatically process asset paths, so that minified and concatenated releases can exist in different directories</div>
       <div class="item">Allow custom builds with only the required components for your site</div>
@@ -187,13 +187,22 @@ type        : 'Introduction'
     <h4>semantic.json</h4>
     <p>Build tool settings are stored in a special file called <code>semantic.json</code> It can be included in any folder that is in a parent folder of the fomantic install folder.</p>
     <p>If you used the npm or meteor, a <code>semantic.json</code> file is automatically generated for you in the root of your project. If you used a different package manager you can run <code>gulp install</code> to run the interactive installer.</p>
-    <div class="ignored code">
+    <div class="ignored code" data-type="json" data-title="semantic.json">
     {
       // base path added to all other paths specified in "paths"
       "base": "",
 
       // current version of Fomantic UI
       "version": "<%= @getVersion() %>",
+
+      // output fileName (without extension) for packaged files (.min, .css, .js will be added automatically)
+      "fileName": "semantic",
+
+      // Whether to include the version string to the released files. Default: false
+      "includeVersionInFileName": false,
+
+      // If includeVersionInFileName is true, this revision string will also be added to the name of the released file
+      "revision": "",
 
       "paths": {
 
@@ -298,8 +307,25 @@ type        : 'Introduction'
         "form",
         "modal",
         "step",
-        "emoji
+        "emoji"
       ],
+
+      // Use custom postcss/autoprefixer options object
+      "prefix": {},
+
+      // Use a custom Banner on each generated js/css file
+      "banner": "/* A custom central FUI Banner !!!\n Awesome Release! \n*/",
+
+      // strip all top headers from each component inside the concatenated, non-minified, semantic.css/js
+      "stripHeaders": true,
+
+      // Custom placeholder values inside banner
+      "header": {
+         "year": "ALWAYS 2099 :)",
+         "title": "Fomantic-UI Pro",
+         "repository": "Not yet available",
+         "url": "https://fomantic-ui.com/pro"
+      },
 
       // whether to include special project maintainer tasks
       "admin": false
@@ -308,10 +334,44 @@ type        : 'Introduction'
     </div>
   </div>
 
-  <div class="no example">
-    <h4>colors.less <div class="ui black label">New in 2.7.0</div></h4>
+  <div class="no example" data-since="2.8.1">
+    <h4>variation.variables</h4>
+    <p>You can disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size</p>
+    <p>Most of the components also have a separate variable to decide which components should be rendered for which colors of your global color palette of colors.less or which sizes should be rendered.</p>
+
+    <div class="code" data-type="less" data-title="src/themes/default/globals/variation.variables">
+    // The defaults enable everything
+    // In a custom theme you could only disable/adjust the variables you don't need in your own {component}.variables
+    @variationButtonTertiary: false;          // don't compile tertiary button styles
+    @variationIconColors: red, green, batman; // only compile red and green as icon color options
+    @variationImageSizes: small, huge;        // only compile small and huge image sizes
+    @variationSegmentColors: false;           // don't compile any segment color styles
+    @variationBreadcrumbSizes: false;         // don't compile any breadcrumb size styles
+    </div>
+  </div>
+
+  <div class="no example" data-since="2.7.0">
+    <h4>colors.less</h4>
     <p>You can modify/define the global color palette entirely by adjusting a single LESS Map <code>@colors</code> in a custom <code>colors.less</code> file.</p>
     <p>Each color consists of a predefined set of properties used in all components. You can define whatever color name you want.</p>
+    <div class="ui ignored info message">
+        If you only want to reduce the used colors from the default palette, you may only adjust the related colors-list variables inside <a href="#variationvariables"><code>variation.variables</code></a> instead of changing the colors.less file.
+        <div class="code" data-type="less">
+        // limit all components to yellow, purple and green
+        @variationAllColors: yellow, purple, green;
+        // purple buttons, red labels, green messages and no colors for all other components
+        @variationAllColors: false;
+        @variationButtonColors: purple;
+        @variationLabelColors: red;
+        @variationMessageColors: green;
+        </div>
+    </div>
+    <div class="ui ignored warning message">
+        If you change the whole available colors like in the example below, make sure you also adjust the related colors-list variables inside <a href="#variationvariables"><code>variation.variables</code></a> to avoid a build error.
+        <div class="code" data-type="less">
+            @variationAllComponents: batman, spiderman;
+        </div>
+    </div>
     <div class="code" data-type="less" data-title="src/themes/default/globals/colors.less">
 // This example would only provide two custom colors "batman", "spiderman"
 // Your custom compiled build will contain all colorable components
@@ -366,7 +426,7 @@ type        : 'Introduction'
     @formStates: {
       @excited: {
         color: #880000;
-        background: ffcccc;
+        background: #ffcccc;
         borderColor: @red;
         borderRadius: 10px;
         boxShadow: @inputErrorBoxShadow;
@@ -395,22 +455,6 @@ type        : 'Introduction'
   </div>
 
   <div class="no example">
-    <h4>variation.variables <div class="ui black label">New in 2.8.1</div></h4>
-    <p>You can disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size</p>
-    <p>Most of the components also have a separate variable to decide which components should be rendered for which colors of your global color palette of colors.less or which sizes should be rendered.</p>
-
-    <div class="code" data-type="less" data-title="src/themes/default/globals/variation.variables">
-    // The defaults enable everything
-    // In a custom theme you could only disable/adjust the variables you don't need in your own {component}.variables
-    @variationButtonTertiary: false;          // don't compile tertiary button styles
-    @variationIconColors: red, green, batman; // only compile red and green as icon color options
-    @variationImageSizes: small, huge;        // only compile small and huge image sizes
-    @variationSegmentColors: false;           // don't compile any segment color styles
-    @variationBreadcrumbSizes: false;         // don't compile any breadcrumb size styles
-    </div>
-  </div>
-
-  <div class="no example">
     <h4>Excluding components from main css/js file</h4>
     <p>By default, all components listed in semantic.json are added to semantic.css and semantic.js on build, but sometimes you don't need a component to be included on every page. To keep the file size of your main assets down, it's better to separate these components and reference them individually in your HTML.</p>
     <p>To make this work, add these components to your semantic.json as "individuals" (see above example). Then the css/js files will still be generated/updated as usual under dist/components.</p>
@@ -427,10 +471,9 @@ type        : 'Introduction'
     <h4>Importing Gulp Tasks</h4>
     <p>See our <a href="/introduction/advanced-usage.html">recipes section</a> for examples on how to import individual gulp tasks into your custom Gulpfile.</p>
   </div>
-  <div class="no example">
+  <div class="no example" data-since="2.2">
     <h4>
       Auto-Install & Continuous Integration
-      <div class="ui teal horizontal label">New in 2.2</div>
     </h4>
     <p>We've added a new setting to <code>semantic.json</code> in 2.2 to help make working with a CLI, or other automated deployments more streamlined.</p>
     <p>Specifying <code>autoInstall: true</code> in an environments <code>semantic.json</code> configuration will prevent any user prompting when running <code>npx gulp install</code> allowing for automated deployment.</p>

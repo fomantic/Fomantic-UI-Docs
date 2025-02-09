@@ -13,7 +13,7 @@ type        : 'UI Collection'
 themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 ---
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/menu.less" />
+<link rel="stylesheet/less" href="/src/definitions/collections/menu.less" />
 <script src="/javascript/menu.js"></script>
 
 <%- @partial('header') %>
@@ -265,8 +265,11 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another example">
+    <div class="ui ignored info message">
+        To make a vertical tabular menu appear seamless attached to the related segment, you should make use of <a href="/collections/grid.html#left--right-attached-column">left/right attached grid columns</a> and <a href="/elements/segment.html#seamless-attached">seamless attached segments</a>
+    </div>
     <div class="ui grid">
-      <div class="four wide column">
+      <div class="four wide left attached column">
         <div class="ui vertical fluid tabular menu">
           <a class="active item">
             Bio
@@ -282,8 +285,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
           </a>
         </div>
       </div>
-      <div class="twelve wide stretched column">
-        <div class="ui segment">
+      <div class="twelve wide stretched right attached column">
+        <div class="ui seamless right attached segment">
           This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
@@ -291,12 +294,12 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <div class="ui grid">
-      <div class="twelve wide stretched column">
-        <div class="ui segment">
+      <div class="twelve wide stretched left attached column">
+        <div class="ui seamless left attached segment">
           This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
-      <div class="four wide column">
+      <div class="four wide right attached column">
         <div class="ui vertical fluid right tabular menu">
           <a class="active item">
             Bio
@@ -739,12 +742,12 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="fixed example">
+  <div class="fixed example" data-class="!top fixed, !bottom fixed, !left fixed, !right fixed">
     <h4 class="ui header">Fixed</h4>
     <p>A menu can be fixed to a side of its context</p>
     <div class="ui ignored info message">These examples use a an <code>iframe</code>, to prevent content from sticking to the browser viewport.</div>
     <div class="ui ignored positive message">For more advanced behaviors consider using a <a href="/modules/sticky.html">sticky menu</a> or <a href="/behaviors/visibility.html#fixing-content-to-viewport">visibility APIs</a>.</div>
-    <iframe src="/iframe/fixed-menu.html"></iframe>
+    <iframe title="fixed menu" src="/iframe/fixed-menu.html"></iframe>
     <div class="existing code">
       <div class="ui top fixed menu">
         <div class="item">
@@ -767,7 +770,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another fixed example">
-    <iframe src="/iframe/fixed-vertical-menu.html"></iframe>
+    <iframe title="fixed vertical menu" src="/iframe/fixed-vertical-menu.html"></iframe>
     <div class="existing code">
       <div class="ui left fixed vertical menu">
         <div class="item">
@@ -877,7 +880,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>Additional colors can be specified.</p>
     <div class="ui menu">
@@ -1295,10 +1298,18 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-since="2.9.3" data-class="!equal width, three item">
     <h4 class="ui header">Evenly Divided</h4>
-    <p>A menu may divide its items evenly</p>
-    <div class="ui fluid three item menu">
+        <p>A menu may divide its items evenly by either using <code>equal width</code> ...</p>
+    <div class="ui equal width menu">
+      <a class="item">Buy</a>
+      <a class="item">Sell</a>
+      <a class="item">Rent</a>
+    </div>
+  </div>
+  <div class="another example">
+  <p>... or by declaring a fixed number of items like <code>three item menu</code>.</p>
+    <div class="ui three item menu">
       <a class="item">Buy</a>
       <a class="item">Sell</a>
       <a class="item">Rent</a>
@@ -1331,7 +1342,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-class="!top attached, !bottom attached">
     <h4 class="ui header">Attached</h4>
     <p>A menu may be attached to other content segments</p>
     <div class="ui top attached tabular menu">
@@ -1512,7 +1523,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <p>A vertical menu can also vary in size</p>
     <div class="ui mini vertical menu">
       <a class="active item">
-        <div class="ui teal label">1</div>
+        <div class="ui green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1534,7 +1545,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui small vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1556,7 +1567,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui large vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1578,7 +1589,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui massive vertical menu">
       <a class="active item">
-        <div class="ui small teal label">1</div>
+        <div class="ui small green label">1</div>
         Inbox
       </a>
       <a class="item">
@@ -1666,5 +1677,77 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Centered Fluid</h4>
+    <p>A menu can be shown centered and fluid at the same time.</p>
+    <div class="ui centered fluid menu">
+      <a class="bug popup icon item">
+        <i class="edit icon"></i>
+      </a>
+      <a class="bug popup icon item">
+        <i class="bug icon"></i>
+      </a>
+      <a class="github popup icon item">
+        <i class="alternate github icon"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Wrapping</h4>
+    <p>Menu items can automatically wrap on responsive layouts</p>
+    <div class="ui inverted wrapped green wrapping menu">
+      <a class="active item">One</a>
+      <a class="item">Two</a>
+      <a class="item">Three</a>
+      <a class="item">Four</a>
+      <a class="item">Five</a>
+      <a class="item">Six</a>
+      <a class="item">Seven</a>
+      <a class="item">Eight</a>
+      <a class="item">Nine</a>
+      <a class="item">Ten</a>
+      <a class="item">Eleven</a>
+      <a class="item">Twelve</a>
+      <a class="item">Thirteen</a>
+      <a class="item">Fourteen</a>
+      <a class="item">Fifteen</a>
+      <a class="item">Sixteen</a>
+      <a class="item">Seventeen</a>
+      <a class="item">Eighteen</a>
+      <a class="item">Nineteen</a>
+      <a class="item">Twenty</a>
+    </div>
+    <div class="ui ignored info message">
+        There exists an optional <code>wrapped</code> helper class which should be set to the menu when it's known if menu items are actually wrapped, which will adjust some border-radius. As it is not possible to detect a wrapping child automatically via pure CSS, you should use that helper class whenever appropriate.
+    </div>
+  </div>
+
+  <div class="example" data-since="2.9.2">
+    <h4 class="ui header">Centered Fluid Wrapping</h4>
+    <p>By combining centered, fluid and wrapping you could create a menu similar to <a href="/elements/button.html#wrapping-buttons">Wrapping button groups</a></p>
+    <div class="ui inverted wrapped blue centered fluid wrapping menu">
+      <a class="active item">One</a>
+      <a class="item">Two</a>
+      <a class="item">Three</a>
+      <a class="item">Four</a>
+      <a class="item">Five</a>
+      <a class="item">Six</a>
+      <a class="item">Seven</a>
+      <a class="item">Eight</a>
+      <a class="item">Nine</a>
+      <a class="item">Ten</a>
+      <a class="item">Eleven</a>
+      <a class="item">Twelve</a>
+      <a class="item">Thirteen</a>
+      <a class="item">Fourteen</a>
+      <a class="item">Fifteen</a>
+      <a class="item">Sixteen</a>
+      <a class="item">Seventeen</a>
+      <a class="item">Eighteen</a>
+      <a class="item">Nineteen</a>
+      <a class="item">Twenty</a>
+    </div>
+  </div>
 
 </div>

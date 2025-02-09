@@ -22,7 +22,7 @@ semantic.header.ready = function() {
           fontSize   = parseInt( $container.css('font-size'), 10)
         ;
         $container
-          .css('font-size', fontSize + 1)
+          .css('font-size', (fontSize + 1) + 'px')
         ;
       },
       decrease: function() {
@@ -31,7 +31,7 @@ semantic.header.ready = function() {
           fontSize   = parseInt( $container.css('font-size'), 10)
         ;
         $container
-          .css('font-size', fontSize - 1)
+          .css('font-size', (fontSize - 1) + 'px')
         ;
       }
     }

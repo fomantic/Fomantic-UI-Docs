@@ -1,1 +1,5 @@
-<link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css?v=<%= @getVersion() %>">
+<% if 'development' in @getEnvironments(): %>
+<link rel="stylesheet" class="ui" media="screen,print" href="/dist/semantic.css?v=<%= @getVersion() %>">
+<% else: %>
+<link rel="stylesheet" class="ui" media="screen,print" href="/dist/semantic.min.css?v=<%= @getVersion() %>">
+<% end: %>

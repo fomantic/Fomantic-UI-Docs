@@ -15,7 +15,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
 
 <%- @partial('header') %>
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/views/card.less" />
+<link rel="stylesheet/less" href="/src/definitions/views/card.less" />
 <script src="/javascript/card.js"></script>
 
 <div class="main ui container">
@@ -200,7 +200,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
 
   <h2 class="ui dividing header">Content</h2>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Content Block</h4>
     <p>A card can contain blocks of content</p>
     <div class="ui card">
@@ -262,7 +262,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
   <div class="another example">
-    <div class="evaluated code" data-type="javascript">
+    <div class="evaluated code">
     $('.special.cards .image').dimmer({
     // As hover is not working on mobile, you might use click on those devices as fallback
       on: 'ontouchstart' in document.documentElement ? 'click' : 'hover'
@@ -320,7 +320,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Header</h4>
     <p>A card can contain a header</p>
     <div class="ui cards">
@@ -354,7 +354,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="meta" data-use-content="true">
     <h4 class="ui header">Metadata</h4>
     <p>A card can contain content metadata</p>
 
@@ -434,7 +434,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="star,like" data-use-content="true">
     <h4 class="ui header">Approval</h4>
     <p>A card can contain a like or star action.</p>
     <div class="ui card">
@@ -459,7 +459,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Description</h4>
     <p>A card can contain a description with one or more paragraphs</p>
     <div class="ui card">
@@ -474,7 +474,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Extra Content</h4>
     <p>A card can contain extra content meant to be formatted separately from the main content</p>
     <div class="ui card">
@@ -496,8 +496,8 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
 
   <h2 class="ui dividing header">States</h2>
 
-  <div class="example">
-    <h4 class="ui header">Disabled <span class="ui black label">New in 2.8.8</span></h4>
+  <div class="example" data-since="2.8.8">
+    <h4 class="ui header">Disabled</h4>
     <p>A card may show its content is disabled</p>
     <div class="ui disabled card">
         <div class="content">
@@ -517,8 +517,8 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         </div>
     </div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Loading <span class="ui black label">New in 2.8.8</span></h4>
+  <div class="example" data-since="2.8.8">
+    <h4 class="ui header">Loading</h4>
     <p>A card may show its content is being loaded</p>
     <div class="ui loading card">
         <div class="content">
@@ -760,7 +760,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!right floated,!left floated,floated" data-use-content="true">
     <h4 class="ui header">Floated Content</h4>
     <p>Any content element can be floated left or right</p>
     <div class="ui ignored info message">
@@ -786,7 +786,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="!center aligned,!left aligned,!right aligned" data-use-content="true">
     <h4 class="ui header">Text Alignment</h4>
     <p>Any element inside a card can have its text alignment specified</p>
     <div class="ui ignored info message">
@@ -808,7 +808,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-since="2.5">
     <h4 class="ui header">Inverted</h4>
     <p>Card's colors can be inverted</p>
     <div class="ui inverted segment">
@@ -886,7 +886,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="colors">
     <h4 class="ui header">Colored</h4>
     <p>A card can specify a color</p>
     <div class="ui four cards">
@@ -967,8 +967,8 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
       </a>
     </div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Basic <div class="ui small black label">New in 2.9.0</div></h4>
+  <div class="example" data-since="2.9.0">
+    <h4 class="ui header">Basic</h4>
     <p>A basic card does not have a border and also supports full color background</p>
     <div class="ui four basic cards">
       <a class="primary card">
@@ -1203,4 +1203,127 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Size</h4>
+    <p>A card text can vary in size</p>
+    <div class="ui three cards">
+        <div class="ui mini card">
+          <div class="content">
+            <div class="header">Mini Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a mini card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+        <div class="ui tiny card">
+          <div class="content">
+            <div class="header">Tiny Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a tiny card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+        <div class="ui small card">
+          <div class="content">
+            <div class="header">Small Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a small card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="ui two cards">
+        <div class="ui large card">
+          <div class="content">
+            <div class="header">Large Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a large card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+        <div class="ui big card">
+          <div class="content">
+            <div class="header">Big Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a big card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="ui two cards">
+        <div class="ui huge card">
+          <div class="content">
+            <div class="header">Huge Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a huge card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+        <div class="ui massive card">
+          <div class="content">
+            <div class="header">Massive Card</div>
+            <div class="meta">
+              <span class="category">Variant</span>
+            </div>
+            <div class="description">
+              This is a massive card
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="right floated author">
+               Fomantic-UI
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
 </div>

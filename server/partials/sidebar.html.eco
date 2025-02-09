@@ -1,4 +1,4 @@
-<div class="ui vertical inverted sidebar menu" id="toc">
+<div class="ui huge vertical inverted sidebar menu" id="toc">
   <%- @partial('site-menu') %>
 </div>
 

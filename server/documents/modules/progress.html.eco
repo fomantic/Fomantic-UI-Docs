@@ -12,7 +12,7 @@ type        : 'UI Module'
 
 themes      : ['Default', 'Classic', 'Basic', 'Striped']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/progress.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/progress.less" />
 <script src="/javascript/progress.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
@@ -23,7 +23,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
 
     <h2 class="ui dividing header">Types</h2>
 
-    <div class="example">
+    <div class="example" data-class="progress">
       <h4 class="ui header">Standard</h4>
       <p>A standard progress bar</p>
       <div class="ui progress">
@@ -64,7 +64,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Progress</h4>
       <p>A progress bar can contain a text value indicating current progress</p>
       <div class="ui progress">
@@ -74,8 +74,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Centered Progress Text<span class="ui small black label">New in 2.7.6</span></h4>
+    <div class="example" data-since="2.7.6" data-class="centered progress" data-use-content="true">
+      <h4 class="ui header">Centered Progress Text</h4>
       <p>The text inside a progress can be centered</p>
       <div class="ui progress">
         <div class="bar">
@@ -84,7 +84,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Label</h4>
       <p>A progress element can contain a label</p>
       <div class="ui progress">
@@ -95,7 +95,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-since="2.7.3" data-class="multiple">
       <h4 class="ui header">Multiple Bars</h4>
       <p>A progress element can have multiple bars.</p>
       <div class="ui multiple progress" data-percent="50,0,10,20">
@@ -106,7 +106,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="multiple">
       <h4 class="ui header">Multiple Bars with Text (Proportion)</h4>
       <p>A progress bar can contain text values indicating current proportion.</p>
       <div class="ui multiple progress" data-total="200" data-value="60,30,20,30">
@@ -123,6 +123,14 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="progress"></div>
         </div>
         <div class="label">Tickets</div>
+      </div>
+      <div class="code" data-type="javascript">
+        $('.ui.multiple.progress').progress({
+          text: {
+            percent : '{bar} {percent}%',
+            bars: ['WIP', 'Review', 'Hold', 'Merged']
+          }
+        });
       </div>
     </div>
 
@@ -181,8 +189,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Indeterminate<span class="ui small black label">New in 2.7.6</span></h4>
+    <div class="example" data-since="2.7.6" data-class="filling indeterminate, swinging indeterminate, sliding indeterminate">
+      <h4 class="ui header">Indeterminate</h4>
       <p>A progress bar can be shown in different indeterminate states.</p>
       <div class="ui warning ignored message">
         The <code>indeterminate</code> progress state is not supposed to be used in combination with <code>multiple</code> progress bars
@@ -208,7 +216,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           </div>
       </div>
     </div>
-    <div class="another example">
+    <div class="example" data-class="slow, fast">
       <p>Indeterminate progress can also vary in speed</p>
       <div class="ui blue slow indeterminate progress">
           <div class="bar">
@@ -224,8 +232,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="example">
-      <h4 class="ui header">Right aligned <div class="ui black label">New in 2.8.8</div></h4>
+    <div class="example" data-since="2.8.8">
+      <h4 class="ui header">Right aligned</h4>
       <p>A progress bar can be right aligned growing to the left</p>
       <div class="ui right aligned active progress">
         <div class="bar">
@@ -266,6 +274,16 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <div class="ignored">
         <div class="ui icon buttons">
           <div class="increment ui basic green button icon"><i class="plus icon"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-since="2.9.4">
+      <h4 class="ui header">Basic</h4>
+      <p>A basic progress has its remaining background bar removed</p>
+      <div class="ui basic progress">
+        <div class="bar">
+          <div class="progress"></div>
         </div>
       </div>
     </div>
@@ -489,7 +507,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">With metadata</h4>
       <p>A progress bar can be initialized with metadata</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example1').progress();
       </div>
       <div class="code" data-type="html" data-preview="true">
@@ -502,7 +520,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">With Javascript</h4>
       <p>A progress bar can be initialized with a Javascript settings object</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example2').progress({
           percent: 22
         });
@@ -521,7 +539,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <h4 class="ui header">Adding a Total Value</h4>
       <p>A progress bar can keep track of the current value as a ratio of a total value. This is useful for tracking the progress of a series of events with a known quantity, for example "uploading 1 of 20" photos.</p>
       <p>Each call to increment will increase the value by 1, or the value specified as the second parameter</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example3')
           .progress('increment')
         ;
@@ -534,7 +552,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Adding Photos</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('#example3')
           .progress({
             total: 3
@@ -548,7 +566,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <p>A progress bar can keep track of the current value as a ratio of a total value. This is useful for tracking the progress of a series of events with a known quantity, for example "uploading 1 of 20" photos.</p>
       <p>Each call to increment will increase the value by 1, or the value specified as the second parameter</p>
       <p>In addition you can pass in templates text for each state available to your progress bar which will automatically be updated when your progress bar reaches that state</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example4')
           .progress('increment')
         ;
@@ -585,7 +603,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <td>Distance to total, or % progress left</td>
         </tr>
       </table>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example5')
           .progress('increment')
         ;
@@ -596,7 +614,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Adding Photos</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('#example5')
           .progress({
             text: {
@@ -611,7 +629,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">Translation</h4>
       <p>You can also adjust text labels to help strings appear translated</p>
-      <div class="code" data-type="javascript" data-demo="true">
+      <div class="code" data-demo="true">
         $('#example6')
           .progress('increment')
         ;
@@ -624,7 +642,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Carga de archivos</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('#example6')
           .progress({
             label: 'ratio',
@@ -640,7 +658,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .progress('behavior name', argumentOne, argumentTwo)
     ;
@@ -804,7 +822,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Waiting for you to press button</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.rapid.example .ui.button')
           .on('click', function() {
             var
@@ -850,7 +868,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Uploading File</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript" data-demo="true">
+      <div class="evaluated code" data-demo="true">
         $('.upload.example .ui.button')
           .api({
             debug: true,
@@ -910,14 +928,17 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <td>Can be set to either to display progress as <b>percent</b> or <b>ratio</b>. Matches up to corresponding text template with the same name.</td>
         </tr>
         <tr>
+          <td>duration</td>
+          <td>300</td>
+          <td>Milliseconds the bar gets animated to the next value</td>
+        </tr>
+        <tr>
           <td>random</td>
           <td>
-          <div class="code">
-            className : {
-              active  : 'active',
-              error   : 'error',
-              success : 'success',
-              warning : 'warning'
+          <div class="code" data-type="javascript">
+            {
+              min: 2,
+              max: 5
             }
           </div>
           </td>
@@ -1011,7 +1032,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>text</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             text : {
               active  : false,
               error   : false,
@@ -1034,7 +1055,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>regExp</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             regExp: {
               variable: /\{\$*[A-z0-9]+\}/g
             }
@@ -1045,7 +1066,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             selector : {
               bar      : '> .bar',
               label    : '> .label',
@@ -1058,7 +1079,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata: {
               percent : 'percent',
               total   : 'total',
@@ -1071,7 +1092,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
             className : {
               active  : 'active',
               error   : 'error',
@@ -1129,7 +1150,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error    : {
               method     : 'The method you called is not defined.',
               nonNumeric : 'Progress value is non numeric',

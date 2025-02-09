@@ -246,7 +246,7 @@ semantic.emoji.ready = function() {
   }, {
     countrycode: 'cz',
     name: 'Czechia',
-    alias: ''
+    alias: 'czech_republic'
   }, {
     countrycode: 'dk',
     name: 'Denmark',
@@ -525,8 +525,8 @@ semantic.emoji.ready = function() {
     alias: ''
   }, {
     countrycode: 'mk',
-    name: 'Macedonia',
-    alias: ''
+    name: 'Republic of North Macedonia',
+    alias: 'north macedonia'
   }, {
     countrycode: 'mg',
     name: 'Madagascar',

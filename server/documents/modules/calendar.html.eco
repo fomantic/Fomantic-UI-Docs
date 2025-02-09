@@ -11,7 +11,9 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/calendar.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/calendar.less" />
+<link rel="stylesheet" class="ui" href="/stylesheets/calendar.css">
+
 <script src="/javascript/calendar.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
@@ -25,12 +27,12 @@ themes      : ['Default']
       <h4 class="ui header">Calendar</h4>
       <p>A standard calendar</p>
       <div class="ui calendar" id="standard_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date/Time">
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('#standard_calendar')
         .calendar()
       ;
@@ -80,7 +82,7 @@ themes      : ['Default']
       <p>An inline calendar isn't shown in a popup</p>
       <div class="ui calendar" id="inline_calendar">
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('#inline_calendar')
         .calendar()
       ;
@@ -88,11 +90,36 @@ themes      : ['Default']
     </div>
 
    <h2 class="ui dividing header">Variations</h2>
+    <div class="example" data-since="2.9.3">
+      <h4 class="ui header">Size</h4>
+      <p>A calendar can have different sizes</p>
+      <div class="ui tiny calendar" id="tiny_calendar">
+        <div class="ui fluid input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+      <br />
+      <div class="ui medium calendar" id="medium_calendar">
+        <div class="ui fluid input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+      <br />
+      <div class="ui big calendar" id="big_calendar">
+        <div class="ui fluid input left icon">
+          <i class="calendar icon"></i>
+          <input type="text" placeholder="Date/Time">
+        </div>
+      </div>
+    </div>
+
     <div class="example">
       <h4 class="ui header">Inverted</h4>
       <p>A calendar can have its colors inverted</p>
       <div class="ui inverted calendar" id="inverted_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date/Time">
         </div>
@@ -120,7 +147,7 @@ themes      : ['Default']
     </div>
 
     <h2 class="ui dividing header">States</h2>
-    <div class="example">
+    <div class="example" data-since="2.6.3">
       <h4 class="ui header">Disabled</h4>
       <p>A disabled calendar does not allow user interaction</p>
       <div class="ui disabled calendar">
@@ -172,8 +199,8 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="another example">
-      <p>You can also set the type or date using HTML markup <span class="ui black label">New in 2.8.0</span></p>
+    <div class="another example" data-since="2.8.0">
+      <p>You can also set the type or date using HTML markup</p>
       <div class="ui ignored info message">This could be useful when used with form validation without the need to instantiate the calendar via javascript before. Form validation recognizes a calendar component within the form and instantiates it automatically by using existing metadata values.</div>
       <div class="ui calendar" id="type_calendar" data-type="date" data-date="2019-12-24">
         <div class="ui input left icon">
@@ -264,7 +291,7 @@ themes      : ['Default']
       <h4 class="ui header">Min/max date</h4>
       <p>You can set a minimum and a maximum selection date</p>
       <div class="ui calendar" id="minmax_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -283,7 +310,7 @@ themes      : ['Default']
     <div class="another example">
       <p>You can also set a minimum and a maximum selection date using HTML markup</p>
       <div class="ui calendar" id="minmax_calendar_2" data-min-date="2018/10/05 08:00:00" data-max-date="2018/10/19 18:00:00">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -309,12 +336,18 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Custom format <div class="ui small black label">New in 2.9.0</div></h4>
+    <div class="example" data-since="2.9.0">
+      <h4 class="ui header">Custom format</h4>
       <p>You can entirely change the date format by using a token string formatter.</p>
-      <p>
+      <div class="ui ignored info message">
+        <ul class="ui list">
+          <li>The format is applied to several date outputs mentioned as tokens in the <a href="#/settings">formatter settings</a>.</li>
+          <li>These same tokens can also be used to format the date gotten through <a href="#/behaviors">behaviors</a>, like 'get date'.</li>
+        </ul>
+      </div>
+      <p class="ignored">
         Tokens are placeholder characters for a specific output format. Fomantic-UI supports the following tokens:
-        <table class="ui celled table">
+        <table class="ui ignored celled table">
           <thead>
             <tr>
               <th>Description</th>
@@ -458,7 +491,7 @@ themes      : ['Default']
         <div class="ui ignored warning message">
             <p>If you previously used the <code>ampm</code> setting in FUI < 2.9.0, you will need to update your code to (not) use the <code>A</code> or <code>a</code> token for date/datetime/time/cellTime formatter instead.</p>
             <p>For quicker migration you could globally override the format settings like this:
-                <div class="code">
+                <div class="code" data-type="javascript">
                     $.fn.calendar.settings.formatter.datetime = 'MMMM D, YYYY H:mm';
                     $.fn.calendar.settings.formatter.time = 'H:mm';
                     $.fn.calendar.settings.formatter.cellTime = 'H:mm';
@@ -582,7 +615,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-since="2.7.3">
       <h4 class="ui header">Select adjacent days</h4>
       <p>It's possible to also select adjacent days of the previous and next month in the current month view instead of being disabled</p>
       <div class="ui calendar" id="adjacentdays_calendar">
@@ -591,7 +624,7 @@ themes      : ['Default']
               <input type="text" placeholder="Date">
           </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('#adjacentdays_calendar')
         .calendar({
           selectAdjacentDays: true,
@@ -605,7 +638,7 @@ themes      : ['Default']
       <h4 class="ui header">Language</h4>
       <p>It's possible to change the calendar language to fit with your needs</p>
       <div class="ui calendar" id="french_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date/Time">
         </div>
@@ -644,12 +677,47 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="no example" data-since="2.9.1">
+      <h4 class="ui header">Context</h4>
+      <p>A calendar popup inside an overflowing container does not allow the calendar popup to be shown completely, because it's still placed inside the same overflowing container of the triggering element by default.
+         To solve this, you can now use the context setting and provide a (non-overflowing) parent element to move the calendar popup outside of the overflowing container and display the calendar popup properly.
+         <br>
+         The following example places the calendar input inside a overflowing scrolling segment. By defining the context to body the calendar popup is rendered as direct child of body, thus displays the calendar popup properly overlaying the otherwise restricted segment.
+      </p>
+      <div class="ui calendar" id="context_calendar">
+        <div class='ui very short scrolling segment'>
+          <div class="ui fluid input left icon">
+            <i class="calendar icon"></i>
+            <input type="text" placeholder="Date">
+          </div>
+          <p>
+          Some text ...<br>
+          Some text ...<br>
+          Some text ...<br>
+          Some text ...<br>
+          Some text ...<br>
+          Some text ...<br>
+          Some text ...<br>
+          Some text ...<br>
+          Some text ...<br>
+          </p>
+        </div>
+      </div>
+      <div class="code" data-type="javascript">
+      $('#context_calendar')
+        .calendar({
+            context: 'body'
+        })
+      ;
+      </div>
+    </div>
+
     <h2 class="ui dividing header">Disabling specific Days</h2>
-    <div class="example">
+    <div class="example" data-since="2.6.4">
       <h4 class="ui header">Days of Week</h4>
       <p>Disable each Monday, Wednesday and Friday from selection</p>
       <div class="ui calendar" id="disableddaysofweek_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -666,7 +734,7 @@ themes      : ['Default']
       <h4 class="ui header">Single Dates</h4>
       <p>Disabling specific single dates which can optionally display a reason in popup on hover</p>
       <div class="ui calendar" id="disableddates_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -691,11 +759,11 @@ themes      : ['Default']
       ;
       </div>
     </div>
-    <div class="example">
-      <h4 class="ui header">Hours <span class="ui black label">New in 2.9.0</span></h4>
+    <div class="example" data-since="2.9.0">
+      <h4 class="ui header">Hours</h4>
       <p>Disabling specific hours of specific days which can optionally display a reason in popup on hover</p>
       <div class="ui calendar" id="disabledhours_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
@@ -743,8 +811,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
-      <h4 class="ui header">Whole Months <span class="ui black label">New in 2.8.4</span></h4>
+    <div class="example" data-since="2.8.4">
+      <h4 class="ui header">Whole Months</h4>
       <p>It's possible to disable all days of specific months</p>
       <div class="ui calendar" id="disabledmonth_calendar">
           <div class="ui input left icon">
@@ -752,7 +820,7 @@ themes      : ['Default']
               <input type="text" placeholder="Date">
           </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
           $('#disabledmonth_calendar')
           .calendar({
             type: 'date',
@@ -770,8 +838,8 @@ themes      : ['Default']
           ;
       </div>
     </div>
-    <div class="example">
-      <h4 class="ui header">Whole Years <span class="ui black label">New in 2.8.4</span></h4>
+    <div class="example" data-since="2.8.4">
+      <h4 class="ui header">Whole Years</h4>
       <p>It's possible to disable all days of a whole year</p>
       <div class="ui calendar" id="disabledyear_calendar">
           <div class="ui input left icon">
@@ -779,7 +847,7 @@ themes      : ['Default']
               <input type="text" placeholder="Date">
           </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
           $('#disabledyear_calendar')
           .calendar({
             type: 'date',
@@ -813,9 +881,9 @@ themes      : ['Default']
             type: 'date',
             initialDate: new Date('2019-03-01'),
             enabledDates: [
-                new Date('2018-03-05'),
-                new Date('2018-03-10'),
-                new Date('2018-03-20')
+                new Date('2019-03-05'),
+                new Date('2019-03-10'),
+                new Date('2019-03-20')
             ]
           })
           ;
@@ -823,27 +891,29 @@ themes      : ['Default']
     </div>
 
     <h2 class="ui dividing header">Highlighting specific Days</h2>
-    <div class="example">
+    <div class="example" data-since="2.7.5">
       <h4 class="ui header">Event Dates</h4>
       <p>Mark specific days as events, giving them a different cell style and a tooltip message</p>
       <div class="ui calendar" id="eventdates_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('#eventdates_calendar').calendar({
           initialDate: new Date('2019-04-01'),
           eventDates: [
               {
                 date: new Date('2019-04-21'),
                 message: 'Show me in light purple',
-                class: 'inverted purple'
+                class: 'inverted purple',   // cellclass
+                variation: 'purple'         // tooltip variation
               },{
                 date: new Date('2019-04-22'),
                 message: 'Show me in green',
-                class: 'green'
+                class: 'green',
+                variation: 'green'
               }
           ]
       });
@@ -851,12 +921,12 @@ themes      : ['Default']
     </div>
     <div class="another example">
       <div class="ui calendar" id="eventdates2_calendar">
-        <div class="ui input left icon">
+        <div class="ui fluid input left icon">
           <i class="calendar icon"></i>
           <input type="text" placeholder="Date">
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
       $('#eventdates2_calendar').calendar({
           initialDate: new Date('2019-04-01'),
           eventClass: 'inverted red',
@@ -882,7 +952,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Initializing a calendar</h4>
       <p>Calendar is initialized on pre-existing markup</p>
-      <div class="test code">
+      <div class="test code" data-type="javascript">
       $('.ui.calendar')
         .calendar()
       ;
@@ -892,7 +962,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Behaviors</h2>
 
     <p>All the following behaviors can be called using the syntax:<p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.ui.calendar').calendar('behavior', argumentOne, argumentTwo...);
     </div>
 
@@ -918,8 +988,9 @@ themes      : ['Default']
         <td>Clear the selected date</td>
       </tr>
       <tr>
-        <td>get date</td>
-        <td>Get the selected date</td>
+        <td>get date(format = '')</td>
+        <td>Get the selected date.
+        If <code>format</code> is omitted, a JavaScript Date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set date(date, updateInput = true, fireChange = true)</td>
@@ -934,24 +1005,27 @@ themes      : ['Default']
         <td>Set the current selection mode (<code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>)</td>
       </tr>
       <tr>
-        <td>get startDate</td>
-        <td>Get the start date for range selection</td>
+        <td>get startDate(format = '')</td>
+        <td>Get the start date for range selection.
+        If <code>format</code> is omitted, a JavaScript Date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set startDate(date)</td>
         <td>Set the start date for range selection</td>
       </tr>
       <tr>
-        <td>get endDate</td>
-        <td>Get the end date for range selection</td>
+        <td>get endDate(format = '')</td>
+        <td>Get the end date for range selection.
+        If <code>format</code> is omitted, a JavaScript Date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set endDate(date)</td>
         <td>Set the end date for range selection</td>
       </tr>
       <tr>
-        <td>get focusDate</td>
-        <td>Get the currently focused date</td>
+        <td>get focusDate(format = '')</td>
+        <td>Get the currently focused date.
+        If <code>format</code> is omitted, a JavaScript Date object is returned, otherwise a <a href="/modules/calendar.html#custom-format">formatted string</a> is returned.</td>
       </tr>
       <tr>
         <td>set focusDate(date)</td>
@@ -1066,7 +1140,7 @@ themes      : ['Default']
         <tr>
           <td>on</td>
           <td>null</td>
-          <td>Choose when to show the popup (defaults to <code>click</code>)</td>
+          <td>Event used to trigger calendar popup. Can be either <b>focus, click or hover</b> (defaults to <code>click</code>)</td>
         </tr>
         <tr>
           <td>initialDate</td>
@@ -1151,7 +1225,7 @@ themes      : ['Default']
         <tr>
           <td>popupOptions</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             popupOptions: {
               position: 'bottom left',
               lastResort: 'bottom left',
@@ -1164,7 +1238,7 @@ themes      : ['Default']
         <tr>
           <td>text</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             text: {
               days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
               dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -1183,7 +1257,7 @@ themes      : ['Default']
           <td>formatter</td>
           <td colspan="2">
             <div class="ui ignored info message">For details about the below mentioned token string format see <a href="#custom-format">Custom Format</a></div>
-            <div class="code">
+            <div class="code" data-type="javascript">
             // Different customizable methods to format a certain part of the date or popup text output
             formatter: {
                 // do whatever you like to the given cell
@@ -1212,7 +1286,7 @@ themes      : ['Default']
         <tr>
           <td>parser</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             // Customizable methods to parse a given date
             // Has to return a date object
             parser: {
@@ -1220,6 +1294,13 @@ themes      : ['Default']
             }
             </div>
           </td>
+        </tr>
+        <tr>
+          <td>context</td>
+          <td>
+            false
+          </td>
+          <td>DOM selector where the calendar popup should be attached to. By default (false) the calendar popoup is attached as direct child of the triggering element</td>
         </tr>
       </tbody>
     </table>
@@ -1235,9 +1316,9 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td class="five wide">onBeforeChange(date, text, mode) <span class="ui tiny black label">New in 2.8.0</span></td>
+          <td class="five wide">onBeforeChange(date, text, mode)</td>
           <td>active content</td>
-          <td>Is called before a calendar date changes. <code>return false;</code> will cancel the change</td>
+          <td data-since="2.8.0">Is called before a calendar date changes. <code>return false;</code> will cancel the change</td>
         </tr>
         <tr>
           <td>onChange(date, text, mode)</td>
@@ -1296,7 +1377,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code" data-type="css">
+            <div class="code" data-type="javascript">
             selector    : {
               popup: '.ui.popup',
               input: 'input',
@@ -1310,7 +1391,7 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             className   : {
               calendar: 'calendar',
               active: 'active',
@@ -1339,7 +1420,7 @@ themes      : ['Default']
         <tr>
           <td>regExp</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             regExp : {
               dateWords: /[^A-Za-z\u00C0-\u024F]+/g,
               dateNumbers: /[^\d:]+/g
@@ -1350,7 +1431,7 @@ themes      : ['Default']
         <tr>
           <td>metadata</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             metadata : {
               date: 'date',
               focusDate: 'focusDate',
@@ -1385,7 +1466,7 @@ themes      : ['Default']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error   : {
               popup: 'UI Popup, a required component is not included in this page',
               method: 'The method you called is not defined.'

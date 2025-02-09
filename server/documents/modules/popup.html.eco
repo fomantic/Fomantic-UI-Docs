@@ -12,7 +12,7 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/popup.less" />
+<link rel="stylesheet/less" href="/src/definitions/modules/popup.less" />
 <script src="/javascript/popup.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
@@ -106,11 +106,10 @@ themes      : ['Default']
 
     <h3 class="ui header">No Javascript</h3>
 
-    <div class="example">
+    <div class="example" data-since="2.2">
       <h4 class="ui header">Tooltip
-        <div class="ui teal horizontal label">New in 2.2</div>
       </h4>
-      <p>An element can specify a simple tooltip that can appear without javascript</p>
+      <p>An element can specify a simple tooltip that can appear without javascript via the <code>data-tooltip</code> attribute. If the tooltip should be shown inverted, also add the <code>data-inverted</code> attribute.</p>
       <div class="ui warning ignored message">
         Tooltips use an element's <code>:before</code> and <code>:after</code> pseudo classes. Elements like <code>icon</code> that already use these classes for styling will need to have the tooltips to a wrapping element, like a button, or a <code>span</code> to make sure tooltips work correctly.
       </div>
@@ -122,8 +121,8 @@ themes      : ['Default']
       </div>
     </div>
     <div class="example">
-      <h4 class="ui header">Position</h4>
-      <p></p>
+      <h4 class="ui header">Tooltip Position</h4>
+      <p>A tooltip can be shown at a specific position relative to the element via the <code>data-position</code> attribute.</p>
       <div class="ui button" data-tooltip="Add users to your feed" data-position="top left">
         Top Left
       </div>
@@ -181,8 +180,11 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Size</h4>
-      <p>A tooltip can vary in size</p>
+      <h4 class="ui header">Tooltip Size</h4>
+      <p>A tooltip can vary in size via the <code>data-variation</code> attribute.</p>
+      <div class="ui ignored info message">
+        The <code>data-variation</code> attribute for the tooltip can be used for multiple variation definitions just like class would do for elements. However, at the moment, data-variation only supports <a href="#tooltip-sizes">sizes</a>, <a href="#basic-tooltip">basic</a>, <a href="">fixed</a>, <a href="#multiline-tooltip">multiline</a> and <a href="#colored-tooltip">color</a> variants
+      </div>
       <div class="ui button" data-tooltip="Add users to your feed" data-variation="mini">
         Mini
       </div>
@@ -223,7 +225,7 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Basic</h4>
+      <h4 class="ui header">Basic Tooltip</h4>
       <p>A tooltip can provide more basic formatting</p>
       <div class="ui button" data-tooltip="The default theme's basic tooltip removes the pointing arrow." data-variation="basic">
         Basic
@@ -239,6 +241,90 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="example" data-since="2.9.1">
+      <h4 class="ui header">Multiline Tooltip</h4>
+      <p>A tooltip can show multiple lines via predefined line breaks in the HTML code and adding <code>multiline</code> to the <code>data-variation</code> attribute.</p>
+      <div class="ui ignored warning message">
+        <div class="header">
+            This has to be cleverly prepared as follows
+        </div>
+        <ul class="ui bulleted list content">
+          <li>non breaking spaces have to use a non visible character like U+A0 (<b>not</b> <code>&amp;nbsp;</code>!) (see <a target="_blank" href="https://qwerty.dev/whitespace">https://qwerty.dev/whitespace</a>)</li>
+          <li>newlines to break lines / trigger a tooltip newline</li>
+        </ul>
+      </div>
+      <div class="ui button" data-tooltip="Look, i have multiple lines!
+        -one
+        -two
+        -three" data-position="bottom center" data-variation="multiline">
+    Multiline tooltip
+      </div>
+    </div>
+
+    <div class="example" data-since="2.9.3">
+      <h4 class="ui header">Visible Tooltip</h4>
+      <p>A tooltip can be shown visible all the time by adding <code>visible</code> to the <code>data-variation</code> attribute.</p>
+      <div class="ui button" data-tooltip="I am visible all the time" data-variation="visible" data-position="right center">
+        Important Button
+      </div>
+    </div>
+
+    <div class="example" data-since="2.9.1" data-class="colors">
+        <h4 class="ui header">Colored Tooltip</h4>
+        <p>A tooltip can have different colors via the <code>data-variation</code> attribute.</p>
+        <div class="ui spaced compact wrapping buttons">
+            <button data-variation="red" data-tooltip="Red" class="ui button">Red</button>
+            <button data-variation="orange" data-tooltip="Orange" class="ui button">Orange</button>
+            <button data-variation="yellow" data-tooltip="Yellow" class="ui button">Yellow</button>
+            <button data-variation="olive" data-tooltip="Olive" class="ui button">Olive</button>
+            <button data-variation="green" data-tooltip="Green" class="ui button">Green</button>
+            <button data-variation="teal" data-tooltip="Teal" class="ui button">Teal</button>
+            <button data-variation="blue" data-tooltip="Blue" class="ui button">Blue</button>
+            <button data-variation="violet" data-tooltip="Violet" class="ui button">Violet</button>
+            <button data-variation="purple" data-tooltip="Purple" class="ui button">Purple</button>
+            <button data-variation="pink" data-tooltip="Pink" class="ui button">Pink</button>
+            <button data-variation="brown" data-tooltip="Brown" class="ui button">Brown</button>
+            <button data-variation="grey" data-tooltip="Grey" class="ui button">Grey</button>
+            <button data-variation="black" data-tooltip="Black" class="ui button">Black</button>
+        </div>
+    </div>
+
+    <h2 class="ui dividing header">States</h2>
+
+    <div class="loading example" data-since="2.9.2">
+        <h4 class="ui header">Loading</h4>
+        <p>A popup may show its content is being loaded</p>
+        <div class="ui grid">
+          <div class="doubling two column row">
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="inverted loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="another loading example">
+        <p>The loader inherits the color of the popup</p>
+        <div class="ui ignored info message">A loading popup supports <a href="/elements/loader#speed">loader speed</a> and the optional <code>double</code> style. <code>elastic</code> as loading style is currently <b>not</b> supported because popup uses the <code>:before</code> pseudoclass to display the pointer.</div>
+        <div class="ui grid">
+          <div class="doubling four column row">
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="purple loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="orange loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="blue double loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+            <div class="column">
+                <img src="/images/avatar/large/tom.jpg" data-position="bottom left" data-variation="green slow loading" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui tiny avatar image">
+            </div>
+          </div>
+        </div>
+    </div>
 
     <h2 class="ui dividing header">Variations</h2>
 
@@ -250,13 +336,13 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="!very wide" data-use-content="true">
       <h4 class="ui header">Width</h4>
       <p>A popup can be extra wide to allow for longer content</p>
       <i class="circular heart icon link" data-content="Hello. This is a wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
       <i class="circular heart icon link" data-content="Hello. This is a very wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="very wide"></i>
         <div class="ui info message">
-            Usually a popup inherits its default width by its parent container. This could lead into situations where popups appear too small, even when the <code>wide</code> or <code>very wide</code> class is given.<br>To overcome this, you can force a fixed width by also adding the <code>fixed</code> class to the popup.<br>You can also use this feature on css only tooltips by adding the <code>fixed</code> class to the <code>data-variation</code> property of your tooltip
+            Usually a popup inherits its default width by its parent container. This could lead into situations where popups appear too small, even when the <code>wide</code> or <code>very wide</code> class is given.<br>To overcome this, you can force a fixed width by also adding the <code>fixed</code> class to the popup.<br>You can also use this feature on css only tooltips by adding the <code>fixed</code> class to the <code>data-variation</code> attribute of your tooltip
         </div>
     </div>
 
@@ -317,6 +403,51 @@ themes      : ['Default']
         <i class="add icon"></i>
       </div>
     </div>
+
+    <div class="colored example" data-since="2.9.1" data-class="colors">
+        <h4 class="ui header">Colored</h4>
+        <p>A popup can have different colors</p>
+        <div class="ui spaced compact wrapping buttons">
+            <button class="ui button">Red</button>
+            <div class="ui red popup">Red</div>
+
+            <button class="ui button">Orange</button>
+            <div class="ui orange popup">Orange</div>
+
+            <button class="ui button">Yellow</button>
+            <div class="ui yellow popup">Yellow</div>
+
+            <button class="ui button">Olive</button>
+            <div class="ui olive popup">Olive</div>
+
+            <button class="ui button">Green</button>
+            <div class="ui green popup">Green</div>
+
+            <button class="ui button">Teal</button>
+            <div class="ui teal popup">Teal</div>
+
+            <button class="ui button">Blue</button>
+            <div class="ui blue popup">Blue</div>
+
+            <button class="ui button">Violet</button>
+            <div class="ui violet popup">Violet</div>
+
+            <button class="ui button">Purple</button>
+            <div class="ui purple popup">Purple</div>
+
+            <button class="ui button">Pink</button>
+            <div class="ui pink popup">Pink</div>
+
+            <button class="ui button">Brown</button>
+            <div class="ui brown popup">Brown</div>
+
+            <button class="ui button">Grey</button>
+            <div class="ui grey popup">Grey</div>
+
+            <button class="ui button">Black</button>
+            <div class="ui black popup">Black</div>
+        </div>
+    </div>
   </div>
 
   <div class="ui tab" data-tab="usage">
@@ -326,7 +457,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Initializing A Popup</h4>
       <p>A popup is initialized on an activating element</p>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.activating.element')
         .popup()
       ;
@@ -393,7 +524,7 @@ themes      : ['Default']
     </div>
     <div class="no example">
       <h4 class="ui header">Specifying Content In Javascript</h4>
-      <div class="code">
+      <div class="code" data-type="javascript">
       $('.ui.popup')
         .popup({
           title   : 'Popup Title',
@@ -406,7 +537,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
+    <div class="code" data-type="javascript">
     $('.your.element')
       .popup('behavior name', argumentOne, argumentTwo)
     ;
@@ -470,6 +601,14 @@ themes      : ['Default']
           <td>remove popup</td>
           <td>Removes popup from the page</td>
         </tr>
+        <tr>
+          <td>set loading</td>
+          <td>Sets popup into loading state displaying a loading spinner and disabled content</td>
+        </tr>
+        <tr>
+          <td>remove loading</td>
+          <td>Removes loading state from popup</td>
+        </tr>
       </tbody>
     </table>
 
@@ -480,13 +619,12 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Examples</h2>
 
-    <div class="boundary example">
+    <div class="boundary example" data-since="2.2">
       <h4 class="ui header">Specifying Popup Boundaries
-        <div class="ui horizontal teal label">New in 2.2</div>
       </h4>
       <p>Popups now include a new setting <code>boundary</code> that let you specify that a popup should not escape the boundary of another section. This can be useful in complex paned layouts</p>
       <p>Additionally popups can now specify a scroll context, to allow for scroll containers other than window to cause a clicked popup to hide on scroll.</p>
-      <div class="evaluated code" data-type="javascript">
+      <div class="evaluated code">
         $('.boundary.example .button')
           .popup({
             boundary: '.boundary.example .segment'
@@ -677,7 +815,7 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Specifying an offset</h4>
-      <p>A popup position can be adjusted manually by specifying an offset property using <code>data-offset="value"</code></p>
+      <p>A popup position can be adjusted manually by specifying an offset property using <code>data-offset="value"</code> or via <code>offset</code> setting</p>
 
       <i class="heart circular icon link" data-offset="50" data-content="As expected this popup is way off to the right"></i>
     </div>
@@ -811,7 +949,7 @@ themes      : ['Default']
         <tr>
           <td>delay</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     delay: {
       show: 50,
       hide: 70
@@ -825,9 +963,9 @@ themes      : ['Default']
           <td>
             scale
           </td>
-          <td>Named transition to use when animating menu in and out.<br>
-            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration <span class="ui black tiny label">New in 2.8.8</span>
-                <div class="code">
+          <td data-since="2.8.8">Named transition to use when animating menu in and out.<br>
+            <p>Alternatively you can provide an object to set individual values for hide/show transitions as well as hide/show duration
+                <div class="code" data-type="javascript">
                 {
                     showMethod   : 'fade',
                     showDuration : 200,
@@ -846,9 +984,9 @@ themes      : ['Default']
           <td>Duration of animation events. The value will be ignored when individual hide/show duration values are provided via the <code>transition</code> setting</td>
         </tr>
         <tr>
-          <td>arrowPixelsFromEdge <div class="ui teal label">New in 2.3</div></td>
+          <td>arrowPixelsFromEdge</td>
           <td>20</td>
-          <td>When a target element is less than 2x this amount, the popup will appear with the arrow centered on the target element, instead of with the popup edge matching the target's edge.</td>
+          <td data-since="2.3">When a target element is less than 2x this amount, the popup will appear with the arrow centered on the target element, instead of with the popup edge matching the target's edge.</td>
         </tr>
         <tr>
           <td>setFluidWidth</td>
@@ -1005,7 +1143,7 @@ themes      : ['Default']
         <tr>
           <td>selector</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     selector    : {
       popup    : '.ui.popup'
     }
@@ -1016,7 +1154,7 @@ themes      : ['Default']
         <tr>
           <td>metadata</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     metadata: {
       activator : 'activator',
       content   : 'content',
@@ -1033,12 +1171,13 @@ themes      : ['Default']
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
+            <div class="code" data-type="javascript">
     className   : {
       active      : 'active',
       basic       : 'basic',
       animating   : 'animating',
       dropdown    : 'dropdown',
+      invisible   : 'invisible',
       fluid       : 'fluid',
       loading     : 'loading',
       popup       : 'ui popup',
@@ -1095,12 +1234,12 @@ themes      : ['Default']
         <tr>
           <td>errors</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="javascript">
             error: {
               invalidPosition : 'The position you specified is not a valid position',
               cannotPlace     : 'Popup does not fit within the boundaries of the viewport',
               method          : 'The method you called is not defined.',
-              noTransition    : 'This module requires ui transitions https://github.com/Semantic-Org/UI-Transition',
+              noElement       : 'This module requires ui {element}',
               notFound        : 'The target or popup you specified does not exist on the page'
             }
             </div>
