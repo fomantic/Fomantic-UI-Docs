@@ -18,17 +18,7 @@ standalone : false
       <a class="view-ui item">
         <i class="sidebar icon"></i> Menu
       </a>
-      <div id="docs-searchbox" class="item">
-      </div>
-      <script>
-        docsearch({
-          apiKey: 'efc868086a87ef030d61863d7137b4c7',
-          appId: '5SPMZGGGZB',
-          indexName: 'fomantic-ui',
-          container: '#docs-searchbox',
-          debug: false
-        });
-      </script>
+      <%- @partial('docsearch') %>
       <div class="right menu">
         <div class="item">
           <a class="twitter-follow-button twitter" href="https://twitter.com/fomanticui" data-show-count="false">
