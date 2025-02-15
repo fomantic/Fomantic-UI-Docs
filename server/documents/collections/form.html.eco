@@ -960,8 +960,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <label>Date</label>
         <div class="ui calendar">
           <div class="ui input left icon">
-            <i class="calendar icon"></i>
             <input type="text" placeholder="Pick up a date" name="date">
+            <i class="calendar icon"></i>
           </div>
         </div>
       </div>

@@ -877,8 +877,8 @@ standalone : false
             <a href="/elements/input.html">Input</a>
           </h4>
           <div class="ui action left icon input">
-            <i class="search icon"></i>
             <input type="text" placeholder="Search...">
+            <i class="search icon"></i>
             <div class="ui teal button">Search</div>
           </div>
           <div class="ui hidden divider"></div>

@@ -840,8 +840,8 @@ type        : 'Main'
       <h4 class="ui header">Calendar</h4>
       <div class="ui calendar">
         <div class="ui input left icon">
-          <i class="calendar icon"></i>
           <input type="text" placeholder="Date/Time">
+          <i class="calendar icon"></i>
         </div>
       </div>
     </div>

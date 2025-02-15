@@ -1879,8 +1879,8 @@ type        : 'UI Behavior'
           <label>Date</label>
           <div class="ui calendar">
             <div class="ui input left icon">
-              <i class="calendar icon"></i>
               <input type="text" name="calendar" placeholder="Date">
+              <i class="calendar icon"></i>
             </div>
           </div>
         </div>
