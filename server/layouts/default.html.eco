@@ -6,6 +6,7 @@
   <%- @partial('css') %>
 </head>
 <body id="example" class="<%= @document.css %>" ontouchstart="">
+  <%- @partial('docsearch') %>
   <% if @document.element is 'sidebar': %>
   <%- @partial('demo-sidebar') %>
   <% end %>

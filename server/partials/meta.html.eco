@@ -10,3 +10,7 @@
 
 <meta name="description" content="<%= @getPreparedDescription() %>" />
 <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
