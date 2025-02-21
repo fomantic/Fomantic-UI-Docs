@@ -8,6 +8,7 @@
       <h1 class="ui header">
         <%=@document.title %>
         <% if @document.status?: %><span class="ui <%= if @document.statusColor? then @document.statusColor else 'yellow' %> label"><%= @document.status %></span><% end %>
+        <span class="ui small dependency labels" data-element="<%= @document.element %>"></span>
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
@@ -35,7 +36,7 @@
         </a>
         <% end %>
         <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/fomantic/Fomantic-UI">
-          <i class="alternate github icon"></i>
+          <i class="github icon"></i>
         </a>
       </div>
 

@@ -58,6 +58,7 @@ semantic.ready = function() {
     $downloadStandalone  = $('.standalone.column .button'),
 
     $helpPopup           = $('.header .help'),
+    $dependencyGroup     = $('.masthead .header .dependency'),
 
     $example             = $('.example'),
     $popupExample        = $example.not('.no'),
@@ -126,6 +127,7 @@ semantic.ready = function() {
         cache : 'local',
         onSuccess: function(response) {
           metadata = response;
+          handler.createDependencyLabels();
         }
       });
     },
@@ -272,6 +274,32 @@ semantic.ready = function() {
           $(window).off('resize.menu');
         }
       }
+    },
+
+    createDependencyLabels: function() {
+        console.log(1224, $dependencyGroup)
+        var element = $dependencyGroup.data('element'),
+            meta = metadata[element],
+            cap = function(s) {
+                return s[0].toUpperCase() + s.slice(1);
+            };
+        console.log(element, metadata)
+        if (meta.dependencies) {
+            $.each(meta.dependencies, function (index, dep) {
+                var depMeta = metadata[dep],
+                    depType = depMeta && depMeta.elementType,
+                    depUrl = depMeta && depMeta.url;
+                if(depMeta) {
+                    $('<a/>', {
+                        href: depUrl,
+                        class: 'ui brown label',
+                        'data-tooltip': 'Needs ' + cap(dep) + ' ' + cap(depType),
+                        'data-variation': 'small brown',
+                        html: '<i class="ui chain icon"></i>' + cap(dep)
+                    }).appendTo($dependencyGroup);
+                }
+            });
+        }
     },
 
     createAnchors: function() {

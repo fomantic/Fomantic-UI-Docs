@@ -13,6 +13,7 @@
     "url": "/behaviors/api.html"
   },
   "state": {
+    "dependencies": ["api"],
     "layout": "default",
     "css": "state",
     "standalone": true,
@@ -39,6 +40,7 @@
     "url": "/behaviors/form.html"
   },
   "visibility": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "visibility minimal",
     "element": "visibility",
@@ -68,6 +70,7 @@
     "url": "/collections/breadcrumb.html"
   },
   "form": {
+    "dependencies": ["calendar","checkbox","dropdown"],
     "layout": "default",
     "css": "form",
     "standalone": true,
@@ -497,6 +500,7 @@
     "url": "/elements/text.html"
   },
   "accordion": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "accordion",
     "element": "accordion",
@@ -547,6 +551,7 @@
     "url": "/modules/dimmer.html"
   },
   "dropdown": {
+    "dependencies": ["api","transition"],
     "layout": "default",
     "css": "dropdown",
     "standalone": true,
@@ -578,6 +583,7 @@
     "url": "/modules/embed.html"
   },
   "modal": {
+    "dependencies": ["dimmer","transition"],
     "layout": "default",
     "css": "modal-page",
     "standalone": true,
@@ -595,6 +601,7 @@
     "url": "/modules/modal.html"
   },
   "flyout": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "flyout-page",
     "standalone": true,
@@ -611,6 +618,7 @@
     "url": "/modules/flyout.html"
   },
   "toast": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "",
     "standalone": true,
@@ -643,6 +651,7 @@
     "url": "/modules/slider.html"
   },
   "calendar": {
+    "dependencies": ["popup"],
     "layout": "default",
     "css": "calendar",
     "standalone": true,
@@ -675,6 +684,7 @@
     "url": "/modules/nag.html"
   },
   "popup": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "popup",
     "standalone": true,
@@ -726,6 +736,7 @@
     "url": "/modules/rating.html"
   },
   "search": {
+    "dependencies": ["api","transition"],
     "layout": "default",
     "css": "",
     "element": "search",
