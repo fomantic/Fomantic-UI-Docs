@@ -277,13 +277,11 @@ semantic.ready = function() {
     },
 
     createDependencyLabels: function() {
-        console.log(1224, $dependencyGroup)
         var element = $dependencyGroup.data('element'),
             meta = metadata[element],
             cap = function(s) {
                 return s[0].toUpperCase() + s.slice(1);
             };
-        console.log(element, metadata)
         if (meta.dependencies) {
             $.each(meta.dependencies, function (index, dep) {
                 var depMeta = metadata[dep],
