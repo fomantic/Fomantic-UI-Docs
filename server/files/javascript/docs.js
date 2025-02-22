@@ -1227,6 +1227,7 @@ semantic.ready = function() {
           $(this).find('.ui.sticky')
             .sticky('refresh')
           ;
+          $(window).trigger('resize');
         }
       })
     ;

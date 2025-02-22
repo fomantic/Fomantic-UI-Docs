@@ -113,6 +113,28 @@ semantic.slider.ready = function() {
       smooth: true
     })
   ;
+  $('#highlight').slider({
+      highlightRange: true,
+      min: 0,
+      max: 50,
+      start: 5,
+      end: 25
+  });
+
+  $('#uilabels').slider({
+      className: {
+          label: 'ui tiny blue label'
+      },
+      min: 0,
+      max: 50
+  });
+
+  $('#fixedadjust').slider({
+      autoAdjustLabels: 'fixed',
+      min: 0,
+      max: 97
+  });
+
 };
 
 
