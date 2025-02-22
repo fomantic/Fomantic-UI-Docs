@@ -43,6 +43,31 @@ type        : 'UI Module'
       </div>
     </div>
 
+    <div class="standard example" data-class="search" data-since="2.9.4">
+      <h4 class="ui header">Clearable</h4>
+      <p>A search can show a remove icon to be able to cancel a previous search term</p>
+      <div class="ui ignored info message">
+          If you also want to display an additional icon, the remove icon needs to be put at last inside the DOM tree
+      </div>
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Github Repositories..." value="fomantic">
+          <i class="github icon"></i>
+          <i class="remove icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <div class="another standard example">
+      <div class="ui ignored info message">
+        Using a native search input in webkit based browsers does not need additional markup for a remove icon
+      </div>
+      <div class="ui search">
+        <input class="prompt" type="search" placeholder="Github Repositories..." value="fomantic">
+        <div class="results"></div>
+      </div>
+    </div>
 
     <div class="category example">
       <h4 class="ui header">Category</h4>
