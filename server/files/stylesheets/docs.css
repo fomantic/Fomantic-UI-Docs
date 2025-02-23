@@ -1941,7 +1941,7 @@ code .chunk {
   border-color: transparent;
 }
 
-#example > #docs-searchbox {
+#example:not(.index) #docs-searchbox {
   position: fixed;
   z-index: 105;
   right: 0.5em;
