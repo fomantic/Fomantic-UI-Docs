@@ -55,33 +55,86 @@ themes      : ['Default']
         <h4 class="ui header">Restricted Labels</h4>
         <p>You can restrict the display of labels to only the ones you want</p>
         <div class="ui labeled ticked slider" id="restrictedlabelsslider"></div>
+        <div class="code" data-type="javascript">
+          $('.ui.slider')
+            .slider({
+                restrictedLabels: [0, 10, 15, 35, 80, 90, 100],
+                min: 0,
+                max: 100,
+                step: 0,
+                autoAdjustLabels: false
+            })
+          ;
+        </div>
     </div>
-    <div class="code" data-type="javascript">
-      $('.ui.slider')
-        .slider({
-            restrictedLabels: [0, 10, 15, 35, 80, 90, 100],
-            min: 0,
-            max: 100,
-            step: 0,
-            autoAdjustLabels: false
-        })
-      ;
+
+    <div class="example" data-since="2.9.4">
+        <h4 class="ui header">Letters</h4>
+        <p>Instead of numeric values, you can show letters.</p>
+        <div class="ui labeled slider" id="lettersexample"></div>
+
+        <div class="evaluated code">
+            $('#lettersexample').slider({
+                labelType: 'letter',
+                max: 15
+            });
+        </div>
+   </div>
+
+    <div class="another example">
+        <p>You may provide a different alphabetical set of letters</p>
+        <div class="ui labeled slider" id="greekletters"></div>
+
+        <div class="evaluated code">
+            $('#greekletters').slider({
+                labelType: 'letter',
+                letters: 'αβγδεζηθικλμνξοπρςτυφχψω',
+                max: 15
+            });
+        </div>
+    </div>
+
+    <div class="another example">
+        <p>Letters will be self repeating once the end of the letter string (or array) is reached to avoid double values. Similar to columns in a spreadsheet.</p>
+        <div class="ui labeled slider" id="repeatingletters"></div>
+
+        <div class="evaluated code">
+            $('#repeatingletters').slider({
+                labelType: 'letter',
+                letters: 'ABC',
+                max: 15
+            });
+        </div>
+    </div>
+
+    <div class="example" data-since="2.9.4">
+        <h4 class="ui header">Letter Words</h4>
+        <p>By providing an array of Strings to the <code>letters</code> option you can predefine text to each label value</p>
+        <div class="ui labeled slider" id="letterwords"></div>
+
+        <div class="evaluated code">
+            $('#letterwords').slider({
+                labelType: 'letter',
+                letters: ['Beginner', 'Advanced', 'Pro', 'Genius'],
+                max: 3
+            });
+        </div>
     </div>
 
     <div class="example">
         <h4 class="ui header">Custom interpreted labels</h4>
         <p>You can provide a function which returns a custom label according to the label value</p>
         <div class="ui labeled ticked slider" id="interpretedlabel"></div>
-    </div>
-    <div class="evaluated code">
-        var labels = ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ/ς", "τ", "υ", "φ", "χ", "ψ", "ω"];
-        $('#interpretedlabel')
-          .slider({
-            interpretLabel: function(value) {
-              return labels[value];
-            }
-          })
-        ;
+        <div class="evaluated code">
+            $('#interpretedlabel')
+              .slider({
+                interpretLabel: function(value) {
+                // convert to hex values
+                  return ('0000' + value.toString(16)).slice(-2).toUpperCase();
+                }
+              })
+            ;
+        </div>
     </div>
 
     <div class="example">
@@ -174,6 +227,12 @@ themes      : ['Default']
       <h4 class="ui header">Vertical</h4>
       <p>A slider can be vertical</p>
       <div class="ui vertical slider" style="height: 200px;"></div>
+    </div>
+
+    <div class="example" data-since="2.9.4" data-class="!right aligned, ticked, labeled">
+      <h4 class="ui header">Vertical right aligned</h4>
+      <p>A vertical slider can have its ticks and labels right aligned</p>
+      <div class="ui vertical labeled ticked right aligned slider" style="height: 200px;"></div>
     </div>
 
     <div class="example" data-class="colors">
@@ -282,6 +341,53 @@ themes      : ['Default']
           })
         ;
       </div>
+    </div>
+
+    <div class="example" data-since="2.9.4">
+        <h4 class="ui header">Highlight Range</h4>
+        <p>A slider can highlight the selected range values only</p>
+        <div class="ui green range labeled ticked slider" id="highlight"></div>
+        <div class="code" data-type="javascript">
+            $('.ui.slider')
+              .slider({
+                  highlightRange: true,
+                  min: 0,
+                  max: 50,
+                  start: 5,
+                  end: 25
+              })
+            ;
+        </div>
+    </div>
+
+    <div class="example" data-since="2.9.4">
+        <h4 class="ui header">UI Labels</h4>
+        <p>A slider can use <a href="/elements/label.html"><code>ui labels</code></a> for its tick values</p>
+        <div class="ui green range labeled ticked slider" id="uilabels"></div>
+        <div class="code" data-type="javascript">
+            $('.ui.slider').slider({
+              className: {
+                label: 'ui tiny blue label'
+              },
+              min: 0,
+              max: 50
+            });
+        </div>
+    </div>
+
+    <div class="example" data-since="2.9.4">
+        <h4 class="ui header">Autoadjust Labels</h4>
+        <p>On different window sizes, a large scale slider possibly cannot show all values and will adjust the amount of labels accordingly</p>
+        <p>The <code>autoAdjustLabels</code> setting can be set to false to force the same scaling regardless of the viewport size.</p>
+        <p>The optional string value <code>fixed</code> can be used if you always want the same label distance set via the <code>labelDistance</code> setting. This however leads to different tick label values being shown depending on your window size.</p>
+        <div class="ui green range labeled ticked slider" id="fixedadjust"></div>
+        <div class="code" data-type="javascript">
+            $('.ui.slider').slider({
+              autoAdjustLabels: 'fixed',
+              min: 0,
+              max: 97
+            });
+        </div>
     </div>
 
   </div>
@@ -406,9 +512,19 @@ themes      : ['Default']
           </td>
         </tr>
         <tr>
+            <td>letters</td>
+            <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+            <td>String or an array of strings when <code>labelType: 'letter'</code> is used. Will "increase" the letters in case more labels than given letters are needed (like the columns of a spreadsheet). See <a href="#letters">Letters</a> for examples.</td>
+        </tr>
+        <tr>
             <td>restrictedLabels</td>
             <td>[]</td>
             <td>An array of label values which restrict the displayed labels to only those which are defined</td>
+        </tr>
+        <tr>
+            <td>highlightRange</td>
+            <td>false</td>
+            <td>When set, only the selected range get its label values shown with higher opacity</td>
         </tr>
         <tr>
             <td>showThumbTooltip</td>
@@ -443,7 +559,7 @@ themes      : ['Default']
         <tr>
           <td>autoAdjustLabels</td>
           <td>true</td>
-          <td>Whether labels should auto adjust on window resize</td>
+          <td>Whether labels should auto adjust on window resize. When string value <code>fixed</code> is used, the <code>labelDistance</code> value will always be a fixed distance resulting in different calculated labels depending on window size. See <a href="#autoadjust-labels">Autoadjust Labels</a> for an example</td>
         </tr>
         <tr>
           <td>labelDistance</td>
