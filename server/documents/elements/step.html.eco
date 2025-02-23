@@ -30,6 +30,18 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
+  <div class="example" data-use-content="true" data-since="2.9.4">
+    <h4 class="ui header">Circular Step</h4>
+    <p>A single circular step</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          Shipping
+        </div>
+      </div>
+    </div>
+  </div>
+
   <h2 class="ui dividing header">Groups</h2>
 
   <div class="example">
@@ -68,9 +80,40 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
+  <div class="example" data-since="2.9.4">
+    <h4 class="ui header">
+      Circular Steps
+    </h4>
+    <p>Circular steps shows a series of steps with a connection line between them.</p>
+    <div class="ui ignored warning message">
+        <p>Circular steps do currently <b>not</b> automatically stack on mobile devices. You may use <a href="#vertical-circular">Vertical Circular Steps</a>.</p>
+    </div>
+    <p></p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title"><i class="payment icon"></i> Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="center aligned content">
+          <div class="title"><i class="info icon"></i> Confirm Order</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="example">
     <h4 class="ui header">Ordered</h4>
-    <p>A step can show a ordered sequence of steps</p>
+    <p>A step can show an ordered sequence of steps</p>
     <div class="ui ordered steps">
       <div class="completed step">
         <div class="content">
@@ -86,11 +129,58 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
       <div class="active step">
         <div class="content">
-          <div class="title">Confirm Order</div>
+          <div class="title">Confirm</div>
           <div class="description">Verify order details</div>
         </div>
       </div>
+      <div class="step">
+        <div class="content">
+          <div class="title">Transfer</div>
+          <div class="description">Packgage on its way</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="content">
+          <div class="title">Delivered</div>
+          <div class="description">Package received</div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="another example">
+      <div class="ui circular ordered steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Transfer</div>
+            <div class="description">Packgage on its way</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Delivered</div>
+            <div class="description">Package received</div>
+          </div>
+        </div>
+      </div>
   </div>
 
   <div class="example">
@@ -148,6 +238,31 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
+  <div class="example" data-since="2.9.4">
+      <h4 class="ui header">Vertical Circular</h4>
+      <p>Vertical circular steps show a series of steps with the connection line between them vertically next to the title and description of each step. Similar to <a href="/views/feed.html#connected">Connected Feed</a></p>
+      <div class="ui circular vertical steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm Order</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
   <h2 class="ui dividing header">Content</h2>
 
   <div class="example" data-use-content="true">
@@ -160,6 +275,54 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
+  <div class="another example" data-use-content="true" data-since="2.9.4" data-class="content">
+    <p>Circular steps always need a <code>content</code> wrapper</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true"  data-since="2.9.4">
+    <h4 class="ui header">Center Aligned</h4>
+    <p>Horizontal circular steps can show their title center aligned next to the connection line. The last step will not show the connection line anymore</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="center aligned content">
+            <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="center aligned content">
+            <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true"  data-since="2.9.4">
+    <h4 class="ui header">Bottom Aligned</h4>
+    <p>Horizontal circular steps can also show their title and/or description under the connection line</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="bottom aligned content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="bottom aligned content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-use-content="true">
     <h4 class="ui header">Icon</h4>
     <p>A step can contain an icon</p>
@@ -173,9 +336,21 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
+  <div class="example" data-use-content="true">
+    <p>Icons in circular steps are part of the title or description node</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-use-content="true" data-tag="a">
     <h4 class="ui header">Link</h4>
-    <p>A step can link</p>
+    <p>A step can link by either using an anchor tag or adding the <code>link</code> class</p>
     <div class="ui steps">
       <a class="active step">
         <i class="truck icon"></i>
@@ -210,6 +385,39 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
+  <div class="example" data-use-content="true" data-tag="a">
+    <div class="ui circular steps">
+      <a class="active step">
+        <div class="content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </a>
+      <a class="step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui circular steps">
+      <div class="link step">
+        <div class="content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="link step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <h2 class="ui dividing header">States</h2>
 
@@ -226,6 +434,18 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
+
+  <div class="another example" data-class="active">
+    <div class="ui circular steps">
+      <div class="active step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-class="completed">
     <h4 class="ui header">Completed</h4>
     <p>A step can show that a user has completed it</p>
@@ -240,7 +460,7 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
   <div class="another example">
-    <div class="ui ordered steps">
+    <div class="ui circular steps">
       <div class="completed step">
         <div class="content">
           <div class="title">Billing</div>
@@ -259,12 +479,24 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
+  <div class="another example" data-class="disabled">
+    <div class="ui circular steps">
+      <div class="disabled step">
+        <div class="center aligned content">
+            <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <h2 class="ui dividing header">Variations</h2>
 
   <div class="example" data-class="!tablet stackable, stackable">
     <h4 class="ui header">Stackable</h4>
     <p>A step can stack vertically only on smaller screens</p>
+    <div class="ui ignored warning message">
+        <p>Currently <b>not</b> supported by Circular steps. You may use <a href="#vertical-circular">Vertical Circular Steps</a>.</p>
+    </div>
     <div class="ui tablet stackable steps">
       <div class="step">
         <i class="plane icon"></i>
@@ -448,6 +680,27 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
+  <div class="another example" data-since="2.9.4">
+    <p>Horizontal circular steps are always evenly divided</p>
+    <div class="ui circular steps">
+      <div class="completed step">
+        <div class="center aligned content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
+          <div class="title"><i class="payment icon"></i> Billing</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="center aligned content">
+          <div class="title"><i class="info icon"></i> Confirm Order</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-class="size">
     <h4 class="ui header">Size</h4>
     <p>Steps can have different sizes</p>
@@ -468,6 +721,28 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
       <div class="disabled step">
         <i class="info icon"></i>
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui mini circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
         <div class="content">
           <div class="title">Confirm Order</div>
           <div class="description">Verify order details</div>
@@ -501,6 +776,29 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
   <div class="another example">
+    <div class="ui tiny circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="another example">
     <div class="ui small steps">
       <div class="step">
         <i class="truck icon"></i>
@@ -526,6 +824,29 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
   <div class="another example">
+    <div class="ui small circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="another example">
     <div class="ui large steps">
       <div class="step">
         <i class="truck icon"></i>
@@ -536,6 +857,20 @@ themes      : ['Default', 'Basic', 'GitHub']
       <div class="active step">
         <i class="payment icon"></i>
         <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui large circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
           <div class="title">Billing</div>
         </div>
       </div>
@@ -558,6 +893,20 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
   <div class="another example">
+    <div class="ui big circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui huge steps">
       <div class="step">
         <i class="truck icon"></i>
@@ -568,6 +917,20 @@ themes      : ['Default', 'Basic', 'GitHub']
       <div class="active step">
         <i class="payment icon"></i>
         <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui huge circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
           <div class="title">Billing</div>
         </div>
       </div>
@@ -585,6 +948,20 @@ themes      : ['Default', 'Basic', 'GitHub']
       <div class="active step">
         <i class="payment icon"></i>
         <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui massive circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
           <div class="title">Billing</div>
         </div>
       </div>
@@ -619,8 +996,31 @@ themes      : ['Default', 'Basic', 'GitHub']
         </div>
       </div>
     </div>
-
   </div>
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted circular steps">
+        <div class="step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <div class="content">
+            <div class="title">Confirm Order</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="another example">
     <div class="ui inverted segment">
@@ -639,14 +1039,62 @@ themes      : ['Default', 'Basic', 'GitHub']
         </div>
         <div class="active step">
           <div class="content">
-            <div class="title">Confirm Order</div>
+            <div class="title">Confirm</div>
             <div class="description">Verify order details</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Transfer</div>
+            <div class="description">Packgage on its way</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Delivered</div>
+            <div class="description">Package received</div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted ordered circular steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Transfer</div>
+            <div class="description">Packgage on its way</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Delivered</div>
+            <div class="description">Package received</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="another example">
     <div class="ui inverted segment">
@@ -674,7 +1122,94 @@ themes      : ['Default', 'Basic', 'GitHub']
         </div>
       </div>
     </div>
+  </div>
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted vertical circular steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm Order</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <% colors = ['primary', 'secondary', 'red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'] %>
+  <% colorIndex = 0 %>
+  <% for name in colors: %>
+
+  <% if colorIndex == 0: %>
+    <div class="example" data-class="colors" data-since="2.9.4">
+    <h4 class="ui header">Color</h4>
+    <p>Circular Steps can be shown in different colors for active and completed steps of the whole step group</p>
+  <% else: %>
+    <div class="another example" data-class="colors">
+  <% end %>
+      <div class="ui <%= name %> small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <% colorIndex++ %>
+  <% end %>
+
+  <div class="another example" data-class="colors">
+    <p>Single steps of a circular steps group can have a separate color</p>
+    <div class="ui red circular ordered steps">
+        <div class="completed step"></div>
+        <div class="completed orange step"></div>
+        <div class="active yellow step"></div>
+        <div class="olive step"></div>
+        <div class="green step"></div>
+    </div>
+    <br>
+    <div class="ui circular ordered steps">
+        <div class="completed teal step"></div>
+        <div class="completed blue step"></div>
+        <div class="active violet step"></div>
+        <div class="purple step"></div>
+        <div class="pink step"></div>
+    </div>
   </div>
 
 
