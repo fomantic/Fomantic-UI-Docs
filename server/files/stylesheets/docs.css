@@ -1921,6 +1921,10 @@ code .chunk {
   padding-top: 2em;
 }
 
+.dependency.labels .label {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 /*******************************
           Search Box
