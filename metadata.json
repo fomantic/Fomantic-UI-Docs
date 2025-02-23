@@ -1,5 +1,5 @@
 {
-  "API": {
+  "api": {
     "layout": "default",
     "css": "api",
     "standalone": true,
@@ -11,6 +11,20 @@
     "category": "UI Behavior",
     "filename": "behaviors/api.html",
     "url": "/behaviors/api.html"
+  },
+  "state": {
+    "dependencies": ["api"],
+    "layout": "default",
+    "css": "state",
+    "standalone": true,
+    "element": "state",
+    "elementType": "behavior",
+    "title": "State",
+    "description": "State is a simple state machine for controlling the look and feel of an element based on what state it occupies",
+    "type": "UI Behavior",
+    "category": "UI Behavior",
+    "filename": "behaviors/state.html",
+    "url": "/behaviors/state.html"
   },
   "validation": {
     "layout": "default",
@@ -26,6 +40,7 @@
     "url": "/behaviors/form.html"
   },
   "visibility": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "visibility minimal",
     "element": "visibility",
@@ -55,6 +70,7 @@
     "url": "/collections/breadcrumb.html"
   },
   "form": {
+    "dependencies": ["calendar","checkbox","dropdown"],
     "layout": "default",
     "css": "form",
     "standalone": true,
@@ -484,6 +500,7 @@
     "url": "/elements/text.html"
   },
   "accordion": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "accordion",
     "element": "accordion",
@@ -534,6 +551,7 @@
     "url": "/modules/dimmer.html"
   },
   "dropdown": {
+    "dependencies": ["api","transition"],
     "layout": "default",
     "css": "dropdown",
     "standalone": true,
@@ -565,6 +583,7 @@
     "url": "/modules/embed.html"
   },
   "modal": {
+    "dependencies": ["dimmer","transition"],
     "layout": "default",
     "css": "modal-page",
     "standalone": true,
@@ -582,6 +601,7 @@
     "url": "/modules/modal.html"
   },
   "flyout": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "flyout-page",
     "standalone": true,
@@ -598,6 +618,7 @@
     "url": "/modules/flyout.html"
   },
   "toast": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "",
     "standalone": true,
@@ -619,7 +640,7 @@
     "standalone": true,
     "element": "slider",
     "elementType": "module",
-    "title": "Toast",
+    "title": "Slider",
     "description": "A slider allows users to select values within a range",
     "type": "UI Module",
     "themes": [
@@ -630,6 +651,7 @@
     "url": "/modules/slider.html"
   },
   "calendar": {
+    "dependencies": ["popup"],
     "layout": "default",
     "css": "calendar",
     "standalone": true,
@@ -662,6 +684,7 @@
     "url": "/modules/nag.html"
   },
   "popup": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "popup",
     "standalone": true,
@@ -713,6 +736,7 @@
     "url": "/modules/rating.html"
   },
   "search": {
+    "dependencies": ["api","transition"],
     "layout": "default",
     "css": "",
     "element": "search",
