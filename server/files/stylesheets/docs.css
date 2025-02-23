@@ -1894,6 +1894,7 @@ code .chunk {
   flex: 1 1 auto;
   min-width: 0;
   margin-left: 250px;
+  background: #fff;
 }
 
 #example .full.height > .toc .ui.menu::-webkit-scrollbar {
