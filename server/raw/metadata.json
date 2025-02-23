@@ -27,6 +27,7 @@
     "url": "/behaviors/state.html"
   },
   "validation": {
+    "dependencies": ["calendar","checkbox","dropdown"],
     "layout": "default",
     "css": "form",
     "standalone": true,
@@ -70,7 +71,6 @@
     "url": "/collections/breadcrumb.html"
   },
   "form": {
-    "dependencies": ["calendar","checkbox","dropdown"],
     "layout": "default",
     "css": "form",
     "standalone": true,
