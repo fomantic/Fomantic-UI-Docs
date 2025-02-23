@@ -14,6 +14,9 @@
 <meta name="description" content="Examples of using Fomantic UI" />
 <meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+  
   <script src="/javascript/library/jquery.min.js"></script>
   <script src="/javascript/library/clipboard.min.js"></script>
   <script src="/javascript/library/easing.min.js"></script>
@@ -22,24 +25,35 @@
   <script src="/javascript/library/tablesort.min.js"></script>
 
 
-<script src="/dist/semantic.min.js?v=2.9.3"></script>
+<script src="/dist/semantic.min.js?v=2.9.4"></script>
 
 <script src="/javascript/docs.js"></script>
+  
+<link rel="stylesheet" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.4">
 
-<link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.3">
 
 
-
-<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
-<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rtl.css">
+<link rel="stylesheet" media="screen" href="/stylesheets/docs.css">
+<link rel="stylesheet" media="screen" href="/stylesheets/rtl.css">
 
 
 </head>
 <body id="example" class="layouts" ontouchstart="">
-
-
+  <div id="docs-searchbox" class="item">
+    <script>
+        docsearch({
+            apiKey: 'efc868086a87ef030d61863d7137b4c7',
+            appId: '5SPMZGGGZB',
+            indexName: 'fomantic-ui',
+            container: '#docs-searchbox',
+            debug: false
+        });
+    </script>
+</div>
+  
+  
   <div class="ui huge vertical inverted sidebar menu" id="toc">
-
+  
 
 
 
@@ -63,355 +77,355 @@
 <div class="item">
   <div class="header">Introduction</div>
   <div class="menu">
-
+    
       <a class="item" href="/introduction/integrations.html">
         Integrations
       </a>
-
+    
       <a class="item" href="/introduction/build-tools.html">
         Build Tools
       </a>
-
+    
       <a class="item" href="/introduction/advanced-usage.html">
         Recipes
       </a>
-
+    
       <a class="item" href="/introduction/glossary.html">
         Glossary
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class="header">Usage</div>
   <div class="menu">
-
+    
       <a class="item" href="/usage/theming.html">
         Theming
       </a>
-
+    
       <a class="active item" href="/usage/layout.html">
         Layouts
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Globals</div>
   <div class="menu">
-
+    
       <a class="item" href="/globals/reset.html">
         Reset
-
+        
       </a>
-
+    
       <a class="item" href="/globals/site.html">
         Site
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Elements</div>
   <div class="menu">
-
+    
       <a class="item" href="/elements/button.html">
         Button
-
+        
       </a>
-
+    
       <a class="item" href="/elements/container.html">
         Container
-
+        
       </a>
-
+    
       <a class="item" href="/elements/divider.html">
         Divider
-
+        
       </a>
-
+    
       <a class="item" href="/elements/emoji.html">
         Emoji
-
+        
       </a>
-
+    
       <a class="item" href="/elements/flag.html">
         Flag
-
+        
       </a>
-
+    
       <a class="item" href="/elements/header.html">
         Header
-
+        
       </a>
-
+    
       <a class="item" href="/elements/icon.html">
         Icon
-
+        
       </a>
-
+    
       <a class="item" href="/elements/image.html">
         Image
-
+        
       </a>
-
+    
       <a class="item" href="/elements/input.html">
         Input
-
+        
       </a>
-
+    
       <a class="item" href="/elements/label.html">
         Label
-
+        
       </a>
-
+    
       <a class="item" href="/elements/list.html">
         List
-
+        
       </a>
-
+    
       <a class="item" href="/elements/loader.html">
         Loader
-
+        
       </a>
-
+    
       <a class="item" href="/elements/placeholder.html">
         Placeholder
-
+        
       </a>
-
+    
       <a class="item" href="/elements/rail.html">
         Rail
-
+        
       </a>
-
+    
       <a class="item" href="/elements/reveal.html">
         Reveal
-
+        
       </a>
-
+    
       <a class="item" href="/elements/segment.html">
         Segment
-
+        
       </a>
-
+    
       <a class="item" href="/elements/step.html">
         Step
-
+        
       </a>
-
+    
       <a class="item" href="/elements/text.html">
         Text
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Collections</div>
   <div class="menu">
-
+    
       <a class="item" href="/collections/breadcrumb.html">
         Breadcrumb
-
+        
       </a>
-
+    
       <a class="item" href="/collections/form.html">
         Form
-
+        
       </a>
-
+    
       <a class="item" href="/collections/grid.html">
         Grid
-
+        
       </a>
-
+    
       <a class="item" href="/collections/menu.html">
         Menu
-
+        
       </a>
-
+    
       <a class="item" href="/collections/message.html">
         Message
-
+        
       </a>
-
+    
       <a class="item" href="/collections/table.html">
         Table
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Views</div>
   <div class="menu">
-
+    
       <a class="item" href="/views/advertisement.html">
         Ad
-
+        
       </a>
-
+    
       <a class="item" href="/views/card.html">
         Card
-
+        
       </a>
-
+    
       <a class="item" href="/views/comment.html">
         Comment
-
+        
       </a>
-
+    
       <a class="item" href="/views/feed.html">
         Feed
-
+        
       </a>
-
+    
       <a class="item" href="/views/item.html">
         Item
-
+        
       </a>
-
+    
       <a class="item" href="/views/statistic.html">
         Statistic
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Modules</div>
   <div class="menu">
-
+    
       <a class="item" href="/modules/accordion.html">
         Accordion
-
+        
       </a>
-
+  
       <a class="item" href="/modules/calendar.html">
         Calendar
-
+        
       </a>
-
+  
       <a class="item" href="/modules/checkbox.html">
         Checkbox
-
+        
       </a>
-
+  
       <a class="item" href="/modules/dimmer.html">
         Dimmer
-
+        
       </a>
-
+  
       <a class="item" href="/modules/dropdown.html">
         Dropdown
-
+        
       </a>
-
+  
       <a class="item" href="/modules/embed.html">
         Embed
-
+        
       </a>
-
+  
       <a class="item" href="/modules/flyout.html">
         Flyout
-
+        
         <span class="ui mini empty orange circular ui label"></span>
-
+        
       </a>
-
+  
       <a class="item" href="/modules/modal.html">
         Modal
-
+        
       </a>
-
+  
       <a class="item" href="/modules/nag.html">
         Nag
-
+        
       </a>
-
+  
       <a class="item" href="/modules/popup.html">
         Popup
-
+        
       </a>
-
+  
       <a class="item" href="/modules/progress.html">
         Progress
-
+        
       </a>
-
+  
       <a class="item" href="/modules/rating.html">
         Rating
-
+        
       </a>
-
+  
       <a class="item" href="/modules/search.html">
         Search
-
+        
       </a>
-
+  
       <a class="item" href="/modules/shape.html">
         Shape
-
+        
       </a>
-
+  
       <a class="item" href="/modules/sidebar.html">
         Sidebar
-
+        
       </a>
-
+  
       <a class="item" href="/modules/slider.html">
         Slider
-
+        
       </a>
-
+  
       <a class="item" href="/modules/sticky.html">
         Sticky
-
+        
       </a>
-
+  
       <a class="item" href="/modules/tab.html">
         Tab
-
+        
       </a>
-
+  
       <a class="item" href="/modules/toast.html">
         Toast
-
+        
       </a>
-
+  
       <a class="item" href="/modules/transition.html">
         Transition
-
+        
       </a>
-
+  
   </div>
 </div>
 <div class="item">
   <div class=" header">Behaviors</div>
   <div class="menu">
-
+    
       <a class="item" href="/behaviors/api.html">
         API
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/form.html">
         Form Validation
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/state.html">
         State
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/visibility.html">
         Visibility
-
+        
       </a>
-
+    
   </div>
 </div>
 </div>
@@ -420,7 +434,7 @@
   <i class="content icon"></i>
   <span class="text">Menu</span>
 </div>
-
+  
 
 
 
@@ -430,17 +444,17 @@
     <a class="launch icon item">
       <i class="content icon"></i>
     </a>
-
+    
       <div class="item">
         Layouts
       </div>
-
+    
     <div class="right menu">
-
+      
       <div class="vertically fitted borderless item">
         <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
       </div>
-
+      
       <!--
       <div class="item">
         <div class="ui hidden right aligned search input" id="search">
@@ -459,7 +473,7 @@
     <div class="full height">
       <div class="toc">
         <div class="ui big vertical inverted menu">
-
+          
 
 
 
@@ -483,361 +497,361 @@
 <div class="item">
   <div class="header">Introduction</div>
   <div class="menu">
-
+    
       <a class="item" href="/introduction/integrations.html">
         Integrations
       </a>
-
+    
       <a class="item" href="/introduction/build-tools.html">
         Build Tools
       </a>
-
+    
       <a class="item" href="/introduction/advanced-usage.html">
         Recipes
       </a>
-
+    
       <a class="item" href="/introduction/glossary.html">
         Glossary
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class="header">Usage</div>
   <div class="menu">
-
+    
       <a class="item" href="/usage/theming.html">
         Theming
       </a>
-
+    
       <a class="active item" href="/usage/layout.html">
         Layouts
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Globals</div>
   <div class="menu">
-
+    
       <a class="item" href="/globals/reset.html">
         Reset
-
+        
       </a>
-
+    
       <a class="item" href="/globals/site.html">
         Site
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Elements</div>
   <div class="menu">
-
+    
       <a class="item" href="/elements/button.html">
         Button
-
+        
       </a>
-
+    
       <a class="item" href="/elements/container.html">
         Container
-
+        
       </a>
-
+    
       <a class="item" href="/elements/divider.html">
         Divider
-
+        
       </a>
-
+    
       <a class="item" href="/elements/emoji.html">
         Emoji
-
+        
       </a>
-
+    
       <a class="item" href="/elements/flag.html">
         Flag
-
+        
       </a>
-
+    
       <a class="item" href="/elements/header.html">
         Header
-
+        
       </a>
-
+    
       <a class="item" href="/elements/icon.html">
         Icon
-
+        
       </a>
-
+    
       <a class="item" href="/elements/image.html">
         Image
-
+        
       </a>
-
+    
       <a class="item" href="/elements/input.html">
         Input
-
+        
       </a>
-
+    
       <a class="item" href="/elements/label.html">
         Label
-
+        
       </a>
-
+    
       <a class="item" href="/elements/list.html">
         List
-
+        
       </a>
-
+    
       <a class="item" href="/elements/loader.html">
         Loader
-
+        
       </a>
-
+    
       <a class="item" href="/elements/placeholder.html">
         Placeholder
-
+        
       </a>
-
+    
       <a class="item" href="/elements/rail.html">
         Rail
-
+        
       </a>
-
+    
       <a class="item" href="/elements/reveal.html">
         Reveal
-
+        
       </a>
-
+    
       <a class="item" href="/elements/segment.html">
         Segment
-
+        
       </a>
-
+    
       <a class="item" href="/elements/step.html">
         Step
-
+        
       </a>
-
+    
       <a class="item" href="/elements/text.html">
         Text
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Collections</div>
   <div class="menu">
-
+    
       <a class="item" href="/collections/breadcrumb.html">
         Breadcrumb
-
+        
       </a>
-
+    
       <a class="item" href="/collections/form.html">
         Form
-
+        
       </a>
-
+    
       <a class="item" href="/collections/grid.html">
         Grid
-
+        
       </a>
-
+    
       <a class="item" href="/collections/menu.html">
         Menu
-
+        
       </a>
-
+    
       <a class="item" href="/collections/message.html">
         Message
-
+        
       </a>
-
+    
       <a class="item" href="/collections/table.html">
         Table
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Views</div>
   <div class="menu">
-
+    
       <a class="item" href="/views/advertisement.html">
         Ad
-
+        
       </a>
-
+    
       <a class="item" href="/views/card.html">
         Card
-
+        
       </a>
-
+    
       <a class="item" href="/views/comment.html">
         Comment
-
+        
       </a>
-
+    
       <a class="item" href="/views/feed.html">
         Feed
-
+        
       </a>
-
+    
       <a class="item" href="/views/item.html">
         Item
-
+        
       </a>
-
+    
       <a class="item" href="/views/statistic.html">
         Statistic
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Modules</div>
   <div class="menu">
-
+    
       <a class="item" href="/modules/accordion.html">
         Accordion
-
+        
       </a>
-
+  
       <a class="item" href="/modules/calendar.html">
         Calendar
-
+        
       </a>
-
+  
       <a class="item" href="/modules/checkbox.html">
         Checkbox
-
+        
       </a>
-
+  
       <a class="item" href="/modules/dimmer.html">
         Dimmer
-
+        
       </a>
-
+  
       <a class="item" href="/modules/dropdown.html">
         Dropdown
-
+        
       </a>
-
+  
       <a class="item" href="/modules/embed.html">
         Embed
-
+        
       </a>
-
+  
       <a class="item" href="/modules/flyout.html">
         Flyout
-
+        
         <span class="ui mini empty orange circular ui label"></span>
-
+        
       </a>
-
+  
       <a class="item" href="/modules/modal.html">
         Modal
-
+        
       </a>
-
+  
       <a class="item" href="/modules/nag.html">
         Nag
-
+        
       </a>
-
+  
       <a class="item" href="/modules/popup.html">
         Popup
-
+        
       </a>
-
+  
       <a class="item" href="/modules/progress.html">
         Progress
-
+        
       </a>
-
+  
       <a class="item" href="/modules/rating.html">
         Rating
-
+        
       </a>
-
+  
       <a class="item" href="/modules/search.html">
         Search
-
+        
       </a>
-
+  
       <a class="item" href="/modules/shape.html">
         Shape
-
+        
       </a>
-
+  
       <a class="item" href="/modules/sidebar.html">
         Sidebar
-
+        
       </a>
-
+  
       <a class="item" href="/modules/slider.html">
         Slider
-
+        
       </a>
-
+  
       <a class="item" href="/modules/sticky.html">
         Sticky
-
+        
       </a>
-
+  
       <a class="item" href="/modules/tab.html">
         Tab
-
+        
       </a>
-
+  
       <a class="item" href="/modules/toast.html">
         Toast
-
+        
       </a>
-
+  
       <a class="item" href="/modules/transition.html">
         Transition
-
+        
       </a>
-
+  
   </div>
 </div>
 <div class="item">
   <div class=" header">Behaviors</div>
   <div class="menu">
-
+    
       <a class="item" href="/behaviors/api.html">
         API
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/form.html">
         Form Validation
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/state.html">
         State
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/visibility.html">
         Visibility
-
+        
       </a>
-
+    
   </div>
 </div>
         </div>
       </div>
       <div class="article">
-
+        
 
 <div class="ui masthead vertical segment">
   <div class="ui container">
@@ -845,15 +859,16 @@
 
       <h1 class="ui header">
         Layouts
-
+        
+        <span class="ui small dependency labels" data-element=""></span>
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.3 is the official community fork of Semantic-UI&#010;Find the   here"
+            data-text="Fomantic-UI 2.9.4 is the official community fork of Semantic-UI&#010;Find the   here"
             data-url="https://fomantic-ui.com/s/.html"
             data-via="fomanticui">
           </a>
-          <script type="text/javascript">
+          <script>
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
           <iframe title="github star button" class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
@@ -867,16 +882,16 @@
         <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/fomantic/Fomantic-UI-Docs/edit/master/server/documents/usage\layout.html.eco">
           <i class="edit icon"></i>
         </a>
-
+        
         <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/fomantic/Fomantic-UI">
-          <i class="alternate github icon"></i>
+          <i class="github icon"></i>
         </a>
       </div>
 
-
-
+      
+      
     </div>
-
+    
   </div>
 </div>
 <div class="ui main intro container">
@@ -1014,8 +1029,10 @@
         <h4 class="ui header">Social</h4>
         <div class="ui link list">
           <a class="item" href="https://twitter.com/fomanticui" target="_blank">
-            <i class="twitter icon"></i>
-            Twitter
+            <svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"></path>
+            </svg>
+            X (formerly Twitter)
           </a>
           <a class="item" href="https://medium.com/@fomantic" target="_blank">
             <i class="medium icon"></i>
@@ -1024,12 +1041,6 @@
         </div>
       </div>
       <div class="eight wide middle aligned right floated column">
-        <div class="footer-sponsor">
-          <a href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=fomantic" target="_blank">
-            <p>Infrastructure hosted and powered by DigitalOcean</p>
-            <img class="ui small image" src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/PNG/DO_Logo_Horizontal_Blue.png" alt="DigitalOcean">
-          </a>
-        </div>
         <div class="footer-sponsor">
           <a href="https://www.browserstack.com" target="_blank">
             <p>Cross-browser testing provided by</p>
@@ -1078,5 +1089,14 @@ window.less = {
 
 <script src="/javascript/library/less.min.js"></script>
 
+  <!-- Gurubase Widget -->
+<script async src="https://widget.gurubase.io/widget.latest.min.js"
+        data-widget-id="I5IHFzikfEBrFMeiAtOECC9BpdwH6pWjJgNKqiC1gY8"
+        data-text="Ask AI"
+        data-tooltip="AI generated Code and answers are not promised to be correct. Use at your own risk"
+        data-margins='{"bottom": "1rem", "right": "1rem"}'
+        data-light-mode="true"
+        id="guru-widget-id">
+</script>
 </body>
 </html>

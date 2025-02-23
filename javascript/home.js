@@ -255,7 +255,7 @@ semantic.home.ready = function() {
           identifier : 'email',
           rules: [
             {
-              type   : 'empty',
+              type   : 'notEmpty',
               prompt : 'Please enter an e-mail'
             },
             {

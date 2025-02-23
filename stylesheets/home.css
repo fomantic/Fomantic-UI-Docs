@@ -230,16 +230,6 @@
 }
 
 
-#example.index .advertisement {
-  display: none !important;
-  padding-left: 0;
-  position: absolute;
-  left: auto;
-  right: 6em;
-  top: 50%;
-  transform: translateY(-50%);
-  vertical-align: top;
-}
 #example.index .fixed.launch.button {
   display: none;
   top: 100px;
@@ -545,13 +535,6 @@
 
 
 @media only screen and (max-width : 400px) {
-  #example.index .advertisement {
-    display: none;
-    margin-left: -130px !important;
-  }
-  #example.index .carbonad {
-    width: 260px !important;
-  }
   #example.index .masthead.segment h1  {
     font-size: 1.75em !important;
   }
@@ -674,31 +657,3 @@
   }
 }
 
-
-@media only screen and (max-width: 1300px) {
-  #example.index .advertisement {
-    position: absolute;
-    top: auto;
-    left: 50%;
-    bottom: 2rem;
-    margin-left: -175px;
-    transform: none;
-  }
-  #example.index .inverted.advertisement .carbonad-img {
-    margin-top: 0;
-  }
-  #example.index #carbonads-container {
-    float: none;
-  }
-  #example.index .carbonad {
-    width: 340px;
-  }
-  #example.index .carbonad-text,
-  #example.index .carbonad-tag {
-    float: none;
-    display: block;
-    text-align: left;
-    margin-left: 160px;
-    width: 170px;
-  }
-}

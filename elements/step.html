@@ -14,6 +14,9 @@
 <meta name="description" content="A step shows the completion status of an activity in a series of activities" />
 <meta name="keywords" content="html5, ui, library, framework, javascript, css, fork, official" />
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+  
   <script src="/javascript/library/jquery.min.js"></script>
   <script src="/javascript/library/clipboard.min.js"></script>
   <script src="/javascript/library/easing.min.js"></script>
@@ -22,24 +25,35 @@
   <script src="/javascript/library/tablesort.min.js"></script>
 
 
-<script src="/dist/semantic.min.js?v=2.9.3"></script>
+<script src="/dist/semantic.min.js?v=2.9.4"></script>
 
 <script src="/javascript/docs.js"></script>
+  
+<link rel="stylesheet" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.4">
 
-<link rel="stylesheet" type="text/css" class="ui" media="screen,print" href="/dist/semantic.min.css?v=2.9.3">
 
 
-
-<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/docs.css">
-<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/rtl.css">
+<link rel="stylesheet" media="screen" href="/stylesheets/docs.css">
+<link rel="stylesheet" media="screen" href="/stylesheets/rtl.css">
 
 
 </head>
 <body id="example" class="steps" ontouchstart="">
-
-
+  <div id="docs-searchbox" class="item">
+    <script>
+        docsearch({
+            apiKey: 'efc868086a87ef030d61863d7137b4c7',
+            appId: '5SPMZGGGZB',
+            indexName: 'fomantic-ui',
+            container: '#docs-searchbox',
+            debug: false
+        });
+    </script>
+</div>
+  
+  
   <div class="ui huge vertical inverted sidebar menu" id="toc">
-
+  
 
 
 
@@ -63,355 +77,355 @@
 <div class="item">
   <div class="header">Introduction</div>
   <div class="menu">
-
+    
       <a class="item" href="/introduction/integrations.html">
         Integrations
       </a>
-
+    
       <a class="item" href="/introduction/build-tools.html">
         Build Tools
       </a>
-
+    
       <a class="item" href="/introduction/advanced-usage.html">
         Recipes
       </a>
-
+    
       <a class="item" href="/introduction/glossary.html">
         Glossary
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class="header">Usage</div>
   <div class="menu">
-
+    
       <a class="item" href="/usage/theming.html">
         Theming
       </a>
-
+    
       <a class="item" href="/usage/layout.html">
         Layouts
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Globals</div>
   <div class="menu">
-
+    
       <a class="item" href="/globals/reset.html">
         Reset
-
+        
       </a>
-
+    
       <a class="item" href="/globals/site.html">
         Site
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class="active  header">Elements</div>
   <div class="menu">
-
+    
       <a class="item" href="/elements/button.html">
         Button
-
+        
       </a>
-
+    
       <a class="item" href="/elements/container.html">
         Container
-
+        
       </a>
-
+    
       <a class="item" href="/elements/divider.html">
         Divider
-
+        
       </a>
-
+    
       <a class="item" href="/elements/emoji.html">
         Emoji
-
+        
       </a>
-
+    
       <a class="item" href="/elements/flag.html">
         Flag
-
+        
       </a>
-
+    
       <a class="item" href="/elements/header.html">
         Header
-
+        
       </a>
-
+    
       <a class="item" href="/elements/icon.html">
         Icon
-
+        
       </a>
-
+    
       <a class="item" href="/elements/image.html">
         Image
-
+        
       </a>
-
+    
       <a class="item" href="/elements/input.html">
         Input
-
+        
       </a>
-
+    
       <a class="item" href="/elements/label.html">
         Label
-
+        
       </a>
-
+    
       <a class="item" href="/elements/list.html">
         List
-
+        
       </a>
-
+    
       <a class="item" href="/elements/loader.html">
         Loader
-
+        
       </a>
-
+    
       <a class="item" href="/elements/placeholder.html">
         Placeholder
-
+        
       </a>
-
+    
       <a class="item" href="/elements/rail.html">
         Rail
-
+        
       </a>
-
+    
       <a class="item" href="/elements/reveal.html">
         Reveal
-
+        
       </a>
-
+    
       <a class="item" href="/elements/segment.html">
         Segment
-
+        
       </a>
-
+    
       <a class="active item" href="/elements/step.html">
         Step
-
+        
       </a>
-
+    
       <a class="item" href="/elements/text.html">
         Text
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Collections</div>
   <div class="menu">
-
+    
       <a class="item" href="/collections/breadcrumb.html">
         Breadcrumb
-
+        
       </a>
-
+    
       <a class="item" href="/collections/form.html">
         Form
-
+        
       </a>
-
+    
       <a class="item" href="/collections/grid.html">
         Grid
-
+        
       </a>
-
+    
       <a class="item" href="/collections/menu.html">
         Menu
-
+        
       </a>
-
+    
       <a class="item" href="/collections/message.html">
         Message
-
+        
       </a>
-
+    
       <a class="item" href="/collections/table.html">
         Table
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Views</div>
   <div class="menu">
-
+    
       <a class="item" href="/views/advertisement.html">
         Ad
-
+        
       </a>
-
+    
       <a class="item" href="/views/card.html">
         Card
-
+        
       </a>
-
+    
       <a class="item" href="/views/comment.html">
         Comment
-
+        
       </a>
-
+    
       <a class="item" href="/views/feed.html">
         Feed
-
+        
       </a>
-
+    
       <a class="item" href="/views/item.html">
         Item
-
+        
       </a>
-
+    
       <a class="item" href="/views/statistic.html">
         Statistic
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Modules</div>
   <div class="menu">
-
+    
       <a class="item" href="/modules/accordion.html">
         Accordion
-
+        
       </a>
-
+  
       <a class="item" href="/modules/calendar.html">
         Calendar
-
+        
       </a>
-
+  
       <a class="item" href="/modules/checkbox.html">
         Checkbox
-
+        
       </a>
-
+  
       <a class="item" href="/modules/dimmer.html">
         Dimmer
-
+        
       </a>
-
+  
       <a class="item" href="/modules/dropdown.html">
         Dropdown
-
+        
       </a>
-
+  
       <a class="item" href="/modules/embed.html">
         Embed
-
+        
       </a>
-
+  
       <a class="item" href="/modules/flyout.html">
         Flyout
-
+        
         <span class="ui mini empty orange circular ui label"></span>
-
+        
       </a>
-
+  
       <a class="item" href="/modules/modal.html">
         Modal
-
+        
       </a>
-
+  
       <a class="item" href="/modules/nag.html">
         Nag
-
+        
       </a>
-
+  
       <a class="item" href="/modules/popup.html">
         Popup
-
+        
       </a>
-
+  
       <a class="item" href="/modules/progress.html">
         Progress
-
+        
       </a>
-
+  
       <a class="item" href="/modules/rating.html">
         Rating
-
+        
       </a>
-
+  
       <a class="item" href="/modules/search.html">
         Search
-
+        
       </a>
-
+  
       <a class="item" href="/modules/shape.html">
         Shape
-
+        
       </a>
-
+  
       <a class="item" href="/modules/sidebar.html">
         Sidebar
-
+        
       </a>
-
+  
       <a class="item" href="/modules/slider.html">
         Slider
-
+        
       </a>
-
+  
       <a class="item" href="/modules/sticky.html">
         Sticky
-
+        
       </a>
-
+  
       <a class="item" href="/modules/tab.html">
         Tab
-
+        
       </a>
-
+  
       <a class="item" href="/modules/toast.html">
         Toast
-
+        
       </a>
-
+  
       <a class="item" href="/modules/transition.html">
         Transition
-
+        
       </a>
-
+  
   </div>
 </div>
 <div class="item">
   <div class=" header">Behaviors</div>
   <div class="menu">
-
+    
       <a class="item" href="/behaviors/api.html">
         API
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/form.html">
         Form Validation
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/state.html">
         State
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/visibility.html">
         Visibility
-
+        
       </a>
-
+    
   </div>
 </div>
 </div>
@@ -420,7 +434,7 @@
   <i class="content icon"></i>
   <span class="text">Menu</span>
 </div>
-
+  
 
 
 
@@ -430,17 +444,17 @@
     <a class="launch icon item">
       <i class="content icon"></i>
     </a>
-
+    
       <div class="item">
         Step
       </div>
-
+    
     <div class="right menu">
-
+      
       <div class="vertically fitted borderless item">
         <iframe class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
       </div>
-
+      
       <!--
       <div class="item">
         <div class="ui hidden right aligned search input" id="search">
@@ -459,7 +473,7 @@
     <div class="full height">
       <div class="toc">
         <div class="ui big vertical inverted menu">
-
+          
 
 
 
@@ -483,361 +497,361 @@
 <div class="item">
   <div class="header">Introduction</div>
   <div class="menu">
-
+    
       <a class="item" href="/introduction/integrations.html">
         Integrations
       </a>
-
+    
       <a class="item" href="/introduction/build-tools.html">
         Build Tools
       </a>
-
+    
       <a class="item" href="/introduction/advanced-usage.html">
         Recipes
       </a>
-
+    
       <a class="item" href="/introduction/glossary.html">
         Glossary
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class="header">Usage</div>
   <div class="menu">
-
+    
       <a class="item" href="/usage/theming.html">
         Theming
       </a>
-
+    
       <a class="item" href="/usage/layout.html">
         Layouts
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Globals</div>
   <div class="menu">
-
+    
       <a class="item" href="/globals/reset.html">
         Reset
-
+        
       </a>
-
+    
       <a class="item" href="/globals/site.html">
         Site
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class="active  header">Elements</div>
   <div class="menu">
-
+    
       <a class="item" href="/elements/button.html">
         Button
-
+        
       </a>
-
+    
       <a class="item" href="/elements/container.html">
         Container
-
+        
       </a>
-
+    
       <a class="item" href="/elements/divider.html">
         Divider
-
+        
       </a>
-
+    
       <a class="item" href="/elements/emoji.html">
         Emoji
-
+        
       </a>
-
+    
       <a class="item" href="/elements/flag.html">
         Flag
-
+        
       </a>
-
+    
       <a class="item" href="/elements/header.html">
         Header
-
+        
       </a>
-
+    
       <a class="item" href="/elements/icon.html">
         Icon
-
+        
       </a>
-
+    
       <a class="item" href="/elements/image.html">
         Image
-
+        
       </a>
-
+    
       <a class="item" href="/elements/input.html">
         Input
-
+        
       </a>
-
+    
       <a class="item" href="/elements/label.html">
         Label
-
+        
       </a>
-
+    
       <a class="item" href="/elements/list.html">
         List
-
+        
       </a>
-
+    
       <a class="item" href="/elements/loader.html">
         Loader
-
+        
       </a>
-
+    
       <a class="item" href="/elements/placeholder.html">
         Placeholder
-
+        
       </a>
-
+    
       <a class="item" href="/elements/rail.html">
         Rail
-
+        
       </a>
-
+    
       <a class="item" href="/elements/reveal.html">
         Reveal
-
+        
       </a>
-
+    
       <a class="item" href="/elements/segment.html">
         Segment
-
+        
       </a>
-
+    
       <a class="active item" href="/elements/step.html">
         Step
-
+        
       </a>
-
+    
       <a class="item" href="/elements/text.html">
         Text
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Collections</div>
   <div class="menu">
-
+    
       <a class="item" href="/collections/breadcrumb.html">
         Breadcrumb
-
+        
       </a>
-
+    
       <a class="item" href="/collections/form.html">
         Form
-
+        
       </a>
-
+    
       <a class="item" href="/collections/grid.html">
         Grid
-
+        
       </a>
-
+    
       <a class="item" href="/collections/menu.html">
         Menu
-
+        
       </a>
-
+    
       <a class="item" href="/collections/message.html">
         Message
-
+        
       </a>
-
+    
       <a class="item" href="/collections/table.html">
         Table
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Views</div>
   <div class="menu">
-
+    
       <a class="item" href="/views/advertisement.html">
         Ad
-
+        
       </a>
-
+    
       <a class="item" href="/views/card.html">
         Card
-
+        
       </a>
-
+    
       <a class="item" href="/views/comment.html">
         Comment
-
+        
       </a>
-
+    
       <a class="item" href="/views/feed.html">
         Feed
-
+        
       </a>
-
+    
       <a class="item" href="/views/item.html">
         Item
-
+        
       </a>
-
+    
       <a class="item" href="/views/statistic.html">
         Statistic
-
+        
       </a>
-
+    
   </div>
 </div>
 <div class="item">
   <div class=" header">Modules</div>
   <div class="menu">
-
+    
       <a class="item" href="/modules/accordion.html">
         Accordion
-
+        
       </a>
-
+  
       <a class="item" href="/modules/calendar.html">
         Calendar
-
+        
       </a>
-
+  
       <a class="item" href="/modules/checkbox.html">
         Checkbox
-
+        
       </a>
-
+  
       <a class="item" href="/modules/dimmer.html">
         Dimmer
-
+        
       </a>
-
+  
       <a class="item" href="/modules/dropdown.html">
         Dropdown
-
+        
       </a>
-
+  
       <a class="item" href="/modules/embed.html">
         Embed
-
+        
       </a>
-
+  
       <a class="item" href="/modules/flyout.html">
         Flyout
-
+        
         <span class="ui mini empty orange circular ui label"></span>
-
+        
       </a>
-
+  
       <a class="item" href="/modules/modal.html">
         Modal
-
+        
       </a>
-
+  
       <a class="item" href="/modules/nag.html">
         Nag
-
+        
       </a>
-
+  
       <a class="item" href="/modules/popup.html">
         Popup
-
+        
       </a>
-
+  
       <a class="item" href="/modules/progress.html">
         Progress
-
+        
       </a>
-
+  
       <a class="item" href="/modules/rating.html">
         Rating
-
+        
       </a>
-
+  
       <a class="item" href="/modules/search.html">
         Search
-
+        
       </a>
-
+  
       <a class="item" href="/modules/shape.html">
         Shape
-
+        
       </a>
-
+  
       <a class="item" href="/modules/sidebar.html">
         Sidebar
-
+        
       </a>
-
+  
       <a class="item" href="/modules/slider.html">
         Slider
-
+        
       </a>
-
+  
       <a class="item" href="/modules/sticky.html">
         Sticky
-
+        
       </a>
-
+  
       <a class="item" href="/modules/tab.html">
         Tab
-
+        
       </a>
-
+  
       <a class="item" href="/modules/toast.html">
         Toast
-
+        
       </a>
-
+  
       <a class="item" href="/modules/transition.html">
         Transition
-
+        
       </a>
-
+  
   </div>
 </div>
 <div class="item">
   <div class=" header">Behaviors</div>
   <div class="menu">
-
+    
       <a class="item" href="/behaviors/api.html">
         API
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/form.html">
         Form Validation
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/state.html">
         State
-
+        
       </a>
-
+    
       <a class="item" href="/behaviors/visibility.html">
         Visibility
-
+        
       </a>
-
+    
   </div>
 </div>
         </div>
       </div>
       <div class="article">
-
+        
 
 <div class="ui masthead vertical segment">
   <div class="ui container">
@@ -845,15 +859,16 @@
 
       <h1 class="ui header">
         Step
-
+        
+        <span class="ui small dependency labels" data-element="step"></span>
         <div class="sub header">
           <a class="twitter-share-button twitter"
             href="https://twitter.com/share"
-            data-text="Fomantic-UI 2.9.3 is the official community fork of Semantic-UI&#010;Find the step element here"
+            data-text="Fomantic-UI 2.9.4 is the official community fork of Semantic-UI&#010;Find the step element here"
             data-url="https://fomantic-ui.com/elements/step.html"
             data-via="fomanticui">
           </a>
-          <script type="text/javascript">
+          <script>
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>
           <iframe title="github star button" class="github" src="https://ghbtns.com/github-btn.html?user=fomantic&amp;repo=fomantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
@@ -867,36 +882,36 @@
         <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/fomantic/Fomantic-UI-Docs/edit/master/server/documents/elements\step.html.eco">
           <i class="edit icon"></i>
         </a>
-
+        
         <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/fomantic/Fomantic-UI/issues/new?body=%23%20Bug%20Report%0A%0A%3C!--%0ATitle%20Format%0A%20%20%5BScope%5D%20Summary%20of%20what%20is%20broken%0A--%3E%0A%0A%23%23%20Steps%20to%20reproduce%0A1.%0A2.%0A3.%0A%0A%23%23%20Expected%20result%0A%0A%23%23%20Actual%20result%0A%0A%23%23%20Testcase%0A%3C!--%20Fork%20https%3A%2F%2Fjsfiddle.net%2F31d6y7mn%20--%3E%0A%0A%23%23%20Screenshot%20(when%20possible)%0A!%5B%5D()%0A%0A%23%23%20Version%0Ax.x.x">
           <i class="bug icon"></i>
         </a>
-
+        
         <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/fomantic/Fomantic-UI">
-          <i class="alternate github icon"></i>
+          <i class="github icon"></i>
         </a>
       </div>
 
-
-
+      
+      
       <div class="ui floating dropdown theme basic button" data-element="step" data-type="element">
         <span class="text">3 Themes</span>
         <div class="menu transition hidden">
-
+          
             <div class="item" data-value="Default" data-text="Default Theme">Default</div>
-
+          
             <div class="item" data-value="Basic" data-text="Basic Theme">Basic</div>
-
+          
             <div class="item" data-value="GitHub" data-text="GitHub Theme">GitHub</div>
-
+          
         </div>
       </div>
-
+      
     </div>
-
+    
   </div>
 </div>
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/step.less" />
+<link rel="stylesheet/less" href="/src/definitions/elements/step.less" />
 
 <div class="main ui container">
 
@@ -908,6 +923,18 @@
     <div class="ui steps">
       <div class="step">
         Shipping
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true" data-since="2.9.4">
+    <h4 class="ui header">Circular Step</h4>
+    <p>A single circular step</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          Shipping
+        </div>
       </div>
     </div>
   </div>
@@ -950,9 +977,40 @@
     </div>
   </div>
 
+  <div class="example" data-since="2.9.4">
+    <h4 class="ui header">
+      Circular Steps
+    </h4>
+    <p>Circular steps shows a series of steps with a connection line between them.</p>
+    <div class="ui ignored warning message">
+        <p>Circular steps do currently <b>not</b> automatically stack on mobile devices. You may use <a href="#vertical-circular">Vertical Circular Steps</a>.</p>
+    </div>
+    <p></p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title"><i class="payment icon"></i> Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="center aligned content">
+          <div class="title"><i class="info icon"></i> Confirm Order</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="example">
     <h4 class="ui header">Ordered</h4>
-    <p>A step can show a ordered sequence of steps</p>
+    <p>A step can show an ordered sequence of steps</p>
     <div class="ui ordered steps">
       <div class="completed step">
         <div class="content">
@@ -968,11 +1026,58 @@
       </div>
       <div class="active step">
         <div class="content">
-          <div class="title">Confirm Order</div>
+          <div class="title">Confirm</div>
           <div class="description">Verify order details</div>
         </div>
       </div>
+      <div class="step">
+        <div class="content">
+          <div class="title">Transfer</div>
+          <div class="description">Packgage on its way</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="content">
+          <div class="title">Delivered</div>
+          <div class="description">Package received</div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="another example">
+      <div class="ui circular ordered steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Transfer</div>
+            <div class="description">Packgage on its way</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Delivered</div>
+            <div class="description">Package received</div>
+          </div>
+        </div>
+      </div>
   </div>
 
   <div class="example">
@@ -1030,6 +1135,31 @@
     </div>
   </div>
 
+  <div class="example" data-since="2.9.4">
+      <h4 class="ui header">Vertical Circular</h4>
+      <p>Vertical circular steps show a series of steps with the connection line between them vertically next to the title and description of each step. Similar to <a href="/views/feed.html#connected">Connected Feed</a></p>
+      <div class="ui circular vertical steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm Order</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
   <h2 class="ui dividing header">Content</h2>
 
   <div class="example" data-use-content="true">
@@ -1042,6 +1172,54 @@
       </div>
     </div>
   </div>
+  <div class="another example" data-use-content="true" data-since="2.9.4" data-class="content">
+    <p>Circular steps always need a <code>content</code> wrapper</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true"  data-since="2.9.4">
+    <h4 class="ui header">Center Aligned</h4>
+    <p>Horizontal circular steps can show their title center aligned next to the connection line. The last step will not show the connection line anymore</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="center aligned content">
+            <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="center aligned content">
+            <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true"  data-since="2.9.4">
+    <h4 class="ui header">Bottom Aligned</h4>
+    <p>Horizontal circular steps can also show their title and/or description under the connection line</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="bottom aligned content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="bottom aligned content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-use-content="true">
     <h4 class="ui header">Icon</h4>
     <p>A step can contain an icon</p>
@@ -1055,9 +1233,21 @@
       </div>
     </div>
   </div>
+  <div class="example" data-use-content="true">
+    <p>Icons in circular steps are part of the title or description node</p>
+    <div class="ui circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-use-content="true" data-tag="a">
     <h4 class="ui header">Link</h4>
-    <p>A step can link</p>
+    <p>A step can link by either using an anchor tag or adding the <code>link</code> class</p>
     <div class="ui steps">
       <a class="active step">
         <i class="truck icon"></i>
@@ -1092,6 +1282,39 @@
     </div>
   </div>
 
+  <div class="example" data-use-content="true" data-tag="a">
+    <div class="ui circular steps">
+      <a class="active step">
+        <div class="content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </a>
+      <a class="step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui circular steps">
+      <div class="link step">
+        <div class="content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="link step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <h2 class="ui dividing header">States</h2>
 
@@ -1108,6 +1331,18 @@
       </div>
     </div>
   </div>
+
+  <div class="another example" data-class="active">
+    <div class="ui circular steps">
+      <div class="active step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-class="completed">
     <h4 class="ui header">Completed</h4>
     <p>A step can show that a user has completed it</p>
@@ -1122,7 +1357,7 @@
     </div>
   </div>
   <div class="another example">
-    <div class="ui ordered steps">
+    <div class="ui circular steps">
       <div class="completed step">
         <div class="content">
           <div class="title">Billing</div>
@@ -1141,12 +1376,24 @@
       </div>
     </div>
   </div>
+  <div class="another example" data-class="disabled">
+    <div class="ui circular steps">
+      <div class="disabled step">
+        <div class="center aligned content">
+            <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <h2 class="ui dividing header">Variations</h2>
 
   <div class="example" data-class="!tablet stackable, stackable">
     <h4 class="ui header">Stackable</h4>
     <p>A step can stack vertically only on smaller screens</p>
+    <div class="ui ignored warning message">
+        <p>Currently <b>not</b> supported by Circular steps. You may use <a href="#vertical-circular">Vertical Circular Steps</a>.</p>
+    </div>
     <div class="ui tablet stackable steps">
       <div class="step">
         <i class="plane icon"></i>
@@ -1330,6 +1577,27 @@
     </div>
   </div>
 
+  <div class="another example" data-since="2.9.4">
+    <p>Horizontal circular steps are always evenly divided</p>
+    <div class="ui circular steps">
+      <div class="completed step">
+        <div class="center aligned content">
+          <div class="title"><i class="truck icon"></i> Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
+          <div class="title"><i class="payment icon"></i> Billing</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="center aligned content">
+          <div class="title"><i class="info icon"></i> Confirm Order</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-class="size">
     <h4 class="ui header">Size</h4>
     <p>Steps can have different sizes</p>
@@ -1350,6 +1618,28 @@
       </div>
       <div class="disabled step">
         <i class="info icon"></i>
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui mini circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
         <div class="content">
           <div class="title">Confirm Order</div>
           <div class="description">Verify order details</div>
@@ -1383,6 +1673,29 @@
     </div>
   </div>
   <div class="another example">
+    <div class="ui tiny circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="another example">
     <div class="ui small steps">
       <div class="step">
         <i class="truck icon"></i>
@@ -1408,6 +1721,29 @@
     </div>
   </div>
   <div class="another example">
+    <div class="ui small circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="another example">
     <div class="ui large steps">
       <div class="step">
         <i class="truck icon"></i>
@@ -1418,6 +1754,20 @@
       <div class="active step">
         <i class="payment icon"></i>
         <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui large circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
           <div class="title">Billing</div>
         </div>
       </div>
@@ -1440,6 +1790,20 @@
     </div>
   </div>
   <div class="another example">
+    <div class="ui big circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui huge steps">
       <div class="step">
         <i class="truck icon"></i>
@@ -1450,6 +1814,20 @@
       <div class="active step">
         <i class="payment icon"></i>
         <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui huge circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
           <div class="title">Billing</div>
         </div>
       </div>
@@ -1467,6 +1845,20 @@
       <div class="active step">
         <i class="payment icon"></i>
         <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui massive circular steps">
+      <div class="step">
+        <div class="center aligned content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="center aligned content">
           <div class="title">Billing</div>
         </div>
       </div>
@@ -1501,8 +1893,31 @@
         </div>
       </div>
     </div>
-
   </div>
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted circular steps">
+        <div class="step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <div class="content">
+            <div class="title">Confirm Order</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="another example">
     <div class="ui inverted segment">
@@ -1521,14 +1936,62 @@
         </div>
         <div class="active step">
           <div class="content">
-            <div class="title">Confirm Order</div>
+            <div class="title">Confirm</div>
             <div class="description">Verify order details</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Transfer</div>
+            <div class="description">Packgage on its way</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Delivered</div>
+            <div class="description">Package received</div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted ordered circular steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Transfer</div>
+            <div class="description">Packgage on its way</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Delivered</div>
+            <div class="description">Package received</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="another example">
     <div class="ui inverted segment">
@@ -1556,7 +2019,610 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted vertical circular steps">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Shipping</div>
+            <div class="description">Choose your shipping options</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Billing</div>
+            <div class="description">Enter billing information</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+            <div class="title">Confirm Order</div>
+            <div class="description">Verify order details</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  
+  
+  
+
+  
+    <div class="example" data-class="colors" data-since="2.9.4">
+    <h4 class="ui header">Color</h4>
+    <p>Circular Steps can be shown in different colors for active and completed steps of the whole step group</p>
+  
+      <div class="ui primary small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui secondary small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui red small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui orange small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui yellow small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui olive small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui green small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui teal small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui blue small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui violet small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui purple small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui pink small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui brown small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui grey small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  
+    <div class="another example" data-class="colors">
+  
+      <div class="ui black small circular ordered steps">
+        <div class="completed step">
+          <div class="center aligned content">
+            <div class="title">Completed</div>
+          </div>
+        </div>
+        <div class="completed active step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active</div>
+          </div>
+        </div>
+        <div class="completed active disabled step">
+          <div class="content">
+            <div class="title">Completed...</div>
+            <div class="description">...and active ... and disabled</div>
+          </div>
+        </div>
+        <div class="active step">
+          <div class="center aligned content">
+            <div class="title">Active</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="content">
+            <div class="title">Default</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+  <div class="another example" data-class="colors">
+    <p>Single steps of a circular steps group can have a separate color</p>
+    <div class="ui red circular ordered steps">
+        <div class="completed step"></div>
+        <div class="completed orange step"></div>
+        <div class="active yellow step"></div>
+        <div class="olive step"></div>
+        <div class="green step"></div>
+    </div>
+    <br>
+    <div class="ui circular ordered steps">
+        <div class="completed teal step"></div>
+        <div class="completed blue step"></div>
+        <div class="active violet step"></div>
+        <div class="purple step"></div>
+        <div class="pink step"></div>
+    </div>
   </div>
 
 
@@ -1585,8 +2651,10 @@
         <h4 class="ui header">Social</h4>
         <div class="ui link list">
           <a class="item" href="https://twitter.com/fomanticui" target="_blank">
-            <i class="twitter icon"></i>
-            Twitter
+            <svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"></path>
+            </svg>
+            X (formerly Twitter)
           </a>
           <a class="item" href="https://medium.com/@fomantic" target="_blank">
             <i class="medium icon"></i>
@@ -1595,12 +2663,6 @@
         </div>
       </div>
       <div class="eight wide middle aligned right floated column">
-        <div class="footer-sponsor">
-          <a href="https://www.digitalocean.com/?utm_medium=opensource&utm_source=fomantic" target="_blank">
-            <p>Infrastructure hosted and powered by DigitalOcean</p>
-            <img class="ui small image" src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/PNG/DO_Logo_Horizontal_Blue.png" alt="DigitalOcean">
-          </a>
-        </div>
         <div class="footer-sponsor">
           <a href="https://www.browserstack.com" target="_blank">
             <p>Cross-browser testing provided by</p>
@@ -1649,5 +2711,14 @@ window.less = {
 
 <script src="/javascript/library/less.min.js"></script>
 
+  <!-- Gurubase Widget -->
+<script async src="https://widget.gurubase.io/widget.latest.min.js"
+        data-widget-id="I5IHFzikfEBrFMeiAtOECC9BpdwH6pWjJgNKqiC1gY8"
+        data-text="Ask AI"
+        data-tooltip="AI generated Code and answers are not promised to be correct. Use at your own risk"
+        data-margins='{"bottom": "1rem", "right": "1rem"}'
+        data-light-mode="true"
+        id="guru-widget-id">
+</script>
 </body>
 </html>
