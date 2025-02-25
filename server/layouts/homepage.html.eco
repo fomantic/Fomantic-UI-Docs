@@ -13,7 +13,7 @@
   <%- @partial('sidebar') %>
   <%- @partial('fixed-menu') %>
 
-  <div class="pusher">
+  <div class="pusher" id="gurubase-page-content-wrapper">
     <div class="full height">
       <%- @content %>
     </div>

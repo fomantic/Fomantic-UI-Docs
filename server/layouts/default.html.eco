@@ -15,7 +15,7 @@
   <% end %>
   <%- @partial('sidebar') %>
   <%- @partial('fixed-menu') %>
-  <div class="pusher">
+  <div class="pusher" id="gurubase-page-content-wrapper">
     <div class="full height">
       <div class="toc">
         <div class="ui big vertical inverted menu">
