@@ -85,11 +85,7 @@ themes      : ['Default', 'Basic', 'GitHub']
       Circular Steps
     </h4>
     <p>Circular steps shows a series of steps with a connection line between them.</p>
-    <div class="ui ignored warning message">
-        <p>Circular steps do currently <b>not</b> automatically stack on mobile devices. You may use <a href="#vertical-circular">Vertical Circular Steps</a>.</p>
-    </div>
-    <p></p>
-    <div class="ui circular steps">
+    <div class="ui circular stackable steps">
       <div class="step">
         <div class="content">
           <div class="title"><i class="truck icon"></i> Shipping</div>
@@ -149,7 +145,7 @@ themes      : ['Default', 'Basic', 'GitHub']
   </div>
 
   <div class="another example">
-      <div class="ui circular ordered steps">
+      <div class="ui circular ordered stackable steps">
         <div class="completed step">
           <div class="content">
             <div class="title">Shipping</div>
@@ -495,7 +491,18 @@ themes      : ['Default', 'Basic', 'GitHub']
     <h4 class="ui header">Stackable</h4>
     <p>A step can stack vertically only on smaller screens</p>
     <div class="ui ignored warning message">
-        <p>Currently <b>not</b> supported by Circular steps. You may use <a href="#vertical-circular">Vertical Circular Steps</a>.</p>
+        <p><a href="#circular-steps">Circular steps</a> do not automatically stack on mobile devices via CSS only. But you can use a small javascript snippet to accomplish this and switch to <a href="#vertical-circular">Vertical Circular Steps</a> automatically.</p>
+        <div class="evaluated code">
+        $(window).on('resize', function() {
+            var circularSteps = $('.ui.stackable.circular.steps'),
+                  isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                circularSteps.addClass('vertical');
+            } else {
+                circularSteps.removeClass('vertical');
+            }
+        });
+        </div>
     </div>
     <div class="ui tablet stackable steps">
       <div class="step">
@@ -521,6 +528,30 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
+
+  <div class="another example" data-class="stackable">
+    <div class="ui stackable circular steps">
+      <div class="step">
+        <div class="content">
+          <div class="title"><i class="plane icon"></i>Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <div class="content">
+          <div class="title"><i class="dollar icon"></i>Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <div class="content">
+          <div class="title"><i class="info circle icon"></i>Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-class="fluid">
     <h4 class="ui header">Fluid</h4>
     <p>A fluid step takes up the width of its container</p>
@@ -1060,7 +1091,7 @@ themes      : ['Default', 'Basic', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui inverted segment">
-      <div class="ui inverted ordered circular steps">
+      <div class="ui inverted ordered circular stackable steps">
         <div class="completed step">
           <div class="content">
             <div class="title">Shipping</div>
@@ -1159,7 +1190,7 @@ themes      : ['Default', 'Basic', 'GitHub']
   <% else: %>
     <div class="another example" data-class="colors">
   <% end %>
-      <div class="ui <%= name %> small circular ordered steps">
+      <div class="ui <%= name %> small circular ordered stackable steps">
         <div class="completed step">
           <div class="center aligned content">
             <div class="title">Completed</div>
