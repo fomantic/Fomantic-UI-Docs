@@ -132,7 +132,7 @@ themes      : ['Default', 'Basic', 'GitHub']
       <div class="step">
         <div class="content">
           <div class="title">Transfer</div>
-          <div class="description">Packgage on its way</div>
+          <div class="description">Package on its way</div>
         </div>
       </div>
       <div class="step">
@@ -167,7 +167,7 @@ themes      : ['Default', 'Basic', 'GitHub']
         <div class="step">
           <div class="content">
             <div class="title">Transfer</div>
-            <div class="description">Packgage on its way</div>
+            <div class="description">Package on its way</div>
           </div>
         </div>
         <div class="step">
@@ -283,7 +283,7 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-use-content="true"  data-since="2.9.4">
+  <div class="example" data-use-content="true" data-since="2.9.4">
     <h4 class="ui header">Center Aligned</h4>
     <p>Horizontal circular steps can show their title center aligned next to the connection line. The last step will not show the connection line anymore</p>
     <div class="ui circular steps">
@@ -300,7 +300,7 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-use-content="true"  data-since="2.9.4">
+  <div class="example" data-use-content="true" data-since="2.9.4">
     <h4 class="ui header">Bottom Aligned</h4>
     <p>Horizontal circular steps can also show their title and/or description under the connection line</p>
     <div class="ui circular steps">
@@ -985,7 +985,7 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
   <div class="another example">
-    <div class="ui massive circular steps">
+    <div class="ui massive circular stackable steps">
       <div class="step">
         <div class="center aligned content">
           <div class="title">Shipping</div>
@@ -1030,7 +1030,7 @@ themes      : ['Default', 'Basic', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui inverted segment">
-      <div class="ui inverted circular steps">
+      <div class="ui inverted circular stackable steps">
         <div class="step">
           <div class="content">
             <div class="title">Shipping</div>
@@ -1077,7 +1077,7 @@ themes      : ['Default', 'Basic', 'GitHub']
         <div class="step">
           <div class="content">
             <div class="title">Transfer</div>
-            <div class="description">Packgage on its way</div>
+            <div class="description">Package on its way</div>
           </div>
         </div>
         <div class="step">
@@ -1113,7 +1113,7 @@ themes      : ['Default', 'Basic', 'GitHub']
         <div class="step">
           <div class="content">
             <div class="title">Transfer</div>
-            <div class="description">Packgage on its way</div>
+            <div class="description">Package on its way</div>
           </div>
         </div>
         <div class="step">
