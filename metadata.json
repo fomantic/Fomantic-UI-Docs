@@ -27,7 +27,7 @@
     "url": "/behaviors/state.html"
   },
   "validation": {
-    "dependencies": ["calendar","checkbox","dropdown"],
+    "dependencies": ["calendar","checkbox","dropdown","transition"],
     "layout": "default",
     "css": "form",
     "standalone": true,
@@ -535,6 +535,7 @@
     "url": "/modules/checkbox.html"
   },
   "dimmer": {
+    "dependencies": ["transition"],
     "layout": "default",
     "css": "dim",
     "standalone": true,
@@ -795,6 +796,7 @@
     "url": "/modules/sticky.html"
   },
   "tab": {
+    "dependencies": ["api"],
     "layout": "default",
     "css": "",
     "element": "tab",
