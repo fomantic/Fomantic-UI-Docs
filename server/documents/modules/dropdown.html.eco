@@ -1,4 +1,5 @@
 ---
+dependencies: ['api', 'transition']
 layout      : 'default'
 css         : 'dropdown'
 standalone  : true

@@ -1,4 +1,5 @@
 ---
+dependencies: ['calendar', 'checkbox', 'dropdown', 'transition']
 layout      : 'default'
 css         : 'form'
 standalone  : true

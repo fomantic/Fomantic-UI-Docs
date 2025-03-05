@@ -1,4 +1,5 @@
 ---
+dependencies: ['api']
 layout      : 'default'
 css         : 'state'
 standalone  : true

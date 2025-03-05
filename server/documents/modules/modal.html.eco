@@ -1,4 +1,5 @@
 ---
+dependencies: ['dimmer', 'transition']
 layout      : 'default'
 css         : 'modal-page'
 standalone  : true

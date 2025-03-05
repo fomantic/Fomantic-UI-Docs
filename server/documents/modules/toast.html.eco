@@ -1,4 +1,5 @@
 ---
+dependencies: ['transition']
 layout      : 'default'
 css         : ''
 element     : 'toast'
