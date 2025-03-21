@@ -255,11 +255,11 @@ blockquote .author {
   display: none;
   margin: 2rem 0 1rem;
 }
-#example .tab.masthead.segment .tabular.menu {
+#example .tab.masthead.segment .tabbed.menu {
   margin: 3rem 0 0;
   border-bottom: none;
 }
-#example .tab.masthead.segment .tabular.menu .active.item {
+#example .tab.masthead.segment .tabbed.menu .active.item {
   background-color: #F7F7F7;
 }
 
@@ -340,7 +340,7 @@ blockquote .author {
   margin: 3rem 0 2rem;
 }
 
-#example .tab.masthead.segment .fixed .tabular.menu {
+#example .tab.masthead.segment .fixed .tabbed.menu {
   position: fixed;
   top: 50px;
 }

@@ -208,12 +208,15 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Tabular</h4>
+    <h4 class="ui header">Tabbed</h4>
     <p>A menu can be formatted to show tabs of information</p>
+    <div class="ui ignored message">
+      Before 2.10.0, this variation was named <code>tabular</code>. For quicker migration, you can enable the old naming by setting <code>@variationMenuTabbedLegacyTabular: true;</code> inside <a href="/introduction/build-tools.html#variationvariables">variation.variables</a> in your custom theme and <a href="/introduction/build-tools.html">rebuild Fomantic</a>
+    </div>
     <div class="ui ignored info message">
       Be sure to visit the <a href="/modules/tab.html">tab documentation</a> for information on how to set up dynamic tabs
     </div>
-    <div class="ui tabular menu">
+    <div class="ui tabbed menu">
       <a class="active item">
         Bio
       </a>
@@ -223,7 +226,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another example">
-    <div class="ui top attached tabular menu">
+    <div class="ui top attached tabbed menu">
       <a class="active item">
         Bio
       </a>
@@ -247,7 +250,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <div class="ui top attached segment">
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
-    <div class="ui bottom attached tabular menu">
+    <div class="ui bottom attached tabbed menu">
       <a class="active item">
         Active Project
       </a>
@@ -266,11 +269,11 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <div class="ui ignored info message">
-        To make a vertical tabular menu appear seamless attached to the related segment, you should make use of <a href="/collections/grid.html#left--right-attached-column">left/right attached grid columns</a> and <a href="/elements/segment.html#seamless-attached">seamless attached segments</a>
+        To make a vertical tabbed menu appear seamless attached to the related segment, you should make use of <a href="/collections/grid.html#left--right-attached-column">left/right attached grid columns</a> and <a href="/elements/segment.html#seamless-attached">seamless attached segments</a>
     </div>
     <div class="ui grid">
       <div class="four wide left attached column">
-        <div class="ui vertical fluid tabular menu">
+        <div class="ui vertical fluid tabbed menu">
           <a class="active item">
             Bio
           </a>
@@ -300,7 +303,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         </div>
       </div>
       <div class="four wide right attached column">
-        <div class="ui vertical fluid right tabular menu">
+        <div class="ui vertical fluid right tabbed menu">
           <a class="active item">
             Bio
           </a>
@@ -1345,7 +1348,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="example" data-class="!top attached, !bottom attached">
     <h4 class="ui header">Attached</h4>
     <p>A menu may be attached to other content segments</p>
-    <div class="ui top attached tabular menu">
+    <div class="ui top attached tabbed menu">
       <a class="active item">
         Tab 1
       </a>

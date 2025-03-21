@@ -19,7 +19,7 @@ semantic.tab.ready = function() {
     })
   ;
 
-  $('.center.example .tabular.menu .item')
+  $('.center.example .tabbed.menu .item')
     .tab({
       context: '.center.example'
     })

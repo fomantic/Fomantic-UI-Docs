@@ -31,7 +31,7 @@ themes      : ['Default']
       </h4>
       <p>A basic tab</p>
       <div class="ui ignored info message">A tab is hidden by default, and will only become visible when given the class name <code>active</code> or when activated with Javascript. For more information, see the usage section.</div>
-      <div class="ui top attached tabular menu">
+      <div class="ui top attached tabbed menu">
         <div class="item">Tab</div>
       </div>
       <div class="ui bottom attached tab segment">
@@ -49,7 +49,7 @@ themes      : ['Default']
         Active
       </h4>
       <p>A tab can be activated, and visible on the page</p>
-      <div class="ui top attached tabular menu">
+      <div class="ui top attached tabbed menu">
         <div class="active item">Tab</div>
       </div>
       <div class="ui bottom attached active tab segment">
@@ -63,7 +63,7 @@ themes      : ['Default']
         Loading
       </h4>
       <p>A tab can display a loading indicator</p>
-      <div class="ui top attached tabular menu">
+      <div class="ui top attached tabbed menu">
         <div class="active item">Tab</div>
       </div>
       <div class="ui bottom attached loading tab segment">
@@ -81,7 +81,7 @@ themes      : ['Default']
         Centered Item
       </h4>
       <p>A tab can have center aligned items</p>
-      <div class="ui top attached tabular menu">
+      <div class="ui top attached tabbed menu">
         <div class="active item" data-tab="one">One</div>
         <div class="center item" data-tab="two">Two</div>
         <div class="item" data-tab="three">Three</div>
@@ -106,7 +106,7 @@ themes      : ['Default']
       </h4>
       <p>A tab can be shown inverted</p>
       <div class="ui inverted segment">
-        <div class="ui top attached inverted tabular menu">
+        <div class="ui top attached inverted tabbed menu">
           <a class="active item" data-tab="one">Active Tab</a>
           <a class="item" data-tab="two">Tab 2</a>
           <a class="item" data-tab="three">Tab 3</a>
@@ -127,7 +127,7 @@ themes      : ['Default']
       <h4 class="ui header">
         Bottom attached menu
       </h4>
-      <p>You can display the tabular menu at the bottom of the tab segments</p>
+      <p>You can display the tabbed menu at the bottom of the tab segments</p>
       <div class="ui inverted segment">
         <div class="ui top attached inverted tab segment" data-tab="one1">
           <p>content one</p>
@@ -138,7 +138,7 @@ themes      : ['Default']
         <div class="ui top attached inverted tab segment active" data-tab="three1">
           <p>content three</p>
         </div>
-        <div class="ui bottom attached inverted tabular menu">
+        <div class="ui bottom attached inverted tabbed menu">
           <a class="item" data-tab="one1">Active Tab</a>
           <a class="item" data-tab="two1">Tab 2</a>
           <a class="item active" data-tab="three1">Tab 3</a>
@@ -158,7 +158,7 @@ themes      : ['Default']
       <div class="ui ignored info message">
         To have a tab visible on page load, add the class <code>active</code> to both the initializing menu and the tab.
       </div>
-      <div class="ui top attached tabular menu">
+      <div class="ui top attached tabbed menu">
         <a class="active item" data-tab="first">First</a>
         <a class="item" data-tab="second">Second</a>
         <a class="item" data-tab="third">Third</a>
@@ -205,7 +205,7 @@ themes      : ['Default']
           <a class="item" data-tab="third">Third</a>
         </div>
         <div class="ui tab segment" data-tab="first">
-          <div class="ui top attached tabular menu">
+          <div class="ui top attached tabbed menu">
             <a class="active item" data-tab="first/a">1A</a>
             <a class="item" data-tab="first/b">1B</a>
             <a class="item" data-tab="first/c">1C</a>
@@ -215,7 +215,7 @@ themes      : ['Default']
           <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
         </div>
         <div class="ui tab segment active" data-tab="second">
-          <div class="ui top attached tabular menu">
+          <div class="ui top attached tabbed menu">
             <a class="item" data-tab="second/a">2A</a>
             <a class="item" data-tab="second/b">2B</a>
             <a class="item active" data-tab="second/c">2C</a>
@@ -225,7 +225,7 @@ themes      : ['Default']
           <div class="ui bottom attached tab segment active" data-tab="second/c">2C</div>
         </div>
         <div class="ui tab segment" data-tab="third">
-          <div class="ui top attached tabular menu">
+          <div class="ui top attached tabbed menu">
             <a class="item" data-tab="third/a">3A</a>
             <a class="item" data-tab="third/b">3B</a>
             <a class="item" data-tab="third/c">3C</a>
@@ -260,7 +260,7 @@ themes      : ['Default']
             <a class="item" data-tab="third">Third</a>
           </div>
           <div class="ui tab segment" data-tab="first">
-            <div class="ui top attached tabular menu">
+            <div class="ui top attached tabbed menu">
               <a class="active item" data-tab="first/a">1A</a>
               <a class="item" data-tab="first/b">1B</a>
               <a class="item" data-tab="first/c">1C</a>
@@ -270,7 +270,7 @@ themes      : ['Default']
             <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
           </div>
           <div class="ui tab segment active" data-tab="second">
-            <div class="ui top attached tabular menu">
+            <div class="ui top attached tabbed menu">
               <a class="item" data-tab="second/a">2A</a>
               <a class="item" data-tab="second/b">2B</a>
               <a class="item active" data-tab="second/c">2C</a>
@@ -280,7 +280,7 @@ themes      : ['Default']
             <div class="ui bottom attached tab segment active" data-tab="second/c">2C</div>
           </div>
           <div class="ui tab segment" data-tab="third">
-            <div class="ui top attached tabular menu">
+            <div class="ui top attached tabbed menu">
               <a class="item" data-tab="third/a">3A</a>
               <a class="item" data-tab="third/b">3B</a>
               <a class="item" data-tab="third/c">3C</a>
@@ -329,7 +329,7 @@ themes      : ['Default']
         <a class="item" data-tab="third">Third</a>
       </div>
       <div class="ui active tab segment" data-tab="first">
-        <div class="ui top attached tabular menu">
+        <div class="ui top attached tabbed menu">
           <a class="active item" data-tab="first/a">1A</a>
           <a class="item" data-tab="first/b">1B</a>
           <a class="item" data-tab="first/c">1C</a>
@@ -339,7 +339,7 @@ themes      : ['Default']
         <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
       </div>
       <div class="ui tab segment" data-tab="second">
-        <div class="ui top attached tabular menu">
+        <div class="ui top attached tabbed menu">
           <a class="item" data-tab="second/a">2A</a>
           <a class="item" data-tab="second/b">2B</a>
           <a class="item" data-tab="second/c">2C</a>
@@ -349,7 +349,7 @@ themes      : ['Default']
         <div class="ui bottom attached tab segment" data-tab="second/c">2C</div>
       </div>
       <div class="ui tab segment" data-tab="third">
-        <div class="ui top attached tabular menu">
+        <div class="ui top attached tabbed menu">
           <a class="item" data-tab="third/a">3A</a>
           <a class="item" data-tab="third/b">3B</a>
           <a class="item" data-tab="third/c">3C</a>
@@ -459,7 +459,7 @@ themes      : ['Default']
         <a class="item" data-tab="third">Third</a>
       </div>
       <div class="ui active tab segment" data-tab="first">
-        <div class="ui top attached tabular menu">
+        <div class="ui top attached tabbed menu">
           <a class="active item" data-tab="first/a">1A</a>
           <a class="item" data-tab="first/b">1B</a>
           <a class="item" data-tab="first/c">1C</a>
@@ -469,7 +469,7 @@ themes      : ['Default']
         <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
       </div>
       <div class="ui tab segment" data-tab="second">
-        <div class="ui top attached tabular menu">
+        <div class="ui top attached tabbed menu">
           <a class="item" data-tab="second/a">2A</a>
           <a class="item" data-tab="second/b">2B</a>
           <a class="item" data-tab="second/c">2C</a>
@@ -479,7 +479,7 @@ themes      : ['Default']
         <div class="ui bottom attached tab segment" data-tab="second/c">2C</div>
       </div>
       <div class="ui tab segment" data-tab="third">
-        <div class="ui top attached tabular menu">
+        <div class="ui top attached tabbed menu">
           <a class="item" data-tab="third/a">3A</a>
           <a class="item" data-tab="third/b">3B</a>
           <a class="item" data-tab="third/c">3C</a>
@@ -522,10 +522,10 @@ themes      : ['Default']
       <p>Tabs are connected to their activators with a metadata attribute <code>data-tab</code>. This should be added to both the activating element and the tab itself.</p>
 
       <div class="code" data-type="javascript">
-        $('.tabular.menu .item').tab();
+        $('.tabbed.menu .item').tab();
       </div>
       <div class="code" data-type="html">
-        <div class="ui tabular menu">
+        <div class="ui tabbed menu">
           <div class="item" data-tab="tab-name">Tab Name</div>
           <div class="item" data-tab="tab-name2">Tab Name 2</div>
         </div>
@@ -568,10 +568,10 @@ themes      : ['Default']
       </div>
       <div class="ignored ui warning message">
         <h4 class="ui header">Using tab segments</h4>
-        <p>To avoid possible CSS issues when using <code>attached segments</code> you should wrap your tabular menu tab and related attached tab segments into a dedicated DOM node, for example a <code>ui segment</code></p>
+        <p>To avoid possible CSS issues when using <code>attached segments</code> you should wrap your tabbed menu tab and related attached tab segments into a dedicated DOM node, for example a <code>ui segment</code></p>
        <div class="code" data-type="html">
           <div class="ui basic segment">
-            <div class="ui top attached tabular menu">
+            <div class="ui top attached tabbed menu">
               <a class="item" data-tab="entries">Tab menu item</a>
             </div>
             <div class="ui bottom attached tab segment" data-tab="entries">

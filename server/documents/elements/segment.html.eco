@@ -461,7 +461,7 @@ themes      : ['default', 'GitHub']
 
   <div class="example" data-since="2.9.2">
       <h4 class="ui header">Seamless attached</h4>
-      <p>A segment can be seamless attached removing the related sides border. This is especially useful when working with a <a href="/collections/menu.html#tabular"><code>vertical tabular menu</code></a></p>
+      <p>A segment can be seamless attached removing the related sides border. This is especially useful when working with a <a href="/collections/menu.html#tabbed"><code>vertical tabbed menu</code></a></p>
       <div class="ui horizontal segments">
           <div class="ui seamless left attached right aligned segment">
             <p>This segment is seamless left attached</p>

@@ -386,7 +386,7 @@ type        : 'UI Module'
       </div>
       <div class="ui segment">
         <div class="ui sticky">
-          <div class="ui fluid three item tabular menu">
+          <div class="ui fluid three item tabbed menu">
             <a class="active item">Tab 1</a>
             <a class="item">Tab 2</a>
             <a class="item">Tab 3</a>
