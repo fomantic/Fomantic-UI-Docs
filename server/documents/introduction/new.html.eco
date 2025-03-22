@@ -275,7 +275,7 @@ type        : 'Main'
       <div class="item">
         <div>Tab</div>
         <div class="list">
-          <div class="item">Tabular menus and their related segments have to stay in a dedicated parent node to allow more than two attached segments</div>
+          <div class="item">Tabbed menus and their related segments have to stay in a dedicated parent node to allow more than two attached segments</div>
         </div>
       </div>
       <div class="item">
