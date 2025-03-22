@@ -61,7 +61,7 @@ themes      : ['Default']
       <h4 class="ui header">General</h4>
       <p>You can provide the emoji shortname with or without colons</p>
       <div class="ui ignored info message">
-        Since 2.10.0, if you want to use the non-colon variant, you have to set <code>@variationEmojiNoColons: true;</code> in your custom theme and rebuild Fomantic.
+        Since 2.10.0, if you want to use the non-colon variant, you have to set <code>@variationEmojiNoColons: true;</code> inside <a href="/introduction/build-tools.html#variationvariables">variation.variables</a> in your custom theme and <a href="/introduction/build-tools.html">rebuild Fomantic</a>.
       </div>
       <div class="code">
           I <em data-emoji=":cupid:"></em> Fomantic-UI
