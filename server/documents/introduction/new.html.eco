@@ -313,7 +313,7 @@ type        : 'Main'
 
   <div class="ui tab" data-tab="twoeight">
     <h2 class="ui dividing header">Toasty Emotion</h2>
-    <p>Fomantic <code>2.8</code> brings some of the best updates yet including variation feature customization for components, more toast changes and EMOTES <em data-emoji="tada"></em> <em data-emoji="smile"></em> and of course A LOT of critical and much needed bug fixes.</p>
+    <p>Fomantic <code>2.8</code> brings some of the best updates yet including variation feature customization for components, more toast changes and EMOTES <em data-emoji=":tada:"></em> <em data-emoji="smile"></em> and of course A LOT of critical and much needed bug fixes.</p>
 
     <p>Since this is a breaking changes update here is a list of breaking changes:</p>
     <div class="ui bulleted list">
@@ -397,7 +397,7 @@ type        : 'Main'
 
       <p><code>2.8</code> introduces the new emoji element with support for all <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Unicode 12.1 Emoji Characters</a>.</p>
 
-      <p><em data-emoji="tada" class="large"></em> <em data-emoji="partying_face" class="large"></em> <em data-emoji="champagne" class="large"></em></p>
+      <p><em data-emoji=":tada:" class="large"></em> <em data-emoji=":partying_face:" class="large"></em> <em data-emoji=":champagne:" class="large"></em></p>
 
       <p>You can find a full list of all emojis <a href="/elements/emoji.html">here</a>.</p>
     </div>
@@ -407,7 +407,7 @@ type        : 'Main'
         Dynamic LESS Compilation
       </h4>
 
-      <p>In <code>2.8</code> we are introducing a new feature for building custom themes, Dynamic LESS Compilation. This new feature allows you to disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size speeding up your website <em data-emoji="clap"></em></p>
+      <p>In <code>2.8</code> we are introducing a new feature for building custom themes, Dynamic LESS Compilation. This new feature allows you to disable specific variations of components allowing you to generate CSS files which only contain features you require. This makes your custom distribution files much smaller in size speeding up your website <em data-emoji=":clap:"></em></p>
     </div>
 
     <div class="content example">
