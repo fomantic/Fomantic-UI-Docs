@@ -1,7 +1,30 @@
 
 // namespace
 window.semantic = {
-  handler: {}
+  handler: {},
+    iframeCheck: function() {
+        if (window.location !== window.parent.location) {
+            var errorLabel = 'ERROR';
+            var error = 'Fomantic-UI was loaded inside a foreign website frame!';
+            console.error(errorLabel, error.toUpperCase());
+
+            var $errorDimmer = $('<div/>', {
+                class: 'ui page dimmer transition visible',
+                html: '<div class="content ui inverted black very padded segment looping pulsating transition">' +
+                    '<div class="ui big red floating label"><i class="biohazard icon"></i>' + errorLabel + '</div>' +
+                    '<p class="ui massive header">' +
+                        '<em data-emoji=":scream:"></em> ' + error +
+                    '</p>' +
+                    '<p class="ui big header">' +
+                        'Open <a href="https://fomantic-ui.com" target="_top">https://fomantic-ui.com</a> directly to remove this message.' +
+                    '</p>' +
+                '</div>'
+            });
+            $('body').append($errorDimmer);
+            $errorDimmer.dimmer({closable: false}).dimmer('show');
+
+        }
+    }
 };
 
 // Allow for console.log to not break IE
@@ -128,6 +151,7 @@ semantic.ready = function() {
         onSuccess: function(response) {
           metadata = response;
           handler.createDependencyLabels();
+          window.semantic.iframeCheck();
         }
       });
     },
