@@ -1,25 +1,34 @@
 
 // namespace
 window.semantic = {
-  handler: {}
+    handler: {},
+    iframeCheck: function() {
+        if (window.location !== window.parent.location) {
+            let errorLabel = 'ERROR';
+            let error = 'Fomantic-UI was loaded inside a foreign website frame!';
+            console.error(errorLabel, error.toUpperCase());
+
+            let $errorDimmer = $('<div/>', {
+                class: 'ui page dimmer transition visible',
+                html: `
+                <div class="content ui inverted black very padded segment looping pulsating transition">
+                    <div class="ui big red floating label"><i class="biohazard icon"></i>${errorLabel}</div>
+                    <p class="ui massive header">
+                         <em data-emoji=":scream:"></em> ${error}
+                    </p>
+                    <p class="ui big header">
+                        Open <a href="https://fomantic-ui.com" target="_top">https://fomantic-ui.com</a> directly to remove this message.
+                    </p>
+                </div>
+                `
+            });
+            $('body').append($errorDimmer);
+            $errorDimmer.dimmer({closable: false}).dimmer('show');
+
+        }
+    }
 };
 
-// Allow for console.log to not break IE
-if (typeof window.console == "undefined" || typeof window.console.log == "undefined") {
-  window.console = {
-    log  : function() {},
-    info : function(){},
-    warn : function(){}
-  };
-}
-if(typeof window.console.group == 'undefined' || typeof window.console.groupEnd == 'undefined' || typeof window.console.groupCollapsed == 'undefined') {
-  window.console.group = function(){};
-  window.console.groupEnd = function(){};
-  window.console.groupCollapsed = function(){};
-}
-if(typeof window.console.markTimeline == 'undefined') {
-  window.console.markTimeline = function(){};
-}
 window.console.clear = function(){};
 
 // ready event
@@ -86,7 +95,7 @@ semantic.ready = function() {
        className = className || 'ui label';
        tag = tag || 'div';
 
-       var $label =  $('<' + tag + '/>', { class: className, text: text });
+       let $label =  $('<' + tag + '/>', { class: className, text: text });
        if (tooltip) {
            $label.attr('data-tooltip', tooltip);
            $label.attr('data-position', 'right center');
@@ -100,13 +109,13 @@ semantic.ready = function() {
     createDeprecatedLabel: function(feature, hint, extraClass) {
       hint = hint || '';
       extraClass = extraClass || '';
-      var deprecatedSinceRegex = new RegExp(/^\[.*?\]/),
+      let deprecatedSinceRegex = new RegExp(/^\[.*?\]/),
           deprecatedSince = String(hint).match(deprecatedSinceRegex);
       if (deprecatedSince) {
           deprecatedSince = deprecatedSince[0].replace(/[\[\]]/g,'');
           hint = hint.replace(deprecatedSinceRegex,'');
       }
-      var tooltip = ((feature && feature !== '' ? '\'' + feature + '\' is DEPRECATED' + (deprecatedSince ? ' since ' + deprecatedSince : '') + ' and' : 'This') + ' will be REMOVED in a future version')
+      let tooltip = ((feature && feature !== '' ? '\'' + feature + '\' is DEPRECATED' + (deprecatedSince ? ' since ' + deprecatedSince : '') + ' and' : 'This') + ' will be REMOVED in a future version')
           .replace(/ /g,' ');
       if (hint!=='') {
           tooltip += '\n\n--> ' + hint.replace(/ /g,' ');
@@ -128,13 +137,14 @@ semantic.ready = function() {
         onSuccess: function(response) {
           metadata = response;
           handler.createDependencyLabels();
+          window.semantic.iframeCheck();
         }
       });
     },
 
     scrollToHash: function() {
       if(handler.scrollToSelector) {
-        var $element = $(handler.scrollToSelector);
+        let $element = $(handler.scrollToSelector);
         if($element.length) {
           var
             position = $element.offset() ? $element.offset().top + 10 : 0
@@ -277,14 +287,14 @@ semantic.ready = function() {
     },
 
     createDependencyLabels: function() {
-        var element = $dependencyGroup.data('element'),
+        let element = $dependencyGroup.data('element'),
             meta = metadata && metadata[element],
             cap = function(s) {
                 return s[0].toUpperCase() + s.slice(1);
             };
         if (meta && meta.dependencies) {
             $.each(meta.dependencies, function (index, dep) {
-                var depMeta = metadata[dep],
+                let depMeta = metadata[dep],
                     depType = depMeta && depMeta.elementType,
                     depUrl = depMeta && depMeta.url;
                 if(depMeta) {
@@ -339,7 +349,7 @@ semantic.ready = function() {
             wordOrder = classes && classes.indexOf('!') >= 0
           ;
           if ($title.length > 0 && id.length > 0 && $title.find('a').length === 0) {
-            var $contentWrapped = $("<a/>").attr('href', '#' + id).html([
+            let $contentWrapped = $("<a/>").attr('href', '#' + id).html([
               $('<i class="fitted small linkify icon"></i>'),
               $title.html()
             ]).on('click', handler.scrollTo);
@@ -359,20 +369,20 @@ semantic.ready = function() {
             $title.append(' <a href="/introduction/getting-started#class-order"><div class="ui small wordorder label"><i class="attention icon"></i>Word order required</div></a>');
           }
           $sinces.each(function(){
-              var $el = $(this),
+              let $el = $(this),
                   since = $el.data('since');
               $el.append(handler.createNewInLabel(since,'tiny horizontal'));
           });
         })
       ;
       $tableSinceCells.each(function(){
-        var $el = $(this),
+        let $el = $(this),
             since = $el.data('since');
         $el.append(handler.createNewInLabel(since,'tiny horizontal', 'span'));
       });
 
       $tableDeprecatedRows.each(function(){
-        var $el = $(this),
+        let $el = $(this),
             deprecatedHint = $el.data('deprecated'),
             $parameterCell = $el.find('>td:first-child'),
             parameter = $parameterCell.text();
@@ -501,7 +511,7 @@ semantic.ready = function() {
         $element = $('#' + id)
       ;
       if($element.length) {
-        var position = $element.offset() ? $element.offset().top - 10 : 0;
+        let position = $element.offset() ? $element.offset().top - 10 : 0;
         $element
             .addClass('active')
         ;
@@ -581,7 +591,7 @@ semantic.ready = function() {
                   dataType : 'text',
                   urlData  : urlData,
                   onSuccess: function(content) {
-                    var styleOverride = $('style.override');
+                    let styleOverride = $('style.override');
                     if( styleOverride.length > 0 ) {
                         styleOverride.remove();
                     }
@@ -923,7 +933,7 @@ semantic.ready = function() {
         // check if any class match
         // check multi-word classes first
         classes.sort(function(a,b){
-          var aSpaces = a.split(' ').length - 1,
+          let aSpaces = a.split(' ').length - 1,
               bSpaces = b.split(' ').length - 1;
           return aSpaces > bSpaces
             ? -1
@@ -1211,7 +1221,7 @@ semantic.ready = function() {
 
     if(selector) {
     // check if anchor is inside an invisible tab
-      var $insideTab = $(selector).closest('.tab:not(.active)');
+      let $insideTab = $(selector).closest('.tab:not(.active)');
       if($insideTab.length) {
         $pageTabs.removeClass('active');
         $('.main.ui.container > .ui.tab').removeClass('active');
