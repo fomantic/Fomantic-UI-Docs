@@ -3,8 +3,6 @@
 window.semantic = {
     handler: {},
     iframeCheck: function() {
-        console.log(window.location, window.parent.location);
-
         if (window.location !== window.parent.location) {
             let errorLabel = 'ERROR';
             let error = 'Fomantic-UI was loaded inside a foreign website frame!';
@@ -13,7 +11,7 @@ window.semantic = {
             let $errorDimmer = $('<div/>', {
                 class: 'ui page dimmer transition visible',
                 html: `
-                <div class="content ui inverted black very padded segment transition pulsating">
+                <div class="content ui inverted black very padded segment looping pulsating transition">
                     <div class="ui big red floating label"><i class="biohazard icon"></i>${errorLabel}</div>
                     <p class="ui massive header">
                          <em data-emoji=":scream:"></em> ${error}
