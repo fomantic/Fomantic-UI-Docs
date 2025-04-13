@@ -226,7 +226,7 @@ themes      : ['Default', 'Material']
             ...the overlay fullscreen modal will occupy the entire screen
         </div>
     </div>
-    <div class="actions">
+    <div class="left actions">
         <div class="ui primary approve button">
             Proceed
             <i class="right chevron icon"></i>
