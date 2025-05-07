@@ -2386,7 +2386,9 @@
       // lets only validate username to start
       $('.add.example .ui.form')
         .form({
-          username: ['notEmpty', 'minLength[5]']
+          fields: {
+            username: ['notEmpty', 'minLength[5]']
+          }
         })
       ;
       </div>
