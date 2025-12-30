@@ -19,5 +19,9 @@
   },
   "devDependencies": {
     "docpad-plugin-ghpages": "github:docpad/docpad-plugin-ghpages#2.11.0"
+  },
+  "resolutions": {
+    "path-to-regexp": "^3.3.0",
+    "tmp": "^0.2.4"
   }
 }
