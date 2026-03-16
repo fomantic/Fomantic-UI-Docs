@@ -1163,7 +1163,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui ignored info message">
-        <code>very basic</code> tables have lose padding unless they are also <a href="#sortable"><code>sortable</code></a> or <a href="#striped"><code>striped</code></a>.
+        <code>very basic</code> tables have loose padding unless they are also <a href="#sortable"><code>sortable</code></a> or <a href="#striped"><code>striped</code></a>.
     </div>
     <table class="ui very basic table">
       <thead>
