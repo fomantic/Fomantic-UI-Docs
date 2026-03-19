@@ -715,7 +715,7 @@ semantic.ready = function() {
         $html           = $example.children('.html'),
         $ignoredContent = $('.ui.popup, i.code:last-child, .anchor, .code, .existing.segment, .instructive, .language.label, .annotation, .ignore, style, script, .ignored'),
         $demo           = $example.children().not($intro).not($ignoredContent),
-        code            = $example.data('code') || $.proxy(handler.generateCode, this)(),
+        code            = $example.data('code') || handler.generateCode.bind(this)(),
         $copyCode,
         $label
       ;
@@ -723,7 +723,7 @@ semantic.ready = function() {
       // process existing code first
       if( $code.hasClass('existing') ) {
         $code.removeClass('existing');
-        $.proxy(handler.initializeCode, $code)(true);
+        handler.initializeCode.bind($code)(true);
       }
 
       // create annotation wrapper
@@ -777,7 +777,7 @@ semantic.ready = function() {
           .hide()
           .appendTo($annotation)
         ;
-        $.proxy(handler.initializeCode, $code)(true);
+        handler.initializeCode.bind($code)(true);
       }
       if( $annotation.hasClass('visible') ) {
         $annotation.transition('hide');
