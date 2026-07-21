@@ -1,5 +1,5 @@
 /**
- * Less - Leaner CSS v4.6.6
+ * Less - Leaner CSS v4.7.0
  * http://lesscss.org
  *
  * Copyright (c) 2009-2026, Alexis Sellier <self@cloudhead.net>
@@ -4100,12 +4100,23 @@
         /**
          * Permissive parsing. Ignores everything except matching {} [] () and quotes
          * until matching token (outside of blocks)
+         *
+         * @param {string|RegExp} tok - stop token
+         * @param {boolean} [detectBareVar] - when set, also record the position of the
+         *   first bare `@variable` reference (not `@{interpolation}`) that appears at
+         *   PAREN depth 0 — i.e. a structural reference, not a declaration value inside
+         *   `(...)`. Reuses this single pass (which already skips strings/comments) so
+         *   callers don't re-scan the text. Exposed as `.bareVarIndex` on the returned
+         *   group array (or null). `[...]`/`{...}` do NOT shield a reference — only
+         *   `(...)` (a declaration-value group) does.
          */
-        parserInput.$parseUntil = tok => {
+        parserInput.$parseUntil = (tok, detectBareVar) => {
             let quote = '';
             let returnVal = null;
             let inComment = false;
             let blockDepth = 0;
+            let parenDepth = 0;
+            let bareVarIndex = null;
             const blockStack = [];
             const parseGroups = [];
             const length = input.length;
@@ -4145,6 +4156,12 @@
                         i++;
                         continue;
                     }
+                    if (detectBareVar && bareVarIndex === null && nextChar === '@' && parenDepth === 0) {
+                        // A bare `@ident` (not `@{interpolation}`) outside any `(...)` —
+                        // a structural reference. Strings/comments are already skipped above.
+                        const after = input.charAt(i + 1);
+                        if (after && /[-\w]/.test(after)) { bareVarIndex = i; }
+                    }
                     switch (nextChar) {
                         case '\\':
                             i++;
@@ -4180,6 +4197,7 @@
                         case '(':
                             blockStack.push(')');
                             blockDepth++;
+                            parenDepth++;
                             break;
                         case '[':
                             blockStack.push(']');
@@ -4191,6 +4209,7 @@
                             const expected = blockStack.pop();
                             if (nextChar === expected) {
                                 blockDepth--;
+                                if (nextChar === ')' && parenDepth > 0) { parenDepth--; }
                             } else {
                                 // move the parser to the error and return expected
                                 skipWhitespace(i - startPos);
@@ -4206,6 +4225,7 @@
                 }
             } while (loop);
 
+            if (Array.isArray(returnVal)) { returnVal.bareVarIndex = bareVarIndex; }
             return returnVal ? returnVal : null;
         };
 
@@ -4406,6 +4426,10 @@
 
         const deprecationHandler = new DeprecationHandler();
 
+        // Tracks `${deprecationId}@${index}` pairs already warned about, so a source
+        // position that gets re-parsed via parser backtracking only warns once.
+        const warnedDeprecations = new Set();
+
         /**
          * @param {string} msg
          * @param {number} index
@@ -4415,6 +4439,11 @@
         function warn(msg, index, type, deprecationId) {
             if (context.quiet) { return; }
             if (deprecationId && context.quietDeprecations) { return; }
+            if (deprecationId) {
+                const key = `${deprecationId}@${index ?? parserInput.i}`;
+                if (warnedDeprecations.has(key)) { return; }
+                warnedDeprecations.add(key);
+            }
             if (deprecationId && !deprecationHandler.shouldWarn(deprecationId)) { return; }
 
             logger$1.warn(
@@ -4428,6 +4457,17 @@
                     imports
                 )).toString()
             );
+        }
+
+        /**
+         * Warn that a bare `@variable` reference is being used in a non-value
+         * position (an at-rule prelude, name, or identifier), where it still
+         * resolves today but is deprecated in favour of `@{variable}` interpolation.
+         *
+         * @param {number} index - source position of the bare reference
+         */
+        function warnBareAtRuleVariable(index) {
+            warn('A bare @variable in an at-rule prelude is deprecated. Use @{variable} interpolation instead.', index, 'DEPRECATED', 'variable-in-at-rule-prelude');
         }
 
         function expect(arg, msg) {
@@ -5980,7 +6020,7 @@
                                 if (parserInput.$char(';')) {
                                     value = new Anonymous('');
                                 } else {
-                                    value = this.permissiveValue(/[;}]/, true);
+                                    value = this.permissiveValue(/[;}]/);
                                 }
                             }
                             // Try to store values as anonymous
@@ -6039,8 +6079,12 @@
                  * math is allowed.
                  *
                  * @param {RexExp} untilTokens - Characters to stop parsing at
+                 * @param {boolean} [deprecateVariables] - when set, this is an at-rule
+                 *   prelude (non-value position); accept `@{var}` interpolation and warn
+                 *   on a bare `@var` reference (which resolves today but is deprecated).
                  */
-                permissiveValue: function (untilTokens) {
+                permissiveValue: function (untilTokens, deprecateVariables) {
+                    const entities = this.entities;
                     let i;
                     let e;
                     let done;
@@ -6067,7 +6111,20 @@
                             value.push(e);
                             continue;
                         }
-                        e = this.entity();
+                        if (deprecateVariables) {
+                            // In an at-rule prelude, `@{var}` interpolation is the supported
+                            // form; consume it here so its `{` is not mistaken for a block.
+                            e = entities.variableCurly();
+                            if (!e) {
+                                const varIndex = parserInput.i;
+                                e = this.entity();
+                                if (e && e.type === 'Variable') {
+                                    warnBareAtRuleVariable(varIndex);
+                                }
+                            }
+                        } else {
+                            e = this.entity();
+                        }
                         if (e) {
                             value.push(e);
                         }
@@ -6094,7 +6151,7 @@
                     }
                     parserInput.save();
 
-                    value = parserInput.$parseUntil(tok);
+                    value = parserInput.$parseUntil(tok, deprecateVariables);
 
                     if (value) {
                         if (typeof value === 'string') {
@@ -6103,6 +6160,14 @@
                         if (value.length === 1 && value[0] === ' ') {
                             parserInput.forget();
                             return new tree.Anonymous('', index);
+                        }
+                        // At-rule prelude: `$parseUntil` (deprecateVariables) records the
+                        // first bare `@var` it saw outside any `(...)` in its single pass —
+                        // a structural reference (`[...]`/`{...}` don't shield it, only a
+                        // declaration-value `(...)` does). Warn once here rather than
+                        // re-scanning the text.
+                        if (deprecateVariables && value.bareVarIndex !== null && value.bareVarIndex !== undefined) {
+                            warnBareAtRuleVariable(value.bareVarIndex);
                         }
                         /** @type {string} */
                         let item;
@@ -6120,11 +6185,14 @@
                                 const quote = new tree.Quoted('\'', item, true, index, fileInfo);
                                 const variableRegex = /@([\w-]+)/g;
                                 const propRegex = /\$([\w-]+)/g;
-                                if (variableRegex.test(item)) {
-                                    warn('@[ident] in unknown values will not be evaluated as variables in the future. Use @{[ident]}', index, 'DEPRECATED', 'variable-in-unknown-value');
+                                // At-rule preludes are handled once above via
+                                // `value.bareVarIndex`; the `variable-in-unknown-value`
+                                // notice is for unknown declaration values only.
+                                if (!deprecateVariables && variableRegex.test(item)) {
+                                    warn('@variable in unknown values will not be evaluated as variables in the future. Use @{variable}', index, 'DEPRECATED', 'variable-in-unknown-value');
                                 }
                                 if (propRegex.test(item)) {
-                                    warn('$[ident] in unknown values will not be evaluated as property references in the future. Use ${[ident]}', index, 'DEPRECATED', 'property-in-unknown-value');
+                                    warn('$property in unknown values will not be evaluated as property references in the future. Use ${property}', index, 'DEPRECATED', 'property-in-unknown-value');
                                 }
                                 quote.variableRegex = /@([\w-]+)|@{([\w-]+)}/g;
                                 quote.propRegex = /\$([\w-]+)|\${([\w-]+)}/g;
@@ -6233,7 +6301,17 @@
                         }
                         parserInput.restore();
 
-                        e = entities.declarationCall.bind(this)() || cssKeyword() || entities.keyword() || entities.variable() || entities.mixinLookup();
+                        e = entities.declarationCall.bind(this)() || cssKeyword() || entities.keyword() || entities.variableCurly();
+                        if (!e) {
+                            const varIndex = parserInput.i;
+                            const bareVariable = entities.variable();
+                            if (bareVariable) {
+                                warnBareAtRuleVariable(varIndex);
+                                e = bareVariable;
+                            } else {
+                                e = entities.mixinLookup();
+                            }
+                        }
                         if (e) {
                             nodes.push(e);
                             if (e.type === 'Variable' ||
@@ -6244,7 +6322,7 @@
                             let closed = false;
                             p = this.property();
                             parserInput.save();
-                            if (!p && syntaxOptions.queryInParens && parserInput.$re(/^[0-9a-z-]*\s*([<>]=|<=|>=|[<>]|=)/)) {
+                            if (!p && syntaxOptions.queryInParens && parserInput.$re(/^(?:[^()]|\([^()]*\))*\s*([<>]=|<=|>=|[<>]|=)/)) {
                                 parserInput.restore();
                                 p = this.condition();
 
@@ -6324,7 +6402,17 @@
                                 features[features.length - 1].noSpacing = false;
                             }
                         } else {
-                            e = entities.variable() || entities.mixinLookup();
+                            e = entities.variableCurly();
+                            if (!e) {
+                                const varIndex = parserInput.i;
+                                const bareVariable = entities.variable();
+                                if (bareVariable) {
+                                    warnBareAtRuleVariable(varIndex);
+                                    e = bareVariable;
+                                } else {
+                                    e = entities.mixinLookup();
+                                }
+                            }
                             if (e) {
                                 features.push(e);
                                 if (!parserInput.$char(',')) { break; }
@@ -6438,8 +6526,24 @@
                         return null;
                     }
                 },
+                /**
+                 * An entity in a non-value at-rule position (an at-rule identifier,
+                 * name, or keyword-list item — e.g. the name in `@keyframes @foo`).
+                 * `@{foo}` interpolation is the supported form; a bare `@foo` still
+                 * resolves but is deprecated.
+                 */
+                atRuleEntity: function () {
+                    const curly = this.entities.variableCurly();
+                    if (curly) { return curly; }
+                    const index = parserInput.i;
+                    const e = this.entity();
+                    if (e && e.type === 'Variable') {
+                        warnBareAtRuleVariable(index);
+                    }
+                    return e;
+                },
                 atruleUnknown: function (value, name, hasBlock) {
-                    value = this.permissiveValue(/^[{;]/);
+                    value = this.permissiveValue(/^[{;]/, true);
                     hasBlock = (parserInput.currentChar() === '{');
                     if (!value) {
                         if (!hasBlock && parserInput.currentChar() !== ';') {
@@ -6455,16 +6559,16 @@
                     rules = this.blockRuleset();
                     parserInput.save();
                     if (!rules && !isRooted) {
-                        value = this.entity();
+                        value = this.atRuleEntity();
                         rules = this.blockRuleset();
                     }
                     if (!rules && !isRooted) {
                         parserInput.restore();
                         var e = [];
-                        value = this.entity();
+                        value = this.atRuleEntity();
                         while (parserInput.$char(',')) {
                             e.push(value);
-                            value = this.entity();
+                            value = this.atRuleEntity();
                         }
                         if (value && e.length > 0) {
                             e.push(value);
@@ -6549,12 +6653,25 @@
                     parserInput.commentStore.length = 0;
 
                     if (hasIdentifier) {
-                        value = this.entity();
+                        value = this.atRuleEntity();
                         if (!value) {
                             error(`expected ${name} identifier`);
                         }
                     } else if (hasExpression) {
+                        // `@namespace` may carry an interpolated `@{ns}` prefix (or a
+                        // deprecated bare `@ns`). Parse that prefix directly so `@{ns}`
+                        // is accepted here without treating value positions as
+                        // interpolation contexts, then read the namespace URL.
+                        let prefix = this.entities.variableCurly();
+                        if (!prefix && parserInput.peek(/^@@?[\w-]/)) {
+                            const prefixIndex = parserInput.i;
+                            prefix = this.entities.variable();
+                            if (prefix) { warnBareAtRuleVariable(prefixIndex); }
+                        }
                         value = this.expression();
+                        if (prefix) {
+                            value = value ? new(tree.Expression)([prefix, ...value.value]) : prefix;
+                        }
                         if (!value) {
                             error(`expected ${name} expression`);
                         }
@@ -8617,16 +8734,16 @@
             self.features = new Value(self.permute(/** @type {Node[][]} */ (/** @type {unknown} */ (path))).map(
                 /** @param {Node | Node[]} path */
                 path => {
-                path = /** @type {Node[]} */ (path).map(
+                    path = /** @type {Node[]} */ (path).map(
                     /** @param {Node & { toCSS?: Function }} fragment */
-                    fragment => fragment.toCSS ? fragment : new Anonymous(/** @type {string} */ (/** @type {unknown} */ (fragment))));
+                        fragment => fragment.toCSS ? fragment : new Anonymous(/** @type {string} */ (/** @type {unknown} */ (fragment))));
 
-                for (i = /** @type {Node[]} */ (path).length - 1; i > 0; i--) {
+                    for (i = /** @type {Node[]} */ (path).length - 1; i > 0; i--) {
                     /** @type {Node[]} */ (path).splice(i, 0, new Anonymous('and'));
-                }
+                    }
 
-                return new Expression(/** @type {Node[]} */ (path));
-            }));
+                    return new Expression(/** @type {Node[]} */ (path));
+                }));
             self.setParent(self.features, self);
 
             // Fake a tree-node that doesn't output anything.
@@ -14175,7 +14292,7 @@
     };
 
     var name = "less";
-    var version = "4.6.6";
+    var version = "4.7.0";
     var description = "Leaner CSS";
     var homepage = "http://lesscss.org";
     var author = {
@@ -14245,7 +14362,7 @@
     var optionalDependencies = {
     	errno: "^0.1.1",
     	"graceful-fs": "^4.1.2",
-    	"image-size": "~0.5.0",
+    	"probe-image-size": "^7.2.3",
     	"make-dir": "^5.1.0",
     	mime: "^1.4.1",
     	needle: "^3.1.0",
