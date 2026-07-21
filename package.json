@@ -21,7 +21,9 @@
     "docpad-plugin-ghpages": "github:docpad/docpad-plugin-ghpages#2.11.0"
   },
   "resolutions": {
+    "brace-expansion": "^1.1.16",
+    "minimatch": "^3.1.4",
     "path-to-regexp": "^3.3.0",
-    "tmp": "^0.2.4"
+    "tmp": "^0.2.6"
   }
 }
