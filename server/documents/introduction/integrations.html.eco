@@ -18,7 +18,7 @@ type        : 'Introduction'
 
   <div class="example">
     <h4>Contribute to React Development</h4>
-    <p>Semantic UI React bindings are still in development, but are available for most components.</p>
+    <p>Fomantic UI React bindings are still in development, but are available for most components.</p>
     <a href="https://github.com/Fomantic-UI-React/react-fomantic-ui" target="_blank" class="ui button"><i class="github icon"></i>Visit React Repo</a>
   </div>
 
